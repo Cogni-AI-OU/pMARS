@@ -71,9 +71,20 @@ extern int printAttr;
 #define         WAIT 1
 #define         NOWAIT 0
 #endif
+#ifdef SDLGRAPHX
+extern int printAttr;
+#define         WAIT 1
+#define         NOWAIT 0
+#endif
+
+#ifdef STDGRAPHX
+extern int printAttr;
+#define		WAIT 1
+#define		NOWAIT 0
+#endif
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX)
+    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
 #define         PC1_ATTR 1
 #define         PC2_ATTR 2
 #endif                                /* tells grputs that print_core() is printing
@@ -89,7 +100,7 @@ extern int displayMode;
 #define FAR
 #endif
 
-extern int round;
+extern int round_num;
 extern long cycle;
 extern ADDR_T progCnt;                /* program counter */
 extern warrior_struct *W;        /* indicate which warrior is running */

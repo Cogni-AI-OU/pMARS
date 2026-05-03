@@ -1,4 +1,24 @@
-2000-07-08	John Metcalf	<digital.wilderness@googlemail.com>
+2026-01-14	John Metcalf	<digital.wilderness@googlemail.com>
+
+        - Release 0.9.6 candidate
+        - Merged SDL display support from pMARS-SDL
+        - Fixed issues with multi-line equ and comparison operators -
+          patches by Bertram Felgenhauer 
+
+
+2026-01-03	John Metcalf	<digital.wilderness@googlemail.com>
+
+	- Release 0.9.5
+        - Updated the X Window display: dynamically sized core display,
+          new 1280x960 display mode (-v 174), and pMARS icon.
+        - Updated the Curses display: added colour and variable speed.
+        - Optional Okabe-Ito CVD-safe X Window palette (only if compiled
+          with -DSAFECOLORS).
+        - Fixed several overflow / bounds errors - patch by Joseph Espy.
+        - Fixed format warnings and sighandler FTBFS error - patches by
+          Andrius Merkys.
+
+2022-07-08	John Metcalf	<digital.wilderness@googlemail.com>
 
 	- Release 0.9.4
 	- Added -R and -W options for read/write limits (only if compiled

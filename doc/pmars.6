@@ -2,7 +2,7 @@
 .\" Copyright (c) by Albert Ma, Na'ndor Sieben, Stefan Strack, Mintardjo Wangsaw and Ilmari Karonen
 .\"
 .\" pmars.6 by Stefan Strack
-.\" $Id: pmars.6,v 1.5 2022/07/04 12:00:00 iltzu Exp $
+.\" $Id: pmars.6,v 1.5 2026/01/03 12:00:00 iltzu Exp $
 .\"
 .\" to create a printable manual with proper pagination do
 .\" nroff -man -e pmars.6 > pmars.doc
@@ -26,7 +26,7 @@
 .if n .sp 1
 .if t .sp .5
 ..
-.TH PMARS 6 "July 4, 2022" "PMARS v0.9.4"
+.TH PMARS 6 "January 3, 2026" "PMARS v0.9.5"
 .ad b
 .SH NAME
 pmars \- portable corewar system with ICWS'94 extensions
@@ -588,7 +588,7 @@ core at B-address.
 (Store P-space) stores A-value into P-space cell specified by
 B-value.
 .PP
-It is important to note that P-space cells are refered to by
+It is important to note that P-space cells are referred to by
 A/B-values as opposed to A/B-addresses. As an example,
 "STP #9,#1" stores number 9 in P-cell 1.
 .PP
@@ -848,13 +848,13 @@ below).
 may contain C-style comparison and boolean operators (see below).
 An
 .I if
-immediately preceeding a loop end (![e]) can skip out of the loop.
+immediately preceding a loop end (![e]) can skip out of the loop.
 .TP
 .BI reset
 is used inside macros in conjunction with
 .I if
 to terminate macro execution, e.g. inside an infinite
-loop (...~if A==0~reset~...~!).
+loop (...\(tiif A==0\(tireset\(ti...\(ti!).
 .TP
 .BI pqueue\ [1|2|..|off]
 switches
@@ -869,7 +869,6 @@ especially useful for debugging complicated multi-process warriors.
 .I pqueue
 without argument uses the process queue of the current warrior. With
 argument 1,2,..,
-.pqueue
 uses the process queue of warrior 1,2,.., respectively.
 .I pqueue off
 returns to normal mode.
@@ -1013,51 +1012,51 @@ etc. See the file "pmars.mac" for examples.
 .BI list\ ,+20
 lists the next 20 instructions.
 .TP
-.BI trace\ pc-10,pc +10
+.BI trace\ pc-10,pc+10
 traces 21 addresses centered around the program counter of the
 currently executing warrior.
 .TP
 .BI untrace\ 0,$
 clears all trace bits.
 .TP
-.BI go\ \~\ reg\ \~\ l+a,+b
+.BI go\(tireg\(til+a,+b
 chains these commands: execute until the next traced address or
 end of round, display the simulator status and list addresses in the
 range A-number to B-number of the current instruction.
 .TP
-.BI @fill0,100\~dat.f\ 0,0
+.BI @fill0,100\(tidat.f\ 0,0
 fills addresses 0 through 100 with 'dat.f 0,0', not echoing the
 changed addresses to the screen.
 .TP
-.BI write\ trace.log\~step\~!
+.BI write\ trace.log\(ti!!\(tistep\(ti!
 produces a continuous execution trace by repeating
 .I step
 until
 .I pMARS
 terminates, saving the output to logfile "trace.log".
 .TP
-.BI @l\ x=5\~!!\~@ed\ x~dat\ x,0\~if\ (x=x+1)<$+1\~!
+.BI @l\ x=5\(ti!!\(ti@ed\ x\(tidat\ x,0\(tiif\ (x=x+1)<$+1\(ti!
 This command chain could be useful for debugging a stone-type, self-modifying
 warrior, which is assumed to occupy address 0 through 4 in this example. The
 command fills core starting at address 5 with "dat 5,0", "dat 6,0", a.s.o., so
 that you can tell where a bomb which overwrites the warrior came from. To save
-some typing, you can turn this command into a macro (foo=@l x=5~..). This is
+some typing, you can turn this command into a macro (foo=@l x=5\(ti..). This is
 how it works, step by step:
 Assign 5 to register x and make it the current address (@l x=5). Start a
-loop (!!) and change address x to "dat x,0" (@ed x~dat x,0). Increment x,
+loop (!!) and change address x to "dat x,0" (@ed x\(tidat x,0). Increment x,
 if x is then smaller than the core size ($+1), continue looping
-(if (x=x+1)<$+1~!). The '@' in front of the
+(if (x=x+1)<$+1\(ti!). The '@' in front of the
 .I list
 and
 .I edit
 commands suppresses screen output.
 .TP
-.BI @s\~@4\~if\ b<2\ ||\ b>=$-3\~reset\~!
+.BI @s\(ti@4\(tiif\ b<2\ ||\ b>=$-3\(tireset\(ti!
 This command executes a warrior until the B-field of address 4 points
 to address 0 through 5: Step and make address 4 the current address
-(@s~@4). If the B-field is less than 2 or greater than or equal to
+(@s\(ti@4). If the B-field is less than 2 or greater than or equal to
 7996 (CORESIZE-1-3) stop execution, else continue looping (if b<2 ||
-b>=$-3~reset~!).
+b>=$-3\(tireset\(ti!).
 .SH SOURCE DEBUGGING DIRECTIVES
 Trace bits can also be set by including debugging commands in the
 warrior source. A comment format is used to retain compatibility with
@@ -1253,7 +1252,7 @@ debugger. "Debug" on the graphics menu bar is highlighted in red inside
 You can define additional keys and commands associated with them by defining
 "key-x" macros ("x" is any printable character). E.g.:
 .EX
-key-p= progress~registers~continue
+key-p= progress\(tiregisters\(ticontinue
 .EE
 Function-key and other macros can also be invoked from the core display.
 .SH CURSES DISPLAY

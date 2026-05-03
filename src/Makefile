@@ -1,64 +1,86 @@
-# generic UNIX makefile
-CC = gcc			# req. for linux
-#CC = cc				# if you don't have gcc
-# Configuration options:
-#
-# No.   Name            Incompatible with   Description
-# (1)   -DSERVER        2                   disables cdb debugger (koth server 
-#                                           version)
-# (2)   -DGRAPHX        1                   enables platform specific core 
-#                                           graphics
-# (3)   -DKEYPRESS                          only for curses display on SysV:
-#                                           enter cdb upon keypress (use if
-#                                           Ctrl-C doesn't work)
-# (4)   -DEXT94                             ICWS'94 + SEQ,SNE,NOP,*,{,}
-# (5)   -DSMALLMEM                          16-bit addresses, less memory
-# (6)   -DXWINGRAPHX    1                   X-Windows graphics (UNIX)
-# (7)   -DPERMUTATE                         enables -P switch
-# (9)   -DRWLIMIT                           enables read/write limits
+# -------------------------------
+# generic UNIX makefile for pMARS
+# -------------------------------
 
-CFLAGS = -O -DEXT94 -DXWINGRAPHX -DPERMUTATE -DRWLIMIT 
-LFLAGS = -x
-# LIB = -lcurses -ltermlib		# enable this one for curses display
-# LIB = -lvgagl -lvga			# enable this one for Linux/SVGA
-LIB = -L/usr/X11R6/lib -lX11		# enable this one for X11
+# Usage:
 
-.SUFFIXES: .o .c .c~ .man .doc .6
+#   make default        default build (no display, with cdb debugger)
+#   make server         server build (disable cdb debugger)
+#   make curses         enable Curses display (UNIX)
+#   make sdl            enable SDL graphics (generic)
+#   make xwin           enable X Windows graphics (UNIX)
+#   make clean          remove all *.o (recommended when changing
+#                       CFLAGS in Makefile or switching build version)
+
+# Config options (add to CFLAGS):
+
+#   -DRWLIMIT           enables read/write limits
+#   -DSAFECOLORS        use Okabe-Ito CVD-safe palette
+
+CFLAGS += -O2 -DEXT94 -DPERMUTATE -DRWLIMIT
+
+CC = gcc                # required for Linux
+#CC = cc                # if you don't have gcc
+
 MAINFILE = pmars
 
-HEADER = global.h config.h asm.h sim.h 
-OBJ1 = pmars.o asm.o eval.o disasm.o cdb.o sim.o pos.o
-OBJ2 = clparse.o global.o token.o 
-OBJ3 = str_eng.o
+.PHONY: all curses default sdl server xwin clean
 
-all: flags $(MAINFILE)
+all:
+	@echo "-------------------------------"
+	@echo "generic UNIX makefile for pMARS"
+	@echo "-------------------------------"
+	@echo "Usage:"
+	@echo "  make default        default build (no display, with cdb debugger)"
+	@echo "  make server         server build (disable cdb debugger)"
+	@echo "  make curses         enable Curses display (UNIX)"
+	@echo "  make sdl            enable SDL graphics (generic)"
+	@echo "  make xwin           enable X Windows graphics (UNIX)"
+	@echo "  make clean          remove all *.o (recommended when changing"
+	@echo "                      CFLAGS in Makefile or switching build version)"
 
-flags:
-	@echo Making $(MAINFILE) with compiler flags $(CFLAGS)
+curses: CFLAGS += -DCURSESGRAPHX
+curses: LIBS = -lncurses
+curses: $(MAINFILE)
 
-$(MAINFILE): $(OBJ1) $(OBJ2) $(OBJ3)
-	@echo Linking $(MAINFILE)
-	@$(CC) -o $(MAINFILE) $(OBJ1) $(OBJ2) $(OBJ3) $(LIB)
-	@strip $(MAINFILE)
-	@echo done
+default: $(MAINFILE)
+
+sdl: CFLAGS += -DSDLGRAPHX `sdl-config --cflags`
+sdl: LIBS = `sdl-config --libs`
+sdl: $(MAINFILE)
+
+server: CFLAGS += -DSERVER
+server: LIBS =
+server: $(MAINFILE)
+
+xwin: CFLAGS += -DXWINGRAPHX
+xwin: LIBS = -L/usr/X11R6/lib -lX11
+xwin: $(MAINFILE)
+
+OBJ = pmars.o asm.o eval.o disasm.o cdb.o sim.o pos.o clparse.o global.o token.o str_eng.o
+
+$(MAINFILE): $(OBJ)
+	@echo Linking $@
+	@$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+	@strip $@
+	@echo Done
 
 token.o asm.o disasm.o: asm.h
 
 sim.o cdb.o pos.o disasm.o: sim.h
 
-sim.o: curdisp.c uidisp.c lnxdisp.c xwindisp.c
+sim.o: curdisp.c uidisp.c sdldisp.c xwindisp.c
+
+sdldisp.c: pmarsicnsdl.h
 
 xwindisp.c: xwindisp.h pmarsicn.h
 
-lnxdisp.c: lnxdisp.h
+$(OBJ): Makefile config.h global.h
 
-$(OBJ1) $(OBJ2) $(OBJ3): Makefile config.h global.h
-
-.c.o:
-	@echo Compiling $*.o 
-	@$(CC) $(CFLAGS) -c $*.c
-
+%.o: %.c
+	@echo Compiling $<
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ1) $(OBJ2) $(OBJ3) core
+	rm -f $(OBJ) core
 

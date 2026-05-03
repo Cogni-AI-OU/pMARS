@@ -193,40 +193,26 @@ getop(expr, oper)
 {
   char    ch;
   switch (ch = *(expr++)) {
-  case '&':
-    if (*(expr++) == '&')
-      *oper = AND;
-    break;
-  case '|':
-    if (*(expr++) == '|')
-      *oper = OR;
-    break;
-  case '=':
-    if (*(expr++) == '=')
-      *oper = EQUAL;
-    break;
-  case '!':
-    if (*(expr++) == '=')
-      *oper = NEQU;
-    break;
-  case '<':
-    if (*expr == '=') {
-      ++expr;
-      *oper = LTE;
-    } else
-      *oper = '<';
-    break;
-  case '>':
-    if (*expr == '=') {
-      ++expr;
-      *oper = GTE;
-    } else
-      *oper = '>';
-    break;
-  default:
-    *oper = ch;
-    break;
+
+#define DIGRAM(c1, c2, op)\
+  case c1:\
+    if (*expr == c2) {\
+      ++expr;\
+      ch = op;\
+    }\
+    break
+
+  DIGRAM('&', '&', AND);
+  DIGRAM('|', '|', OR);
+  DIGRAM('=', '=', EQUAL);
+  DIGRAM('!', '=', NEQU);
+  DIGRAM('<', '=', LTE);
+  DIGRAM('>', '=', GTE);
+
+#undef DIGRAM
+
   }
+  *oper = ch;
   return expr;
 }
 /*--------------------*/

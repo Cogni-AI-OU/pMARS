@@ -109,6 +109,11 @@ count: count core addresses that match "w?"
 count= &ca z=.~m w?~&ca x=.,c=0~!!~m w?~&ca c=c+1~if .!=x~!~ca c~&l z
 w?= &search ,
 --------------------------------------
+fulltrace= write trace.log~!!~step~!
+--------------------------------------
+pockets=&l0~!!~if1>a+b~!!~m_p~!1~&l+1~if0<x=.~!
+_p=!!~&l+1~if1>a+b~!~&l-1~if.-x>3~ca.-x+1,x
+--------------------------------------
 This one calculates a simplified bomb spread (bomb is "w?"). The lower
 the number, the better the spread. Use in conjunction with bomb_run.
 spread= @ca z=.~@l$-1~m w?~@ca x=.,c=0&&f=1~!!~m w?~if .==x~m _$~m _1

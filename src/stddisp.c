@@ -1,39 +1,39 @@
 /* pMARS Globals:
 
-   int displayLevel     0: no detail, 1: executions/deaths only
-                        2: as level 1 but also writes, 3: as level 2 but also
-                        decrements/increments, 4: as level 3 but also reads.
+   int displayLevel	0: no detail, 1: executions/deaths only
+			2: as level 1 but also writes, 3: as level 2 but also
+			decrements/increments, 4: as level 3 but also reads.
+   
+   int displaySpeed	0..SPEEDLEVELS-1.  0 is slowest, SPEEDLEVELS-1 is
+			fastest.  Speed level 1 is the default.
 
-   int displaySpeed     0..SPEEDLEVELS-1.  0 is slowest, SPEEDLEVELS-1 is
-                        fastest.  Speed level 1 is the default.
+   int displayMode	Implementation dependent.  In windowed systems
+   			typically controls the window size and size in pixels
+			of a core cell.  On non-windowed systems it 
+			controls the display resolution.  Conventionally
+			display mode 0 is the same as display mode 1.
+   
+   int curPanel		The current text panel, either 1 (left panel) or 2
+   			(right panel) or -1 (none, not initialised).
+			cdb.c uses the function XXX_update(int nextpanel)
+			to update the panel and panel movement, so
+			only the display code needs to know about curPanel.
+   
+   int curAddr		While debugging this holds the current core address.
+   			Managed by cdb.c --- read-only in the display code.
 
-   int displayMode      Implementation dependent.  In windowed systems
-                        typically controls the window size and size in pixels
-                        of a core cell.  On non-windowed systems it
-                        controls the display resolution.  Conventionally
-                        display mode 0 is the same as display mode 1.
-
-   int curPanel         The current text panel, either 1 (left panel) or 2
-                        (right panel) or -1 (none, not initialised).
-                        cdb.c uses the function XXX_update(int nextpanel)
-                        to update the panel and panel movement, so
-                        only the display code needs to know about curPanel.
-
-   int curAddr          While debugging this holds the current core address.
-                        Managed by cdb.c --- read-only in the display code.
-
-   int inCbd            A flag that tells the display code if we are debugging
-                        or not.  Managed by cdb.c --- read-only in the display
-                        code.
+   int inCbd		A flag that tells the display code if we are debugging
+   			or not.  Managed by cdb.c --- read-only in the display
+			code.
 
    int inputRedirection A flag that tells us whether or not input is
-                        redirected from stdin.  read-only.
-
+   			redirected from stdin.  read-only.
+   			
    void sighandler(int)  The signal handler function of pMARS.  Call this
-                        with the argument 0 when suspending a fight to resume
-                        debugging so that cdb knows to stop executing the
-                        current macro.  Note: you need to add a test
-                        to pmars.c to include <signal.h> if you call this.
+   			with the argument 0 when suspending a fight to resume
+			debugging so that cdb knows to stop executing the
+			current macro.  Note: you need to add a test
+			to pmars.c to include <signal.h> if you call this.
  */
 extern int displayLevel;
 extern int displayMode;

@@ -82,13 +82,17 @@ extern void sighandler(int dummy);
 #endif
 
 #endif                                /* !CURSESGRAPHX */
-#ifdef LINUXGRAPHX
-#include "lnxdisp.c"
-#else
 #ifdef XWINGRAPHX
 #include "xwindisp.c"
 #else
+#ifdef SDLGRAPHX
+#include "sdldisp.c"
+#else
+#ifdef STDGRAPHX
+#include "stddisp.c"
+#else
 #include "uidisp.c"
+#endif
 #endif
 #endif
 
@@ -173,7 +177,7 @@ ADDR_T AA_Value, AB_Value;
 mem_struct FAR *memory;
 
 long    cycle;
-int     round;
+int     round_num;
 
 char    alloc_p = 0;                /* indicate whether memory has been allocated */
 int     warriorsLeft;                /* number of warriors still left in core */
@@ -257,6 +261,9 @@ simulator1()
   mem_struct *endPtr;                /* pointer used to copy program to core */
 register  int     temp;                        /* general purpose temporary variable */
   int     addrA, addrB;                /* A and B pointers */
+#ifndef SERVER
+  int     temp2;			/* needed in graphical versions to display postincrements at the correct address */
+#endif
   ADDR_T FAR *tempPtr2;
 #ifdef NEW_MODES
   ADDR_T FAR *offsPtr;                /* temporary pointer used in op decode phase */
@@ -328,7 +335,7 @@ register  int     temp;                        /* general purpose temporary vari
 #endif
 
   display_init();
-  round = 1;
+  round_num = 1;
   do {                                /* each round */
 #if defined(DOS16) && !defined(SERVER) && !defined(DOSTXTGRAPHX) && !defined(DOSGRXGRAPHX) && !defined(DJGPP)
     fputc('\r', stdout);        /* enable interruption by Ctrl-C */
@@ -382,6 +389,8 @@ register  int     temp;                        /* general purpose temporary vari
       W->taskHead = tempPtr2;
       W->taskTail = tempPtr2 + 1;
       *tempPtr2 = (W->position + W->offset) % coreSize;
+      *tempPtr2 = *tempPtr2 < 0 ? *tempPtr2 + coreSize : *tempPtr2;
+
       W->tasks = 1;
       tempPtr2 -= taskNum;
       destPtr = memory + W->position;
@@ -689,16 +698,6 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	memory[addrB].A_value = IR.A_value;
 	display_write(addrB);
 	break;
-
-#ifdef PERMUTATE
-  if (SWITCH_P) {
-    permbuf = (int *) malloc((size_t)(warriors * positions * sizeof(int)));
-    if (!permbuf) {
-      errout(outOfMemory);
-      Exit(MEMERR);
-    }
-  }
-#endif
 
       case OP(ADD, mA):
 	display_read(addrA);
@@ -1421,13 +1420,13 @@ nextround:
 #ifndef SERVER
     if (debugState == BREAK) {
       if (warriorsLeft == 1 && warriors != 1)
-	sprintf(outs, warriorTerminatedEndOfRound, W - warrior, W->name, round);
+	sprintf(outs, warriorTerminatedEndOfRound, W - warrior, W->name, round_num);
       else
-	sprintf(outs, endOfRound, round);
+	sprintf(outs, endOfRound, round_num);
       debugState = cdb(outs);
     }
 #endif
-  } while (++round <= rounds);
+  } while (++round_num <= rounds);
 
   display_close();
 #ifdef PERMUTATE

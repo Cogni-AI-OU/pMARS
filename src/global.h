@@ -37,6 +37,9 @@
 /* *********************************************************************
    System dependent definitions or declarations
    ********************************************************************* */
+#if defined(__STDC__)  || defined(DOS16)
+#define NEW_STYLE
+#endif
 
 /* Generic Pointer type */
 #if defined(NEW_STYLE)
@@ -121,14 +124,10 @@ enum {
    pmars global structures and definitions
    ************************************************************************ */
 
-#if defined(__STDC__)  || defined(DOS16)
-#define NEW_STYLE
-#endif
-
 /* Version and date */
 
-#define PMARSVER  94
-#define PMARSDATE "04/07/22"
+#define PMARSVER  96
+#define PMARSDATE "09/01/2026"
 
 #ifdef VMS                        /* Must change codes to work with VMS error
                                  * handling */
@@ -283,7 +282,7 @@ typedef struct warrior_struct {
   int     instLen;                /* Length of instBank */
   int     offset;                /* Offset value specified by 'ORG' or 'END'.
                                  * 0 is default */
-  short   score[MAXWARRIOR * 2 - 1];
+  int     score[MAXWARRIOR * 2 - 1];
 
   char   *name;                        /* warrior name */
   char   *version;
@@ -346,7 +345,7 @@ extern int inCdb;
 extern int debugState;
 extern int copyDebugInfo;
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX)
+    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
 extern int inputRedirection;
 #endif
 #if defined(XWINGRAPHX)
@@ -367,14 +366,15 @@ extern ADDR_T pSpaceSize;
    display define's, declarations and typedefs
    *********************************************************************** */
 
+#define         SPEEDLEVELS 9
+
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX)
+    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
 
 #if !defined(LINUXGRAPHX)        /* vga.h already defines TEXT to be 0 */
 #define         TEXT 0
 #endif
 #define         GRX 1
-#define         SPEEDLEVELS 9
 #define         NORMAL_ATTR 0x0700
 extern int displayLevel;
 extern int displayMode;
@@ -425,13 +425,12 @@ extern int score(int warnum);
 extern void sort_by_score(int *idxV, int *scrV);
 extern int deaths(int warnum);
 extern void results(FILE * outp);
-extern void sort_by_score();
 extern void Exit(int code);
 extern void reset_regs(void);
 extern void set_reg(char regChr, long val);
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX)
+    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
 extern void decode_vopt(int option);
 #ifndef LINUXGRAPHX
 extern void grputs(char *str);
@@ -458,6 +457,40 @@ extern void xWin_update(int curPanel);
 extern void xWin_display_close(int wait);
 extern char *xWin_gets(char *s, int maxstr);
 extern void xWin_resize(void);
+#endif
+
+#if defined(SDLGRAPHX)
+void  sdlgr_clear_arena (void);
+void  sdlgr_refresh (int what);	/* -1: all, 0: core, >0 all text panels. */
+void  sdlgr_relayout ();
+void  sdlgr_write_menu (void);
+void  sdlgr_update (int nextpanel);
+void  sdlgr_clear (void);
+void  sdlgr_puts (const char *s);
+char *sdlgr_gets (char *buf, int maxbuf, const char *prompt);
+void  sdlgr_display_clear (void);
+void  sdlgr_open_graphics (void);
+void  sdlgr_display_close (int wait);
+int   sdlgr_text_lines (void);
+void  sdlgr_set_displayLevel(int level);
+void  sdlgr_set_displaySpeed(int speed);
+void  sdlgr_set_displayMode(int mode);
+#endif
+
+#if defined(STDGRAPHX)
+void stdio_open_graphics(void);
+void stdio_display_close(int wait);
+void stdio_clear_arena(void);
+void stdio_display_clear(void);
+void stdio_write_menu(void);
+void stdio_update(int nextpanel);
+void stdio_clear(void);
+void stdio_puts(const char *s);
+int stdio_text_lines(void);
+char *stdio_gets(char *buf, int maxbuf, const char *prompt);
+void stdio_set_displayMode(int newmode);
+void stdio_set_displayLevel(int newmode);
+void stdio_set_displaySpeed(int newmode);
 #endif
 #endif
 
@@ -513,4 +546,10 @@ extern char *xWin_gets();
 extern void xWin_resize();
 #endif
 
+#if defined(STDGRAPHX)
+#error STDGRAPHX can only be compiled using an ANSI C compiler
+#endif
+#if defined(SDLGRAPHX)
+#error "SDLGRAPHX can only be compiled using an ANSI C compiler."
+#endif
 #endif

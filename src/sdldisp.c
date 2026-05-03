@@ -20,6 +20,7 @@
 #include <ctype.h>
 #include <assert.h>
 #include "SDL.h"
+#include "pmarsicnsdl.h"
 
 #define USE_BLIT_FONTS 1
 
@@ -54,6 +55,36 @@ typedef struct RGBColour_st {
 } RGBColour;
 
 #define NCOLOURS	16
+
+#ifdef SAFECOLORS
+
+/* Okabe-Ito CVD-safe palette */
+
+static const RGBColour PaletteRGB[NCOLOURS] = {
+#define BLACK 		0
+  { 0x00, 0x00, 0x00 },  // 0 black
+#define BLUE		1
+  { 0x00, 0x72, 0xB2 },  // 1 blue
+#define ORANGE		2
+  { 0xE6, 0x9F, 0x00 },  // 2 orange
+  { 0xF0, 0xE4, 0x42 },  // 3 yellow
+  { 0xCC, 0x79, 0xA7 },  // 4 reddish purple
+  { 0xD5, 0x5E, 0x00 },  // 5 vermillion
+  { 0x56, 0xB4, 0xE9 },  // 6 sky blue
+  { 0x00, 0x9E, 0x73 },  // 7 bluish green
+  { 0x3B, 0xA3, 0xCD },  // 8 light blue
+  { 0xEF, 0xC1, 0x59 },  // 9 light orange
+  { 0xF5, 0xED, 0x84 },  // 10 light yellow
+  { 0xDE, 0xA8, 0xC6 },  // 11 light reddish purple
+  { 0xE4, 0x96, 0x59 },  // 12 light vermillion
+  { 0x91, 0xCE, 0xF1 },  // 13 light sky blue
+  { 0x59, 0xC0, 0xA4 },  // 14 light bluish green
+#define WHITE 15
+  { 0xFF, 0xFF, 0xFF }   // 15 white
+};
+
+#else
+
 #define L	205			/* low intensity */
 #define G	211			/* light grey intensity */
 #define D	190			/* grey intensity */
@@ -88,6 +119,8 @@ static const RGBColour PaletteRGB[NCOLOURS] = {
 #undef G
 #undef D
 #undef H
+
+#endif
 
 static Uint32 Colours[NCOLOURS];	/* Display format colours */
 					/* that need to be converted. */
@@ -206,19 +239,19 @@ typedef struct Layout_st {
 	   minimum/maximum sizes.  Returns 1: ok to layout, 0: layout
 	   will fail (display too small). */
 
-    layout_func after_layout;
-        /* Called after the sizes and positions of layed out panels
-           have been decided, to give a chance for the user to fail a
-           given layout and do other processing.  Returns 1: layout ok,
-           0: layout failed. */
+    layout_func	after_layout;
+ 	/* Called after the sizes and positions of layed out panels
+	   have been decided, to give a chance for the user to fail a
+	   given layout and do other processing.  Returns 1: layout ok,
+	   0: layout failed. */
 
     layout_func doclear;
         /* Called to clear the layout.  Return value ignored.  Called in
-           preorder. */
+	   preorder. */
 
     layout_func doredraw;
-        /* Called when a panel needs to be redrawn.  Return value ignored.
-           Called in preorder. */
+    	/* Called when a panel needs to be redrawn.  Return value ignored.
+	   Called in preorder. */
 
     void (*doremode)(void *parms);
         /* Called after a successfully laying out all layouts and the
@@ -247,7 +280,7 @@ typedef struct Layout_st {
 #define is_horizontal_split(method) (((method) & 2) == 2)
 
 #define UNBOUNDED 32767			/* Maximum value of any minimum or
-					   maximum bound for the height or
+					   maximum bound for the height or 
 					   width of a layout. */
 
 /* The memory for layout structures is statically allocated, and we provide a
@@ -698,17 +731,17 @@ putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
     int bpp = surface->format->BytesPerPixel;
     /* Here p is the address to the pixel we want to set */
     Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
-
+   
     switch(bpp) {
     case 1:
         *p = pixel;
         break;
-
+   
     case 2:
         *(Uint16 *)p = pixel;
         break;
-
-    case 3:
+       
+    case 3:   
         if(SDL_BYTEORDER == SDL_BIG_ENDIAN) {
             p[0] = (pixel >> 16) & 0xff;
             p[1] = (pixel >> 8) & 0xff;
@@ -717,10 +750,10 @@ putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
             p[0] = pixel & 0xff;
             p[1] = (pixel >> 8) & 0xff;
             p[2] = (pixel >> 16) & 0xff;
-        }
+        }     
         break;
-
-    case 4:
+              
+    case 4:   
         *(Uint32 *)p = pixel;
         break;
     }
@@ -821,7 +854,7 @@ decode_vmode_string(VMode *m, const char *str)
 	int i;
 	int set_them = 1;
 	if (str[0]=='-') { set_them = 0; str++; }
-
+	
 	for (i=0; i<NUM_VMODE_FLAGS; i++) {
 	    if (strlen(str)>=VMode_flags[i].siglen) {
 		if (0==strncmp(str, VMode_flags[i].name,
@@ -928,6 +961,24 @@ set_VMode(VMode* m)
 	if ((flags & SDL_HWSURFACE) == SDL_HWSURFACE) {
 	    flags &=~ SDL_ANYFORMAT;
 	}
+    }
+
+    SDL_Surface *icon;
+
+    icon = SDL_CreateRGBSurfaceFrom(
+        (void *)pmarsicn_bits,
+        pmarsicn_width,
+        pmarsicn_height,
+        1,
+        pmarsicn_width / 8,
+        0, 0, 0, 0
+    );
+
+    if (icon) {
+      SDL_SetPalette(icon, SDL_LOGPAL,
+          (SDL_Color[]){{0,0,0},{255,255,255}}, 0, 2);
+      SDL_WM_SetIcon(icon, NULL);
+      SDL_FreeSurface(icon);
     }
 
     if (!(surf = SDL_SetVideoMode(m->w, m->h, m->bpp, flags))
@@ -1106,7 +1157,7 @@ outblankxy(Sint16 x, Sint16 y, int colix, const SDL_Rect *clip)
     r.x = x; r.y = y;
     r.w = CurrentFont.w;
     r.h = CurrentFont.h;
-    if (!clip) {
+    if (!clip) { 
 	SDL_Rect c;
 	c.x = c.y = 0;
 	c.w = TheSurf->w; c.h = TheSurf->h;
@@ -1143,8 +1194,8 @@ outcharxy(unsigned char c, Sint16 x, Sint16 y, int colix,
     SDL_Rect r;
     int i,j,h;
     if (c >= CurrentFont.nchars) { return; }
-
-    if (!clip) {
+    
+    if (!clip) { 
 	r.x = r.y = 0;
 	r.w = TheSurf->w;
 	r.h = TheSurf->h;
@@ -1156,7 +1207,7 @@ outcharxy(unsigned char c, Sint16 x, Sint16 y, int colix,
 
     h = CurrentFont.h;
     assert(CurrentFont.w == 8);
-
+    
     /* Draw character pixel by pixel.  Replace with something faster
      * if it's too slow. */
     Slock(TheSurf);
@@ -1540,7 +1591,7 @@ close_layout(Layout *a)
 	Layout *b = get_sibling_layout(a);
 	b->parent = grandparent;
 	if (grandparent != NULL) {	/* Need to replace parent with b? */
-	    if (grandparent->a == parent) {
+	    if (grandparent->a == parent) { 
 		grandparent->a = b;
 	    } else {
 		assert(grandparent->b == parent);
@@ -1616,7 +1667,7 @@ choose_sizes(
     Uint32 bmin, Uint32 bmax,		/* bounds for B. */
     Uint16 *wa,  Uint16 *wb)		/* result pointers. */
 {
-    if (w > amax + bmax) {
+    if (w > amax + bmax) { 
 	*wa = amax;
 	*wb = bmax;
     } else {
@@ -1693,14 +1744,14 @@ propose_layout(Layout *pair, Sint16 x, Sint16 y, Uint16 w, Uint16 h)
     }
 
     /* Set positions based on the method of split and sizes. */
-    switch(pair->method) {
+    switch(pair->method) { 
     case BELOWS: /* b below a */
 	a->p.r.x = x;
 	a->p.r.y = y;
 	b->p.r.x = x;
 	b->p.r.y = y + a->p.r.h;
 	break;
-    case ABOVES: /* b above a */
+    case ABOVES: /* b above a */ 
 	b->p.r.x = x;
 	b->p.r.y = y;
 	a->p.r.x = x;
@@ -1721,7 +1772,7 @@ propose_layout(Layout *pair, Sint16 x, Sint16 y, Uint16 w, Uint16 h)
     }
     recompute_panel_view(&a->p);
     recompute_panel_view(&b->p);
-
+    
     /* Propose layouts for children. */
     propose_layout(pair->a, a->p.r.x, a->p.r.y, a->p.r.w, a->p.r.h);
     propose_layout(pair->b, b->p.r.x, b->p.r.y, b->p.r.w, b->p.r.h);
@@ -1808,7 +1859,7 @@ layout(Layout *root, Sint16 x, Sint16 y, Uint16 w, Uint16 h)
     if (!callback_before_layouts(root, w, h)) {
 	return 0;
     }
-
+    
     /* Check that we have enough space. */
     synthesize_bounds(root);
     if (w < root->minw || h < root->minh)
@@ -1827,7 +1878,7 @@ layout(Layout *root, Sint16 x, Sint16 y, Uint16 w, Uint16 h)
 
 /* ------------------------------------------------------------------------
  * TextOutputs
- *
+ * 
  * TextOutputs are Layouts that provide textual output in the current
  * font.  They have a cursor position, know how to wrap long lines
  * when necessary, and attempt to refresh only the parts of their
@@ -1846,7 +1897,7 @@ static void
 init_all_text_outputs(void)
 {
     static int done_init = 0;
-    if (!done_init) {
+    if (!done_init) { 
 	int k;
 	textoutput_free_list = NULL;
 	for (k=MAXTEXTOUTPUTS-1; k>=0; --k) {
@@ -2017,7 +2068,7 @@ emit(TextOutput *t, unsigned char c, int colix)
 {
     const SDL_Rect *v = panel_view(&t->layout->p);
     if (c=='\n') { cr(t); return; }
-
+    
     /* Do we need to wrap? */
     if (t->x+CurrentFont.w > v->w) {
 	cr(t);
@@ -2108,7 +2159,7 @@ type_nowrap(TextOutput *t, const char *str, int colix)
  *
  * TextInputs supplement Layouts by providing text input facilities.
  * They don't do any event handling themselves, but track the internal
- * state of a text panel that an event handler can modify through a
+ * state of a text panel that an event handler can modify through a 
  * narrowish interface.  An event handler should always activate() a
  * TextInput when it is starting to gather input, and deactivate() it
  * when input has been gathered.  The handler is also responsible for
@@ -2150,7 +2201,7 @@ static void
 init_all_text_inputs(void)
 {
     static int done_init = 0;
-    if (!done_init) {
+    if (!done_init) { 
 	int k;
 	textinput_free_list = NULL;
 	for (k=MAXTEXTINPUTS-1; k>=0; --k) {
@@ -2232,7 +2283,11 @@ alloc_text_input(Layout *a)
     textinput_free_list = t->next;
     memset((void*)t, 0, sizeof(TextInput));
     t->out = alloc_text_output(a);
+#ifdef SAFECOLORS
+    t->colix = WHITE;
+#else
     t->colix = LIGHTGREY;
+#endif
     t->layout = a;
     a->parms = t;
     a->doclose = doclose_textinput;
@@ -2500,7 +2555,7 @@ after_layout_arena(Panel *p, void *parms)
 	cellw = get_cell_size(&a->cell);
 	cellsperline = r->w / cellw;
 	rows = (a->coresize + cellsperline-1)/cellsperline;
-#if 0
+#if 0 
 	fprintf(stderr, "{ %d, %d, %d } = %d/%d\n", a->cell.box_size,
 		a->cell.interbox_space,	a->cell.intercell_space,
 		rows*cellw, r->h);
@@ -2510,7 +2565,7 @@ after_layout_arena(Panel *p, void *parms)
 	}
     } while(failed && decr_cell_size(&a->cell));
 
-#if 0
+#if 0 
 	fprintf(stderr, "{ %d, %d, %d } = %d/%d\n", a->cell.box_size,
 		a->cell.interbox_space,	a->cell.intercell_space,
 		rows*cellw, r->h);
@@ -2697,7 +2752,7 @@ doclose_arena(void *parms)
 {
     Arena *a = (Arena*)parms;
     free_blitboxes(a);
-    if (a->core) {
+    if (a->core) { 
 	FREE((void*)a->core);
 	a->core = NULL;
     }
@@ -2764,24 +2819,37 @@ doredraw_status(Panel *p, void *parms)
     TextOutput *t = (TextOutput *)parms;
     const SDL_Rect *r = panel_view(p);
     int white = WHITE;
+#ifdef SAFECOLORS
+    int blue = BLUE;
+    int orange = ORANGE;
+#else
     int red = RED;
     int yellow = YELLOW;
+#endif
     int i;
 
     clear_panel(p);
     doclear_textoutput(p, parms);
-
+    
     /* Speed level meter. */
     type_nowrap(t, "<", white);
     for (i=0; i<SPEEDLEVELS - displaySpeed; i++) {
 	if (t->x+CurrentFont.w+1 <= r->w) {
+#ifdef SAFECOLORS
+	    outblankxy(r->x+t->x, r->y, blue, r);
+#else
 	    outblankxy(r->x+t->x, r->y, red, r);
+#endif
 	    t->x += CurrentFont.w+1;
 	}
     }
     for (i=0; i<displaySpeed; i++) {
 	if (t->x+CurrentFont.w <= r->w) {
+#ifdef SAFECOLORS
+	    outblankxy(r->x+t->x+1, r->y, orange, NULL);
+#else
 	    outblankxy(r->x+t->x+1, r->y, yellow, NULL);
+#endif
 	    t->x += CurrentFont.w+1;
 	}
     }
@@ -2790,7 +2858,11 @@ doredraw_status(Panel *p, void *parms)
     /* Detail level. */
     type_nowrap(t, "    ", white);
     for (i=0; i<5; i++) {
+#ifdef SAFECOLORS
+	Uint32 col = i!=displayLevel ? white : blue;
+#else
 	Uint32 col = i!=displayLevel ? white : red;
+#endif
 	char s[10];
 	sprintf(s,"%d ", i);
 	type_nowrap(t, s, col);
@@ -2799,9 +2871,13 @@ doredraw_status(Panel *p, void *parms)
     /* Status */
     type_nowrap(t, "    ", white);
     if (inCdb) {
-	type_nowrap(t, "Debug", red);
+#ifdef SAFECOLORS
+	type_nowrap(t, "[D]ebug", blue);
+#else
+	type_nowrap(t, "[D]ebug", red);
+#endif
     } else {
-	type_nowrap(t, "Debug space Quit", white);
+	type_nowrap(t, "[D]ebug [C]lear [Q]uit", white);
     }
     return 1;
 }
@@ -2924,7 +3000,7 @@ relayout(Uint16 w, Uint16 h)
 	 * the minimum bounds. */
 	if (w <= root->minw+2*BW) { w = root->minw + 2*BW; }
 	if (h <= root->minh+2*BH) { h = root->minh + 2*BH; }
-
+	
 	if (!layout(root, BW, BH, w-2*BW, h-2*BH)) {
 	    if (w <= root->minw+2*BW) { w = root->minw + 2*BW; }
 	    if (h <= root->minh+2*BH) { h = root->minh + 2*BH; }
@@ -2947,7 +3023,7 @@ relayout(Uint16 w, Uint16 h)
 	    exit_panic(errDisplayOpen, SDL_GetError());
 	}
     }
-#if 0
+#if 0 
     printf("relayout ok\n");
 #endif
     remode_layout(root);
@@ -3009,14 +3085,21 @@ init_layout(void)
 
     /* Set warrior colours. */
     if (warriors <= 2) {
+#ifdef SAFECOLORS
+	WarColourIx[0] = BLUE;
+	DieColourIx[0] = WarColourIx[0] + 7;
+	WarColourIx[1] = ORANGE;
+	DieColourIx[1] = WarColourIx[1] + 7;
+#else
 	WarColourIx[0] = GREEN;
 	DieColourIx[0] = WarColourIx[0] % (NCOLOURS-1) + 1;
 	WarColourIx[1] = LIGHTRED;
 	DieColourIx[1] = WarColourIx[1] % (NCOLOURS-1) + 1;
+#endif
     } else {
 	int i;
 	for (i=0; i<MAXWARRIOR; i++) {
-	    WarColourIx[i] = DieColourIx[i] = ((9-1+i) % (NCOLOURS-1)) + 1;
+	    WarColourIx[i] = DieColourIx[i] = i % (NCOLOURS-1) + 1;
 	}
     }
 }
@@ -3328,7 +3411,7 @@ normalise_keysym(SDL_keysym *s)
 {
     int num = any_set(s->mod, KMOD_NUM);
 
-    /* Windows (or perhaps SDL) doesn't handle keystrokes with AltGr too well.
+    /* Windows (or perhaps SDL) doesn't handle keystrokes with AltGr too well. 
      * Problems include: spurious modifier bits, iffy unicode conversion for
      * valid international keys, varying keysyms on different versions of windows,
      * and so on and so forth.  Ignoring all keys modified by AltGr doesn't work
@@ -3381,7 +3464,7 @@ static char
 conv_key(const SDL_keysym *s)
 {
     if (s->unicode >= 128) { return 0; } /* non-ASCII */
-    if (any_set(s->mod, KMOD_CTRL | KMOD_LALT | KMOD_META)) {
+    if (any_set(s->mod, KMOD_CTRL | KMOD_LALT | KMOD_META)) { 
 	return 0;		/* special, modified */
     }
     switch (s->sym) {
@@ -3628,7 +3711,7 @@ sdlgr_gets(char *buf, int maxbuf, const char *prompt)
      * text into the history ring.  */
     if (hide) {
 	TextInput *t = TextPanels[curPanel-1];
-	t->needs_prompting = 1;		/* Forces redraw of prompt and
+	t->needs_prompting = 1;		/* Forces redraw of prompt and 
 					   the interrupted input line
 					   next time the panel is activated.
 					*/
@@ -3725,6 +3808,8 @@ sdlgr_display_cycle()
 	    case ' ':
 	    case 'r':
 	    case 'R':
+            case 'c':
+            case 'C':
 		sdlgr_clear_arena();
 		break;
 
@@ -3861,7 +3946,7 @@ sdlgr_open_graphics(void)
     if ((modestr = decode_vmode_string(&TheVMode, modestr))) {
 	exit_panic(badModeString, modestr);
     }
-
+    
     /* Preinitialise the font. (= clear it out with NULLs.)*/
     Font_Init(&CurrentFont, NULL, 8, 16, 128);
 
@@ -3885,7 +3970,7 @@ sdlgr_display_close(int wait)
 	    switch (e.type) {
 	    case SDL_KEYDOWN:
 		wait = NOWAIT; break;
-	    default:
+	    default: 
 		default_handler(&e);
 	    }
 	}
