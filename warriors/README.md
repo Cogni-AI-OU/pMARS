@@ -24,4 +24,5 @@ This directory contains a collection of warriors for the different International
 - [94tiny](./94tiny/README.md)
 - [Begineer](./Begineer/README.md)
 - [Mini Challenges](./mc/README.md)
+- [CWSET 2005](./2005/README.md)
 - [Datagram 2006](./2006/README.md)

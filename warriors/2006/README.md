@@ -37,6 +37,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - **P-Space**: Allowed, no restrictions
 
 ### Round 2 Warriors
+- `sf_r2.red`: no hope by S. Fernandes
 - `Baltus 2` by Heath Caldwell
 - `Smooch` by Chip Wendell
 - `One Bullet Symphony` by inversed
@@ -47,7 +48,6 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - `Kiss of Death` by Roy van Rijn
 - `KryneCSEC` by Nenad Tomasev
 - `The One` by Neogryzor
-- `no hope` by S. Fernandes
 - `Table Scan` by LAchi
 
 ## Round 3 Information
