@@ -1,2 +1,6 @@
 /src/*.o
 /src/pmars
+pmars
+*.exe
+*.patch
+*.out
