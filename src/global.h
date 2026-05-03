@@ -37,12 +37,13 @@
 /* *********************************************************************
    System dependent definitions or declarations
    ********************************************************************* */
-#if defined(__STDC__)  || defined(DOS16)
-#define NEW_STYLE
-#endif
 
 /* Generic Pointer type */
+#if defined(NEW_STYLE)
 typedef void *pointer_t;
+#else
+typedef char *pointer_t;
+#endif
 
 #if defined(DOS16)
 
@@ -120,10 +121,14 @@ enum {
    pmars global structures and definitions
    ************************************************************************ */
 
+#if defined(__STDC__)  || defined(DOS16)
+#define NEW_STYLE
+#endif
+
 /* Version and date */
 
-#define PMARSVER  92
-#define PMARSDATE "25/12/00"
+#define PMARSVER  94
+#define PMARSDATE "04/07/22"
 
 #ifdef VMS                        /* Must change codes to work with VMS error
                                  * handling */
@@ -208,7 +213,7 @@ extern  PMARS_FATAL, PMARS_BADCOMLIN, PMARS_PARSEERR;
 
 #define MAXSEPARATION MAXCORESIZE/MAXWARRIOR
 
-#define MAXALLCHAR 256
+#define MAXALLCHAR 8000
 
 /* The following holds the order in which opcodes, modifiers, and addr_modes
    are represented as in parser. The enumerated field should start from zero */
@@ -246,9 +251,13 @@ typedef int ADDR_T;
 #endif
 
 typedef unsigned char FIELD_T;
+#ifdef DOS16
 typedef unsigned long U32_T;        /* unsigned long (32 bits) */
 typedef long S32_T;
-
+#else
+typedef unsigned int U32_T;        /* unsigned int (32 bits) */
+typedef int S32_T;
+#endif
 
 /* Memory structure */
 typedef struct mem_struct {
@@ -304,15 +313,23 @@ extern ADDR_T separation;
 extern int rounds;
 extern long cycles;
 
+#ifdef RWLIMIT
+extern ADDR_T readLimit;
+extern ADDR_T writeLimit;
+#endif
+
+
 extern int cmdMod;
 extern S32_T seed;
+extern int useExtRNG;
 
 extern int SWITCH_b;
 extern int SWITCH_e;
 extern int SWITCH_k;
 extern int SWITCH_8;
 extern int SWITCH_f;
-extern ADDR_T SWITCH_F;
+extern char *SWITCH_F;
+extern ADDR_T SWITCH_Fnum;	/* an integer value of the -F parameter */
 extern int SWITCH_V;
 extern int SWITCH_o;
 extern int SWITCH_Q;
@@ -323,12 +340,13 @@ extern int SWITCH_D;
 #ifdef PERMUTATE
 extern int SWITCH_P;
 #endif
+extern int SWITCH_A;
 
 extern int inCdb;
 extern int debugState;
 extern int copyDebugInfo;
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 extern int inputRedirection;
 #endif
 #if defined(XWINGRAPHX)
@@ -350,7 +368,7 @@ extern ADDR_T pSpaceSize;
    *********************************************************************** */
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 
 #if !defined(LINUXGRAPHX)        /* vga.h already defines TEXT to be 0 */
 #define         TEXT 0
@@ -393,6 +411,8 @@ extern unsigned long loopDelayAr[SPEEDLEVELS];
    function prototypes
    *********************************************************************** */
 
+#ifdef NEW_STYLE
+
 extern int
         parse_param(int argc, char *argv[]);
 extern int eval_expr(char *expr, long *result);
@@ -411,7 +431,7 @@ extern void reset_regs(void);
 extern void set_reg(char regChr, long val);
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 extern void decode_vopt(int option);
 #ifndef LINUXGRAPHX
 extern void grputs(char *str);
@@ -439,44 +459,58 @@ extern void xWin_display_close(int wait);
 extern char *xWin_gets(char *s, int maxstr);
 extern void xWin_resize(void);
 #endif
-
-#if defined(SDLGRAPHX)
-void  sdlgr_clear_arena (void);
-void  sdlgr_refresh (int what);	/* -1: all, 0: core, >0 all text panels. */
-void  sdlgr_relayout ();
-void  sdlgr_write_menu (void);
-void  sdlgr_update (int nextpanel);
-void  sdlgr_clear (void);
-void  sdlgr_puts (const char *s);
-char *sdlgr_gets (char *buf, int maxbuf, const char *prompt);
-void  sdlgr_display_clear (void);
-void  sdlgr_open_graphics (void);
-void  sdlgr_display_close (int wait);
-int   sdlgr_text_lines (void);
-void  sdlgr_set_displayLevel(int level);
-void  sdlgr_set_displaySpeed(int speed);
-void  sdlgr_set_displayMode(int mode);
-#endif
-
-#if defined(STDGRAPHX)
-void stdio_open_graphics(void);
-void stdio_display_close(int wait);
-void stdio_clear_arena(void);
-void stdio_display_clear(void);
-void stdio_write_menu(void);
-void stdio_update(int nextpanel);
-void stdio_clear(void);
-void stdio_puts(const char *s);
-int stdio_text_lines(void);
-char *stdio_gets(char *buf, int maxbuf, const char *prompt);
-void stdio_set_displayMode(int newmode);
-void stdio_set_displayLevel(int newmode);
-void stdio_set_displaySpeed(int newmode);
-#endif
 #endif
 
 #ifdef DOS16
 extern char *cellview(mem_struct far * cell, char *outp, int emptyDisp);
 #else
 extern char *cellview(mem_struct * cell, char *outp, int emptyDisp);
+#endif
+
+#else
+
+extern int
+        parse_param();
+extern int
+        eval_expr();
+extern int assemble();
+extern void disasm();
+extern void simulator1();
+extern char *locview();
+extern char *cellview();
+extern int cdb();
+extern int score();
+extern int deaths();
+extern void results();
+extern void Exit();
+extern void reset_regs();
+extern void set_reg();
+
+#if defined(CURSESGRAPHX)
+extern void decode_vopt();
+extern void aputs5();
+#endif
+
+#if defined (LINUXGRAPHX)
+extern char *svga_gets();
+extern void svga_puts();
+extern void svga_display_close();
+extern void svga_write_menu();
+extern void svga_open_graphics();
+extern void svga_clear();
+extern void svga_update();
+extern void svga_clear_arena();
+extern int svga_getch();
+#endif
+
+#if defined(XWINGRAPHX)
+extern void xWin_puts();
+extern void xWin_write_menu();
+extern void xWin_clear();
+extern void xWin_update();
+extern void xWin_display_close();
+extern char *xWin_gets();
+extern void xWin_resize();
+#endif
+
 #endif

@@ -26,7 +26,7 @@ void    display_read(int addr);
 void    display_close(void);
 
 void
-display_init(void)
+display_init()
 {
   if (displayMode == TEXT)
     text_display_init();
@@ -35,7 +35,7 @@ display_init(void)
 }
 
 void
-display_read(int addr)
+display_read(addr)
 {
   if (displayLevel > 3)
     if (displayMode == TEXT)
@@ -96,7 +96,7 @@ if (displayMode==TEXT) text_display_clear();\
 } while (0)
 
 void
-display_close(void)
+display_close()
 {
   if (displayMode == TEXT)
     text_display_close();

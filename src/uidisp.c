@@ -21,10 +21,15 @@
  * $Id: uidisp.c,v 1.1.1.1 2000/08/20 13:29:47 iltzu Exp $
  */
 
+#ifdef NEW_STYLE
 char   *ckey2macro(int ccode, char *buf);
 char   *ukey2macro(int ucode, char *buf);
 char   *xkey2macro(int code, char *buf);
-
+#else
+char   *ckey2macro();
+char   *ukey2macro();
+char   *xkey2macro();
+#endif
 #if ! defined(CURSESGRAPHX)
 #if defined(DJGPP) || defined(WATCOM)
 #define KEYPRESSED kbhit()
@@ -170,8 +175,10 @@ display_cycle(void)
 }
 
 /* convert an extended key scan code high byte to a macro string "m [name]" */
-char *
-xkey2macro(int code, char *buf)
+char   *
+xkey2macro(code, buf)
+  int     code;
+  char   *buf;
 {
 #define INS 82
 #define DEL 83
@@ -228,8 +235,10 @@ xkey2macro(int code, char *buf)
 }
 
 /* convert a printable character (+128) into a macro string "m key-?" */
-char *
-ukey2macro(int ucode, char *buf)
+char   *
+ukey2macro(ucode, buf)
+  int     ucode;
+  char   *buf;
 {
   sprintf(buf, " m key-%c\n", ucode - 128);
   return buf;
@@ -237,8 +246,10 @@ ukey2macro(int ucode, char *buf)
 #endif                                /* if ! defined (CURSESGRAPHX) */
 
 /* convert a control character (asc < 32) into a macro string "m ctrl-?" */
-char *
-ckey2macro(int ccode, char *buf)
+char   *
+ckey2macro(ccode, buf)
+  int     ccode;
+  char   *buf;
 {
   sprintf(buf, " m ctrl-%c\n", ccode + 96);
   return buf;

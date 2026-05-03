@@ -22,7 +22,7 @@
  */
 
 #include <stdio.h>
-#if defined(unix) || defined(VMS) || defined(SDLGRAPHX)
+#if defined(unix) || defined(VMS)
 #include <signal.h>
 #else
 #if defined(__MSDOS__)
@@ -39,13 +39,8 @@
 #include <fcntl.h>
 #endif
 
-#if defined(SDLGRAPHX)
-/* Including SDL.h here makes sure main() is renamed to whatever SDL needs. */
-#include "SDL.h"
-#endif
-
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX)
+    || defined(XWINGRAPHX)
 #if defined(DJGPP)
 #include <std.h>
 #else
@@ -68,6 +63,7 @@
 void _cdecl sighandler(int);
 #endif
 
+#ifdef NEW_STYLE
 void    init(void);
 extern void results(FILE * outp);
 void    body(void);
@@ -76,11 +72,27 @@ int     returninfo(void);
 #ifdef PSPACE
 void    pspace_init(void);
 #endif
-#if defined(unix) || defined(__MSDOS__) || defined(SDLGRAPHX) || defined(VMS)
+#if defined(unix) || defined(__MSDOS__) || defined(VMS)
 void    sighandler(int dummy);
 #endif
 #if defined(CURSESGRAPHX)
 extern void end_curses(void);
+#endif
+#else
+void    init();
+extern void results();
+void    body();
+void    Exit();
+int     returninfo();
+#ifdef PSPACE
+void    pspace_init();
+#endif
+#if defined(unix) || defined(__MSDOS__)
+void    sighandler();
+#endif
+#if defined(CURSESGRAPHX)
+extern void end_curses();
+#endif
 #endif
 
 /* external strings */
@@ -122,9 +134,10 @@ is386:
 #endif
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 void
-decode_vopt(int option)
+decode_vopt(option)
+  int     option;
 {
 #if defined(XWINGRAPHX)
   extern int xDisplayType;        /* defined in xwindisp.c */
@@ -143,21 +156,11 @@ decode_vopt(int option)
   loopDelay = loopDelayAr[displaySpeed];
   keyDelay = keyDelayAr[displaySpeed];
 #endif
-#if defined(SDLGRAPHX)
-  sdlgr_set_displayLevel(displayLevel);
-  sdlgr_set_displaySpeed(displaySpeed);
-  sdlgr_set_displayMode(displayMode);
-#endif
-#if defined(STDGRAPHX)
-  stdio_set_displaySpeed(displaySpeed);
-  stdio_set_displayLevel(displayLevel);
-  stdio_set_displayMode(displayMode);
-#endif
 }
 #endif
 
 void
-init(void)
+init()
 {
   INITIALINST.opcode = (FIELD_T) DAT *8 + (FIELD_T) mF;
   INITIALINST.A_mode = INITIALINST.B_mode = (FIELD_T) DIRECT;
@@ -166,32 +169,41 @@ init(void)
   errorlevel = WARNING;                /* reserve for future */
   errmsg[0] = '\0';                /* reserve for future */
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
   decode_vopt(SWITCH_v);
 #endif
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || (defined(SDLGRAPHX) && !defined(WIN32))
+    || defined(XWINGRAPHX)
   if (!isatty(fileno(stdin)))
     inputRedirection = TRUE;
 #endif
 }
 
 void
-body(void)
+body()
 {
   int     i, j;
 
   for (i = 0; (i < warriors) && (errorcode == SUCCESS); i++)
     if ((!assemble(warrior[i].fileName, i)) && (!SWITCH_b)) {
-      fprintf(STDOUT, info01, warrior[i].name, warrior[i].instLen,
-              warrior[i].authorName);
+      if (!SWITCH_A) {
+	fprintf(STDOUT, info01, warrior[i].name, warrior[i].instLen,
+		warrior[i].authorName);
+      }
       disasm(warrior[i].instBank, warrior[i].instLen, warrior[i].offset);
-      fprintf(STDOUT, "\n");
+      if (SWITCH_A) {
+	if (warrior[i].pSpaceIndex == PIN_APPEARED) {
+	  fprintf(STDOUT, "       PIN     %6ld\n", warrior[i].pSpaceIDNumber);
+	}
+	fprintf(STDOUT,"       END\n");
+      } else {
+	fprintf(STDOUT, "\n");
+      }
     }
 #ifdef PSPACE                        /* set up pSpace */
   pspace_init();
 #endif
-  if (rounds && (errorcode == SUCCESS)) {
+  if (rounds && !SWITCH_A && (errorcode == SUCCESS)) {
     simulator1();
     if (SWITCH_k) {
       set_reg('W', (long) warriors);        /* 'W' used in score calculation */
@@ -212,7 +224,7 @@ body(void)
 }
 
 /* called when ctrl-c is pressed; prepares for debugger entry */
-#if defined(unix) || defined(__MSDOS__) || defined (__OS2__) || defined(SDLGRAPHX)
+#if defined(unix) || defined(__MSDOS__) || defined (__OS2__)
 void
 #ifdef __OS2__
         _cdecl
@@ -244,7 +256,8 @@ sighandler(dummy)
 
 
 void
-Exit(int errorcode)
+Exit(errorcode)
+  int     errorcode;
 {
 #if defined(CURSESGRAPHX)
   end_curses();                        /* Restore terminal to sane mode */
@@ -273,7 +286,9 @@ Exit(int errorcode)
 }
 
 int
-main(int argc, char **argv)
+main(argc, argv)
+  int     argc;
+  char  **argv;
 {
 #if defined(unix) && !defined(DJGPP)
 #ifdef SIGINT
@@ -298,7 +313,7 @@ main(int argc, char **argv)
 #endif
 #if defined(LINUXGRAPHX)
   if (vga_init() == -1) {
-    fputs(cantInitSvga, stderr);
+    fprintf(stderr, cantInitSvga);
     exit(1);
   }
   if ((console_fd = open("/dev/console", O_RDONLY)) == -1) {
@@ -329,7 +344,7 @@ main(int argc, char **argv)
 
 /* return exitcode based on SWITCH_Q setting, useful mainly in scripts */
 int
-returninfo(void)
+returninfo()
 {
 #ifdef GRAPHX
 #define VARIANT 2
@@ -380,7 +395,7 @@ returninfo(void)
 
 #ifdef PSPACE
 void
-pspace_init(void)
+pspace_init()
 {
   int     i, j;
   for (i = 0; i < warriors; ++i) {

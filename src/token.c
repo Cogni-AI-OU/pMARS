@@ -28,7 +28,11 @@
 
 /* **************************** Prototype ******************************** */
 
+#ifdef NEW_STYLE
 #define toupper_(x) (toupper(x))
+#else
+#define toupper_(x) (isalpha(x) && islower(x) ? toupper(x) : (x))
+#endif
 
 /* *************************** definitions ******************************* */
 
@@ -38,8 +42,10 @@
 
 /* ********************************************************************** */
 
-char *
-pstrchr(char *s, int c)
+char   *
+pstrchr(s, c)
+  char   *s;
+  int     c;
 {
   do {
     if ((int) *s == c)
@@ -51,8 +57,9 @@ pstrchr(char *s, int c)
 
 /* ********************************************************************** */
 
-char *
-pstrdup(char *s)
+char   *
+pstrdup(s)
+  char   *s;
 {
   char   *p, *q;
   register int i;
@@ -71,8 +78,9 @@ pstrdup(char *s)
 
 /* ********************************************************************** */
 
-char *
-pstrcat(char *s1, char *s2)
+char   *
+pstrcat(s1, s2)
+  char   *s1, *s2;
 {
   register char *p = s1;
 
@@ -89,7 +97,9 @@ pstrcat(char *s1, char *s2)
 
 /* return src of char in charset. charset is a string */
 uChar 
-ch_in_set(uShrt c, char *s)
+ch_in_set(c, s)
+  uShrt   c;
+  char   *s;
 {
   char    cc;
   register char a;
@@ -106,7 +116,8 @@ ch_in_set(uShrt c, char *s)
  * return src of str in charset. charset is a string set. case is significant
  */
 uChar 
-str_in_set(char *str, char *s[])
+str_in_set(str, s)
+  char   *str, *s[];
 {
   register uChar i;
   for (i = 0; *s[i] && strcmp(str, s[i]); i++);
@@ -117,7 +128,9 @@ str_in_set(char *str, char *s[])
 
 /* return next char which is non-whitespace char */
 uChar 
-skip_space(char *str, uShrt i)
+skip_space(str, i)
+  char   *str;
+  uShrt   i;
 {
   register uChar idx;
   idx = (uChar) i;
@@ -128,8 +141,9 @@ skip_space(char *str, uShrt i)
 
 /* ********************************************************************** */
 
-void
-to_upper(char *str)
+void 
+to_upper(str)
+  char   *str;
 {
   while ((*str = toupper_(*str)) != '\0')
     str++;
@@ -138,8 +152,10 @@ to_upper(char *str)
 /* ********************************************************************** */
 
 /* Get token which depends on the first letter. token need to be allocated. */
-int
-get_token(char *str, uChar *curIndex, char *token)
+int 
+get_token(str, curIndex, token)
+  char   *str, *token;
+  uChar  *curIndex;
 {
   register uChar src, dst = 0;
   register int ch;                /* int for ctype compliance */

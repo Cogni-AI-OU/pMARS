@@ -209,11 +209,16 @@ FILE   *dias;
 
 /* ****************** required local prototypes ********************* */
 
+#ifdef NEW_STYLE
 static void textout(char *);
 static void errprn(errType, line_st *, char *);
+#else
+static void textout(), errprn();
+#endif
 
 /* ***************** conforming local prototypes ******************** */
 
+#ifdef NEW_STYLE
 #ifndef SERVER
 static void lineswitch(char *, uShrt, line_st *);
 #endif
@@ -238,11 +243,28 @@ static void nocmnt(char *);
 static void automaton(char *, stateCol, mem_struct *);
 static void dfashell(char *, mem_struct *);
 static void expand(uShrt), encode(uShrt);
+#else
+#ifndef SERVER
+static void lineswitch();
+#endif
+static int globalswitch(), trav2(), normalize();
+static int blkfor(), equtbl(), equsub();
+static ref_st *lookup();
+static grp_st *addsym();
+static src_st *addlinesrc();
+static void newtbl(), addpredef(), addline();
+static void addpredefs();
+static void show_info(), show_lbl();
+static void disposeline(), disposegrp(), disposetbl();
+static void cleanmem(), nocmnt();
+static void automaton(), dfashell(), expand(), encode();
+#endif
 
 /* ************************** Functions ***************************** */
 
 static ref_st *
-lookup(char *symn)
+lookup(symn)
+  char   *symn;
 {
   ref_st *curtbl;
   grp_st *symtable;
@@ -259,7 +281,7 @@ lookup(char *symn)
 /* ******************************************************************* */
 
 static void
-newtbl(void)
+newtbl()
 {
   ref_st *curtbl;
   if ((curtbl = (ref_st *) MALLOC(sizeof(ref_st))) != NULL) {
@@ -275,18 +297,19 @@ newtbl(void)
 /* ******************************************************************* */
 
 static grp_st *
-addsym(char *symn, grp_st *curgroup)
+addsym(symn, curgroup)
+  char   *symn;
+  grp_st *curgroup;
 {
   grp_st *symgrp;
 
-  if ((symgrp = (grp_st *) MALLOC(sizeof(grp_st))) != NULL) {
-    if ((symgrp->symn = pstrdup(symn)) != NULL) {
+  if ((symgrp = (grp_st *) MALLOC(sizeof(grp_st))) != NULL)
+    if ((symgrp->symn = pstrdup(symn)) != NULL)
       symgrp->nextsym = curgroup;
-    } else {
+    else {
       FREE(symgrp);
       MEMORYERROR;
     }
-  }
 
   return symgrp;
 }
@@ -294,7 +317,9 @@ addsym(char *symn, grp_st *curgroup)
 /* ******************************************************************* */
 
 static void
-addpredef(char *symn, U32_T value)
+addpredef(symn, value)
+  char   *symn;
+  U32_T   value;
 {
   grp_st *lsymtbl = NULL;
   line_st *aline;
@@ -315,7 +340,7 @@ addpredef(char *symn, U32_T value)
 /* ******************************************************************* */
 
 static void
-addpredefs(void)
+addpredefs()
 {
   /* predefined constants */
   addpredef("CORESIZE", (U32_T) coreSize);
@@ -326,6 +351,10 @@ addpredefs(void)
   addpredef("VERSION", (U32_T) PMARSVER);
   addpredef("WARRIORS", (U32_T) warriors);
   addpredef("ROUNDS", (U32_T) rounds);
+#ifdef RWLIMIT
+  addpredef("READLIMIT", (U32_T) readLimit);
+  addpredef("WRITELIMIT", (U32_T) writeLimit);
+#endif
 #ifdef PSPACE
   addpredef("PSPACESIZE", (U32_T) pSpaceSize);
 #endif
@@ -336,30 +365,33 @@ addpredefs(void)
 /* Add line, with sline and lline, it is possible to add line to multiple
    group of inst */
 static void
-addline(char *vline, src_st *src, uShrt lspnt)
+addline(vline, src, lspnt)
+  char   *vline;
+  src_st *src;
+  uShrt   lspnt;
 {
   line_st *temp;
-  if ((temp = (line_st *) MALLOC(sizeof(line_st))) != NULL) {
+  if ((temp = (line_st *) MALLOC(sizeof(line_st))) != NULL)
     if ((temp->vline = pstrdup(vline)) != NULL) {
       temp->dbginfo = (dbginfo ? TRUE : FALSE);
       temp->linesrc = src;
       temp->nextline = NULL;
-      if (sline[lspnt]) {              /* First come first serve */
+      if (sline[lspnt])                /* First come first serve */
         lline[lspnt] = lline[lspnt]->nextline = temp;
-      } else {                    /* lline init depends on sline */
+      else                        /* lline init depends on sline */
         sline[lspnt] = lline[lspnt] = temp;
-      }
     } else {
       FREE(temp);
       MEMORYERROR;
     }
-  }
 }
 
 /* ******************************************************************* */
 
 static src_st *
-addlinesrc(char *src, uShrt loc)
+addlinesrc(src, loc)
+  char   *src;
+  uShrt   loc;
 {
   src_st *alinesrc;
 
@@ -378,7 +410,8 @@ addlinesrc(char *src, uShrt loc)
 /* ******************************************************************* */
 
 static void
-disposeline(line_st *aline)
+disposeline(aline)
+  line_st *aline;
 {
   line_st *tmp;
 
@@ -392,7 +425,8 @@ disposeline(line_st *aline)
 /* ******************************************************************* */
 
 static void
-disposegrp(grp_st *agrp)
+disposegrp(agrp)
+  grp_st *agrp;
 {
   grp_st *tmp;
 
@@ -406,7 +440,8 @@ disposegrp(grp_st *agrp)
 /* ******************************************************************* */
 
 static void
-disposetbl(ref_st *atbl, ref_st *btbl)
+disposetbl(atbl, btbl)
+  ref_st *atbl, *btbl;
 {
   ref_st *tmp;
 
@@ -421,7 +456,7 @@ disposetbl(ref_st *atbl, ref_st *btbl)
 
 /* clear all allocated mem */
 static void
-cleanmem(void)
+cleanmem()
 {
   disposeline(sline[0]);
   disposeline(sline[1]);
@@ -437,7 +472,7 @@ cleanmem(void)
 
 /* show symbol informations */
 static void
-show_lbl(void)
+show_lbl()
 {
   ref_st *aref;
   grp_st *agrp;
@@ -489,7 +524,8 @@ show_lbl(void)
 
 /* Show information about the EQU processing */
 static void
-show_info(uShrt sspnt)
+show_info(sspnt)
+  uShrt   sspnt;
 {
   line_st *aline;
 
@@ -509,7 +545,8 @@ show_info(uShrt sspnt)
 
 /* Remove trailing comment from str */
 static void
-nocmnt(char *str)
+nocmnt(str)
+  char   *str;
 {
   while (*str && (*str != com_sym))
     str++;
@@ -519,7 +556,9 @@ nocmnt(char *str)
 /* ******************************************************************* */
 
 static int
-globalswitch(char *str, uShrt idx, uShrt loc, uShrt lspnt)
+globalswitch(str, idx, loc, lspnt)
+  char   *str;
+  uShrt   idx, loc, lspnt;
 {
   uChar   i;
   i = (uChar) idx;
@@ -568,11 +607,10 @@ globalswitch(char *str, uShrt idx, uShrt loc, uShrt lspnt)
 
 #ifndef SERVER
 static void
-lineswitch(        /* line switch */
-    char *str,
-    uShrt idx,
-    line_st *aline
-)
+lineswitch(str, idx, aline)        /* line switch */
+  char   *str;
+  uShrt   idx;
+  line_st *aline;
 {
   uChar   i;
   i = (uChar) idx;
@@ -611,13 +649,14 @@ lineswitch(        /* line switch */
 
 /* stst && wangsawm v0.4.0: output for different displays */
 static void
-textout(char *str)
+textout(str)
+  char   *str;
 {
 #ifdef MACGRAPHX
   macputs(str);
 #else
   if (!inCdb)
-    fputs(str, stderr);
+    fprintf(stderr, str);
 #if defined DOSALLGRAPHX
   else {
     if (displayMode == TEXT)
@@ -641,19 +680,9 @@ textout(char *str)
 #if defined XWINGRAPHX
   else
     xWin_puts(str);
-#else
-#if defined(SDLGRAPHX)
-  else
-    sdlgr_puts(str);
-#else
-#if defined STDGRAPHX
-  else
-    stdio_puts(str);
 #else                                /* no display */
   else
-    fputs(str, stderr);
-#endif                                /* STDGRAPHX */
-#endif                                /* SDLGRAPHX */
+    fprintf(stderr, str);
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* DOSGRXGRAPHX */
@@ -665,7 +694,10 @@ textout(char *str)
 /* ******************************************************************* */
 
 static void
-errprn(errType code, line_st *aline, char *arg)
+errprn(code, aline, arg)
+  errType code;
+  line_st *aline;
+  char   *arg;
 {
   char    abuf[MAXALLCHAR];
 
@@ -795,7 +827,7 @@ errprn(errType code, line_st *aline, char *arg)
 #ifdef __MAC__
     textout(notEnoughMemErr);
 #else
-    fputs(notEnoughMemErr, stderr);
+    fprintf(stderr, notEnoughMemErr);
 #endif
     Exit(MEMERR);
     break;
@@ -878,7 +910,7 @@ errprn(errType code, line_st *aline, char *arg)
   }
 
   if (ierr >= ERRMAX) {
-    sprintf(outs, "%s", tooManyMsgErr);
+    sprintf(outs, tooManyMsgErr);
 #ifndef VMS
     textout(outs);
 #else
@@ -915,7 +947,10 @@ static line_st *aline;
 
 /* Here is the automaton */
 static void
-automaton(char *expr, stateCol state, mem_struct *cell)
+automaton(expr, state, cell)
+  char   *expr;
+  stateCol state;
+  mem_struct *cell;
 {
   uChar   idx = 0;
   char   *tmp;
@@ -1248,7 +1283,9 @@ automaton(char *expr, stateCol state, mem_struct *cell)
 /* ******************************************************************* */
 
 static void
-dfashell(char *expr, mem_struct *cell)
+dfashell(expr, cell)
+  char   *expr;
+  mem_struct *cell;
 {
   cell->A_mode = (FIELD_T) ch_in_set('$', addr_sym);
   cell->B_mode = (FIELD_T) ch_in_set('$', addr_sym);
@@ -1387,7 +1424,8 @@ dfashell(char *expr, mem_struct *cell)
 /* ******************************************************************* */
 
 static int
-normalize(long value)
+normalize(value)
+  long    value;
 {
   while (value >= (long) coreSize)
     value -= (long) coreSize;
@@ -1400,7 +1438,8 @@ normalize(long value)
 /* assemble into instBank */
 
 static void
-encode(uShrt sspnt)
+encode(sspnt)
+  uShrt   sspnt;
 {
   int evalerrA, evalerrB;
   long    resultA, resultB;
@@ -1452,13 +1491,11 @@ encode(uShrt sspnt)
                                                                          * been set */
                 }
 #endif
-                else if (resultB) {
-                  if (warrior[curWarrior].offset) {
+                else if (resultB)
+                  if (warrior[curWarrior].offset)
                     errprn(DOEERR, aline, "");
-                  } else {
+                  else
                     warrior[curWarrior].offset = normalize(resultB);
-                  }
-                }
                 /* else ignore 'end' with parameter == 0L */
               }
             else if ((evalerrA = eval_expr(A_expr, &resultA)) < OK_EXPR) {
@@ -1506,7 +1543,8 @@ encode(uShrt sspnt)
 /* ******************************************************************* */
 
 static int
-blkfor(char *expr, char *dest)
+blkfor(expr, dest)
+  char   *expr, *dest;
 {
   int evalerr;
   line_st *cline;
@@ -1592,7 +1630,8 @@ blkfor(char *expr, char *dest)
 /* ******************************************************************* */
 
 static int
-equtbl(char *expr)
+equtbl(expr)
+  char   *expr;
 {
   line_st *cline, *pline = NULL;
   uChar   i;
@@ -1647,7 +1686,10 @@ equtbl(char *expr)
 /* ******************************************************************* */
 
 static int
-equsub(char *expr, char *dest, int wdecl, ref_st *tbl)
+equsub(expr, dest, wdecl, tbl)
+  char   *expr, *dest;
+  int     wdecl;
+  ref_st *tbl;
 {
   line_st *cline;
 
@@ -1681,7 +1723,9 @@ equsub(char *expr, char *dest, int wdecl, ref_st *tbl)
 /* recursively traverse the buffer */
 /* buf[] has to be "" */
 static int
-trav2(char *buffer, char *dest, int wdecl)
+trav2(buffer, dest, wdecl)
+  char   *buffer, *dest;
+  int     wdecl;
 {
   int evalerr;
   uChar   idxp = 0;
@@ -1898,7 +1942,8 @@ trav2(char *buffer, char *dest, int wdecl)
 
 /* collect and expand equ */
 static void
-expand(uShrt sspnt)
+expand(sspnt)
+  uShrt   sspnt;
 {
   dspnt = 1 - sspnt;
   disposeline(sline[dspnt]);
@@ -1929,7 +1974,10 @@ expand(uShrt sspnt)
 /* ******************************************************************* */
 
 int
-parse(char *expr, mem_struct *cell, ADDR_T loc)
+parse(expr, cell, loc)
+  char   *expr;
+  mem_struct *cell;
+  ADDR_T  loc;
 {
   int evalerrA, evalerrB;
   long    resultA, resultB;
@@ -1963,8 +2011,8 @@ parse(char *expr, mem_struct *cell, ADDR_T loc)
   for (aline = sline[sspnt], line = (uShrt) loc; aline;
        aline = aline->nextline) {
     dfashell(aline->vline, &tmp);
-    if (errnum == 0) {
-      if (opcode < OPNUM) {
+    if (errnum == 0)
+      if (opcode < OPNUM)
         if ((evalerrA = eval_expr(A_expr, &resultA)) < OK_EXPR) {
           if (evalerrA == DIV_ZERO)
             errprn(DIVERR, aline, "");
@@ -1991,8 +2039,6 @@ parse(char *expr, mem_struct *cell, ADDR_T loc)
             cell -= coreSize;
           }
         }
-      }
-    }
   }
   disposeline(sline[0]);
   disposeline(sline[1]);
@@ -2023,7 +2069,9 @@ parse(char *expr, mem_struct *cell, ADDR_T loc)
 static char stdinstart = 0;
 
 int
-assemble(char *fName, int aWarrior)
+assemble(fName, aWarrior)
+  char   *fName;
+  int     aWarrior;
 {
   FILE   *infp;
   uChar   cont = TRUE, conLine = FALSE, i;
@@ -2123,13 +2171,16 @@ assemble(char *fName, int aWarrior)
        */
       *buf = '\0';
       i = 0;                        /* pointer to line buffer start */
+      int commentfound = FALSE;
       do {
         if (fgets(buf + i, MAXALLCHAR - i, infp)) {
-          for (; buf[i]; i++)
+          for (; buf[i]; i++) {
+            if (buf[i] == ';') commentfound = TRUE;
             if (buf[i] == '\n' || buf[i] == '\r')
               break;
+            }
           buf[i] = 0;
-          if (buf[i - 1] == '\\') {        /* line continued */
+          if (buf[i - 1] == '\\' && commentfound == FALSE) {        /* line continued */
             conLine = TRUE;
             buf[--i] = 0;        /* reset */
           } else

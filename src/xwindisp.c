@@ -184,8 +184,7 @@ extern char *invalidGeom;
 #define cursoroff() xWin_cleartextxy(posx, posy, clearGC)
 
 /* function prototypes */
-extern void sighandler(int dummy);
-
+#ifdef NEW_STYLE
 static void setcolor(int c);
 static void xWin_cleartextxy(int x, int y, GC gc);
 static void xWin_outtextxy(int x, int y, char *s);
@@ -214,6 +213,34 @@ static void get_gc(void);
 static void handle_event(XEvent * event);
 static void init_xwin(void);
 static void draw_border(void);
+#else
+static void setcolor();
+static void xWin_cleartextxy();
+static void xWin_outtextxy();
+static unsigned long conv_key();
+static unsigned long xWin_getch();
+static void graphio_init();
+static void newline();
+static void newchar();
+static void
+        delchar();
+static int mouse_or_key();
+static char *special_keys();
+static int xkoord();
+static int ykoord();
+static void findplace();
+static void xWin_clear_arena();
+static void write_names();
+static void redraw();
+static void my_err();
+static int make_int();
+static void parse_geometry();
+static void alloc_colors();
+static void get_gc();
+static void handle_event();
+static void init_xwin();
+static void draw_border();
+#endif
 
 /**********************************************************************/
 /*   misc and util functions                                                                                                                 */
@@ -223,9 +250,10 @@ static void draw_border(void);
  * print the given string to stderr and terminate
  */
 static void
-my_err(char *s)
+my_err(s)
+  char   *s;
 {
-  fputs(s, stderr);
+  fprintf(stderr, s);
   Exit(1);
 }
 
@@ -233,7 +261,8 @@ my_err(char *s)
  * convert the given string into a number
  */
 static int
-make_int(char *s)
+make_int(s)
+  char   *s;
 {
   char   *err;
   int     r;
@@ -311,7 +340,8 @@ parse_geometry(sizeHints, x, y, w, h)
  * adjust the position variables for a new panel
  */
 void
-xWin_update(int newcurPanel)
+xWin_update(newcurPanel)
+  int     newcurPanel;
 {
   if (curPanel == newcurPanel)
     return;
@@ -373,7 +403,7 @@ xWin_update(int newcurPanel)
  * initialize some graphics variables
  */
 static void
-graphio_init(void)
+graphio_init()
 {
   size = 4;                        /* Size of a given location, feel free to
                                  * make it bigger */
@@ -399,7 +429,8 @@ graphio_init(void)
  * return the x coordinate of the given core address
  */
 int
-xkoord(int addr)
+xkoord(addr)
+  int     addr;
 {
   return (leftUpperX + ((addr) % verticalSize) * (size + 1));
 }
@@ -408,7 +439,8 @@ xkoord(int addr)
  * return the y coordinate of the given core address
  */
 int
-ykoord(int addr)
+ykoord(addr)
+  int     addr;
 {
   return (leftUpperY + ((addr) / verticalSize) * (size + 1));
 }
@@ -417,7 +449,8 @@ ykoord(int addr)
  * record the coordinates and the color of the given core address
  */
 void
-findplace(int addr)
+findplace(addr)
+  int     addr;
 {
   x = xkoord(addr);
   y = ykoord(addr);
@@ -428,7 +461,7 @@ findplace(int addr)
  * check for a color display and allocate the colors we need
  */
 static void
-alloc_colors(void)
+alloc_colors()
 {
   XColor  c;
   int     i = 5;
@@ -479,7 +512,7 @@ alloc_colors(void)
  * allocate the GCs we need
  */
 static void
-get_gc(void)
+get_gc()
 {
   XGCValues values;
 
@@ -510,7 +543,7 @@ get_gc(void)
  * print a newline
  */
 static void
-newline(void)
+newline()
 {
   posx = grwindx0;
   posy += verspace;
@@ -541,7 +574,7 @@ newline(void)
  * adjust the cursor after printing a new character
  */
 static void
-newchar(void)
+newchar()
 {
   posx += horizspace;
   if (posx > grwindx1 - horizspace)
@@ -552,7 +585,7 @@ newchar(void)
  * delete a character by overwriting it with black
  */
 static void
-delchar(void)
+delchar()
 {
   if (point) {
     cursoroff();
@@ -572,7 +605,8 @@ delchar(void)
  * draw the given text at the current address
  */
 void
-xWin_puts(char *sss)
+xWin_puts(sss)
+  char   *sss;
 {
   if (printAttr)
     setcolor(colors[printAttr - 1]);
@@ -597,7 +631,7 @@ xWin_puts(char *sss)
  * write the menu line
  */
 void
-xWin_write_menu(void)
+xWin_write_menu()
 {
   int     y, i, j;
   char    s[7];
@@ -647,7 +681,7 @@ xWin_write_menu(void)
  * display the names of the warriors
  */
 void
-write_names(void)
+write_names()
 {
   if (warriors <= 2) {
     setcolor(colors[0]);
@@ -672,7 +706,7 @@ conv_key(event)
   XEvent *event;
 {
   KeySym  keysym;
-  static char buffer[20];
+  static unsigned char buffer[20];
   XComposeStatus compose;
   int     count;
 
@@ -691,7 +725,7 @@ conv_key(event)
  * wait for a keypress, return the key
  */
 static unsigned long
-xWin_getch(void)
+xWin_getch()
 {
   XEvent  event;
 
@@ -709,7 +743,9 @@ xWin_getch(void)
  * occurs
  */
 static int
-mouse_or_key(char *result, unsigned long *key)
+mouse_or_key(result, key)
+  char   *result;
+  unsigned long *key;
 {
   XEvent  event;
   int     x, y;
@@ -762,7 +798,9 @@ mouse_or_key(char *result, unsigned long *key)
  * handle 'special' keys (ie. function/control/alt keys)
  */
 static char *
-special_keys(unsigned long key, char *buf)
+special_keys(key, buf)
+  unsigned long key;
+  char   *buf;
 {
   if (controlPressed && key < 128) {
     sprintf(buf, " m ctrl-%c\n", (char) key);
@@ -867,8 +905,10 @@ special_keys(unsigned long key, char *buf)
 /*
  * read a line from the keyboard
  */
-char *
-xWin_gets(char *result, int maxchar)
+char   *
+xWin_gets(result, maxchar)
+  char   *result;
+  int     maxchar;
 {
   if (inputRedirection) {
     return fgets(result, maxchar, stdin);
@@ -934,7 +974,7 @@ xWin_gets(char *result, int maxchar)
  * scratch'
  */
 static void
-redraw(void)
+redraw()
 {
   XClearWindow(display, xwindow);
   if (!doesBs)
@@ -1056,7 +1096,8 @@ handle_event(event)
  * set the color to be used in subsequent graphics operations
  */
 void
-setcolor(int c)
+setcolor(c)
+  int     c;
 {
   XSetForeground(display, colorGC, xColors[c]);
 }
@@ -1065,7 +1106,7 @@ setcolor(int c)
  * draw a border around the arena
  */
 static void
-draw_border(void)
+draw_border()
 {
   int     x = leftUpperX - borderWidth;
   int     y = leftUpperY - borderWidth;
@@ -1099,7 +1140,9 @@ xWin_cleartextxy(x, y, gc)
  * of the text
  */
 void
-xWin_outtextxy(int x, int y, char *s)
+xWin_outtextxy(x, y, s)
+  int     x, y;
+  char   *s;
 {
   int     y_baseline = y + fontInfo->ascent;
 
@@ -1113,7 +1156,7 @@ xWin_outtextxy(int x, int y, char *s)
  * cursor position.
  */
 void
-xWin_clear(void)
+xWin_clear()
 {
   posx = grwindx0;
   posy = grwindy0;
@@ -1129,7 +1172,7 @@ xWin_clear(void)
  * clear the arena
  */
 void
-xWin_clear_arena(void)
+xWin_clear_arena()
 {
   int     x = leftUpperX - borderWidth + 1;
   int     y = leftUpperY - borderWidth + 1;
@@ -1147,7 +1190,7 @@ xWin_clear_arena(void)
  * clear the arena and display the process meters and cycle meters
  */
 void
-xWin_display_clear(void)
+xWin_display_clear()
 {
   int     i;
 
@@ -1189,7 +1232,7 @@ xWin_display_clear(void)
  * input
  */
 void
-xWin_display_cycle(void)
+xWin_display_cycle()
 {
   unsigned long ch = 0;
   int     key = 0;
@@ -1285,7 +1328,8 @@ xWin_display_cycle(void)
  * display a read access at the given address
  */
 void
-xWin_display_read(int addr)
+xWin_display_read(addr)
+  int     addr;
 {
   setcolor(colors[W - warrior]);
   XDrawPoint(display, xwindow, colorGC, xkoord(addr), ykoord(addr));
@@ -1297,7 +1341,8 @@ xWin_display_read(int addr)
  * display a decrement access at the given address
  */
 void
-xWin_display_dec(int addr)
+xWin_display_dec(addr)
+  int     addr;
 {
   findplace(addr);
   setcolor(col);
@@ -1313,7 +1358,8 @@ xWin_display_dec(int addr)
  * display an increment access at the given address
  */
 void
-xWin_display_inc(int addr)
+xWin_display_inc(addr)
+  int     addr;
 {
   findplace(addr);
   setcolor(col);
@@ -1329,7 +1375,8 @@ xWin_display_inc(int addr)
  * display a write access at the given address
  */
 void
-xWin_display_write(int addr)
+xWin_display_write(addr)
+  int     addr;
 {
   findplace(addr);
   setcolor(col);
@@ -1347,7 +1394,8 @@ xWin_display_write(int addr)
  * display an execute access at the given address
  */
 void
-xWin_display_exec(int addr)
+xWin_display_exec(addr)
+  int     addr;
 {
   setcolor(colors[W - warrior]);
   XDrawRectangle(display, xwindow, colorGC,
@@ -1361,7 +1409,8 @@ xWin_display_exec(int addr)
  * display a split access at the given address
  */
 void
-xWin_display_spl(int warrior, int tasks)
+xWin_display_spl(warrior, tasks)
+  int     warrior, tasks;
 {
   setcolor(colors[warrior]);
   XDrawPoint(display, xwindow, colorGC, tasks / processRatio, splY[warrior]);
@@ -1373,7 +1422,8 @@ xWin_display_spl(int warrior, int tasks)
  * display a dat access at the given address
  */
 void
-xWin_display_dat(int addr, int warNum, int tasks)
+xWin_display_dat(addr, warNum, tasks)
+  int     addr, warNum, tasks;
 {
   if (displayLevel > 0) {
     setcolor(datcolors[warNum]);
@@ -1442,7 +1492,8 @@ xWin_resize(void)
  * close the display
  */
 void
-xWin_display_close(int wait)
+xWin_display_close(wait)
+  int     wait;
 {
   if (wait == WAIT) {
     xWin_puts(pressAnyKey);
@@ -1458,7 +1509,7 @@ xWin_display_close(int wait)
  * set various attributes
  */
 static void
-init_xwin(void)
+init_xwin()
 {
   int     xsize, ysize, x = 0, y = 0;
   XSizeHints *sizeHints;
@@ -1588,7 +1639,7 @@ init_xwin(void)
   wmHints->initial_state = NormalState;
   wmHints->input = True;
   wmHints->icon_pixmap = XCreateBitmapFromData(display, xwindow,
-                            (const char *) pmarsicn_bits, pmarsicn_width, pmarsicn_height);
+                            pmarsicn_bits, pmarsicn_width, pmarsicn_height);
 
   /* resource & class names */
   classHints->res_name = "pmars";
@@ -1615,7 +1666,7 @@ init_xwin(void)
  * get the X interface up and running
  */
 void
-xWin_open_graphics(void)
+xWin_open_graphics()
 {
   XEvent  event;
   int     i;

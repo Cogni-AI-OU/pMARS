@@ -23,28 +23,54 @@
 #include "global.h"
 #include "sim.h"
 
+#ifdef NEW_STYLE
 int     posit(void);
 void    npos(void);
 S32_T   rng(S32_T seed);
+static void init_rc5(U32_T *s);
+static void rc5_crypt(U32_T *a, U32_T *b, const U32_T *schedule, unsigned int r);
+static void rc5_decrypt(U32_T *a, U32_T *b, const U32_T *schedule, unsigned int r);
+static void rc5_schedule(U32_T *schedule, U32_T keya, U32_T keyb, unsigned int r);
+#endif
 
 /* minimal standard random number generator; integer version 2
  * Communications of the ACM, 31:10 (1988)
- * returns 1 <= seed <= 2^31-2, cycle: 2^32, tested and approved */
+ * returns 1 <= seed <= 2^31-2, cycle: 2^32, tested and approved
+ *
+ * or, if useExtRNG is set, RC5-32/8/12 in counter crypting mode.
+ */
 S32_T
-rng(S32_T seed)
+rng(seed)
+  S32_T   seed;
 {
   register S32_T temp = seed;
-  temp = 16807 * (temp % 127773) - 2836 * (temp / 127773);
-  if (temp < 0)
-    temp += 2147483647;
-  return temp;
+  if (!useExtRNG) {
+      temp = 16807 * (temp % 127773) - 2836 * (temp / 127773);
+      if (temp < 0)
+	  temp += 2147483647;
+      return temp;
+  } else {
+      static U32_T counter = 0;
+      static U32_T schedule[2*(12+1)];
+      if (!counter) {
+	  init_rc5(&schedule[0]);
+      }
+      {
+	  U32_T a = 0, b = counter;
+	  rc5_crypt(&a, &b, &schedule[0], 12);
+	  counter++;
+	  return b & 0x7fffFFFF;
+      }
+  }
 }
+
+
 
 #define RETRIES1 20                /* how many times to try generating one
                                  * position */
 #define RETRIES2 4                /* how many times to start backtracking */
 int
-posit(void)
+posit()
 {
   int     pos = 1, i, retries1 = RETRIES1, retries2 = RETRIES2;
   int     diff;
@@ -81,7 +107,7 @@ posit(void)
 }
 
 void
-npos(void)
+npos()
 {
   int     i, j;
   unsigned int temp;
@@ -106,4 +132,104 @@ npos(void)
     warrior[j].position = warrior[i].position;
     warrior[i].position = temp;
   }
+}
+
+static void
+init_rc5(U32_T *schedule)
+{
+    U32_T a = 0, b = 0;
+    int i, j;
+    unsigned char *p = SWITCH_F;
+    while (*p) {
+	for (i=0; *p && i<4; i++, p++)  a ^= *p << (i*8);
+	for (i=0; *p && i<4; i++, p++)  b ^= *p << (i*8);
+    }
+    rc5_schedule(schedule, a, b, 12);
+}
+
+
+#define ROL(x,y) (((U32_T)(x) << ((y)&31)) | ((U32_T)(x) >> ((y)&31)))
+#define ROR(x,y) (((U32_T)(x) >> ((y)&31)) | ((U32_T)(x) << ((y)&31)))
+
+#define _P 0xb7e15163UL
+#define _Q 0x9e3779b9UL
+
+static
+void
+rc5_crypt( U32_T *a, U32_T *b, const U32_T *C, unsigned int rounds)
+{
+  U32_T A,B;
+  unsigned int k;
+
+  A = *a; B = *b;
+  A = A + C[0];
+  B = B + C[1];
+  for (k=2; k<2*rounds+2; ) {
+    A = A^B;
+    A = ROL(A,B);
+    A = A+C[k];
+
+    B = A^B;
+    B = ROL(B,A);
+    B = B+C[k+1];
+    k = k+2;
+  }
+  *a = A;
+  *b = B;
+}
+
+
+static
+void
+rc5_decrypt( U32_T *a, U32_T *b, const U32_T *C, unsigned int rounds )
+{
+  U32_T A,B;
+  unsigned int k;
+
+  A = *a;
+  B = *b;
+  for (k=2*rounds; k!=0; ) {
+    B = B - C[k+1];
+    B = ROR(B,A);
+    B = B^A;
+
+    A = A - C[k];
+    A = ROR(A,B);
+    A = B^A;
+    k = k-2;
+  }
+  B = B - C[1];
+  *b = B;
+  A = A - C[0];
+  *a = A;
+}
+
+
+static void
+rc5_schedule( U32_T *S, U32_T LA, U32_T LB, unsigned int r)
+{
+  unsigned int i, k, NKEYS = 2*(r+1);
+  U32_T A=0;
+
+  A = S[0]  = ROL( _P,	3);
+  	LA  = ROL( LA	+A,	A );
+  A = S[1]  = ROL( _P+_Q +A+LA,	3);
+  	LB  = ROL( LB	+A+LA,	A+LA );
+
+  for ( S[2]=_P+2*_Q, i=3; i<NKEYS; i++) S[i] = S[i-1]+_Q;
+
+  k = 0;
+  i = 2;
+  do {
+    do
+    {
+      A = S[i]  = ROL( S[i]  +A+LB, 3);
+            LA  = ROL( LA    +A+LB, A+LB );
+      A = S[i+1]= ROL( S[i+1]+A+LA, 3);
+	    LB  = ROL( LB    +A+LA, A+LA );
+      i+=2;
+    } while (i<NKEYS);
+    k++;
+    i = 0;
+  } while (k < 3);
 }

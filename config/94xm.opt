@@ -1,6 +1,6 @@
-;redcode-94x
-;KOTH.org '94 Experimental Hill Specs
-;use pmars -@ 94x.opt file1 [files...]
+;redcode-94xm
+;KOTH.org '94 Experimental Multiwarrior Hill Specs
+;use pmars -@ 94xm.opt file1 [files...]
 
 -s 55440       ;coresize
 -p 10000       ;max. proc.

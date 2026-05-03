@@ -43,7 +43,7 @@ paper for 9
       mov <-1, <2
       mov <-2, <1
       spl @0, s&paper
-      mov <-1, m&paper
+      mov <-1, <m&paper
       jmz -5, -5
       mov 0, -1
        for paper < 9

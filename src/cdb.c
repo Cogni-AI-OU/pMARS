@@ -39,21 +39,21 @@
 
 #define VERBLEN 3
 #define SKIP_SPACE(s) while(isspace(*s)) ++s
-#if defined(XWINGRAPHX) || defined(SDLGRAPHX) /* need this string externally */
+#if defined(XWINGRAPHX)                /* need this string externally */
 char   *CDB_PROMPT = "(cdb) ";
 #else
 #define CDB_PROMPT "(cdb) "
-#endif /* XWINGRAPHX | SDLGRAPHX */
+#endif
 #define CMDSEP '~'                /* chain command separator */
 #define CMDREP '!'                /* chain command repeator */
-#define MAXSTR 255 /* 80 */        /* general buffer length */
-#define MAXCMDSTR 500                /* max. chars in inputStr, lastCmdStr */
-#define MAXMACROS 200                /* maximum number of macros */
-#define MAXLOOPNESTING 12        /* max. nesting depth of cdb command loops
+#define MAXSTR MAXALLCHAR /* 80 */        /* general buffer length */
+#define MAXCMDSTR (10*MAXALLCHAR)                /* max. chars in inputStr, lastCmdStr */
+#define MAXMACROS 2000                /* maximum number of macros */
+#define MAXLOOPNESTING 120        /* max. nesting depth of cdb command loops
                                  * !!~..~!n */
 #define TEXTLINES 23                /* number of lines to list before pausing */
-#define MAXCMD 80
-#define MAXARG 80
+#define MAXCMD MAXALLCHAR
+#define MAXARG MAXALLCHAR
 #define RANGE_T 0
 #define TEXT_T 1
 #define FORCE 1                        /* force STDOUT output */
@@ -74,7 +74,11 @@ char   *CDB_PROMPT = "(cdb) ";
 #define targetSelect(index) (targetID == CORE || targetID == PSP ?\
         index : (targetID == QUEUE ?\
         queue(index) : (W-warrior==index ? progCnt : *warrior[index].taskHead)))
+#ifdef NEW_STYLE
 #define toupper_(x) (toupper(x))
+#else
+#define toupper_(x) (isalpha(x) && islower(x) ? toupper(x) : (x))
+#endif
 
 /* hash value constants */
 #define NULL_H 0
@@ -166,6 +170,7 @@ char   *CDB_PROMPT = "(cdb) ";
 /*
  * prototypes
  */
+#ifdef NEW_STYLE
 int     cdb(char *msg);
 char   *get_cmd(char *prompt);
 int
@@ -195,7 +200,7 @@ char   *pspaceview(ADDR_T index, char *buf);
 static char *(*targetview) (ADDR_T loc, char *buf) = locview;
 #if defined(DOSALLGRAPHX)
 extern void display_init(void);
-#endif /* DOSALLGRAPHX */
+#endif
 #ifdef DOSGRXGRAPHX
 extern char *grgets(char *s, int maxstr);
 extern void grputs(char *s);
@@ -205,7 +210,7 @@ extern void open_graphics(void);
 extern void grclear(void);
 extern void bgi_clear_arena(void);
 extern void grupdate(int curPanel);
-#endif /* DISGRXGRAPHX */
+#endif
 #ifdef DOSTXTGRAPHX
 extern void SetCursor(int x, int y);
 extern void switch_page(int page);
@@ -214,27 +219,27 @@ extern char *agets5(char *str, int maxchar, int attr);
 extern void clear_page5(void);
 extern void text_display_clear(void);
 extern void text_panel_update(int curPanel);
-#endif /* DOSTXTGRAPHX */
+#endif
 #ifdef CURSESGRAPHX
 extern void init_curses(void);
 extern void end_curses(void);
 extern void winupdate(void);
-#endif /* CURSESGRAPHX */
+#endif
 #ifdef MACGRAPHX
 extern void macputs(char *str);
 extern void macgets(char *str, int maxchar);
 extern void mac_display_close(void);
 extern void mac_clear_screen(void);
 extern int mac_text_lines(void);
-#endif /* MACGRAPHX */
+#endif
 #ifdef LINUXGRAPHX
 /* all the prototypes have already been declared in global.h */
-#endif /* LINUXGRAPHX */
+#endif
 #ifdef DOS16
 extern int parse(char *expr, mem_struct far * c, ADDR_T loc);
 #else
 extern int parse(char *expr, mem_struct * c, ADDR_T loc);
-#endif /* DOS16 */
+#endif
 
 #if defined(DJGPP)
 extern void sighandler(int dummy);
@@ -247,6 +252,42 @@ extern void CacheScreenUpdate(short *buf);
 #endif                                /* CONIOGRAPHX */
 #endif                                /* DOSTXTGRAPHX */
 #endif                                /* DJGPP */
+
+#else
+int     cdb();
+char   *get_cmd();
+int     parse_cmd();
+int     subst_eval();
+void    substitute();
+void    help();
+void    print_core();
+void    set_trace();
+void    unset_trace();
+void    print_registers();
+void    edit_core();
+void    fill_core();
+unsigned int hash_str();
+void    cdb_fputs();
+int     wildsearch();
+void    load_macros();
+char   *match_macro();
+void    print_macros();
+void    exec_macro();
+void    bad_arg();
+ADDR_T  queue();
+char   *pspaceview();
+char   *queueview();
+char   *warriorview();
+static char *(*targetview) () = locview;
+char   *strstr();
+extern int parse();
+#ifdef CURSESGRAPHX
+extern void init_curses();
+extern void end_curses();
+extern void winupdate();
+extern char *agets5();
+#endif
+#endif
 
 /* strings */
 extern char *pagePrompt, *exitingCdbToFinishSimulation, *usageDisplay, *usageExecute,
@@ -287,21 +328,40 @@ char    outs[MAXSTR + 1], buffer1[MAXSTR + 1], buffer2[MAXSTR + 1];
 char   *xInpP;                        /* pointer to inputStr[], used by
                                  * input-requiring functions called by cdb() */
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 int     printAttr;
 int     curPanel = 0;
 ADDR_T  curAddr2;
 #endif
 
+#if !defined(NEW_STYLE) && !defined(VMS)
+char   *
+strstr(cs, ct)
+  char   *cs, *ct;
+{
+  char   *p, *q, *r;
+
+  for (p = cs; *p != 0; ++p) {
+    for (q = p, r = ct; *r != 0; ++q, ++r) {
+      if (*q != *r)
+        goto next_sub;
+    }
+    return p;
+next_sub:;
+  }
+  return NULL;
+}
+#endif
 /*---------------------------------------------------------------------------
  cdb - main debugger loop, command dispatcher
  ---------------------------------------------------------------------------*/
 int
-cdb(char *message)
+cdb(message)
+  char   *message;
 {
   char   *cmdStr, *fnStr, verbStr[MAXCMD + 1], argStr[MAXARG + 1];
   static long start, stop;
-  int     argType, returnValue = NOBREAK;
+  int     argType, returnValue;
   unsigned int i;
 
   /* skip execution */
@@ -330,20 +390,11 @@ cdb(char *message)
 #else
 #if defined(XWINGRAPHX)
   xWin_write_menu();
-#else
-#if defined(STDGRAPHX)
-  stdio_write_menu();
-#else
-#if defined(SDLGRAPHX)
-  sdlgr_write_menu();
-  sdlgr_refresh(-1);
-#endif /* SDLGRAPHX */
-#endif /* STDGRAPHX */
-#endif /* XWINGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
+#endif
 
   W2 = W->nextWarrior;
   if (targetID == QUEUE) {
@@ -412,15 +463,7 @@ cdb(char *message)
 #if defined(XWINGRAPHX)
       xWin_clear();
 #else
-#if defined(SDLGRAPHX)
-      sdlgr_clear();
-#else
-#if defined(STDGRAPHX)
-      stdio_clear();
-#else
       cdb_fputs(CLRSCR, COND);        /* escape sequence for your terminal */
-#endif				      /* STDGRAPHX */
-#endif                                /* SDLGRAPHX */
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* MACGRAPHX */
@@ -430,7 +473,7 @@ cdb(char *message)
 #endif                                /* ALL */
       break;
 #if defined(DOSGRXGRAPHX) || defined(DOSTXTGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
     case CLO_H:                /* close display panel 2 */
       if (curPanel == 2) {
         i = curAddr;
@@ -452,15 +495,7 @@ cdb(char *message)
 #if defined(XWINGRAPHX)
       xWin_update(0);
 #else
-#if defined(SDLGRAPHX)
-      sdlgr_update(0);
-#else
-#if defined(STDGRAPHX)
-      stdio_update(0);
-#else
       grupdate(0);
-#endif				      /* STDGRAPHX */
-#endif                                /* SDLGRAPHX */
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* DOSTXTGRAPHX */
@@ -481,11 +516,11 @@ cdb(char *message)
       inCdb = FALSE;
       break;
 #if defined(CURSESGRAPHX) || defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) \
-    || defined(LINUXGRAPHX) || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(LINUXGRAPHX) || defined(XWINGRAPHX)
     case DIS_H:
     case DI_H:
     case D_H:
-      if (*argStr) {
+      if (argStr) {
         if (((i = hash_str(argStr, 3)) == CLE_H) || (i == CLS_H)) {
 #if defined(DOSALLGRAPHX)
           if (displayMode == TEXT)
@@ -501,14 +536,6 @@ cdb(char *message)
 #else
 #if defined(LINUXGRAPHX)
           svga_clear_arena();
-#else
-#if defined(SDLGRAPHX)
-	  sdlgr_clear_arena();
-#else
-#if defined(STDGRAPHX)
-	  stdio_clear_arena();
-#endif                                /* STD */
-#endif                                /* SDL */
 #endif                                /* SVGA */
 #endif                                /* GRX */
 #endif                                /* TXT */
@@ -540,19 +567,12 @@ cdb(char *message)
 #if defined(XWINGRAPHX)
             xWin_resize();
 #endif
-#if defined(SDLGRAPHX)
-	    sdlgr_set_displayLevel(displayLevel);
-	    sdlgr_relayout();
-#endif
-#if defined(STDGRAPHX)
-	    stdio_set_displayLevel(displayLevel);
-#endif
           }
         }
       } else
         cdb_fputs(usageDisplay, FORCE);
       break;
-#endif /* CLO_H */
+#endif
     case ECH_H:
     case EC_H:
       sprintf(outs, "%s\n", argStr);
@@ -659,12 +679,12 @@ cdb(char *message)
         results(STDOUT);
 #else
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
       results(NULL);
 #else
       results(STDOUT);
 #endif
-#endif /* DOSALLGRAPHX */
+#endif
       if (logfile)
         results(logfile);
       break;
@@ -707,7 +727,7 @@ cdb(char *message)
       }
       print_core(curAddr, curAddr);
       break;
-#endif /* PSPACE */
+#endif
     case QUI_H:
     case QU_H:
     case Q_H:
@@ -738,20 +758,12 @@ cdb(char *message)
 #else
 #if defined(XWINGRAPHX)
       xWin_display_close(NOWAIT);
-#else
-#if defined(SDLGRAPHX)
-      sdlgr_display_close(NOWAIT);
-#else
-#if defined(STDGRAPHX)
-      stdio_display_close(NOWAIT);
-#endif /* STDGRAPHX */
-#endif /* SDLGRAPHX */
-#endif /* XWINGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* MACGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
 #if defined(__MAC__) || defined(__AMIGA__)
       /* DOS taskQueue may not be free'd because of segment wrap-around */
       if (alloc_p) {
@@ -787,7 +799,7 @@ cdb(char *message)
       }
       cdb_fputs((*targetview) (curAddr, outs), COND);
       break;
-#if !defined(__MAC__) && !defined(XWINGRAPHX) && !defined(SDLGRAPHX)
+#if !defined(__MAC__) && !defined(XWINGRAPHX)
     case SHE_H:                /* execute shell (command) */
     case SH_H:
 #if defined(DOSALLGRAPHX)
@@ -807,14 +819,14 @@ cdb(char *message)
       show_cursor();
 #if defined(CURSESGRAPHX) && !defined(__PDCURSES__)
       endwin();
-#endif /* CURSESGRAPHX && !PDCURSES */
+#endif
 #else
 #if defined(LINUXGRAPHX)
       svga_display_close(NOWAIT);
-#endif /* LINUXGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
       system(argStr);
 #if defined(DOSALLGRAPHX)
       if (displayMode == TEXT) {
@@ -827,26 +839,25 @@ cdb(char *message)
       open_graphics();
 #else
 #if defined(LINUXGRAPHX)
-      puts(pressAnyKeyToContinue);
+      printf(pressAnyKeyToContinue);
       fflush(stdout);
       svga_getch();
       svga_open_graphics();
 #else
 #if defined(DOSTXTGRAPHX)
 #if defined(CURSESGRAPHX)
-      puts(pressAnyKeyToContinue);
-      fflush(stdout);
+      printf(pressAnyKeyToContinue);
       getch();
       clear_page5();
-#endif /* CURSESGRAPHX */
+#endif
       switch_page(CDB_PAGE);
       hide_cursor();
-#endif /* DOSTXTGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
       break;
-#endif /* !MAC & !X11 && !SDL */
+#endif
     case SKI_H:
     case SK_H:
       if (start == stop) {        /* we don't fold here */
@@ -865,7 +876,7 @@ cdb(char *message)
       inCdb = FALSE;
       break;
 #if defined(DOSGRXGRAPHX) || defined(DOSTXTGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
     case SWI_H:                /* switch display panels */
     case SW_H:
       if (*argStr && (start == stop) && ((start == 1) || (start == 2))) {
@@ -892,15 +903,7 @@ cdb(char *message)
 #if defined(XWINGRAPHX)
       xWin_update(i);
 #else
-#if defined(SDLGRAPHX)
-      sdlgr_update(i);
-#else
-#if defined(STDGRAPHX)
-      stdio_update(i);
-#else
       grupdate(i);
-#endif                                /* STDGRAPHX */
-#endif                                /* SDLGRAPHX */
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* DOSTXTGRAPHX */
@@ -991,27 +994,19 @@ cdb(char *message)
 #else
 #if defined(XWINGRAPHX)
   xWin_write_menu();
-#else
-#if defined(SDLGRAPHX)
-  sdlgr_write_menu();
-#else
-#if defined(STDGRAPHX)
-  stdio_write_menu();
-#endif /* STDGRAPHX */
-#endif /* SDLGRAPHX */
-#endif /* XWINGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
+#endif
   return returnValue;
 }
-
 /*---------------------------------------------------------------------------
  queue - return address at process queue position
  ---------------------------------------------------------------------------*/
 ADDR_T
-queue(int index)
+queue(index)
+  int     index;
 {
   if (!index)
     return progCnt;
@@ -1035,8 +1030,9 @@ queue(int index)
  Warning: this is probably the worst spaghetti code in pmars; change at your
         your own risk!
  ---------------------------------------------------------------------------*/
-char *
-get_cmd(char *prompt)
+char   *
+get_cmd(prompt)
+  char   *prompt;
 {
   static int curCmd = 0, nextCmd = 0, loopNesting;
   static long repeating = 0, loopStack[MAXLOOPNESTING];
@@ -1105,9 +1101,7 @@ new_input:
     for (macroIdx = 0; macroTab[macroIdx]; ++macroIdx)
       macroCycle[macroIdx] = 0;
 #endif
-#if !defined(SDLGRAPHX) && !defined(STDGRAPHX)
     cdb_fputs(prompt, FORCE);        /* display prompt */
-#endif
     conLine = FALSE;
     i = 0;                        /* buffer index */
     do {                        /* while not continuation line */
@@ -1146,21 +1140,13 @@ new_input:
 #if defined(XWINGRAPHX)
       rv = xWin_gets(inputStr + i, MAXCMDSTR - i);
 #else
-#if defined(SDLGRAPHX)
-      rv = sdlgr_gets(inputStr + i, MAXCMDSTR - i, prompt);
-#else
-#if defined(STDGRAPHX)
-      rv = stdio_gets(inputStr + i, MAXCMDSTR - i, prompt);
-#else
       rv = fgets(inputStr + i, MAXCMDSTR - i + 1, stdin);
-#endif /* STDGRAPHX */
-#endif /* SDLGRAPHX */
-#endif /* XWINGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* MACGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
       if (!rv) {
         cdb_fputs(EOFreadingCommandInput, FORCE);
         strcpy(inputStr, "con\n");        /* leave cdb */
@@ -1186,10 +1172,6 @@ new_input:
     macroEnd = 0;
 #endif
   }                                /* if (! nextCmd) */
-#if defined(SDLGRAPHX)
-  else
-    sdlgr_refresh(curPanel);
-#else
 #if defined(CURSESGRAPHX)
   else
     winupdate();
@@ -1206,7 +1188,6 @@ new_input:
 #endif                                /* DOSALLGRAPHX */
 #endif                                /* DJGPP */
 #endif                                /* CURSESGRAPHX */
-#endif                                /* SDLGRAPHX */
   /* advance to next ~,! or \0 */
 advance:
   marking = 0;
@@ -1374,14 +1355,15 @@ advance:
   }
   return inputStr + curCmd;
 }
-
 /*---------------------------------------------------------------------------
  cdb_fputs(str, wout) - screen output with file logging
     wout==FORCE     always output to STDOUT
     wout==COND      output to STDOUT may be supressed by '@' or '&'
  ---------------------------------------------------------------------------*/
 void
-cdb_fputs(char *str, int wout)
+cdb_fputs(str, wout)
+  char   *str;
+  int     wout;
 {
   if ((silent != 2 || wout == FORCE) && logfile && (fputs(str, logfile) == EOF))
 #if defined(DOSALLGRAPHX)
@@ -1405,23 +1387,15 @@ cdb_fputs(char *str, int wout)
 #if defined(XWINGRAPHX)
     xWin_puts(writeErrorDiskFull);
 #else
-#if defined(SDLGRAPHX)
-    sdlgr_puts(writeErrorDiskFull);
-#else
-#if defined(STDGRAPHX)
-    stdio_puts(writeErrorDiskFull);
-#else
     fputs(writeErrorDiskFull, stderr);
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* MAC */
-#endif /* GRX */
-#endif /* TXT */
-#endif /* ALL */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
 
-  if ((!silent) || (wout == FORCE)) {
+  if ((!silent) || (wout == FORCE))
 #if defined(DOSALLGRAPHX)
     if (displayMode == TEXT) {
       if (printAttr)
@@ -1430,51 +1404,44 @@ cdb_fputs(char *str, int wout)
         aputs5(str, NORMAL_ATTR);
     } else
       grputs(str);
+  printAttr = 0;
 #else
 #if defined(DOSTXTGRAPHX)
     if (printAttr)
       aputs5(str, printAttr << 12);
     else
       aputs5(str, NORMAL_ATTR);
+  printAttr = 0;
 #else
 #if defined(DOSGRXGRAPHX)
     grputs(str);
+  printAttr = 0;
 #else
 #if defined(MACGRAPHX)
     macputs(str);
 #else
 #if defined(LINUXGRAPHX)
     svga_puts(str);
+  printAttr = 0;
 #else
 #if defined(XWINGRAPHX)
     xWin_puts(str);
-#else
-#if defined(SDLGRAPHX)
-    sdlgr_puts(str);
-#else
-#if defined(STDGRAPHX)
-    stdio_puts(str);
+  printAttr = 0;
 #else
     fputs(str, STDOUT);
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* MAC */
-#endif /* GRX */
-#endif /* TXT */
-#endif /* ALL */
-  }
-#if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
-  printAttr = 0;
+#endif
+#endif
+#endif
+#endif
+#endif
 #endif
 }
 /*---------------------------------------------------------------------------
  bad_arg - report argument error
  ---------------------------------------------------------------------------*/
 void
-bad_arg(char *argStr)
+bad_arg(argStr)
+  char   *argStr;
 {
   sprintf(outs, badArgument, argStr);
   cdb_fputs(outs, FORCE);
@@ -1484,7 +1451,9 @@ bad_arg(char *argStr)
  length<=3 to fit in int
  ---------------------------------------------------------------------------*/
 unsigned int
-hash_str(char *str, int length)
+hash_str(str, length)
+  char   *str;
+  int     length;
 {
   int     hash = 0, mul, i, j;
 
@@ -1499,7 +1468,8 @@ hash_str(char *str, int length)
  substitute(in,repl,with,out) - substitute all "repl" in "in" with "with"
  ---------------------------------------------------------------------------*/
 void
-substitute(char *in, char *repl, char *with, char *out)
+substitute(in, repl, with, out)
+  char   *in, *repl, *with, *out;
 {
   /* caller is using all three global buffers */
   char    out2[MAXARG + 1];
@@ -1528,7 +1498,9 @@ substitute(char *in, char *repl, char *with, char *out)
  (others can be easily added)
  ---------------------------------------------------------------------------*/
 int
-subst_eval(char *inpStr, long *result)
+subst_eval(inpStr, result)
+  char   *inpStr;
+  long   *result;
 {
   int evalerr;
   char    buf[2][MAXARG + 1], outs2[MAXARG + 1], *pos;
@@ -1575,24 +1547,24 @@ subst_eval(char *inpStr, long *result)
       substitute(buf[bi1], outs2, outs, buf[bi2]);
     }
     if (warriors < MAXWARRIOR) {/* PCN where N==warriors is PC */
-      sprintf(outs, "%ld", (targetID == QUEUE || targetID == PSP ?
-                            0 : (targetID == WARRIOR ?
-                                 W - warrior : progCnt)));
+      sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
+                           0 : (targetID == WARRIOR ?
+                                W - warrior : progCnt)));
       sprintf(outs2, "PC%d", warriors);
       SWITCHBI;
       substitute(buf[bi1], outs2, outs, buf[bi2]);
     }
     SWITCHBI;
-    sprintf(outs, "%ld", (targetID == QUEUE || targetID == PSP ?
-                          0 : (targetID == WARRIOR ?
-                               W - warrior : progCnt)));
+    sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
+                         0 : (targetID == WARRIOR ?
+                              W - warrior : progCnt)));
     substitute(buf[bi1], "PC", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%ld", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
+    sprintf(outs, "%d", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
             (warriorsLeft ? warriorsLeft : 1));
     substitute(buf[bi1], "CYCLE", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%d", tournamentRound);
+    sprintf(outs, "%d", round);
     substitute(buf[bi1], "ROUND", outs, buf[bi2]);
 
     SWITCHBI;
@@ -1620,22 +1592,14 @@ subst_eval(char *inpStr, long *result)
 #if defined(XWINGRAPHX)
     sprintf(outs, "%d", xWinTextLines);
 #else
-#if defined(SDLGRAPHX)
-    sprintf(outs, "%d", sdlgr_text_lines());
-#else
-#if defined(STDGRAPHX)
-    sprintf(outs, "%d", stdio_text_lines());
-#else
     sprintf(outs, "%d", TEXTLINES);
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* MAC */
-#endif /* TXT */
-#endif /* CURSES */
-#endif /* GRX */
-#endif /* ALL */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
     substitute(buf[bi1], "LINES", outs, buf[bi2]);
 
   }                                /* if (*pos) */
@@ -1653,7 +1617,9 @@ subst_eval(char *inpStr, long *result)
  parse_cmd - into verb,range,argument string
  ---------------------------------------------------------------------------*/
 int
-parse_cmd(char *inpStr, char *verbStr, long *start, long *stop, char *argStr)
+parse_cmd(inpStr, verbStr, start, stop, argStr)
+  char   *inpStr, *verbStr, *argStr;
+  long   *start, *stop;
 {
   register S32_T i;
   long    result1, result2;
@@ -1729,7 +1695,7 @@ parse_cmd(char *inpStr, char *verbStr, long *start, long *stop, char *argStr)
  help - show command help
  ---------------------------------------------------------------------------*/
 void
-help(void)
+help()
 {
   int     count = 0, showLines, helpIdx;
 #if defined(DOSALLGRAPHX)
@@ -1747,12 +1713,6 @@ help(void)
 #if defined(XWINGRAPHX)
   showLines = xWinTextLines - 1;
 #else
-#if defined(SDLGRAPHX)
-  showLines = sdlgr_text_lines() - 1;
-#else
-#if defined(STDGRAPHX)
-  showLines = stdio_text_lines() - 1;
-#else
 #if defined(CURSESGRAPHX)
   showLines = LINES - 1;
 #else
@@ -1763,15 +1723,13 @@ help(void)
   showLines = mac_text_lines();
 #else
   showLines = TEXTLINES;
-#endif /* MAC */
-#endif /* TXT */
-#endif /* CURSES */
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* GRX */
-#endif /* ALL */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
 
   for (helpIdx = 0; *helpText[helpIdx]; ++helpIdx) {
     if ((!silent) && (++count == showLines)) {
@@ -1792,12 +1750,13 @@ help(void)
  print_core - list core addresses in range start-stop
  ---------------------------------------------------------------------------*/
 void
-print_core(ADDR_T start, ADDR_T stop)
+print_core(start, stop)
+  ADDR_T  start, stop;
 {
   int     count = 0;
   int     showLines;
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
   int     i;
 #endif
 #if defined(DOSALLGRAPHX)
@@ -1815,12 +1774,6 @@ print_core(ADDR_T start, ADDR_T stop)
 #if defined(XWINGRAPHX)
   showLines = xWinTextLines - 1;
 #else
-#if defined(SDLGRAPHX)
-  showLines = sdlgr_text_lines() - 1;
-#else
-#if defined(STDGRAPHX)
-  showLines = stdio_text_lines() - 1;
-#else
 #if defined(CURSESGRAPHX)
   showLines = LINES - 1;
 #else
@@ -1831,17 +1784,15 @@ print_core(ADDR_T start, ADDR_T stop)
   showLines = mac_text_lines();
 #else
   showLines = TEXTLINES;
-#endif /* MAC */
-#endif /* TXT */
-#endif /* CURSES */
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* GRX */
-#endif /* ALL */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
   if (targetID == QUEUE && start == 0)
     printAttr = QW - warrior + 1;
   else if (targetID == WARRIOR && start == W - warrior)
@@ -1869,7 +1820,7 @@ print_core(ADDR_T start, ADDR_T stop)
         count = 0;
     }
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
     if (targetID == QUEUE && start == 0)
       printAttr = QW - warrior + 1;
     else if (targetID == WARRIOR && start == W - warrior)
@@ -1889,7 +1840,8 @@ print_core(ADDR_T start, ADDR_T stop)
  set_trace - set trace bit of addresses in range start-stop
  ---------------------------------------------------------------------------*/
 void
-set_trace(ADDR_T start, ADDR_T stop)
+set_trace(start, stop)
+  ADDR_T  start, stop;
 {
   do {
     if (start == targetSize)
@@ -1901,7 +1853,8 @@ set_trace(ADDR_T start, ADDR_T stop)
  unset_trace - clear trace bit of addresses in range start-stop
  ---------------------------------------------------------------------------*/
 void
-unset_trace(ADDR_T start, ADDR_T stop)
+unset_trace(start, stop)
+  ADDR_T  start, stop;
 {
   do {
     if (start == targetSize)
@@ -1913,7 +1866,7 @@ unset_trace(ADDR_T start, ADDR_T stop)
  print_registers - show simulator status
  ---------------------------------------------------------------------------*/
 void
-print_registers(void)
+print_registers()
 {
 #ifdef DOS16
   ADDR_T far *thisProc;
@@ -1922,7 +1875,7 @@ print_registers(void)
 #endif
   int     nFuture, nPast, count, taskHalf = (coreSize <= 10000 ? 7 : 5);
 
-  sprintf(outs, roundOfCycle, tournamentRound, rounds,
+  sprintf(outs, roundOfCycle, round, rounds,
           (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
           (warriorsLeft ? warriorsLeft : 1));
   cdb_fputs(outs, COND);
@@ -1977,7 +1930,7 @@ print_registers(void)
     cdb_fputs(outs, COND);
   }
   cdb_fputs("..\n", COND);
-#endif /* PSPACE */
+#endif
   if (warriors == 2) {
     sprintf(outs, otherWarrior, W2->name);
     cdb_fputs(outs, COND);
@@ -2028,7 +1981,7 @@ print_registers(void)
       cdb_fputs(outs, COND);
     }
     cdb_fputs("..\n", COND);
-#endif /* PSPACE */
+#endif
 
   } else if (warriors > 2) {
     warrior_struct *TW;
@@ -2047,7 +2000,8 @@ print_registers(void)
  edit_core - modify range of core addresses
  ---------------------------------------------------------------------------*/
 void
-edit_core(ADDR_T start, ADDR_T stop)
+edit_core(start, stop)
+  ADDR_T  start, stop;
 {
   int evalerr;
   long    result;
@@ -2109,7 +2063,8 @@ edit_core(ADDR_T start, ADDR_T stop)
  fill_core - fill range of core addresses with instruction
  ---------------------------------------------------------------------------*/
 void
-fill_core(ADDR_T start, ADDR_T stop)
+fill_core(start, stop)
+  ADDR_T  start, stop;
 {
   int evalerr;
   long    sstart, sstop;
@@ -2163,7 +2118,8 @@ fill_core(ADDR_T start, ADDR_T stop)
                    ? matches one char in target
  ---------------------------------------------------------------------------*/
 int
-wildsearch(char *pattern, char *target)
+wildsearch(pattern, target)
+  char   *pattern, *target;
 {
   register char *pat = pattern, *tar = target;        /* local copies */
   while (1) {
@@ -2185,37 +2141,11 @@ wildsearch(char *pattern, char *target)
   }                                /* while (1) */
 }
 /*---------------------------------------------------------------------------
- open_macro_file() - open macro file taking into account $PMARSHOME envvar
- ---------------------------------------------------------------------------*/
-FILE *
-open_macro_file(char *filename)
-{
-	char *pmarshome;
-	char buf[1002];
-	FILE *fp = fopen(filename, "r");
-	if (!fp && filename[0] != DIR_SEPARATOR
-		&& (pmarshome = getenv("PMARSHOME")))
-	{
-		int namelen = strlen(filename);
-		int dirlen = strlen(pmarshome);
-		if (namelen + dirlen < 1000) {
-			strcpy(buf, pmarshome);
-			if (buf[dirlen-1] != DIR_SEPARATOR) {
-				buf[dirlen] = DIR_SEPARATOR;
-				buf[dirlen+1] = 0;
-			}
-			strcat(buf, filename);
-			fp = fopen(buf, "r");
-		}
-	}
-	return fp;
-}
-
-/*---------------------------------------------------------------------------
  load_macros() - load macros from file
  ---------------------------------------------------------------------------*/
 void
-load_macros(char *fnStr)
+load_macros(fnStr)
+  char   *fnStr;
 {
   int     i, j, tabIdx, macroLen, conLine;
   FILE   *mfp;
@@ -2239,8 +2169,8 @@ load_macros(char *fnStr)
 #endif                                /* DOSTXTGRAPHX */
 #endif                                /* DOSALLGRAPHX */
 #endif                                /* DJGPP */
-#endif				      /* CURSES */
-  } else if ((mfp = open_macro_file(fnStr)) == NULL) {
+#endif
+  } else if ((mfp = fopen(fnStr, "r")) == NULL) {
     sprintf(outs, cannotOpenMacroFile, fnStr);
     cdb_fputs(outs, FORCE);
     return;
@@ -2275,23 +2205,11 @@ load_macros(char *fnStr)
       if (mfp == stdin)
         rv = xWin_gets(outs + i, MAXSTR - i);
       else
-#else
-#if defined(SDLGRAPHX)
-      if (mfp == stdin)
-        rv = sdlgr_gets(outs + i, MAXSTR - i, "");
-      else
-#else
-#if defined(STDGRAPHX)
-      if (mfp == stdin)
-        rv = stdio_gets(outs + i, MAXSTR - i, "");
-      else
-#endif /* STDGRAPHX */
-#endif /* SDLGRAPHX */
-#endif /* XWINGRAPHX */
-#endif /* LINUXGRAPHX */
-#endif /* DOSGRXGRAPHX */
-#endif /* DOSTXTGRAPHX */
-#endif /* DOSALLGRAPHX */
+#endif
+#endif
+#endif
+#endif
+#endif
         rv = fgets(outs + i, MAXSTR - i + 1, mfp);
       for (; outs[i]; i++)
         if (outs[i] == '\n' || outs[i] == '\r')
@@ -2355,8 +2273,9 @@ load_macros(char *fnStr)
  match_macro - compare macro name to macro definition, return ptr to
         first char after "=" in definition if match, NULL if not.
  ---------------------------------------------------------------------------*/
-char *
-match_macro(char *match, char *macroDef)
+char   *
+match_macro(match, macroDef)
+  char   *match, *macroDef;
 {
   register int i;
 
@@ -2370,7 +2289,7 @@ match_macro(char *match, char *macroDef)
  print_macros - list all macros currently in memory
  ---------------------------------------------------------------------------*/
 void
-print_macros(void)
+print_macros()
 {
   int     count = 0, showLines, macroIdx;
 #if defined(DOSALLGRAPHX)
@@ -2388,12 +2307,6 @@ print_macros(void)
 #if defined(XWINGRAPHX)
   showLines = xWinTextLines - 1;
 #else
-#if defined(SDLGRAPHX)
-  showLines = sdlgr_text_lines() - 1;
-#else
-#if defined(STDGRAPHX)
-  showLines = stdio_text_lines() - 1;
-#else
 #if defined(CURSESGRAPHX)
   showLines = LINES - 1;
 #else
@@ -2404,15 +2317,13 @@ print_macros(void)
   showLines = mac_text_lines();
 #else
   showLines = TEXTLINES;
-#endif /* MAC */
-#endif /* DOS */
-#endif /* CURSES */
-#endif /* STD */
-#endif /* SDL */
-#endif /* X11 */
-#endif /* SVGA */
-#endif /* GRX */
-#endif /* ALL */
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
 
   for (macroIdx = 0; macroTab[macroIdx]; ++macroIdx) {
     if ((!silent) && (++count == showLines)) {
@@ -2433,7 +2344,8 @@ print_macros(void)
  exec_macro - execute macro by queuing as a command line
  ---------------------------------------------------------------------------*/
 void
-exec_macro(char *macro)
+exec_macro(macro)
+  char   *macro;
 {
   int     macroIdx;
 
@@ -2454,13 +2366,15 @@ exec_macro(char *macro)
     nextMacro = NULL;
   } else
     macroCycle[macroIdx] = 1;        /* mark as visited */
-#endif /* CYCLE_CHECK */
+#endif
 }
 /*---------------------------------------------------------------------------
  queueview - locview for queue mode: return instruction at queue(loc)
  ---------------------------------------------------------------------------*/
-char *
-queueview(ADDR_T loc, char *outp)
+char   *
+queueview(loc, outp)
+  ADDR_T  loc;
+  char   *outp;
 {
   char    buf[MAXSTR];
   ADDR_T  qloc = queue(loc);
@@ -2472,8 +2386,10 @@ queueview(ADDR_T loc, char *outp)
 /*---------------------------------------------------------------------------
  warriorview - locview for warrior mode: return instruction at warrior[loc].taskHead
  ---------------------------------------------------------------------------*/
-char *
-warriorview(ADDR_T loc, char *outp)
+char   *
+warriorview(loc, outp)
+  ADDR_T  loc;
+  char   *outp;
 {
   char    buf[MAXSTR];
   ADDR_T  wloc = (W - warrior == loc ? progCnt : *warrior[loc].taskHead);
@@ -2482,18 +2398,22 @@ warriorview(ADDR_T loc, char *outp)
   return (outp);
 }
 
-char *
-pspaceview(ADDR_T loc, char *outp)
+char
+       *
+pspaceview(loc, outp)
+  ADDR_T  loc;
+  char   *outp;
 {
   loc %= pSpaceSize;
   sprintf(outp, "[%4d]=%-5d\n", loc, loc ? *(pSpace[QW->pSpaceIndex] + loc) :
           QW->lastResult);
   return outp;
 }
-#endif /* SERVER */
+#endif
 
 int
-score(int warnum)
+score(warnum)
+  int     warnum;
 {
   int     surv, accu = 0;
   long    res;
@@ -2512,7 +2432,8 @@ score(int warnum)
 /* total the number of deaths for warrior[warnum]; the "order of death"
    array is currently neither reported nor used for the score calculation */
 int
-deaths(int warnum)
+deaths(warnum)
+  int     warnum;
 {
   int     i, accu = 0;
   for (i = warriors; i < 2 * warriors - 1; ++i)
@@ -2521,7 +2442,8 @@ deaths(int warnum)
 }
 
 void
-sort_by_score(int *idxV, int *scrV)
+sort_by_score(idxV, scrV)
+  int    *idxV, *scrV;
 {
   int     sorted, tmp, i;
   do {
@@ -2585,7 +2507,7 @@ results(outp)
       fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
               scrV[idxV[i]]);
       if (warriors > 2) {
-        fputs(resultsAre, outp);
+        fprintf(outp, resultsAre);
         for (j = 0; j < warriors; ++j) {
           fprintf(outp, " %d", warrior[idxV[i]].score[j]);
         }
@@ -2619,7 +2541,7 @@ results(outp)
   }
 #else
 #if defined(DOSGRXGRAPHX) || defined(DOSTXTGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 #if defined(DOSGRXGRAPHX)
 #define OUTTEXT(s) grputs(s)
 #else
@@ -2629,15 +2551,7 @@ results(outp)
 #if defined(XWINGRAPHX)
 #define OUTTEXT(s) xWin_puts(s)
 #else
-#if defined(SDLGRAPHX)
-#define OUTTEXT(s) sdlgr_puts(s)
-#else
-#if defined(STDGRAPHX)
-#define OUTTEXT(s) stdio_puts(s)
-#else
 #define OUTTEXT(s) aputs5(s, NORMAL_ATTR)
-#endif
-#endif
 #endif
 #endif
 #endif
@@ -2668,7 +2582,7 @@ results(outp)
       fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
               scrV[idxV[i]]);
       if (warriors > 2) {
-        fputs(resultsAre, outp);
+        fprintf(outp, resultsAre);
         for (j = 0; j < warriors; ++j) {
           fprintf(outp, " %d", warrior[idxV[i]].score[j]);
         }
@@ -2685,7 +2599,7 @@ results(outp)
     fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
             scrV[idxV[i]]);
     if (warriors > 2) {
-      fputs(resultsAre, outp);
+      fprintf(outp, resultsAre);
       for (j = 0; j < warriors; ++j) {
         fprintf(outp, " %d", warrior[idxV[i]].score[j]);
       }

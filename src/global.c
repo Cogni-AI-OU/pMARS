@@ -39,16 +39,21 @@ ADDR_T  instrLim;
 ADDR_T  separation;
 int     rounds;
 long    cycles;
+#ifdef RWLIMIT
+ADDR_T  readLimit, writeLimit;
+#endif
 
 int     cmdMod = 0;                /* cdb command flag: 0, RESET, SKIP */
 S32_T   seed;
+int     useExtRNG = 0;
 
 int     SWITCH_e;
 int     SWITCH_b;
 int     SWITCH_k;
 int     SWITCH_8;
 int     SWITCH_f;
-ADDR_T  SWITCH_F;
+char   *SWITCH_F;
+ADDR_T  SWITCH_Fnum;
 int     SWITCH_V;
 int     SWITCH_o;
 int     SWITCH_Q = -1;                /* not set */
@@ -59,9 +64,10 @@ int     SWITCH_D;
 #ifdef PERMUTATE
 int     SWITCH_P;
 #endif
+int	SWITCH_A;
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 int     SWITCH_v;
 int     displayLevel;
 int     displayMode;
@@ -77,12 +83,8 @@ int     keyDelay;
 #if defined(XWINGRAPHX)
 int     keyDelayAr[SPEEDLEVELS] = {255, 20, 0, 0, 0, 0, 0, 0, 0};
 #else
-#if defined(SDLGRAPHX) && !defined(XWINGRAPHX)
-int	keyDelayAr[SPEEDLEVELS] = { 1521, 523, 213, 153, 53, 21, 3, 2, 1 };
-#else
 int     keyDelayAr[SPEEDLEVELS] = {25, 20, 0, 0, 0, 0, 0, 0, 0};
-#endif /* SDL */
-#endif /* XWIN */
+#endif
 unsigned long loopDelay;
 unsigned long loopDelayAr[SPEEDLEVELS] = {1, 1, 1, 100, 500, 2500, 10000, 40000, 100000};
 #endif
@@ -92,7 +94,7 @@ int     inCdb = FALSE;
 int     debugState = NOBREAK;
 int     copyDebugInfo = TRUE;
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 int     inputRedirection = FALSE;
 #endif
 mem_struct INITIALINST;                /* initialize to DAT.F $0,$0 */

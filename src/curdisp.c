@@ -40,6 +40,7 @@ typedef struct win_st {
   struct win_st *nextwin;
 }       win_t;
 
+#ifdef NEW_STYLE
 extern void init_curses(void), end_curses(void);
 extern void switch_page(int);
 extern void escape(char *, char *, int);
@@ -53,6 +54,16 @@ extern void cur_display_init(void);
 extern void text_panel_update(int), update_statusline(int);
 extern win_t *createwindow(int, int, int, int, int);
 extern void closewindow(int), winupdate(void);
+#else
+extern void init_curses(), end_curses();
+extern void escape();
+extern void SetCursor(), aputs5(), clear_page5();
+extern char *agets5(), *ckey2macro();
+extern void sighandler();
+extern void cur_display_init(), switch_page(), text_panel_update();
+extern void closewindow(), winupdate(), update_statusline();
+extern win_t *createwindow();
+#endif
 
 /* strings */
 extern char *cannotAllocateVirtualScreen;
@@ -95,8 +106,8 @@ do {\
 #else
 #define PUT_ARENA(addr, chr) \
 do {\
-      register int i = ((addr)/scale);\
-      mvwaddch(corewin, i / COLS, i % COLS, (chr));\
+      register int i;\
+      mvwaddch(corewin, (i = ((addr)/scale))/COLS, i % COLS, (chr));\
    } while(0)
 #endif
 
@@ -136,20 +147,19 @@ do {\
 #define cur_display_close() text_display_close()
 
 void
-cur_display_cycle(void)
+cur_display_cycle()
 {
-  if (displayLevel) {
+  if (displayLevel)
     if ((int) (W - warrior) % 2)
       wstandout(corewin);
     else {
       wstandend(corewin);
       if (!--refreshCounter) {
         refreshCounter = refreshInterval;
-        update_statusline(tournamentRound);
+        update_statusline(round);
         wrefresh(corewin);
       }
     }
-  }
 #if defined(SYSV) && defined(KEYPRESS)                         /* PAK */
   if (wgetch(corewin) != ERR)
     debugState = STEP;
@@ -158,7 +168,7 @@ cur_display_cycle(void)
 
 /* Initialize curses windows */
 void
-init_curses(void)
+init_curses()
 {
   initscr();
 
@@ -180,8 +190,9 @@ init_curses(void)
 
 /* create a new window for specified page.
    All pages except CORE_PAGE are in non-interactive mode. */
-win_t *
-createwindow(int lines, int cols, int y, int x, int page)
+win_t  *
+createwindow(lines, cols, y, x, page)
+  int     lines, cols, y, x, page;
 {
   win_t  *awin;
 
@@ -201,7 +212,7 @@ createwindow(int lines, int cols, int y, int x, int page)
 }
 
 int
-newpg(void)
+newpg()
 {
   int     pg = 0;
   win_t  *awin;
@@ -224,11 +235,10 @@ newpg(void)
 
   escape("Sorry, but I think the program is about to crash!", "newpg()",
          GRAPHERR);
-  return -1; /* not reached */
 }
 
 void
-cur_display_init(void)
+cur_display_init()
 {
   int     idx, statuslines, corelines;
 
@@ -237,7 +247,7 @@ cur_display_init(void)
   switch (warriors) {
   case 1:
     statuslines = COLS < 40 ? 2 : 1;
-    sprintf(preStatusLine, "%.20s [0]: %%-5d Cycle: %%-6d", warrior[0].name);
+    sprintf(preStatusLine, "%0.20s [0]: %%-5d Cycle: %%-6d", warrior[0].name);
     break;
   case 2:
     statuslines = COLS < 80 ? 2 : 1;
@@ -268,7 +278,8 @@ cur_display_init(void)
 }
 
 void
-update_statusline(int tournamentRound)
+update_statusline(round)
+  int     round;
 {
   switch (warriors) {
   case 1:
@@ -276,19 +287,20 @@ update_statusline(int tournamentRound)
     break;
   case 2:
     sprintf(statusLine, preStatusLine, warrior[0].tasks, warrior[1].tasks,
-            cycle >> 1, tournamentRound, warrior[0].score[0], warrior[0].score[2],
+            cycle >> 1, round, warrior[0].score[0], warrior[0].score[2],
             warrior[0].score[1]);
     break;
   default:
     sprintf(statusLine, preStatusLine, warriorsLeft, cycle / warriorsLeft,
-            tournamentRound);
+            round);
   }
   mvwaddstr(corewin2, 0, 0, statusLine);
   wrefresh(corewin2);
 }
 
 void
-switch_page(int page)
+switch_page(page)
+  int     page;
 {
   win_t  *win;
 
@@ -314,7 +326,8 @@ switch_page(int page)
 }
 
 void
-closewin(int page)
+closewin(page)
+  int     page;
 {
   win_t  *w, *p;
   for (p = NULL, w = globalwin; w; p = w, w = w->nextwin)
@@ -339,7 +352,8 @@ closewin(int page)
  winUp(lines, cols, (LINES-(lines))/2, (COLS-(cols))/2, page)
 
 void
-text_panel_update(int newpanel)
+text_panel_update(newpanel)
+  int     newpanel;
 {
   if (curPanel == newpanel)
     return;
@@ -366,14 +380,16 @@ text_panel_update(int newpanel)
 }
 
 void
-clear_page5(void)
+clear_page5()
 {
   wclear(curwin);
   wrefresh(curwin);
 }
 
 void
-aputs5(char *str, int attr)
+aputs5(str, attr)
+  char   *str;
+  int     attr;
 {
   int     y, x;
 
@@ -390,8 +406,11 @@ aputs5(char *str, int attr)
    */
 }
 
-char *
-agets5(char *str, int maxchar, int attr)
+char   *
+agets5(str, maxchar, attr)
+  char   *str;
+  int     attr;
+  int     maxchar;
 {
   if (inputRedirection) {
     return fgets(str, maxchar, stdin);
@@ -409,18 +428,18 @@ agets5(char *str, int maxchar, int attr)
           str--;
           maxchar++;
           leaveok(curwin, TRUE);
-          if ((ox = getcurx(curwin))) {
+          if (ox = curwin->_curx) {
 #if 0
 #ifdef ATTRIBUTE
-            mvwaddch(curwin, getcury(curwin), --ox, ' ' | attr);
+            mvwaddch(curwin, curwin->_cury, --ox, ' ' | attr);
 #else
-            mvwaddch(curwin, getcury(curwin), --ox, ' ');
+            mvwaddch(curwin, curwin->_cury, --ox, ' ');
 #endif
 #endif                                /* 0 */
-            mvwaddch(curwin, getcury(curwin), --ox, ' ');
-            wmove(curwin, getcury(curwin), ox);
+            mvwaddch(curwin, curwin->_cury, --ox, ' ');
+            wmove(curwin, curwin->_cury, ox);
           } else {
-            oy = getcury(curwin) - 1;
+            oy = curwin->_cury - 1;
 #if 0
 #ifdef ATTRIBUTE
             mvwaddch(curwin, oy, COLS - 1, ' ' | attr);
@@ -451,12 +470,12 @@ agets5(char *str, int maxchar, int attr)
           if (ox--)
 #if 0
 #ifdef ATTRIBUTE
-            mvwaddch(curwin, getcury(curwin), ox, ' ' | attr);
+            mvwaddch(curwin, curwin->_cury, ox, ' ' | attr);
 #else
-            mvwaddch(curwin, getcury(curwin), ox, ' ');
+            mvwaddch(curwin, curwin->_cury, ox, ' ');
 #endif
 #endif                                /* 0 */
-          mvwaddch(curwin, getcury(curwin), ox, ' ');
+          mvwaddch(curwin, curwin->_cury, ox, ' ');
           else
 #if 0
 #ifdef ATTRIBUTE
@@ -509,7 +528,7 @@ agets5(char *str, int maxchar, int attr)
 
 /* must only be called from cdb() */
 void
-text_display_clear(void)
+text_display_clear()
 {                                /* clear screen at CORE_PAGE */
   register int idx;
 
@@ -520,10 +539,10 @@ text_display_clear(void)
 }
 
 void
-text_display_close(void)
+text_display_close()
 {
   if (displayLevel) {
-    update_statusline(tournamentRound - 1);
+    update_statusline(round - 1);
     wstandout(corewin);
     mvwaddstr(corewin, 0, 0, pressAnyKey);
     wrefresh(corewin);
@@ -542,7 +561,9 @@ text_display_close(void)
  */
 
 void
-escape(char *s, char *p, int errCode)
+escape(s, p, errCode)
+  char   *s, *p;
+  int     errCode;
 {
   clear();
   refresh();
@@ -561,7 +582,7 @@ escape(char *s, char *p, int errCode)
 }
 
 void
-end_curses(void)
+end_curses()
 {
   if (curwin) {
     while (globalwin)
@@ -571,13 +592,14 @@ end_curses(void)
 }
 
 void
-winupdate(void)
+winupdate()
 {
   wrefresh(curwin);
 }
 
 void
-SetCursor(int x, int y)
+SetCursor(x, y)
+  int     x, y;
 {
   wmove(curwin, y, x);
 }

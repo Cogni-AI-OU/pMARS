@@ -113,7 +113,7 @@ ScreenRetrieve(short *scrptr)
 #endif
 
 void
-text_display_init(void)
+text_display_init()
 {
   register int idx;
 #if defined(WATCOM)
@@ -134,7 +134,7 @@ text_display_init(void)
       !(Screen[DEF_PAGE] = (short *) malloc(screenSize * sizeof(short))) ||
       !(Screen[CORE_PAGE] = (short *) malloc(screenSize * sizeof(short))) ||
       !(Screen[CDB_PAGE] = (short *) malloc(screenSize * sizeof(short)))) {
-    fputs(cannotAllocateScreenBuffers, stderr);
+    fprintf(stderr, cannotAllocateScreenBuffers);
     Exit(MEMERR);
   }
   for (idx = 0; idx < screenSize; idx++) {
@@ -160,7 +160,7 @@ text_display_init(void)
 }
 
 void
-text_display_clear(void)
+text_display_clear()
 {
   register int idx = 0;
   while (idx < screenSize)
@@ -183,7 +183,7 @@ text_display_clear(void)
              (((((W-warrior)+1) << 4) + 0x0F + 0x80) << 8)
 
 void
-text_display_close(void)
+text_display_close()
 {
   register short *ptr
   = Screen[CORE_PAGE] + (screenX >> 1) - 8 + (screenY >> 1) * screenX;

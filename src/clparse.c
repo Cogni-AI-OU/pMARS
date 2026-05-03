@@ -42,7 +42,7 @@
 #include <ctype.h>
 #include "global.h"
 
-#define CLP_MAXSTRLEN  80
+#define CLP_MAXSTRLEN  8000
 #define CLP_ADDR ADDR_T
 #define CLP_LONG long
 #define CLP_INT int
@@ -72,7 +72,11 @@ extern char *credits_screen1, *credits_screen2, *credits_screen3, *usage_screen,
        *optSort, *optView, *optScoreFormula, *optDIAOutput, *noWarriorFile,
        *fFExclusive, *coreSizeTooSmall, *dLessThanl, *FLessThand,
        *outOfMemory, *badScoreFormula, *optPSpaceSize, *pSpaceTooBig,
-       *optPermutate, *permutateMultiWarrior;
+       *optPermutate, *permutateMultiWarrior, *optAssemble;
+
+#ifdef RWLIMIT
+extern char *optReadLimit, *optWriteLimit, *badRWLimit;
+#endif
 
 #if defined(XWINGRAPHX)
 extern char *badArgumentForXSwitch, *optXOpt[];
@@ -83,6 +87,7 @@ void
         macputs(char *outputstr);
 #endif
 
+#ifdef NEW_STYLE
 void
         strip(char *argv[]);
 void
@@ -94,6 +99,14 @@ clp_parse(clp_opt_t clopt[],
           parse_param(int argc, char **argv);
   int
           next_input(FILE * filep, char *inputs);
+
+#else
+void    print_usage();
+int     next_input();
+int     clp_parse();
+int     parse_param();
+
+#endif
 
 static char *describe[] = {"#", "#", "#", " ", "$"};
 
@@ -128,7 +141,9 @@ extern int xMaxOptions;
 static clp_opt_t xOpt;
 
 int
-xwin_decode(char *inputs, clp_opt_t **clip)
+xwin_decode(inputs, clip)
+  char   *inputs;
+  clp_opt_t **clip;
 {
   int     i;
 
@@ -154,7 +169,8 @@ xwin_decode(char *inputs, clp_opt_t **clip)
 /*******************************************************************/
 
 void
-print_usage(clp_opt_t clopt[])
+print_usage(clopt)
+  clp_opt_t clopt[];
 
 {
   clp_opt_t *clip;
@@ -266,7 +282,7 @@ clp_parse(clopt, filep)
         if (!xwin_decode(inputs, &clip) && inputs[i] != clip->word) {
 #else
         if (inputs[i] != clip->word) {        /* option not found       */
-#endif /* XWINGRAPHX */
+#endif
 #ifndef MACGRAPHX
           if (inputs[i] == '@') {        /* included command file? */
             if (inputs[i + 1] != '\0') {
@@ -277,7 +293,7 @@ clp_parse(clopt, filep)
               if (next_input(filep, inputs)) {
                 if (!strcmp(inputs, "-")) {
                   newFile = stdin;
-                  fputs(readingStdin, stderr);
+                  fprintf(stderr, readingStdin);
                 } else {
                   if ((newFile = fopen(inputs, "r")) == NULL) {
                     code = FILENAME;        /* command file not found */
@@ -418,10 +434,12 @@ ERROR:
     errout(outs);
     break;
   case MEMORY:
-    errout(outOfMemory);
+    sprintf(outs, outOfMemory);
+    errout(outs);
     break;
   case FILENAME:
-    errout(cannotOpenParameterFile);
+    sprintf(outs, cannotOpenParameterFile);
+    errout(outs);
     break;
   }
   return (CLP_NOGOOD);
@@ -485,7 +503,7 @@ parse_param(largc, largv)
          0, optDistance);
   record('f', clp_bool, &SWITCH_f, 0, 1,
          0, optFixedSeries);
-  record('F', clp_addr, &SWITCH_F, 0, MAXCORESIZE,
+  record('F', clp_str, &SWITCH_F, 0, MAXCORESIZE,
          0, optFixedPosition);
   record('o', clp_bool, &SWITCH_o, 0, 1, 0,
          optSort);
@@ -497,10 +515,18 @@ parse_param(largc, largv)
   record('P', clp_bool, &SWITCH_P, 0, 1,
 	 0, optPermutate);
 #endif
+#ifdef RWLIMIT
+  record('R', clp_addr, &readLimit, 1,
+	 MAXCORESIZE, 0, optReadLimit);
+  record('W', clp_addr, &writeLimit, 1,
+	 MAXCORESIZE, 0, optReadLimit);
+#endif
+  record('A', clp_bool, &SWITCH_A, 0, 1,
+	 0, optAssemble);
   record('=', clp_str, &SWITCH_eq, 0, 0, 0, optScoreFormula);
   record('Q', clp_int, &SWITCH_Q, -1, INT_MAX, -1, NULL);
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX)  || defined(LINUXGRAPHX) \
-    || defined(XWINGRAPHX) || defined(SDLGRAPHX) || defined(STDGRAPHX)
+    || defined(XWINGRAPHX)
 #if defined(XWINGRAPHX)
 #define V_MAX        2994
 #else
@@ -561,10 +587,22 @@ parse_param(largc, largv)
         errout(coreSizeTooSmall);
         result = CLP_NOGOOD;
       }
-      if ((SWITCH_F) && (separation > SWITCH_F)) {
-        print_usage(options);
-        errout(FLessThand);
-        result = CLP_NOGOOD;
+      if (SWITCH_F) {
+	char   *idx;
+	useExtRNG = 0;
+	SWITCH_Fnum = 0;
+	for (idx = SWITCH_F; *idx; ++idx) {
+	  useExtRNG |= !isdigit(*idx);
+	  SWITCH_Fnum *= 10;
+	  SWITCH_Fnum += (unsigned char)(*idx) - '0';
+	}
+	if (!useExtRNG && separation > SWITCH_Fnum) {
+	  print_usage(options);
+	  errout(FLessThand);
+	  result = CLP_NOGOOD;
+	} else {
+	    if (SWITCH_Fnum < 0) SWITCH_Fnum *= -1;
+	}
       }
       set_reg('W', (long) warriors);
       for (i = 1; i <= warriors; ++i) {
@@ -599,6 +637,17 @@ parse_param(largc, largv)
 	    rounds = 2*coreSize-4*separation+2;
       } else if (rounds < 0 )
 	rounds = DEFAULTROUNDS;
+#endif
+#ifdef RWLIMIT
+      if (readLimit == 0)
+	  readLimit = coreSize;
+      if (writeLimit == 0)
+	  writeLimit = coreSize;
+      if (readLimit < 1 || writeLimit < 1 || coreSize % readLimit != 0 || coreSize % writeLimit != 0) {
+	  print_usage(options);
+	  errout(badRWLimit);
+	  result = CLP_NOGOOD;
+      }
 #endif
       /* further checks of the values */
 
