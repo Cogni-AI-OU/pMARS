@@ -219,14 +219,12 @@ static void textout(), errprn();
 /* ***************** conforming local prototypes ******************** */
 
 #ifdef NEW_STYLE
-#ifndef SERVER
-static void lineswitch(char *, uShrt, line_st *);
-#endif
+static void lineswitch(char *, char *, uShrt, line_st *);
 static int globalswitch(char *, uShrt, uShrt, uShrt);
 static int trav2(char *, char *, int);
 static int normalize(long);
 static int blkfor(char *, char *);
-static int equtbl(char *);
+static int equtbl(char *, char *);
 static int equsub(char *, char *, int, ref_st *);
 static ref_st *lookup(char *);
 static grp_st *addsym(char *, grp_st *);
@@ -244,9 +242,7 @@ static void automaton(char *, stateCol, mem_struct *);
 static void dfashell(char *, mem_struct *);
 static void expand(uShrt), encode(uShrt);
 #else
-#ifndef SERVER
 static void lineswitch();
-#endif
 static int globalswitch(), trav2(), normalize();
 static int blkfor(), equtbl(), equsub();
 static ref_st *lookup();
@@ -259,6 +255,17 @@ static void disposeline(), disposegrp(), disposetbl();
 static void cleanmem(), nocmnt();
 static void automaton(), dfashell(), expand(), encode();
 #endif
+
+/* ************************* Parse state **************************** */
+
+#define SNIL 0
+#define SLBL 1
+#define SVAL 2
+#define SCOM 3
+#define SPSE 4
+#define SFOR 5
+#define SROF 6
+#define SERR -1
 
 /* ************************** Functions ***************************** */
 
@@ -605,18 +612,40 @@ globalswitch(str, idx, loc, lspnt)
 
 /* ******************************************************************* */
 
-#ifndef SERVER
 static void
-lineswitch(str, idx, aline)        /* line switch */
+lineswitch(str, dest, idx, aline)        /* line switch */
   char   *str;
+  char   *dest;
   uShrt   idx;
   line_st *aline;
 {
+  int     evalerr;
   uChar   i;
   i = (uChar) idx;
   get_token(str, &i, token);
   to_upper(token);
 
+  if (strcmp(token, "ASSERT") == 0) {
+    long    result;
+
+    trav2((char *) str + i, dest, SVAL);
+
+    if (SWITCH_V) {
+      sprintf(outs, currentAssertMsg, dest);
+      textout(outs);
+    }
+    if ((evalerr = eval_expr(dest, &result)) < OK_EXPR)
+      errprn(BASERR, aline, "");
+    else {
+      if (evalerr == OVERFLOW)
+        errprn(OFLERR, aline, "");
+      noassert = FALSE;
+      if (result == 0L)
+        errprn(CHKERR, aline, "");
+    }
+  }
+
+#ifndef SERVER
   if (strcmp(token, "DEBUG") == 0) {
     get_token(str, &i, token);
     to_upper(token);
@@ -642,8 +671,8 @@ lineswitch(str, idx, aline)        /* line switch */
         errprn(IGNORE, aline, str);
     }
   }
-}
 #endif
+}
 
 /* ******************************************************************* */
 
@@ -680,9 +709,19 @@ textout(str)
 #if defined XWINGRAPHX
   else
     xWin_puts(str);
+#else 
+#if defined(SDLGRAPHX)
+  else
+    sdlgr_puts(str);
+#else
+#if defined STDGRAPHX
+  else
+    stdio_puts(str);  
 #else                                /* no display */
   else
     fprintf(stderr, "%s", str);
+#endif                                /* STDGRAPHX */
+#endif                                /* SDLGRAPHX */
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* DOSGRXGRAPHX */
@@ -1531,17 +1570,6 @@ encode(sspnt)
 
 /* ******************************************************************* */
 
-#define SNIL 0
-#define SLBL 1
-#define SVAL 2
-#define SCOM 3
-#define SPSE 4
-#define SFOR 5
-#define SROF 6
-#define SERR -1
-
-/* ******************************************************************* */
-
 static int
 blkfor(expr, dest)
   char   *expr, *dest;
@@ -1630,8 +1658,9 @@ blkfor(expr, dest)
 /* ******************************************************************* */
 
 static int
-equtbl(expr)
+equtbl(expr, dest)
   char   *expr;
+  char   *dest;
 {
   line_st *cline, *pline = NULL;
   uChar   i;
@@ -1667,14 +1696,10 @@ equtbl(expr)
           pline = pline->nextline = cline;
         } else
           MEMORYERROR;
-      }
-#ifndef SERVER
-      else if (*token == com_sym) {
+      } else if (*token == com_sym) {
         aline = aline->nextline;
-        lineswitch(aline->vline, i, aline);
-      }
-#endif
-      else
+        lineswitch(aline->vline, dest, i, aline);
+      } else
         break;
     }
   } else
@@ -1737,37 +1762,8 @@ trav2(buffer, dest, wdecl)
     return wdecl;
 
   case COMMTOKEN:
-    if ((wdecl == SNIL) && (statefine == 0)) {
-
-      uChar   idx;
-
-      idx = idxp;
-      get_token(buffer, &idx, token);
-      to_upper(token);
-      if (strcmp(token, "ASSERT") == 0) {
-        long    result;
-
-        trav2((char *) buffer + idx, dest, SVAL);
-
-        if (SWITCH_V) {
-          sprintf(outs, currentAssertMsg, dest);
-          textout(outs);
-        }
-        if ((evalerr = eval_expr(dest, &result)) < OK_EXPR)
-          errprn(BASERR, aline, "");
-        else {
-          if (evalerr == OVERFLOW)
-            errprn(OFLERR, aline, "");
-          noassert = FALSE;
-          if (result == 0L)
-            errprn(CHKERR, aline, "");
-        }
-      }
-#ifndef SERVER
-      else
-        lineswitch(buffer, idxp, aline);
-#endif
-    }
+    if ((wdecl == SNIL) && (statefine == 0))
+      lineswitch(buffer, dest, idxp, aline);
     return wdecl;
 
   case CHARTOKEN:
@@ -1809,7 +1805,7 @@ trav2(buffer, dest, wdecl)
       if (statefine)
         return SNIL;
       else if (wdecl <= SLBL)
-        return equtbl((char *) buffer + idxp);
+        return equtbl((char *) buffer + idxp, dest);
       else
         errprn(APPERR, aline, token);
 

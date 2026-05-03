@@ -4,7 +4,7 @@
 /*
     SDL_main.c, placed in the public domain by Sam Lantinga  4/13/98
 
-    The WinMain function -- calls your program's main() function
+    The WinMain function -- calls your program's main() function 
 */
 
 #include <stdio.h>
@@ -168,7 +168,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int sw)
 	/* AllocConsole(); */
 
 	/* Start up DDHELP.EXE before opening any files, so DDHELP doesn't
-	   keep them open.  This is a hack.. hopefully it will be fixed
+	   keep them open.  This is a hack.. hopefully it will be fixed 
 	   someday.  DDHELP.EXE starts up the first time DDRAW.DLL is loaded.
 	 */
 	handle = LoadLibrary(TEXT("DDRAW.DLL"));

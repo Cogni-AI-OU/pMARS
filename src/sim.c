@@ -82,13 +82,17 @@ extern void sighandler(int dummy);
 #endif
 
 #endif                                /* !CURSESGRAPHX */
-#ifdef LINUXGRAPHX
-#include "lnxdisp.c"
-#else
 #ifdef XWINGRAPHX
 #include "xwindisp.c"
 #else
+#ifdef SDLGRAPHX
+#include "sdldisp.c"
+#else
+#ifdef STDGRAPHX
+#include "stddisp.c"
+#else
 #include "uidisp.c"
+#endif
 #endif
 #endif
 
@@ -257,6 +261,9 @@ simulator1()
   mem_struct *endPtr;                /* pointer used to copy program to core */
 register  int     temp;                        /* general purpose temporary variable */
   int     addrA, addrB;                /* A and B pointers */
+#ifndef SERVER
+  int     temp2;			/* needed in graphical versions to display postincrements at the correct address */
+#endif
   ADDR_T FAR *tempPtr2;
 #ifdef NEW_MODES
   ADDR_T FAR *offsPtr;                /* temporary pointer used in op decode phase */
@@ -382,6 +389,8 @@ register  int     temp;                        /* general purpose temporary vari
       W->taskHead = tempPtr2;
       W->taskTail = tempPtr2 + 1;
       *tempPtr2 = (W->position + W->offset) % coreSize;
+      *tempPtr2 = *tempPtr2 < 0 ? *tempPtr2 + coreSize : *tempPtr2;
+
       W->tasks = 1;
       tempPtr2 -= taskNum;
       destPtr = memory + W->position;
