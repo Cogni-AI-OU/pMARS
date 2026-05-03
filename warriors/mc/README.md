@@ -50,11 +50,11 @@ END LAUNCH
 
 ### [Mini Challenge #6: "The smart redcoder"](http://labarga.atspace.com/mc6.html)
 **Goal:** Create a p-warrior (p-space brain) for a round-robin competition using three given strategies (Imp, Core clear, Imp-gate) that follow a rock-paper-scissors pattern.
-* **Status:** To be imported.
+* **Local files:** [mc6/](mc6/)
 
 ### [Mini Challenge #7: "Harmless overrun"](http://labarga.atspace.com/mc7.html)
 **Goal:** Write an imp that can pass through a wimp (imp gate) while allowing the gate's process to survive. Smallest code and fewest processes wins.
-* **Status:** To be imported.
+* **Local files:** [mc7/](mc7/)
 
 ---
 *Source: [Neo's World of Corewar](http://labarga.atspace.com/mc.html)*
