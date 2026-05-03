@@ -73,9 +73,10 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 ## 🔬 Research & Studies
 
 ### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
-**GitHub Repository:** [SakanaAI/drq](https://github.com/SakanaAI/drq)
+- **Paper:** [arXiv:2601.03335](https://arxiv.org/abs/2601.03335)
+- **GitHub Repository:** [SakanaAI/drq](https://github.com/SakanaAI/drq)
 
-A 2026 study by researchers from Sakana AI and MIT investigating "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs to evolve Core War warriors. The study demonstrates how adversarial dynamics drive the emergence of robust, general-purpose behaviors, positioning Core War as a rich sandbox for studying artificial evolution and cybersecurity.
+A 2026 study by researchers from Sakana AI and MIT exploring "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs and MAP-Elites to evolve Redcode warriors. The research demonstrates how adversarial "Red Queen" dynamics drive the emergence of robust, general-purpose behaviors and phenotypic convergence, positioning Core War as a rich, controllable sandbox for studying artificial evolution and adversarial adaptation.
 
 ## 🛠️ Contributing
 
