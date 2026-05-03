@@ -53,6 +53,10 @@ server: CFLAGS += -DSERVER
 server: LIBS =
 server: $(MAINFILE)
 
+smallmem: CFLAGS += -DSERVER -DSMALLMEM
+smallmem: LIBS =
+smallmem: $(MAINFILE)
+
 xwin: CFLAGS += -DXWINGRAPHX
 xwin: LIBS = -L/usr/X11R6/lib -lX11
 xwin: $(MAINFILE)

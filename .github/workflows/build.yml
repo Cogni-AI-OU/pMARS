@@ -1,3 +1,4 @@
+# Triggering build
 name: Build
 
 on:
@@ -13,23 +14,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        config: [X11, Curses, Server, SmallMem]
         include:
           - config: X11
-            cflags: "-O -DEXT94 -DXWINGRAPHX -DPERMUTATE -DRWLIMIT"
-            libs: "-lX11"
+            target: xwin
             deps: "libx11-dev"
           - config: Curses
-            cflags: "-O -DEXT94 -DCURSESGRAPHX -DPERMUTATE -DRWLIMIT"
-            libs: "-lncurses"
+            target: curses
             deps: "libncurses-dev"
           - config: Server
-            cflags: "-O -DEXT94 -DSERVER -DPERMUTATE -DRWLIMIT"
-            libs: ""
+            target: server
             deps: ""
           - config: SmallMem
-            cflags: "-O -DEXT94 -DSERVER -DSMALLMEM -DPERMUTATE -DRWLIMIT"
-            libs: ""
+            target: smallmem
             deps: ""
 
     steps:
@@ -45,7 +41,7 @@ jobs:
       run: |
         cd src
         make clean
-        make CFLAGS="${{ matrix.cflags }}" LIB="${{ matrix.libs }}"
+        make ${{ matrix.target }}
 
     - name: Verify executable
       run: |
