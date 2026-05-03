@@ -1577,7 +1577,7 @@ blkfor(expr, dest)
       errprn(DIVERR, aline, "");
     else
       errprn(EVLERR, aline, "");
-  } else if (result <= 0L) {
+  } else if (result <= 0L || (uShrt) result == 0) {
     if (evalerr == OVERFLOW)
       errprn(OFLERR, aline, "");
     statefine++;
@@ -1700,7 +1700,7 @@ equsub(expr, dest, wdecl, tbl)
 
   while (aline->nextline && vcont) {
     if (statefine == 0)
-      if (wdecl == SCOM) {
+      if (wdecl == SCOM || wdecl == SVAL) {
         addline(dest, aline->linesrc, dspnt);
         if (dbginfo == 3)
           dbginfo = 0;
