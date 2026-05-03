@@ -351,6 +351,10 @@ addpredefs()
   addpredef("VERSION", (U32_T) PMARSVER);
   addpredef("WARRIORS", (U32_T) warriors);
   addpredef("ROUNDS", (U32_T) rounds);
+#ifdef RWLIMIT
+  addpredef("READLIMIT", (U32_T) readLimit);
+  addpredef("WRITELIMIT", (U32_T) writeLimit);
+#endif
 #ifdef PSPACE
   addpredef("PSPACESIZE", (U32_T) pSpaceSize);
 #endif
@@ -2167,13 +2171,16 @@ assemble(fName, aWarrior)
        */
       *buf = '\0';
       i = 0;                        /* pointer to line buffer start */
+      int commentfound = FALSE;
       do {
         if (fgets(buf + i, MAXALLCHAR - i, infp)) {
-          for (; buf[i]; i++)
+          for (; buf[i]; i++) {
+            if (buf[i] == ';') commentfound = TRUE;
             if (buf[i] == '\n' || buf[i] == '\r')
               break;
+            }
           buf[i] = 0;
-          if (buf[i - 1] == '\\') {        /* line continued */
+          if (buf[i - 1] == '\\' && commentfound == FALSE) {        /* line continued */
             conLine = TRUE;
             buf[--i] = 0;        /* reset */
           } else

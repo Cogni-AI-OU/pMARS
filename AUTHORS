@@ -14,4 +14,5 @@ Authors
     (00ncsummers@bsuvc.bsu.edu) ported pMARS to VMS. Ken Espiritu provided
     an optimized version of sim.c which runs fast on x86 machines. Ilmari
     Karonen (iltzu@sci.fi) added the -P option and various improvements.
-
+    Joonas Pihlaja (jpihlaja@cc.helsinki.fi) added support for read/write
+    limits and other improvements.

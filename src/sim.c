@@ -41,9 +41,6 @@ extern void sighandler(int dummy);
 #endif
 
 
-#ifdef TRACEGRAPHX
-#include "trace.c"
-#else
 #if defined(MACGRAPHX)
 #include "macdisp.c"
 #else
@@ -109,7 +106,6 @@ extern void sighandler(int dummy);
 #define display_close()
 #define display_cycle()
 #define display_push(val)
-#endif                                /* TRACEGRAPHX */
 #endif
 #endif
 #endif
@@ -136,9 +132,9 @@ do { \
 #endif
 
 #define OP(opcode,modifier) (opcode<<3)+modifier
-#define ADDMOD(A,B,C) do { if ((C=(int) A+B)>=coreSize) C-=coreSize; } \
+#define ADDMOD(A,B,C) do { if ((C=(int)(A+B))>=coreSize) C-=coreSize; } \
 while (0)
-#define SUBMOD(A,B,C) do { if ((C=(int) A-B)<0) C+=coreSize; } \
+#define SUBMOD(A,B,C) do { if ((C=(int)(A-B))<0) C+=coreSize; } \
 while (0)
 
 #ifdef NEW_STYLE
@@ -220,6 +216,27 @@ checksum_warriors()
   return checksum;
 }
 
+#ifdef RWLIMIT
+static ADDR_T
+foldr(ADDR_T a)
+{
+    ADDR_T result = (a + coreSize - progCnt) % readLimit;
+    result = result <= readLimit/2 ? result : result + coreSize - readLimit;
+    ADDMOD(result, progCnt, result);
+    return result;
+}
+
+static ADDR_T
+foldw(ADDR_T a)
+{
+    ADDR_T result = (a + coreSize - progCnt) % writeLimit;
+    result = result <= writeLimit/2 ? result : result + coreSize - writeLimit;
+    ADDMOD(result, progCnt, result);
+    return result;
+}
+#endif
+
+
 void
 simulator1()
 {
@@ -240,12 +257,12 @@ simulator1()
   mem_struct *endPtr;                /* pointer used to copy program to core */
 register  int     temp;                        /* general purpose temporary variable */
   int     addrA, addrB;                /* A and B pointers */
-#ifdef TRACEGRAPHX
-  int     temp2;
-#endif
   ADDR_T FAR *tempPtr2;
 #ifdef NEW_MODES
   ADDR_T FAR *offsPtr;                /* temporary pointer used in op decode phase */
+#endif
+#ifdef RWLIMIT
+  ADDR_T raddrB = 0;
 #endif
 
   endWar = warrior + warriors;
@@ -301,12 +318,12 @@ register  int     temp;                        /* general purpose temporary vari
     debugState = STEP;                /* automatically enter debugger */
   if (!debugState)
     copyDebugInfo = TRUE;        /* this makes things a little faster */
-  seed = SWITCH_F ?
-    (SWITCH_F - separation) :        /* seed from argument */
+  seed = SWITCH_Fnum ?
+    (SWITCH_Fnum - separation) :        /* seed from argument */
   /* seed from either checksum or time */
     rng(SWITCH_f ? checksum_warriors() : time(0));
 #ifdef PERMUTATE
-  if (SWITCH_F && SWITCH_P)
+  if (SWITCH_Fnum && SWITCH_P)
     seed *= warriors; /* get table index from position */
 #endif
 
@@ -364,7 +381,7 @@ register  int     temp;                        /* general purpose temporary vari
       /* initialize head, tail, and taskQueue */
       W->taskHead = tempPtr2;
       W->taskTail = tempPtr2 + 1;
-      *tempPtr2 = W->position + W->offset;
+      *tempPtr2 = (W->position + W->offset) % coreSize;
       W->tasks = 1;
       tempPtr2 -= taskNum;
       destPtr = memory + W->position;
@@ -393,9 +410,6 @@ register  int     temp;                        /* general purpose temporary vari
       if (debugState && ((debugState == STEP) || memory[progCnt].debuginfo))
 	debugState = cdb("");
 #endif
-#ifdef NEW_MODES
-      AB_Value = IR.A_value;        /* necessary if B-mode is immediate */
-#endif
 
       /*
        * evaluate A operand.  This is the hardest part of the entire
@@ -403,21 +417,58 @@ register  int     temp;                        /* general purpose temporary vari
        */
 if (IR.A_mode != (FIELD_T) IMMEDIATE)
 {
+	#ifndef RWLIMIT
 	ADDMOD(IR.A_value, progCnt, addrA);
-	tempPtr = &memory[addrA];
+	#else
+	addrA = foldr(progCnt + IR.A_value);
+	#endif
+
+	tempPtr = &memory[addrA];	/* Stores ptr to base ofs. core cell. */
 
 	if (IR.A_mode != (FIELD_T) DIRECT)
 	{
+		ADDR_T waddrA;		/* Stores core addr. of base ofs cell for */
+					/*  predec/postinc modes. */
+
+		/* Computing the base offset cell's addr into tempPtr and the offset cell's
+		 * field (a/b field) into offsPtr and the actual offset value into temp.
+		 * Note how when r/w limits are used, the base offset cell is actually
+		 * folded using the write limit because we predec/postinc the cell later.
+		 * (Departure from '94 draft to follow Chip Wendell's CoreWin implementation.)
+		 */
 		#ifdef NEW_MODES
 		if (INDIR_A(IR.A_mode))
 		{
 			IR.A_mode = RAW_MODE(IR.A_mode);
+			#ifdef RWLIMIT
+			if (IR.A_mode != INDIRECT) {
+				tempPtr = &memory[addrA = waddrA = foldw(progCnt + IR.A_value)];
+			} else
+			#endif
+			{
+				display_read(addrA); /* INDIRECT -> read from base ofs. cell. */
+			}
 			offsPtr = &(tempPtr->A_value);
+		} else {
+			#ifdef RWLIMIT
+			if (IR.A_mode != (FIELD_T) INDIRECT) {
+				tempPtr = &memory[addrA = waddrA = foldw(progCnt + IR.A_value)];
 		} else
+			#endif
+			{
+				display_read(addrA); /* INDIRECT -> read from base ofs cell. */
+			}
 			offsPtr = &(tempPtr->B_value);
-
+		}
 		temp = *offsPtr;
-		#endif
+
+		#else /* !NEW_MODES */
+		
+		temp = tempPtr->B_value;
+
+		#endif /* NEW_MODES */
+
+		/* For pre-decrement modes, do the decrement now.  */
 		if (IR.A_mode == (FIELD_T) PREDECR)
 		{
 			if (--temp < 0)
@@ -427,24 +478,22 @@ if (IR.A_mode != (FIELD_T) IMMEDIATE)
 			#else
 			tempPtr->B_value = temp;
 			#endif
-			display_dec(addrA);
+			display_dec(waddrA);
 		}
-		/* jk - added os2 part */
-		#ifdef GRAPHX
-		display_inc(addrA);
-		#else
-		#if defined(TRACEGRAPHX)
-		temp2 = addrA;        /* make the trace accurate */
-		#endif
-		#endif
+
+		/* Compute the final A-operand's core address. */
+#ifndef RWLIMIT
 		ADDMOD(temp, addrA, addrA);
-
-		destPtr = &memory[addrA];       //new
+#else
+		addrA = foldr(addrA + temp);
+#endif
+		/* Read the A-register values. */
 		#ifdef NEW_MODES
-		AA_Value = destPtr->A_value;
+		AA_Value = memory[addrA].A_value;
 		#endif
-		IR.A_value = destPtr->B_value;
+		IR.A_value = memory[addrA].B_value;
 
+		/* For postincrement modes, do the increment now. */
 		if (IR.A_mode == (FIELD_T) POSTINC)
 		{
 			if (++temp == coreSize)
@@ -454,22 +503,20 @@ if (IR.A_mode != (FIELD_T) IMMEDIATE)
 			#else
 			tempPtr->B_value = temp;
 			#endif
-			#ifdef TRACEGRAPHX
-			display_inc(temp2);
-			#endif
+			display_inc(waddrA);
 		}
-	} else
+	} else /* DIRECT */
 	{
-	#ifdef NEW_MODES
 
+	#ifdef NEW_MODES
 	IR.A_value = tempPtr->B_value;
 	AA_Value = tempPtr->A_value;
 
 	#else
-	IR.A_value = temp = tempPtr->B_value;
+	IR.A_value = tempPtr->B_value;
 	#endif
 	}
-} else
+} else /* IMMEDIATE */
 {
 	#ifdef NEW_MODES
 	AA_Value = IR.A_value;
@@ -486,20 +533,56 @@ if (IR.A_mode != (FIELD_T) IMMEDIATE)
  //     addrB = progCnt;
 if (IR.B_mode != (FIELD_T) IMMEDIATE)
 {
+#ifndef RWLIMIT
+#define raddrB addrB
 	ADDMOD(IR.B_value, progCnt, addrB);
-	 tempPtr = &memory[addrB];
+#else
+	raddrB = foldr(progCnt + IR.B_value);
+	addrB = foldw(progCnt + IR.B_value);
+#endif
+	tempPtr = &memory[raddrB];
 
 	if (IR.B_mode != (FIELD_T) DIRECT)
 	{
+		/* Computing the base offset cell's addr into tempPtr and the offset cell's
+		 * field (a/b field) into offsPtr and the actual offset value into temp.
+		 * Note how when r/w limits are used, the base offset cell is actually
+		 * folded using the write limit because we predec/postinc the cell later.
+		 * (Departure from '94 draft to follow Chip Wendell's CoreWin implementation.)
+		 */
 		#ifdef NEW_MODES
 		if (INDIR_A(IR.B_mode))
 		{
 			IR.B_mode = RAW_MODE(IR.B_mode);
+			#ifdef RWLIMIT
+			if (IR.B_mode != INDIRECT) {
+				tempPtr = &memory[raddrB = addrB];
+			} else
+			#endif
+			{
+				display_read(raddrB); /* INDIRECT -> read from base ofs. cell. */
+			}
 			offsPtr = &(tempPtr->A_value);
+		} else {
+			#ifdef RWLIMIT
+			if (IR.B_mode != (FIELD_T) INDIRECT) {
+				tempPtr = &memory[raddrB = addrB];
 		} else
+			#endif
+			{
+				display_read(raddrB); /* INDIRECT -> read from base ofs cell. */
+			}
 			offsPtr = &(tempPtr->B_value);
+		}
 		temp = *offsPtr;
-		#endif
+
+		#else /* !NEW_MODES */
+		
+		temp = tempPtr->B_value;
+
+		#endif /* NEW_MODES */
+
+		/* For pre-decrement modes, do the decrement now.  */
 		if (IR.B_mode == (FIELD_T) PREDECR)
 		{
 			if (--temp < 0)
@@ -511,24 +594,21 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 			#endif
 			display_dec(addrB);
 		}
-		/* jk - added os2 part */
-		#ifdef GRAPHX
-		display_inc(addrB);
-		#else
-		#if defined(TRACEGRAPHX)
-		temp2 = addrB;
-		#endif
-		#endif
 
+		/* Compute the final B-operand's core address. */
+#ifndef RWLIMIT
 		ADDMOD(temp, addrB, addrB);
-
-		destPtr = &memory[addrB];
+#else
+		addrB = foldw(addrB + temp);
+		raddrB = foldr(raddrB + temp);
+#endif
+		/* Read the B-register values. */
 		#ifdef NEW_MODES
-		AB_Value = destPtr->A_value;
+		AB_Value = memory[raddrB].A_value;
 		#endif
+		IR.B_value = memory[raddrB].B_value;
 
-		IR.B_value = destPtr->B_value;
-
+		/* For postincrement modes, do the increment now. */
 		if (IR.B_mode == (FIELD_T) POSTINC)
 		{
 			if (++temp == coreSize)
@@ -538,33 +618,37 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 			#else
 			tempPtr->B_value = temp;
 			#endif
-			#ifdef TRACEGRAPHX
-			display_inc(temp2);
-			#endif
+			display_inc(tempPtr - &memory[0]);
 		}
 	} else
 	{
+
 	#ifdef NEW_MODES
 	AB_Value = tempPtr->A_value;
-
 	IR.B_value = tempPtr->B_value;
 	#else
 	IR.B_value = temp = tempPtr->B_value;
 	#endif
 	}
-} else
+} else {
       addrB = progCnt;
-      /*
-       * addrA holds the A-pointer IR.A_value holds the B operand of the
-       * A-pointer cell. temp holds the B-pointer IR.B_value holds the B
-       * operand of the B-pointer cell.
+      raddrB = progCnt;
+      IR.B_value = memory[addrB].B_value;
+      AB_Value = memory[addrB].A_value;
+}
+
+      /* After A/B operand evaluation:
+       *
+       * addrA holds the A-pointer, which is always a read-pointer.
+       * AA_Value holds the A field of the A-operand (NEW_MODES & RWLIMIT).
+       * IR.A_value holds the B field of the A-operand.
+       *
+       * addrB holds the B-write-pointer.
+       * raddrB holds the B-read-pointer (NEW_MODES, RWLIMIT) .
+       * AB_Value holds the A-field of the B-operand (NEW_MODES).
+       * IR.B_value holds the B-field of the B-operand.
        */
 #ifdef NEW_MODES
-      /*
-       * IRA_A_value holds the A operand of the A-pointer cell IRA.B_value
-       * holds the A operand of the B-pointer cell.
-       */
-
 #define ADDRA_AVALUE AA_Value
 #define ADDRB_AVALUE AB_Value
 #else
@@ -871,7 +955,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
       case OP(JMZ, mA):
       case OP(JMZ, mBA):
-	display_read(addrB);
+	display_read(raddrB);
 	if (ADDRB_AVALUE)
 	  break;
 	push(addrA);
@@ -880,13 +964,13 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(JMZ, mF):
       case OP(JMZ, mX):
       case OP(JMZ, mI):
-	display_read(addrB);
+	display_read(raddrB);
 	if (ADDRB_AVALUE)
 	  break;
 	/* FALLTHRU */
       case OP(JMZ, mB):
       case OP(JMZ, mAB):
-	display_read(addrB);
+	display_read(raddrB);
 	if (IR.B_value)
 	  break;
 	push(addrA);
@@ -895,7 +979,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
       case OP(JMN, mA):
       case OP(JMN, mBA):
-	display_read(addrB);
+	display_read(raddrB);
 	if (!ADDRB_AVALUE)
 	  break;
 	push(addrA);
@@ -903,7 +987,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
       case OP(JMN, mB):
       case OP(JMN, mAB):
-	display_read(addrB);
+	display_read(raddrB);
 	if (!IR.B_value)
 	  break;
 	push(addrA);
@@ -912,7 +996,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(JMN, mF):
       case OP(JMN, mX):
       case OP(JMN, mI):
-	display_read(addrB);
+	display_read(raddrB);
 	if (!ADDRB_AVALUE && !IR.B_value)
 	  break;
 	push(addrA);
@@ -924,12 +1008,18 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	if (ISNEG(--memory[addrB].A_value))
 	  memory[addrB].A_value = coreSize1;
 	display_dec(addrB);
+#ifdef RWLIMIT
+	display_read(raddrB);
+#endif
 	if (AB_Value == 1)
 	  break;
 #else
 	if (!--memory[addrB].A_value)
 	  break;
 	display_dec(addrB);
+#ifdef RWLIMIT
+	display_read(raddrB);
+#endif
 	if (ISNEG(memory[addrB].A_value))
 	  memory[addrB].A_value = coreSize1;
 #endif
@@ -942,6 +1032,9 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	if (ISNEG(--memory[addrB].B_value))
 	  memory[addrB].B_value = coreSize1;
 	display_dec(addrB);
+#ifdef RWLIMIT
+	display_read(raddrB);
+#endif
 	if (IR.B_value == 1)
 	  break;
 	push(addrA);
@@ -955,6 +1048,9 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	if (ISNEG(--memory[addrB].A_value))
 	  memory[addrB].A_value = coreSize1;
 	display_dec(addrB);
+#ifdef RWLIMIT
+	display_read(raddrB);
+#endif
 #ifdef NEW_MODES
 	if ((AB_Value == 1) && (IR.B_value == 1))
 	  break;
@@ -969,7 +1065,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mA):
 #endif
       case OP(CMP, mA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != ADDRA_AVALUE)
 	  break;
@@ -980,18 +1076,18 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mI):
 #endif
       case OP(CMP, mI):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
-	if ((memory[addrB].opcode != memory[addrA].opcode) ||
-	    (memory[addrB].A_mode != memory[addrA].A_mode) ||
-	    (memory[addrB].B_mode != memory[addrA].B_mode))
+	if ((memory[raddrB].opcode != memory[addrA].opcode) ||
+	    (memory[raddrB].A_mode != memory[addrA].A_mode) ||
+	    (memory[raddrB].B_mode != memory[addrA].B_mode))
 	  break;
 	/* FALLTHRU */
 #ifdef NEW_OPCODES
       case OP(SEQ, mF):
 #endif
       case OP(CMP, mF):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != ADDRA_AVALUE)
 	  break;
@@ -1000,7 +1096,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mB):
 #endif
       case OP(CMP, mB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != IR.A_value)
 	  break;
@@ -1011,7 +1107,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mAB):
 #endif
       case OP(CMP, mAB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != ADDRA_AVALUE)
 	  break;
@@ -1022,7 +1118,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mX):
 #endif
       case OP(CMP, mX):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != ADDRA_AVALUE)
 	  break;
@@ -1031,7 +1127,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
       case OP(SEQ, mBA):
 #endif
       case OP(CMP, mBA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != IR.A_value)
 	  break;
@@ -1040,7 +1136,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
 #ifdef NEW_OPCODES
       case OP(SNE, mA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != ADDRA_AVALUE)
 	  goto skip;
@@ -1050,41 +1146,41 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	goto pushtemp;
 
       case OP(SNE, mI):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
-	if ((memory[addrB].opcode != memory[addrA].opcode) ||
-	    (memory[addrB].A_mode != memory[addrA].A_mode) ||
-	    (memory[addrB].B_mode != memory[addrA].B_mode))
+	if ((memory[raddrB].opcode != memory[addrA].opcode) ||
+	    (memory[raddrB].A_mode != memory[addrA].A_mode) ||
+	    (memory[raddrB].B_mode != memory[addrA].B_mode))
 	  goto skip;
 	/* FALLTHRU */
       case OP(SNE, mF):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != ADDRA_AVALUE)
 	  goto skip;
 	/* FALLTHRU */
       case OP(SNE, mB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != IR.A_value)
 	  goto skip;
 	break;
 
       case OP(SNE, mAB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != ADDRA_AVALUE)
 	  goto skip;
 	break;
 
       case OP(SNE, mX):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value != ADDRA_AVALUE)
 	  goto skip;
 	/* FALLTHRU */
       case OP(SNE, mBA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE != IR.A_value)
 	  goto skip;
@@ -1092,7 +1188,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 #endif
 
       case OP(SLT, mA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE <= ADDRA_AVALUE)
 	  break;
@@ -1101,13 +1197,13 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
       case OP(SLT, mF):
       case OP(SLT, mI):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE <= ADDRA_AVALUE)
 	  break;
 	/* FALLTHRU */
       case OP(SLT, mB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value <= IR.A_value)
 	  break;
@@ -1115,7 +1211,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	goto pushtemp;
 
       case OP(SLT, mAB):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value <= ADDRA_AVALUE)
 	  break;
@@ -1123,13 +1219,13 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	goto pushtemp;
 
       case OP(SLT, mX):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (IR.B_value <= ADDRA_AVALUE)
 	  break;
 	/* FALLTHRU */
       case OP(SLT, mBA):
-	display_read(addrB);
+	display_read(raddrB);
 	display_read(addrA);
 	if (ADDRB_AVALUE <= IR.A_value)
 	  break;

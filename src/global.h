@@ -127,8 +127,8 @@ enum {
 
 /* Version and date */
 
-#define PMARSVER  92
-#define PMARSDATE "25/12/00"
+#define PMARSVER  94
+#define PMARSDATE "04/07/22"
 
 #ifdef VMS                        /* Must change codes to work with VMS error
                                  * handling */
@@ -213,7 +213,7 @@ extern  PMARS_FATAL, PMARS_BADCOMLIN, PMARS_PARSEERR;
 
 #define MAXSEPARATION MAXCORESIZE/MAXWARRIOR
 
-#define MAXALLCHAR 256
+#define MAXALLCHAR 8000
 
 /* The following holds the order in which opcodes, modifiers, and addr_modes
    are represented as in parser. The enumerated field should start from zero */
@@ -251,9 +251,13 @@ typedef int ADDR_T;
 #endif
 
 typedef unsigned char FIELD_T;
+#ifdef DOS16
 typedef unsigned long U32_T;        /* unsigned long (32 bits) */
 typedef long S32_T;
-
+#else
+typedef unsigned int U32_T;        /* unsigned int (32 bits) */
+typedef int S32_T;
+#endif
 
 /* Memory structure */
 typedef struct mem_struct {
@@ -309,15 +313,23 @@ extern ADDR_T separation;
 extern int rounds;
 extern long cycles;
 
+#ifdef RWLIMIT
+extern ADDR_T readLimit;
+extern ADDR_T writeLimit;
+#endif
+
+
 extern int cmdMod;
 extern S32_T seed;
+extern int useExtRNG;
 
 extern int SWITCH_b;
 extern int SWITCH_e;
 extern int SWITCH_k;
 extern int SWITCH_8;
 extern int SWITCH_f;
-extern ADDR_T SWITCH_F;
+extern char *SWITCH_F;
+extern ADDR_T SWITCH_Fnum;	/* an integer value of the -F parameter */
 extern int SWITCH_V;
 extern int SWITCH_o;
 extern int SWITCH_Q;
@@ -328,6 +340,7 @@ extern int SWITCH_D;
 #ifdef PERMUTATE
 extern int SWITCH_P;
 #endif
+extern int SWITCH_A;
 
 extern int inCdb;
 extern int debugState;

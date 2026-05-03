@@ -1,3 +1,15 @@
+2000-07-08	John Metcalf	<digital.wilderness@googlemail.com>
+
+	- Release 0.9.4
+	- Added -R and -W options for read/write limits (only if compiled
+	with -DRWLIMIT) - patch by Joonas Pihlaja.
+	- Added -A option to assemble warriors and emit a load file -
+	patch by Joonas Pihlaja.
+	- Applied the pMARS patch set (pmars-0.9.2-patches_20040721) to
+	fix several bugs - patches by Joonas Pihlaja.
+	- Fixed a precedence bug in eval.c - patch by Bjoern Guenzel.
+	- Fixed parsing of \ in comments in asm.c - patch by Terry Newton.
+
 2000-12-25	Ilmari Karonen	<iltzu@sci.fi>
 
 	- Release 0.9.2

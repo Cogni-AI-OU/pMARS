@@ -186,15 +186,24 @@ body()
 
   for (i = 0; (i < warriors) && (errorcode == SUCCESS); i++)
     if ((!assemble(warrior[i].fileName, i)) && (!SWITCH_b)) {
-      fprintf(STDOUT, info01, warrior[i].name, warrior[i].instLen,
-              warrior[i].authorName);
+      if (!SWITCH_A) {
+	fprintf(STDOUT, info01, warrior[i].name, warrior[i].instLen,
+		warrior[i].authorName);
+      }
       disasm(warrior[i].instBank, warrior[i].instLen, warrior[i].offset);
-      fprintf(STDOUT, "\n");
+      if (SWITCH_A) {
+	if (warrior[i].pSpaceIndex == PIN_APPEARED) {
+	  fprintf(STDOUT, "       PIN     %6ld\n", warrior[i].pSpaceIDNumber);
+	}
+	fprintf(STDOUT,"       END\n");
+      } else {
+	fprintf(STDOUT, "\n");
+      }
     }
 #ifdef PSPACE                        /* set up pSpace */
   pspace_init();
 #endif
-  if (rounds && (errorcode == SUCCESS)) {
+  if (rounds && !SWITCH_A && (errorcode == SUCCESS)) {
     simulator1();
     if (SWITCH_k) {
       set_reg('W', (long) warriors);        /* 'W' used in score calculation */

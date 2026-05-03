@@ -103,11 +103,17 @@ disasm(cells, n, offset)
   ADDR_T  i;
   char    buf[MAXALLCHAR];
 
-  if (SHOW && !SWITCH_8 && (offset >= 0) && (offset < n))
-    fprintf(STDOUT, "%-6s %3s%3s  %6s\n", "", "ORG", "", "START");
+  if (!SWITCH_A) {
+    if (SHOW && !SWITCH_8 && (offset >= 0) && (offset < n))
+      fprintf(STDOUT, "%-6s %3s%3s  %6s\n", "", "ORG", "", "START");
+  } else {
+    if (SHOW) {
+      fprintf(STDOUT, "%-6s %3s%3s  %6d\n", "", "ORG", "", offset);
+    }
+  }
 
   for (i = 0; i < n; ++i)
-    fprintf(STDOUT, "%-6s %s\n", i == offset ? "START" : "",
+    fprintf(STDOUT, "%-6s %s\n", i == offset && !SWITCH_A ? "START" : "",
 #ifdef DOS16
             cellview((mem_struct far *) cells + i, buf, SHOW));
 #else

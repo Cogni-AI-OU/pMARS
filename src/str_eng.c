@@ -417,6 +417,11 @@ char   *optPSpaceSize = "Size of P-space [1/16th core]";
 #ifdef PERMUTATE
 char   *optPermutate = "Permutate starting positions";
 #endif
+#ifdef RWLIMIT
+char   *optReadLimit = "Read limit size";
+char   *optWriteLimit = "Write limit size";
+#endif
+char   *optAssemble = "Assemble warriors only";
 #if defined(XWINGRAPHX)
 char   *optXOpt[] = {
   "Display to connect to",
@@ -435,6 +440,9 @@ char   *pSpaceTooBig = "\nP-space is bigger than core\n";
 #endif
 #ifdef PERMUTATE
 char   *permutateMultiWarrior = "\nPermutation cannot be used in multiwarrior battles\n";
+#endif
+#ifdef RWLIMIT
+char   *badRWLimit = "\nRead/Write limit must be a positive divisor of core size\n";
 #endif
 /* These strings are used by the VMS Language Sensitive Editor */
 #ifdef VMS

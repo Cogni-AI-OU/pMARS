@@ -15,8 +15,9 @@ CC = gcc			# req. for linux
 # (5)   -DSMALLMEM                          16-bit addresses, less memory
 # (6)   -DXWINGRAPHX    1                   X-Windows graphics (UNIX)
 # (7)   -DPERMUTATE                         enables -P switch
+# (9)   -DRWLIMIT                           enables read/write limits
 
-CFLAGS = -O -DEXT94 -DXWINGRAPHX -DPERMUTATE
+CFLAGS = -O -DEXT94 -DXWINGRAPHX -DPERMUTATE -DRWLIMIT 
 LFLAGS = -x
 # LIB = -lcurses -ltermlib		# enable this one for curses display
 # LIB = -lvgagl -lvga			# enable this one for Linux/SVGA

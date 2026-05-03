@@ -42,7 +42,7 @@
 #include <ctype.h>
 #include "global.h"
 
-#define CLP_MAXSTRLEN  80
+#define CLP_MAXSTRLEN  8000
 #define CLP_ADDR ADDR_T
 #define CLP_LONG long
 #define CLP_INT int
@@ -72,7 +72,11 @@ extern char *credits_screen1, *credits_screen2, *credits_screen3, *usage_screen,
        *optSort, *optView, *optScoreFormula, *optDIAOutput, *noWarriorFile,
        *fFExclusive, *coreSizeTooSmall, *dLessThanl, *FLessThand,
        *outOfMemory, *badScoreFormula, *optPSpaceSize, *pSpaceTooBig,
-       *optPermutate, *permutateMultiWarrior;
+       *optPermutate, *permutateMultiWarrior, *optAssemble;
+
+#ifdef RWLIMIT
+extern char *optReadLimit, *optWriteLimit, *badRWLimit;
+#endif
 
 #if defined(XWINGRAPHX)
 extern char *badArgumentForXSwitch, *optXOpt[];
@@ -499,7 +503,7 @@ parse_param(largc, largv)
          0, optDistance);
   record('f', clp_bool, &SWITCH_f, 0, 1,
          0, optFixedSeries);
-  record('F', clp_addr, &SWITCH_F, 0, MAXCORESIZE,
+  record('F', clp_str, &SWITCH_F, 0, MAXCORESIZE,
          0, optFixedPosition);
   record('o', clp_bool, &SWITCH_o, 0, 1, 0,
          optSort);
@@ -511,6 +515,14 @@ parse_param(largc, largv)
   record('P', clp_bool, &SWITCH_P, 0, 1,
 	 0, optPermutate);
 #endif
+#ifdef RWLIMIT
+  record('R', clp_addr, &readLimit, 1,
+	 MAXCORESIZE, 0, optReadLimit);
+  record('W', clp_addr, &writeLimit, 1,
+	 MAXCORESIZE, 0, optReadLimit);
+#endif
+  record('A', clp_bool, &SWITCH_A, 0, 1,
+	 0, optAssemble);
   record('=', clp_str, &SWITCH_eq, 0, 0, 0, optScoreFormula);
   record('Q', clp_int, &SWITCH_Q, -1, INT_MAX, -1, NULL);
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX)  || defined(LINUXGRAPHX) \
@@ -575,10 +587,22 @@ parse_param(largc, largv)
         errout(coreSizeTooSmall);
         result = CLP_NOGOOD;
       }
-      if ((SWITCH_F) && (separation > SWITCH_F)) {
-        print_usage(options);
-        errout(FLessThand);
-        result = CLP_NOGOOD;
+      if (SWITCH_F) {
+	char   *idx;
+	useExtRNG = 0;
+	SWITCH_Fnum = 0;
+	for (idx = SWITCH_F; *idx; ++idx) {
+	  useExtRNG |= !isdigit(*idx);
+	  SWITCH_Fnum *= 10;
+	  SWITCH_Fnum += (unsigned char)(*idx) - '0';
+	}
+	if (!useExtRNG && separation > SWITCH_Fnum) {
+	  print_usage(options);
+	  errout(FLessThand);
+	  result = CLP_NOGOOD;
+	} else {
+	    if (SWITCH_Fnum < 0) SWITCH_Fnum *= -1;
+	}
       }
       set_reg('W', (long) warriors);
       for (i = 1; i <= warriors; ++i) {
@@ -613,6 +637,17 @@ parse_param(largc, largv)
 	    rounds = 2*coreSize-4*separation+2;
       } else if (rounds < 0 )
 	rounds = DEFAULTROUNDS;
+#endif
+#ifdef RWLIMIT
+      if (readLimit == 0)
+	  readLimit = coreSize;
+      if (writeLimit == 0)
+	  writeLimit = coreSize;
+      if (readLimit < 1 || writeLimit < 1 || coreSize % readLimit != 0 || coreSize % writeLimit != 0) {
+	  print_usage(options);
+	  errout(badRWLimit);
+	  result = CLP_NOGOOD;
+      }
 #endif
       /* further checks of the values */
 

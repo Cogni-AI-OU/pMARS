@@ -39,16 +39,21 @@ ADDR_T  instrLim;
 ADDR_T  separation;
 int     rounds;
 long    cycles;
+#ifdef RWLIMIT
+ADDR_T  readLimit, writeLimit;
+#endif
 
 int     cmdMod = 0;                /* cdb command flag: 0, RESET, SKIP */
 S32_T   seed;
+int     useExtRNG = 0;
 
 int     SWITCH_e;
 int     SWITCH_b;
 int     SWITCH_k;
 int     SWITCH_8;
 int     SWITCH_f;
-ADDR_T  SWITCH_F;
+char   *SWITCH_F;
+ADDR_T  SWITCH_Fnum;
 int     SWITCH_V;
 int     SWITCH_o;
 int     SWITCH_Q = -1;                /* not set */
@@ -59,6 +64,7 @@ int     SWITCH_D;
 #ifdef PERMUTATE
 int     SWITCH_P;
 #endif
+int	SWITCH_A;
 
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
     || defined(XWINGRAPHX)

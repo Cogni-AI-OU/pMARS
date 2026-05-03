@@ -98,7 +98,7 @@ int     evalerr;
 
 static long regAr[26];
 
-/* kludge to implement several precedence levels */
+/* kludge to implement several precedence levels - saveOper works like "push back" in token parsers */
 
 char    saveOper = 0;
 
@@ -136,7 +136,8 @@ calc(x, y, op)
   case '*':
     if (evalerr == OK_EXPR && x != 0 && y != 0 &&
         x != -1 && y != -1 &&    /* LONG_MIN/(-1) causes FP error! */
-        ((x > 0) == (y > 0) ?
+	x != 1 && y != 1 &&	/* LONG_MIN/(+1) causes FP error on an Alpha! */
+        ((x > 0) == (y > 0) ?   /* (even though it shouldn't.) */
          LONG_MAX / y / x == 0 :
          LONG_MIN / y / x == 0 ))
       evalerr = OVERFLOW;
@@ -275,12 +276,12 @@ getval(expr, val)
   else if (((regId = (int) toupper(*expr)) >= 'A') && (regId <= 'Z'))
     return getreg(expr + 1, regId - 'A', val);
   else
-    while (isdigit(*expr))
+    while (isdigit(*expr) && bufptr < BIGNUM) /* FIXED (?): possible buffer overflow without the bufptr < BIGNUM? */
       buffer[bufptr++] = *expr++;
   if (bufptr == 0)
     evalerr = BAD_EXPR;                /* no digits */
   buffer[bufptr] = 0;
-  sscanf(buffer, "%ld", val);
+  sscanf(buffer, "%ld", val); /* FIXME wouldn't it be simpler and more efficient to calculate val directly, ie val = val*10+digitvalueof(*expr++) in the loop? */
   return expr;
 }
 
@@ -291,7 +292,7 @@ eval(int prevPrec, long val1, char oper1, char *expr, long *result)
 #else
 char   *
 eval(prevPrec, val1, oper1, expr, result)
-  int     prevPrec;
+  int     prevPrec;/* prevPrec is the precedence that ends the subevaluation, ie in 1 && 2+3*4-1 || 0 prevPrec would be prec of && while evaluating 2+3*4-1 */
   char    oper1, *expr;
   long    val1, *result;
 #endif
@@ -300,6 +301,11 @@ eval(prevPrec, val1, oper1, expr, result)
   char    oper2;
   int     prec1, prec2;
 
+#ifdef DEBUG
+      fprintf(stderr, "eval prev = %ld, val1 = %ld, op1 = %c \n", prevPrec, val1, X(oper1));
+#endif
+
+  saveOper = 0;
 
   expr = getval(expr, &val2);
   SKIP_SPACE(expr);
@@ -308,44 +314,65 @@ eval(prevPrec, val1, oper1, expr, result)
     return expr;
   }
   expr = getop(expr, &oper2);
-  saveOper = 0;
 
   if ((prec1 = PRECEDENCE(oper1)) >= (prec2 = PRECEDENCE(oper2))) {
-    if (prec2 >= prevPrec || prec1 <= prevPrec) {
-      expr = eval(prec1, calc(val1, val2, oper1), oper2, expr, result);
-#if 0
-      if (saveOper && PRECEDENCE(saveOper) >= prevPrec) {
-        expr = eval(prec2, *result, saveOper, expr, result);
-        saveOper = 0;
-        printf("Umpff!\n");
-      }
-#endif
+    if (prec2 > prevPrec /* don't understand this, so I removed it: || prec1 <= prevPrec */) {
+      /* continue to gobble up expressions */
+
 #ifdef DEBUG
-      fprintf(stderr, "%ld = ((%ld %c %ld) %c ..)\n", *result, val1, X(oper1), val2, X(oper2));
+      fprintf(stderr, "gobble prev = %ld, val1 = %ld, op1 = %c, val2 = %ld, op2 = %c \n", prevPrec, val1, X(oper1), val2, X(oper2));
 #endif
+
+      expr = eval(prevPrec, calc(val1, val2, oper1), oper2, expr, result);/* prec1 -> prevPrec */
+
+#ifdef DEBUG
+      fprintf(stderr, "gobbled (prev %ld) %ld = ((%ld %c %ld) %c ..)\n", prevPrec, *result, val1, X(oper1), val2, X(oper2));
+#endif
+
     } else {
+      /* return from subevaluation of terms with higher precedence */
       *result = calc(val1, val2, oper1);
-      saveOper = oper2;
+      saveOper = oper2;/* akin to "push back" in parsers */
+
 #ifdef DEBUG
-      fprintf(stderr, "%ld = (%ld %c %ld)\n", *result, val1, X(oper1), val2);
+      fprintf(stderr, "return (prev %ld, save = %c) %ld = (%ld %c %ld)\n", prevPrec, X(saveOper), *result, val1, X(oper1), val2);
 #endif
+
     }
   } else {
-    expr = eval(prec1, val2, oper2, expr, &result2);
+
+#ifdef DEBUG
+      fprintf(stderr, "subevaluate op2, prev = %ld, val1 = %ld, op1 = %c, val2 = %ld, op2 = %c, saveOp = %c (%ld) \n", prevPrec, val1, X(oper1), val2, X(oper2), X(saveOper), saveOper);
+#endif
+
+    expr = eval(prec1, val2, oper2, expr, &result2);/* start subevaluation starting from val2 op2 */
     *result = calc(val1, result2, oper1);
 
-    if (saveOper && PRECEDENCE(saveOper) >= prevPrec) {
-      expr = eval(prec2, *result, saveOper, expr, result);
-      saveOper = 0;
 #ifdef DEBUG
-      fprintf(stderr, "%ld = .. ? (%ld %c (%ld %c ..))\n", *result,
+      fprintf(stderr, "returned from subeval, result2 = %ld, result = %ld, prev = %ld, val1 = %ld, op1 = %c, val2 = %ld, op2 = %c, saveOp = %c (%ld) \n", result2, *result, prevPrec, val1, X(oper1), val2, X(oper2), X(saveOper), saveOper);
+#endif
+
+      if (saveOper && PRECEDENCE(saveOper) >= prevPrec) {/* otherwise (if saveOper, but precedence < prevPrec) yet more nested subevalutions to return from */
+
+#ifdef DEBUG
+      fprintf(stderr, "evaluate saveOper, prev = %ld, val1 = %ld, op1 = %c \n", prevPrec, *result , X(saveOper));
+#endif
+
+      expr = eval(prevPrec, *result, saveOper, expr, result);/* prec2 -> prevPrec */
+
+#ifdef DEBUG
+      fprintf(stderr, "return, no more subevals (prev %ld, old Saved: %c (%ld)) %ld = .. ? (%ld %c (%ld %c ..))\n", prevPrec, X(saveOper), saveOper, *result,
               val1, X(oper1), val2, X(oper2));
 #endif
+
+      /* saveOper = 0; */ /* FIXED don't erase history, continue if saveOper exists */
     }
+
 #ifdef DEBUG
     else
-      fprintf(stderr, "%ld = (%ld %c (%ld %c ..))\n", *result, val1, X(oper1), val2, X(oper2));
+      fprintf(stderr, "return, no saveOp or more subevals (prev %ld, saveOp = %c (%ld)) %ld = (%ld %c (%ld %c ..))\n", prevPrec, X(saveOper), saveOper, *result, val1, X(oper1), val2, X(oper2));
 #endif
+
   }
 
   return expr;
@@ -377,6 +404,9 @@ eval_expr(expr, result)                /* wrapper for eval() */
   char   *expr;
   long   *result;
 {
+#ifdef DEBUG
+      fprintf(stderr, "* eval *\n");
+#endif
   evalerr = OK_EXPR;
   if (*eval(-1, 0L, IDENT, expr, result) != 0)
     evalerr = BAD_EXPR;                /* still chars left */

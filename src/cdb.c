@@ -46,14 +46,14 @@ char   *CDB_PROMPT = "(cdb) ";
 #endif
 #define CMDSEP '~'                /* chain command separator */
 #define CMDREP '!'                /* chain command repeator */
-#define MAXSTR 255 /* 80 */        /* general buffer length */
-#define MAXCMDSTR 500                /* max. chars in inputStr, lastCmdStr */
-#define MAXMACROS 200                /* maximum number of macros */
-#define MAXLOOPNESTING 12        /* max. nesting depth of cdb command loops
+#define MAXSTR MAXALLCHAR /* 80 */        /* general buffer length */
+#define MAXCMDSTR (10*MAXALLCHAR)                /* max. chars in inputStr, lastCmdStr */
+#define MAXMACROS 2000                /* maximum number of macros */
+#define MAXLOOPNESTING 120        /* max. nesting depth of cdb command loops
                                  * !!~..~!n */
 #define TEXTLINES 23                /* number of lines to list before pausing */
-#define MAXCMD 80
-#define MAXARG 80
+#define MAXCMD MAXALLCHAR
+#define MAXARG MAXALLCHAR
 #define RANGE_T 0
 #define TEXT_T 1
 #define FORCE 1                        /* force STDOUT output */
