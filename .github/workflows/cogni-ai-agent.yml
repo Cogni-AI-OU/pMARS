@@ -91,8 +91,11 @@ jobs:
               ansible-galaxy*: allow
               ansible-lint*: allow
               ansible-playbook*: allow
+              ar*: allow
               awk*: allow
               cat*: allow
+              cc*: allow
+              clang*: allow
               continue*: allow
               cp*: allow
               docker*: allow
@@ -101,18 +104,29 @@ jobs:
               gh pr review*: allow
               git*: allow
               grep*: allow
+              gcc*: allow
+              gdb*: allow
               head*: allow
               hexdump*: allow
               jq*: allow
               links*: allow
+              ls*: allow
               make*: allow
               mawk*: allow
+              mkdir*: allow
               molecule*: allow
+              mv*: allow
               pipx*: allow
+              pkg-config*: allow
               pre-commit*: allow
               printf*: allow
+              ranlib*: allow
+              rm*: allow
+              sdl-config*: allow
               sed*: allow
               set*: allow
+              stat*: allow
+              strip*: allow
               time*: allow
               timeout*: allow
               touch*: allow
