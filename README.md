@@ -62,6 +62,9 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **Homepage:** [koth.org/pmars](http://www.koth.org/pmars/)
 - **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
+- **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
+- **Social Media:** [@xcorewar](https://x.com/xcorewar) on [𝕏](https://x.com/xcorewar), [Bluesky](https://bsky.app/profile/xcorewar.bsky.social), [Mastodon](https://mastodon.social/@xcorewar)
+- **Mailing List:** [COREWAR-L](mailto:corewar-l@koth.org) (send `subscribe corewar-l` to `listproc@koth.org`)
 
 Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.
