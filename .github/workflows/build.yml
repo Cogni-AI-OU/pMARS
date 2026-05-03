@@ -1,0 +1,50 @@
+# Triggering build
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (${{ matrix.config }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - config: X11
+            target: xwin
+            deps: "libx11-dev"
+#          - config: Curses
+#            target: curses
+#            deps: "libncurses-dev"
+          - config: Server
+            target: server
+            deps: ""
+          - config: SmallMem
+            target: smallmem
+            deps: ""
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      if: matrix.deps != ''
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ${{ matrix.deps }}
+
+    - name: Compile
+      run: |
+        cd src
+        make clean
+        make ${{ matrix.target }}
+
+    - name: Verify executable
+      run: |
+        ls -l src/pmars
+        ./src/pmars -A warriors/excalibur.red
