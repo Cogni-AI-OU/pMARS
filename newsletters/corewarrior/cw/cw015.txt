@@ -1,0 +1,384 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 15                                                      February 5, 1996
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+______________________________________________________________________________
+Greetings.
+
+This week I were hoping to be the men to announce the first 94 warrior
+passing 1000 age; I was wrong because the hill has been calm and aged half
+than the week before so this honor will go, with most chances, to my
+co-authour Myer, who has already announced the new King of the Hall of Fame;
+some person have all lucks :-)
+
+This week is announced the Core War Hall of Fame in Stormking's web page. I
+haven't been able to submit my GIF, I hope to do it soon, but I'm curious to
+see others.
+
+Last week Myer asked if warriors are all females like ships; apart that a
+female named Jack will have a few problem when greeting, I can say that
+Jack, Tornado and La Bomba are all male, while was a female Marcia
+Trionfale, being a replicator :-)
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sun, 4 Feb 1996 18:37:20 -0800
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  37/ 29/ 34               Tornado 3.0                Beppe     145       8
+ 2  43/ 41/ 16             Frontwards v2       Steven Morrell     144     459
+ 3  41/ 40/ 19                      quiz              Schitzo     141     606
+ 4  42/ 42/ 16                Mirage 1.5        Anton Marsden     141     120
+ 5  37/ 35/ 28               Thermite II        Robert Macrae     140     207
+ 6  34/ 31/ 35                 Torch t18              P.Kline     137     985
+ 7  39/ 40/ 22                  testnorm    Maurizio Vittuari     137      13
+ 8  39/ 40/ 21                Boombastic    Maurizio Vittuari     137     341
+ 9  36/ 37/ 27     Koolaid II: WoGG v2.2         David Boeren     136      11
+10  40/ 44/ 17               seventyfive         Anders Ivner     135     106
+11  21/  9/ 70              Evol Cap 6.6       John Wilkinson     133     221
+12  38/ 44/ 18          smart crow again           Karl Lewin     132       3
+13  24/ 18/ 58            Impfinity v4g1               Planar     130     406
+14  22/ 15/ 63      Hazy.Shade.Of.Winter             John K W     130     153
+15  30/ 29/ 41           Jack in the box          Beppe Bezzi     130     973
+16  30/ 31/ 39                 patroclus       Kafka and Kurt     130       2
+17  36/ 43/ 21                   Harmony              P.Kline     130       1
+18  17/  8/ 75               Night Train           Karl Lewin     127     493
+19  36/ 45/ 20                      ajax       Kafka and Kurt     127     102
+20  38/ 49/ 13                      Days             John K W     127      36
+21  28/ 31/ 41                  La Bomba          Beppe Bezzi     125     601
+22  23/ 22/ 54                  Hector 2          Kurt Franke     124     521
+23  28/ 33/ 39                Breeder v2           J. E. Long     123      54
+24  19/ 15/ 66         The Lime Twig 2.1             John K W     123      76
+25  24/ 25/ 52          juliet and paper M R Bremer, B. Bezzi     123     602
+
+Weekly age: 54
+New warriors 8  Turnover/age rate 15%
+Average age: 284 ( 265 last week, 203 the week before )
+Average score: 132 ( 131 last week, 135 the week before )
+The 25 warriors on the hill are represented by 16 authors.
+
+The hill has been rather calm this week, aging little more than 50, and few
+warriors changed a lot their positions. Impressive the fall of Mason, pushed
+off from sixth place in few challenges, and the rise of seventyfive gaining
+more than 10 positions.
+
+Fast bombers and scanners are dominating, replicators are still having bad
+times and stone/imps are losing positions. The average score is the same of
+last week and the hill aged a bit in the average having lost but two 100+
+aged warriors.
+
+The king position has been held by Frontwards, quiz, Mirage and Tornado, but
+none kept a strong grasp on it.
+
+Congratulations to J. E. Long, making the 94 hill with his warrior Breeder v2.
+
+Torch has solved its problems and now is running toward age 1000 in a safe
+position, as does Jack in the box; both have an high chance to break the
+wall soon.
+
+A few veterans have been for long, and still are indeed, in the bottom of
+the hill at great risk of being pushed off, thy are juliet and paper, La
+Bomba and Hector; next week announces to be full of meaningful events and I
+hope my partner will be able to reenter and report them :-)
+
+A few notes:
+Of the 25 warriors on hill but 7 have been published in a working format,
+plus 7 others published in an older version and but a few published only as
+samples and code snippets. Publishing our warriors, once they aged enough
+not be subject to further improvements, can help to reduce the number of
+test submitted.
+
+Some authors don't use the ;strategy line to tell what their warriors do. I
+think that adding a few words like bomber, scanner, etc.. won't hinder their
+warriors performance.
+______________________________________________________________________________
+94 - What's New
+
+Last week
+25  19/ 11/ 70         The Lime Twig 2.1             John K W     127       1
+
+ 1  38/ 29/ 33               Tornado 3.0                Beppe     148       1
+ 4  39/ 39/ 22                  testnorm    Maurizio Vittuari     139       1
+10  30/ 29/ 42                Breeder v2           J. E. Long     131       1
+12  36/ 37/ 27     Koolaid II: WoGG v2.2         David Boeren     134       1
+15  39/ 43/ 18          smart crow again           Karl Lewin     136       1
+17  30/ 31/ 39                 patroclus       Kafka and Kurt     130       1
+17  36/ 43/ 21                   Harmony              P.Kline     130       1
+19  38/ 49/ 13                      Days             John K W     126       1
+
+Worth mention are Tornado 3.0 and testnorm, both coming after a very long
+serie of test; Breeder is the only other new warrior entering the top ten
+______________________________________________________________________________
+94 - What's Old
+
+ 8  34/ 30/ 35                 Torch t18              P.Kline     138     985
+14  31/ 28/ 41           Jack in the box          Beppe Bezzi     133     973
+ 3  41/ 39/ 20                      quiz              Schitzo     144     606
+25  25/ 24/ 52          juliet and paper M R Bremer, B. Bezzi     125     602
+20  29/ 30/ 41                  La Bomba          Beppe Bezzi     128     601
+22  24/ 22/ 53                  Hector 2          Kurt Franke     127     521
+17  19/  7/ 75               Night Train           Karl Lewin     131     493
+ 2  43/ 41/ 16             Frontwards v2       Steven Morrell     146     459
+ 7  39/ 40/ 21                Boombastic    Maurizio Vittuari     138     341
+11  22/  8/ 70              Evol Cap 6.6       John Wilkinson     136     221
+ 6  37/ 35/ 28               Thermite II        Robert Macrae     139     207
+
+Eleven warrior aged more than 200. Two new entries: Evol cap and Thermite;
+and a loss: Mason, the discovery of it's secret hanshake proved deadly for it.
+Torch and Jack are now very near 1000 age and in good health, as are quiz
+and Frontwards v2, always near the hilltop.
+Three of the oldest warriors, juliet & paper, La Bomba and Hector, seem to
+be in trouble, even if Torch and Jack in the box have swown us that some
+warriors have nine lives, like cats.
+______________________________________________________________________________
+94 - What's No More.
+
+Last week
+26  36/ 46/ 19             Provascan 3.0          Beppe Bezzi     126     281
+
+26  31/ 40/ 30                 Mason 2.0        Robert Macrae     122     333
+26  25/ 31/ 43               Blue Funk 5       Steven Morrell     119     189
+26   1/  2/  1              blister soul              schitzo       5      44
+26  32/ 44/ 24                  daedelus                Kafka     119      32
+26  25/ 31/ 44                 patroclus       Kafka and Kurt     120      27
+26   2/  2/  0                  testnorm    Maurizio Vittuari       5      13
+26  20/ 21/ 59                  Delusion           M R Bremer     119       9
+26   4/  3/  1              Tornado 2.7e          Beppe Bezzi      12       3
+
+Mason is the older guy killed, followed by Blue Funk 5
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Torch t18              P.Kline           985 *  Bomber
+ 2  Jack in the box        Beppe Bezzi       973 *  P-warrior
+ 3  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 4  Agony II               Stefan Strack     912    CMP scanner
+ 5  Blue Funk              Steven Morrell    869    Stone/ imp
+ 6  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 7  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 8  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 9  myVamp v3.7            Paulsson          643    Vampire
+10  Armory - A5            Wilkinson         609    P-warrior
+11  quiz                   Schitzo           606 *  Scanner/ bomber
+12  juliet and paper       Bremer & Bezzi    602 *  P-warrior
+13  La Bomba               Beppe Bezzi       601 *  Qscan -> replicator
+14  Phq                    Maurizio Vittuari 589    Qscan -> replicator
+15  Hector 2               Kurt Franke       521 *  Qscan -> replicator
+16  B-Panama X             Steven Morrell    518    Stone/ replicator
+17  Night Train            Karl Lewin        493 *  Replicator
+18  Frontwards v2          Steven Morrell    459 *  One shot scanner
+19  Impfinity v4g1         Damien Doligez    403 *  Stone/ imp
+20  NC 94                  Wayne Sheppard    387    Stone/ imp
+21  Cannonade              P.Kline           382    Stone/ imp
+22  Torch t17              P.Kline           378    Bomber
+23  Lucky 3                Stefan Strack     355    Stone/ imp
+24  Derision               M R Bremer        351    Scanner
+25  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+
+Torch and Jack are leading the 94 Hall of fame, and near 1000 age. The
+second wave is climbing fast and facing the top ten position even if j&p and
+La Bomba have some trouble and a third wave is around 500 age Next in line
+to enter is Vittuari's Boombastic
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Feb  5 00:51:59 PST 1996
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  58/ 25/ 16                Mirage 1.0        Anton Marsden     191      79
+ 2  51/ 18/ 31               CoreWarrior           M R Bremer     183       4
+ 3  39/ 13/ 47                Breeder v2           J. E. Long     166      45
+ 4  37/ 11/ 52             silkworm v3.0         Brian Haskin     164      32
+ 5  34/ 11/ 55                   Breeder           J. E. Long     156      55
+ 6  31/  7/ 62                     Test2         George Eadon     155      12
+ 7  43/ 32/ 25                  Qwiksand       Wayne Sheppard     154      73
+ 8  31/ 11/ 58           New Papery v0.1          Ian Oversby     151      53
+ 9  44/ 38/ 18               Our Vamp v3 R Bartolome & JS Pul     149      63
+10  31/ 15/ 53             Paper8-IV 2.5         George Eadon     147      30
+11  25/  5/ 69             RingWorm_v2.6           Calvin Loh     145      88
+12  23/ 11/ 66             Thunder V 1.2       Andy Nevermind     136      44
+13  27/ 23/ 50             Spacehead 1.3     Warpi & Philemon     131      85
+14  30/ 32/ 39   You Wouln't Let It Lie!         Scott Manley     128      39
+15  24/ 22/ 55          AB Scanner 2.9.1         Chris Hodson     125      15
+16  30/ 35/ 35                    Szyzyg         Scott Manley     124      29
+17  28/ 33/ 39                    D'arko         Scott Manley     122      19
+18  28/ 34/ 38                     Uvavu         Scott Manley     121      40
+19  29/ 38/ 33         idiot/savant v0.1         Brian Haskin     119      47
+20  28/ 41/ 31                Maya v1.6c    Christoph C. Birk     116      13
+21  30/ 46/ 25               Slaver v1.1    Christoph C. Birk     114       7
+22  17/ 29/ 55                    Paper3    Christoph C. Birk     104       8
+23  24/ 50/ 26        CounterMeasures V4         Chris Arguin      98       1
+24  28/ 58/ 14               Lenochka 3p               Julian      97       6
+25  23/ 61/ 16                 Maya v2.0    Christoph C. Birk      86       9
+
+Marsden still holds first place with Mirage 1.0 a new version of it is in
+the top of 94 hill J.E. Long's Breeder v2 is too in the 94 hill. Is not
+difficult to guess that Bremer too will soon make the step in the big league :-)
+______________________________________________________________________________
+The Hint
+by Kurt Franke
+
+This week the hint has been made by Kurt Franke that will explain a way to
+start core clears with bombers and scanners. I thank Kurt a lot, for saving
+me some time to develop Tornado 3.0 :-)
+---
+
+  Self-bombing and number of scans
+
+  One thing I found particularly confusing when learning core war was
+self-bombing programs.  It seemed impossible to figure out where the
+bomb was going to hit and how many bombs are thrown before the program
+hits itself.  With the macros of pmars, it is easy to control
+(some kinds of) self-bombing.
+
+Here is an example, the bomber from juliet storm.
+
+s       spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov 33, <-20
+go      dat #0, #ptr
+
+Here was my impression when I first saw this code: "Huh??"
+
+The mov/add/djn loop is the bomber, while the mov 33, <-20 line will
+do the core clear, once the djn line is bombed with a split 0
+instruction.  Adding a few labels,
+
+start   spl #445, <-445
+ptr     spl #start+1, <-446
+bomb    mov {445+ptr, -445+target
+        add start, bomb
+target  djn.f -2, <-2667-500
+clear   mov 33, <-20
+go      dat #0, #ptr
+
+The start line contains the increments that are added to the bomb line
+each time.  If the bomb line read
+
+bomb    mov {ptr, target
+
+then it would decrement ptr, take what it points to (start) and
+put it onto target (the djn line).  Good; that's what we want.
+Now we just back up.  If the bomb line were
+
+bomb    mov {ptr-445, target+445
+
+then after adding start once, the bomb line will make the self-
+modification.  And of course
+
+bomb    mov {ptr-2*445, target+2*445
+
+would take two adds before the bomb line modifies our code.
+Here's the general idea:
+
+NBOMBS  equ     <whatever we want>
+
+start   spl #445, <-445
+ptr     spl #start+1, <-446
+bomb    mov {ptr-445*NBOMBS, target+445*NBOMBS
+        add start, bomb
+target  djn.f -2, <-2667-500
+clear   mov 33, <-20
+go      dat #0, #ptr
+
+Now we get NBOMBS number of bombs (more or less) before the
+self-bomb that starts a core clear.  Except NBOMBS can be at
+most the total number of places to bomb.  (445 will hit every
+fifth place in memory, for 1600 total).  Putting a -1 for
+NBOMBS would give the maximum number of bombs (like -1 is the
+maximum number in core), and that is what is coded in Juliet.
+
+Here is a cmp scanner (strikingly similar to Rave) done the
+same way.
+
+;redcode-94
+;assert CORESIZE == 8000
+;author Kurt Franke
+;name CMP scanner
+
+;strategy rave-type scanner (original by Stefan Strack)
+;strategy
+;strategy this will bomb itself after SCANS iterations,
+;strategy triggering a core clear.
+
+WIDTH   equ     12
+STEP    equ     42                      ;; modula 2 step
+SCANS   equ     3999                    ;; the maximum
+FIRST   equ     (next - STEP * SCANS)   ;; need to end up bombing 'next'
+BOMBLEN equ     WIDTH+2
+
+next    sub.f   $incr, $scan            ;; Get next location
+scan    seq     $FIRST-WIDTH, $FIRST    ;; check for code
+        slt.ab  #incr-scan+BOMBLEN, $scan
+        jmp     next, <next-WIDTH       ;; gate
+
+att     mov.i   $sbomb, }scan           ;; attack phase of scanner
+ct      djn     att, #BOMBLEN           ;; drop BOMBLEN bombs
+        sub.a   #BOMBLEN, $scan         ;; reset the scanning position
+        mov.ab  #BOMBLEN, $ct           ;; reset the counter
+        jmn.a   next, $next             ;; scan finishes on self-hit
+sbomb   spl     #0, <-STEP+1
+        mov     1, {-1                  ;; simple core clear -> gate
+incr    dat     #-STEP, <-STEP
+
+end     scan
+
+
+        - Kurt
+______________________________________________________________________________
+Planar's Corner
+
+Sorry, no Planar's corner this week :-(
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care:
+Beppe Bezzi <bezzi@iol.it>, Myer R Bremer <bremermr@ecn.purdue.edu>, Kurt
+Franke <kurt@protector.lovett.rice.edu>
+

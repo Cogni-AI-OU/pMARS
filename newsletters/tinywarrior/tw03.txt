@@ -1,0 +1,306 @@
+ _____ _                                 _
+(_   _(_)_ __  _   ___    ____ _ _ _ _ _(_) ___  _ _
+  | | | | '_ \| | | \ \/\/ / _' | '_| '_| |/ _ \| '_)
+  | | | | | | | |_| |\    / (_| | | | | | | (_) | |                   Issue 3
+  |_| |_|_| |_|\__, | \/\/ \__,_|_| |_| |_|\___/|_|           12 August, 2005
+===============(___/=========================================================
+Welcome to Tinywarrior, the newletter which reports the latest events
+and techniques for the tiny hills.  If you haven't discovered the tiny
+hills yet, the specs are:
+
+         coresize: 800
+   max. processes: 800
+         duration: after 8,000 cycles, a tie is declared.
+max. entry length: 20
+ minimum distance: 20
+  instruction set: extended ICWS '94 Draft
+
+In this issue, Sascha Zapf takes us step by step through the development
+of his stone/imp, Backdraft.
+=============================================================================
+Current Status of the SAL Tiny Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  40.0/ 38.8/ 21.3   White Noise (RBv1.5r10) The MicroGP Corewa 141.1   119
+ 2  33.8/ 28.3/ 37.9              Endless pain          G.Labarga 139.4   120
+ 3  33.7/ 29.3/ 37.0                   desTiny        Sascha Zapf 138.1    53
+ 4  29.8/ 21.8/ 48.4             Digital Swarm       John Metcalf 137.7   234
+ 5  39.1/ 40.7/ 20.2               Hired Sword       John Metcalf 137.5    85
+ 6  32.2/ 27.0/ 40.8                       476        Sascha Zapf 137.4    28
+ 7  39.4/ 42.1/ 18.4            Sneaky Spike 2       Roy van Rijn 136.7    64
+ 8  37.9/ 39.5/ 22.6               Blue bubble            Dr.Gapp 136.3    44
+ 9  39.5/ 42.8/ 17.6                Four Winds       John Metcalf 136.3   147
+10  32.1/ 28.4/ 39.6              Hades nebula        Sascha Zapf 135.8    46
+11  38.9/ 42.1/ 19.0              interlocking       John Metcalf 135.8    31
+12  38.8/ 43.0/ 18.2      world of copper wire       John Metcalf 134.7    15
+13  27.5/ 20.5/ 52.0               Moomintroll       John Metcalf 134.6    83
+14  28.7/ 23.2/ 48.2    Yet Another Tiny Paper       Jens Gutzeit 134.2    30
+15  38.2/ 42.3/ 19.5             biforclrtiny2      Nenad Tomasev 134.0    14
+16  33.3/ 32.8/ 33.8         All over the core          G.Labarga 133.8    41
+17  37.7/ 42.0/ 20.3                   Diptera      Nenad Tomasev 133.4    29
+18  37.8/ 42.7/ 19.5      Screeching soundcard          G.Labarga 132.9    27
+19  41.2/ 49.7/  9.0                   Muskrat       John Metcalf 132.8   152
+20  23.4/ 14.1/ 62.5              tiny Blowrag    Metcalf/Schmidt 132.8   248
+21  36.7/ 42.6/ 20.8    here comes the rain...       John Metcalf 130.7     1
+22  28.3/ 25.9/ 45.9                       MTP      Nenad Tomasev 130.6    52
+23  23.5/ 16.4/ 60.1                       TL5          G.Labarga 130.6    32
+24  35.6/ 40.7/ 23.6                 Turbulenz        Sascha Zapf 130.5     7
+25  37.1/ 45.7/ 17.2       WriteLn('Victory');      Nenad Tomasev 128.4    57
+
+Av  34.5/ 34.5/ 31.0                                              134.6    70 
+
+Since last issue, there have been 100 successful challenges, with only 6
+warriors surviving the duration.  Those which fell include Tiny BiShot 2.0
+(age 221), Soft as Silk (178), Easter Egg (162), TinyShot (148), Seek and
+Destroy (134), Provenance (121), Where's Giles (118), Milkshake IV (116),
+3p(c) (116), Tiny Zooom... (114), Sidestep (92), RedBorg v1.0r6 (84),
+RedBorg v1.0r7 (69) and sixteen and counting down (57).
+
+The strategy mix currently on the hill is made up of 12 papers (2 include
+imps, 2 have an embedded stone), 8 oneshots (1 of which is evolved), 2
+clears, 2 bombers and 1 scanner.  The average age of the paper warriors is
+81, the average for oneshots is 64.
+
+There are 9 authors represented on the current hill - Metcalf has 9
+warriors, Labarga, Zapf and Tomasev each have 4.
+
+Koth report: White Noise dominated the hill, holding the top spot after 70
+challenges. DesTiny and Endless Pain provided a little competition, being
+Koth 12 and 8 times respectively.
+=============================================================================
+The Tiny Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  tiny Blowrag           Metcalf/Schmidt    248 *  paper/imp
+ 2  Digital Swarm          John Metcalf       234 *  qscan -> paper
+ 3  Tiny BiShot 2.0        Christian Schmidt  221    oneshot
+ 4  Soft as Silk           Sascha Zapf        178    qbomb -> paper
+ 5  Easter Egg             John Metcalf       162    qscan -> paper
+ 6  Muskrat                John Metcalf       152 *  qbomb -> bomber
+ 7  Tinyshot               John Metcalf       148    oneshot
+ 8  Four Winds             John Metcalf       147 *  oneshot
+ 9  Seek and Destroy       Sascha Zapf        134    oneshot
+10  Ugly Uncle             Christian Schmidt  127    qscan -> paper
+11  Diamondette            David Houston      122    stone
+12  Sneaky Spike           Roy van Rijn       121    decoy maker -> oneshot
+ =  Provenance             John Metcalf       121    oneshot/dodger
+14  Endless pain           G.Labarga          120 *  qscan -> paper
+15  White Noise (RBv1.5r10)The MicroGP Corewar119 *  evolved oneshot
+16  Where's Giles?         John Metcalf       118    qscan -> paper
+17  Milkshake IV           LAchi              116    oneshot
+ =  3p(c)                  Sascha Zapf        116    paper
+19  Tiny Zooom...          John Metcalf       114    decoy maker -> scanner
+20  Betadine               M Joonas Pihlaja    97    oneshot
+21  Sidestep               Christian Schmidt   92    oneshot/dodger
+22  Origin of Storms       John Metcalf        90    scanner
+23  Hired Sword            John Metcalf        85 *  decoy maker -> scanner
+ =  Table Scan             John Metcalf        85    oneshot
+25  RedBorg v1.0r6         The MicroGP Corewar 84    evolved oneshot
+
+Only 7 active warriors remain in the Hall of Fame, 3 papers, 2 oneshots, a
+bomber and a scanner.
+=============================================================================
+Current Status of the corewar.co.uk Infitiny Hill:
+
+The infitiny hill is where all of the published tiny warriors battle
+round-robin.  Listed here are the top 25 of 196 warriors:
+
+ #    %w   %l   %t  Name                     Author                  Score
+ 1  49.6 30.3 20.1  White Noise (RBv1.5r10)  The MicroGP Corewars C 168.87
+ 2  50.5 33.4 16.1  holograph                Simon Wainwright       167.67
+ 3  47.1 26.7 26.1  bestwar4.red             Dave Hillis            167.58
+ 4  50.0 34.1 15.9  Tinyshot                 John Metcalf           165.92
+ 5  47.2 29.0 23.8  Evolving Threat          Dave Hillis            165.32
+ 6  49.5 34.3 16.2  Seek and Destroy         Sascha Zapf            164.62
+ 7  49.3 34.9 15.8  Betadine                 M Joonas Pihlaja       163.68
+ 8  48.9 34.2 16.9  BlackMusic2              Nenad Tomasev          163.51
+ 9  48.8 34.6 16.6  Provenance               John Metcalf           163.03
+10  47.3 32.6 20.2  Table Scan               John Metcalf           161.95
+11  48.2 34.8 16.9  interlocking             John Metcalf           161.60
+12  47.2 33.2 19.6  Sneaky Spike             Roy van Rijn           161.31
+13  42.2 23.2 34.7  Wilt ;)                  G.Labarga              161.22
+14  44.1 27.1 28.8  Easter Egg               John Metcalf           161.08
+15  47.4 34.0 18.6  s774++                   Michal Janeczek        160.79
+16  47.6 34.4 18.0  Tiny BiShot 2.0          Christian Schmidt      160.73
+17  47.3 34.1 18.6  Tinyboss III             G.Labarga              160.54
+18  47.5 34.5 17.9  Cream and Chocolate      LAchi                  160.53
+19  48.1 35.6 16.3  t766--                   Michal Janeczek        160.48
+20  47.7 35.9 16.4  clock strikes twelve     John Metcalf           159.53
+21  42.2 25.0 32.8  Potenza                  Leonardo H. Liporati   159.51
+22  48.8 38.2 13.0  Tiny Zooom...            John Metcalf           159.33
+23  47.0 34.8 18.2  WingShot T               Ben Ford               159.32
+24  47.2 35.2 17.6  Pop!                     Neogryzor              159.23
+25  37.5 15.8 46.7  Digital Swarm            John Metcalf           159.15
+
+Wainwright's holograph displaces bestwar4.red from second place.  Other
+new entries performing well include BlackMusic2 and interlocking. 
+=============================================================================
+Extra Extra - Backdraft by Sascha Zapf
+
+While carrying out some scanner tests, I was wondering about the lack of
+stone/imp warriors on the tiny hill.  The only stone/imp on the hill at
+the time was Fizmo's Tiny Black Knight.
+
+Creating a decent new stone/imp from scratch would consume more time than
+I had available, so I decided to try some improvements on 'Blacky' to see
+if I could make it score somewhat better on tiny than the orginal.
+
+One of the most important things I learnt while working on Soft as Silk
+(R.I.P.) and desTiny was the power of a small 2c qbomber before the
+bootstrap.  The form:
+
+  mov.i <posa,  posb
+
+scores much better than the 3c qbomber, which is better employed as a
+decoy-maker.  My goal was to include a small qbomber after redesign, and
+to reoptimize.
+
+* Step 1: Free all b-field
+
+I try to classify free b-field in the source by their offensive power.
+
+Example: ( Silkbody from Digital Swarm by John Metcalf )
+
+boot    spl     1, <234
+        spl     1, <123
+        mov     <jboot,{jboot
+jboot   jmp     bootdis, pap1+4
+
+pap1    spl   @0,       <s1
+        mov   }pap1,    >pap1
+        mov   {pap1,    <pap2
+pap2    djn.f *s2-3,    >s2
+
+In this snippet we use two b-fields (at boot and boot+1) to decrement
+two locations in core.  There's alway a chance these will damage some part
+of an opponent, but with a little rearrangement we can free the b-field of
+jboot.
+
+boot    spl     1, pap1+4
+        spl     1, <123
+        mov     <boot,{jboot
+jboot   djn.f   bootdis, <dstream
+
+pap1    spl   @0,       <s1
+        mov   }pap1,    >pap1
+        mov   {pap1,    <pap2
+pap2    djn.f *s2-3,    >s2
+
+We can use the b-field of jboot with much greater offense than the b-field
+of boot, as demonstrated above.  This was the only thing I changed on
+Soft as Silk before sending it as desTiny to the tiny hill.  The score
+improvement was surprising:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  38.4/ 26.7/ 34.9                   desTiny        Sascha Zapf 150.0     1
+ 2  37.9/ 27.2/ 34.9              Endless pain          G.Labarga 148.6    68
+ ...
+11  34.4/ 29.6/ 36.0              Soft as Silk        Sascha Zapf 139.1   159
+
+So, I tried to include a similar attack in the launch of the new stone/imp.
+
+Booting away the stone's bomb and the imp-launcher's imp is an excellent
+idea and should give some extra points, so I decide to leave this unchanged.
+
+After some hours with optimax the scores against the fsh had improved by
+about 5%, without making use of the free b-fields.
+
+* Step 2: The incredible qbomber
+
+There is a small dat-gap in the source of Tiny Black Knight which can be
+used for qbombing.  If we remove the two dats, we can include a two line
+qbomber before the boot.  Over the next day I starting thinking about how I
+could reduce the code size to expand the qbomber.
+
+Both components begin with a spl, both of which include a decrement in the
+b-field.  After 1 hour with Optimax I determined that the same value in both
+components doesn't reduce the flexibility when optimized together with the
+bootdistances.  So I tried another layout trick.
+
+I flipped the stone-component upside down, so with the parallel boot
+they can share the spl instruction for each booted component.  So another
+instruction is freed for qbombing.
+
+* Step 3: Massive optimizing of grouped constants.
+
+First run: All free b-field are changed to decrements.  They were optimized
+together with the boot-distances to avoid self-mutilation.  The qbomber
+was replaced by a colourful decoy.
+
+Second run: I wanted a deadly qbomber, so I set the MAXCYCLES down to
+1000 and took the ROUNDS up to 1200 for this run.
+
+After this, I named it Backdraft and sent it to the tiny hill at SAL:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  35.9/ 26.2/ 37.9                   desTiny        Sascha Zapf 145.6    11
+ ...
+12  28.2/ 22.4/ 49.4                 Backdraft        Sascha Zapf 133.9     1
+ ...
+24  26.1/ 23.5/ 50.4         Tiny Black Knight  Christian Schmidt 128.8    38
+
+Boing!  Backdraft placed in the upper half of the hill, much better than I
+expected.
+
+And now, enjoy the code:
+
+;redcode-tiny
+;name Backdraft
+;author Sascha Zapf
+;strategy Stona and Impa
+;assert 1
+
+;optimax 1234
+;optimax work back2
+;optimax rounds 1 50 200 400
+
+;optimax suite fshtiny0.2
+;optimax alarm highscore
+;optimax phase2 fshtiny0.1/clr/T766.RED
+;optimax phase2 120
+
+;optimax phase3 120
+;optimax phase3 top10
+;optimax phase3 scn:cds:pap
+
+;optimax phase4 100%
+;optimax phase4 top10
+
+sDist    equ     624
+iDist    equ     292
+iAwa     equ     699
+
+istep    equ     267
+dStep    equ     754
+xRef     equ     pGo
+
+pGo      mov.i   <373    , 692
+         mov.i   <258    , 226
+         mov.i   <435    , 199
+
+         mov     cBomb,                 xRef+sDist+1+dStep
+         mov     imp,                   xRef+iDist+iAwa
+ssptr    spl     1,                     dStart
+isptr    spl     1,                     iStart+4
+         mov     >ssptr,                {sBoo
+         mov     <isptr,                {iBoo
+sBoo     spl     xRef+sDist+4,          <312
+iBoo     djn.f   xRef+iDist+4,          <33
+cBomb    dat     >-1,                   >1
+imp      mov.i   #istep,                *0
+dStart   djn.f   -2,                    <174
+         add.ab  {0,                    }0
+         mov     dStep,                 715
+iStart   spl     #0,<422
+         add.a   #istep,                1
+launch   spl     iStart+iAwa-(istep*4), <368
+         djn.f   sDist-iDist-3,         <46
+
+         end pGo
+=============================================================================
+Tiny resources available on the web:
+
+  http://sal.math.ualberta.ca/       ; SAL - the home of the Tiny hill
+  http://corewar.co.uk/tiny.htm      ; Tiny page - benchmarks, hints and more
+  http://www.ociw.edu/~birk/COREWAR/ ; home to the infinite Tiny hill
+=============================================================================

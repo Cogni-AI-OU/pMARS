@@ -1,0 +1,503 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 31                                                         May 27, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar fpt site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+______________________________________________________________________________
+Greetings.
+
+Impfinity failed in breaking the 2000 wall, falling very near the goal line,
+sorry Planar ;-) Now Therrmite is in sight of the red line. Will it reach
+the magic number or fall prey of new stones and qscan detectors? we'll know
+that next week.
+
+Ian Oversby had to kill his warrior to avoid flooding his mailbox during
+vacations.
+To have the chance to change ;redcode attribute in quiet could be the
+solution to avoid such things, and we'll appreciate it; unless, of course,
+it requires a full rewriting of scripts.
+
+Two warriors in this issue: recently fallen Hall of famer Flurry, by Anton
+Marsden and Rosebud, by your favourite author.
+
+--Beppe Bezzi
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 41/ 11                   d-clear       bjoern guenzel     155       5
+ 2  42/ 36/ 21                      Blur        Anton Marsden     148     323
+ 3  35/ 23/ 42             the historian       bjoern guenzel     148       8
+ 4  44/ 40/ 16                  Scan Man        David van Dam     148     294
+ 5  39/ 33/ 28                   stoninc             Maurizio     146     128
+ 6  43/ 42/ 15        Violent Micro v0.4             basehead     144     139
+ 7  37/ 30/ 33                    Osseil             John K W     144      34
+ 8  31/ 18/ 51                   Rosebud                Beppe     143     208
+ 9  28/ 13/ 59                       EIF             John K W     143      82
+10  43/ 43/ 15             HopScotch 1.6        Robert Macrae     143       2
+11  37/ 32/ 30                Bomber Boy        David van Dam     142     163
+12  32/ 22/ 46               blue candle       bjoern guenzel     142     122
+13  29/ 19/ 52                Test Paper        Robert Macrae     139       1
+14  43/ 48/  9                       007        David van Dam     138       3
+15  37/ 37/ 26               Thermite II        Robert Macrae     138    1874
+16  38/ 39/ 22                 Chameleon           M R Bremer     137    1345
+17  37/ 38/ 26                 Yogi Bear              P.Kline     136      25
+18  35/ 35/ 30      Grilled Octopus v0.5         David Boeren     136    1090
+19  37/ 39/ 24                T.N.T. pro    Maurizio Vittuari     135     253
+20  38/ 40/ 22                   Unknown            Anonymous     135       7
+21  25/ 16/ 58             Hazy Shade II             John K W     134     833
+22  35/ 36/ 29         Lithium And Water             John K W     133       6
+23  39/ 45/ 16            Stepping Stone          Kurt Franke     133     687
+24  23/ 14/ 63                    ompega       Steven Morrell     132     135
+25  28/ 25/ 47               test rtiqe1                Beppe     132      50
+
+
+Weekly age: 127 ( 88 last week, 107 the week before )
+New warriors: 11  Turnover/age rate 9%
+Average age:    311 ( 435 last week, 456 the week before )
+Average score:  140 ( 141 last week, 141 the week before )
+The top 25 warriors are represented by 13 authors: Wilkinson 5 (including
+one as anonymous) van Dam, Guenzel and Mcrae with 3, Vittuari and Bezzi, with 2.
+
+Impfinity is dead. Shortly before reaching 2000 it's fallen off the hill,
+losing more than 12 positions in a week; sometimes in the past we spoke of
+havoc or carnage; this week I have no word to describe what happened. The
+hill lost 30% of his age, including warriors rated 1, 3 and 6 in the what's
+old standings, and the standings show all most aged warriors in the lower
+half. I cannot remember the imp-ring revolution, but I can guess that what's
+happening now is comparable with that, even if I cannot see the reason of
+this mass extiction.
+
+After a few week of strong leadership, Scan Man is no more the King;
+Guenzel's new warrior d-clear is now in the higher spot, with a good lead
+over Blur, the historian, and previous king Scan Man.
+Vittuari's stoninc is the only other warrior to hold its position in the top
+five.
+
+Apart d- clear a few good warriors have entered the hill: the historian and
+Oseesil held king position for a while and also EIF was very near te the
+top. Thermite, TNT pro and Chameleon, lose near ten positions from last
+week, and the new millenary Grilled Octopus is in the low places of
+standings too, 'the new' is advancing and veterans have some troubles to
+keep pace.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 41/ 11                   d-clear       bjoern guenzel     155       5
+ 3  35/ 23/ 42             the historian       bjoern guenzel     148       8
+ 7  37/ 30/ 33                    Osseil             John K W     144      34
+ 9  28/ 13/ 59                       EIF             John K W     143      82
+10  43/ 43/ 15             HopScotch 1.6        Robert Macrae     143       2
+12  32/ 22/ 46               blue candle       bjoern guenzel     142     122
+13  29/ 19/ 52                Test Paper        Robert Macrae     139       1
+14  43/ 48/  9                       007        David van Dam     138       3
+17  37/ 38/ 26                 Yogi Bear              P.Kline     136      25
+20  38/ 40/ 22                   Unknown            Anonymous     135       7
+22  35/ 36/ 29         Lithium And Water             John K W     133       6
+25  28/ 25/ 47               test rtiqe1                Beppe     132      50
+
+______________________________________________________________________________
+94 - What's No More
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26  23/ 22/ 55            Impfinity v4g1               Planar     123    1993
+26  31/ 38/ 30               Tornado 3.0                Beppe     124    1567
+26  28/ 31/ 41                    Flurry        Anton Marsden     124     835
+26  27/ 27/ 47     Walk Like An Egyptian             John K W     127     307
+26  16/ 13/  5         Wind-up Toy v1.2c          Ian Oversby      53     288
+26  34/ 42/ 24       The Core Clear V1.3        David van Dam     127     280
+26   1/  1/  2                      test             John K W       4     134
+26   3/  5/ 14              Whisper v0.1          Ian Oversby      25      95
+26   0/  1/  3              Solomon v0.6          Ian Oversby       4      72
+26  10/ 10/ 10              Flimsy v0.4a          Ian Oversby      41      66
+26  34/ 42/ 24               dummy brain       bjoern guenzel     127      44
+26   0/  1/  3               blue candle       bjoern guenzel       3      28
+26  37/ 47/ 16                 Eggbeater        Anton Marsden     127      15
+
+A total age of 5724, yes five thousands seven hundreds twenty four, 30% of
+hill age, has been pushed off this week I don't think this record will be
+broken too soon.
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+15  37/ 37/ 26               Thermite II        Robert Macrae     138    1874
+16  38/ 39/ 22                 Chameleon           M R Bremer     137    1345
+18  35/ 35/ 30      Grilled Octopus v0.5         David Boeren     136    1090
+21  25/ 16/ 58             Hazy Shade II             John K W     134     833
+23  39/ 45/ 16            Stepping Stone          Kurt Franke     133     687
+
+Lost Impfinity, Tornado, Flurry and Walk like an Egyptian. No new entries.
+Grilled Octopus enters the 'over 1000' club. All veterans are in the lower
+half of standings.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Impfinity v4g1         Planar            1993    Stone/ imp
+ 2  Thermite II            Robert Macrae     1874 *  Qscan -> bomber
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 7  Chameleon              Myer R Bremer     1345 *  P-warrior
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1090 *  P-warrior
+12  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+13  Agony II               Stefan Strack      912    CMP scanner
+14  Barrage                Anton Marsden      876    Qscan -> replicator
+15  Blue Funk              Steven Morrell     869    Stone/ imp
+16  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+17  Hazy Shade II          John Wilkinson     833 *  P-warrior
+18  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+19  Blue Funk 3            Steven Morrell     766    Stone/ imp
+20  Night Train            Karl Lewin         755    Replicator
+21  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+22  Blizzard               Anton Marsden      713    Qscan -> replicator
+23  Stepping Stone         Kurt Franke        687 *  Qscan -> Vampire
+24  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+25  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+
+Stepping Stone by Kurt Franke pushes off Paulsson's myVamp.
+Thermite II is viewing the 2000 borderline, Tornado stops its run in fourth
+place, there are but five living warriors in the HoF, no new warrior is
+scheduled to enter soon in the hall.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  57/ 31/ 12       Violent Micro v0.4b             basehead     184      28
+ 2  54/ 32/ 14                    Sapper        Andrew Fabbro     176       2
+ 3  50/ 30/ 20                 scan test       bjoern guenzel     170      56
+ 4  49/ 33/ 17                coal 3.22b       bjoern guenzel     166      99
+ 5  45/ 29/ 26                 Toxin IVa                Edgar     161      71
+ 6  49/ 36/ 15                   radar.b        John K. Lewis     161      25
+ 7  46/ 31/ 23                 Trebuchet        Andrew Fabbro     161       9
+ 8  44/ 30/ 26                 Toxin IVb                Edgar     157      58
+ 9  41/ 25/ 34         Fork v0.1-10p (f)    Christoph C. Birk     156      12
+10  44/ 33/ 23      Extremely Prejudiced         Scott Manley     154       3
+11  45/ 40/ 15                  8-Ball 2            Iain Hogg     149      89
+12  47/ 45/  8                 Drill 1.1                Edgar     149      73
+13  42/ 36/ 22                  Toxin IV                Edgar     148      95
+14  43/ 39/ 18         Bloodhound Mk III        Andrew Fabbro     147      66
+15  43/ 42/ 15                    8-Ball            Iain Hogg     144      93
+16  41/ 39/ 20                    pipy-2                Edgar     143      18
+17  41/ 41/ 18                    pipy-1                Edgar     141      19
+18  33/ 32/ 35              Szyzyg v1.01         Scott Manley     135      83
+19  41/ 50/  9     Micro Centurion (mod)                Edgar     131      30
+20  31/ 35/ 34               Szyzyg v1.0         Scott Manley     127      84
+21  22/ 29/ 48                   invicta        John K. Lewis     116      78
+22  26/ 39/ 36         Hunter V 0.7 beta            O.Fechner     113       1
+23  34/ 55/ 11         Hide'n'Seek debug                Edgar     113      42
+24  25/ 39/ 36         Hunter V 0.5 beta            O.Fechner     111       5
+25  24/ 48/ 28                  bomberQ2             harleyQ2      99       6
+
+Low traffic also this week, but 35 challenges.  Basehead new Violent micro,
+a version of which is 6th in the pro hill leads, followed by Fabbro's Sapper.
+______________________________________________________________________________
+The Hint
+Rosebud by Beppe Bezzi
+
+Few weeks ago I had a sort of feeling that there were something wrong in the
+hill; no replicators, very many scanners, complex bombers and pspacers.
+Having never made a stone before, I call 'stones' but the four five lines
+bombers with almost everything inside the main loop, Torch and Tornado are
+'bombers' not stones, for me, I decided to try coding one, and results have
+been very good.
+Five liners are, IMO perhaps the most difficult warriors to make; being
+rather slow they have to be very small and make the maximal use of
+decrements and the stream to increase attack power.
+Stones gains most of their points against comples scanners and bombers,
+having a much better size /speed ratio, the main enemies for them are
+replicators, obviously, and one shot scanners, because of he small footprint
+and the fact that dat 0,0 bombs and decrements aren't very effective against
+them. Another problem is inserting a core clear to get rid of self splitting
+bombers once disabled.
+
+There is little to invent here, so having to start from something I started
+from my favourite, Blue Funk, a warrior I like a lot for his elegance, and
+using the same structure I built my warrior.
+
+The stone part is the same of BF, with one more leading spl 0 and a
+different mod 5 step. The extra spl is needed because I use an heavier
+spiral and because I don't want my stone slowed if imps are stunned.
+
+clr     spl     #0,     0
+split   spl     #-step, <step
+stone   mov     >-step, step+1
+        add     split,  stone
+cnt     djn.f   stone,  <djnoff
+stptr   dat     0,0
+        dat     0,0
+cc      dat     0,      #stone-4
+
+To better see how Rosebud works use this simple macro, after tracing 'ston'e
+line:
+
+st01= @go~if (a!=0 && a!=5)~!~l pc-5,pc+5
+
+it stops when the warrior is executing a mov >0, xx or a mov >cc, xx
+
+The basic is that when we execute a mov >0, xx line we copy xx over itself
+and we begin executing another bombing with the pattern shifted one forward,
+the cc line is needed because we have to avoid self bombing when executing
+the mov >5, yy that after some time cause self destruction. All the merit of
+that goes to Steven Morrell, I only fitted his idea in my warrior.
+
+Worth notice is the use of the stream; djnoff and the decrement of split
+line both point the same cell, so the stream is interrupted; this has some
+advantages: A- can more easily trigger a cmp scan. B- covers a wider area in
+the same time -C last but not least, can decrement a warrior without
+triggering his decrement detector, usually a
+jmz.b loop, #0
+
+When everything goes well, Rosebud will bomb its djn pointer a bit before
+the stream reaches itself, restarting it from the beginning and can complete
+two full bombings of core before self decrementing and self destructing;
+self destruction comes very late in the round, with but 3000 cycles to do.
+
+The imp spiral is a 16 process, jump add launch. The launcher is immediatly
+booted away not to give Thermite a free lunch, and uses mov #2667, *0 imps.
+
+Further improvements I planned are: moving spiral placement to avoid losing
+that many processes during my bombing (I lose 4) and adding something, don't
+know yet what, to kill enemy spirals once my stone killed the partner
+warrior. Anyway I'm rather satified of my nice little thing, even if a bit
+surprised of how well it does.
+
+;redcode-94
+;name  Rosebud
+;author Beppe
+;strategy a nice little thing
+;strategy and a bunch of imps
+;assert CORESIZE == 8000
+;kill Rosebud
+
+step    equ     -845
+djnoff  equ     split+step
+impsize equ     2667
+impdspl equ     away+impsize+impsize/3+impaway
+
+impaway equ     1000    ;more or less   :-)
+away    equ     4000    ;more or less   :-)
+
+org     boot
+
+boot
+        spl     impboot
+        mov     cc,     @stptr1
+for 5
+        mov     {stptr, {stptr1
+rof
+        spl     *stptr1,<4000
+stptr1  mul.f   #split+away,#split+away+2
+
+x       dat     0,0
+        dat     0,0
+start
+clr     spl     #0,     0
+split   spl     #-step, <step
+stone   mov     >-step, step+1
+        add     split,  stone
+cnt     djn.f   stone,  <djnoff
+stptr   dat     0,0
+        dat     0,0
+cc      dat     0,      #x
+for MAXLENGTH-CURLINE-23
+        spl     #stptr,impptr
+rof
+impboot
+a for 8
+        mov     <impptr,{impptr
+rof
+impptr  jmp     vector+impaway,vector
+imp     mov.i   #impsize,*0
+        mov     imp-impaway,imp+impdspl
+        spl     1,<1000
+        spl     1,<1100
+        spl     1,<1200
+        spl     1,<1300
+        spl     2,1400
+        jmp     imp+impdspl
+        add.a   #impsize,-1
+;-break
+vector
+        dat     0,0
+for MAXLENGTH-CURLINE
+        dat     0,0
+rof
+end
+
+
+______________________________________________________________________________
+Extra Extra
+Flurry by Anton Marsden.
+
+Flurry is a warrior I put together in about 15 minutes. I don't like
+it. But it seems to have done well on the Hill. Surprisingly, it remained
+in the lower half of the Hill for most of it's life. As the strategy line
+says, it's a QScan followed by either CIA (intelligent bomber) or Barrage
+(brainwashing paper).
+
+The QScan bombs a wide area and takes far too much time. Using very
+simple "logic", CIA or Barrage is executed. The "logic" uses only PSpace
+location 0, ie. you can't brainwash it.
+
+Here's Flurry:
+
+;redcode-94
+;name Flurry
+;author Anton Marsden
+;strategy QS -> Barrage | CIA
+;assert CORESIZE==8000
+;kill Flurry
+
+ORG start
+
+STEP  equ   3119
+A  equ   (c-1)
+SPYOFF   equ   STEP*1400
+
+eye   equ   (A-SPYOFF)
+spy   equ   (A+SPYOFF)
+
+gate:
+spy0: dat.f  >-SPYOFF,>-SPYOFF
+      dat.f  $-1,$15
+cb    spl.ab #-2,$15
+      dat.f  $0,$0
+      dat.f  $0,$0
+s     spl.a  #spy0,>4000
+loop  add.f  $c,@2
+ip    mov.i  @1,@spy
+      mov.i  @0,*spy
+      jmz.b  $loop,$eye
+c     spl.b  #STEP,>-STEP
+      mov.i  @2,>gate
+      mov.i  @1,>gate
+b0    djn.b  $c+1,{cb
+
+FOR 19
+      dat.f  $0,$0
+ROF
+
+start:
+q FOR 4
+      sne.i  $s+400*q,$s+400*q+100
+      seq.i  $s+400*q+200,$s+400*q+300
+      mov.ab #s+400*q-f,$f
+ROF
+      jmn.b  @0,$f
+
+q FOR 4
+      sne.i  $s+400*(q+8),$s+400*(q+8)+100
+      seq.i  $s+400*(q+8)+200,$s+400*(q+8)+300
+      mov.ab #s+400*(q+8)-f,$f
+ROF
+      jmn.b  @0,$f
+
+q FOR 4
+      sne.i  $s+400*(q+4),$s+400*(q+4)+100
+      seq.i  $s+400*(q+4)+200,$s+400*(q+4)+300
+      mov.ab #s+400*(q+4)-f-100,$f
+ROF
+
+      jmz.b  $sw,$f
+      add.ab #100,$f
+f:    sne.i  $d,$0
+      djn.b  $-2,#4
+      mov.i  $b,@f
+      mov.ba @1,$f
+      add.f  $inc,$f
+      mov.i  *1,@f
+      mov.i  $b,*f
+      djn.b  $-3,#12
+
+ptr:  spl.a  *1,>2*2667
+      mov.i  *s,$spy
+      mov.i  $1,$-1
+b:
+inc:  dat.f  >8,>-8
+
+sw:   ldp.ab #0,#0
+      jmz.f  $ptr,<sw
+
+ASTEP EQU 3510; mod-10
+BSTEP EQU 2365; mod-5
+CSTEP EQU 3315; mod-5
+
+p:    spl.b  $1,>2000
+      spl.b  $1,>4000
+      spl.b  $1,>6000
+
+s1:   spl.b  @s1,}ASTEP
+      mov.i  }s1,>s1
+s2:   spl.b  @s2,}BSTEP
+      mov.i  }s2,>s2
+      mov.i  {s2,<s3
+s3:   jmp.b  @s3,>CSTEP
+      dat.f  >1,}1
+      dat.f  }1,>1
+      stp.b  >0,#1
+jump: jmp.b  $-1,$1
+d:
+END
+
+
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+

@@ -1,0 +1,507 @@
+         _______                               _______
+        //  __  \  _____    __ ____  _____    //      \  _____    ______
+       //  /  \\/ //    \  // '___/ // __ \  //   /   / //    \  //  __/
+      //  /____  //  /  / //  /    // ____/ //   /   / //  /  / _\\  \
+      \\______/  \\____/ //__/     \\____/  \\______/ //  ,__/ //____/
+.................................................... //  / .....................
+                   Agony and Ecstasy-style scanners //__/  Issue 1
+                                                           2015.03.17
+
+Greetings,
+
+This  is  the  first issue of CoreOps newsletter and I, inversed, will bring you
+the latest intel on the memory-based warfare technologies. If you have  no  idea
+what am I talking about, check out these resources:
+
+                            http://www.corewar.co.uk
+                            http://www.corewar.info
+
+More than 20 years have passed since Agony II has been submitted to the Pizza 94
+hill. Despite its success, scanners of this type  later  fell  out  of  fashion.
+We'll  discuss  related warriors, revisit the true classic and find out how much
+it can be improved.
+
+1.  INTRO
+
+To be considered Agony-style, a scanner has to employ a  fixed-length  spl  wipe
+and  have an slt check to avoid self-detection. Warriors of this type tend to be
+large and vulnerable to stones. Compared to other scanners they can be  somewhat
+difficult  to  make, which might explain their low popularity. But when properly
+tuned they are great at shredding papers and killing imps.
+
+By modern standards Agony II was the strongest warrior  of  its  time.  Skimming
+over  the infinite hills reveals that it outscores all its contemporaries. Maybe
+using the answer to the ultimate question of life, the universe, and  everything
+as the step size did the trick?
+
+                     +-----------------------------------+
+                     |inversed.ru infinite hill scores of|
+                     |  Agony II and its contemporaries  |
+                     +-----------------------------------+
+                     |Rank   Score            Name       |
+                     +-----------------------------------+
+                     |204    137.37    Agony II          |
+                     |276    133.88    Torch t18         |
+                     |291    133.11    myVamp v3.7       |
+                     |295    132.72    Taking Names      |
+                     |398    125.95    Stimpy v2.0       |
+                     |401    125.60    Blue Funk 3       |
+                     |433    122.98    Rave 4.1          |
+                     |479    118.70    Blue Funk         |
+                     |490    117.47    theMystery1.5     |
+                     |509    115.93    B-Panama X        |
+                     |512    115.74    Aeka              |
+                     |547    111.58    Keystone t33      |
+                     |592    107.05    Phoenix 1.1       |
+                     |617    102.90    Thermite 1.0      |
+                     |620    102.32    Silk Warrior 1.3  |
+                     |628    101.09    Ryooki            |
+                     |665    95.50     Homemade Ice Cream|
+                     |670    94.50     Pyramid v5.5      |
+                     +-----------------------------------+
+
+Another  scanner  that  deserves a special mentioned is Recon 2, which excels in
+both efficiency and aesthetics. To fully appreciate it, stop reading and try  to
+write  an  Agony-style scanner of comparable strength from scratch. Almost every
+CoreWar tournament has a clone of Recon 2. Koenigstuhl's odd hill alone contains
+7  copies.  The  community would've benefited more if instead of copypasting the
+authors would submit weaker but original warriors.
+
+Scanners with fixed length wipe but without the slt  check  comprise  a  related
+Ecstasy-style  class.  Compared to the Blur-style scanners, they compromise nei-
+ther the scan speed nor the stun power, but contain more instructions.  Although
+potentially very strong, this class received even less attention.
+
+Notable Agony-style  and  Ecstasy-style  scanners are listed in the table below.
+The names of clones are indented and shown under the corresponding originals.
+
+           +-------------------------------------------------------+
+           |                 Agony-style scanners                  |
+           +-------------------------------------------------------+
+           |      WARRIOR        TYPE    DATE          AUTHOR      |
+           +-------------------------------------------------------+
+           |Excalibur             94  2015.02.23  inversed         |
+           |Kusanagi              94  2014.09.21  inversed         |
+           |Outcast               94  2011.01.08  inversed         |
+           |CPScanner             94  2005.08.16  Nenad Tomasev    |
+           |Recon 2               94  2003.03.21  David Moore      |
+           |SETI                  94  1996.01.20  John K Wilkinson |
+           |  Claw                94  2002.10.31  Christian Schmidt|
+           |  The Marsupial Lion  94  2002.10.31  Christian Schmidt|
+           |Agony II              94  1994.07.31  Stefan Strack    |
+           |Rave 4.1              94  1994.04.19  Stefan Strack    |
+           |Medusa's v7X          88  1993.05.14  W. Mintardjo     |
+           |  Brazen hussy        88  2002.09.14  Steve Gunnell    |
+           |  Basilisk B 8        88  2015.02.14  Steve Gunnell    |
+           |Agony 5.1             88  1993.03.25  Stefan Strack    |
+           |Agony 3.1             88  1993.02.02  Stefan Strack    |
+           +-------------------------------------------------------+
+           |                Ecstasy-style scanners                 |
+           +-------------------------------------------------------+
+           |      WARRIOR        TYPE    DATE          AUTHOR      |
+           +-------------------------------------------------------+
+           |Monolith              88  2015.02.15  inversed         |
+           |Eternal Exile         94  2011.01.16  inversed         |
+           |pro.Verka             94  2006.02.06  inversed         |
+           |Win!                  94  1998.??.??  David Moore      |
+           |Provascan 2.0d        94  1995.12.18  Beppe Bezzi      |
+           |Ecstasy (XTC)         88  1990.12.??  Stefan Roettger  |
+           +-------------------------------------------------------+
+
+2.  SCAN
+
+While  the 2/3c scan is usable, Agony-style scanners benefit from the 4/5c loop.
+They are rather large, so it provides the optimal speed / size  ratio.  Ecstasy-
+style  scanners  work perfectly fine with a 2/3c scan loop. Perhaps shorter scan
+time makes loop efficiency less important. 3/4c scan loop has never been used in
+conjunction with the fixed length carpeting so far, so it remains an interesting
+possibility.
+
+Suppose that the scanner is fighting an enemy  of  length  L  and  the  distance
+between  two  locations  scanned by sne or seq = Hop.  Number of enemy positions
+covered by one scan instruction is
+
+                              Min(Hop + L, 2 * L)
+
+and the efficiency is
+
+                          Min(1, (Hop + L) / (2 * L)).
+
+As long as the scan separation is greater or equal to the enemy size, the  effi-
+ciency  is  maximal.  Typical stones are 5 instructions long, papers -- 6, Blur-
+style scanners -- 10..11, other scanners -- 13..16.  Thus  having  a  large  Hop
+value will mostly help when fighting scanners.
+
+But there is a drawback to the large Hop values.  The carpet length has to be at
+least Hop + 1 to cover both  locations,  preferably  longer.   When  fighting  a
+stone, the scanner will waste lots of cycles laying down long spl carpets on the
+dropped bombs.  Because of this tradeoff, good hop values typically lie  in  the
+[6..10] range.
+
+There are a couple of ways to increase the scan separation without having to lay
+huge carpets. First, attack  both  scanned  locations  independently,  a  method
+introduced in SETI. Second, choose which location to attack, HSA-style or other-
+wise.
+
+3.  ATTACK
+
+Basic attack setup requires two instructions:  copy  the  scan  pointer  to  the
+attack  pointer  and  reset the wipe counter. Placement of the attack pointer is
+important, as it affects position of the spl carpet relatively  to  the  scanned
+locations.  Attack setup can be performed in just 1 instruction if both the scan
+pointer and the wipe counter are located in the same  instruction.  This  method
+would limit the scan loop to 1/2c and is completely speculative.
+
+Rave and Medusa's work in a different way, using the scan pointer to perform the
+attack and then resetting it back with add or sub. This method also requires two
+instructions,  but  has  a  disadvantage: Rave/Medusa's spl carpet cannot extend
+before/after the scanned locations, which limits their  attack  power.  Medusa's
+v7X has to employ one extra instruction to hit the high location, but it makes a
+good use of it. Its carpet ends with jmp -1 instead of spl 0. This increases the
+stun power because the processes will not fall off from the end of the carpet.
+
+Lots of time can be spent on carpet bombing, so it is usually a good idea to use
+the 2/3c rather than the 1/2c wipe loop. Ecstasy-style  scanners  with  a  short
+scan  time are a possible exception. Positive wipe direction may seem more natu-
+ral under the 94 rules, but the negative wipe is also perfectly usable.
+
+Selecting the carpet length involves a tradeoff between the attack power and the
+time  wasted  on  pointless carpeting when fighting stones. As Stefan Strack has
+explained in The '94 Warrior #3, Rave's bombing method is motivated by desire to
+shorten the carpet without reducing the scan distance. This kind of reasoning no
+longer applies, as replicators became much more deadly.  To  reliably  stun  the
+enemy,  the  carpet must extend before and after the compared locations. Imagine
+that we have found a paper's front silk with the high field. If the post-carpet-
+ing  is  insufficient,  we  may  only hit already executed instructions, and the
+attack will have no effect whatsoever.
+
+              +-------------------------------------------------+
+              |                  Wipe patterns                  |
+              +-------------------------------------------------+
+              |Ecstasy       <<<<<<<<<<<X<<<<<<<<<<<            |
+              |Brazen hussy         <<<<X<<<<<<<<<<<<<<<X       |
+              |Rave 4.1                 X>>>>>>>>>>>>>X>        |
+              |Agony 5.1               <X<<<<<<<<<<<<X<<<       |
+              |pro.Verka            >>>>X>>>>>>>>>>>X>>>        |
+              |Agony 3.1               <X<<<<<<<<<<<X<<<<       |
+              |Agony II                <X<<<<<<<<<<<X<<         |
+              |Medusa's v7X            <X<<<<<<<<<<<X           |
+              |Basilisk B 8           <<X<<<<<<<<<X             |
+              |CPScanner             >>>X>>>>>>>>X>             |
+              |Excalibur             <<<X<<<<<<<X<<<<           |
+              |Monolith             <<<<X<<<<<<<X<<             |
+              |Eternal Exile         >>>X>>>>>>>X>>>>           |
+              |Win!                   <<X<<<<<<<X<<             |
+              |Outcast                >>X>>>>>>X>>>>            |
+              |Recon 2                >>X>>>>>X>>>>>            |
+              |Kusanagi               >>X>>>>>..........>>X>>>>>|
+              |Claw                  >>>X>>>>....>>>X>>>>       |
+              |SETI                  >>>X>>......>>>X>>         |
+              |Provascan 2.0d       >>>>X>>                     |
+              +-------------------------------------------------+
+              |      Legend: X scanned                          |
+              |              < negative wipe                    |
+              |              > positive wipe                    |
+              |              . skipped                          |
+              +-------------------------------------------------+
+
+Some scanners (SETI, CPScanner and the  original  Ecstasy)  attack  with  spl -1
+instead  of  spl #0.  This  form of carpeting is more efficient because the pro-
+cesses are fed back into the carpet. The effect is noticeable if  the  post-car-
+peting  is  short,  but  otherwise  is very slight and may not be worth an extra
+instruction.
+
+I believe that after a slight modification to the attack code, Agony-style scan-
+ners  can be effective in the low process setting. Discovering said modification
+is left as an exercise to the reader.
+
+4.  ANTI-IMP STEPS
+
+Let us define the FindTime of an ImpStep as the time between scanning  locations
+X and X + ImpStep. It follows that
+
+                       FindTime = (Step ^ -1) * ImpStep,
+
+where  Step ^ -1  is  a  modular  inverse of the Step. To effectively kill imps,
+FindTime of the corresponding ImpStep must be small so that the  "arms"  of  the
+imp  spiral  are wiped in sequence before having a chance to refresh.  But to be
+used in a scanner, the step must also yield a good scan pattern. Step ^ -1 scans
+comprise a single pass,  as the pattern starts to repeat  itself  shifted  by  1 
+location afterwards. The gap between nearby scanned locations is thus:
+
+                         Gap = CoreSize / FindTime(1).
+
+Optimal scan separation should cut those gaps in halves, so
+
+                             Hop = (k + 1 / 2) Gap,
+
+where k is a  small  integer.  These  observations  narrow  down  the  potential
+(Step, Hop)  pairs  to just a few values. No true imp killing mod-2 steps exist,
+but FindTime(ImpStep + 1) can be used to find approximations.
+
+          +---------------------------+  +--------------------------+
+          |Step   Time3   Time7   Gap |  |Step   Time3   Time7   Gap|
+          +---------------------------+  +--------------------------+
+          | 381   7       3       381 |  |3923   329     141     8.1|
+          | 127   21      9       127 |  |5069   343     147     7.8|
+          |3483   49      21      54.4|  |2831   357     153     7.5|
+          |2709   63      27      42.3|  |3177   371     159     7.2|
+          |3671   77      33      34.6|  |2533   399     171     6.7|
+          |4337   91      39      29.3|  |5159   413     177     6.5|
+          | 493   119     51      22.4|  |5121   427     183     6.2|
+          |7599   133     57      20.1|  | 387   441     189     6. |
+          |1161   147     63      18.1|  |4543   469     201     5.7|
+          |3147   161     69      16.6|  |1049   483     207     5.5|
+          | 903   189     81      14.1|  |3611   497     213     5.4|
+          | 289   203     87      13.1|  |2197   511     219     5.2|
+          |2851   217     93      12.3|  |3953   539     231     4.9|
+          |2739   553     237     4.8|  | 301   567     243     4.7|
+          | 301   567     243     4.7|  |2607   581     249     4.6|
+          |2607   581     249     4.6|  |2763   609     261     4.4|
+          |2763   609     261     4.4|  |4229   623     267     4.3|
+          |4229   623     267     4.3|  |           |
+          +---------------------------+  +--------------------------+
+                 Anti 3- and 7-pt imp steps for CORESIZE = 8000
+
+Unfortunately the technique is inefficient in the X setting because the max pro-
+cesses value (10000) is low in comparison to the core size.
+
+5.  ENDGAME
+
+Given  the  lengthy scan time of Agony-style scanners, we can assume that by the
+time we reach the endgame, everything is stunned for good. Thus the most natural
+choice  is  a  simple dat clear. All versions of Agony and Rave use a clear con-
+sisting only of spl and mov.  It  is  compact,  requiring  only  one  additional
+instruction  besides  the clear's spl and the dat bomb. Yet I recommend a proper
+clear ending with a jump instead. It is one instruction longer, but has two sig-
+nificant  advantages.  First,  it clears at 1/2c (plus a decrement stream if you
+use djn) instead of 1/3c. Second, it  accumulates  processes.  When  overwritten
+with  a  paper  copy, silk-imps or some other non-dat instructions, it has a far
+greater chance to survive and yield a tie instead of a loss.
+
+Recon 2 and Win! use neat self-modifications to turn spl wipe into a clear. Win!
+uses  the  same code to perform the attacks, SPL, spiral and DAT clear in turn -
+much win indeed. Another method is using a HSA-like switch  from  spl #0, }0  to
+dat  bombs.  In  this  case,  some further tweaking is required. Since carpeting
+takes a long time, there may not be enough cycles left to kill all  the  stunned
+processes,  so  the  scan  time  before the endgame switch must be reduced. This
+endgame strategy is compact, so it works better against other scanners. But even
+after  the  scan  time tweak, there is a significant negative effect against the
+anti-scan papers like 2by4k.
+
+Ecstasy-style scanners can use any endgame suitable for  a  Blur-style  scanner.
+DClear,  SD,  SJD,  and  spiral  clear  are viable choices. Dat clear with a djn
+stream works reasonably well in the 88 setting.
+
+6.  QUICKSCAN, DECOY, BOOT
+
+Decision to use or to forgo a quickscanner should depend  on  the  type  of  the
+scanner itself. By employing one, you'll exchange blows with other quickscanning
+warriors. Normally that would effectively trade some ties for wins  and  losses,
+increasing the overall score. But if your scanner is good at killing imps, there
+is no point in quickscanning. You don't want  to  trade  away  your  wins!  Claw
+looses about 3 points on average by using a quickscan.
+
+Agony-style scanners can be vulnerable to oneshots because of the large size, so
+the decoymaker is a reasonable option. It  will  have  a  very  slight  negative
+impact against other warriors though. Another option is booting the scanner away
+and leaving the decoy behind. Works best for short scanners, as  they  can  boot
+before  the enemy quickscan can hit them. Transparency of the decoy is important
+because missed attacks incur a high cycle penalty. Tweak the initial code place-
+ment  and  use mirroring instructions to avoid unnecessary triggering as long as
+possible. Agony II is exemplary, only hitting its decoy  after  more  than  6000
+cycles.
+
+7.  EXCALIBUR AND KUSANAGI
+
+I've been trying to write a good Agony-style scanner for quite some time. Hallu-
+cinnation Scanner did fairly well at the 94nop hill, surviving  200  challenges.
+Its successor Kusanagi was improved with a wide scan separation and a dual wipe.
+________________________________________________________________________________
+;redcode-94nop
+;name Kusanagi
+;author inversed
+;strategy Agony-style scanner
+;assert (CORESIZE==8000) && (MAXPROCESSES==8000)
+
+step    equ     2851
+sofs    equ     step
+hop     equ     18
+wlen    equ     8
+ssafe   equ     18+hop
+dsafe   equ     12
+gap     equ     80
+ikill   equ     2667
+decoy   equ     6700
+dex     equ     loop+decoy
+bptr    equ     loop-1
+org     dmake
+
+loop    add     * y     ,   @ x
+ptr     sne       sofs  ,     sofs+hop
+        add     * y     ,   @ x
+c       seq     * ptr   ,   @ ptr
+x       slt     # ssafe ,     ptr
+        jmn.a     loop  ,   @ x
+z       mov     @ x     ,   @ y
+        mov     # wlen  ,     cnt
+wipe    mov       inc   ,   } bptr
+y       mov       inc   ,   > bptr
+cnt     djn       wipe  ,   # 0
+        jmn.a     loop  ,   * c
+inc     spl     # step  ,     step
+clear   mov       kill  ,   } cnt
+        djn       clear ,   { z
+kill    dat       dsafe ,   < ikill
+
+for     gap
+        dat       0     ,     0
+rof
+
+dmake   nop     } dex   ,   > dex+1
+        mov     { dex+2 ,   < dex+4
+        mov     < dex+5 ,   { dex+8
+        jmp       loop+1,   } dex+6
+________________________________________________________________________________
+
+Out  of  curiosity I decided to rework Agony II.  The result did not disappoint.
+Here is the chronological list of changes:
+
+  1.  2/3c wipe
+  2.  Forward dat clear with djn stream
+  3.  New endgame switch
+  4.  4/5c scan loop, extended post-carpeting as a consequence
+  5.  Anti-imp step, corresponding scan separation
+  6.  Djn stream position optimized
+  7.  Decrement protection
+  8.  Transparent decoy, boot
+________________________________________________________________________________
+;redcode-94nop
+;name Excalibur
+;author inversed
+;strategy Completely reworked Agony II
+;assert CORESIZE == 8000
+
+hop     equ     8
+wlen    equ     16
+step    equ     3147
+sofs    equ     scan
+stream  equ     (-344)
+ssafe   equ     27
+csafe   equ     10
+dsafe   equ     3
+bd      equ     1423
+org     bp-11
+
+        ;; Decoy
+for     6
+        spl.a   # 1         ,     1
+        spl.b   # 1         ,     1
+        spl.ab  # 1         ,     1
+        spl.ba  # 1         ,     1
+        spl.f   # 1         ,     1
+        spl.x   # 1         ,     1
+        spl.i   # 1         ,     1
+        spl.i   $ 1         ,     1
+rof
+        spl.a   # 1         ,     1
+        spl.b   # 1         ,     1
+        spl.ab  # 1         ,     1
+        
+        ;; Boot
+        mov     > 9         ,   } 9             ; mirror
+        mov     > 8         ,   } 8             ;
+        mov     > 7         ,   } 7             ;
+for     3
+        dat       0         ,     0
+rof
+for     11
+        mov     > bp        ,   } bp
+rof
+bp      spl       scan+bd   ,     scan
+for     5
+        mov     > bp        ,   } bp
+rof
+        dat     } bp        ,   } bp
+        mov     > 1         ,   } 1             ; mirror
+
+        ;; Scanner
+scan    sub     * y         ,   @ x
+ptr     sne       sofs-hop  ,     sofs
+        sub     * y         ,     ptr
+x       seq     * ptr       ,   @ ptr
+        slt     # ssafe     ,   @ x
+        djn.f     scan      ,   < scan+stream
+bptr    mov.b   @ x         ,   # 0
+        mov     # wlen/2    ,     count
+wipe    mov       inc       ,   < bptr
+y       mov       inc       ,   < bptr
+count   djn       wipe      ,   # 0
+        jmz.a     scan      ,     scan-1
+inc     spl     #-step      ,    -step
+clear   mov       kill      ,   > y
+        djn.f     clear     ,   { y
+kill    dat       dsafe     ,     csafe
+
+        mov       4         ,   <-2             ; mirror
+        mov       3         ,   <-3             ;
+        djn      -2         ,   # 0             ;
+        jmz.a    -11        ,    -12            ;
+        spl     #-step      ,    -step          ;
+        mov       2         ,   >-4             ;
+        djn.f    -1         ,   {-5             ;
+        dat       dsafe     ,     csafe         ;
+________________________________________________________________________________
+
+8.  PERFORMANCE ANALYSIS
+
+In the two following tables,  PWS denotes papers with stones,  PAP  papers,  PWI
+papers with imps,  SI  stones with imps,  BMB  bombers and vampires,  CDS  clear
+directing scanners,  SCN other scanners except oneshots.  The asterisks mark the
+highest scores.
+
+       +---------------------------------------------------------------+
+       |              Performance of Agony-style scanners              |
+       +---------------------------------------------------------------+
+       |                 PWS    PAP    PWI     SI    BMB    SCN    CDS |
+       |                                                               |
+       |Excalibur        124    186*   168    120*   129*   152    148 |
+       |Kusanagi         124    170    154    118    123    161    149 |
+       |Recon2           129*   180    178*   118    120    132    138 |
+       |Outcast          112    165    128    101    122    130    135 |
+       |CPScanner        108    155    103    105    126    136    141 |
+       |SETI             107    143    152    109    126    144    140 |
+       |Agony II         112    112     78    100    128    171*   152*|
+       |Rave 4.1         101    105     71     83    120    166    142 |
+       |He Scans Alone   122    156    143    106    132    146    150 |
+       +---------------------------------------------------------------+
+       |             Performance of Ecstasy-style scanners             |
+       +---------------------------------------------------------------+
+       |                 PWS    PAP    PWI     SI    BMB    SCN    CDS |
+       |                                                               |
+       |Eternal Exile    132*   162*   133    125*   138*   146    150 |
+       |pro.Verka        106    138    117    112    138*   159*   157*|
+       |Win!             118    142    144*   111    125    133    138 |
+       |Provascan 2.0d   104    151    106     96    127    159*   135 |
+       |Hazy Lazy A70    130    132    107    123    143    148    151 |
+       +---------------------------------------------------------------+
+
+Agony  II shows great performance against other scanners thanks to the wide scan
+separation, djn stream and a decoy.  It  is  very  weak  against  modern  papers
+because of the slow wipe,  insufficient  postcarpeting  and  archaic clear.  The
+result  is  understandable,  as silk  replicators  only started to appear at the
+time.
+
+Successors  of  Agony  II  have little trouble defeating papers, but are fragile
+when fighting stones. Anti-imp steps employed by Excalibur, Kusanagi and Recon 2
+do  a  great job against imp papers. Ecstasy-style scanners sacrifice some anti-
+paper potency, but still it remains comfortably above the Blurish levels. On the
+positive  side,  they  can  demonstrate better stone resistance or higher scores
+against other scanners. 2by4k and subsequent papers by  Paul  Kline  marked  the
+demise  of  the  popular  clear-directing scan -> dclear formula. Maybe Ecstasy-
+style warriors can become the next step in the evolution of scanners.
+
+Good luck, and may the great warriors of the past inspire you!
+................................................................................
+Questions, suggestions, comments? Post them to the rec.games.corewar  newsgroup,
+corewar.eu forum or mail me (Reoser@Mail.ru).
