@@ -2,4 +2,5 @@
 /src/pmars
 pmars
 *.exe
+*.patch
 *.out
