@@ -59,15 +59,16 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 ## 🤝 Community & Resources
 
-- **Homepage:** [koth.org](http://www.koth.org/)
+- **Homepage:** [koth.org](http://www.koth.org/) ([Hills](http://koth.org/koth.html))
 - **The Corewar Info Page:** [corewar.info](http://www.corewar.info)
 - **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
   - [pMARS Page](https://corewar.co.uk/pmars.htm)
   - [Index of /pmars/](https://corewar.co.uk/pmars/)
+  - [Corewar Hills](https://corewar.co.uk/datagram/hills.html)
 - **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
-  - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html)
+  - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html) ([Mirror](https://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html))
 - **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
-- **KOTH@SAL:** [SAL](http://sal.discontinuity.info/)
+- **KOTH@SAL:** [SAL](https://sal.discontinuity.info/)
 - **Inversed's Corewar Page:** [Inversed](http://inversed.ru/CoreWar.htm)
 - **Neo's World of Corewar:** [Neo](http://labarga.atspace.com/)
 - **Corewar, Programming with Style:** [S. Fernandes](http://corewar.atspace.com/)
