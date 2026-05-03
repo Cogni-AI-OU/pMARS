@@ -247,16 +247,16 @@ cur_display_init()
   switch (warriors) {
   case 1:
     statuslines = COLS < 40 ? 2 : 1;
-    sprintf(preStatusLine, "%0.20s [0]: %%-5d Cycle: %%-6d", warrior[0].name);
+    sprintf(preStatusLine, "%0.20s [0]: %%-5d Cycle: %%-6ld", warrior[0].name);
     break;
   case 2:
     statuslines = COLS < 80 ? 2 : 1;
-    sprintf(preStatusLine, "%10.10s [0]: %%-5d %10.10s [1]: %%-5d Cycle: %%-6d R: %%d/%d (%%d %%d %%d)",
+    sprintf(preStatusLine, "%10.10s [0]: %%-5d %10.10s [1]: %%-5d Cycle: %%-6ld R: %%d/%d (%%d %%d %%d)",
             warrior[0].name, warrior[1].name, rounds);
     break;
   default:
     statuslines = COLS < 60 ? 2 : 1;
-    sprintf(preStatusLine, "%%d of %d warriors alive  Cycle: %%-6d R: %%d/%d",
+    sprintf(preStatusLine, "%%d of %d warriors alive  Cycle: %%-6ld R: %%d/%d",
             warriors, rounds);
   }
   corelines = LINES - statuslines;
@@ -428,18 +428,20 @@ agets5(str, maxchar, attr)
           str--;
           maxchar++;
           leaveok(curwin, TRUE);
-          if (ox = curwin->_curx) {
+          getyx(curwin, oy, ox);
+          if (ox > 0) {
+            --ox;
 #if 0
 #ifdef ATTRIBUTE
-            mvwaddch(curwin, curwin->_cury, --ox, ' ' | attr);
+            mvwaddch(curwin, oy, ox, ' ' | attr);
 #else
-            mvwaddch(curwin, curwin->_cury, --ox, ' ');
+            mvwaddch(curwin, oy, ox, ' ');
 #endif
 #endif                                /* 0 */
-            mvwaddch(curwin, curwin->_cury, --ox, ' ');
-            wmove(curwin, curwin->_cury, ox);
+            mvwaddch(curwin, oy, ox, ' ');
+            wmove(curwin, oy, ox);
           } else {
-            oy = curwin->_cury - 1;
+            --oy;
 #if 0
 #ifdef ATTRIBUTE
             mvwaddch(curwin, oy, COLS - 1, ' ' | attr);
@@ -467,24 +469,28 @@ agets5(str, maxchar, attr)
       case 27:
         leaveok(curwin, TRUE);
         for (getyx(curwin, oy, ox); str > ostr; str--, maxchar++) {
-          if (ox--)
+          if (ox > 0) {
+            --ox;
 #if 0
 #ifdef ATTRIBUTE
-            mvwaddch(curwin, curwin->_cury, ox, ' ' | attr);
+            mvwaddch(curwin, oy, ox, ' ' | attr);
 #else
-            mvwaddch(curwin, curwin->_cury, ox, ' ');
+            mvwaddch(curwin, oy, ox, ' ');
 #endif
 #endif                                /* 0 */
-          mvwaddch(curwin, curwin->_cury, ox, ' ');
-          else
+            mvwaddch(curwin, oy, ox, ' ');
+          } else {
+            --oy;
+            ox = COLS - 1;
 #if 0
 #ifdef ATTRIBUTE
-          mvwaddch(curwin, oy, ox = COLS, ' ' | attr);
+            mvwaddch(curwin, oy, ox, ' ' | attr);
 #else
-          mvwaddch(curwin, oy, ox = COLS, ' ');
+            mvwaddch(curwin, oy, ox, ' ');
 #endif
 #endif                                /* 0 */
-          mvwaddch(curwin, oy, ox = COLS, ' ');
+            mvwaddch(curwin, oy, ox, ' ');
+          }
         }
         leaveok(curwin, FALSE);
         wmove(curwin, oy, ox);

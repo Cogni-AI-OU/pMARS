@@ -867,7 +867,7 @@ errprn(code, aline, arg)
 #endif
         sprintf(outs, inLine, aline->linesrc->loc, aline->linesrc->src);
         textout(outs);
-        sprintf(outs, "        %s\n", abuf);
+        sprintf(outs, "        %.7990s\n", abuf);
         textout(outs);
 #ifdef VMS
       } else {
@@ -896,7 +896,7 @@ errprn(code, aline, arg)
               errorlevel == WARNING ? LSEWarn : LSEErr);
     }
 #endif
-    sprintf(outs, "        %s\n", abuf);
+    sprintf(outs, "        %.7990s\n", abuf);
 #ifndef VMS
     textout(outs);
 #else
@@ -918,7 +918,7 @@ errprn(code, aline, arg)
       textout(outs);
     else {
       fprintf(dias, "%s", StartDia);
-      fprintf(dias, "Message \"%s\"\n", Message, outs);
+      fprintf(dias, "%s \"%s\"\n", Message, outs);
       fprintf(dias, "%s", EndDia);
     }
 #endif
