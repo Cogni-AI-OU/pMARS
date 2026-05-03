@@ -73,7 +73,7 @@ char   *CDB_PROMPT = "(cdb) ";
     *ch=0; } while(0)
 #define targetSelect(index) (targetID == CORE || targetID == PSP ?\
         index : (targetID == QUEUE ?\
-        queue(index) : (W-warrior==index ? progCnt : *warrior[index].taskHead)))
+        queue(index) : ((int) (W - warrior) == index ? progCnt : *warrior[index].taskHead)))
 #ifdef NEW_STYLE
 #define toupper_(x) (toupper(x))
 #else
@@ -419,7 +419,7 @@ cdb(message)
     printf("\n");
 #endif
   } else if (targetID == WARRIOR) {
-    curAddr = W - warrior;
+    curAddr = (ADDR_T) (W - warrior);
     /* targetSize = warriors; */
   } else if (targetID == PSP) {
     QW = W;
@@ -888,14 +888,14 @@ cdb(message)
       open_graphics();
 #else
 #if defined(LINUXGRAPHX)
-      printf(pressAnyKeyToContinue);
+      printf("%s", pressAnyKeyToContinue);
       fflush(stdout);
       svga_getch();
       svga_open_graphics();
 #else
 #if defined(DOSTXTGRAPHX)
 #if defined(CURSESGRAPHX)
-      printf(pressAnyKeyToContinue);
+      printf("%s", pressAnyKeyToContinue);
       getch();
       clear_page5();
 #endif /* CURSESGRAPHX */
@@ -1019,7 +1019,7 @@ cdb(message)
         targetID = CORE;
         targetview = locview;
       } else {
-        curAddr = W - warrior;
+        curAddr = (ADDR_T) (W - warrior);
         targetSize = warriors;
         targetID = WARRIOR;
         targetview = warriorview;
@@ -1632,11 +1632,11 @@ subst_eval(inpStr, result)
   if (*pos) {
 
     SWITCHBI;
-    sprintf(outs, "%d", targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].A_value);
+    sprintf(outs, "%ld", (long) (targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].A_value));
     substitute(buf[bi1], "A", outs, buf[bi2]);
 
     SWITCHBI;
-    sprintf(outs, "%d", targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].B_value);
+    sprintf(outs, "%ld", (long) (targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].B_value));
     substitute(buf[bi1], "B", outs, buf[bi2]);
 
     for (i = warriors - 1; i >= 0; --i) {
@@ -1661,8 +1661,8 @@ subst_eval(inpStr, result)
                               W - warrior : progCnt)));
     substitute(buf[bi1], "PC", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%d", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
-            (warriorsLeft ? warriorsLeft : 1));
+    sprintf(outs, "%ld", (long) ((cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
+            (warriorsLeft ? warriorsLeft : 1)));
     substitute(buf[bi1], "CYCLE", outs, buf[bi2]);
     SWITCHBI;
     sprintf(outs, "%d", round_num);
