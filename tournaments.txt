@@ -1,0 +1,43 @@
+-   [The Core War Tournament Weekend](tournamentweekend2025.htm) '88 Tournament (Nov 2025): 1st place, [Semiopacity](cwtw2025/88/semiopacity.red) by inversed (£25).
+-   [The Core War Tournament Weekend](tournamentweekend2025.htm) '94 Tournament (Nov 2025): 1st place, [Twin Storms](cwtw2025/94/twinstorms.red) by inversed (£25).
+-   [CoreWar Nano Challenge](http://inversed.ru/CoreWar_Challenge_2.htm) (Jun 2025): 1st place, inversed ($100).
+-   [The Core War Tournament Weekend](tournamentweekend2024.htm) '88 Tournament (Nov 2024): 1st place, [Take the X Train](cwtw2024/88/take_the_x_train.red) by inversed (£25).
+-   [The Core War Tournament Weekend](tournamentweekend2024.htm) '94 Tournament (Nov 2024): 1st place, [kudzu](cwtw2024/94/94kudzu.red) by Christian Schmidt (£25).
+-   [CoreWar Global Masters 1](cgm1.htm) (Feb 2022, 4 rounds): 1st place, Roy van Rijn.
+-   [Easter Core War Tournament](easter2016.htm) (Mar 2016): 1st place, [Borefest](easter2016/borefest.red) by inversed ($50).
+-   [CoreWar Tiny Stone Challenge](http://inversed.ru/Tiny_Stone_Challenge.htm) (Apr – May 2015): 1st place, John Metcalf and Christian Schmidt.
+-   [Valentine Core War Tournament](valentine2015.htm) (Feb 2015): 1st place, [Basilisk B 8](valentine2015/basilisk.red) by Steve Gunnell ($50).
+-   [The Halloween Core War Tournament](halloween2014.htm) (Oct 2014): 1st place, [Core of Duty: Medium Process Warfare](halloween2014/coreofduty.red) by inversed ($50).
+-   [Spring 2014 Core War](spring2014.htm) (May 2014): 1st place, [The lucky shot](spring2014/luckyshot.red) by Germán Labarga ($50, and a signed [Armchair Universe](armchairuniverse.htm)).
+-   [Second International Corewar Programming Contest](http://www.corewar.info/tournament/icpc2) (Sep 2011): 1st place, [Anon Paper](icpc2/anonpaper.red) by inversed.
+-   [First International Corewar Programming Contest](http://www.corewar.info/tournament/icpc1) (Dec 2010): 1st place, [Plan 9+](icpc1/plan9plus.red) by inversed ($50).
+-   [Down the Core and More](tomasev/tour.htm) (Nov 2006 – Jan 2007, 3 rounds): 1st place, inversed.
+-   [Corewar Spring Tournament](datagram/index.htm) (May – Jun 2006, 5 rounds): 1st place, Chip Wendell.
+-   [Corewar Single Elimination Championship](http://www.corewar.info/tournament/cwset2005) (Oct – Nov 2005, 5 rounds): 1st place, Chip Wendell.
+-   [Corewars Beginner's League](struyve/index.htm) (May 2003): 1st place, [Perfect Cell 0.5](struyve/pcell05.red) by Koen Struyve.
+-   [Core War Mini Challenge #1 – #7](http://labarga.atspace.com/mc.html) (Apr 2003 – Nov 2008).
+-   [IRC Mini Tournament #1 – #35](irct.htm) (Mar 2003 – Feb 2004).
+-   [The Redcoders' Frenzy - Ongoing Corewar Tournament](http://www.corewar.info/tournament/cwt.htm) (Feb 2003 – May 2006, 25 rounds).
+-   [Spring/Summer 2002 Corewar Tournament](ss2002/index.htm) (Mar 2002 – Jan 2003, 5 rounds): 1st place, Michał Janeczek ($100).
+-   [KOTH Fall Corewars Tournament](http://www.koth.org/kofacoto) (Oct – Nov 2000, 7 rounds): 1st place, Robert Macrae ($500).
+-   [Ilmari's Mini Tournament #2](karonen/imt2/index.htm) (Nov 1999): 1st place, [h1\_36.red](hillis/h1_36.red) by Dave Hillis.
+-   [Oversby Autumn 1998 Corewar Tournament](oversby/index.htm) (Nov 1998 – Mar 1999, 8 rounds): 1st place, Joonas Pihlaja.
+-   [Ilmari's Mini Tournament #1](karonen/imt1/index.htm) (Apr 1998): 1st place, [Type Three Quantum Singularity](karonen/imt1/kendall3.red) by Philip Kendall.
+-   [Redcode Maniacs Tournament](http://www.shadowmagic.org.uk/corewar/maniacs) (Jan – Apr 1998, 9 rounds): 1st place, David Moore.
+-   [Anton's Core War Tournament](acwt.htm) (Jul – Aug 1997, 3 rounds): 1st place, round 1, Brian Haskin; 2 & 3, Ilmari Karonen.
+-   [Beppe's Direct Elimination Core War Tournament](bezzi/cwtourn.htm) (Oct – Nov 1996): 1st place, Philip Kendall.
+-   [Battle Royal](battleroyal.htm) (Apr 1996): 1st place, *Iocane* by John K. Wilkinson.
+-   [Intelligent Warrior Tournament v1.0](iwt1996.htm) (Mar 1996): 1st place, [System Trap](iwt1996/systemtrap.red) by Kurt Franke.
+-   [Nándor and Stefan's Fall Core War Tournament](nsfcwt/index.htm) (Oct – Dec 1995, 9 rounds): 1st place, Steven Morrell.
+-   [EBS ICWS Qualification Tournament](ebs1991.htm) (Nov 1991): 1st place, [XTC](ebs1991/xtc.red) by Stefan Röttger.
+-   [First German Branch Section Core War Tournament](gbs1989.htm) (Dec 1989): 1st place, [Quarter](gbs1989/quarter.red) by Stefan Hänßgen.
+-   [Secondo Torneo Italiano di Core Wars](torneoitaliano1989.htm) (Nov 1989): 1st place, [Hypray](ti1989/hypray.red) by Francesco Botta.
+-   [Primo Torneo Italiano di Core Wars](torneoitaliano1988.htm) (Oct 1988): 1st place, [Lux 2](ti1988/lux2.red) by Luca Crosara.
+-   [1993 ICWS Tournament](icwt1993.htm) (Jan 1994): 1st place, [Cannonade](icwt1993/cann8192.red) by Paul Kline ($35).
+-   [1992 ICWS Tournament](icwt1992.htm) (Dec 1992): 1st place, [RotLD 2.2](icwt1992/rotld22.red) by Nándor Sieben and [Leprechaun 1b](icwt1992/lep1b.red) by Anders Ivner.
+-   [1991 ICWS Tournament](icwt1991.htm) (1992): 1st place, [XTC](icwt1991/xtc.red) by Stefan Röttger.
+-   [Fifth International Core Wars Society Tournament](icwt1990.htm) (Dec 1990): 1st place, [Paper: A.K.A molerat](icwt1990/paper.red) by Scott Nelson.
+-   [Fourth International Core Wars Society Tournament](icwt1989.htm) (Feb 1990): 1st place, [Hypray](icwt1989/hypray.red) by Francesco Botta.
+-   [Third International Core Wars Society Tournament](icwt1988.htm) (Dec 1988): 1st place, [Cowboy](icwt1988/cowboy.red) by Eugene P. Lilitko ($250).
+-   [Second International Core Wars Society Tournament](icwt1987.htm) (Nov 1987): 1st place, [Ferret](icwt1987/ferret.red) by Robert R. Reed III (trophy).
+-   [First International Core War Tournament](icwt1986.htm) (Sep 1986): 1st place, [Mice](icwt1986/mice.red) by Chip Wendell (trophy).
