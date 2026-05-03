@@ -1,0 +1,66 @@
+# pMARS - Portable MARS
+
+[![License](https://img.shields.io/badge/license-GPL--2.0-blue.svg)](COPYING)
+[![Discord](https://img.shields.io/discord/1085114757516034088?label=discord&logo=discord&logoColor=white)](https://discord.gg/SezcUMTXRZ)
+
+**pMARS** (Portable Memory Array Redcode Simulator) is the official Core War simulator of the ICWS (International Core Wars Society) and the `rec.games.corewar` newsgroup. It serves as the standard test bed for new Redcode dialects and tournament styles.
+
+Core War is a game where two or more programs (warriors) fight for control of a virtual computer's memory. Written in an assembly language called **Redcode**, these programs attempt to survive while causing their opponents to crash.
+
+## ✨ Highlights
+
+- **Multi-platform:** Portable C source code running on UNIX, Windows, Mac, and more.
+- **Standards Compliant:** Implements the ICWS'94 Redcode standard while maintaining compatibility with ICWS'88.
+- **Advanced Core Displays:** Graphical views of the simulation for X11, SDL, Curses, and DOS.
+- **Powerful Debugger:** Full-featured, programmable debugger (`cdb`) for warrior development.
+- **Optimized:** One of the fastest Redcode simulators available.
+- **Extensible:** Supports multi-line EQUates, FOR/ROF text repetition, and P-space extensions.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+To compile pMARS from source, you'll need a C compiler (GCC, Clang, or MSVC) and standard development tools.
+
+### Building
+
+Navigate to the `src` directory and use the provided Makefiles:
+
+```bash
+cd src
+make
+```
+
+For specific platforms, specialized Makefiles are available:
+- `Makefile.mingw` (Windows/MinGW)
+- `Makefile.djg` (DOS/DJGPP)
+- `Makefile.wat` (Watcom)
+- `Makefile.clang` (Clang)
+
+### Running
+
+To start a battle between two warriors:
+```bash
+./pmars warrior1.red warrior2.red
+```
+
+## 📚 Documentation
+
+Detailed documentation is available in the `doc` directory:
+- [pMARS Guide](doc/guide.html) - Comprehensive HTML guide.
+- [Redcode Reference](doc/redcode.ref) - Quick reference for Redcode syntax.
+- [Core War FAQ](doc/corewar-faq.html) - Frequently Asked Questions.
+- [CDB Primer](doc/primer.cdb) - Introduction to the built-in debugger.
+- [ICWS'94 Draft](doc/primer.94) - Introduction to the '94 standard.
+
+## 🛡️ License
+
+pMARS is released under the GNU General Public License v2.0. See the [COPYING](COPYING) file for details.
+
+## 🤝 Community & Support
+
+- **Homepage:** [koth.org/pmars](http://www.koth.org/pmars/)
+- **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
+- **Newsgroup:** `rec.games.corewar`
+
+Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.
