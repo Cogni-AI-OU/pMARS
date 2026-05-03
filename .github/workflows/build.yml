@@ -20,9 +20,9 @@ jobs:
             libs: "-lX11"
             deps: "libx11-dev"
           - config: Curses
-            cflags: "-O -DEXT94 -DGRAPHX -DPERMUTATE -DRWLIMIT"
+            cflags: "-O -DEXT94 -DCURSESGRAPHX -DPERMUTATE -DRWLIMIT"
             libs: "-lncurses"
-            deps: "libncurses5-dev"
+            deps: "libncurses-dev"
           - config: Server
             cflags: "-O -DEXT94 -DSERVER -DPERMUTATE -DRWLIMIT"
             libs: ""
@@ -50,4 +50,4 @@ jobs:
     - name: Verify executable
       run: |
         ls -l src/pmars
-        ./src/pmars -h
+        ./src/pmars -A warriors/aeka.red
