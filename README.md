@@ -74,6 +74,14 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **Corewar Hall of Fame:** [Hall of Fame](http://jan.ucc.nau.edu/~ns46/corewar/cwhof.htm)
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
+- **Other Simulators & Tools:**
+  - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
+  - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
+  - [exMARS](http://corewar.co.uk/ankerl/exmars.htm#intro) - Fast simulator with Ruby interface by Martin Ankerl.
+  - [nMars](http://nmars.sourceforge.net/) - Graphical simulator and debugger for .NET by Pavel Šavara.
+  - [Redcode Simulators](http://corewar.co.uk/mars.htm) - John Metcalf's collection of simulators.
+  - [optiMAX](http://www.corewar.info/optimax/) - Core War optimizer by Sascha Zapf and Christian Schmidt.
+  - [On-line Paper Generator](http://labarga.atspace.com/papgen/pg.htm) - Web-based tool to create paper warriors.
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
