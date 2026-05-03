@@ -105,6 +105,22 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 ## 🔬 Research & Studies
 
+The [Core Science](https://corewar.co.uk/science.htm) page maintained by John Metcalf provides an extensive collection of research and evolutionary studies.
+
+### Core Science
+- [Mathematical Models for Step Sizes](https://corewar.co.uk/morrell/cwmath.txt) by Steven Morrell - Illustration of the ideas behind Optima numbers.
+- [A Numeric Approach to Diversity Hills](https://corewar.co.uk/astolfi/diversity.htm) by Achille Astolfi.
+- [Categorizing Corewar Warriors](https://corewar.co.uk/tomasev/CategorizingCoreWarWarriors.ppt) by Nenad Tomašev and Doni Pracner.
+- [Optima Numbers](https://corewar.co.uk/optima.htm) - Choosing bombing/scanning steps to effectively find opponents.
+
+### Evolutionary Studies
+- [Core Wars Genetics: The Evolution of Predation](https://corewar.co.uk/perry/evolution.htm) by John Perry - Early techniques to evolve competitive warriors.
+- [Using Core War to Simulate Evolution](http://newton.freehostia.com/cwevol.html) by Terry Newton - Experiments with RedMixer and analysis of the evolver's source code.
+- [Evolving Core Warriors](https://corewar.co.uk/hillis/evolving.txt) by Dave Hillis - Experiments with different techniques to improve performance.
+- [The Garden: Evolving Warriors in Core Wars](http://www.angio.net/res/garden.html) by David G. Andersen.
+- [An Evolutionary Approach Generates Human Competitive Corewar Programs](https://corewar.co.uk/vowk/alife9ac.pdf) by Barkley Vowk, Alexander Wait, and Christian Schmidt.
+- [Assimilated evolution](https://corewar.co.uk/roosendaal/roosendaal-assimilated-evolution2.doc) by Loren Roosendaal - Defeating new strategies by exploiting predecessors.
+
 ### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
 - **Paper:** [arXiv:2601.03335](https://arxiv.org/abs/2601.03335)
 - **GitHub Repository:** [SakanaAI/drq](https://github.com/SakanaAI/drq)
