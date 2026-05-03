@@ -44,6 +44,13 @@ To start a battle between two warriors:
 ./pmars warrior1.red warrior2.red
 ```
 
+## ⚔️ Warriors & Challenges
+
+This repository includes a curated collection of Redcode warriors and specialized challenges:
+
+- **[ICWS Warriors](warriors/)**: A comprehensive set of warriors for various standards (ICWS'88, ICWS'94, Nano, Tiny, etc.).
+- **[Mini Challenges](warriors/mc/)**: A series of seven progressive challenges from [Neo's World of Corewar](http://labarga.atspace.com/mc.html) designed to sharpen redcoding skills.
+
 ## 📚 Documentation
 
 Detailed documentation is available in the `doc` directory:
