@@ -1,0 +1,312 @@
+__ __| |            ) _ \  |  |    \ \        /              _)
+   |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+   |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+  _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+February 17, 1994                                                     Issue #2
+______________________________________________________________________________
+
+First off, I would like to thank everyone for the interest and comments I have
+received so far.  There was a large increase in the number of programs
+submitted to both of the experimental hills on Stormking, as well as to the
+ICWS hill.  (If anyone wants to cover that hill, it's still available! ;-)
+
+I also wanted to inform the masses about the program I used to create the
+title for this newsletter.  It's called figlet, and you can get it by
+anonymous FTP to ftp.isu.edu:/pub/figlet.  It is also being discussed in the
+alt.ascii-art newsgroup.
+
+If you are unfamiliar with the '94 draft standard, you can learn more about
+it by reading the FAQ for this newsgroup.  In addition, the program pMARS
+includes a highly recommended tutorial on the new standard.  Feel free
+to send me e-mail if you have any difficulty finding either of them, if you
+need to have a corewar item mailed to you, or if you have any other questions.
+
+The FAQ is available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill:
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 30/ 28           Killer instinct         Anders Ivner     155       5
+ 2  38/ 25/ 37                     NC II       Wayne Sheppard     152      60
+ 3  37/ 25/ 38               Sphinx v5.1         W. Mintardjo     148      63
+ 4  35/ 25/ 39                     Snake       Wayne Sheppard     145      15
+ 5  43/ 43/ 14           Fire Storm v1.1         W. Mintardjo     143      66
+ 6  32/ 21/ 48                      ttti        nandor sieben     143      16
+ 7  42/ 42/ 16            Sylvester v1.0     Brant D. Thomsen     142      42
+ 8  32/ 23/ 45                    ttti94        nandor sieben     142      11
+ 9  35/ 28/ 38        JustTakingALookSee            J.Layland     141      59
+10  43/ 45/ 12                    Rave 3        Stefan Strack     140      32
+11  41/ 42/ 17                      SJ-4            J.Layland     139       9
+12  39/ 39/ 22               Christopher       Steven Morrell     139       4
+13  42/ 46/ 11                      Rave        Stefan Strack     138      43
+14  39/ 41/ 20            Fast Food v2.1     Brant D. Thomsen     138      18
+15  40/ 43/ 17       Beholder's Eye v1.7         W. Mintardjo     138      72
+16  40/ 43/ 17               Ntttgtstitd         Simon Hovell     136       6
+17  38/ 42/ 20                      tiny            J.Layland     134      40
+18  39/ 47/ 14                Impurge 94     Fredrik Ohrstrom     132       2
+19  40/ 49/ 10               Medusa's v6   Mintardjo & Strack     132      65
+20  31/ 31/ 37                     CG IV     Brant D. Thomsen     131       1
+
+New programs on the hill include two warriors from the KOTH hill:
+"Killer instinct" and "Christopher"; as well as two new '94 warriors:
+"Impurge 94" and "CG IV".
+
+Despite the small number of new programs, the hill is really quite different.
+Killer instict jumped right to the top of the hill ... probably due to all
+the vampires it was able to prey upon.  It's also interesting that the
+programs at the top of the hill tend to be those written in the '88
+standard.  Again, this is a good reflection of the intensity of competition
+on the KOTH hill.
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental hill:
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  79/ 17/  4            Rave 3 (55440)        Stefan Strack     240       8
+ 2  75/ 11/ 14                   CG-X IV     Brant D. Thomsen     239       7
+ 3  74/ 23/  3           No Ties Allowed       Wayne Sheppard     226      13
+ 4  68/ 22/ 10                        BS            J.Layland     213      15
+ 5  65/ 23/ 12           testing testing     Fredrik Ohrstrom     208       3
+ 6  62/ 18/ 20                   BigImps        James Layland     206      16
+ 7  57/ 19/ 24               Frantic 0.9                A Lee     195      17
+ 8  59/ 33/  9                 bunker t3              P.Kline     184       4
+ 9  56/ 28/ 16           Road Hammer 0.3         Simon Hovell     184      14
+10  53/ 25/ 23                 Iron Gate       Wayne Sheppard     181      12
+11  52/ 36/ 12                     VJX-2         James Ojaste     169       1
+12  36/ 53/ 11                 Tiny Ring            J.Layland     119      10
+13  31/ 69/  0                  test 94X            Anonymous      93       6
+
+14-20   No entries
+
+A big thanks to James Ojaste for his entry:  "VJX-2".
+
+Once again, this is an ideal hill for beginners -- you are _guaranteed_ to
+get on it!
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+Before I begin with this week's hint, I need to thank Stefan Strack for
+pointing out a mistake in the last issue of _The 94 Warrior_.  A
+                      MOV     #a, B
+command is converted to
+                      MOV.AB  #a, B
+in the '94 draft, which will only move the "a" value of the instruction --
+instead of the entire instruction.  You will need to explicitly specify that
+the instruction be
+                      MOV.I   #a, B
+if you want an imp.
+
+The following is an excerpt from the latest draft of the '94 redcode proposal.
+I was actually planning to create a table similar to this for this issue's
+hint, but since one already exists, I'll just pass it along instead.
+
+     A.2.1.2 ICWS'88 to ICWS'94 Conversion
+     The default modifier for ICWS'88 emulation is determined according
+     to the table below.
+
+         Opcode                  A-mode  B-mode  modifier
+         ------------------------------------------------
+         DAT                     #$@<>   #$@<>   F
+         MOV,CMP                 #       #$@<>   AB
+                                 $@<>    #       B
+                                 $@<>    $@<>    I
+         ADD,SUB,MUL,DIV,MOD     #       #$@<>   AB
+                                 $@<>    #       B
+                                 $@<>    $@<>    F
+         SLT                     #       #$@<>   AB
+                                 $@<>    #$@<>   B
+         JMP,JMZ,JMN,DJN,SPL     #$@<>   #$@<>   B
+         ------------------------------------------------
+
+>From now on, I will explicitly be specifying the moderator for all the
+instructions I supply in this newsletter -- which is probably a good idea when
+writing '94 warriors as well.  I have found that forcing yourself to
+explicitly think about what modifier each instruction needs not only eases
+the development of '94 warriors, but can also be useful for generating ideas
+as well.
+
+                           *  *  *
+
+Since I'm already on the subject, this issue's hint will be on imp-rings and
+spirals.
+
+For those of you that are unfamiliar with exactly what imps, imp-rings, or
+imp-spirals are, here is a copy of the explanation in the FAQ:
+
+        Imp - Program which only uses the MOV instruction.
+                   example  MOV 0, 1
+               or
+                   example  MOV 0, 2
+                            MOV 0, 2
+
+        Imp-Gate - A location in core which is bombed or decremented
+           continuously so that an Imp can not pass.  Also used to describe
+           the program-code which maintains the gate.
+                   example   ...
+                             ...
+                             SPL 0, <example
+                             DAT <example, #0
+
+        Imp-Ring - A minimal Imp-Spiral.
+                    d        EQU (coresize+1)/3
+                    A        MOV 0,d   ; copy self to B
+                    B        MOV 0,d   ; copy self to C
+                    C        MOV 0,d   ; copy self to A+1
+
+        Imp-Spiral - An Imp-like program with two or more processes supporting
+           each other.  A three-point spiral, with six processes running in
+           this sequence:
+                    d        EQU (coresize+1)/3
+                    A        MOV 0,d   ; copy self to B
+                    B        MOV 0,d   ; copy self to C
+                    C        MOV 0,d   ; copy self to A+1
+                    A+1      MOV 0,d   ; copy self to B+1
+                    B+1      MOV 0,d   ; copy self to C+1
+                    C+1      MOV 0,d   ; copy self to A+2
+
+As Paul Kline has pointed out several times in this newsgroup, imp-rings and
+imp-spirals for a core of size M can be created by using steps the size of any
+number that is a divisor of M*N+1, where N is an integer at least as great as
+one.
+
+Several people, including myself, had been under the misconception that if the
+number M+1 is prime, than a core of size M will have no true imp-spirals
+possible.  This is, however, not case.  For example, even though the number
+55441 is prime, it is still possible to generate a 13 point imp-spiral in a
+55440 size core because 55440*8+1 = 443521 = 13 * 34117.
+
+For your convenience, I have listed the five smallest possible imp-spiral
+sizes and steps for some different core sizes.
+
+For a core of size 8000:
+
+        Point   Step
+        -----   ----
+          3     2667
+          7     1143
+          9      889
+         11     5091
+         13     3077
+
+For a core of size 55440:
+
+        Point   Step
+        -----   -----
+         13     34117
+         17     35873
+         19     29179
+         23     38567
+         29     21029
+
+For a core of size 8192:
+
+        Point   Step
+        -----   -----
+          3     2731
+          5     3277
+          7     3511
+          9     3641
+         11     2979
+
+There have been some interesting recent developments in imp-spiral usage.  A
+"standard" imp-spiral (which is the type discussed in the FAQ) can be killed
+by having your code decrement the B-field of a given location in the core
+every turn.  (Code specifically designed to kill imps, imp-rings, or
+imp-spirals is also referred to as an imp-gate.)  However, with the advent of
+Cannonade (by Paul Kline), it was revealed that this decrementing is
+insufficient for stopping _all_ imp-spirals.
+
+Cannonade, for instance, has a "non-standard" 2668 imp-spiral followed closely
+by a "standard" 2667 imp-spiral.  When the 2668 imp-spiral dies on the
+imp-gate, it leaves behind an instruction to replace the missing instruction
+that occurs when the 2667 imp-spiral hits the gate.  As a result, the 2667
+imp-spiral is able to "pass through" the gate.  There were also two 2668
+imp-spirals posted by Pierre-Etienne Moreau (P.E.M. & E.C.) in early November
+of 1993 that had some success over-writing gates through the use of varied
+distances between processes.
+
+It is possible to stop any of the above mentioned imp-spirals by using an
+imp-gate such as the following:
+
+              start   SPL.B   0, <-10
+                      DAT.B   <-11-2668, <-11
+
+(Simply remove the ".B" modifiers if you are using the '88 standard.)
+
+This code will kill any "2668" step imp-spiral, but could be over-run by an
+imp-spiral with a different step ... such as a "1144" (7 point) imp-spiral.
+In fact, to the best of my knowledge, it is _impossible_ to use the '88 (or
+current '94) standard to create an imp-gate that will stop all possible
+imp-spiral combinations.
+
+However, with the current draft of the '94 standard, there are other options
+available instead.  The imp-gating method I have had the most success with is
+by using the ">" operand to continuously increment the B-field of a given
+location in the core.  This causes the imp-spiral to move an instruction
+past the point where it is supposed to, thus leaving a gap in the imp-spiral.
+
+For an example of this technique, take a look at the following imp-gate:
+
+              start   SPL.B   0, >-20
+                      DAT.B   <-11, >-21
+
+The location twenty instructions before "start" is continually being
+incremented, so any "standard" imp-spirals will be killed here.  However, if a
+gate-crashing imp-spiral gets past this location, it will also need to get
+past the location ten instructions before "start", which is being decremented
+every other turn.  Since the gate-crashing imp-spiral will tend to be quite
+fragile when it reaches the second location, the decrementing will usually be
+enough to finish it off.
+
+While this gate will stop the three special imp-spirals mentioned above, it is
+still possible to create a series of imp-spirals that can (at least occasion-
+ally) over-write it.  However, this gate does have an advantage over the '88
+method in its ability to work independently of the step-size of the imp-
+spiral -- as well as forcing the opponent to use more complex and less
+dependable imp-spiral combinations in order to over-write it.
+
+On a final note:  you can easily create a '94 imp-gate that will stop any imp-
+spirals -- if the imp-spiral uses a "MOV.I 0, b" instruction instead of a
+"MOV.I #a, b" instruction.  Simply have an imp-gate that continually
+increments the A-field at a given location.  "Sylvester" uses this technique
+quite effectively!
+______________________________________________________________________________
+
+Looking to the Future:
+
+The lastest draft of the standard has been on soda.berkeley.edu for a couple
+of weeks now (as /pub/corewar/incoming/icws94.0202.Z).  Take a look at it
+and let the newsgroup know what you think.  There are some interesting
+additions to the former '94 draft standard.
+
+Also, please submit your programs to the '94 hills.  We'd love to have your
+best KOTH warrior on the standard '94 hill, and I've found that the best way
+to learn the '94 standard is to take an '88 standard program and try to
+improve it.  Not only will you get the additional challenge and enjoyment of
+learning the new standard, but you will be better able to correct and critique
+the latest drafts of the new standard when they arrive.
+
+If you have any comments or questions about the '94 hills or the '94
+standard that you think might be of general interest, please let me know.
+Good luck, and happy computing!
+______________________________________________________________________________
+
+Brant D. Thomsen, Editor           Snail mail:  1197 E. 6290 S.
+(bdthomse@peruvian.cs.utah.edu)                 Salt Lake City, UT  84121
+University of Utah                              U.S.A.
