@@ -61,10 +61,18 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 - **Homepage:** [koth.org/pmars](http://www.koth.org/pmars/)
 - **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
+  - [pMARS Page](https://corewar.co.uk/pmars.htm)
+  - [pMARS Archive](https://corewar.co.uk/pmars/)
+- **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
 - **Social Media:** [@xcorewar](https://x.com/xcorewar) on [𝕏](https://x.com/xcorewar), [Bluesky](https://bsky.app/profile/xcorewar.bsky.social), [Mastodon](https://mastodon.social/@xcorewar)
 - **Mailing List:** [COREWAR-L](mailto:corewar-l@koth.org) (send `subscribe corewar-l` to `listproc@koth.org`)
+
+## 🔬 Research & Studies
+
+### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
+A 2026 study by researchers from Sakana AI and MIT investigating "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs to evolve Core War warriors. The study demonstrates how adversarial dynamics drive the emergence of robust, general-purpose behaviors, positioning Core War as a rich sandbox for studying artificial evolution and cybersecurity.
 
 Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.
