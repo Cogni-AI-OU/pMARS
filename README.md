@@ -59,11 +59,21 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 ## 🤝 Community & Resources
 
-- **Homepage:** [koth.org/pmars](http://www.koth.org/pmars/)
+- **Homepage:** [koth.org](http://www.koth.org/)
+- **The Corewar Info Page:** [corewar.info](http://www.corewar.info)
 - **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
   - [pMARS Page](https://corewar.co.uk/pmars.htm)
   - [Index of /pmars/](https://corewar.co.uk/pmars/)
+- **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
+  - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html)
+- **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
+- **KOTH@SAL:** [SAL](http://sal.discontinuity.info/)
+- **Inversed's Corewar Page:** [Inversed](http://inversed.ru/CoreWar.htm)
+- **Neo's World of Corewar:** [Neo](http://labarga.atspace.com/)
+- **Corewar, Programming with Style:** [S. Fernandes](http://corewar.atspace.com/)
+- **Corewar Hall of Fame:** [Hall of Fame](http://jan.ucc.nau.edu/~ns46/corewar/cwhof.htm)
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
+  - [corewars 8086](http://sourceforge.net/projects/corewars8086)
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
@@ -75,6 +85,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 ### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
 - **Paper:** [arXiv:2601.03335](https://arxiv.org/abs/2601.03335)
 - **GitHub Repository:** [SakanaAI/drq](https://github.com/SakanaAI/drq)
+- **Optimized Implementation:** [dietmarwo/drq_fast_mars](https://github.com/dietmarwo/drq_fast_mars) (Improved performance via parallelization and optimized pMARS integration)
 
 A 2026 study by researchers from Sakana AI and MIT exploring "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs and MAP-Elites to evolve Redcode warriors. The research demonstrates how adversarial "Red Queen" dynamics drive the emergence of robust, general-purpose behaviors and phenotypic convergence, positioning Core War as a rich, controllable sandbox for studying artificial evolution and adversarial adaptation.
 
