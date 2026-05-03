@@ -66,21 +66,38 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 ## 🤝 Community & Resources
 
-- **Homepage:** [koth.org](http://www.koth.org/)
+- **Homepage:** [koth.org](http://www.koth.org/) ([Hills](http://koth.org/koth.html))
 - **The Corewar Info Page:** [corewar.info](http://www.corewar.info)
 - **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
   - [pMARS Page](https://corewar.co.uk/pmars.htm)
   - [Index of /pmars/](https://corewar.co.uk/pmars/)
+  - [Corewar Hills](https://corewar.co.uk/datagram/hills.html)
 - **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
-  - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html)
+  - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html) ([Mirror](https://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html))
 - **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
-- **KOTH@SAL:** [SAL](http://sal.discontinuity.info/)
+- **KOTH@SAL:** [SAL](https://sal.discontinuity.info/)
 - **Inversed's Corewar Page:** [Inversed](http://inversed.ru/CoreWar.htm)
 - **Neo's World of Corewar:** [Neo](http://labarga.atspace.com/)
 - **Corewar, Programming with Style:** [S. Fernandes](http://corewar.atspace.com/)
 - **Corewar Hall of Fame:** [Hall of Fame](http://jan.ucc.nau.edu/~ns46/corewar/cwhof.htm)
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
+- **Tutorials & Guides:**
+  - [pMARS Reference Guide](http://www.koth.org/info/pmars-redcode-94.txt) - Detailed reference for pMARS Redcode.
+  - [Steven Morrell's Guide (Imps)](http://www.koth.org/info/chapter1.html) - Introduction to Imp-Rings.
+  - [Steven Morrell's Guide (Stones)](http://www.koth.org/info/chapter2.html) - Introduction to Stone warriors.
+  - [The Corewar Bibliography](http://corewar.co.uk/biblio.htm) - Extensive index of Core War articles.
+  - [P-Key development](http://labarga.atspace.com/pkey_dev.html) - Analysis of a winning P-space warrior.
+  - [CoreExplorer](http://corewar.co.uk/ce/ce001.txt) - Newsletter for beginners.
+  - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
+- **Other Simulators & Tools:**
+  - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
+  - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
+  - [exMARS](http://corewar.co.uk/ankerl/exmars.htm#intro) - Fast simulator with Ruby interface by Martin Ankerl.
+  - [nMars](http://nmars.sourceforge.net/) - Graphical simulator and debugger for .NET by Pavel Šavara.
+  - [Redcode Simulators](http://corewar.co.uk/mars.htm) - John Metcalf's collection of simulators.
+  - [optiMAX](http://www.corewar.info/optimax/) - Core War optimizer by Sascha Zapf and Christian Schmidt.
+  - [On-line Paper Generator](http://labarga.atspace.com/papgen/pg.htm) - Web-based tool to create paper warriors.
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
