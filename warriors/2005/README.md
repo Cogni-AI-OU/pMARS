@@ -1,6 +1,6 @@
 # Corewar Single Elimination Tournament 2005 Warriors
 
-This directory contains warriors from the Corewar Single Elimination Tournament (CWSET) held in 2005, organised by Christian *Fizmo* Schmidt.
+This directory contains warriors from the Corewar Single Elimination Tournament (CWSET) held in 2005 ([link](http://corewar.atspace.com/tournament.html)), organised by Christian *Fizmo* Schmidt.
 
 ## Qualification Round
 - **Coresize**: 3800

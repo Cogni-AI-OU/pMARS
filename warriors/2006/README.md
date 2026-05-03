@@ -1,6 +1,6 @@
 # Corewar Datagram Tournament 2006 Warriors
 
-This directory contains warriors from the Corewar Datagram Tournament held in 2006.
+This directory contains warriors from the Corewar Datagram Tournament held in 2006 ([link](http://corewar.atspace.com/tournament.html)).
 Full information and results can be found at [corewar.co.uk/datagram](https://corewar.co.uk/datagram/).
 
 ## Round 1 Information
