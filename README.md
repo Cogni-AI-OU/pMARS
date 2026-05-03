@@ -74,6 +74,14 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **Corewar Hall of Fame:** [Hall of Fame](http://jan.ucc.nau.edu/~ns46/corewar/cwhof.htm)
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
+- **Tutorials & Guides:**
+  - [pMARS Reference Guide](http://www.koth.org/info/pmars-redcode-94.txt) - Detailed reference for pMARS Redcode.
+  - [Steven Morrell's Guide (Imps)](http://www.koth.org/info/chapter1.html) - Introduction to Imp-Rings.
+  - [Steven Morrell's Guide (Stones)](http://www.koth.org/info/chapter2.html) - Introduction to Stone warriors.
+  - [The Corewar Bibliography](http://corewar.co.uk/biblio.htm) - Extensive index of Core War articles.
+  - [P-Key development](http://labarga.atspace.com/pkey_dev.html) - Analysis of a winning P-space warrior.
+  - [CoreExplorer](http://corewar.co.uk/ce/ce001.txt) - Newsletter for beginners.
+  - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
 - **Other Simulators & Tools:**
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
