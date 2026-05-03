@@ -8,4 +8,5 @@ This directory contains collections of warriors from various Core War tournament
 - **[CWSET 2005](./2005/README.md)**: Corewar Single Elimination Tournament (CWSET) 2005.
 - **[Datagram 2006](./2006/README.md)**: Corewar Datagram Tournament 2006.
 - **[IRCT](./IRCT/README.md)**: Internet Relay Chat Tournament warriors.
+- **[Redcoders Frenzy](./Frenzy/README.md)**: Redcoders Frenzy (CWT) tournament warriors.
 - **[Tournament Weekend 2025](./2025/README.md)**: Core War Tournament Weekend 2025 held in Cambridge, UK.
