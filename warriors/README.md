@@ -27,4 +27,5 @@ This directory contains a collection of warriors for the different International
 - [CWSET 2005](./2005/README.md)
 - [Datagram 2006](./2006/README.md)
 - [IRCT](./IRCT/README.md)
+- [Tournament Weekend 2025](./2025/README.md)
 - [Redcoders Frenzy](./Frenzy/README.md)
