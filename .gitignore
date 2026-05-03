@@ -4,3 +4,4 @@ pmars
 *.exe
 *.patch
 *.out
+*.py
