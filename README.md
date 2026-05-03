@@ -57,9 +57,10 @@ Detailed documentation is available in the `doc` directory:
 
 pMARS is released under the GNU General Public License v2.0. See the [COPYING](COPYING) file for details.
 
-## 🤝 Community & Support
+## 🤝 Community & Resources
 
 - **Homepage:** [koth.org/pmars](http://www.koth.org/pmars/)
+- **Core War Information:** [corewar.co.uk](https://corewar.co.uk/)
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **Newsgroup:** `rec.games.corewar`
 
