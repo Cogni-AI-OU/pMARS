@@ -1,3 +1,11 @@
+2026-01-14	John Metcalf	<digital.wilderness@googlemail.com>
+
+        - Release 0.9.6 candidate
+        - Merged SDL display support from pMARS-SDL
+        - Fixed issues with multi-line equ and comparison operators -
+          patches by Bertram Felgenhauer 
+
+
 2026-01-03	John Metcalf	<digital.wilderness@googlemail.com>
 
 	- Release 0.9.5
