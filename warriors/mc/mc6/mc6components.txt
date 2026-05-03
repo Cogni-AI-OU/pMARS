@@ -1,0 +1,28 @@
+;redcode
+;name Imp
+;assert 1
+;strategy Imp
+imp: mov.i #4,1
+end imp
+
+
+;redcode
+;name Core clear
+;assert 1
+;strategy Core clear
+
+ptr equ clear-3
+clear: mov bmb,}ptr ;<-- must start here
+mov bmb,}ptr
+jmp -2
+bmb: dat 7,0
+end clear
+
+
+;redcode
+;name Gate
+;assert 1
+;strategy Imp-gate, (wimp)
+
+gate: jmp #0,<-3
+end gate
