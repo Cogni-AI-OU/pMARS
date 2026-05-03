@@ -23,3 +23,4 @@ This directory contains a collection of warriors for the different International
 - [94nop](./94nop/README.md)
 - [94tiny](./94tiny/README.md)
 - [Begineer](./Begineer/README.md)
+- [Datagram 2006](./2006/README.md)
