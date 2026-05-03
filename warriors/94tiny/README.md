@@ -26,6 +26,7 @@ This directory contains warriors for the Tiny standard (CORESIZE 800).
 | [tl5.red](./tl5.red) | TL5 (Tiny Lord 5) | Neo | TinyQ^4->paper/imp |
 | [tlord.red](./tlord.red) | TinyLord | Neo | Qbomb->paper/imp |
 | [tlord2.red](./tlord2.red) | TinyLord2 | Neo | Qbomb->paper/imp |
+| [tinytwil.red](./tinytwil.red) | Twilight | S.Fernandes | oneshot v1 |
 | [ugliness.red](./ugliness.red) | Recycled ugliness | G.Labarga | TinyQ^4->Paper |
 | [wilt.red](./wilt.red) | Wilt ;) | G.Labarga | Qbomb->paper |
 | [yim.red](./yim.red) | YIM | G.Labarga | Qbomb->stone/imp |
