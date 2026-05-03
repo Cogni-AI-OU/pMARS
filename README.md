@@ -77,4 +77,6 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 
 A 2026 study by researchers from Sakana AI and MIT investigating "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs to evolve Core War warriors. The study demonstrates how adversarial dynamics drive the emergence of robust, general-purpose behaviors, positioning Core War as a rich sandbox for studying artificial evolution and cybersecurity.
 
+## 🛠️ Contributing
+
 Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.
