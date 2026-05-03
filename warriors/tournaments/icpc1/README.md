@@ -2,3 +2,5 @@
 
 This tournament was held as part of the Core War community competitions.
 Plan 9+ by inversed won 1st place.
+
+Source: [Core War: Tournaments](http://www.corewar.info/tournament/icpc1)

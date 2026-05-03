@@ -2,3 +2,5 @@
 
 This tournament was held as part of the Core War community competitions.
 Cowboy by Eugene P. Lilitko won 1st place.
+
+Source: [Core War: Tournaments](https://corewar.co.uk/icwt1988.htm)
