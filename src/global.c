@@ -66,6 +66,9 @@ int     SWITCH_P;
 #endif
 int	SWITCH_A;
 
+unsigned long loopDelay;
+unsigned long loopDelayAr[SPEEDLEVELS] = {1, 1, 1, 100, 500, 2500, 10000, 40000, 100000};
+
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
     || defined(XWINGRAPHX)
 int     SWITCH_v;
@@ -80,13 +83,7 @@ int     refreshInterval;
 int     refIvalAr[SPEEDLEVELS] = {50, 20, 10, 3, 2, 1, 1, 1, 1};
 #else
 int     keyDelay;
-#if defined(XWINGRAPHX)
-int     keyDelayAr[SPEEDLEVELS] = {255, 20, 0, 0, 0, 0, 0, 0, 0};
-#else
-int     keyDelayAr[SPEEDLEVELS] = {25, 20, 0, 0, 0, 0, 0, 0, 0};
-#endif
-unsigned long loopDelay;
-unsigned long loopDelayAr[SPEEDLEVELS] = {1, 1, 1, 100, 500, 2500, 10000, 40000, 100000};
+int     keyDelayAr[SPEEDLEVELS] = {31, 15, 7, 3, 1, 0, 0, 0, 0};
 #endif
 #endif
 

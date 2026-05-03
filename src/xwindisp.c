@@ -43,31 +43,63 @@
 #include <X11/keysym.h>
 #include <X11/cursorfont.h>
 
-#define MIN_WIDTH                320        /* minimum width of the window */
-#define MIN_HEIGHT                200        /* minimum height of the window */
+#define MIN_WIDTH               320     /* minimum width of the window */
+#define MIN_HEIGHT              200     /* minimum height of the window */
 
-#define MAXLENGTH                160        /* maximum output string length */
-#define MAXSTR                        80        /* maximum input string
-                                                 * length */
+#define MAXLENGTH               160     /* maximum output string length */
+#define MAXSTR                  80      /* maximum input string length */
 
-#define MAXXCOLOR                16        /* need 16 X colors */
-#define BLACK                         0        /* some color constants; in fact,
-                                         * these */
-#define BLUE                        1        /* are indices into xColors[] below */
-#define GREEN                        2
-#define CYAN                        3
-#define RED                        4
-#define LIGHTRED                12
-#define YELLOW                        14
-#define WHITE                         15
+#define MAXXCOLOR               16      /* need 16 X colors */
+#define BLACK                   0       /* some color constants; in fact, */
+#define WHITE                   15      /* these are indices into xColorsNames */
 
  /* X names of the colors we allocate */
+
+#ifdef SAFECOLORS
+
+#define BLUE                    1
+#define ORANGE                  2
+
+/* Okabe-Ito CVD-safe palette */
+
+static char *xColorNames[MAXXCOLOR] = {
+  "#000000",  // 0 black
+  "#0072B2",  // 1 blue
+  "#E69F00",  // 2 orange
+  "#F0E442",  // 3 yellow
+  "#CC79A7",  // 4 reddish purple
+  "#D55E00",  // 5 vermillion
+  "#56B4E9",  // 6 sky blue
+  "#009E73",  // 7 bluish green
+  "#3BA3CD",  // 8 light blue
+  "#EFC159",  // 9 light orange
+  "#F5ED84",  // 10 light yellow
+  "#DEA8C6",  // 11 light reddish purple
+  "#E49659",  // 12 light vermillion
+  "#91CEF1",  // 13 light sky blue
+  "#59C0A4",  // 14 light bluish green
+  "#FFFFFF"   // 15 white
+};
+
+#else
+
+#define BLUE                    1
+#define GREEN                   2
+#define CYAN                    3
+#define RED                     4
+#define LIGHTRED                12
+#define YELLOW                  14
+
+/* ANSI 16-color palette */
+
 static char *xColorNames[MAXXCOLOR] = {
   "black", "blue3", "green3", "cyan3",
   "red3", "magenta3", "yellow3", "light gray",
   "gray", "blue1", "green1", "cyan1",
   "red1", "magenta1", "yellow1", "white"
 };
+
+#endif
 
  /* X color (;-) names for gray scale displays */
 static char *xGrayScaleNames[MAXXCOLOR] = {
@@ -85,87 +117,87 @@ static char *xBWColorNames[MAXXCOLOR] = {
   "white", "white", "white", "white"
 };
 
-static int borderWidth = 3;        /* arena border */
-static int leftUpperX = 5;        /* location of the arena */
+static int borderWidth = 3;     /* arena border */
+static int leftUpperX = 5;      /* location of the arena */
 static int leftUpperY = 50;
-static int cycleY = 45;                /* location of the cycle meter */
+static int cycleY = 45;         /* location of the cycle meter */
 
-static int colors[MAXWARRIOR];        /* colors of the two warriors */
-static int datcolors[MAXWARRIOR];        /* death colors */
+static int colors[MAXWARRIOR];  /* colors of the two warriors */
+static int datcolors[MAXWARRIOR];/* death colors */
 
-static int splY[MAXWARRIOR];        /* location of the process meters */
+static int splY[MAXWARRIOR];    /* location of the process meters */
 
 static int verticalSize;        /* # core locations in a line in the arena */
 static int size;                /* size of one core location */
 
-static int cycleRatio;                /* ratio of pixel of cycle meter to cycle */
+static int cycleRatio;          /* ratio of pixel of cycle meter to cycle */
 static int processRatio;        /* ratio pixel of process meter to process */
 
 static int x, y;                /* position and color of the currently */
-static int col;                        /* accessed core address */
+static int col;                 /* accessed core address */
 
-static int posx, posy;                /* cursor position of current panel */
+static int posx, posy;          /* cursor position of current panel */
 static int posx1, posy1;        /* same for for panel 1 */
 static int posx2, posy2;        /* same for for panel 2 */
 
-static int point;                /* # input characters in panel */
+static int point;               /* # input characters in panel */
 
-static int grwindx0, grwindy0;        /* position of panel 1 */
-static int grwindx1, grwindy1;        /* same for panel 2 */
+static int grwindx0, grwindy0;  /* position of panel 1 */
+static int grwindx1, grwindy1;  /* same for panel 2 */
 
-static int horizspace = 9;        /* horizontal/vertical extension of one */
-static int verspace = 15;        /* character */
+static int horizspace;          /* horizontal/vertical extension of one */
+static int verspace;            /* character */
 
-static char str[2] = " ";        /* needed for some output */
+static char str[2] = " ";       /* needed for some output */
 
-static int xDim, yDim;                /* size of the window */
+static int xDim, yDim;          /* size of the window */
 
 static Display *display;        /* the central X11 structure */
 static char *displayName = NULL;/* name of the display */
-static Window xwindow;                /* our window */
+static Window xwindow;          /* our window */
 
-static XFontStruct *fontInfo;        /* the font we use, default font name */
-static char *fontName = "-dec-terminal-bold-*-*-*-14-*-*-*-*-*-iso8859-*";
+static XFontStruct *fontInfo;   /* the font we use, default font name */
+static char *fontName = "*-*-*-*--*-*-32-*-*-*-iso8859-*";
 
-static GC writeGC, clearGC, colorGC;        /* white/black/color GCs */
+static GC writeGC, clearGC, colorGC;    /* white/black/color GCs */
 
-static int screenNum;                /* the screen number we are mapped on */
-static int defDepth;                /* default depth of the screen */
+static int screenNum;           /* the screen number we are mapped on */
+static int defDepth;            /* default depth of the screen */
 
-static Colormap colormap;        /* colormap of the screen, X colors */
+static Colormap colormap;       /* colormap of the screen, X colors */
 static unsigned long xColors[MAXXCOLOR];
 
  /* the events we need */
 static long eventMask = ExposureMask | KeyPressMask | ButtonPressMask |
 StructureNotifyMask;
 
-static int controlPressed;        /* modifier status of last key press */
+static int controlPressed;      /* modifier status of last key press */
 static int altPressed;
 
-static char *geometry;                /* the geometry specification */
+static char *geometry;          /* the geometry specification */
 
-static int doesBs;                /* does the X server support backing store? */
-static Pixmap bsPixmap;                /* if not, this is our own backing store */
+static int doesBs;              /* does the X server support backing store? */
+static Pixmap bsPixmap;         /* if not, this is our own backing store */
 
 /* these are used in clparse.c */
 int     xMaxOptions = 3;        /* the number & names of X cmd line options */
 char   *xOptions[] = {"display", "geometry", "fn"};
-char   *xStorage[] = {NULL, NULL, NULL};        /* filled in clparse */
-int     xDisplayType = 0;        /* 0 = color, 1 = grayscale, 2 = b&w */
+char   *xStorage[] = {NULL, NULL, NULL};/* filled in clparse */
+int     xDisplayType = 0;       /* 0 = color, 1 = grayscale, 2 = b&w */
 
 /* this is used in cdb.c */
-int     xWinTextLines;                /* the number of text lines */
+int     xWinTextLines;          /* the number of text lines */
 
 /* these are set in pmars.c */
-int     xWinArgc;                /* command line arguments */
+int     xWinArgc;               /* command line arguments */
 char  **xWinArgv;
 
 /* some variables we need from other modules */
-extern int curPanel;                /* number of the panel in use */
-extern ADDR_T curAddr;                /* the current core address */
+extern int curPanel;            /* number of the panel in use */
+extern ADDR_T curAddr;          /* the current core address */
 extern char *CDB_PROMPT;        /* cdb's prompt */
 
-/* imported from str_???.c, these are varios error/status messages */
+/* imported from str_???.c, these are various error/status messages */
 extern char *pressAnyKey;
 extern char *cantAllocMem;
 extern char *cantConnect;
@@ -193,8 +225,7 @@ static unsigned long xWin_getch(void);
 static void graphio_init(void);
 static void newline(void);
 static void newchar(void);
-static void
-        delchar(void);
+static void delchar(void);
 static int mouse_or_key(char *result, unsigned long *key);
 static char *special_keys(unsigned long key, char *buf);
 static int xkoord(int addr);
@@ -213,6 +244,7 @@ static void get_gc(void);
 static void handle_event(XEvent * event);
 static void init_xwin(void);
 static void draw_border(void);
+static void set_pmars_icon(Display *dpy, Window win);
 #else
 static void setcolor();
 static void xWin_cleartextxy();
@@ -222,8 +254,7 @@ static unsigned long xWin_getch();
 static void graphio_init();
 static void newline();
 static void newchar();
-static void
-        delchar();
+static void delchar();
 static int mouse_or_key();
 static char *special_keys();
 static int xkoord();
@@ -240,10 +271,13 @@ static void get_gc();
 static void handle_event();
 static void init_xwin();
 static void draw_border();
+static void set_pmars_icon();
 #endif
 
+extern void sighandler(int dummy);
+
 /**********************************************************************/
-/*   misc and util functions                                                                                                                 */
+/*   misc and util functions                                          */
 /**********************************************************************/
 
 /*
@@ -253,7 +287,7 @@ static void
 my_err(s)
   char   *s;
 {
-  fprintf(stderr, s);
+  fprintf(stderr, "%s", s);
   Exit(1);
 }
 
@@ -288,7 +322,7 @@ parse_geometry(sizeHints, x, y, w, h)
 
   sizeHints->flags = 0;
 
-  if (g[0] != '+' && g[0] != '-') {        /* first parse width & height */
+  if (g[0] != '+' && g[0] != '-') {     /* first parse width & height */
     sizeHints->flags |= USSize;
 
     if ((s = strchr(g + 1, 'x')) == NULL)
@@ -313,7 +347,7 @@ parse_geometry(sizeHints, x, y, w, h)
       if (t < s)
         s = t;
     if (s == NULL)
-      my_err(invalidGeom);        /* this should never happen ! */
+      my_err(invalidGeom);              /* this should never happen ! */
 
     c = *s;
     *s = '\0';
@@ -356,7 +390,7 @@ xWin_update(newcurPanel)
     curPanel = 2;
   }
   switch (newcurPanel) {
-  case 0:                        /* only one panel */
+  case 0:                       /* only one panel */
     if (curPanel == 1) {
       posx1 = posx;
       posy1 = posy;
@@ -369,7 +403,7 @@ xWin_update(newcurPanel)
     posx = posx1;
     posy = posy1;
     break;
-  case 1:                        /* first panel */
+  case 1:                       /* first panel */
     grwindx0 = 1;
     grwindx1 = xDim / 2 - horizspace;
     if (curPanel == 2) {
@@ -379,9 +413,9 @@ xWin_update(newcurPanel)
       posy = posy1;
     }
     break;
-  case 2:                        /* second panel */
+  case 2:                       /* second panel */
     grwindx0 = xDim / 2;
-    grwindx1 = xDim - 10;
+    grwindx1 = xDim - horizspace;
     switch (curPanel) {
     case 1:
       posx1 = posx;
@@ -405,12 +439,12 @@ xWin_update(newcurPanel)
 static void
 graphio_init()
 {
-  size = 4;                        /* Size of a given location, feel free to
+  size = 40;                    /* Size of a given location, feel free to
                                  * make it bigger */
   do {
-    --size;                        /* decrease the size to fit */
+    --size;                     /* decrease the size to fit */
     verticalSize = (xDim - 2 * leftUpperX) / (size + 1);
-  } while ((ykoord(coreSize) > yDim - 20) && size > 0);
+  } while ((ykoord(coreSize) > 2 * yDim / 3) && size > 1);
 
   if ((cycleRatio = 2 * warriors * cycles / yDim) == 0)
     cycleRatio = 1;
@@ -419,10 +453,10 @@ graphio_init()
 
   verspace = fontInfo->ascent + fontInfo->descent;
 
-  grwindy0 = ykoord(coreSize) + 2 * borderWidth + verspace;
+  grwindy0 = ykoord(coreSize) + 2 * borderWidth + size + verspace + 4;
   grwindy1 = yDim - verspace;
 
-  xWinTextLines = (yDim - grwindy0) / verspace;        /* used for pausing in cdb */
+  xWinTextLines = (yDim - grwindy0) / verspace; /* used for pausing in cdb */
 }
 
 /*
@@ -480,7 +514,7 @@ alloc_colors()
     colorNames = xBWColorNames;
 
   /*
-   * override autodetected display by user- supplied choice if possible
+   * override autodetected display by user-supplied choice if possible
    */
   if (xDisplayType == 1) {
     if (i >= GrayScale)
@@ -536,7 +570,7 @@ get_gc()
 }
 
 /**********************************************************************/
-/*   string output functions                                                                                                                 */
+/*   string output functions                                          */
 /**********************************************************************/
 
 /*
@@ -636,43 +670,59 @@ xWin_write_menu()
   int     y, i, j;
   char    s[7];
 
-  y = ykoord(coreSize) + borderWidth + 2;
+  y = ykoord(coreSize) + borderWidth + size + 2;
 
   setcolor(WHITE);
-  xWin_outtextxy(10, y, "<");
+  xWin_outtextxy(0, y, "<");
 
+#ifdef SAFECOLORS
+  setcolor(ORANGE);
+#else
   setcolor(RED);
+#endif
   for (i = 0; i < SPEEDLEVELS - displaySpeed; i++)
-    xWin_cleartextxy(20 + i * 10, y, colorGC);
+    xWin_cleartextxy((i + 1) * (horizspace + 2), y, colorGC);
 
+#ifdef SAFECOLORS
+  setcolor(BLUE);
+#else
   setcolor(YELLOW);
+#endif
   for (j = 0; j < displaySpeed; j++)
-    xWin_cleartextxy(20 + i * 10 + j * 10, y, colorGC);
+    xWin_cleartextxy((i + j + 1) * (horizspace + 2), y, colorGC);
 
   setcolor(WHITE);
-  xWin_outtextxy(20 + i * 10 + j * 10, y, "> ");
+  xWin_outtextxy((i + j + 1) * (horizspace + 2), y, "> ");
 
   for (i = 0; i < 5; i++) {
     sprintf(s, "%d ", i);
     if (displayLevel == i)
+#ifdef SAFECOLORS
+      setcolor(ORANGE);
+#else
       setcolor(RED);
+#endif
     else
       setcolor(WHITE);
-    xWin_outtextxy(170 + i * 10, y, s);
+    xWin_outtextxy((i + 15) * (horizspace + 2), y, s);
   }
 
   if (inCdb)
+#ifdef SAFECOLORS
+    setcolor(ORANGE);
+#else
     setcolor(RED);
+#endif
   else
     setcolor(WHITE);
-  xWin_outtextxy(260, y, "Debug ");
+  xWin_outtextxy((i + 18) * (horizspace + 2), y, "[D]ebug ");
 
   if (xDim > 400) {                /* this is only an estimate */
     if (inCdb)
       setcolor(BLACK);
     else
       setcolor(WHITE);
-    xWin_outtextxy(310, y, "space Quit");
+    xWin_outtextxy((i + 26) * (horizspace + 2), y, "[C]lear  [Q]uit");
   }
   setcolor(WHITE);
 }
@@ -689,7 +739,7 @@ write_names()
 
     if (warriors == 2) {
       setcolor(colors[1]);
-      xWin_outtextxy(140, 0, warrior[1].name);
+      xWin_outtextxy(xDim / 2, 0, warrior[1].name);
     }
   }
 }
@@ -966,7 +1016,7 @@ xWin_gets(result, maxchar)
 }
 
 /**********************************************************************/
-/*   event handling                                                                                                                                         */
+/*   event handling                                                   */
 /**********************************************************************/
 
 /*
@@ -1053,7 +1103,7 @@ handle_event(event)
     mapped = 1;
     break;
 
-  case UnmapNotify:                /* wait for next map event */
+  case UnmapNotify:             /* wait for next map event */
     for (;;) {
       XNextEvent(display, &ev);
       if (ev.type == MapNotify)
@@ -1080,7 +1130,7 @@ handle_event(event)
       redraw();
     break;
 
-#if 0                                /* debugging only */
+#if 0                           /* debugging only */
   default:
     printf("Got unknown event: %d\n", event->type);
     break;
@@ -1110,8 +1160,8 @@ draw_border()
 {
   int     x = leftUpperX - borderWidth;
   int     y = leftUpperY - borderWidth;
-  int     w = xkoord(verticalSize - 1) + borderWidth - x;
-  int     h = ykoord(coreSize) + borderWidth - y;
+  int     w = xkoord(verticalSize - 1) + borderWidth - x + size;
+  int     h = ykoord(coreSize) + borderWidth - y + size;
 
   XDrawRectangle(display, xwindow, writeGC, x, y, w, h);
   if (!doesBs)
@@ -1178,12 +1228,12 @@ xWin_clear_arena()
   int     y = leftUpperY - borderWidth + 1;
 
   XFillRectangle(display, xwindow, clearGC,
-                 x, y, xkoord(verticalSize - 1) + borderWidth - x,
-                 ykoord(coreSize) + borderWidth - y);
+                 x, y, xkoord(verticalSize - 1) + borderWidth - x + size,
+                   ykoord(coreSize) + borderWidth - y + size);
   if (!doesBs)
     XFillRectangle(display, bsPixmap, clearGC,
-                   x, y, xkoord(verticalSize - 1) + borderWidth - x,
-                   ykoord(coreSize) + borderWidth - y);
+                   x, y, xkoord(verticalSize - 1) + borderWidth - x + size,
+                   ykoord(coreSize) + borderWidth - y + size);
 }
 
 /*
@@ -1238,13 +1288,74 @@ xWin_display_cycle()
   int     key = 0;
   XEvent  event;
 
-#ifdef HAVE_USLEEP
+  while (XCheckMaskEvent(display, eventMask, &event)) {
+    if (event.type == KeyPress) {
+      key = 1;
+      ch = conv_key(&event);
+      break;
+    }
+    handle_event(&event);
+  }
+
+  if (!inputRedirection && key) {
+    switch (ch) {
+    case '0':
+      displayLevel = 0;
+      break;
+    case '1':
+      displayLevel = 1;
+      break;
+    case '2':
+      displayLevel = 2;
+      break;
+    case '3':
+      displayLevel = 3;
+      break;
+    case '4':
+      displayLevel = 4;
+      break;
+
+    case 'd':
+      sighandler(0);            /* debugState = STEP; stepping = FALSE; */
+      break;
+
+    case '>':
+      if (displaySpeed > 0) {
+        --displaySpeed;
+        loopDelay = loopDelayAr[displaySpeed];
+        keyDelay = keyDelayAr[displaySpeed];
+      }
+      break;
+    case '<':
+      if (displaySpeed < SPEEDLEVELS - 1) {
+        ++displaySpeed;
+        loopDelay = loopDelayAr[displaySpeed];
+        keyDelay = keyDelayAr[displaySpeed];
+      }
+      break;
+
+    case ' ':
+    case 'c':
+    case 'r':
+      xWin_clear_arena();
+      break;
+
+    case XK_Escape:
+    case 'q':
+      display_close();
+      Exit(USERABORT);
+
+    default:
+      if (ch < 128) {
+        debugState = STEP;
+        break;
+      }
+    }
+    xWin_write_menu();
+  }
+
   if (loopDelay > 1)
     usleep(loopDelay);
-#else
-  unsigned long ctr = loopDelay;
-  while (ctr--);
-#endif
 
   if (!(cycle & keyDelay)) {
     XDrawPoint(display, xwindow, clearGC,
@@ -1252,76 +1363,12 @@ xWin_display_cycle()
     if (!doesBs)
       XDrawPoint(display, bsPixmap, clearGC,
                  cycle / cycleRatio, cycleY);
-
-    while (XCheckMaskEvent(display, eventMask, &event)) {
-      if (event.type == KeyPress) {
-        key = 1;
-        ch = conv_key(&event);
-        break;
-      }
-      handle_event(&event);
-    }
-
-    if (!inputRedirection && key) {
-      switch (ch) {
-      case '0':
-        displayLevel = 0;
-        break;
-      case '1':
-        displayLevel = 1;
-        break;
-      case '2':
-        displayLevel = 2;
-        break;
-      case '3':
-        displayLevel = 3;
-        break;
-      case '4':
-        displayLevel = 4;
-        break;
-
-      case 'd':
-        sighandler(0);                /* ??? debugState = STEP; *//* stepping =
-                                 * FALSE; */
-        break;
-
-      case '>':
-        if (displaySpeed > 0) {
-          --displaySpeed;
-          loopDelay = loopDelayAr[displaySpeed];
-          keyDelay = keyDelayAr[displaySpeed];
-        }
-        break;
-      case '<':
-        if (displaySpeed < SPEEDLEVELS - 1) {
-          ++displaySpeed;
-          loopDelay = loopDelayAr[displaySpeed];
-          keyDelay = keyDelayAr[displaySpeed];
-        }
-        break;
-
-      case ' ':
-      case 'r':
-        xWin_clear_arena();
-        break;
-
-      case XK_Escape:
-      case 'q':
-        display_close();
-        Exit(USERABORT);
-
-      default:
-        if (ch < 128)
-          debugState = STEP;
-        break;
-      }
-      xWin_write_menu();
-    }
+    XFlush(display);
   }
 }
 
 /**********************************************************************/
-/*   display functions indicating the core action                                                         */
+/*   display functions indicating the core action                     */
 /**********************************************************************/
 
 /*
@@ -1332,9 +1379,9 @@ xWin_display_read(addr)
   int     addr;
 {
   setcolor(colors[W - warrior]);
-  XDrawPoint(display, xwindow, colorGC, xkoord(addr), ykoord(addr));
+  XFillRectangle(display, xwindow, colorGC, xkoord(addr), ykoord(addr), size / 2, size / 2);
   if (!doesBs)
-    XDrawPoint(display, bsPixmap, colorGC, xkoord(addr), ykoord(addr));
+    XFillRectangle(display, bsPixmap, colorGC, xkoord(addr), ykoord(addr), size / 2, size / 2);
 }
 
 /*
@@ -1346,11 +1393,9 @@ xWin_display_dec(addr)
 {
   findplace(addr);
   setcolor(col);
-  XDrawPoint(display, xwindow, colorGC, x, y);
-  XDrawPoint(display, xwindow, colorGC, x + 1, y);
+  XFillRectangle(display, xwindow, colorGC, xkoord(addr), ykoord(addr), size, size / 2);
   if (!doesBs) {
-    XDrawPoint(display, bsPixmap, colorGC, x, y);
-    XDrawPoint(display, bsPixmap, colorGC, x + 1, y);
+    XFillRectangle(display, bsPixmap, colorGC, xkoord(addr), ykoord(addr), size, size / 2);
   }
 }
 
@@ -1363,11 +1408,9 @@ xWin_display_inc(addr)
 {
   findplace(addr);
   setcolor(col);
-  XDrawPoint(display, xwindow, colorGC, x, y);
-  XDrawPoint(display, xwindow, colorGC, x, y + 1);
+  XFillRectangle(display, xwindow, colorGC, xkoord(addr), ykoord(addr), size / 2, size);
   if (!doesBs) {
-    XDrawPoint(display, bsPixmap, colorGC, x, y);
-    XDrawPoint(display, bsPixmap, colorGC, x, y + 1);
+    XFillRectangle(display, bsPixmap, colorGC, xkoord(addr), ykoord(addr), size / 2, size);
   }
 }
 
@@ -1380,13 +1423,11 @@ xWin_display_write(addr)
 {
   findplace(addr);
   setcolor(col);
-  XDrawPoint(display, xwindow, colorGC, x + 1, y);
-  XDrawPoint(display, xwindow, colorGC, x, y + 1);
-  XDrawPoint(display, xwindow, colorGC, x + 1, y);
+  XFillRectangle(display, xwindow, colorGC, xkoord(addr) + size / 2, ykoord(addr), size / 2, size / 2);
+  XFillRectangle(display, xwindow, colorGC, xkoord(addr), ykoord(addr) + size / 2, size / 2, size / 2);
   if (!doesBs) {
-    XDrawPoint(display, bsPixmap, colorGC, x + 1, y);
-    XDrawPoint(display, bsPixmap, colorGC, x, y + 1);
-    XDrawPoint(display, bsPixmap, colorGC, x + 1, y);
+    XFillRectangle(display, bsPixmap, colorGC, xkoord(addr) + size / 2, ykoord(addr), size / 2, size / 2);
+    XFillRectangle(display, bsPixmap, colorGC, xkoord(addr), ykoord(addr) + size / 2, size / 2, size / 2);
   }
 }
 
@@ -1398,11 +1439,11 @@ xWin_display_exec(addr)
   int     addr;
 {
   setcolor(colors[W - warrior]);
-  XDrawRectangle(display, xwindow, colorGC,
-                 xkoord(addr), ykoord(addr), 1, 1);
+  XFillRectangle(display, xwindow, colorGC,
+                 xkoord(addr), ykoord(addr), size, size);
   if (!doesBs)
-    XDrawRectangle(display, bsPixmap, colorGC,
-                   xkoord(addr), ykoord(addr), 1, 1);
+    XFillRectangle(display, bsPixmap, colorGC,
+                   xkoord(addr), ykoord(addr), size, size);
 }
 
 /*
@@ -1428,10 +1469,10 @@ xWin_display_dat(addr, warNum, tasks)
   if (displayLevel > 0) {
     setcolor(datcolors[warNum]);
     XFillRectangle(display, xwindow, colorGC,
-                   xkoord(addr), ykoord(addr), 2, 2);
+                   xkoord(addr), ykoord(addr), size, size);
     if (!doesBs)
       XFillRectangle(display, bsPixmap, colorGC,
-                     xkoord(addr), ykoord(addr), 2, 2);
+                     xkoord(addr), ykoord(addr), size, size);
   }
   XDrawPoint(display, xwindow, clearGC, tasks / processRatio, splY[warNum]);
   if (!doesBs)
@@ -1475,6 +1516,10 @@ xWin_resize(void)
   case 6:
     xsize = 320;
     ysize = 200;
+    break;
+  case 7:
+    xsize = 1280;
+    ysize = 960;
     break;
   default:
     xsize = 640;
@@ -1547,6 +1592,10 @@ init_xwin()
     xsize = 320;
     ysize = 200;
     break;
+  case 7:
+    xsize = 1280;
+    ysize = 960;
+    break;
   default:
     xsize = 640;
     ysize = 480;
@@ -1574,17 +1623,20 @@ init_xwin()
   colormap = DefaultColormap(display, screenNum);
   alloc_colors();
 
-  /*
-   * try to load the indicated font, fall back to "fixed" as a last resort
-   */
-  if (xStorage[2] != NULL)
-    fontName = xStorage[2];
-  if ((fontInfo = XLoadQueryFont(display, fontName)) == NULL) {
-    fprintf(stderr, cantOpenFont, fontName);
-
-    if ((fontInfo = XLoadQueryFont(display, "fixed")) == NULL)
-      my_err(noFixedFont);
+  char fontName[100];
+  for (int fontsize = xsize / 40; fontsize > 8; fontsize--) {
+    sprintf(fontName, "-*-fixed-medium-r-normal--%d-*-*-*-c-*-iso8859-1", fontsize);
+    fontInfo = XLoadQueryFont(display, fontName);
+    if (fontInfo)
+      break;
   }
+
+  if (!fontInfo)
+    fontInfo = XLoadQueryFont(display, "fixed");
+
+  if (!fontInfo)
+    my_err(noFixedFont);
+
   horizspace = fontInfo->max_bounds.width;
   verspace = fontInfo->ascent + fontInfo->descent;
 
@@ -1604,7 +1656,7 @@ init_xwin()
   if(colormap != DefaultColormap(display, screenNum))
     XSetWindowColormap(display, xwindow, colormap);
 
-  get_gc();                        /* allocate the GCs */
+  get_gc();                     /* allocate the GCs */
 
   /* does the X server support backing store? */
   if (DoesBackingStore(ScreenOfDisplay(display, screenNum)) == NotUseful) {
@@ -1641,6 +1693,9 @@ init_xwin()
   wmHints->icon_pixmap = XCreateBitmapFromData(display, xwindow,
                             pmarsicn_bits, pmarsicn_width, pmarsicn_height);
 
+  set_pmars_icon(display, xwindow);
+
+
   /* resource & class names */
   classHints->res_name = "pmars";
   classHints->res_class = "pmars";
@@ -1671,15 +1726,22 @@ xWin_open_graphics()
   XEvent  event;
   int     i;
 
-  init_xwin();                        /* create the window */
+  init_xwin();                  /* create the window */
 
   if (warriors <= 2) {
     splY[0] = fontInfo->ascent + fontInfo->descent + 1;
     splY[1] = splY[0] + 2;
+#ifdef SAFECOLORS
+    colors[0] = BLUE;
+    colors[1] = ORANGE;
+    datcolors[0] = BLUE + 7;
+    datcolors[1] = ORANGE + 7;
+#else
     colors[0] = GREEN;
     colors[1] = LIGHTRED;
     datcolors[0] = GREEN + 1;
     datcolors[1] = LIGHTRED + 1;
+#endif
   } else {
     for (i = 0; i < 21; i++) {
       if (warriors <= 10)
@@ -1697,7 +1759,7 @@ xWin_open_graphics()
 
   graphio_init();
 
-  for (;;) {                        /* wait for the first expose event */
+  for (;;) {                    /* wait for the first expose event */
     XNextEvent(display, &event);
     if (event.type == Expose)
       break;
@@ -1706,4 +1768,33 @@ xWin_open_graphics()
   redraw();
 }
 
-#endif                                /* XWINGRAPHX */
+static void
+set_pmars_icon(Display *dpy, Window win)
+{
+  Atom net_wm_icon = XInternAtom(dpy, "_NET_WM_ICON", False);
+  Atom cardinal = XInternAtom(dpy, "CARDINAL", False);
+
+  static unsigned long icon[2 + pmarsicn_width * pmarsicn_height];
+
+  icon[0] = pmarsicn_width;
+  icon[1] = pmarsicn_height;
+
+  for (int y = 0; y < pmarsicn_height; y++) {
+    for (int x = 0; x < pmarsicn_width; x++) {
+      icon[2 + y * pmarsicn_width + x] =
+        (pmarsicn_bits[y * (pmarsicn_width / 8) + x / 8] & (1u << (x & 7)))
+        ? 0xFFFFFFFFUL
+        : 0x00000000UL;
+     }
+  }
+
+  XChangeProperty(dpy, win,
+                  net_wm_icon,
+                  cardinal, 32,
+                  PropModeReplace,
+                  (unsigned char *)icon,
+                  2 + pmarsicn_width * pmarsicn_height);
+}
+
+#endif                          /* XWINGRAPHX */
+

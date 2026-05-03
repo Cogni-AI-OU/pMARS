@@ -656,7 +656,7 @@ textout(str)
   macputs(str);
 #else
   if (!inCdb)
-    fprintf(stderr, str);
+    fprintf(stderr, "%s", str);
 #if defined DOSALLGRAPHX
   else {
     if (displayMode == TEXT)
@@ -682,7 +682,7 @@ textout(str)
     xWin_puts(str);
 #else                                /* no display */
   else
-    fprintf(stderr, str);
+    fprintf(stderr, "%s", str);
 #endif                                /* XWINGRAPHX */
 #endif                                /* LINUXGRAPHX */
 #endif                                /* DOSGRXGRAPHX */
@@ -827,7 +827,7 @@ errprn(code, aline, arg)
 #ifdef __MAC__
     textout(notEnoughMemErr);
 #else
-    fprintf(stderr, notEnoughMemErr);
+    fprintf(stderr, "%s", notEnoughMemErr);
 #endif
     Exit(MEMERR);
     break;
@@ -910,7 +910,7 @@ errprn(code, aline, arg)
   }
 
   if (ierr >= ERRMAX) {
-    sprintf(outs, tooManyMsgErr);
+    sprintf(outs, "%s", tooManyMsgErr);
 #ifndef VMS
     textout(outs);
 #else
@@ -2180,7 +2180,7 @@ assemble(fName, aWarrior)
               break;
             }
           buf[i] = 0;
-          if (buf[i - 1] == '\\' && commentfound == FALSE) {        /* line continued */
+          if (i > 0 && buf[i - 1] == '\\' && commentfound == FALSE) {        /* line continued */
             conLine = TRUE;
             buf[--i] = 0;        /* reset */
           } else
@@ -2341,7 +2341,7 @@ assemble(fName, aWarrior)
         textout(outs);
       }
     if (errnum + warnum) {
-      sprintf(outs, "\n");
+      sprintf(outs, "%s", "\n");
       textout(outs);
     }
   } else

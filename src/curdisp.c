@@ -22,11 +22,16 @@
  * $Id: curdisp.c,v 1.2 2000/12/24 12:51:48 iltzu Exp $
  */
 
-#if defined(CURSESGRAPHX)
+#ifdef CURSESGRAPHX
+
+#include <unistd.h>
 
 #ifndef SIM_INCLUDED
 #include "sim.h"
 #endif
+
+extern unsigned long loopDelayAr[SPEEDLEVELS];
+static int use_color;
 
 /* For window structure in BSD 4.4/Curses 8.x library */
 #ifdef BSD44
@@ -79,37 +84,39 @@ static win_t *globalwin = NULL;
 /* Can be accessed from curwinstat -> win. For speed purpose only */
 static WINDOW *curwin = NULL, *corewin, *corewin2, *cdbwin, *cdbwin2;
 static int scale;                /* to reduce computation time */
-static char statusLine[120], preStatusLine[120];
+static char statusLine[120];
 static int refreshCounter;
 
 #define GRAPH_ERROR escape(cannotOpenNewWindow, "?()", GRAPH_ERR)
 #define PABORT      escape(errorInCurdispc, "", GRAPH_ERR)
 
-/*
- * For speed esp. over slow baud lines: sparse screen update -> draw a
- * character only if it isn't on-screen already
- * (SPARSE_UPDATE should usually be defined; code is conditional for
- * testing purposes only)
- */
-#define SPARSE_UPDATE_NOPE
-#ifdef SPARSE_UPDATE
-static char *vScreen = NULL;
 #define PUT_ARENA(addr, chr) \
 do {\
-        register int i; \
-        char cht=chr << ((W-warrior) % 2); /* !mw! */\
-        if (vScreen[i = ((addr) / scale)] != cht) {\
-            mvwaddch(corewin, i/COLS, i%COLS, chr);\
-         vScreen[i]=cht;\
-        }\
-} while(0)
-#else
-#define PUT_ARENA(addr, chr) \
+  int i = ((addr) / scale); \
+  int w = (W-warrior) % 8; \
+  if (use_color) {\
+    wattron(corewin, COLOR_PAIR(w + 1)); \
+    mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
+    wattroff(corewin, COLOR_PAIR(w + 1)); \
+  } else { \
+    mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
+  } \
+} while (0)
+
+#define PUT_ARENA_INV(addr, chr) \
 do {\
-      register int i;\
-      mvwaddch(corewin, (i = ((addr)/scale))/COLS, i % COLS, (chr));\
-   } while(0)
-#endif
+  int i = ((addr) / scale); \
+  int w = (W-warrior) % 8; \
+  if (use_color) {\
+    wattron(corewin, COLOR_PAIR(w + 9)); \
+    mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
+    wattroff(corewin, COLOR_PAIR(w + 9)); \
+  } else { \
+    wstandout(corewin); \
+    mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
+    wstandend(corewin); \
+  } \
+} while (0)
 
 #define display_die(warnum)
 #define display_push(val)
@@ -140,7 +147,7 @@ do {\
 #define cur_display_inc(addr) \
  PUT_ARENA(addr, '+');
 #define cur_display_exec(addr) \
- PUT_ARENA(addr, ((W-warrior)+'0'));
+ PUT_ARENA_INV(addr, ((W-warrior)+'0'));
 #define cur_display_spl(warrior,tasks)
 #define cur_display_dat(addr,warrior,tasks) \
  PUT_ARENA(addr, '*');
@@ -149,21 +156,20 @@ do {\
 void
 cur_display_cycle()
 {
-  if (displayLevel)
-    if ((int) (W - warrior) % 2)
-      wstandout(corewin);
-    else {
-      wstandend(corewin);
-      if (!--refreshCounter) {
-        refreshCounter = refreshInterval;
-        update_statusline(round);
-        wrefresh(corewin);
-      }
-    }
+  if (displayLevel && !--refreshCounter) {
+    refreshCounter = refreshInterval;
+    update_statusline(round_num);
+    wrefresh(corewin);
+  }
+
 #if defined(SYSV) && defined(KEYPRESS)                         /* PAK */
   if (wgetch(corewin) != ERR)
     debugState = STEP;
 #endif
+
+  int loopDelay = loopDelayAr[displaySpeed];
+  if (loopDelay > 1)
+    usleep(loopDelay);
 }
 
 /* Initialize curses windows */
@@ -171,6 +177,42 @@ void
 init_curses()
 {
   initscr();
+  use_color = has_colors();
+    if (use_color) {
+      start_color();
+      use_default_colors();
+#ifndef SAFECOLORS
+      init_pair(1, COLOR_RED, COLOR_BLACK);
+      init_pair(9, COLOR_BLACK, COLOR_RED);
+      init_pair(2, COLOR_GREEN, COLOR_BLACK);
+      init_pair(10, COLOR_BLACK, COLOR_GREEN);
+      init_pair(3, COLOR_BLUE, COLOR_BLACK);
+      init_pair(11, COLOR_BLACK, COLOR_BLUE);
+      init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+      init_pair(12, COLOR_BLACK, COLOR_MAGENTA);
+      init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+      init_pair(13, COLOR_BLACK, COLOR_YELLOW);
+      init_pair(6, COLOR_CYAN, COLOR_BLACK);
+      init_pair(14, COLOR_BLACK, COLOR_CYAN);
+      init_pair(7, COLOR_WHITE, COLOR_BLACK);
+      init_pair(15, COLOR_BLACK, COLOR_WHITE);
+#else
+      init_pair(1, COLOR_BLUE, COLOR_BLACK);
+      init_pair(9, COLOR_BLACK, COLOR_BLUE);
+      init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+      init_pair(10, COLOR_BLACK, COLOR_YELLOW);
+      init_pair(3, COLOR_MAGENTA, COLOR_BLACK);
+      init_pair(11, COLOR_BLACK, COLOR_MAGENTA);
+      init_pair(4, COLOR_RED, COLOR_BLACK);
+      init_pair(12, COLOR_BLACK, COLOR_RED);
+      init_pair(5, COLOR_CYAN, COLOR_BLACK);
+      init_pair(13, COLOR_BLACK, COLOR_CYAN);
+      init_pair(6, COLOR_GREEN, COLOR_BLACK);
+      init_pair(14, COLOR_BLACK, COLOR_GREEN);
+      init_pair(7, COLOR_WHITE, COLOR_BLACK);
+      init_pair(15, COLOR_BLACK, COLOR_WHITE);
+#endif
+    }
 
 /* Handle all keys except interrupting keys */
   cbreak();
@@ -207,7 +249,6 @@ createwindow(lines, cols, y, x, page)
     globalwin = awin;
   } else
     escape(cannotAllocateWindowMemory, "getwin()", GRAPHERR);
-
   return awin;
 }
 
@@ -247,54 +288,55 @@ cur_display_init()
   switch (warriors) {
   case 1:
     statuslines = COLS < 40 ? 2 : 1;
-    sprintf(preStatusLine, "%0.20s [0]: %%-5d Cycle: %%-6d", warrior[0].name);
     break;
   case 2:
     statuslines = COLS < 80 ? 2 : 1;
-    sprintf(preStatusLine, "%10.10s [0]: %%-5d %10.10s [1]: %%-5d Cycle: %%-6d R: %%d/%d (%%d %%d %%d)",
-            warrior[0].name, warrior[1].name, rounds);
     break;
   default:
     statuslines = COLS < 60 ? 2 : 1;
-    sprintf(preStatusLine, "%%d of %d warriors alive  Cycle: %%-6d R: %%d/%d",
-            warriors, rounds);
   }
   corelines = LINES - statuslines;
   corewin = createwindow(corelines, COLS, 0, 0, CORE_PAGE)->win;
   corewin2 = createwindow(statuslines, COLS, corelines, 0, newpg())->win;
   cdbwin = createwindow(LINES, COLS, 0, 0, CDB_PAGE)->win;
   cdbwin2 = createwindow(LINES, COLS / 2, 0, COLS / 2, newpg())->win;
-
   refreshCounter = refreshInterval;
   scale = 1 + (coreSize - 1) / (corelines * COLS);
-
-#ifdef SPARSE_UPDATE
-  if ((vScreen = (char *) malloc(corelines * COLS)) == NULL)
-    escape(cannotAllocateVirtualScreen, "", GRAPHERR);
-  else
-    for (idx = 0; idx < corelines * COLS; idx++)
-      vScreen[idx] = ' ';
-#endif
 }
 
 void
-update_statusline(round)
-  int     round;
+update_statusline(round_num)
+  int     round_num;
 {
-  switch (warriors) {
-  case 1:
-    sprintf(statusLine, preStatusLine, warrior[0].tasks, cycle);
-    break;
-  case 2:
-    sprintf(statusLine, preStatusLine, warrior[0].tasks, warrior[1].tasks,
-            cycle >> 1, round, warrior[0].score[0], warrior[0].score[2],
-            warrior[0].score[1]);
-    break;
-  default:
-    sprintf(statusLine, preStatusLine, warriorsLeft, cycle / warriorsLeft,
-            round);
+  int xpos = 0;
+  if (warriors < 3) {
+    werase(corewin2);
+    if (use_color)
+      wattron(corewin2, COLOR_PAIR(1));
+    mvwprintw(corewin2, 0, xpos, "%10.10s", warrior[0].name);
+    if (use_color)
+      wattroff(corewin2, COLOR_PAIR(1));
+    xpos += 10;
+    mvwprintw(corewin2, 0, xpos, " [0]: %-5d ", warrior[0].tasks);
+    xpos += 12;
   }
-  mvwaddstr(corewin2, 0, 0, statusLine);
+
+  if (warriors == 2) {
+    if (use_color)
+      wattron(corewin2, COLOR_PAIR(2));
+    mvwprintw(corewin2, 0, xpos, "%10.10s", warrior[1].name);
+    if (use_color)
+      wattroff(corewin2, COLOR_PAIR(2));
+    xpos += 10;
+    mvwprintw(corewin2, 0, xpos, " [1]: %-5d Cycle: %-6d R: %d/%d (%d %d %d)",
+      warrior[1].tasks, cycle >> 1, round_num, rounds, warrior[0].score[0],
+      warrior[0].score[2], warrior[0].score[1]);
+  }
+
+  if (warriors > 2)
+    mvwprintw(corewin2, 0, xpos, "%d of %d warriors alive  Cycle: %-6d R: %d/%d",
+      warriorsLeft, warriors, cycle / warriorsLeft, round_num, rounds);
+
   wrefresh(corewin2);
 }
 
@@ -392,18 +434,9 @@ aputs5(str, attr)
   int     attr;
 {
   int     y, x;
-
   getyx(curwin, y, x);
-  if (attr != NORMAL_ATTR)
-    wstandout(curwin);
   for (; *str; str++)
     waddch(curwin, (char) *str);
-  if (attr != NORMAL_ATTR)
-    wstandend(curwin);
-  /*
-   * for better performance, this is now done in cdb.c:get_cmd()
-   * wrefresh(curwin);
-   */
 }
 
 char   *
@@ -429,24 +462,10 @@ agets5(str, maxchar, attr)
           maxchar++;
           leaveok(curwin, TRUE);
           if (ox = curwin->_curx) {
-#if 0
-#ifdef ATTRIBUTE
-            mvwaddch(curwin, curwin->_cury, --ox, ' ' | attr);
-#else
-            mvwaddch(curwin, curwin->_cury, --ox, ' ');
-#endif
-#endif                                /* 0 */
             mvwaddch(curwin, curwin->_cury, --ox, ' ');
             wmove(curwin, curwin->_cury, ox);
           } else {
             oy = curwin->_cury - 1;
-#if 0
-#ifdef ATTRIBUTE
-            mvwaddch(curwin, oy, COLS - 1, ' ' | attr);
-#else
-            mvwaddch(curwin, oy, COLS - 1, ' ');
-#endif
-#endif                                /* 0 */
             mvwaddch(curwin, oy, COLS - 1, ' ');
             wmove(curwin, oy, COLS - 1);
           }
@@ -454,36 +473,12 @@ agets5(str, maxchar, attr)
           wrefresh(curwin);
         }
         break;
-#if 0                                /* TAB now generated a macro call */
-      case '\t':
-        if (maxchar > 3) {
-          aputs5("    ", attr);
-          strcpy(str, "    ");
-          str += 4;
-          maxchar -= 4;
-        }
-        break;
-#endif
       case 27:
         leaveok(curwin, TRUE);
         for (getyx(curwin, oy, ox); str > ostr; str--, maxchar++) {
           if (ox--)
-#if 0
-#ifdef ATTRIBUTE
-            mvwaddch(curwin, curwin->_cury, ox, ' ' | attr);
-#else
             mvwaddch(curwin, curwin->_cury, ox, ' ');
-#endif
-#endif                                /* 0 */
-          mvwaddch(curwin, curwin->_cury, ox, ' ');
           else
-#if 0
-#ifdef ATTRIBUTE
-          mvwaddch(curwin, oy, ox = COLS, ' ' | attr);
-#else
-          mvwaddch(curwin, oy, ox = COLS, ' ');
-#endif
-#endif                                /* 0 */
           mvwaddch(curwin, oy, ox = COLS, ' ');
         }
         leaveok(curwin, FALSE);
@@ -505,13 +500,6 @@ agets5(str, maxchar, attr)
           wrefresh(curwin);
           return ostr;
         } else {
-#if 0
-#ifdef ATTRIBUTE
-          waddch(curwin, (*str++ = ch) | attr);
-#else
-          waddch(curwin, *str++ = ch);
-#endif
-#endif                                /* 0 */
           waddch(curwin, *str++ = ch);
           maxchar--;
           wrefresh(curwin);
@@ -529,12 +517,10 @@ agets5(str, maxchar, attr)
 /* must only be called from cdb() */
 void
 text_display_clear()
-{                                /* clear screen at CORE_PAGE */
-  register int idx;
-
-  wstandend(corewin);
-  for (idx = 0; idx < coreSize; ++idx)
-    PUT_ARENA(idx, ' ');
+{
+  if (use_color)
+    wbkgdset(corewin, COLOR_PAIR(0));
+  werase(corewin);
   wrefresh(corewin);
 }
 
@@ -542,14 +528,13 @@ void
 text_display_close()
 {
   if (displayLevel) {
-    update_statusline(round - 1);
-    wstandout(corewin);
+    update_statusline(round_num - 1);
     mvwaddstr(corewin, 0, 0, pressAnyKey);
     wrefresh(corewin);
-    if (!inputRedirection)
+    if (!inputRedirection) {
       getch();
+    }
   }
-  wstandend(corewin);
   switch_page(DEF_PAGE);
   end_curses();
 }
@@ -567,7 +552,6 @@ escape(s, p, errCode)
 {
   clear();
   refresh();
-  /* doupdate(); */
   nl();
   nocbreak();
   echo();
@@ -577,7 +561,6 @@ escape(s, p, errCode)
     fprintf(stderr, "%s: %s\n%s\n", p, s, cursesError);
   else
     printf("%s\n", s);
-
   exit(errCode);
 }
 

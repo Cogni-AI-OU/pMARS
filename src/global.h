@@ -127,8 +127,8 @@ enum {
 
 /* Version and date */
 
-#define PMARSVER  94
-#define PMARSDATE "04/07/22"
+#define PMARSVER  95
+#define PMARSDATE "03/01/2026"
 
 #ifdef VMS                        /* Must change codes to work with VMS error
                                  * handling */
@@ -283,7 +283,7 @@ typedef struct warrior_struct {
   int     instLen;                /* Length of instBank */
   int     offset;                /* Offset value specified by 'ORG' or 'END'.
                                  * 0 is default */
-  short   score[MAXWARRIOR * 2 - 1];
+  int     score[MAXWARRIOR * 2 - 1];
 
   char   *name;                        /* warrior name */
   char   *version;
@@ -367,6 +367,8 @@ extern ADDR_T pSpaceSize;
    display define's, declarations and typedefs
    *********************************************************************** */
 
+#define         SPEEDLEVELS 9
+
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
     || defined(XWINGRAPHX)
 
@@ -374,7 +376,6 @@ extern ADDR_T pSpaceSize;
 #define         TEXT 0
 #endif
 #define         GRX 1
-#define         SPEEDLEVELS 9
 #define         NORMAL_ATTR 0x0700
 extern int displayLevel;
 extern int displayMode;
@@ -425,7 +426,6 @@ extern int score(int warnum);
 extern void sort_by_score(int *idxV, int *scrV);
 extern int deaths(int warnum);
 extern void results(FILE * outp);
-extern void sort_by_score();
 extern void Exit(int code);
 extern void reset_regs(void);
 extern void set_reg(char regChr, long val);

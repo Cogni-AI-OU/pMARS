@@ -1008,6 +1008,7 @@ ADDR_T
 queue(index)
   int     index;
 {
+  index = (index % QW->tasks + QW->tasks) % QW->tasks;
   if (!index)
     return progCnt;
   else
@@ -1564,7 +1565,7 @@ subst_eval(inpStr, result)
             (warriorsLeft ? warriorsLeft : 1));
     substitute(buf[bi1], "CYCLE", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%d", round);
+    sprintf(outs, "%d", round_num);
     substitute(buf[bi1], "ROUND", outs, buf[bi2]);
 
     SWITCHBI;
@@ -1763,7 +1764,7 @@ print_core(start, stop)
   if (displayMode != TEXT)
     showLines = bgiTextLines - 1;
   else
-    showLines = screenY - 2;;
+    showLines = screenY - 2;
 #else
 #if defined(DOSGRXGRAPHX)
   showLines = bgiTextLines - 1;
@@ -1875,7 +1876,7 @@ print_registers()
 #endif
   int     nFuture, nPast, count, taskHalf = (coreSize <= 10000 ? 7 : 5);
 
-  sprintf(outs, roundOfCycle, round, rounds,
+  sprintf(outs, roundOfCycle, round_num, rounds,
           (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
           (warriorsLeft ? warriorsLeft : 1));
   cdb_fputs(outs, COND);
@@ -1895,7 +1896,7 @@ print_registers()
     thisProc = W->taskTail + (totaltask - nPast);
   else
     thisProc = W->taskTail - nPast;
-  for (; thisProc < W->taskTail;) {
+  for (count = nPast; --count >= 0; ) {
     sprintf(outs, "%d ", *thisProc);
     cdb_fputs(outs, COND);
 #ifdef DOS16
@@ -2507,7 +2508,7 @@ results(outp)
       fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
               scrV[idxV[i]]);
       if (warriors > 2) {
-        fprintf(outp, resultsAre);
+        fprintf(outp, "%s", resultsAre);
         for (j = 0; j < warriors; ++j) {
           fprintf(outp, " %d", warrior[idxV[i]].score[j]);
         }
@@ -2582,7 +2583,7 @@ results(outp)
       fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
               scrV[idxV[i]]);
       if (warriors > 2) {
-        fprintf(outp, resultsAre);
+        fprintf(outp, "%s", resultsAre);
         for (j = 0; j < warriors; ++j) {
           fprintf(outp, " %d", warrior[idxV[i]].score[j]);
         }
@@ -2599,7 +2600,7 @@ results(outp)
     fprintf(outp, nameByAuthorScores, warrior[idxV[i]].name, warrior[idxV[i]].authorName,
             scrV[idxV[i]]);
     if (warriors > 2) {
-      fprintf(outp, resultsAre);
+      fprintf(outp, "%s", resultsAre);
       for (j = 0; j < warriors; ++j) {
         fprintf(outp, " %d", warrior[idxV[i]].score[j]);
       }

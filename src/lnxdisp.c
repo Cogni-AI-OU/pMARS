@@ -1110,16 +1110,16 @@ svga_open_graphics()
     xsize = 640;
     ysize = 480;
     if (!vga_hasmode(gMode)) {
-      fprintf(stderr, tryingNext);
+      fprintf(stderr, "%s", tryingNext);
       gMode = G320x200x256;
       xsize = 320;
       ysize = 200;
       if (!vga_hasmode(gMode)) {
-	fprintf(stderr, noModes);
+	fprintf(stderr, "%s", noModes);
 	exit(1);
       }
     }
-    fprintf(stderr, "\n");
+    fprintf(stderr, "%s", "\n");
   }
   tionew = tio_orig;
   tionew.c_lflag &= ~(ICANON | ECHO);
