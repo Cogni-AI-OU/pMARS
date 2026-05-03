@@ -134,7 +134,7 @@ text_display_init()
       !(Screen[DEF_PAGE] = (short *) malloc(screenSize * sizeof(short))) ||
       !(Screen[CORE_PAGE] = (short *) malloc(screenSize * sizeof(short))) ||
       !(Screen[CDB_PAGE] = (short *) malloc(screenSize * sizeof(short)))) {
-    fprintf(stderr, cannotAllocateScreenBuffers);
+    fprintf(stderr, "%s", cannotAllocateScreenBuffers);
     Exit(MEMERR);
   }
   for (idx = 0; idx < screenSize; idx++) {

@@ -20,6 +20,7 @@
  * pos.c: RNG and positioning functions
  * $Id: pos.c,v 1.1.1.1 2000/08/20 13:29:42 iltzu Exp $
  */
+#include <stdint.h>
 #include "global.h"
 #include "sim.h"
 
@@ -151,8 +152,8 @@ init_rc5(U32_T *schedule)
 #define ROL(x,y) (((U32_T)(x) << ((y)&31)) | ((U32_T)(x) >> ((y)&31)))
 #define ROR(x,y) (((U32_T)(x) >> ((y)&31)) | ((U32_T)(x) << ((y)&31)))
 
-#define _P 0xb7e15163UL
-#define _Q 0x9e3779b9UL
+#define _P UINT32_C(0xb7e15163)
+#define _Q UINT32_C(0x9e3779b9)
 
 static
 void

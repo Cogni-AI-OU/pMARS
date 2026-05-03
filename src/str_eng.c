@@ -314,7 +314,7 @@ char   *duplicateMsg = "Duplicate errors/warnings found in line %d (%d)\n";
 char   *credits_screen1 =
 "pMARS v%d.%d.%d, %s, corewar simulator with ICWS'94 extensions\n";
 char   *credits_screen2 =
-"Copyright (C) 1993-95 Albert Ma, Na'ndor Sieben, Stefan Strack and Mintardjo Wangsaw\n";
+"Copyright (C) 1993-2025 Albert Ma, Na'ndor Sieben, Stefan Strack and Mintardjo Wangsaw\n";
 
 #ifdef SERVER
 char   *credits_screen3 =
@@ -368,6 +368,7 @@ char   *usage_screen =
 
 
 char   *optionsAre = "Options:\n";
+char   *errTooManyOptions = "Error: Too many options\n   Consider increasing OPTNUM in clparse.c\n";
 #ifdef VMS
 char   *readingStdin = "[Reading from sys$input until Ctrl-Z or \"$\"]\n";
 #else

@@ -173,7 +173,7 @@ ADDR_T AA_Value, AB_Value;
 mem_struct FAR *memory;
 
 long    cycle;
-int     round;
+int     round_num;
 
 char    alloc_p = 0;                /* indicate whether memory has been allocated */
 int     warriorsLeft;                /* number of warriors still left in core */
@@ -328,7 +328,7 @@ register  int     temp;                        /* general purpose temporary vari
 #endif
 
   display_init();
-  round = 1;
+  round_num = 1;
   do {                                /* each round */
 #if defined(DOS16) && !defined(SERVER) && !defined(DOSTXTGRAPHX) && !defined(DOSGRXGRAPHX) && !defined(DJGPP)
     fputc('\r', stdout);        /* enable interruption by Ctrl-C */
@@ -689,16 +689,6 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 	memory[addrB].A_value = IR.A_value;
 	display_write(addrB);
 	break;
-
-#ifdef PERMUTATE
-  if (SWITCH_P) {
-    permbuf = (int *) malloc((size_t)(warriors * positions * sizeof(int)));
-    if (!permbuf) {
-      errout(outOfMemory);
-      Exit(MEMERR);
-    }
-  }
-#endif
 
       case OP(ADD, mA):
 	display_read(addrA);
@@ -1421,13 +1411,13 @@ nextround:
 #ifndef SERVER
     if (debugState == BREAK) {
       if (warriorsLeft == 1 && warriors != 1)
-	sprintf(outs, warriorTerminatedEndOfRound, W - warrior, W->name, round);
+	sprintf(outs, warriorTerminatedEndOfRound, W - warrior, W->name, round_num);
       else
-	sprintf(outs, endOfRound, round);
+	sprintf(outs, endOfRound, round_num);
       debugState = cdb(outs);
     }
 #endif
-  } while (++round <= rounds);
+  } while (++round_num <= rounds);
 
   display_close();
 #ifdef PERMUTATE

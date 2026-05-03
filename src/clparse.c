@@ -64,7 +64,7 @@ typedef struct clp_option_struct {
 /* externalized strings */
 
 extern char *credits_screen1, *credits_screen2, *credits_screen3, *usage_screen,
-       *optionsAre, *readingStdin, *readOptionsFromFile, *standardInput,
+       *optionsAre, *errTooManyOptions, *readingStdin, *readOptionsFromFile, *standardInput,
        *errorIsLocatedIn, *unknownOption, *badArgumentForSwitch, *optionMustBeInTheRange, *tooManyParameters,
        *cannotOpenParameterFile, *optRounds, *optEnterDebugger, *optDisabledInServerVersion,
        *optCoreSize, *optBrief, *optCycles, *optVerboseAssembly, *optProcesses,
@@ -111,6 +111,10 @@ int     parse_param();
 static char *describe[] = {"#", "#", "#", " ", "$"};
 
 #define  record(pword,pdtype,pstorage,pmin,pmax,pdef,pdescription)\
+     if (optI >= OPTNUM) { \
+       fprintf(stderr, "%s", errTooManyOptions); \
+       exit(1); \
+     } \
      options[optI].word        = pword;    \
      options[optI].dtype       = pdtype;   \
      options[optI].storage     = (pointer_t) pstorage; \
@@ -293,7 +297,7 @@ clp_parse(clopt, filep)
               if (next_input(filep, inputs)) {
                 if (!strcmp(inputs, "-")) {
                   newFile = stdin;
-                  fprintf(stderr, readingStdin);
+                  fprintf(stderr, "%s", readingStdin);
                 } else {
                   if ((newFile = fopen(inputs, "r")) == NULL) {
                     code = FILENAME;        /* command file not found */
@@ -434,11 +438,11 @@ ERROR:
     errout(outs);
     break;
   case MEMORY:
-    sprintf(outs, outOfMemory);
+    sprintf(outs, "%s", outOfMemory);
     errout(outs);
     break;
   case FILENAME:
-    sprintf(outs, cannotOpenParameterFile);
+    sprintf(outs, "%s", cannotOpenParameterFile);
     errout(outs);
     break;
   }
@@ -465,7 +469,7 @@ parse_param(largc, largv)
   * command line parameters and options                              *
   ********************************************************************/
 
-#define OPTNUM 21                /* don't forget to increase when adding new
+#define OPTNUM 23                /* don't forget to increase when adding new
                                  * options */
   static clp_opt_t options[OPTNUM];
   int     optI = 0;                /* used by record() macro */

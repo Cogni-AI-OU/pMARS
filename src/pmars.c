@@ -195,9 +195,9 @@ body()
 	if (warrior[i].pSpaceIndex == PIN_APPEARED) {
 	  fprintf(STDOUT, "       PIN     %6ld\n", warrior[i].pSpaceIDNumber);
 	}
-	fprintf(STDOUT,"       END\n");
+	fprintf(STDOUT, "%s", "       END\n");
       } else {
-	fprintf(STDOUT, "\n");
+	fprintf(STDOUT, "%s", "\n");
       }
     }
 #ifdef PSPACE                        /* set up pSpace */
@@ -313,7 +313,7 @@ main(argc, argv)
 #endif
 #if defined(LINUXGRAPHX)
   if (vga_init() == -1) {
-    fprintf(stderr, cantInitSvga);
+    fprintf(stderr, "%s", cantInitSvga);
     exit(1);
   }
   if ((console_fd = open("/dev/console", O_RDONLY)) == -1) {
