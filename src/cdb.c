@@ -324,7 +324,7 @@ static char *nextMacro = NULL, *macroTab[MAXMACROS];
 #endif
 
 warrior_struct *W2, *QW;
-char    outs[MAXSTR + 1], buffer1[MAXSTR + 1], buffer2[MAXSTR + 1];
+char    outs[MAXSTR + 512], buffer1[MAXSTR + 512], buffer2[MAXSTR + 512];
 char   *xInpP;                        /* pointer to inputStr[], used by
                                  * input-requiring functions called by cdb() */
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
@@ -876,7 +876,7 @@ cdb(message)
 #endif /* DOSTXTGRAPHX */
 #endif /* DOSGRXGRAPHX */
 #endif /* DOSALLGRAPHX */
-      system(argStr);
+      if (system(argStr)) { /* satisfy warn_unused_result */ }
 #if defined(DOSALLGRAPHX)
       if (displayMode == TEXT) {
         switch_page(CDB_PAGE);
@@ -1650,7 +1650,7 @@ subst_eval(inpStr, result)
     if (warriors < MAXWARRIOR) {/* PCN where N==warriors is PC */
       sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
                            0 : (targetID == WARRIOR ?
-                                W - warrior : progCnt)));
+                                 (int) (W - warrior) : progCnt)));
       sprintf(outs2, "PC%d", warriors);
       SWITCHBI;
       substitute(buf[bi1], outs2, outs, buf[bi2]);
@@ -1658,7 +1658,7 @@ subst_eval(inpStr, result)
     SWITCHBI;
     sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
                          0 : (targetID == WARRIOR ?
-                              W - warrior : progCnt)));
+                              (int) (W - warrior) : progCnt)));
     substitute(buf[bi1], "PC", outs, buf[bi2]);
     SWITCHBI;
     sprintf(outs, "%ld", (long) ((cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
@@ -2004,7 +2004,7 @@ print_registers()
           (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
           (warriorsLeft ? warriorsLeft : 1));
   cdb_fputs(outs, COND);
-  sprintf(outs, currentlyExecutingWarrior, W - warrior, W->name);
+  sprintf(outs, currentlyExecutingWarrior, (int) (W - warrior), W->name);
   cdb_fputs(outs, COND);
   sprintf(outs, processesActive, W->tasks);
   cdb_fputs(outs, COND);
@@ -2112,7 +2112,7 @@ print_registers()
     warrior_struct *TW;
     for (TW = warrior; TW < warrior + warriors; ++TW)
       if (TW != W) {
-        sprintf(outs, warriorAtAddressHasActiveProcesses, TW - warrior,
+        sprintf(outs, warriorAtAddressHasActiveProcesses, (int) (TW - warrior),
                 TW->name, *TW->taskHead, TW->tasks,
                 (TW->tasks == 1 ? "" : pluralEndingOfProcess));
         cdb_fputs(outs, COND);
