@@ -73,7 +73,7 @@ char   *CDB_PROMPT = "(cdb) ";
     *ch=0; } while(0)
 #define targetSelect(index) (targetID == CORE || targetID == PSP ?\
         index : (targetID == QUEUE ?\
-        queue(index) : ((int) (W - warrior) == index ? progCnt : *warrior[index].taskHead)))
+        queue(index) : (W-warrior==index ? progCnt : *warrior[index].taskHead)))
 #ifdef NEW_STYLE
 #define toupper_(x) (toupper(x))
 #else
@@ -324,7 +324,7 @@ static char *nextMacro = NULL, *macroTab[MAXMACROS];
 #endif
 
 warrior_struct *W2, *QW;
-char    outs[MAXSTR + 512], buffer1[MAXSTR + 512], buffer2[MAXSTR + 512];
+char    outs[MAXSTR + 1], buffer1[MAXSTR + 1], buffer2[MAXSTR + 1];
 char   *xInpP;                        /* pointer to inputStr[], used by
                                  * input-requiring functions called by cdb() */
 #if defined(DOSTXTGRAPHX) || defined(DOSGRXGRAPHX) || defined(LINUXGRAPHX) \
@@ -419,7 +419,7 @@ cdb(message)
     printf("\n");
 #endif
   } else if (targetID == WARRIOR) {
-    curAddr = (ADDR_T) (W - warrior);
+    curAddr = W - warrior;
     /* targetSize = warriors; */
   } else if (targetID == PSP) {
     QW = W;
@@ -876,7 +876,7 @@ cdb(message)
 #endif /* DOSTXTGRAPHX */
 #endif /* DOSGRXGRAPHX */
 #endif /* DOSALLGRAPHX */
-      if (system(argStr)) { /* satisfy warn_unused_result */ }
+      system(argStr);
 #if defined(DOSALLGRAPHX)
       if (displayMode == TEXT) {
         switch_page(CDB_PAGE);
@@ -888,14 +888,14 @@ cdb(message)
       open_graphics();
 #else
 #if defined(LINUXGRAPHX)
-      printf("%s", pressAnyKeyToContinue);
+      printf(pressAnyKeyToContinue);
       fflush(stdout);
       svga_getch();
       svga_open_graphics();
 #else
 #if defined(DOSTXTGRAPHX)
 #if defined(CURSESGRAPHX)
-      printf("%s", pressAnyKeyToContinue);
+      printf(pressAnyKeyToContinue);
       getch();
       clear_page5();
 #endif /* CURSESGRAPHX */
@@ -1019,7 +1019,7 @@ cdb(message)
         targetID = CORE;
         targetview = locview;
       } else {
-        curAddr = (ADDR_T) (W - warrior);
+        curAddr = W - warrior;
         targetSize = warriors;
         targetID = WARRIOR;
         targetview = warriorview;
@@ -1632,11 +1632,11 @@ subst_eval(inpStr, result)
   if (*pos) {
 
     SWITCHBI;
-    sprintf(outs, "%ld", (long) (targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].A_value));
+    sprintf(outs, "%d", targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].A_value);
     substitute(buf[bi1], "A", outs, buf[bi2]);
 
     SWITCHBI;
-    sprintf(outs, "%ld", (long) (targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].B_value));
+    sprintf(outs, "%d", targetID == PSP ? QW->pSpaceIndex : memory[targetSelect(curAddr)].B_value);
     substitute(buf[bi1], "B", outs, buf[bi2]);
 
     for (i = warriors - 1; i >= 0; --i) {
@@ -1650,7 +1650,7 @@ subst_eval(inpStr, result)
     if (warriors < MAXWARRIOR) {/* PCN where N==warriors is PC */
       sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
                            0 : (targetID == WARRIOR ?
-                                 (int) (W - warrior) : progCnt)));
+                                W - warrior : progCnt)));
       sprintf(outs2, "PC%d", warriors);
       SWITCHBI;
       substitute(buf[bi1], outs2, outs, buf[bi2]);
@@ -1658,11 +1658,11 @@ subst_eval(inpStr, result)
     SWITCHBI;
     sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
                          0 : (targetID == WARRIOR ?
-                              (int) (W - warrior) : progCnt)));
+                              W - warrior : progCnt)));
     substitute(buf[bi1], "PC", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%ld", (long) ((cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
-            (warriorsLeft ? warriorsLeft : 1)));
+    sprintf(outs, "%d", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
+            (warriorsLeft ? warriorsLeft : 1));
     substitute(buf[bi1], "CYCLE", outs, buf[bi2]);
     SWITCHBI;
     sprintf(outs, "%d", round_num);
@@ -2004,7 +2004,7 @@ print_registers()
           (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
           (warriorsLeft ? warriorsLeft : 1));
   cdb_fputs(outs, COND);
-  sprintf(outs, currentlyExecutingWarrior, (int) (W - warrior), W->name);
+  sprintf(outs, currentlyExecutingWarrior, W - warrior, W->name);
   cdb_fputs(outs, COND);
   sprintf(outs, processesActive, W->tasks);
   cdb_fputs(outs, COND);
@@ -2112,7 +2112,7 @@ print_registers()
     warrior_struct *TW;
     for (TW = warrior; TW < warrior + warriors; ++TW)
       if (TW != W) {
-        sprintf(outs, warriorAtAddressHasActiveProcesses, (int) (TW - warrior),
+        sprintf(outs, warriorAtAddressHasActiveProcesses, TW - warrior,
                 TW->name, *TW->taskHead, TW->tasks,
                 (TW->tasks == 1 ? "" : pluralEndingOfProcess));
         cdb_fputs(outs, COND);

@@ -212,7 +212,7 @@ extern  PMARS_FATAL, PMARS_BADCOMLIN, PMARS_PARSEERR;
 
 #define MAXSEPARATION MAXCORESIZE/MAXWARRIOR
 
-#define MAXALLCHAR 10000
+#define MAXALLCHAR 8000
 
 /* The following holds the order in which opcodes, modifiers, and addr_modes
    are represented as in parser. The enumerated field should start from zero */

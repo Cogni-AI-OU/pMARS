@@ -93,7 +93,7 @@ static int refreshCounter;
 #define PUT_ARENA(addr, chr) \
 do {\
   int i = ((addr) / scale); \
-  int w = (int) (W - warrior) % 8; \
+  int w = (W-warrior) % 8; \
   if (use_color) {\
     wattron(corewin, COLOR_PAIR(w + 1)); \
     mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
@@ -106,7 +106,7 @@ do {\
 #define PUT_ARENA_INV(addr, chr) \
 do {\
   int i = ((addr) / scale); \
-  int w = (int) (W - warrior) % 8; \
+  int w = (W-warrior) % 8; \
   if (use_color) {\
     wattron(corewin, COLOR_PAIR(w + 9)); \
     mvwaddch(corewin, i / COLS, i % COLS, (chr)); \
@@ -147,7 +147,7 @@ do {\
 #define cur_display_inc(addr) \
  PUT_ARENA(addr, '+');
 #define cur_display_exec(addr) \
- PUT_ARENA_INV(addr, ((int) (W - warrior) + '0'));
+ PUT_ARENA_INV(addr, ((W-warrior)+'0'));
 #define cur_display_spl(warrior,tasks)
 #define cur_display_dat(addr,warrior,tasks) \
  PUT_ARENA(addr, '*');
@@ -328,13 +328,13 @@ update_statusline(round_num)
     if (use_color)
       wattroff(corewin2, COLOR_PAIR(2));
     xpos += 10;
-    mvwprintw(corewin2, 0, xpos, " [1]: %-5d Cycle: %-6ld R: %d/%d (%d %d %d)",
+    mvwprintw(corewin2, 0, xpos, " [1]: %-5d Cycle: %-6d R: %d/%d (%d %d %d)",
       warrior[1].tasks, cycle >> 1, round_num, rounds, warrior[0].score[0],
       warrior[0].score[2], warrior[0].score[1]);
   }
 
   if (warriors > 2)
-    mvwprintw(corewin2, 0, xpos, "%d of %d warriors alive  Cycle: %-6ld R: %d/%d",
+    mvwprintw(corewin2, 0, xpos, "%d of %d warriors alive  Cycle: %-6d R: %d/%d",
       warriorsLeft, warriors, cycle / warriorsLeft, round_num, rounds);
 
   wrefresh(corewin2);
@@ -461,13 +461,11 @@ agets5(str, maxchar, attr)
           str--;
           maxchar++;
           leaveok(curwin, TRUE);
-          getyx(curwin, oy, ox);
-          if (ox > 0) {
-            --ox;
-            mvwaddch(curwin, oy, ox, ' ');
-            wmove(curwin, oy, ox);
+          if (ox = curwin->_curx) {
+            mvwaddch(curwin, curwin->_cury, --ox, ' ');
+            wmove(curwin, curwin->_cury, ox);
           } else {
-            --oy;
+            oy = curwin->_cury - 1;
             mvwaddch(curwin, oy, COLS - 1, ' ');
             wmove(curwin, oy, COLS - 1);
           }
@@ -478,14 +476,10 @@ agets5(str, maxchar, attr)
       case 27:
         leaveok(curwin, TRUE);
         for (getyx(curwin, oy, ox); str > ostr; str--, maxchar++) {
-          if (ox > 0) {
-            --ox;
-            mvwaddch(curwin, oy, ox, ' ');
-          } else {
-            --oy;
-            ox = COLS - 1;
-            mvwaddch(curwin, oy, ox, ' ');
-          }
+          if (ox--)
+            mvwaddch(curwin, curwin->_cury, ox, ' ');
+          else
+          mvwaddch(curwin, oy, ox = COLS, ' ');
         }
         leaveok(curwin, FALSE);
         wmove(curwin, oy, ox);

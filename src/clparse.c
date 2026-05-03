@@ -42,7 +42,7 @@
 #include <ctype.h>
 #include "global.h"
 
-#define CLP_MAXSTRLEN  10000
+#define CLP_MAXSTRLEN  8000
 #define CLP_ADDR ADDR_T
 #define CLP_LONG long
 #define CLP_INT int
@@ -232,19 +232,19 @@ next_input(filep, inputs)
   } else {
     *inputs = '\0';
     /* if (!feof(filep))  */
-    if (fscanf(filep, "%s", inputs)) { /* satisfy warn_unused_result */ }
+    fscanf(filep, "%s", inputs);
     if (*inputs == '"') {        /* quoted string */
       *inputs = ' ';
       i = strlen(inputs);
       if (inputs[i - 1] == '"')
         inputs[i - 1] = '\0';
       else
-        if (fscanf(filep, "%[^\"]%*[\"]", inputs + i)) { /* satisfy warn_unused_result */ }
+        fscanf(filep, "%[^\"]%*[\"]", inputs + i);
     }
     while (*inputs == ';') {
-      if (fgets(inputs, CLP_MAXSTRLEN, filep)) { /* satisfy warn_unused_result */ }
+      fgets(inputs, 100, filep);
       *inputs = '\0';
-      if (fscanf(filep, "%s", inputs)) { /* satisfy warn_unused_result */ }
+      fscanf(filep, "%s", inputs);
     }
   }
   if (!strcmp(inputs, "$"))        /* end of input marker */

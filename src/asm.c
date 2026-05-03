@@ -906,7 +906,7 @@ errprn(code, aline, arg)
 #endif
         sprintf(outs, inLine, aline->linesrc->loc, aline->linesrc->src);
         textout(outs);
-        sprintf(outs, "        %.7990s\n", abuf);
+        sprintf(outs, "        %s\n", abuf);
         textout(outs);
 #ifdef VMS
       } else {
@@ -957,7 +957,7 @@ errprn(code, aline, arg)
       textout(outs);
     else {
       fprintf(dias, "%s", StartDia);
-      fprintf(dias, "%s \"%s\"\n", Message, outs);
+      fprintf(dias, "Message \"%s\"\n", Message, outs);
       fprintf(dias, "%s", EndDia);
     }
 #endif

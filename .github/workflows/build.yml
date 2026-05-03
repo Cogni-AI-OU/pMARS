@@ -47,4 +47,4 @@ jobs:
     - name: Verify executable
       run: |
         ls -l src/pmars
-        ./src/pmars -A warriors/aeka.red
+        ./src/pmars -A warriors/excalibur.red
