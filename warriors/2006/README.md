@@ -1,6 +1,6 @@
 # Corewar Datagram Tournament 2006 Warriors
 
-This directory contains warriors from the Corewar Datagram Tournament held in 2006.
+This directory contains warriors from the Corewar Datagram Tournament held in 2006 ([link](http://corewar.atspace.com/tournament.html)).
 Full information and results can be found at [corewar.co.uk/datagram](https://corewar.co.uk/datagram/).
 
 ## Round 1 Information
@@ -37,6 +37,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - **P-Space**: Allowed, no restrictions
 
 ### Round 2 Warriors
+- `sf_r2.red`: no hope by S. Fernandes
 - `Baltus 2` by Heath Caldwell
 - `Smooch` by Chip Wendell
 - `One Bullet Symphony` by inversed
@@ -47,7 +48,6 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - `Kiss of Death` by Roy van Rijn
 - `KryneCSEC` by Nenad Tomasev
 - `The One` by Neogryzor
-- `no hope` by S. Fernandes
 - `Table Scan` by LAchi
 
 ## Round 3 Information
