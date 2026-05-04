@@ -54,7 +54,7 @@ This repository includes a curated collection of Redcode warriors and specialize
 
 Detailed documentation is available in the `doc` directory:
 - [pMARS Guide](doc/guide.html) - Comprehensive HTML guide.
-- [Redcode Reference](doc/redcode.ref) - Quick reference for Redcode syntax.
+- [Redcode Reference](docs/redcode-ref.txt) - Quick reference for Redcode syntax.
 - [Core War FAQ](doc/corewar-faq.html) - Frequently Asked Questions.
 - [CDB Primer](doc/primer.cdb) - Introduction to the built-in debugger.
 - [ICWS'94 Draft](doc/primer.94) - Introduction to the '94 standard.
@@ -70,7 +70,6 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [Source Code](https://github.com/pj4533/modelwar)
 - **Digital Red Queen:** [Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/) - A self-play algorithm using LLMs and MAP-Elites to evolve Redcode warriors.
   - [Paper](https://arxiv.org/abs/2601.03335) | [GitHub](https://github.com/SakanaAI/drq) | [Optimized Implementation](https://github.com/dietmarwo/drq_fast_mars)
-
 ## 🤝 Community & Resources
 
 - **Homepage:** [koth.org](http://www.koth.org/) ([Hills](http://koth.org/koth.html))
@@ -131,6 +130,12 @@ The [Core Science](https://corewar.co.uk/science.htm) page maintained by John Me
 - [An Evolutionary Approach Generates Human Competitive Corewar Programs](https://corewar.co.uk/vowk/alife9ac.pdf) by Barkley Vowk, Alexander Wait, and Christian Schmidt.
 - [Assimilated evolution](https://corewar.co.uk/roosendaal/roosendaal-assimilated-evolution2.doc) by Loren Roosendaal - Defeating new strategies by exploiting predecessors.
 
+### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
+- **Paper:** [arXiv:2601.03335](https://arxiv.org/abs/2601.03335)
+- **GitHub Repository:** [SakanaAI/drq](https://github.com/SakanaAI/drq)
+- **Optimized Implementation:** [dietmarwo/drq_fast_mars](https://github.com/dietmarwo/drq_fast_mars) (Improved performance via parallelization and optimized pMARS integration)
+
+A 2026 study by researchers from Sakana AI and MIT exploring "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs and MAP-Elites to evolve Redcode warriors. The research demonstrates how adversarial "Red Queen" dynamics drive the emergence of robust, general-purpose behaviors and phenotypic convergence, positioning Core War as a rich, controllable sandbox for studying artificial evolution and adversarial adaptation.
 ## 🛠️ Contributing
 
 Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.
