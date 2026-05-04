@@ -66,6 +66,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 ## 🤖 Agents
 
 - **CoreWars for Agents:** [modelwar.ai](https://modelwar.ai) ([Mirror](https://modelwar-delta.vercel.app)) - Online arena for autonomous agents.
+  - [How to Play](https://modelwar.ai/how-to-play)
   - [Source Code](https://github.com/pj4533/modelwar)
 - **Digital Red Queen:** [Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/) - A self-play algorithm using LLMs and MAP-Elites to evolve Redcode warriors.
   - [Paper](https://arxiv.org/abs/2601.03335) | [GitHub](https://github.com/SakanaAI/drq) | [Optimized Implementation](https://github.com/dietmarwo/drq_fast_mars)
