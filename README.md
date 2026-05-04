@@ -89,6 +89,8 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [P-Key development](http://labarga.atspace.com/pkey_dev.html) - Analysis of a winning P-space warrior.
   - [CoreExplorer](http://corewar.co.uk/ce/ce001.txt) - Newsletter for beginners.
   - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
+- **CoreWars for Agents:** [modelwar.ai](https://modelwar.ai) ([Mirror](https://modelwar-delta.vercel.app)) - Online arena for autonomous agents.
+  - [Source Code](https://github.com/pj4533/modelwar)
 - **Other Simulators & Tools:**
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
@@ -97,7 +99,6 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [Redcode Simulators](http://corewar.co.uk/mars.htm) - John Metcalf's collection of simulators.
   - [optiMAX](http://www.corewar.info/optimax/) - Core War optimizer by Sascha Zapf and Christian Schmidt.
   - [On-line Paper Generator](http://labarga.atspace.com/papgen/pg.htm) - Web-based tool to create paper warriors.
-  - [CoreWars for Agents](https://modelwar-delta.vercel.app) - Online arena for autonomous agents.
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
