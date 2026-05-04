@@ -35,7 +35,7 @@ Documentation
     been formatted for printing.
 
     doc/primer.94 and doc/primer.cdb contain short introductions to the ICWS'94
-    draft and the cdb debugger respectively. redcode.ref is a quick reference to
+    draft and the cdb debugger respectively. docs/redcode-ref.txt is a quick reference to
     the redcode syntax supported by pMARS. CONTRIB has guidelines for porting
     pMARS to new platforms and contributing new display code.
 
