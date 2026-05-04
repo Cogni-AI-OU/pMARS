@@ -1,0 +1,498 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 32                                                         June 3, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar fpt site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+______________________________________________________________________________
+Greetings.
+
+Not much action on either hill this week so there is little to report, but
+big changes are coming to a pizza hill near you.  Thos has proposed two
+upgrades to the hill script:  1) eliminate self fights and 2) include the
+'test' option.  While the merit of self fights may still be discussed, the
+addition of the 'test' option will be welcome by everyone.  Not only will it
+increase hill throughput by reducing full 25 challenge test warriors, but
+this feature should eliminate some of the artificial aging.  Other much
+wanted options mentioned in the newsgroup include:
+
+-- consolidated e-mail with all warrior results
+-- updates on your warriors' score against all current warriors
+-- ability to change the ;redcode line to control e-mail from the hill
+-- ability to modify the ;strategy lines
+
+These are not demands, merely wishful suggestions to two individuals--Thos
+and Tuc--who donate some of their time and effort to making core war a much
+more enjoyable game.
+
+Having trouble picking that magic constant?  Want to know how to most
+efficiently cover core?  Read Stefan Strack's short tutorial on MOPT, the
+multiple constant optimizer.  Also in this issue, Paul Kline discusses how
+to deal with all those nasty imp/ stones that have invaded the hill lately.
+Look for it in this week's hint.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 37/ 21                   Twister          Beppe Bezzi     147      31
+ 2  41/ 38/ 22                      Blur        Anton Marsden     144     323
+ 3  37/ 31/ 32                    Osseil             John K W     144      76
+ 4  35/ 26/ 40             the historian       bjoern guenzel     144      50
+ 5  42/ 41/ 17                      Yogi              P.Kline     143       2
+ 6  34/ 26/ 40          Scotch Broth 1.0        Robert Macrae     143      40
+ 7  38/ 34/ 28                   stoninc             Maurizio     142     170
+ 8  43/ 47/ 10                d-clear II       bjoern guenzel     139       8
+ 9  39/ 39/ 22                 Chameleon           M R Bremer     139    1387
+10  38/ 38/ 24                T.N.T. pro    Maurizio Vittuari     139     295
+11  37/ 37/ 25               Thermite II        Robert Macrae     137    1916
+12  27/ 17/ 56             Hazy Shade II             John K W     137     875
+13  40/ 43/ 17                  Scan Man        David van Dam     137     336
+14  40/ 45/ 15             HopScotch 1.6        Robert Macrae     136      44
+15  35/ 35/ 30                Bomber Boy        David van Dam     134     205
+16  28/ 22/ 49                   Rosebud                Beppe     134     250
+17  39/ 45/ 16            Stepping Stone          Kurt Franke     134     729
+18  40/ 48/ 12                    test P              P.Kline     133       1
+19  35/ 37/ 28      Grilled Octopus v0.5         David Boeren     133    1132
+20  29/ 26/ 45               blue candle       bjoern guenzel     132     164
+21  38/ 45/ 16        Violent Micro v0.4             basehead     132     181
+22  22/ 15/ 63                    ompega       Steven Morrell     130     177
+23  23/ 18/ 59                       EIF             John K W     127     124
+24  22/ 22/ 56                    Wicked             John K W     122      12
+25  30/ 52/ 18                      Test       Steven Morrell     109       3
+
+Weekly age: 42 ( 127 last week, 88 the week before )
+New warriors: 7  Turnover/age rate 17%
+Average age:    341 ( 311 last week, 435 the week before )
+Average score:  136 ( 140 last week, 141 the week before )
+The top 25 warriors are represented by 13 authors: Wilkinson with 4, guenzel
+and Macrae with 3, and Bezzi, Morrell, Kline, Vittuari, and van Dam with 2.
+
+Only 42 successful challenges!
+
+d-clear reigned early in the week, until Bezzi submitted his newest version
+of Twister, which utilizes a qscan before the Tornado type bomber.  Kline
+shortens Yogi Bear to Yogi, changes some plogic, and voila, a top five
+warrior.  EIF, Rosebud, blue candle, and Violent Micro have all dropped in
+the standings while veterans Thermite II and Chameleon manage to gain a few
+spots.  Blur and Osseil have remained relatively stable, neither one dropping
+out of the top ten.  One time king Scan Man has been everywhere from number
+2 to number 21.  Hopefully there will be some more next week or when
+the new hill scripts get finished and authors take their vengence on specific
+warriors.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+21  28/ 29/ 43          Scotch Broth 1.0        Robert Macrae     128       1
+ 1  42/ 38/ 20                   Twister          Beppe Bezzi     146       1
+23  22/ 19/ 59                    Wicked             John K W     125       1
+ 2  45/ 44/ 11                d-clear II       bjoern guenzel     145       1
+25  31/ 51/ 18                      Test       Steven Morrell     111       1
+ 3  42/ 42/ 17                      Yogi              P.Kline     142       1
+18  40/ 48/ 12                    test P              P.Kline     133       1
+
+Twister has been near the top spot ever since it was submitted.  d-clear
+started off strong, but is now in the 8th slot.  Yogi is still young and most
+likely has a lot more testing to go before Paul is satisfied with him.
+______________________________________________________________________________
+94 - What's No More
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26   1/  0/  3                       007        David van Dam       5       4
+26   0/  0/  3                Test Paper        Robert Macrae       4       4
+26   2/  1/  2               test rtiqe1                Beppe       6      57
+26   1/  1/  1                 Yogi Bear              P.Kline       5      35
+26   2/  1/  2                   d-clear       bjoern guenzel       7      29
+26   1/  0/  3         Lithium And Water             John K W       5      24
+26   0/ 47/ 53                   Unknown            Anonymous      53       2
+
+Most of these were killed by their authors.
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+11  37/ 37/ 25               Thermite II        Robert Macrae     137    1916
+ 9  39/ 39/ 22                 Chameleon           M R Bremer     139    1387
+19  35/ 37/ 28      Grilled Octopus v0.5         David Boeren     133    1132
+12  27/ 17/ 56             Hazy Shade II             John K W     137     875
+17  39/ 45/ 16            Stepping Stone          Kurt Franke     134     729
+13  40/ 43/ 17                  Scan Man        David van Dam     137     336
+ 2  41/ 38/ 22                      Blur        Anton Marsden     144     323
+
+Scan Man and Blur are beginning to show some age, but have a long way to go
+before they become eligible for the Hall of Fame.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Impfinity v4g1         Planar            1993    Stone/ imp
+ 2  Thermite II            Robert Macrae     1916 *  Qscan -> bomber
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1387 *  P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+13  Agony II               Stefan Strack      912    CMP scanner
+14  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Hazy Shade II          John Wilkinson     875 *  P-warrior
+15  Blue Funk              Steven Morrell     869    Stone/ imp
+16  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+18  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+19  Blue Funk 3            Steven Morrell     766    Stone/ imp
+20  Night Train            Karl Lewin         755    Replicator
+21  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+23  Stepping Stone         Kurt Franke        729 *  Qscan -> Vampire
+22  Blizzard               Anton Marsden      713    Qscan -> replicator
+24  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+25  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+
+Thermite II continues its trek towards the top of the Hall of Fame standings
+and the 2000 mark.  Hazy Shade II advances two places and Stepping Stone
+moves up one spot.  The next warrior that could enter the hall is van Dam's
+Scan Man, but it is still a long ways away at an age of 323.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  61/ 28/ 11       Violent Micro v0.4b             basehead     194      51
+ 2  58/ 30/ 12                    Sapper        Andrew Fabbro     185      25
+ 3  51/ 31/ 18                      Mace                Edgar     170      19
+ 4  49/ 31/ 21                 scan test       bjoern guenzel     167      79
+ 5  47/ 31/ 22                 Toxin IVa                Edgar     162      94
+ 6  49/ 36/ 15                   radar.b        John K. Lewis     162      48
+ 7  46/ 32/ 22                 Trebuchet        Andrew Fabbro     160      32
+ 8  43/ 26/ 31              Hunter V 0.8            O.Fechner     159      21
+ 9  45/ 31/ 24                 Toxin IVb                Edgar     158      81
+10  50/ 41/  9                 Drill 1.2                Edgar     158      23
+11  50/ 43/  8                 Drill 1.1                Edgar     157      96
+12  47/ 40/ 12                   Rusty.2           John Lewis     154       4
+13  44/ 34/ 22      Extremely Prejudiced         Scott Manley     153      26
+14  40/ 33/ 27         Fork v0.1-13p (i)    Christoph C. Birk     147       6
+15  41/ 43/ 16         Bloodhound Mk III        Andrew Fabbro     139      89
+16  39/ 44/ 17                  testvss2            Iain Hogg     133      16
+17  38/ 44/ 18        Yet Another Try 1a           Justin Kao     133       2
+18  41/ 50/  9     Micro Centurion (mod)                Edgar     132      53
+19  37/ 45/ 18                   testvss            Iain Hogg     128      17
+20  25/ 40/ 35         Hunter V 0.5 beta            O.Fechner     111      28
+21  24/ 39/ 36             Mutant Strain        John K. Lewis     109       5
+22  30/ 59/ 10                    gundam        John K. Lewis     101       3
+23  26/ 62/ 12                   Roundup          Jeff Hafner      90       1
+24  20/ 55/ 25                  bomberQ2             harleyQ2      84      29
+25  23/ 66/ 11                     Test1   Oscar Strawczynski      80       9
+
+Only 23 successful challenges!  Of course it is summer vacation for most
+colleges.  John K. Lewis has increased his presence on the hill with some new
+warriors.  O.Fechner seems to have brought Hunter out of beta and is enjoying
+some success in the top ten.
+______________________________________________________________________________
+The Hint
+by Paul Kline
+
+Beppe and others seem to be taking the 94 Hill over with those strong, fast
+stone-imp warriors.  So it's time for an antidote :-)
+
+Now, there are many ways to kill stones including paper, dodgers, faster
+stones, and sometimes big slow imps.  One principle that works well is
+numbers.  A single stand-still program is at a disadvantage against an
+opponent running at multiple locations.  Kill one part and the others just
+run faster.  Even a pair of bombers running at half-speed will prove very
+tough on the stone.
+
+I was working on this concept for a couple of days with some success and just
+about to submit something to the Hill for a trial when lo-and-behold Bjoern
+Guenzel published the perfect component for this purpose -> d-clear.
+
+My concept (not a new one) was to start a pair of core-clears running at a
+separation of 4000.  The stone would probably cripple one of them but the
+other might last long enough to get him.  And even with rough implementation
+it worked pretty well.  After the stone is wiped, any imps advance to the
+forward-clear pointer and are killed as well.
+
+I just have to say something about Bjoern's innovative use of the djn.f to
+drive his forward clear.  Many of us had tried the forward decrement in a
+program or two, but it has mostly been abandoned for that purpose.
+Unfortunately when the decrement hits it's own pointer it stops - the pointer
+is both incremented and decremented in the same instruction so there is no
+more progress, making it less destructive than a backward decrement.  Bjoern
+on the other hand saw this as a feature and used it to drive a forward core
+clear at 100% of c, alternately bombing and decrementing core multiple times
+until the whole thing has been dat-wiped.  If the clear-pointer is hit by dat
+it skips the clear code as usual.  But if the decrement hits the pointer it
+leaves it at zero until the dat is written there - wonderful!
+
+Wanting to see how d-clear worked against my own pair of programs, I ran a
+trial.  Yikes!  d-clear won about 60% of the rounds, what magic is he
+using???  A close inspection shows that d-clear starts his bombing run
+halfway around core from himself, meaning that the first of my components he
+kills is the one nearest to killing him.  Then a race to catch the other
+part, but since he is running at 100% of c and mine only at 66% he stands an
+excellent chance of killing that one too.
+
+Replacing my two components with d-clear -like code gave enormous improvement
+and good results against the stone-imps.  Here are some examples:
+
+Rosebud                101/37
+EIF                    128/31
+d-clear                191/18
+blue candle             91/65
+impfinity              117/35 (almost 60%!)
+Ompega                  58/50
+the historian           77/91 (my best score against him)
+
+On the other hand:
+
+Twister                 57/124
+Blur                    25/164
+TestBB                  71/116
+Thermite                61/113
+Hazy Shade              47/125
+
+So you can see that it is vulnerable to papers and any kind of stun-bomb or
+continuous scanning program, which after all are designed to kill
+multi-location programs.  A good p-component?
+
+So here is the code for test P, renamed 'P-clear' for publication:
+
+;redcode-94
+;name P-clear
+;kill P-clear
+;author P.Kline
+;assert CORESIZE == 8000
+;strategy pair of forward dat-wipers based on Guenzel's d-clear
+;strategy outnumber stones and forward-wipe imps
+
+paGate    equ    Pair-7
+
+slPair    mov    #-3950,paGate+1300-7  ; initialize wipe pointers
+          mov    #-3950,paGate+5302-7
+          spl    1                     ; use multiple processes
+          spl    1
+          mov    -1,0
+          mov    <paBoot1,{paBoot1     ; boot 'em up
+          mov    <paBoot2,{paBoot2
+paBoot1   spl    Pair+1300,Pair+7
+paBoot2   jmp    Pair+5302,Pair+7
+
+Pair      spl    #0     ,<paGate-2667
+          mov    paBomb ,{paGate       ; slow backward clear for redundancy
+          mov    paBomb ,>paGate       ; fast forward clear
+          djn.f  -1     ,>paGate
+          dat    0,0
+paBomb    dat    0,15
+
+          end    slPair
+
+Paul Kline
+pk6811s@acad.drake.edu
+______________________________________________________________________________
+Extra Extra
+by Stefan Strack
+
+                           A brief mopt tutorial
+                           ~~~~~~~~~~~~~~~~~~~~~
+
+Mopt, short for _M_ultiple constant _opt_imizer, is a program that simulates
+a core warrior in order to find an optimal combination of bombing or
+scanning constants. First of all, what is an optimal constant? An optimal
+constant is a bomb/scan increment that covers core evenly, such that gaps
+between adjacent bombed or scanned locations shrink at similar rates. For
+example, a bomb increment of 4 is fairly bad, because it bisects core
+unevenly, leaving one small and one huge gap.  There are a number of
+programs, e.g. Jay Han's CoreStep and Nandor Sieben's Optima, that find
+_single_ optimal constants by analytical and iterative methods. These
+programs work well for simple warriors like A.K. Dewdney's Dwarf.  However,
+most modern warriors are more complicated, dropping several bombs or
+scanning several locations in each loop. Consider for example the scan loop
+of a prototypical, SPL-carpet bombing CMP-scanner:
+
+scan    sub.f  incr,comp
+comp    cmp.i  FIRST,FIRST-CDIST        ;larger number is A
+        slt.a  #len,comp                ;compare to A-number
+        djn.f  scan,<FIRST-DJNOFF       ;decrement A- and B-number
+        ....
+incr    dat.f  <-IVAL,<-IVAL
+
+the line at 'comp' scans two locations, CDIST apart, and is incremented by
+IVAL every time trough the loop. Obviously, the effectiveness of the scan
+depends on chosing an optimal combination of CDIST and IVAL; this is where
+Mopt comes into play. You can think of this scan pattern as consisting of
+two parallel, single increment scans. The first starts scanning at location
+FIRST and increments in IVAL steps; the second starts scanning at location
+FIRST-CDIST and also increments in IVAL steps. As a shorthand, we can use
+the notation (FIRST,IVAL),(FIRST-CDIST,IVAL) to describe this scan pattern.
+Since core is cyclical, the value of FIRST is unimportant, and only the
+absolute value of CDIST matters. The pattern therefore simplifies to
+(0,IVAL),(CDIST,IVAL); CDIST is the "offset" of the second pattern.  With
+this, we're ready to start up Mopt, first, to give us a score for a single
+combination of (increment,offset) values (0,42),(12,42):
+
+Coresize: 8000
+Increment value or generator #1: 42  (the offset of pattern 1 is implicitely 0)
+Offset value or generator #2: 12
+Increment value or generator #2: 42
+Offset value or generator #3: <Enter>
+
+Mopt stops prompting for input of (offset,increment) pairs when you input an
+empty line and produces:
+
+42    12    42     -> 35.187500
+
+The higher the value, the better the (offset,increment) combination. This is
+not terribly useful, however; you want Mopt to _find_ an optimal
+(offset,increment) combination. To do this, you substitute a "value" with a
+"generator", which outputs a range of values. In our example, let's try
+different values for CDIST, the scan offset, in the range of 10 to 15
+(shorter would be inefficient, longer would take too long to SPL-carpet).
+In our notation: (0,42),([10..15],42). The generator to accomplish this is:
+
+    a=10,a<=15,a=a+1
+
+This looks remarkably like the for loop syntax of the C-language; "a=10"
+initializes variable a to 10, "a<=15" is the condition that has to be
+satisfied for the loop to continue, and "a=a+1" increments the loop variable
+and generates the values for optimization.  Mopt uses the pMARS expression
+evaluator, so you can use all its logical and arithmetic operators, as well
+as assigment and 26 single letter variables. Variables are "global", i.e.
+they retain their values between generators. We're now ready to start up
+Mopt again:
+
+Coresize: 8000
+Increment value or generator #1: 42
+Offset value or generator #2: a=10,a<=15,a=a+1
+Increment value or generator #2: 42
+Offset value or generator #3: <Enter>
+
+The best:
+42    12    42     -> 35.187500
+42    14    42     -> 34.975875
+42    11    42     -> 34.431000
+42    13    42     -> 34.361125
+42    15    42     -> 34.007750
+42    10    42     -> 33.761125
+
+So, a scan offset of 12 is best, followed by 14, 11, a.s.o.. Now that we
+have the basics, we can let Mopt optimize _both_ scan increment and offset.
+We'll pick a mod-2 pattern in the range 22 through 98:
+
+    b=22,b<99,b=b+2
+
+Note that this generator will also produce mod-4, mod-6, .. numbers, which
+we have to weed out later.
+
+Coresize: 8000
+Increment value or generator #1: b=22,b<99,b=b+2
+Offset value or generator #2: a=10,a<=15,a=a+1
+Increment value or generator #2: b
+Offset value or generator #3: <Enter>
+
+The best:
+28    14    28     -> 44.714625
+26    14    26     -> 44.443625
+34    14    34     -> 42.757750
+26    13    26     -> 42.690000
+98    14    98     -> 42.347875
+28    15    28     -> 42.242250
+78    14    78     -> 42.231125
+...
+
+(Side note: If you're now wondering why Rave uses a 42,12 scan instead of
+the more optimal 28,14 pattern: 42,12 turns out to be a better imp-killer).
+
+Another example:
+
+    spl #A,#-B
+    add -1,1
+    mov <2,<2
+    jmp -2
+
+The bomb pattern is (0,A),(0,-B) and we're trying to find optimal mod-5
+values for A and B:
+
+Coresize: 8000
+Increment value or generator #1: a=5,a<200,b=b+5
+Offset value or generator #2: 0
+Increment value or generator #2: b=-5,b>-200,b=b-5
+Offset value or generator #3: <Enter>
+
+The best:
+155   0     -155   -> 83.736000
+155   0     -185   -> 79.708125
+185   0     -155   -> 79.704375
+155   0     -195   -> 79.425250
+195   0     -155   -> 79.420875
+155   0     -165   -> 78.837750
+165   0     -155   -> 78.834625
+...
+
+Now that you understand how to translate your warrior's bombing/scanning
+loop into the (offset,increment) notation, Mopt should be a snap to use.
+
+Mopt is part of the ptools10.zip archive, and comes as portable C-source and
+DOS executable. To compile it yourself, you also need eval.c and the header
+files of the pMARS source distribution. The URL is:
+http://www.stormking.com/~koth/pmars.html
+
+Plans for the next version of Mopt include the ability to specify a "maximum
+target size". In the current version, this is hardwired to 200, the
+MAXLENGTH of the 94x hills.
+
+-Stefan Strack (stst@idnsun.gpct.vanderbilt.edu)
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
