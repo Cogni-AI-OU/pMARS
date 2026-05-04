@@ -1,0 +1,363 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 18                                                    February 26, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.
+______________________________________________________________________________
+Greetings.
+
+It's me again--unfortunate for you.  Bezzi threatened to fire me for the poor
+job I did on the last issue.  I didn't think you could get fired from a job
+you did for free.  Apparently the rules are different in Europe.
+
+My apologies to J K Lewis for mistaking him with J K Wilkinson.  How could I
+have done that?  JKL = redcode-quiet.  JKW = redcode-verbose.  Won't happen
+again.  Remember the deadline for Lewis' tournament is March 5th.  Mail
+entries to jklewis@umich.edu.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Feb 26 05:33:26 PST 1996
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 30/ 26      Grilled Octopus v0.2         David Boeren     157      16
+ 2  42/ 34/ 24                 Chameleon           M R Bremer     149      10
+ 3  39/ 32/ 29               Thermite II        Robert Macrae     146     539
+ 4  38/ 30/ 32               Tornado 3.0                Beppe     145     340
+ 5  37/ 31/ 31                    T.N.T.    Maurizio Vittuari     143     264
+ 6  33/ 22/ 46                   Barrage        Anton Marsden     143      12
+ 7  31/ 18/ 51                   Clisson              P.Kline     143      25
+ 8  42/ 42/ 15                      quiz              Schitzo     142     938
+ 9  41/ 40/ 19             Frontwards v2       Steven Morrell     142     791
+10  43/ 46/ 11                  Memories          Beppe Bezzi     139      77
+11  34/ 30/ 36                Trade Wars              P.Kline     139      34
+12  40/ 42/ 17                Mirage 1.5        Anton Marsden     138     452
+13  43/ 48/  9                 Wild Card           M R Bremer     137      92
+14  28/ 18/ 54            Impfinity v4g1               Planar     137     738
+15  26/ 15/ 59      Hazy Shade Of Winter             John K W     137     167
+16  29/ 22/ 49   Haziest Shade Of Winter             John K W     137       4
+17  39/ 41/ 20                    Wraith          Kurt Franke     137      18
+18  37/ 38/ 25                     C I A         Anders Ivner     137       1
+19  34/ 32/ 33                 Torch t18              P.Kline     136    1317
+20  29/ 24/ 47                      Link          Kurt Franke     134      41
+21  32/ 29/ 39           Jack in the box          Beppe Bezzi     134    1305
+22  23/ 12/ 66              Evol Cap 6.6       John Wilkinson     134     553
+23  26/ 19/ 55                  Blizzard        Anton Marsden     132     258
+24  30/ 29/ 40                 patroclus       Kafka and Kurt     131     334
+25  37/ 46/ 17                      test                   me     129       2
+
+Weekly age: 159
+New warriors 10  Turnover/age rate 6%
+Average age: 333 ( 308 last week, 249 the week before )
+Average score: 139 ( 139 last week, 132 the week before )
+The 25 warriors on the hill are represented by 14 authors.
+( Lost Karl Lewin's Night Train )
+
+Boeren has been nothing but dominate.  Grilled Octopus v0.1 was on top of
+the hill most this week, but was strongly contested by Memories and
+Frontwards v2, each claiming the number one rank for more than a few
+challenges.  And then replicators Night Train and Hector 3 fell off the hill
+hurting the scanners' scores and dropping them into the middle of the pack.
+None the less, David started a new test series to consolidate his position.
+Clisson took the top spot for awhile as testing continued, but quickly fell
+to the successor--Grilled Octopus v0.2.  Since it's introduction, only
+Chameleon--another new warrior--has been able to steal the lead, and for
+only one challenge.  Can his dominance continue?
+
+This week also marks the return of pspace.  Somewhat neglected for a few
+months, pspace is back with a vengence.  Is it any coincidence that bombers
+started falling off the hill shortly after?  Blue Funk 5 was doing very well
+at the beginning of the week, but with Boeren testing his new pspacer and
+Trade Wars making it onto the hill, it was easy for Marsden's new paper
+warrior to force Blue off.  seventyfive was pushed off much the same way.
+
+With the code bloat associated with p-warriors, qscanners should score some
+easy points.  Thermite has enjoyed a boost in score, and Barrage is doing
+well.  I suppose we'll see the real test of booting versus decoy making as
+more qscans appear to do battle.  The pspace cycle: Here we go again . . .
+
+Vampires are attempting a comeback with Paulsson's classic myVamp seen on
+the hill earlier.  Wraith has managed to cling onto the lower half of the
+heap.  It's too early to tell if it has staying power.
+
+M R Bremer (me) finally returns with Chameleon and Wild Card.  Both programs
+have been ranked number one albeit for only one challenge each.  Ivner didn't
+much care for the loss of seventyfive, so he's back with C I A.  And what
+exactly are intelligence bombs anyway?
+
+Lots of significant losses this week with Night Train and Boombastic falling
+the farthest.  Night Train by Karl Lewin stops at 10th place in the Hall Of
+Fame at an age of 755.  Maurizio Vittuari's Boombastic will rest at 21st
+place at an age of 521.
+
+Torch t17 and Jack in the box are both still alive and kicking.  Will a
+pspace comeback help or hurt the dynamic duo?  Find out next week.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 30/ 26      Grilled Octopus v0.2         David Boeren     157      16
+ 2  42/ 34/ 24                 Chameleon           M R Bremer     149      10
+ 6  33/ 22/ 46                   Barrage        Anton Marsden     143      12
+11  34/ 30/ 36                Trade Wars              P.Kline     139      34
+13  43/ 48/  9                 Wild Card           M R Bremer     137      92
+16  29/ 22/ 49   Haziest Shade Of Winter             John K W     137       4
+17  39/ 41/ 20                    Wraith          Kurt Franke     137      18
+18  37/ 38/ 25                     C I A         Anders Ivner     137       1
+20  29/ 24/ 47                      Link          Kurt Franke     134      41
+25  37/ 46/ 17                      test                   me     129       2
+______________________________________________________________________________
+94 - What's No More.
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26  38/ 45/ 18                      Test             J E Long     131      27
+26  36/ 48/ 16                      test          Beppe Bezzi     125       3
+26  33/ 45/ 22                Boombastic    Maurizio Vittuari     122     521
+26   2/  2/  0                      test              P.Kline       6      23
+26  36/ 50/ 14               seventyfive         Anders Ivner     122     311
+26   1/  1/  1                      Blur        Anton Marsden       6      27
+26  17/ 12/ 72               Night Train           Karl Lewin     121     755
+26  25/ 30/ 45               Blue Funk 5       Steven Morrell     120     152
+26  22/ 23/ 56                  Hector 3          Kurt Franke     120     266
+26   1/  1/  2      Grilled Octopus v0.1         David Boeren       5     192
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+19  34/ 32/ 33                 Torch t18              P.Kline     136    1317
+21  32/ 29/ 39           Jack in the box          Beppe Bezzi     134    1305
+ 8  42/ 42/ 15                      quiz              Schitzo     142     938
+ 9  41/ 40/ 19             Frontwards v2       Steven Morrell     142     791
+14  28/ 18/ 54            Impfinity v4g1               Planar     137     738
+22  23/ 12/ 66              Evol Cap 6.6       John Wilkinson     134     553
+ 3  39/ 32/ 29               Thermite II        Robert Macrae     146     539
+12  40/ 42/ 17                Mirage 1.5        Anton Marsden     138     452
+ 4  38/ 30/ 32               Tornado 3.0                Beppe     145     340
+24  30/ 29/ 40                 patroclus       Kafka and Kurt     131     334
+ 5  37/ 31/ 31                    T.N.T.    Maurizio Vittuari     143     264
+23  26/ 19/ 55                  Blizzard        Anton Marsden     132     258
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Torch t18              P.Kline           1317 *  Bomber
+ 2  Jack in the box        Beppe Bezzi       1305 *  P-warrior
+ 3  quiz                   Schitzo            938 *  Scanner/ bomber
+ 4  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+ 5  Agony II               Stefan Strack      912    CMP scanner
+ 6  Blue Funk              Steven Morrell     869    Stone/ imp
+ 7  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+ 8  Frontwards v2          Steven Morrell     791 *  One shot scanner
+ 9  Blue Funk 3            Steven Morrell     766    Stone/ imp
+10  Night Train            Karl Lewin         755    Replicator
+11  Impfinity v4g1         Planar             738 *  Stone/ imp
+12  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+13  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+14  myVamp v3.7            Paulsson           643    Vampire
+15  Armory - A5            Wilkinson          609    P-warrior
+16  juliet and paper       Bremer & Bezzi     607    P-warrior
+17  Phq                    Maurizio Vittuari  589    Qscan -> replicator
+18  Hector 2               Kurt Franke        561    Qscan -> replicator
+19  Evol Cap 6.6           John Wilkinson     553 *  Replicator
+20  Thermite II            Robert Macrae      539 *  Bomber
+21  Boombastic             Maurizio Vittuari  521    Bomber
+22  B-Panama X             Steven Morrell     518    Stone/ replicator
+23  Mirage 1.5             Anton Marsden      452 *  Scanner/ bomber
+24  NC 94                  Wayne Sheppard     387    Stone/ imp
+25  Cannonade              P.Kline            382    Stone/ imp
+
+Anton Marsden joins the ranks of the Hall of Fame replacing Torch t17.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Feb 26 06:05:01 PST 1996
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  52/ 14/ 34               Pretentious          Ian Oversby     191      78
+ 2  52/ 19/ 29                  Gluttony                  JEL     184      88
+ 3  58/ 33/  9            Assassin XII-b       Andy Nevermind     184      52
+ 4  55/ 35/ 10                      test             J E Long     176      57
+ 5  55/ 34/ 11               CoreWarrior           M R Bremer     175      38
+ 6  48/ 22/ 31                    Shabba             J E Long     174      70
+ 7  47/ 20/ 33      Hyakutake C/1996 B2`         Scott Manley     174      59
+ 8  45/ 29/ 26     Uvavu II (revistited)         Scott Manley     162      80
+ 9  45/ 29/ 26        Uvavu II (test 25)         Scott Manley     161      76
+10  49/ 41/ 10               Paper Eater         David Boeren     157      69
+11  49/ 43/  8               Assassin XI       Andy Nevermind     155      63
+12  40/ 39/ 20             Swan's Lament         Chris Arguin     142      26
+13  38/ 35/ 27     Jezebel's Revenge CXX       Andy Nevermind     141      67
+14  41/ 43/ 16                Lenochka 3               Julian     140       7
+15  44/ 49/  6               Fei-Oh v0.6         David Boeren     139      75
+16  31/ 25/ 44          AB Scanner 2.9.3         Chris Hodson     138      27
+17  42/ 46/ 12                    XPEH 2               Julian     138       6
+18  39/ 42/ 19             Swan's Lament         Chris Arguin     136      10
+19  39/ 46/ 14                      test               Julian     133       8
+20  39/ 54/  7                      XPEH               Julian     123      48
+21  28/ 45/ 27                  Evil Elf       Andy Nevermind     112       5
+22  30/ 50/ 20      Pommes-Ketchup V1.03         S. Schroeder     110       4
+23  28/ 47/ 26                  Inchworm             J E Long     109      64
+24  27/ 51/ 23             Blubbi V1i.0b       bjoern guenzel     103      11
+25  28/ 68/  4              A-Cluster v2            Iain Hogg      88       1
+
+Is your only goal in life getting a warrior on the 'pro' hill?  ( If it is
+you should seek professional help. )  Want to know the tricks those mensa
+geniuses use to tweak their programs?  Just mail your warrior to us at Core
+Warrior.  We'll attempt to point out strengths, weaknesses, and strategies
+you can use to improve your core warring skills.  And requests for hints are
+always welcome.
+______________________________________________________________________________
+The Hint
+
+Modern replicators breed like epileptic rabbits.  Scanners need to take
+extreme measures to eradicate Timescape and DieHard style papers.  The
+trick is to stun them as rapidly and thoroughly as possible.  Simple spl/jmp
+bombs aren't enough.  Even spl/spl/jmp bombs may be inadequate without a
+multipass coreclear.  So what type of payload should a warrior deliver to
+maximize stunning power?  A paper product typically employs parallel
+processes to achieve replication.  I tested 6 stun bombs by executing 6
+parallel processes on the first bomb instruction.  The number to total
+processes after 100, 200, 300, etc. cycles was recorded and entered into
+the graph below.
+
+#Processes
+1000 +
+     -                                                                    56
+ 900 +                                                              56
+     -
+ 800 +                                                       5
+     -                                                       6             2
+ 700 +                                                5             2
+     -                                                6
+ 600 +                                         5             2             1
+     -                                         6      2             1
+ 500 +                                  5                    1
+     -                                  6      2      1
+ 400 +                           56     2      1      4      4      34    34
+     -                                                3      3
+ 300 +                    56     2      1      3
+     -                    2      13     3      4
+ 200 +             56     13     4      4
+     -            123     4
+ 100 +    12356    4
+     -      4
+   0 +------+------+------+------+------+------+------+------+------+------+
+           100    200    300    400    500    600    700    800    900 cycles
+
+These are the payloads delivered:
+
+1. spl 0    2. spl 0    3. spl 0    4. spl -1    5. spl #N+1   6. spl #2, 0
+   jmp -1      spl 0       spl 0       spl -1       . . .         mov -1, }-1
+               jmp -2      spl 0       spl -1       mov -N, }N
+                          (spl 0)     (spl -1)
+The raw data:
+Cycle
+---
+100    70         85        89 (105)     49 ( 67)     101           85
+200   132        161       142 (188)     96 (128)     202          180
+300   195        238       189 (265)    129 (193)     303          277
+400   257        314       228 (330)    192 (252)     402          375
+500   319        391       263 (393)    193 (315)     501          474
+600   382        466       294 (454)    240 (378)     598          574
+700   444        543       325 (513)    341 (443)     695          673
+800   507        619       356 (564)    384 (504)     786          773
+900   569        696       383 (617)    385 (567)     877          873
+1000  632        771       414 (676)    384 (628)     974          973
+
+Initially, the bombs were limited to 3 instructions, but the split carpets
+performed so miserably I executed them with an extra instruction just to see
+how much improvement it would make.  The 4 line versions are shown in
+parentheses.  The graph contains the 3 line versions.
+
+The analysis:
+
+The spl/jmp bomb is used for a reference point.  It is not effective against
+modern replicators.
+
+The spl/spl/jmp bomb is more powerful and attacks three locations as opposed
+to two.  There is little difference if the jmp instruction is the first to
+execute.
+
+The spl 0 carept is only effective if four instructions long.  However, its
+performance degrades rapidly if the lead spl 0 is not the first instruction
+to be executed.
+
+The spl -1 carpet is ineffective even in the 4 instruction version.  A 5
+instruction carpet with the middle split executing first generates about the
+same number of processes as the spl/spl/jmp bomb.
+
+The spl/mov bombs generate the most amount of processes.  The incendiary
+bomb is the equivalent of a 6 instruction split carpet when the move is
+executed.  However, sometimes the other instruction is executed reducing the
+effectiveness of the bomb.  In addition, the powerful part ( the move )
+attacks only one instruction.  It is very easy to miss the active part of a
+silk module with this bomb.  The last spl/mov bomb is slightly less effective
+in stunning capability, but is more effective overall.  If the move is the
+first instruction to be executed than the bomb is the equivalent of a 6
+instruction spl 0 carpet ( same as the incendiary bomb).  However, if the
+spl #2 is first to execute, we get a continously expanding split carpet--
+forty-three instructions long after 1000 cycles.  This could even overwrite
+other silk modules.  There are some disadvantages however.  The split carpets
+can color core thus distracting the scanner.  And the bomb only attacks two
+instructions.
+
+Real life test:
+Wild Card is a spl/spl/jmp scanner.  At this time it is scoring around 131
+points on the hill.  A similar scanner using spl/mov bombs only scored
+111 points.  Changing the bombs to spl/spl/mov increased the score to 115
+points, BUT the stun power of this bomber is not as good as the spl/mov.
+The double split spends more time increasing the size of the carpet and not
+stunning.  The increase in the score is most likely due to the increased
+coverage of the bomb.  I didn't spend any time trying to integrate the bomb
+components into the executing code.  The resulting warrior is more fragile
+and larger resulting in an increase in losses.  It also attacks the split
+carpets.  By eliminating these problems, perhaps someone could write a more
+credible, quick stunning scanner.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

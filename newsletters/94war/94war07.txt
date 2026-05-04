@@ -1,0 +1,316 @@
+__ __| |            ) _ \  |  |    \ \        /              _)
+   |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+   |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+  _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+May 4, 1994                                                           Issue #7
+______________________________________________________________________________
+
+This newletter covers the current status of the ICWS '94 Draft hills,
+and also attempts to keep up with the latest ideas in how the new standard
+will affect corewars in general.  I hope you enjoy it!
+
+If you are unfamiliar with the '94 draft standard, you can learn more about
+it by reading the FAQ for this newsgroup.  In addition, the program pMARS
+includes a highly recommended tutorial on the new standard.  Feel free
+to send me e-mail if you have any difficulty finding either of them, if you
+need to have a corewar item mailed to you, or if you have any other questions.
+
+The FAQ is available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z
+______________________________________________________________________________
+
+CHANGES and CORRECTIONS:
+
+Excitment is thick in the air after the first two rounds of Stefan Strack's
+corewar tournament.  It's still too early to tell what will happen, and if the
+fierce competition on the '94 hills is any indication of what's to come, it
+will not get any easier to predict later on.  (Still, I know who I want to
+win!)  Good luck to all the remaining participants!  (... and condolences
+to Michael Constant and Nandor Sieben, the first two participants to be
+eliminated.)
+
+If you are working on warriors for a large size core on an IBM computer with
+Super-VGA graphics, you will definitely want to grab the latest version of
+pMARS off of "soda.berkeley.edu".  It is now possible to watch your large
+warriors in action!  Thanks to the pMARS team for a great effort!
+
+Other helps now available include a faster verion of Optima (by Michael
+Constant) and a step-size help file for 8000 size cores by Paul Kline that is
+readable.  Both are tools no redcode developer should be without.
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 36/ 20              Pyramid v1.0     Michael Constant     151       1
+ 2  38/ 25/ 38 Der Zweite Blitzkrieg - 9      Mike Nonemacher     151     112
+ 3  39/ 28/ 33                     Torch              P.Kline     150       2
+ 4  43/ 36/ 21               Sauron v5.0     Michael Constant     150      12
+ 5  32/ 16/ 52                 Blue Funk       Steven Morrell     148     129
+ 6  32/ 17/ 51                 Cannonade              P.Kline     147       4
+ 7  44/ 43/ 14             Iron Gate 1.5       Wayne Sheppard     145     106
+ 8  33/ 23/ 44                   Lucky 3        Stefan Strack     144     122
+ 9  32/ 21/ 47         Twimpede+/Small-X              Jay Han     143       5
+10  40/ 38/ 21              Request v2.0     Brant D. Thomsen     143     160
+11  32/ 22/ 46                     NC 94       Wayne Sheppard     142     142
+12  43/ 48/  8                  Rave 4.1        Stefan Strack     138      94
+13  41/ 45/ 14              Dragon Spear             c w blue     137     162
+14  29/ 21/ 50                        ^C       Steven Morrell     137      21
+15  36/ 36/ 28               Christopher       Steven Morrell     135      50
+16  30/ 25/ 45                    Splash              Jay Han     134     100
+17  29/ 25/ 46         Imperfection v3.4     Michael Constant     133      25
+18  35/ 37/ 28          Yop La Boum v2.1         P.E.M & E.C.     133      92
+19  38/ 44/ 18                      SJ-4            J.Layland     133      36
+20  40/ 48/ 12            Iron Gate 1.2b       Wayne Sheppard     131       3
+
+21   2/ 98/  0                   Looking     Brant D. Thomsen       7       0
+
+Since the last issue of the Warrior, exactly 99 programs have made it onto
+the '94 standard hill.  "Der Zweite Blitzkrieg - 9", "Pyramid v1.0",
+"Sauron v5.0", and "Torch" are all been fighting for the top slot on the
+hill, and all of them deserve it.  It looks like the "pizza" hill is well
+represented by every type of program but "paper".  (Anders Ivner's "Killer
+Instinct" was in third place on the hill last month.  However, it is still
+doing well on the "stormking" hill.)  Perhaps "paper" is the one warrior
+type that doesn't benefit from the newer standard.  (Opinions, anyone?)
+
+I am also including the results of the "stormking" hills in this, and future,
+issues of _The_'94_Warrior_.  I had planned to cover the "pizza" hill
+exclusivey, but later decided that the "stormking" hills have enough traffic
+to warrant their coverage as well.  In addition, they also tend to have a much
+different "flavor" resulting from the quite different programs on the hill.
+If you have a program that can't quite get onto a hill on one server, I'd
+recommend trying it on the other one -- it may do quite well!
+
+The current ICWS '94 Draft hill on "Stormking":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 29/ 26               Sauron v3.6     Michael Constant     160       1
+ 2  41/ 27/ 32           Killer instinct         Anders Ivner     155      24
+ 3  36/ 21/ 43         Twimpede+/8000-d1              Jay Han     150      14
+ 4  44/ 38/ 17               Ntttgtstitd         Simon Hovell     150      25
+ 5  43/ 38/ 19              Request v2.0     Brant D. Thomsen     148      17
+ 6  34/ 21/ 44                   Lucky 3        Stefan Strack     147      12
+ 7  35/ 23/ 42                     NC II       Wayne Sheppard     147      79
+ 8  35/ 25/ 40               Sphinx v5.1         W. Mintardjo     145      82
+ 9  43/ 41/ 17            Sylvester v1.0     Brant D. Thomsen     144      61
+10  29/ 19/ 53                      ttti        nandor sieben     139      35
+11  32/ 26/ 42        JustTakingALookSee            J.Layland     138      78
+12  31/ 24/ 45                     Snake       Wayne Sheppard     138      34
+13  43/ 47/ 10                  Rave 4.1        Stefan Strack     138       7
+14  39/ 40/ 21                      tiny            J.Layland     138      59
+15  29/ 20/ 51                    ttti94        nandor sieben     137      30
+16  39/ 42/ 19       Beholder's Eye v1.7         W. Mintardjo     137      91
+17  38/ 42/ 19               Christopher       Steven Morrell     135      23
+18  39/ 43/ 18                      SJ-4            J.Layland     134      28
+19  37/ 43/ 20            Fast Food v2.1     Brant D. Thomsen     131      37
+20  35/ 40/ 26                    pepper              P.Kline     129       6
+
+The "stormking" hill appears to be even more diverse than the "pizza" hill.
+This hill will be a fun one to watch as it developes.  Many of the programs
+on it are '88 standard programs, and several other programs have been
+converted from the '88 to the '94 standard.  The "pizza" hill, on the other
+hand, has many warriors that are highly '94 dependent.
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental (Big) hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  51/ 32/ 18              Demand-55440 M. Constant & B. Tho     170       9
+ 2  39/ 21/ 40             Variation G-1              Jay Han     157      44
+ 3  44/ 35/ 20             Request-55440     Brant D. Thomsen     153      80
+ 4  35/ 22/ 43                  Splash 1              Jay Han     149      45
+ 5  45/ 43/ 12                    Squint      Mike Nonemacher     148      18
+ 6  37/ 27/ 36                  Lucky 13        Stefan Strack     148      86
+ 7  41/ 37/ 22                Vanity IIx        Stefan Strack     146      35
+ 8  33/ 24/ 44                   BigImps        James Layland     142      15
+ 9  43/ 45/ 12                     Virus              Jay Han     141       3
+10  43/ 46/ 11                 Rave B4.1        Stefan Strack     141      41
+11  41/ 37/ 22                    Raiden Richard van der Brug     139      14
+12  39/ 40/ 21                White Fang       Steven Morrell     139       5
+13  32/ 25/ 42 Der Zweite Blitzkrieg - 9      Mike Nonemacher     139      42
+14  28/ 18/ 54         Imperfection v2.4     Michael Constant     138      51
+15  43/ 49/  8                Scanalyzer              Jay Han     138       4
+16  38/ 38/ 24               Sauron v3.4     Michael Constant     137      23
+17  38/ 38/ 24                      Lump            J.Layland     137      25
+18  34/ 32/ 34                     Sissy              Jay Han     137      40
+19  37/ 45/ 18                  testing2            J.Layland     129       1
+20   5/  0/  0                   Big J-1              Jay Han      14       2
+
+Although many new programs have made it onto the hill, the hill hasn't changed
+all that much.  Scanners, imp-spirals, and vampires all seem to be well
+represented.  Perhaps the largest change is the addition of "Demand-55440",
+which currently has a stronghold on the top position.  "Demand" appears to
+be good proof of something I've heard repeated many times in the newsgroup by
+prominent redcode authors:  the best warriors tend to be those that have a
+combination of strategies or types.
+
+The current ICWS '94 Experimental (Big) hill on "Stormking":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  53/ 31/ 15                    Raiden Richard van der Brug     175       1
+ 2  44/ 21/ 35                  Lucky 13        Stefan Strack     168      18
+ 3  46/ 30/ 25             Request-55440     Brant D. Thomsen     161      52
+ 4  39/ 19/ 42              Bakers Dozen       Wayne Sheppard     159      11
+ 5  43/ 28/ 29               Sauron v2.4     Michael Constant     158       3
+ 6  41/ 28/ 30             Variation D-1              Jay Han     155      13
+ 7  45/ 36/ 20                Vanity IIx        Stefan Strack     154       6
+ 8  33/ 17/ 50         Imperfection v2.3     Michael Constant     149      46
+ 9  44/ 47/ 10                 Rave B4.1        Stefan Strack     141       7
+10  30/ 23/ 47                   BigImps        James Layland     138     112
+11  41/ 45/ 14               Dagger v7.0     Michael Constant     136      12
+12  41/ 46/ 13                  bigproba        nandor sieben     136      10
+13  30/ 24/ 47                    BigImp        Alex MacAulay     135      93
+14  34/ 34/ 32               Industrious        Stefan Strack     134       2
+15  41/ 47/ 12                 The Count              Jay Han     134      42
+16  34/ 38/ 27                      Test        Stefan Strack     131       4
+17  34/ 38/ 27                 Open Arms        Stefan Strack     130       5
+18  31/ 34/ 35                Veeble Jr.         T. H. Davies     126      16
+19  35/ 45/ 19               IceCube 1.4 Richard van der Brug     125       8
+20  37/ 51/ 11              Kill Imps!!!       Steven Morrell     123      39
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+I wanted to come up with some good use for the MUL and DIV instructions for
+this issue's hint.  There has been a large amount of '94 code posted recently,
+but I don't recall any of it that used either of these instructions.
+
+The two things that I was able to imagine that MUL and DIV would be
+useful for is a binary bomber (where the programs bombs over successively
+smaller intervals), and programs that must be able to run in many different
+possible coresizes.  So, along this line, I came up with a program which will
+launch an imp-spiral with the minimum number of points for any size core
+(given a know size limit).
+
+At first, I tried to do this without using any constants, but the "mod"
+mathematical limitations became too much.  Recall that for an "P" point
+imp-spiral to be possible in a size "C" core, then for any step-size "S" where
+S * P = N * C + 1 (and N is any possible integer in the range 1 <= N < P),
+then we have a stepsize to create an imp-spiral with that many points.  The
+problem is, of course, that N * C + 1 becomes 1 in the core no matter what
+integer value N is assigned.  This can make finding the possible imp-steps for
+large values of N quite difficult to do during run-time.
+
+So, instead, I took a compromise.  I take the CORESIZE value supplied by pMARS,
+and use it to determine all the possible imp-spiral step sizes I want to try.
+Then I use a simple loop to determine whether or not each possible imp-spiral
+step size will work.  To do this, I take the value I want to test and
+multiply it by the number of points I am considering for the imp-spiral.  If
+the result is 1 larger than the coresize, I have a successful number.  The
+corewars interpreter automatically takes care of the modular arithmetic,
+making the loop surprisingly short and simple.
+
+You may want to pay special attention to the main loop in the code, as I do
+some things in it that are heavily '94 dependent.  Each of the modifiers in
+this loop had to be chosen carefully for the program to work correctly.
+
+The DAT statements on the end of the program will find an imp-spiral for
+any coresize that is not divisible by 30030.  (Notice that 30030 is the
+product of all the primes no greater than 13.)  I have also added the first
+two 17 point imp-spiral sizes needed to handle 30030 and 60060.  If you add
+all of the DAT statements for the 17-point imp-spiral steps, then you will be
+able to handle any coresize that is not divisible by 510510.
+(B.T.W.:  510510 = 17 * 30030)  This should be adequate for most
+programmers. ;-)
+
+Since a randomly sized core will be divisible by 2 half the time, the average
+number of cycles needed to find the wanted imp-spiral step size should be
+small.  Most of your cycles will be taken up in generating the processes for
+the imp-spiral and launching it.  (In reality, you would probably want less
+processes than I have here.)  Perhaps some of you corewar experts out there
+could even figure out a way to have the number of processes sent to the imp-
+spiral vary dymanically based on the number of points it will have.
+
+
+;redcode-94
+;name Imp-Spiral Finder
+;author Brant Thomsen
+;strategy Launch the smallest possible imp-spiral for any coresize < 90090
+;macro
+
+boot    equ     150
+
+
+imp     mov.I   #0, 0           ; Will copy value here later.
+
+find    mov.B   <d2, #0         ; Get the value to test.
+        mul.AB  @d2, find       ; See what the result would be.
+        djn.B   find, find      ; If result != 1, then try next value.
+
+launch  mov.B   @d2, imp        ; Put the value in the imp.
+        mov.I   imp, imp+boot   ; Move the initial imp-spiral instruction.
+
+        ; Begin to generate processes.
+
+        spl.F   2
+for 5
+        spl.F   1
+rof
+
+        ; Should have 48 processes here.
+
+        spl.F   2               ; Launch an imp-spiral using JMP/ADD method.
+        jmp.F   @0, imp+boot    ; Nice since don't need step size in advance.
+        add.F   imp, -1
+
+
+        ; These are the test values to use.
+        ; Notice that only prime numbers are used.
+
+        dat.F   17, (d17 * CORESIZE + 1) / 17   ; Needed for size 30030
+        dat.F   17, (d17 * CORESIZE + 1) / 17   ; Needed for size 60060
+d17
+for 12
+        dat.F   13, (d13 * CORESIZE + 1) / 13
+rof
+d13
+for 10
+        dat.F   11, (d11 * CORESIZE + 1) / 11
+rof
+d11
+for 6
+        dat.F   7, (d7 * CORESIZE + 1) / 7
+rof
+d7
+for 4
+        dat.F   5, (d5 * CORESIZE + 1) / 5
+rof
+d5
+for 2
+        dat.F   3, (d3 * CORESIZE + 1) / 3
+rof
+d3      dat.F   2, (d2 * CORESIZE + 1) / 2
+
+d2      end     find            ; This instruction is a DAT.F 0, 0
+                                ; It is used at the pointer to the
+                                ;  current test value.
+______________________________________________________________________________
+
+Looking to the Future:
+
+It looks as if the '94 standard is becoming widely accepted.  There are more
+programs being sent to the '94 draft hill than to the '88 standard hill on
+"pizza", and the disproportion appears to be growing.  I have a feeling
+that it won't be long before the '94 draft hill will be the _standard_ hill.
+
+If you have any comments or questions about the '94 hills or the '94 draft
+standard that you think might be of general interest, please let me know.
+
+Good luck, and happy computing!
+______________________________________________________________________________
+
+Brant D. Thomsen, Editor           Snail mail:  1197 East 6290 South
+(bdthomse@peruvian.cs.utah.edu)                 Salt Lake City, UT  84121
+University of Utah                              U.S.A.

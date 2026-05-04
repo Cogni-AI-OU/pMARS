@@ -1,0 +1,226 @@
+  __ __| |            ) _ \  |  |    \ \        /              _)
+     |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+     |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+    _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+October 31, 1994                                                     Issue #13
+______________________________________________________________________________
+
+_The_'94_Warrior_ is a monthly newsletter dedicated to supporting and
+encouraging the game of Corewars.  This includes coverage of the more popular
+"hills" (which allow users anywhere on the Internet to compete against other
+users), and also by encouraging traffic in the rec.games.corewar newsgroup.
+
+The FAQ (Frequently Asked Questions) for the rec.games.corewar newsgroup is
+available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z.  There are also several
+tutorials on the '88 and '94 (draft) standard available on
+scotch.csua.berkeley.edu (128.32.43.51) that will greatly ease the process of
+becoming a proficient "redcoder."  I would highly recommend referring to the
+FAQ if you are curious about exactly what Corewars is, or if you are
+unfamiliar with any of the terms used in this newsletter.
+______________________________________________________________________________
+
+CHANGES and CORRECTIONS:
+
+There are several changes that have occurred in the last two months.  Please
+remind me of any that I may have missed, and I'll be sure to get them in the
+next issue of _The_'94_Warrior_.
+
+As you may have noticed above, the staff here at _The_'94_Warrior_ has been
+working diligently to print the correct Corewar Archive site.  The correct
+address is now "scotch" instead of "soda".  Accessing "ftp.csua.berkeley.edu"
+should still work as well.
+
+The fall TCWN newsletter is now available on scotch as
+pub/corewar/documents/tcwn0994.z.  I'd like to highly recommend it, but since
+I don't have a PostScript printer, I'm afraid I can't.  (Where is a copy of
+"GhostScript" when I need it?!)  However, if this issue is anything like the
+previous ones, I can promise that you are in for a real treat.  Kudos to Mark
+Durham once again!
+
+For those of you that like an occasional break from writing redcode, a C++
+Robots Server is now up and running.  Send mail with the subject
+"help summary c++robots" (without the quotes) to pbmserv@netcom.com for more
+information, and be sure to watch the newsgroup for more posts by Richard
+Rognlie about this exciting event.
+
+Another exciting thing to watch the newsgroup for is Paul Kline's status
+listings on the "hot" hills.  For those that keep having their warriors kicked
+off the hills (such as myself), this will be a nice way to find out what is
+currently happening.  Perhaps it will also cut down the number of times that
+infamous "Just Looking" warrior gets sent to the hill!
+
+On Stormking, the hills have been enhanced.  Now, when you are notified about
+a warrior on one of those hills, the subject line will tell you who it is you
+are going to be reading about.  Several more enhancements are expected to
+follow as well, so be sure to watch the newsgroup for more information.
+
+The August and September archives for the rec.games.corewar newsgroup have
+also been uploaded to scotch.  Look in the "incoming" directory.
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  46/ 37/ 17             HeremScimitar      A.Ivner,P.Kline     156      27
+ 2  43/ 31/ 25                 Torch t15              P.Kline     155       7
+ 3  36/ 24/ 40               Blue Funk 3       Steven Morrell     149     208
+ 4  38/ 30/ 32                 Rude Wind              P.Kline     147      57
+ 5  31/ 15/ 54                B-Panama X       Steven Morrell     147     149
+ 6  45/ 44/ 11                  Agony II        Stefan Strack     147     143
+ 7  33/ 23/ 45                 Blue Funk       Steven Morrell     143     520
+ 8  31/ 20/ 48          Silk Warrior 1.4        J.Pohjalainen     142     150
+ 9  35/ 31/ 34        Killer Instinct II         Anders Ivner     140       2
+10  39/ 38/ 23             Leprechaun II         Anders Ivner     139       1
+11  39/ 40/ 21                      SJ-4            J.Layland     139     209
+12  41/ 44/ 15             Iron Gate 1.5       Wayne Sheppard     138     497
+13  37/ 37/ 26               Stimpy v2.0     Brant D. Thomsen     138      42
+14  29/ 21/ 50               Phoenix 1.2        J.Pohjalainen     137     100
+15  28/ 22/ 51                      Aeka                T.Hsu     134     163
+16  31/ 29/ 40                    Sasami                T.Hsu     133     233
+17  38/ 44/ 17                      Test       Wayne Sheppard     133       6
+18  27/ 23/ 50             Bremstone 2.X           M R Bremer     132     112
+19  27/ 22/ 51                 Cannonade              P.Kline     132     378
+20  37/ 43/ 20   The Spanish Inquisition       Steven Morrell     132      36
+
+The big leaders on the hill are Torch and HeremScimitar.  Scimitar (by Paul
+Kline) used some interesting tricks to take the hill by storm when it was
+introduced a couple of weeks ago.
+
+Last time I examined the hill, replicators were the dominant force.  Now it
+appears that stones/bombers have the top positions.  Of course, the hill is
+115 battles older, so quite a bit has happened since then.
+
+Congratulations are also due for Steven Morrell, as his first Blue Funk
+warrior passes the 500 age mark.
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental (Big) hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  46/ 32/ 22                  ivscan6b            J.Layland     161      35
+ 2  47/ 36/ 17              Genocide 94x      Mike Nonemacher     158       1
+ 3  34/ 16/ 50           Big Phoenix 1.0        J.Pohjalainen     152       6
+ 4  34/ 18/ 48                   Aleph 1              Jay Han     150      33
+ 5  44/ 38/ 19             Request-55440     Brant D. Thomsen     149     171
+ 6  42/ 36/ 22               Stimpy v2.0     Brant D. Thomsen     148      26
+ 7  46/ 44/ 10                      Test        Stefan Strack     147       7
+ 8  43/ 41/ 16              Pyramid v5.3     Michael Constant     145      62
+ 9  44/ 45/ 11                 Rave B4.1        Stefan Strack     144     132
+10  30/ 16/ 54      Big Silk Warrior 1.0        J.Pohjalainen     143      13
+11  34/ 25/ 41             Variation G-1              Jay Han     142     135
+12  38/ 39/ 23                Vanity IIx        Stefan Strack     137     126
+13  39/ 42/ 19                     Fscan              Jay Han     136      19
+14  38/ 41/ 21                   Aleph 0              Jay Han     136      34
+15  30/ 27/ 43                  Splash 1              Jay Han     133     136
+16  29/ 26/ 45                 Blue Funk       Steven Morrell     133      25
+17  29/ 25/ 47              NotSoBigImps        James Layland     132      31
+18  40/ 49/ 11                    Squint      Mike Nonemacher     131     109
+19  31/ 31/ 38                  Lucky 13        Stefan Strack     131     177
+20  29/ 27/ 44 Der Zweite Blitzkrieg - 9      Mike Nonemacher     131     133
+
+Although ivsan6b is still on top of the hill, it now has some new competition.
+Genocide and Big Phoenix are two new warriors that have jumped right onto the
+hill.  Genocide is a F-scanner, and Big Phoenix is almost a paper.
+______________________________________________________________________________
+
+The ICWS '88 Standard Hill:
+
+        Standard:       '88
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current Standard KotH hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 28/ 29          Yop La Boum v2.1         P.E.M & E.C.     158      55
+ 2  33/ 22/ 45               Sphinx v5.1         W. Mintardjo     145      11
+ 3  33/ 23/ 44     Der Zweite Blitzkrieg      Mike Nonemacher     144      59
+ 4  44/ 43/ 13              Dragon Spear             c w blue     144      77
+ 5  31/ 20/ 49   CAPS KEY IS STUCK AGAIN       Steven Morrell     142      65
+ 6  29/ 15/ 56                      ttti        nandor sieben     142      81
+ 7  31/ 20/ 49                The Plauge            Anonymous     141      14
+ 8  40/ 40/ 19                 Vanity II        Stefan Strack     141      99
+ 9  43/ 45/ 12             Iron Gate 1.5       Wayne Sheppard     141     108
+10  30/ 20/ 49                 NC Killer            Anonymous     140      15
+11  39/ 40/ 21              Request v2.0     Brant D. Thomsen     139      78
+12  29/ 20/ 51             Night Crawler       Wayne Sheppard     139       4
+13  29/ 19/ 52              Blue Funk 88       Steven Morrell     138      24
+14  38/ 39/ 22               Christopher       Steven Morrell     138      51
+15  31/ 25/ 44              B-Panama V.i       Steven Morrell     136       9
+16  35/ 35/ 30          Annihilator v2.1       Carlos Paredes     136       2
+17  36/ 37/ 27              Keystone t21              P.Kline     135      97
+18  27/ 20/ 53                Imprimis 6            Anonymous     134      16
+19  37/ 41/ 22                    Titled       Steven Morrell     132       1
+20  37/ 44/ 19                     SJ-4a            J.Layland     129      58
+
+The '88 hill hasn't aged much (10), but don't let that fool you.  This hill is
+still very busy.  I really enjoy watching as warriors try to make the
+transition from the beginner hill to the standard hill.  Good luck!
+______________________________________________________________________________
+
+The ICWS '94 Beginner Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current Beginner KotH hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  56/ 34/ 10                  Samba2.2            Mr. Jones     179      13
+ 2  54/ 35/ 11             Viewmaster4.0            Ryan Case     172     214
+ 3  53/ 40/  7             Ecstacy (XTC)        Brant Thomsen     166      81
+ 4  34/ 10/ 55         Rabid Dwarfs v1.3        Brian Zellner     158      56
+ 5  42/ 27/ 31                   Ox v1.0        Brian Zellner     158      10
+ 6  40/ 36/ 24          Bloody Fang v2.1     Bharat Mediratta     145       1
+ 7  36/ 34/ 31         Green Knight v1.7        Brian Zellner     137      57
+ 8  30/ 24/ 46              Slate, v0.3a     Bharat Mediratta     136     135
+ 9  25/ 17/ 58                  Paperous            Mr. Jones     133       6
+10  31/ 31/ 38             Count Zero #1         Marc Schefer     131      77
+11  27/ 23/ 50    Rubarbe et mort-vivant           J.P.Laurin     130      84
+12  27/ 24/ 48         War Machine v2.65     Matthias Wollnik     130       2
+13  27/ 24/ 49          War Machine v2.6     Matthias Wollnik     129       3
+14  37/ 52/ 11                  Cat v2.0           Tim Scheer     122     155
+15  24/ 27/ 49          War Machine v2.5     Matthias Wollnik     121       4
+16  35/ 53/ 12                        It                 Hari     117     198
+17  21/ 25/ 54           Mostly Harmless   Frank J. T. Wojcik     117      45
+18  21/ 31/ 47     The Foo Bar and Grill       James Jesensky     111       7
+19  27/ 45/ 29       Rubarbe et grafigne           J.P.Laurin     109      83
+20  33/ 62/  5              Stepper v1.0               Gollum     104      37
+
+Although I haven't been keeping an accurate count, I can promise that this is
+the busiest of the four hills that I watch.  Many of the warriors submitted
+don't make it, but there certainly are many attempts.
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+As I have been without a (home) computer for the last couple of months, I'm
+afraid I haven't had the time to put together a hint without delaying this
+newsletter another week or so.  Of course, next month's hint will be twice as
+good to make up for it!
+______________________________________________________________________________
+
+Looking to the Future:
+
+This newsletter is now (again) being published monthly.  As always, your
+comments, suggestions, criticisms, and submissions are encouraged and
+appreciated.

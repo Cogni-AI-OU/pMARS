@@ -1,0 +1,343 @@
+ _____ _                                 _
+(_   _(_)_ __  _   ___    ____ _ _ _ _ _(_) ___  _ _
+  | | | | '_ \| | | \ \/\/ / _' | '_| '_| |/ _ \| '_)
+  | | | | | | | |_| |\    / (_| | | | | | | (_) | |                   Issue 5
+  |_| |_|_| |_|\__, | \/\/ \__,_|_| |_| |_|\___/|_|              13 May, 2015
+===============(___/=========================================================
+Welcome to Tinywarrior, the newletter which reports the latest events
+and techniques for the tiny hills.  If you haven't yet discovered the
+tiny hills, the specs are:
+
+         coresize: 800
+   max. processes: 800
+         duration: after 8,000 cycles, a tie is declared.
+max. entry length: 20
+ minimum distance: 20
+  instruction set: extended ICWS '94 Draft
+
+In this issue: the results from inversed's Tiny Stone Challenge and the
+code for Tiny Tiny Bombers and Lapidem Mortiferum, two unusual strategies
+with room for further exploration.
+=============================================================================
+Current Status of the SAL Tiny Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  43.5/ 39.4/ 17.1         Negative Thinking           inversed 147.7   111
+ 2  37.3/ 31.1/ 31.5     [RS] Chaderia Nelitha           inversed 143.6    42
+ 3  41.5/ 40.8/ 17.6               Dreadnought       John Metcalf 142.3    15
+ 4  33.5/ 27.4/ 39.1           Silent Snowfall           inversed 139.5    82
+ 5  41.5/ 44.5/ 14.0                   Synergy           inversed 138.4     6
+ 6  31.5/ 24.6/ 43.9                  Yukikaze           inversed 138.4    13
+ 7  31.9/ 25.6/ 42.5             Digital Swarm       John Metcalf 138.1   431
+ 8  37.8/ 38.6/ 23.5        Lapidem Mortiferum  Christian Schmidt 137.0     5
+ 9  41.0/ 45.2/ 13.8                    Wraith       John Metcalf 136.7    55
+10  39.1/ 42.3/ 18.5            Sprinkle Spike       Roy van Rijn 135.9    51
+11  33.5/ 31.6/ 34.9              Endless pain          G.Labarga 135.4   317
+12  38.9/ 42.5/ 18.6                    T-Scan       John Metcalf 135.4    26
+13  30.0/ 24.7/ 45.2    Yet Another Tiny Paper       Jens Gutzeit 135.3   227
+14  36.6/ 38.0/ 25.4    Silkdwarfia Procumbens           inversed 135.3    28
+15  30.7/ 26.5/ 42.8         Tiny Tiny Bombers       John Metcalf 134.9     1
+16  41.4/ 48.2/ 10.4     test with added magic       John Metcalf 134.6     9
+17  33.8/ 33.1/ 33.1      [RS] Chaderia Hysura           inversed 134.5    41
+18  40.7/ 47.2/ 12.2       Origin of Storms v2       John Metcalf 134.2    25
+19  37.4/ 42.0/ 20.6     Something else to try           inversed 132.8    11
+20  31.7/ 30.8/ 37.5       Silkdwarfia Serrata           inversed 132.7    27
+21  37.1/ 41.5/ 21.4            Burning Desire       John Metcalf 132.7     7
+22  27.1/ 22.7/ 50.3                 Supernova        Sascha Zapf 131.5   165
+23  31.8/ 32.1/ 36.1                Xanetzldir              BigJk 131.5    53
+24  33.0/ 34.5/ 32.5       Silkdwarfia Spicata           inversed 131.5    30
+25  39.8/ 48.3/ 11.9               Macro Magic       John Metcalf 131.3     4
+
+Since last issue there have been 74 successful challenges, with only 6
+warriors surviving. Muskrat was the oldest to leave the hill, age 307.
+Also pushed off were Moomintroll (age 246), Sneaky Spike 2 (212) and
+Hades nebula (205).
+
+There are 8 players currently on the hill - inversed with 10 warriors,
+Metcalf with 9 and everyone else with one each.
+
+Koth report: inversed has dominated the hill with Negative Thinking in
+first place after 45 challenges and [RS] Chaderia Nelitha after 21.
+
+The Tiny Hill is hosted by KOTH@SAL:
+
+  http://sal.discontinuity.info/hill.php?key=tiny
+=============================================================================
+The Tiny Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Digital Swarm          John Metcalf       431 *  qscan -> paper
+ 2  Endless pain           G.Labarga          317 *  qscan -> paper
+ 3  Muskrat                John Metcalf       307    qbomb -> bomber
+ 4  tiny Blowrag           Metcalf/Schmidt    287    paper/imp
+ 5  Moomintroll            John Metcalf       246    paper
+ 6  Yet Another Tiny Paper Jens Gutzeit       227 *  paper
+ 7  Tiny BiShot 2.0        Christian Schmidt  221    oneshot
+ 8  Sneaky Spike 2         Roy van Rijn       212    oneshot
+ 9  Hades nebula           Sascha Zapf        205    stone/paper
+10  476                    Sascha Zapf        199    qbomb -> paper
+11  Soft as Silk           Sascha Zapf        178    qbomb -> paper
+12  Four Winds             John Metcalf       171    oneshot
+13  Supernova              Sascha Zapf        165 *  paper
+14  White Noise (RBv1.5r10)The MicroGP Corewa 163    evolved oneshot
+15  Easter Egg             John Metcalf       162    qscan -> paper
+16  Scan-O-Matic           Sascha Zapf        158    scanner
+17  Tinyshot               John Metcalf       148    oneshot
+ =  Larger Than Infinity   Zul Nadzri         148    oneshot
+19  Diptera                Nenad Tomasev      147    oneshot
+20  Seek and Destroy       Sascha Zapf        134    oneshot
+21  Guy Hazard             Sascha Zapf        134    qbomb -> paper
+22  Ugly Uncle             Christian Schmidt  127    qscan -> paper
+23  Gun + Gun 04           Zul Nadzri         126    qbomb -> oneshot
+24  Diamondette            David Houston      122    stone
+25  Provenance             John Metcalf       121    oneshot/dodger
+ =  Sneaky Spike           Roy van Rijn       121    decoy maker -> oneshot
+ =  uiofhrgjkr             Nenad Tomasev      121    oneshot
+
+Five new warriors have entered the Hall of Fame since last issue but only
+Supernova survives.  The HoF contains 12 oneshots, 10 papers, 2 bombers,
+a paper/imp, a stone/paper and a scanner.
+
+The extended Tiny Hall of Fame is available at:
+
+  http://corewar.co.uk/tinyhof.txt
+=============================================================================
+Current Status of the Recursive Tiny Koenigstuhl Hill:
+
+The Tiny Koenigstuhl is where all of the published tiny warriors battle
+round-robin.  Listed here are the top 25 of 330 warriors:
+
+ #  Name                         Author                           Score
+-----------------------------------------------------------------------
+ 1  Silent Snowfall              inversed                        169.64
+ 2  Larger Than Infinity         Zul Nadzri                      165.69
+ 3  White Noise (RBv1.5r10)      The MicroGP Corewars Collective 165.08
+ 4  White Spikes Sneaky Noise    Zul Nadzri                      164.50
+ 5  Tinyshot                     John Metcalf                    163.65
+ 6  476                          Sascha Zapf                     163.62
+ 7  Flux                         John Metcalf                    163.36
+ 8  holograph                    Simon Wainwright                163.19
+ 9  Sneaky Spike 2               Roy van Rijn                    163.08
+10  toast                        John Metcalf                    162.72
+11  Sprinkle Spike               Roy van Rijn                    161.78
+12  Betadine                     M Joonas Pihlaja                161.57
+13  All over the core            G.Labarga                       161.29
+14  Seek and Destroy             Sascha Zapf                     161.13
+15  Provenance                   John Metcalf                    160.97
+16  Screeching soundcard         G.Labarga                       160.85
+17  SmallShot                    Roy van Rijn                    160.53
+18  Tiny BiShot 2.0              Christian Schmidt               160.09
+19  Hired Sword                  John Metcalf                    159.67
+20  Four Winds                   John Metcalf                    159.28
+21  Tinyboss III                 G.Labarga                       158.81
+22  Cream and Chocolate          LAchi                           158.78
+23  Muskrat II                   John Metcalf                    158.61
+24  BlackMusic2                  Nenad Tomasev                   158.48
+25  Lone Gunman                  John Metcalf                    158.45
+
+32 new warriors have entered the Tiny Koenigstuhl since last issue
+with 6 in the top 25.  20 of the top 25 are oneshots, but a stone/imp
+is holding first place with a 4 point lead.
+
+The Tiny Koenigstuhl is available at:
+
+  http://users.obs.carnegiescience.edu/birk/COREWAR/TINY/hill_rec.html
+
+Inversed has published alternative rankings (iterative weighting and
+sequential push off) on his website:
+
+  http://inversed.ru/CoreWar.htm
+=============================================================================
+Inversed's Tiny Stone Challenge - Results
+
+On 5th April inversed issued a challenge - to write a tiny bomber to be
+benchmarked against two undisclosed test set, one containing papers, the
+other containing scanners.  Full details are available on inversed's
+website:
+
+  http://inversed.ru/Tiny_Stone_Challenge.htm
+
+Ranking is by Pareto optimality.  A warrior dominates another warrior if
+both benchmark scores are higher.  Christian Schmidt and John Metcalf
+claim first place with undominated warriors.
+
+     |                   *CH                       +---------------------+
+ 140 +                                             | * Challenge entries |
+     |                  .WD                   *BD  | . Seed warriors     |
+     |    *Sm                 .MB                  +---------------------+
+ 130 + *Th
+     |                             .HG    He
+     |     *WT    *LI                     ..*LJ              *Wr
+ 120 +          *Ri            *Ro        Ba
+     |                                 *Sa
+     |
+ 110 +          *Cl
+     |        *TT                *Tr                            .ZX
+     |         *Ru
+ 100 +
+     |                                                             .Mu
+     |
+  90 +                        *BB                                  .Di
+     |                 *PS
+     |             *CS
+  80 +                                                                 *TS
+     |
+     +---+-------+-------+-------+-------+-------+-------+-------+-------+-
+        110     120     130     140     150     160     170     180     190
+
+ #  Name                        Author            Scan   Paper  Strategy
+ 1  [BD] Burning Desire         John Metcalf      156.9  136.3  Vampire
+ 1  [CH] Creeping Horror        John Metcalf      130.5  140.7  Stone + imp
+ 1  [Wr] Wraith                 John Metcalf      175.0  122.3  TNT bomber
+ 1  [TS] T-Stone 2              Christian Schmidt 188.0   78.0  Stone
+ 1  [ZX] zxc                    G. Labarga        179.3  106.2  TNT bomber
+ 1  [Mu] Muskrat                John Metcalf      182.7   96.0  TNT bomber
+ 1  [Di] Diamondette            David Houston     182.8   87.6  Stone
+ 2  [LJ] Tiny Last Judgement    Christian Schmidt 154.1  121.3  Stone + imp
+ 2  [HG] Hellish Glare          John Metcalf      143.0  126.3  Incendiary
+ 2  [MB] moondrops burst        John Metcalf      136.2  130.7  CIA bomber
+ 2  [WD] whispered in a dream   John Metcalf      129.0  134.7  Stone + imp
+ 2  [He] Hemulen                John Metcalf      151.8  121.4  Incendiary
+ 3  [Sm] Smilodon               Simon Wainwright  111.4  130.2  Stone + imp
+ 3  [LI] Lapis Impus 3          Christian Schmidt 121.7  120.4  Stone + imp
+ 3  [Ba] backdraft              Sascha Zapf       152.2  121.1  Stone + imp
+ 4  [Th] Thylacine              Simon Wainwright  108.7  128.0  Stone + imp
+ 4  [WT] WretchedTorch          P. Kline          113.0  123.9  Incendiary
+ 4  [Ri] Ringert                Roy van Rijn      119.7  122.0  Stone + imp
+ 4  [Ro] Rongert                Roy van Rijn      138.7  118.0  Stone + imp
+ 4  [Sa] Salamander             S. Fernandes      147.0  114.3  Stun bomber
+ 5  [Cl] Cloudrunner            Simon Wainwright  119.3  108.5  Stone + imp
+ 5  [Tr] Triturus               S. Fernandes      140.3  104.7  Stone
+ 6  [TT] Tiny Tapir             Roy van Rijn      116.2  105.4  Vampire
+ 6  [Ru] Runestone              S. Fernandes      117.3  103.5  2 x Stone
+ 6  [BB] rdrc:Benthic Bloodbath Dave Hillis       136.3   89.3  Evolved stone
+ 7  [PS] rdrc:Pygmy Snore       Dave Hillis       128.8   86.8  Evolved stone
+ 8  [CS] rdrc:Coolheaded Sandbl Dave Hillis       123.1   81.0  Evolved stone
+=============================================================================
+Tiny Tiny Bombers by John Metcalf
+
+TTB launches lots of small bombers like Hydra or Return of the Living Dead
+and is based on this CWS'88 example published by David Moore in 2006:
+
+        spl    1
+        spl    1
+        mov    -1
+        spl    0,     <2
+        mov    0,     <1
+        mov    4,     978
+        add    #2201, @-2
+        mov    -4,    @-2
+        jmp    @-3,   0
+        djn    -2,    #6970
+
+David's example continuously launches small anti-imp clears of the form:
+
+        spl    0,     <2
+        mov    0,     <1          ; anti-imp bomb
+        djn    -2,    #6970
+
+TTB is a straight conversion of David's code to CWS'94 and launches 12
+clears before self-bombing.  MAXPROCESSES is reached after 1929 cycles,
+faster than a typical tiny silk.
+
+It would be interesting to see how well TTB pairs with paper or imps.
+Here's the current version with a tiny qscan which entered the tiny hill
+in 15th place:
+
+;redcode-tiny
+;name Tiny Tiny Bombers
+;author John Metcalf
+;strategy launch lots of tiny tiny bombers
+;assert CORESIZE==800
+
+        qx     equ 504
+        qy     equ 701
+
+        sne.x  qf+((qx-1)*qy+1)*(((qx-1)*qy)%800), qf+(qx-1)*qy
+        seq.x  qf+(qx*qy+1)*((qx*qy)%800),         }qf
+        jmp    @qlo+1,                             {qf
+        sne.x  qf+((qx+1)*qy+1)*(((qx+1)*qy)%800), qf+(qx+1)*qy
+        jmz.f  tspl,                               <qf
+
+qf      mul.x  #qx,        #qy    ; decode
+        jmz.f  @qlo+1,     >qf
+
+qlo     mov    }519,       >qf    ; attack
+        mov    }qlo,       {qf
+        seq    {qf,        >qf
+        djn.f  qlo,        >qf
+
+        first  equ 88
+        step   equ -351
+
+tspl    spl    #352,       <boot
+        mov.i  #1,         <boot
+boot    mov    tdjn,       first
+        sub    #-step,     boot
+        mov    tspl,       @boot
+        djn.f  @boot,      {tspl
+
+tdjn    djn    -2,         #147
+=============================================================================
+Lapidem Mortiferum by Christian Schmidt
+
+Lapidem Mortiferum is an unusual self-splitting stone/clear with each new
+process executing the stone exactly once before dropping through into the
+SPL/DAT clear.
+
+As processes build up in the clear it rapidly takes over from the stone.
+The stone executes 37% of the time during the first 100 cycles, dropping
+to 19% in the next 100 and only 6% in the 100 after that.
+
+The same technique could be used to pair other strategies although it
+remains to be seen whether or not they could repeat the success of
+Lapidem Mortiferum.
+
+Here's the code for Lapidem Mortiferum with a 3c decoy maker which
+entered the tiny hill in 8th place:
+
+;redcode-tiny
+;name Lapidem Mortiferum
+;author Christian Schmidt
+;assert 1
+;strategy dwarf with a sneaky trick
+
+sStep1  equ     340
+sStep2  equ     323
+sStep3  equ     715
+sStep4  equ     739
+sGate   equ     sGo-3
+sGap    equ     sGo+16
+sTrail  equ     702
+
+sDec1   equ     45
+sDec2   equ     sGo+104
+
+sGo     spl     #sStep1 , >sStep2
+sAtt    mov     {sStep3 , {sStep4
+        add.f   sGo     , sAtt
+        mov.i   @sLoop  , >sGate
+sLoop   djn.f   -1      , {bomb
+        dat     }sTrail , }sGap
+bomb    spl     #sTrail , }sGap
+
+        for    6
+        dat    0,0
+        rof
+
+;-------Decoymaker-------------------
+sCnt
+z       for    6
+        mov    <sDec2+sDec1*z, {sDec2+sDec1*z+sDec1-1
+        rof
+        djn.f  sGo,      <sDec2+sDec1*8
+;-------Decoymaker-------------------
+
+end     sCnt
+=============================================================================
+Tiny resources available on the web:
+
+  http://sal.discontinuity.info/       ; KOTH@SAL - the home of the Tiny hill
+  http://corewar.co.uk/tiny.htm        ; Tiny page - benchmarks, hints and more
+  http://users.obs.carnegiescience.edu/birk/COREWAR/ ; the infinite Tiny hill
+=============================================================================
