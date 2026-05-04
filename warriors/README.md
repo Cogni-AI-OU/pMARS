@@ -15,8 +15,9 @@ This directory contains a collection of warriors for the different International
 
 ## Subdirectories
 
+### Standards & Challenges
+
 - [88Standard](./88Standard/README.md)
-- [88Tourney](./88Tourney/README.md)
 - [94LP](./94LP/README.md)
 - [94Multi](./94Multi/README.md)
 - [94Nano](./94Nano/README.md)
@@ -24,7 +25,13 @@ This directory contains a collection of warriors for the different International
 - [94tiny](./94tiny/README.md)
 - [Begineer](./Begineer/README.md)
 - [Mini Challenges](./mc/README.md)
-- [CWSET 2005](./2005/README.md)
-- [Datagram 2006](./2006/README.md)
-- [IRCT](./IRCT/README.md)
-- [Redcoders Frenzy](./Frenzy/README.md)
+### Tournaments
+
+See the [Tournaments](./tournaments/README.md) directory for collections of warriors from various Core War events:
+
+- [Redcoders Frenzy](./tournaments/Frenzy/README.md)
+- [88Tourney](./tournaments/88Tourney/README.md)
+- [CWSET 2005](./tournaments/2005/README.md)
+- [Datagram 2006](./tournaments/2006/README.md)
+- [IRCT](./tournaments/IRCT/README.md)
+- [Tournament Weekend 2025](./tournaments/2025/README.md)

@@ -1,0 +1,479 @@
+  __ __| |            ) _ \  |  |    \ \        /              _)
+     |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+     |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+    _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+November 30, 1994                                                    Issue #14
+______________________________________________________________________________
+
+_The_'94_Warrior_ is a monthly newsletter dedicated to supporting and
+encouraging the game of Corewars.  This includes coverage of the more popular
+"hills" (which allow users anywhere on the Internet to compete against other
+users), and also by encouraging traffic in the rec.games.corewar newsgroup.
+
+The FAQ (Frequently Asked Questions) for the rec.games.corewar newsgroup is
+available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z.  There are also several
+tutorials on the '88 and '94 (draft) standard available on
+scotch.csua.berkeley.edu (128.32.43.51) that will greatly ease the process of
+becoming a proficient "redcoder."  I would highly recommend referring to the
+FAQ if you are curious about exactly what Corewars is, or if you are
+unfamiliar with any of the terms used in this newsletter.
+______________________________________________________________________________
+
+CHANGES and CORRECTIONS:
+
+It looks as if we may soon have a version of pMARS that is capable of handling
+several warriors at the same time.  (I, for one, would be very interested in
+seeing what types of warriors do well in that type of environment. :)
+
+The FAQ for the newsgroup has also been updated.  Be sure to save a copy of
+the new one for your collection!
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  50/ 39/ 10              Taking names              P.Kline     161       9
+ 2  45/ 31/ 24                 Torch t15              P.Kline     159      43
+ 3  44/ 35/ 21                Stimpy 3.0     Brant D. Thomsen     154      15
+ 4  46/ 38/ 16             HeremScimitar      A.Ivner,P.Kline     153      63
+ 5  47/ 42/ 10                  Agony II        Stefan Strack     152     179
+ 6  40/ 28/ 32               Blue Funk 3       Steven Morrell     151     244
+ 7  33/ 17/ 50                B-Panama X       Steven Morrell     148     185
+ 8  43/ 38/ 19                      SJ-4            J.Layland     147     245
+ 9  39/ 32/ 30                 Rude Wind              P.Kline     146      93
+10  36/ 28/ 36                 Blue Funk       Steven Morrell     145     556
+11  41/ 38/ 22             Leprechaun II         Anders Ivner     144      37
+12  43/ 44/ 14             Iron Gate 1.5       Wayne Sheppard     141     533
+13  41/ 42/ 18              Drowning III      Mike Nonemacher     140      26
+14  29/ 20/ 51                    Ryooki                T.Hsu     138      31
+15  30/ 24/ 46          Silk Warrior 1.4        J.Pohjalainen     137     186
+16  39/ 43/ 18   The Spanish Inquisition       Steven Morrell     134      72
+17  34/ 34/ 32        Killer Instinct II         Anders Ivner     133      38
+18  32/ 31/ 37         Jet Black Reptile   M R Bremer & Jippo     133       2
+19  33/ 51/ 17               Grasp v0.1d     Brant D. Thomsen     115       5
+
+Of course, the most obvious change to this hill is the addition of Paul
+Kline's new warrior "Taking Names," which has been clinging to first place
+since its submission.
+
+("Stimpy" has also jumped up several positions since I tacked a quick-scanner
+onto the front of it.  Check out the hint section of this newsletter if you'd
+like more details! ;)
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental (Big) hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  46/ 32/ 22                  ivscan6b            J.Layland     161      35
+ 2  47/ 36/ 17              Genocide 94x      Mike Nonemacher     158       1
+ 3  34/ 16/ 50           Big Phoenix 1.0        J.Pohjalainen     152       6
+ 4  34/ 18/ 48                   Aleph 1              Jay Han     150      33
+ 5  44/ 38/ 19             Request-55440     Brant D. Thomsen     149     171
+ 6  42/ 36/ 22               Stimpy v2.0     Brant D. Thomsen     148      26
+ 7  46/ 44/ 10                      Test        Stefan Strack     147       7
+ 8  43/ 41/ 16              Pyramid v5.3     Michael Constant     145      62
+ 9  44/ 45/ 11                 Rave B4.1        Stefan Strack     144     132
+10  30/ 16/ 54      Big Silk Warrior 1.0        J.Pohjalainen     143      13
+11  34/ 25/ 41             Variation G-1              Jay Han     142     135
+12  38/ 39/ 23                Vanity IIx        Stefan Strack     137     126
+13  39/ 42/ 19                     Fscan              Jay Han     136      19
+14  38/ 41/ 21                   Aleph 0              Jay Han     136      34
+15  30/ 27/ 43                  Splash 1              Jay Han     133     136
+16  29/ 26/ 45                 Blue Funk       Steven Morrell     133      25
+17  29/ 25/ 47              NotSoBigImps        James Layland     132      31
+18  40/ 49/ 11                    Squint      Mike Nonemacher     131     109
+19  31/ 31/ 38                  Lucky 13        Stefan Strack     131     177
+20  29/ 27/ 44 Der Zweite Blitzkrieg - 9      Mike Nonemacher     131     133
+
+This hill is unchanged since last month.
+______________________________________________________________________________
+
+The ICWS '88 Standard Hill:
+
+        Standard:       '88
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current Standard KotH hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 26/ 32          Yop La Boum v2.1         P.E.M & E.C.     158      56
+ 2  44/ 44/ 13              Dragon Spear             c w blue     144      78
+ 3  32/ 21/ 47               Sphinx v5.1         W. Mintardjo     143      12
+ 4  32/ 21/ 47     Der Zweite Blitzkrieg      Mike Nonemacher     142      60
+ 5  43/ 45/ 12             Iron Gate 1.5       Wayne Sheppard     141     109
+ 6  40/ 41/ 19                 Vanity II        Stefan Strack     140     100
+ 7  29/ 19/ 51   CAPS KEY IS STUCK AGAIN       Steven Morrell     140      66
+ 8  39/ 40/ 21              Request v2.0     Brant D. Thomsen     138      79
+ 9  26/ 15/ 59                      ttti        nandor sieben     136      82
+10  28/ 19/ 53                The Plauge            Anonymous     136      15
+11  27/ 19/ 53                 NC Killer            Anonymous     135      16
+12  37/ 39/ 23               Christopher       Steven Morrell     135      52
+13  34/ 33/ 32          Annihilator v2.1       Carlos Paredes     135       3
+14  27/ 18/ 55              Blue Funk 88       Steven Morrell     135      25
+15  27/ 19/ 54             Night Crawler       Wayne Sheppard     134       5
+16  28/ 24/ 47              B-Panama V.i       Steven Morrell     132      10
+17  37/ 41/ 22                    Titled       Steven Morrell     132       2
+18  26/ 19/ 55                Imprimis 6            Anonymous     132      17
+19  24/ 16/ 61                     Peace            Mr. Jones     132       1
+20  34/ 38/ 28              Keystone t21              P.Kline     131      98
+
+The '88 hill hasn't aged much (1), but don't let that fool you.  This hill is
+still very busy.  The old standards still appear to be holding their own!
+______________________________________________________________________________
+
+The ICWS '94 Beginner Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current Beginner KotH hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  58/ 31/ 10                  Samba2.2            Mr. Jones     185      21
+ 2  57/ 33/ 10             Viewmaster4.0            Ryan Case     181     222
+ 3  56/ 37/  7             Ecstacy (XTC)        Brant Thomsen     176      89
+ 4  35/ 10/ 56                     Peace            Mr. Jones     160       5
+ 5  39/ 27/ 34                   Ox v1.0        Brian Zellner     150      18
+ 6  28/ 12/ 60         Rabid Dwarfs v1.3        Brian Zellner     144      64
+ 7  33/ 23/ 44              Slate, v0.3a     Bharat Mediratta     143     143
+ 8  40/ 37/ 23          Bloody Fang v2.1     Bharat Mediratta     142       9
+ 9  37/ 36/ 27           AB Scanner 1.4a         Chris Hodson     138       1
+10  35/ 36/ 29         Green Knight v1.7        Brian Zellner     134      65
+11  33/ 34/ 33             Count Zero #1         Marc Schefer     131      85
+12  39/ 50/ 12                        It                 Hari     127     206
+13  26/ 25/ 49    Rubarbe et mort-vivant           J.P.Laurin     126      92
+14  24/ 23/ 53         War Machine v2.65     Matthias Wollnik     125      10
+15  21/ 17/ 62                  Paperous            Mr. Jones     124      14
+16  38/ 52/ 10                  Cat v2.0           Tim Scheer     123     163
+17  23/ 24/ 53          War Machine v2.6     Matthias Wollnik     123      11
+18  25/ 30/ 45            strange carpet          Erik Hughes     121       3
+19  20/ 26/ 53          War Machine v2.5     Matthias Wollnik     114      12
+20  18/ 28/ 54           Mostly Harmless   Frank J. T. Wojcik     109      53
+
+Congratulations are due to Mr. Jones:  his program "Peace" is not only doing
+well on the beginner's hill, but has also made a place for itself on the
+"Standard" hill.  (At least, I assume it's the same program.)  Welcome to the
+Big League!
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+For the hint this month, I will be discussing quick-scans.
+
+Scanning, bombing, and movement are often talked about in terms of "C", where
+"C" is one instruction per turn.  Standard scanning techniques will allow you
+to scan one location every two turns, or two instructions every three turns,
+giving you a scanning speed of 50% or 67%.  (Granted, the numbers can look
+even better if you account for mutilation of the core as a side effect as
+well.)  However, with a quick-scan, you can scan at the fastest possible
+speed -- 2 instructions per turn, or 200%.  The disadvantage is that you
+cannot use this scan in a loop (without reducing the speed), so even a short
+scan can be several instructions long.
+
+The original quick-scan, as used in Paul Kline's QuickFreeze, consists of
+alternating CMP (SEQ) and MOV statements.  When each CMP instruction is
+executed, the following MOV instruction will only be executed if the two
+instructions compared are not equal.  Each MOV instruction, when executed,
+will store the values for the previous comparison in a standard location.
+This allows you to scan two locations for every two instructions, and keep
+track of the last location where you found something of interest.
+
+When the series of CMP instructions is done executing, the process can then
+check the standard location referenced by the MOV instructions to see if any
+of the comparisons failed.  If any did, then your program can take advantage
+of this knowledge by attacking whatever was found.  Since what was found is
+very likely to be your opponent's original code, it is often possible to harm
+your opponent while they are still getting started.  (Imp-Spirals, for
+example, take a long time to setup.)
+
+Below is a quick-scan that will run under the '88 standard.  You may need to
+shorten it, as it only leaves eleven lines for the program you will execute
+after the quick-scan.  My recommendation would be to quick-scan fewer
+locations if your warrior needs space for a few more instructions.
+
+
+;redcode
+;name Quick-Scan '88 Prototype
+;author Brant D. Thomsen
+;strategy Add this to the front of your warrior,
+;strategy  and see if it improves your score.
+;assert CORESIZE == 8000
+
+space   equ     (8000/81)       ; Step when scanning for code.
+qbomb   equ     6               ; Step when bombing whatever we found.
+
+scan    cmp     space*1+bottom, space*41+bottom
+        mov     #space*1+bottom-found, found
+        cmp     space*2+bottom, space*42+bottom
+        mov     #space*2+bottom-found, found
+        cmp     space*3+bottom, space*43+bottom
+        mov     #space*3+bottom-found, found
+        cmp     space*4+bottom, space*44+bottom
+        mov     #space*4+bottom-found, found
+        cmp     space*5+bottom, space*45+bottom
+        mov     #space*5+bottom-found, found
+        cmp     space*6+bottom, space*46+bottom
+        mov     #space*6+bottom-found, found
+        cmp     space*7+bottom, space*47+bottom
+        mov     #space*7+bottom-found, found
+        cmp     space*8+bottom, space*48+bottom
+        mov     #space*8+bottom-found, found
+        cmp     space*9+bottom, space*49+bottom
+        mov     #space*9+bottom-found, found
+        cmp     space*10+bottom, space*50+bottom
+        mov     #space*10+bottom-found, found
+        cmp     space*11+bottom, space*51+bottom
+        mov     #space*11+bottom-found, found
+        cmp     space*12+bottom, space*52+bottom
+        mov     #space*12+bottom-found, found
+        cmp     space*13+bottom, space*53+bottom
+        mov     #space*13+bottom-found, found
+        cmp     space*14+bottom, space*54+bottom
+        mov     #space*14+bottom-found, found
+        cmp     space*15+bottom, space*55+bottom
+        mov     #space*15+bottom-found, found
+        cmp     space*16+bottom, space*56+bottom
+        mov     #space*16+bottom-found, found
+        cmp     space*17+bottom, space*57+bottom
+        mov     #space*17+bottom-found, found
+        cmp     space*18+bottom, space*58+bottom
+        mov     #space*18+bottom-found, found
+        cmp     space*19+bottom, space*59+bottom
+        mov     #space*19+bottom-found, found
+        cmp     space*20+bottom, space*60+bottom
+        mov     #space*20+bottom-found, found
+
+        jmn     found, found    ; Get out early if found something.
+
+        cmp     space*21+bottom, space*61+bottom
+        mov     #space*21+bottom-found, found
+        cmp     space*22+bottom, space*62+bottom
+        mov     #space*22+bottom-found, found
+        cmp     space*23+bottom, space*63+bottom
+        mov     #space*23+bottom-found, found
+        cmp     space*24+bottom, space*64+bottom
+        mov     #space*24+bottom-found, found
+        cmp     space*25+bottom, space*65+bottom
+        mov     #space*25+bottom-found, found
+        cmp     space*26+bottom, space*66+bottom
+        mov     #space*26+bottom-found, found
+        cmp     space*27+bottom, space*67+bottom
+        mov     #space*27+bottom-found, found
+        cmp     space*28+bottom, space*68+bottom
+        mov     #space*28+bottom-found, found
+        cmp     space*29+bottom, space*69+bottom
+        mov     #space*29+bottom-found, found
+        cmp     space*30+bottom, space*70+bottom
+        mov     #space*30+bottom-found, found
+        cmp     space*31+bottom, space*71+bottom
+        mov     #space*31+bottom-found, found
+        cmp     space*32+bottom, space*72+bottom
+        mov     #space*32+bottom-found, found
+        cmp     space*33+bottom, space*73+bottom
+        mov     #space*33+bottom-found, found
+        cmp     space*34+bottom, space*74+bottom
+        mov     #space*34+bottom-found, found
+        cmp     space*35+bottom, space*75+bottom
+        mov     #space*35+bottom-found, found
+        cmp     space*36+bottom, space*76+bottom
+        mov     #space*36+bottom-found, found
+        cmp     space*37+bottom, space*77+bottom
+        mov     #space*37+bottom-found, found
+        cmp     space*38+bottom, space*78+bottom
+        mov     #space*38+bottom-found, found
+        cmp     space*39+bottom, space*79+bottom
+        mov     #space*39+bottom-found, found
+        cmp     space*40+bottom, space*80+bottom
+        mov     #space*40+bottom-found, found
+
+        jmz     warrior, found  ; Don't Quick-bomb if nothing found.
+
+found   cmp     bottom, 0       ; Find which instruction is not blank.
+        jmp     2               ; CMP / JMP 2 is the '88 equivalent of SNE.
+
+        add     #40*space, found ; Goto second location if first is blank.
+
+forward mov     jump, @found    ; Use a SPL/JMP bomb.
+        mov     split, <found
+        add     #(qbomb+1), found
+        jmn     forward, @found ; Keep bombing while B-Field is not 0.
+
+
+        ; Regular warrior starts here.
+        ; The first instruction should be labeled "warrior".
+        ; Must include the code for a two-line bomb.
+        ; (Or, of course, you are welcome to use a different bomb,
+        ;  such as a single DAT statement.)
+
+warrior jmp     0, <-100        ; Replace this with your own code.
+
+split   spl     0
+jump    jmp     -1
+
+bottom  end     scan
+
+
+(One trick QuickFreeze used, that I haven't seen since, was to have two
+processes execute two separate quick-scans in parallel.  That way, the program
+won't be killed if a bomber drops a DAT statement onto one of the CMP
+instructions in the quick-scan.  If you can handle having more than one
+process executing the code for your warrior, this could be a good idea.)
+
+A slightly different type of quick-scan -- first suggested by Wayne
+Sheppard -- is possible if you use the SNE instruction.  (F.Y.I.:  The SNE
+instruction is not mentioned in the '94 draft standard as it currently
+stands.)  By using a combination of SNE and SEQ instructions, the quick-scan
+code size can be reduced by 25%.  The problem with using a SNE/SEQ quick-scan,
+instead of a standard quick-scan, is that there are four possible locations
+where the instruction you found could be located.  A standard quick-scan
+narrows it down to two.
+
+The following quick-scan is very similar to the one I used with Stimpy 3.0.
+It uses ranges that are a set distance away from each other, so that I can use
+a small loop to re-find the instruction located by the scan.  (I use an "X"
+instead of a "F" in the comparison to guarantee that the instruction found
+will have a non-zero value in one of its fields.)  Once this instruction has
+been found (again), the the block of code surrounding it is systematically
+bombed.
+
+This code, and the code above, is slightly longer than it needs to be,
+as I have gone out of my way to make the quick-scan as fast as possible.
+Still, there are currently up to 25 lines free for your code and bootstrapping
+procedure.  (Bootstrapping is highly recommended, since a scanner will find
+you really quickly otherwise.)
+
+
+;redcode-94
+;name Quick-Scan '94 Prototype
+;author Brant D. Thomsen
+;strategy Add this to the front of your warrior,
+;strategy  and see if it improves your score.
+
+space   equ     (CORESIZE/81)   ; Step when scanning for code.
+qbomb   equ     6               ; Step when bombing whatever we found.
+
+scan    sne.X   space*1+bottom, space*3+bottom
+        seq.X   space*2+bottom, space*4+bottom
+        mov     #space*1+bottom-found, found
+        sne.X   space*5+bottom, space*7+bottom
+        seq.X   space*6+bottom, space*8+bottom
+        mov     #space*5+bottom-found, found
+        sne.X   space*9+bottom, space*11+bottom
+        seq.X   space*10+bottom, space*12+bottom
+        mov     #space*9+bottom-found, found
+        sne.X   space*13+bottom, space*15+bottom
+        seq.X   space*14+bottom, space*16+bottom
+        mov     #space*13+bottom-found, found
+        sne.X   space*17+bottom, space*19+bottom
+        seq.X   space*18+bottom, space*20+bottom
+        mov     #space*17+bottom-found, found
+        sne.X   space*21+bottom, space*23+bottom
+        seq.X   space*22+bottom, space*24+bottom
+        mov     #space*21+bottom-found, found
+        sne.X   space*25+bottom, space*27+bottom
+        seq.X   space*26+bottom, space*28+bottom
+        mov     #space*25+bottom-found, found
+        sne.X   space*29+bottom, space*31+bottom
+        seq.X   space*30+bottom, space*32+bottom
+        mov     #space*29+bottom-found, found
+        sne.X   space*33+bottom, space*35+bottom
+        seq.X   space*34+bottom, space*36+bottom
+        mov     #space*33+bottom-found, found
+        sne.X   space*37+bottom, space*39+bottom
+        seq.X   space*38+bottom, space*40+bottom
+        mov     #space*37+bottom-found, found
+
+        jmn.B   found, found    ; Get out early if found something.
+
+        sne.X   space*41+bottom, space*43+bottom
+        seq.X   space*42+bottom, space*44+bottom
+        mov     #space*41+bottom-found, found
+        sne.X   space*45+bottom, space*47+bottom
+        seq.X   space*46+bottom, space*48+bottom
+        mov     #space*45+bottom-found, found
+        sne.X   space*49+bottom, space*51+bottom
+        seq.X   space*50+bottom, space*52+bottom
+        mov     #space*49+bottom-found, found
+        sne.X   space*53+bottom, space*55+bottom
+        seq.X   space*54+bottom, space*56+bottom
+        mov     #space*53+bottom-found, found
+        sne.X   space*57+bottom, space*59+bottom
+        seq.X   space*58+bottom, space*60+bottom
+        mov     #space*57+bottom-found, found
+        sne.X   space*61+bottom, space*63+bottom
+        seq.X   space*62+bottom, space*64+bottom
+        mov     #space*61+bottom-found, found
+        sne.X   space*65+bottom, space*67+bottom
+        seq.X   space*66+bottom, space*68+bottom
+        mov     #space*65+bottom-found, found
+        sne.X   space*69+bottom, space*71+bottom
+        seq.X   space*70+bottom, space*72+bottom
+        mov     #space*69+bottom-found, found
+        sne.X   space*73+bottom, space*75+bottom
+        seq.X   space*74+bottom, space*76+bottom
+        mov     #space*73+bottom-found, found
+        sne.X   space*77+bottom, space*79+bottom
+        seq.X   space*78+bottom, space*80+bottom
+        mov     #space*77+bottom-found, found
+
+        jmn.B   found, found    ; Quick-bomb if found something.
+        jmp     warrior         ; Execute regular code, because nothing found.
+
+        add     #space, found
+found   jmz.F   -1, 0           ; Goto the location where we found something.
+
+        mov.B   found, backwd   ; Save this value for use in backward bomb.
+
+forward mov.I   split, >found
+        mov.I   jump, @found
+        add     #(qbomb-1), found
+        jmn.F   forward, @found
+
+        sub     #(2*qbomb), backwd      ; Don't re-bomb over forward-scan.
+
+backwd  mov.I   jump, 0
+        mov.I   split, <backwd
+        sub     #(qbomb-1), backwd
+        jmn.F   backwd, @backwd
+
+
+        ; Regular warrior starts here.
+        ; The first instruction should be labeled "warrior".
+        ; Must include the code for a two-line bomb.
+        ; (Or, of course, you are welcome to use a different bomb,
+        ;  such as a single DAT statement.)
+
+warrior jmp     #0, <-100       ; Replace this with your own code.
+
+split   spl     #0
+jump    jmp     -1
+
+bottom  end     scan
+______________________________________________________________________________
+
+Looking to the Future:
+
+Merry Christmas!
+
+This newsletter is published monthly.  As always, your comments, suggestions,
+criticisms, and submissions are encouraged and appreciated.

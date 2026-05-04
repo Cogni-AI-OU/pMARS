@@ -1,0 +1,250 @@
+ _____ _                                 _
+(_   _(_)_ __  _   ___    ____ _ _ _ _ _(_) ___  _ _
+  | | | | '_ \| | | \ \/\/ / _' | '_| '_| |/ _ \| '_)
+  | | | | | | | |_| |\    / (_| | | | | | | (_) | |                   Issue 2
+  |_| |_|_| |_|\__, | \/\/ \__,_|_| |_| |_|\___/|_|         10 February, 2005
+===============(___/=========================================================
+Welcome to Tinywarrior, the newletter which reports the latest events
+and techniques for the tiny hills.  If you haven't discovered the tiny
+hills yet, the specs are:
+
+         coresize: 800
+   max. processes: 800
+         duration: after 8,000 cycles, a tie is declared.
+max. entry length: 20
+ minimum distance: 20
+  instruction set: extended ICWS '94 Draft
+
+In this issue we take a look at the technique evolved by White Noise and
+a modified binary launcher.
+=============================================================================
+Current Status of the SAL Tiny Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  37.5/ 25.9/ 36.6              Endless pain          G.Labarga 149.1    20
+ 2  43.5/ 38.1/ 18.4   White Noise (RBv1.5r10) The MicroGP Corewa 148.9    19
+ 3  34.0/ 22.2/ 43.7             Digital Swarm       John Metcalf 145.9   134
+ 4  42.3/ 40.3/ 17.4                  Sidestep  Christian Schmidt 144.4    69
+ 5  42.6/ 41.8/ 15.6                Four Winds       John Metcalf 143.5    47
+ 6  37.5/ 32.8/ 29.7                Easter Egg       John Metcalf 142.3   101
+ 7  35.3/ 28.6/ 36.0              Soft as Silk        Sascha Zapf 142.1   111
+ 8  44.9/ 48.3/  6.8                   Muskrat       John Metcalf 141.5    52
+ 9  44.2/ 48.7/  7.1                       ZXC          G.Labarga 139.6     1
+10  34.3/ 29.2/ 36.4                   Boosted          G.Labarga 139.4     3
+11  40.5/ 43.5/ 16.0            RedBorg v1.0r6 The MicroGP Corewa 137.4    15
+12  40.6/ 43.9/ 15.5            RedBorg v1.0r7 The MicroGP Corewa 137.3    14
+13  41.2/ 46.3/ 12.5             Tiny Zooom...       John Metcalf 136.1    98
+14  38.8/ 42.3/ 18.9              Sneaky Spike       Roy van Rijn 135.3    93
+15  39.6/ 44.2/ 16.2           Tiny BiShot 2.0  Christian Schmidt 135.1   149
+16  39.5/ 44.2/ 16.3                Provenance       John Metcalf 134.8    73
+17  23.9/ 13.2/ 62.9              tiny Blowrag    Metcalf/Schmidt 134.5   148
+18  30.2/ 26.6/ 43.2                     3p(c)        Sascha Zapf 133.8    56
+19  28.3/ 24.6/ 47.1            Where's Giles?       John Metcalf 132.0    79
+20  39.0/ 46.0/ 15.1              Milkshake IV              LAchi 132.0    99
+21  24.0/ 16.9/ 59.2               Tiny Lord 4          G.Labarga 131.1    21
+22  36.4/ 44.0/ 19.6              Tinyboss III          G.Labarga 128.8    22
+23  37.7/ 47.0/ 15.3                  Tinyshot       John Metcalf 128.5   136
+24  37.8/ 47.1/ 15.1          Seek and Destroy        Sascha Zapf 128.4   121
+25  32.0/ 37.9/ 30.0                Reanimator       John Metcalf 126.2     4
+
+Av  37.0/ 37.0/ 26.0                                              137.1    67 
+
+Since last issue, there have been 25 successful challenges, with 9 of the
+newcomers remaining.  3 of the 25 warriors which left the hill attained an
+age of 50+.  The oldest to depart was Ugly Uncle, age 127, followed by
+Diamondette (122) and palm leaves (51).
+
+Oneshots are still dominating the mix of strategies, with 12 in total, 3
+of which are evolved.  Papers are also well represented with 9 warriors.
+Imps are used in 2 of the papers.  The remaining 4 warriors are 2 bombers,
+a clear/imp and a scanner.  The average age of a paper is 75, the average
+for a oneshot is 71.
+
+Koth report:  Endless pain claimed first place 11 times in all, followed by
+White Noise (8 times) and SledgeHammer (5).
+=============================================================================
+The Tiny Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Tiny BiShot 2.0        Christian Schmidt  149 *  oneshot
+ 2  tiny Blowrag           Metcalf/Schmidt    148 *  paper/imp
+ 3  Tinyshot               John Metcalf       136 *  oneshot
+ 4  Digital Swarm          John Metcalf       134 *  qscan -> paper
+ 5  Ugly Uncle             Christian Schmidt  127    qscan -> paper
+ 6  Diamondette            David Houston      122    stone
+ 7  Seek and Destroy       Sascha Zapf        121 *  oneshot
+ 8  Soft as Silk           Sascha Zapf        111 *  qbomb -> paper
+ 9  Easter Egg             John Metcalf       101 *  qscan -> paper
+10  Milkshake IV           LAchi               99 *  oneshot
+11  Tiny Zooom...          John Metcalf        98 *  decoy maker -> scanner
+12  Betadine               M Joonas Pihlaja    97    oneshot
+13  Sneaky Spike           Roy van Rijn        93 *  decoy maker -> oneshot
+14  Origin of Storms       John Metcalf        90    scanner
+15  Table Scan             John Metcalf        85    oneshot
+16  Where's Giles?         John Metcalf        79 *  qscan -> paper
+17  Xyzzy                  John Metcalf        77    paper/stone
+18  Son of Darkness 2      Christian Schmidt   74    paper/stone
+19  Provenance             John Metcalf        73 *  oneshot/dodger
+20  Evolving Magic         Christian Schmidt   71    qbomb -> paper
+21  Sidestep               Christian Schmidt   69 *  oneshot/dodger
+22  Cream and Chocolate    LAchi               61    oneshot
+23  3p(c)                  Sascha Zapf         56 *  paper
+24  Muskrat                John Metcalf        52 *  qbomb -> bomber
+25  palm leaves            Metcalf/Schmidt     51    paper/imp
+
+Three new entries to the Hall of Fame sit in the lower 3 ranks.
+=============================================================================
+Current Status of the corewar.co.uk Infitiny Hill:
+
+The infitiny hill is where all of the published tiny warriors battle
+round-robin.  Here are shown the top 25 of 180 warriors:
+
+ #    %w   %l   %t  Name                     Author                  Score
+ 1  50.9 29.6 19.5  White Noise (RBv1.5r10)  The MicroGP Corewars C 172.21 
+ 2  48.3 26.4 25.4  bestwar4.red             Dave Hillis            170.21 
+ 3  51.1 33.4 15.5  Tinyshot                 John Metcalf           168.77 
+ 4  48.4 28.4 23.2  Evolving Threat          Dave Hillis            168.28 
+ 5  50.6 33.8 15.7  Seek and Destroy         Sascha Zapf            167.38 
+ 6  50.1 33.8 16.1  Provenance               John Metcalf           166.36 
+ 7  50.4 34.4 15.2  Betadine                 M Joonas Pihlaja       166.33 
+ 8  48.6 32.7 18.8  Sneaky Spike             Roy van Rijn           164.47 
+ 9  48.3 32.2 19.5  Table Scan               John Metcalf           164.40 
+10  48.9 33.7 17.4  Tiny BiShot 2.0          Christian Schmidt      164.15 
+11  49.4 35.0 15.6  t766--                   Michal Janeczek        163.69 
+12  45.3 26.9 27.9  Easter Egg               John Metcalf           163.65 
+13  48.7 33.9 17.4  Cream and Chocolate      LAchi                  163.60 
+14  48.5 33.4 18.1  Tinyboss III             G.Labarga              163.56 
+15  48.4 33.6 18.0  s774++                   Michal Janeczek        163.30 
+16  43.1 23.0 33.9  Wilt ;)                  G.Labarga              163.20 
+17  48.4 34.5 17.1  Pop!                     Neogryzor              162.37 
+18  48.1 34.2 17.7  WingShot T               Ben Ford               162.06 
+19  48.1 34.3 17.6  Four Winds               John Metcalf           161.98 
+20  48.5 35.1 16.4  Sidestep                 Christian Schmidt      161.83 
+21  48.5 35.3 16.2  clock strikes twelve     John Metcalf           161.74 
+22  49.6 37.4 13.0  Tiny Zooom...            John Metcalf           161.67 
+23  47.9 34.2 18.0  WingShot                 Ben Ford               161.58 
+24  49.0 36.8 14.2  dark skies               Simon Wainwright       161.11 
+25  38.2 15.4 46.4  Digital Swarm            John Metcalf           161.00 
+
+After 19 new entries, two new warriors claim the top positions.  Both
+White Noise and bestwar4.red are evolved.  Some handcoded warriors also
+enter in good positions, including Tinyboss III, Pop! and Sidestep.
+=============================================================================
+Extra Extra - White Noise by The MicroGP Corewars Collective
+
+White Noise is an evolved oneshot similar to s774++ by Michal Janeczek,
+which entered the tiny hill in first place last August and has been
+lurking close to the hilltop ever since.
+
+After the MicroGP team (Bio, (ES)^2, dr.gapp, Ipso, MadMax, MasKrP and
+PPU) published White Noise, an analysis of the code showed their evolver
+had discovered an interesting technique.  The clear has two streams -
+a fast clear which starts at a location shortly after the warrior's code,
+and a slow clear starting where something was found by the scan.
+
+But, the code produced by the evolver is not in a human-friendly
+format, so can be tricky to follow.  To make White Noise easier to study,
+the tidied code is presented below:
+
+;recode-tiny
+;name White Noise (tidy)
+;author The MicroGP Corewars Collective
+;strategy evolved oneshot
+;assert CORESIZE==800
+
+        step  equ -26
+
+scan    add   inc,        @inc+1
+sptr    sne   }3*step+11, 3*step+5
+cptr    djn.f scan,       {50
+
+inc     spl   #step,      {step
+        mov   @bptr,      >sptr
+clr     mov   @bptr,      >cptr
+        mov   @bptr,      >cptr
+bptr    djn.f clr,        {sbmb
+
+        dat   #-181,      }8
+sbmb    spl   #-25,       12
+
+        for   9
+        dat   0,          0
+        rof
+
+        spl   1,          1
+
+        end   sptr
+=============================================================================
+Extra Extra - whispered in a dream by John Metcalf
+
+After hearing rumors about a new type of imp-launcher, I re-examined
+the vector launch I've been using in some of my tiny warriors.  I wondered
+what, if anything, could be improved.
+
+The speed is already optimal, and I believed(*) no worthwhile improvement
+could be made to the size.  So I searched for a method to increase the
+number of offensive decrements.
+
+A standard binary launch has plenty of free b-fields.  Using this as a
+starting point I looked for opportunities to reduce the size.
+
+By re-using portions of the code and incrementing the launch addresses
+as necessary, a 3 point 8 process binary launch can be reduced from 15
+to 9 instructions.
+
+We define a good offensive decrement as follows:
+
+  1) to be at a location which will not be overwitten shortly after,
+  2) to not be adjacent to another decremented location.
+
+Decrements which do not meet these requirements are regarded as poor.
+
+The new launcher demonstrated in the stone/imp below has 14 decrements
+in total, 6 good and 8 poor.  This compares well to the launcher used by
+Unknown, which has 3 good decrements.
+
+;redcode-tiny
+;name whispered in a dream
+;author John Metcalf
+;strategy stone/imp
+;assert CORESIZE==800
+
+        sstep equ 132
+        istep equ 267
+        iboot equ imp+31
+
+inc     spl   #-sstep,       >sstep
+ptr     mov   >-sstep*2,     1+sstep*2
+        add   inc,           ptr
+        djn.f ptr,           >inc+sstep
+
+        for   4
+        dat   0,             0
+        rof
+
+less    spl   inc,           {340
+
+        mov   imp,           *i3
+        spl   i4,            {492
+        spl   i2,            {539
+i6      spl   @i1,           {404
+i3      djn.f iboot+0*istep, }0
+i4      spl   i6,            {437
+        spl   @i5,           {224
+i1      djn.f iboot+1*istep, }0
+i2      spl   @i3,           {456
+i5      djn.f iboot+2*istep, }0
+
+imp     mov.i #133,          istep+1
+        end   less
+
+ * G. Labarga recently published "Imp Launchers and The Hybrid Launcher"
+   in Core Warrior 91, which achieves a significant size reduction.
+=============================================================================
+Tiny resources available on the web:
+
+  http://sal.math.ualberta.ca/       ; SAL - the home of the Tiny hill
+  http://corewars.sourceforge.net/   ; hills for no-pspace and evolved warriors
+  http://corewar.co.uk/tiny.htm      ; Tiny page - benchmarks, hints and more
+  http://www.ociw.edu/~birk/COREWAR/ ; home to the infinite Tiny hill
+=============================================================================

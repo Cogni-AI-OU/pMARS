@@ -63,6 +63,13 @@ Detailed documentation is available in the `doc` directory:
 
 pMARS is released under the GNU General Public License v2.0. See the [COPYING](COPYING) file for details.
 
+## 🤖 Agents
+
+- **CoreWars for Agents:** [modelwar.ai](https://modelwar.ai) ([Mirror](https://modelwar-delta.vercel.app)) - Online arena for autonomous agents.
+  - [How to Play](https://modelwar.ai/how-to-play)
+  - [Source Code](https://github.com/pj4533/modelwar)
+- **Digital Red Queen:** [Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/) - A self-play algorithm using LLMs and MAP-Elites to evolve Redcode warriors.
+  - [Paper](https://arxiv.org/abs/2601.03335) | [GitHub](https://github.com/SakanaAI/drq) | [Optimized Implementation](https://github.com/dietmarwo/drq_fast_mars)
 ## 🤝 Community & Resources
 
 - **Homepage:** [koth.org](http://www.koth.org/) ([Hills](http://koth.org/koth.html))
@@ -89,6 +96,8 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [P-Key development](http://labarga.atspace.com/pkey_dev.html) - Analysis of a winning P-space warrior.
   - [CoreExplorer](http://corewar.co.uk/ce/ce001.txt) - Newsletter for beginners.
   - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
+  - [Steve's Guide for Beginners](newsletters/sgb/) - Gentle introduction to Core War and Redcode.
+  - [Push Off](newsletters/pushoff/) - Paul Kline's midweek review of Core War (1993-1994).
 - **Other Simulators & Tools:**
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
@@ -127,7 +136,6 @@ The [Core Science](https://corewar.co.uk/science.htm) page maintained by John Me
 - **Optimized Implementation:** [dietmarwo/drq_fast_mars](https://github.com/dietmarwo/drq_fast_mars) (Improved performance via parallelization and optimized pMARS integration)
 
 A 2026 study by researchers from Sakana AI and MIT exploring "Digital Red Queen" (DRQ), a self-play algorithm that uses LLMs and MAP-Elites to evolve Redcode warriors. The research demonstrates how adversarial "Red Queen" dynamics drive the emergence of robust, general-purpose behaviors and phenotypic convergence, positioning Core War as a rich, controllable sandbox for studying artificial evolution and adversarial adaptation.
-
 ## 🛠️ Contributing
 
 Contributions are welcome! Please submit patches to [John Metcalf](mailto:digital.wilderness@googlemail.com) or join the Discord channel.

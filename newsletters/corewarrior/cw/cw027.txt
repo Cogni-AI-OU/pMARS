@@ -1,0 +1,869 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 27                                                       April  29, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is still out of service, you can download pMARS at:
+
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar fpt site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+______________________________________________________________________________
+Greetings.
+
+A quiet week on the hill, few challengers and little or no bloodwaste; are the
+players taking some holydays or just preparing new weapons for next week,
+nobody can tell it.
+
+In the newsgroup there has been some discussion about a new scoring system for
+multiwarrior hills, seen the too many ties and the scarcety of strategies.
+John K. Lewis decided to organize a tournament to see if a reduced process
+number can bring more variety.
+
+The tournament will use the following set up:
+
+pmars <programs 1-10> -r 100 -p 8 -k
+
+Mail your entries to John <jklewis@ren.us.itd.umich.edu> with a subject of :
+
+- THE BATTLE ROYAL! -
+
+
+This issue includes a first release of warrior ratings, according to the
+advanced benchmark. Thanks to Scott Manley that did the job.
+
+- Beppe Bezzi
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 40/ 16                Scanny Boy        David van Dam     149     304
+ 2  43/ 36/ 21                  Mirage 2        Anton Marsden     149     240
+ 3  42/ 35/ 24               Thermite II        Robert Macrae     149    1474
+ 4  45/ 42/ 13              Solomon v0.3          Ian Oversby     149      86
+ 5  42/ 36/ 22          Gem of the Ocean              P.Kline     148     343
+ 6  35/ 24/ 40     Walk Like An Egyptian             John K W     147      32
+ 7  41/ 37/ 22                 Chameleon           M R Bremer     145     945
+ 8  43/ 42/ 14            Stepping Stone          Kurt Franke     145     287
+ 9  40/ 36/ 23      Grilled Octopus v0.5         David Boeren     145     690
+10  29/ 15/ 55             Hazy Shade II             John K W     143     433
+11  40/ 38/ 21       The Core Clear V1.2        David van Dam     142      15
+12  38/ 35/ 26              La Bomba 1.3          Beppe Bezzi     141      45
+13  31/ 20/ 49            Impfinity v4g1               Planar     141    1673
+14  40/ 38/ 22             Blanket Party             J E Long     141     198
+15  36/ 32/ 32                   Lithium     John K Wilkinson     141     481
+16  38/ 36/ 26                     prova    Maurizio Vittuari     141     450
+17  36/ 32/ 32                    Flurry        Anton Marsden     140     435
+18  36/ 33/ 31               Tornado 3.0                Beppe     139    1275
+19  38/ 38/ 24                  coal 3.1       bjoern guenzel     139       4
+20  25/ 12/ 64                EvolCap XI       John Wilkinson     138     183
+21  42/ 47/ 11          Wind-up Toy v0.7          Ian Oversby     138     154
+22  40/ 44/ 16              Naked dancer          Beppe Bezzi     136      26
+23  33/ 31/ 36               Blue Funk 5       Steven Morrell     135     618
+24  36/ 38/ 26                    T.N.T.    Maurizio Vittuari     135    1199
+25  31/ 33/ 35             silkworm v3.2         Brian Haskin     130       1
+
+Weekly age: 53
+New warriors 6  Turnover/age rate 11%
+Average age: 464 ( 424 last week, 386 the week before )
+Average score: 142 ( 141 last week, 130 the week before )
+The top 25 warriors are represented by 16 authors, JKW with 4, Bezzi 3,
+Oversby, Marsden, van Dam and Vittuari with 2.
+
+A very quiet week this one, but 53 challenges, no push off and no new warrior
+in the hilltop, paprt new version of Walk like an Egyptian for just a moment.
+
+Mirage 2 held King position for most time sharing the spot with Solomon,
+Scanny boy, the Core Clear, Chameleon an Walk like an Egyptian. The scores are
+very close, we have 5 warrior in one point, 9 in four points and 21th is at
+but 11 point from the top, this with an entry score of 130 points.
+
+Scanners and pspacers seem to be the winning strategy, even if it's rather
+difficult to see a tendency in such a situation.
+
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 6  35/ 24/ 40     Walk Like An Egyptian             John K W     147      32
+11  40/ 38/ 21       The Core Clear V1.2        David van Dam     142      15
+12  38/ 35/ 26              La Bomba 1.3          Beppe Bezzi     141      45
+19  38/ 38/ 24                  coal 3.1       bjoern guenzel     139       4
+22  40/ 44/ 16              Naked dancer          Beppe Bezzi     136      26
+25  31/ 33/ 35             silkworm v3.2         Brian Haskin     130       1
+
+
+______________________________________________________________________________
+94 - What's No More.
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26   0/  0/  3                 test t36b          Beppe Bezzi       4      10
+26   3/  3/  2                      test          Beppe Bezzi      11       3
+26   5/  4/  3                      test          Beppe Bezzi      17       5
+26   3/  3/  2     Walk Like An Egyptian             John K W      11     125
+26   1/  1/  2                     Wtest              P.Kline       4      13
+26   4/  0/  0            The Core Clear        David van Dam      11      48
+
+No push offs this week, but a few warriors killed by their authors
+
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+18  29/ 20/ 51            Impfinity v4g1               Planar     138    1673
+ 5  41/ 34/ 25               Thermite II        Robert Macrae     147    1474
+19  35/ 33/ 31               Tornado 3.0                Beppe     138    1275
+21  37/ 37/ 26                    T.N.T.    Maurizio Vittuari     137    1199
+ 7  41/ 36/ 23                 Chameleon           M R Bremer     145     945
+ 9  39/ 36/ 25      Grilled Octopus v0.5         David Boeren     143     690
+23  31/ 31/ 38               Blue Funk 5       Steven Morrell     131     618
+13  36/ 32/ 32                   Lithium     John K Wilkinson     140     481
+10  39/ 35/ 26                     prova    Maurizio Vittuari     142     450
+22  32/ 31/ 37                    Flurry        Anton Marsden     133     435
+15  26/ 13/ 61             Hazy Shade II             John K W     139     433
+ 5  42/ 36/ 22          Gem of the Ocean              P.Kline     148     343
+ 1  44/ 40/ 16                Scanny Boy        David van Dam     149     304
+
+Two new entries in the over 300: Gem of the Ocean and Scanny Boy
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Impfinity v4g1         Planar            1673 *  Stone/ imp
+ 2  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 3  Torch t18              P.Kline           1539    Bomber
+ 4  Thermite II            Robert Macrae     1474 *  Qscan -> bomber
+ 5  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 6  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 8  Tornado 3.0            Beppe Bezzi       1275 *  Bomber
+ 7  quiz                   Schitzo           1262    Scanner/ bomber
+ 9  T.N.T.                 Maurizio Vittuari 1199 *  Bomber
+10  Chameleon              Myer R Bremer      945 *  P-warrior
+11  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+12  Agony II               Stefan Strack      912    CMP scanner
+13  Barrage                Anton Marsden      876    Qscan -> replicator
+14  Blue Funk              Steven Morrell     869    Stone/ imp
+15  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+16  Blue Funk 3            Steven Morrell     766    Stone/ imp
+17  Night Train            Karl Lewin         755    Replicator
+18  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+19  Blizzard               Anton Marsden      713    Qscan -> replicator
+20  Grilled Octopus v0.5   David Boeren       690 *  P-warrior
+21  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+22  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+23  myVamp v3.7            Paulsson           643    Vampire
+24  Blue Funk 5            Steven Morrell     618 *  Stone/ imp
+25  Hazy Shade Of Winter   John Wilkinson     616    P-warrior
+
+Impfinity v4g1 by Planar is the new leader, and is running toward new
+frontiers.
+
+New entry Blue Funk 5, BTW Steven, not bad for a beta, and what about even
+numbered versions, pushes off Armory - A5 by John K. Wilkinson.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+Last challenge: Tue Apr 30 03:21:24 PDT 1996
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  60/ 29/ 12        Violent Micro v0.4             basehead     190      14
+ 2  55/ 31/ 14                  coal 3.2       bjoern guenzel     180       2
+ 3  56/ 37/  8              Gunslinger 2               Julian     175      87
+ 4  51/ 36/ 13                     AK-47               Julian     166      92
+ 5  51/ 36/ 13                   AK-47.1               Julian     166      91
+ 6  50/ 38/ 12          C-Seagal II 1.02             jShelton     162     100
+ 7  50/ 38/ 13                frogskin 4       bjoern guenzel     161      25
+ 8  48/ 38/ 14                       why       bjoern guenzel     158      72
+ 9  43/ 29/ 28                Reluctance       Andy Nevermind     157      47
+10  44/ 33/ 23                 Toxin III                Edgar     154       8
+11  45/ 40/ 15                  x-frog 2       bjoern guenzel     149      41
+12  40/ 33/ 27                 Toxin III                Edgar     146       9
+13  34/ 30/ 36                     Toxin                Edgar     137      38
+14  35/ 33/ 32                  Toxin II                Edgar     137      37
+15  41/ 47/ 12                Bloodhound        Andrew Fabbro     134      39
+16  37/ 45/ 18       Bye Bye Badman v1.1            Iain Hogg     129      51
+17  37/ 54/  8                SideWinder               Julian     120      24
+18  36/ 54/ 11             Centurion XIV                Edgar     118      10
+19  24/ 31/ 45                     waves       bjoern guenzel     116      11
+20  30/ 46/ 24    C Seagal II v 2.0 Test             jShelton     115      46
+21  31/ 50/ 19                    Killer          Ian Oversby     112      44
+22  30/ 49/ 21      Forked Lite Ning 4.1 Ansel Greenwood Serm     110      66
+23  31/ 54/ 15       Centurion XIV (mod)                Edgar     108       1
+24  34/ 62/  4                 lightning       Jens Heunemann     105      52
+25  29/ 59/ 13        Metamorphosis v2.0             Mike Ash      99      19
+
+But 28 challenges since last week.  basehead, time to play in the pro, isn't
+it, with new version of Violent Micro, is still the leader. Guenzel put his
+coal in the 94 and Julian is holding runner up positions
+______________________________________________________________________________
+The Hint
+Multi boot routines
+by David Boeren
+
+
+Welcome back to another week of Core Warrior.  This hint is about how to
+write a multi-boot routine.  We all know what a boot routine is, and probably
+almost all of us use one to escape from qscanners.  Pspacers sometimes have
+a little trouble though.  Pspacers really need to boot, since they are big and
+take some extra time for their thinking.  The problem is that if you have a
+separate 1c boot for each component it gets too big and you have to limit
+yourself in the number and size of the components you can use.  You can use
+looping (.5c) boots instead, but the speed lost can be dangerous.  A
+multi-boot
+is a boot routine that will boot ALL of your components at 1c, so you only
+need to include one boot routine.  This saves a lot of space, when I applied
+the multi-boot to Grilled Octopus (with 3 components) I saved 16 instructions.
+
+Let's take a look at my standard boot routine:
+
+boot    MOV.I      tail,     3268    ; fast boot away tail first
+for 9
+        MOV.I     {boot,    <boot
+rof
+        ADD.AB       #3,     boot    ; adjust so we split to "start"
+        SPL.B     @boot,       #1    ; split to main program
+        MOV.I         0,     boot    ; obliterate boot pointer
+
+Everyone's code looks pretty much the same as this, except that I add the
+instructions to erase the boot pointer.  You can replace the SPL/MOV with just
+a JMP if you don't need this.  Anyway, the key feature is that we boot our
+component tail-first, and then we have an unrolled loop that uses the
+pre-decrement addressing to loop over the component.
+
+A successful multiboot should have a similar structure.  The simplicity
+of a for/rof loop for 1c booting is great, and the convenience of only having
+one instruction holding the boot destination AND the source pointer makes it
+simple to erase our boot pointer.  This should also hint to us that by
+replacing this instruction we can make the routine boot from a different
+source.  Here is the code I developed for my multi-boot.  The reason the
+first instruction isn't in the for/rof is because pmars wouldn't accept a
+label right before a for/rof block.
+
+mboot   MOV.I     }boot,    >boot    ; Multi-boot routine
+for 9
+        MOV.I     }boot,    >boot
+rof
+boot    MOV.I       inc,    bdist    ; fast boot away tail first
+boff    SUB.AB       #5,     boot
+        SPL.B     @boot,       #1    ; split to main program
+        MOV.I         0,     boot    ; obliterate boot pointer
+
+You'll note it looks almost the same as before.  The key difference is that
+the instruction that holds the source & dest pointers is LAST rather than
+first.  Our strategy is that we want to jump into the middle of the for/rof
+block at some point appropriate to the size of the component we're booting,
+and for this to work the pointers have to be last.  You may also note that
+we now boot head-first, but this is really just a side-effect of having the
+pointers last.  I still use the same SPL/MOV to erase the boot pointer, but
+you can replace these with a JMP just like in the old code.
+
+Now, when you get ready to boot you have to do a couple things.  First, you
+do a MOV to set the source pointer.  Then you do a MOV to set the correct
+starting point for your component (the SUB line).  Finally, you JMP into the
+middle of the for/rof block to control how many instructions you are booting.
+Here is an example of the code you would use to set up the multi-boot:
+
+shred   MOV.A #ptr-boot,     boot    ; Set component boot pointer
+        MOV.A        #4,     boff    ; Adjust for starting offset
+        JMP.B   mboot+3,       #1    ; Jump to multi-boot routine
+
+You can see that the multi-boot has a maximum of 3 instructions of overhead,
+but quite often is it less.  I would advise having the multi-boot default
+to your most common component, this component will pay *0* instructions of
+overhead.  The routine will be pre-loaded with the source pointer and the
+starting offset, so all you need to do is change your labels so that
+anyplace that jumped to your old boot routine jumps directly into the
+rof/rof block and that's it.  This can be done very easily with an equ:
+
+boot_stone  equ   mboot+5
+
+Of course, any time you have another component which has the same starting
+offset within the component, you can save a cycle by not reloading this value.
+The number of MOV's needed for booting is the same as the size of your
+largest component.  If you arrange your code so that the boot setup for your
+largest component comes directly before the multi-boot routine you can save
+the JMP and fall-through into it, saving another cycle.  This can always
+be done, so consider it a freebie.  So, in a typical 3-component pspacer
+you will have one component with 0 cycles of overhead (default component),
+one component with no more than 2 cycles of overhead (fall-through to mboot),
+and one component with up to 3 cycles of overhead.  That's a total of 5
+cycles, divided by 3 components, means an average of less than 2 cycles per
+component.  This assumes that neither of your other components has the same
+boot offset as your default, or else you will save even more cycles.
+
+Finally, let's see how you would incorporate this into YOUR code.  The multi
+boot you can copy directly into your code.  Replace the SPL/MOV with a JMP
+if you prefer.  Now, each component will have up to 3 lines to set up the
+boot.  Here's how you find the values you need:
+
+shred   MOV.A   #A-boot,     boot    ; Set component boot pointer
+        MOV.A        #B,     boff    ; Adjust for starting offset
+        JMP.B   mboot+C,       #1    ; Jump to multi-boot routine
+
+A = pointer to the first instruction of your component
+B = take the instruction you want to start execution on, how many instructions
+    is it from this instruction to the last instruction?
+C = sizeof(biggest_component) - sizeof(this_component)
+
+Setting up the default component should be easy enough, just follow the
+example below if you need to.
+
+So what is the total cost and benefits of a multi-boot?  The benefit is
+saving a lot of space, which can be used to add an extra component or just
+beef up the ones you have now.  You could also use the extra space to put in
+some more complex "brains" for switching.  The disadvantages are not too bad
+in comparison.  You have to pay an overhead of 2-3 cycles per component, with
+one component getting a "free ride" for 0 cycles of overhead.  You can only
+have one boot_distance value to tweak instead of one per component (not
+usually a big deal).  Unless your pspacer is simple and small, you can
+probably improve it by switching to a multi-boot.  It's not free points, but
+it opens up the opportunity to add more components, better components, more
+brains, or possibly unrolling some of the loops you are currently using for
+speed reasons.  Hey, maybe you can even add a couple points to your spirals!
+
+
+Here's an updated version of Grilled Octopus which has been modified to use
+the multi-boot system.  By doing so, I've saved 16 instructions, which could
+easily be used to add a 4th component.
+
+
+;redcode-94
+;name Grilled Octopus v0.7
+;author David Boeren
+;assert CORESIZE == 8000
+;strategy Aggressive P-warrior
+;strategy Death awaits you all, with nasty big pointy teeth!
+;strategy     v0.1 Initial Release
+;strategy     v0.2 More aggressive, wins are better than ties!
+;strategy     v0.5 Totally new pspace techniques, upgraded components
+;strategy     v0.7 I'm shrinking!  Multi-boot saves 16 instructions.
+
+step    equ 95
+stepb   equ (step*2)
+stepz   equ (184*2)                  ; "second chance" step for Fei-Oh
+gate    equ (inc-95)
+
+dest0   equ   2200
+dest1   equ   3740
+dest2   equ  -1278                   ; pmars optimized
+range   equ    933                   ; pmars optimized
+
+sid     equ    143                   ; Stage ID
+pdata   equ     23                   ; Win/Loss data
+Pmod    equ     29
+
+; 5=7859, 7=7801, 8=7772, 10=7685, 13=7598, 16=7511, 20=7385
+Pinit   equ   7598                   ; Fei-Oh loss tolerance
+Pmorf   equ   7801                   ; Fei-Oh re-stepping tolerance
+Pinit2  equ   7772                   ; Paper Shredder loss tolerance
+
+bdist   equ   (sflag+3312)           ; multi-boot distance
+fei_oh  equ   mboot+5
+
+        org start
+sflag   DAT.F      #sid,   #pdata    ; pspace data pointers
+        DAT.F        #0,   +Pinit    ; first round
+PRESULT DAT.F        #0,    +Pmod    ; loss
+        DAT.F        #0,    -Pmod    ; win
+        DAT.F        #0,       #0    ; tie
+
+start   LDP.A        #0,  PRESULT    ; Get results of last round
+        SNE.A       #-1,  PRESULT    ; Is it the 1st round?
+        STP.A     #1003,    sflag    ;     If so, init stage ID
+        LDP.A     sflag,     jtab    ; Load stage ID
+        SUB.A     #1003,     jtab    ; Subtract secret number...
+        SLT.AB     jtab,       #3    ; Are we brainwashed?
+        JMP.B        @0,   nowash    ;     If so, jump to handler
+        LDP.BA    sflag,    PTEST    ; Get the current win/loss counter
+jtab    JMP.B        @0,   stage1    ; Jump table to correct component
+        DAT.F        #0,   stage2
+        DAT.F        #0,   stage3
+
+stage1  ADD.AB    PTEST, *PRESULT    ; Update win/loss counter
+        STP.B  *PRESULT,    sflag    ; Store updated counter
+        MOD.AB    #Pmod, *PRESULT    ; Check the MOD
+        SLT.B  *PRESULT,   #Pmorf    ; See if Fei-Oh is losing...
+        MOV.A    #stepz,   loop+1    ;     Try a new step
+        JMZ.B    fei_oh, *PRESULT
+        STP.A     #1004,    sflag    ; Engage stage 2 pspace algorithm
+        STP.AB  #Pinit2,    sflag    ; Reset stage 2 loss counter
+                                     ; Too many losses, fall through...
+nowash
+shred   MOV.A #ptr-boot,     boot    ; Set component boot pointer
+        MOV.A        #4,     boff    ; Adjust for starting offset
+        JMP.B   mboot+3,       #1    ; Jump to multi-boot routine
+
+ptr     DAT.F       #10,       #5
+        DAT.F       #10,       #1
+        SPL.B        -1,       #1
+scan    ADD.A        #8,      ptr   ; "Ippatsu" one-shot scanner
+        JMZ.F      scan,     *ptr
+        SPL.B       #10,       #2
+clear   MOV.I      @ptr,     }ptr
+        DJN.F     clear,    <gate
+
+paper   SPL.B         1,       #0    ;\
+        SPL.B         1,       #0    ;-> generate 8 processes
+        SPL.B         1,       #0    ;/
+
+silk    SPL.B        @0,   {dest0
+        MOV.I       }-1,      >-1
+silk1   SPL.B        @0,   <dest1
+        MOV.I       }-1,      >-1
+        MOV.I     ibomb,   }range
+        MOV.I    {silk1,   <silk2
+silk2   JMP.B        @0,   >dest2
+ibomb   DAT.F     <2667,    <5334
+
+inc     SPL.B        #0,    <gate    ; Fei-Oh v0.6
+loop    MOV.I      bomb,    @targ
+        ADD.AB   #stepb,     targ
+targ    MOV.I      bomb, }stepb-1
+        DJN.F      loop,    <gate
+bomb    DAT.F     #step,       >1
+
+; stage 3 is a switch-on-loss module against pspacers and paper/imps
+
+stage3  SNE.A        #0,  PRESULT    ; check result
+lost    ADD.A        #1,    PTEST    ; lost change
+        MOD.A        #2,    PTEST    ; secure result
+win     STP.AB    PTEST,    sflag
+PTEST   JMP.B        @0,   fei_oh
+        DAT.F         0,    pboot
+
+stage2  ADD.AB    PTEST, *PRESULT    ; Update win/loss counter
+        STP.B  *PRESULT,    sflag    ; Store updated counter
+        MOD.AB    #Pmod, *PRESULT    ; if flag is not the right mod:
+        JMZ.B     shred, *PRESULT
+        STP.A     #1005,    sflag    ; Engage stage 3 pspace algorithm
+                                     ; Fall through to backup strategy...
+pboot   MOV.A #paper-boot,   boot    ; Set component boot pointer
+        MOV.A        #0,     boff    ; Adjust for starting offset
+                                     ; Fall through to multi-boot
+
+mboot   MOV.I     }boot,    >boot    ; Multi-boot routine, default to Fei-Oh
+for 9
+        MOV.I     }boot,    >boot
+rof
+boot    MOV.I       inc,    bdist    ; fast boot away tail first
+        MOV.I         0,    sflag    ; Safety-net for our pspace stuff
+boff    SUB.AB       #5,     boot
+        SPL.B     @boot,       #1    ; split to main program
+        MOV.I         0,     boot    ; obliterate boot pointer
+                                     ; fall through and die...
+        END
+
+for (MAXLENGTH-CURLINE)
+        DAT.F (clear*23),(ptr*91)    ; big decoy to confuse scanners
+rof
+        END
+
+______________________________________________________________________________
+Advanced Benchmark Scores: Latest Update
+by Scott Manley
+
+OK this is a rundown of the Advanced Benchmark scores which I've been
+compiling
+on my web page (http://star.arm.ac.uk/~spm/welcome.html). Looking at some of
+the ratings (one version of Koolaid scores 5.2) you might think that there are
+some bugs in the scoring algorithm but the problem appears to be with the
+warrior's code.
+
+So far I have managed to rate all the warriors which haven't generated any
+errors in my test script and I'm now working my way through fixing some
+of those errors. If anyone sees a particular program out of place then
+please send me a copy and I'll run it again, but my policy is only to stop
+compiler errors not debug peoples algorithms.
+
+The list presented here is not the exact same as on my web site, I have
+removed all the factoring and sorting algorithms (Snail Sort is the Champion -
+scoring 3.2), and of course the script continues with the lates batch of fixed
+
+programs.
+
+The advanced Wilkinson/Bezzi benchmark consists of 13 warriors, each
+fighting 200 battles against the test candidate.
+
+The test warriors are
+
+   * Agony II - Stefan Strack
+   * Blizzard - Anton Marsden
+   * Frontwards v2 - Steven Morrell
+   * C.I.A. - Anders Ivner
+   * Gem of the Ocean - Paul Kline
+   * Impfinity v4g1 - Planar
+   * Jack in the Box - Beppe Bezzi
+   * Leprechaun on Speed - Anders Ivner
+   * Lithium - John K Wilkinson
+   * Memories - Beppe Bezzi
+   * myVamp v3.7 - Magnus Paulsson
+   * Quiz - Schitzo
+   * TimeScape (1.0) - J. Pohjalainen
+
+And the ratings are.....
+
+  1. 160.5 T.N.T. - Maurizio Vittuari
+  2. 158.4 quiz - Schitzo
+  3. 154.5 Gem of the Ocean - P.Kline
+  4. 152.4 Armory - A5 - Wilkinson
+  5. 149.7 Stepping Stone - Kurt Franke
+  6. 148.1 Wind Up Toy v0.7 - Ian Oversby
+  7. 146.0 C I A - Anders Ivner
+  8. 145.7 Tornado 3.0 - Beppe
+  9. 145.0 myConfuser - Paulsson
+ 10. 144.5 endpoint . - M R Bremer
+ 11. 143.7 Clisson Lite - P.Kline
+ 12. 143.4 Lithium - John K Wilkinson
+ 13. 142.3 Thermite II - Robert Macrae
+ 14. 141.8 Mirage 1.5 - Anton Marsden
+ 15. 141.8 Chameleon - M R Bremer
+ 16. 141.3 No Prisoners - John K W
+ 17. 140.4 seventyfive - Anders Ivner
+ 18. 139.1 Time Lapse v0.8 - David Boeren
+ 19. 138.7 Mason 2.0 - Robert Macrae
+ 20. 138.0 Time Lapse v0.1 - David Boeren
+ 21. 137.5 Wind-up Toy v0.4 - Ian Oversby
+ 22. 137.2 Impfinity v4g1 - Planar
+ 23. 137.0 blister soul - schitzo
+ 24. 136.8 Harmony - P.Kline
+ 25. 135.9 crow - Karl Lewin
+ 26. 135.3 myVamp v3.7 - Paulsson
+ 27. 134.3 anything box - schitzo
+ 28. 134.2 Provascan 2.0d - Beppe Bezzi
+ 29. 134.2 Porch Swing + - anonymous
+ 30. 132.8 theMystery2.0 - Paulsson
+ 31. 132.7 Barrage - Anton Marsden
+ 32. 132.2 Jack in the box - Beppe Bezzi
+ 33. 131.6 Rhino - Beppe Bezzi
+ 34. 131.6 Aeka - T.Hsu
+ 35. 131.4 Persistence - Kurt Franke
+ 36. 131.0 Koolaid II: WoGG v2.2 - David Boeren
+ 37. 130.7 U Test - JKW
+ 38. 130.3 aMixture - Paulsson
+ 39. 129.6 Harmony II - P.Kline
+ 40. 129.5 Memories - Beppe Bezzi
+ 41. 129.4 why - bjoern guenzel
+ 42. 128.9 Impfinity v3e7 - Planar
+ 43. 128.7 El Cheapo Scanner - David Boeren
+ 44. 128.6 La Bomba - Beppe Bezzi
+ 45. 128.2 TimeScape (1.0) - J. Pohjalainen
+ 46. 127.3 Rubber wall - Beppe Bezzi
+ 47. 126.2 SETI - JKW
+ 48. 125.8 Circle of Friends - Randy Graham
+ 49. 125.5 Door Mat v0.1 - K Lewin
+ 50. 125.5 Phq - Maurizio Vittuari
+ 51. 125.4 Agony II - Stefan Strack
+ 52. 125.2 Frontwards - Steven Morrell
+ 53. 124.2 Marcia Trionfale - Beppe Bezzi
+ 54. 123.9 Hector 2 - Kurt Franke
+ 55. 123.7 Taking Trains - Maurizio Vittuari
+ 56. 123.5 Illusion-94/55 - Randy Graham
+ 57. 123.5 Thermite 1.0 - Robert Macrae
+ 58. 123.3 blackTN - P.Kline
+ 59. 123.0 juliet and paper - M R Bremer, B. Bezzi
+ 60. 122.7 Phoenix 1.1 - J.Pohjalainen
+ 61. 122.5 Insight v1.0 - Brant D. Thomsen
+ 62. 122.2 Miss Treatment - Derek Ross
+ 63. 122.1 Mr Dumb - Maurizio Vittuari
+ 64. 122.0 Paper Towel v0.4 - David Boeren
+ 65. 122.0 nobody special - Mike Nonemacher
+ 66. 121.9 Two Pack - John K W
+ 67. 121.7 Porch Swing - anonymous
+ 68. 121.7 paper01o - Beppe Bezzi
+ 69. 121.3 Babbo Natale - Maurizio Vittuari
+ 70. 121.3 Fire Master v1.5 - JS Pulido
+ 71. 121.2 Queasy 1.4 - Robert Macrae
+ 72. 121.1 theMystery1.5 - Paulsson
+ 73. 121.0 Mr Speculative - Derek Ross
+ 74. 120.5 myVamp v2.2 - Paulsson
+ 75. 120.5 Papery - Ian Oversby
+ 76. 120.3 Marcia Trionfale 1.3 - Beppe Bezzi
+ 77. 120.1 Stasis - David Moore
+ 78. 118.7 Not Expecting Too Much - Karl Lewin
+ 79. 118.6 blah blah blah - M R Bremer
+ 80. 118.4 tripod v1.5 - Brian Haskin
+ 81. 118.4 Qwiksand - Wayne Sheppard
+ 82. 118.3 paris - Kafka
+ 83. 118.3 TimeScape (0.9) - J. Pohjalainen
+ 84. 118.2 PacMan v3 - David Moore
+ 85. 118.1 Mr Hospitable - Derek Ross
+ 86. 117.9 black & white - Anders Ivner
+ 87. 117.1 Impfinity v3i - Planar
+ 88. 116.7 Lucky 3 - Stefan Strack
+ 89. 116.3 Rave - Stefan Strack
+ 90. 116.2 Qtest04 - Beppe Bezzi
+ 91. 115.8 Drowning III - Mike Nonemacher
+ 92. 115.4 People - Randy Graham
+ 93. 115.0 Judge Nutmeg - Scott Manley
+ 94. 114.7 White warrior - Nandor & Stefan
+ 95. 114.3 Fscan - Jay Han
+ 96. 114.2 Pretentious v0.2 - Ian Oversby
+ 97. 113.5 ^C - Steven Morrell
+ 98. 113.4 Prova_e_Riprova - Maurizio Vittuari
+ 99. 113.3 test jtm10a - Beppe Bezzi
+100. 113.2 Auntie v1.0 - Ian Oversby
+101. 112.6 Ripped v0.1 - Ian Oversby
+102. 111.5 A Quick Hack - Karl Lewin
+103. 111.2 Cthulhu v8 - John K. Wilkinson
+104. 110.3 Hint Test v2 - M R Bremer
+105. 110.2 Hint Test v6 - M R Bremer
+106. 110.1 Hyakutake C/1996 B2 + - Scott Manley
+107. 109.4 cproba - nandor sieben
+108. 109.1 Phoenix - J. Pohjalainen
+109. 108.5 Pensive v0.3 - Ian Oversby
+110. 108.3 Paperone - Beppe Bezzi
+111. 107.9 Twins - Maurizio Vittuari
+112. 107.7 Uvavu II revistited - Scott Manley
+113. 106.8 Pyramid v5.5 - Michael Constant
+114. 106.8 Paper Eater - David Boeren
+115. 106.3 Impfinity v3c11 - Planar
+116. 105.1 Vanilla 1.1 - Robert Macrae
+117. 104.7 Tom&Jerry - Maurizio Vittuari
+118. 104.5 Double Clown v1.1 - P.E.M
+119. 104.2 Non Plussed - Randy Graham
+120. 102.6 Three Core Monty - Andrew Fabbro
+121. 102.5 Hyakutake Rising - Scott Manley
+122. 102.5 kwclear - Anders Ivner
+123. 101.6 Building Blocks - Randy Graham
+124. 101.1 Tornado - Beppe Bezzi
+125. 101.0 Imp Hunter - Kurt Franke
+126. 100.3 Provascan 2.0 - Beppe Bezzi
+127. 99.5 Silk Warrior 1.3 - J.Pohjalainen
+128. 99.2 Futility - M R Bremer
+129. 98.7 lil' shears - P.Kline
+130. 98.7 myTiny - Paulsson
+131. 97.1 Loh_tst_1.3 - Calvin Loh
+132. 96.6 QuickFreeze - P.Kline
+133. 96.5 worm optima 2 - Campbell Fraser
+134. 96.5 Aces - anonymous
+135. 96.5 v15 - Steven Morrell
+136. 95.1 RED RAIN - Wayne Sheppard
+137. 93.3 Strahd the Night Hunter - anonymous
+138. 92.6 Hyakutake Engine - Scott Manley
+139. 92.5 System Trap - Kurt Franke
+140. 92.3 RingWorm_v2.4 - Calvin Loh
+141. 92.3 flash - Nandor Sieben
+142. 92.1 Pensive v0.1 - Ian Oversby
+143. 91.9 Yop La Boum v2.1 - P.E.M & E.C.
+144. 91.6 Hint Test v4 - M R Bremer
+145. 91.2 Try fitting THIS name into eight characters or less! - Steven Morrell
+146. 90.7 Mythicon v1.2 - G. Eadon
+147. 89.9 Fahrenheit 0 - Planar
+148. 89.8 Cyclone - Scott Manley
+149. 89.6 myTest - Paulsson
+150. 89.3 Alien Kiss V1.1 - bjoern guenzel
+151. 89.3 Sucker'94 - Stefan Strack
+152. 89.2 Rand-Man - Randy Graham
+153. 89.1 Pyramid v2.0 - Michael Constant
+154. 88.2 Mister Neat - Derek Ross
+155. 87.9 Antibodies - Andrew Fabbro
+156. 86.1 Illusion - Randy Graham
+157. 86.1 Mister Bump - Derek Ross
+158. 85.9 RingWorm_v1.4 - Calvin Loh
+159. 85.7 Pensive v0.2 - Ian Oversby
+160. 85.1 P_Banzai_v1.2 - Calvin Loh
+161. 85.1 Theme - Michael Constant
+162. 84.3 Miss Careworn - Derek Ross
+163. 82.3 Impfinity v1 - Planar
+164. 82.2 Uvavu V1.01 - Scott Manley
+165. 81.5 bunker t3 - P.Kline
+166. 81.0 lewis - John Lewis
+167. 80.8 impostor - na'ndor sieben
+168. 80.4 Random Fire - Bram Cohen
+169. 80.0 dead end - nandor sieben
+170. 79.1 hit94 - nandor sieben
+171. 78.8 dodgem6 - Steve Newman (snewman@cs.stanford.edu)
+172. 76.9 Assassin XII - Andy Nevermind
+173. 76.6 RedPixel.2 - John Lewis
+174. 75.0 living dead - Nandor Sieben (asmqk@asuacad.bitnet)
+175. 73.5 Mister Tidy - Derek Ross
+176. 73.3 Umbrella - Beppe Bezzi
+177. 72.3 QuickFreeze v1.5 - P.Kline
+178. 72.2 Le vamp - Matthieu Walraet
+179. 71.0 Storm Shelter 5 - John K W
+180. 70.7 Forked Lite Ning 4.076 - Ansel Greenwood Sermersheim
+181. 70.3 asian flu 1.2 - Simon Hovell
+182. 67.0 ProtonDance-X - J.Cisek
+183. 66.6 Baby Swing - Randy Graham
+184. 64.0 csapda - nandor sieben asmqk@asuacad.bitnet
+185. 63.4 2 pt spiral generator - David Moore
+186. 63.3 garlic - Stefan Strack
+187. 62.8 Vector (3 point, 8 process spiral) - T.Hsu
+188. 61.1 Tonto 3 - Steve Bailey
+189. 60.7 trident - Anders Ivner
+190. 58.7 Specwar - J E Long
+191. 58.3 orc - Timothy Echeandia
+192. 58.1 Test 3 - Steve Bailey
+193. 56.8 2IR - Calvin Loh
+194. 56.4 Test 1 887 - Steve Bailey
+195. 55.5 DeathWalker - Scott Manley
+196. 54.8 ivscan - J.Layland
+197. 54.6 Enlightenment II - Scott Manley
+198. 53.0 macro - Nandor Sieben
+199. 52.6 Enlightenment - Scott Manley
+200. 52.6 mutant - brad rembielak
+201. 51.9 Eranu v1.02 - Scott Manley
+202. 50.1 DeathWalker II - Scott Manley
+203. 49.4 Curse - Doug Ratcliffe Jr.
+204. 48.8 Spiral 4000 - P.Kline
+205. 48.6 Emousseur - Planar
+206. 47.2 fork - J.Layland
+207. 46.5 Silk - Lifted from Core Warrior # 1
+208. 46.5 paratrooper - Vincent Li
+209. 45.7 IcicleV2 1.14 - Ansel Greenwood
+210. 45.5 paratrooper2 - Vincent Li (vli@atom.mpr.ca)
+211. 44.9 ImpClear - bjoern guenzel
+212. 43.3 Test 2 872 - Steve Bailey
+213. 42.7 Miss Impertinent - Derek Ross
+214. 42.2 paratrooper v2.1 - Vincent Li (vli@atom.mpr.ca)
+215. 41.6 Blanket - Jon Newman
+216. 40.7 CopyKatQ2 - harleyQ2
+217. 40.3 multidwarf - Vincent Li (vli@atom.mpr.ca)
+218. 39.9 turtle - Pierre Baillargeon
+219. 38.5 ROLLER.S - M. PALUDAN
+220. 38.0 banzai0.2 - Calvin Loh
+221. 36.0 QUARTER - Stefan Haenssgen
+222. 35.3 CounterMeasures V4 - Chris Arguin
+223. 34.7 glass replicant - Pi Qan
+224. 33.8 A-Cluster v2.06 - Iain Hogg
+225. 33.0 Ape - Calvin Loh
+226. 31.4 scratchers - nandor sieben
+227. 31.1 dawG06al - dawG05co and dawG05dn
+228. 30.6 csapda2 - Nandor Sieben
+229. 28.6 tamper - Mike & John (Michael Nidd )
+230. 28.1 dawG06cg - dawG05cu and dawG05db
+231. 26.9 windmill - Calvin Loh
+232. 23.3 minidwarf - anonymous
+233. 22.3 dawG06cl - dawG05bt and dawG05az
+234. 21.3 Copy2 - sgb
+235. 21.2 Body-Snatcher3 - Calvin Loh
+236. 17.7 twoOFaKIND - Paulsson
+237. 17.2 spreel - Andy Pierce (ajpierce@med.unc.edu)
+238. 16.9 MaxImp - Planar
+239. 15.5 Jezebel v2.0 - A. Nevermind
+240. 11.0 Eights - Randy Graham
+241. 5.2 Koolaid II: The Wrath of Goofy Grape v0.1 - David Boeren
+242. 4.5 Quarter II - anonymous
+243. 4.0 Sample Bomber - Chris Arguin
+244. 1.8 dwarfgun program. - Choon Piaw (piaw@soda.berkeley.edu)
+245. 0.7 Points is Points - Karl Lewin
+246. 0.2 Basic Mulberry - Ansel G. Sermersheim
+247. 0.2 WindMill3 - Calvin Loh
+248. 0.0 Loser 2 - Kurt Franke
+249. 0.0 loser 1 - Anders Ivner
+
+How about some statistics then, most sports have them, and ours depends on
+them.
+
+Starting with a simple histogram of the ratings
+
+  0-10  XXXXXXXXX
+ 10-20  XXXXX
+ 20-30  XXXXXXX
+ 30-40  XXXXXXXXXXX
+ 40-50  XXXXXXXXXXXXXXX
+ 50-60  XXXXXXXXXXXX
+ 60-70  XXXXXXXXXXX
+ 70-80  XXXXXXXXXXXX
+ 80-90  XXXXXXXXXXXXXXXXXXXXXXX
+ 90-100 XXXXXXXXXXXXXXXXXXX
+100-110 XXXXXXXXXXXXXXXXXXXX
+110-120 XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+120-130 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+130-140 XXXXXXXXXXXXXXXXXXXXX
+140-150 XXXXXXXXXXXXX
+150-160 XXX
+160+    X
+
+The average score works out at 91.95
+and the median score is 101.0
+The densest scoring region is around 121 with peak density ~7-8 warriors/point
+average density being 0.64 warriors/point
+
+% Effectiveness ratings
+100%            160.5
+95%             143.4
+90%             135.9
+85%             130.7
+80%             125.5
+75%             122.2
+70%             120.5
+60%             113.2
+50%             101.0
+40%             89.6
+30%             75.0
+20%             52.6
+10%             33.8
+ 5%             16.9
+
+I'm considering relating the scores to a percentage value which is represented
+by some standardised mathematical function. Most programs will score less than
+100% and the idea is to follow the introduction of new strategies with a more
+easily managed number, a sort of Corewar inflation index. It will also make it
+easier to relate a warriors rating to its position in the tables.
+
+OK that's all for the moment, I've got real work to be done, there are still
+similar tables for Beginners and combined Beginners/Advanced and of course
+I'm still fixing a load of warriors so that they won't be rejected. There
+are a couple of other things related to benchmarks I would like to do, firstly
+
+I'd like to be able to follow the evolution of the warriors on the hill.
+Secondly I think it would be intersting to follow the development of a couple
+of newbies from the development of their first programs to becoming King of
+the
+Hill. (Of course it might be more productive if I spent some more time
+attempting to acieve this goal).
+
+Scott Manley
+
+http://star.arm.ac.uk/~spm/welcome.html
+
+_____________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+

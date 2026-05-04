@@ -1,0 +1,244 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               June 8, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 36/ 20             Distance v6.3     Brant D. Thomsen     151     121
+ 2  46/ 45/  9                   Cleaver       Wayne Sheppard     147       4
+ 3  34/ 22/ 44             Night Crawler       Wayne Sheppard     146     627
+ 4  33/ 22/ 45                Imprimis 6              P.Kline     145    1027
+ 5  37/ 31/ 32              FlyPaper 3.0            J.Layland     144      51
+ 6  43/ 43/ 13                   Arghhhh     Fredrik Ohrstrom     143     122
+ 7  45/ 46/  9               Backstabber         Anders Ivner     143     178
+ 8  44/ 46/ 10              Dragon Spear             c w blue     141     729
+ 9  32/ 23/ 46        Incrimination v1.0     Brant D. Thomsen     141      31
+10  40/ 39/ 21            Emerald 5.1011              P.Kline     140       5
+11  33/ 26/ 41               Sphinx v2.8         W. Mintardjo     139    1625
+12  30/ 23/ 46                     Snake       Wayne Sheppard     137     387
+13  33/ 29/ 38       ImpsAreMyFriend 1.1            J.Layland     136     116
+14  42/ 48/ 10           Fire Storm v1.1         W. Mintardjo     136     266
+15  30/ 26/ 44                       ttt        nandor sieben     135      88
+16  40/ 46/ 14            Iron Gate 1.01       Wayne Sheppard     134     455
+17  28/ 23/ 49                     ttest        nandor sieben     133     503
+18  41/ 50/  9                Eclipse II              P.Kline     132       1
+19  40/ 52/  8                 Agony 5.2        Stefan Strack     129     254
+20  34/ 57/  9                   Unknown              Unknown     112       2
+
+21   2/  2/  0                Early Bird             c w blue       7       3
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+King of the Hill enthusiasts were successful in knocking off two more
+long-standing warriors, Leprechaun 1b by A. Ivner, and Sucker 5 by
+S. Strack.  Leprechaun 1b's age of 1453 has been succeeded only by
++0 Stormbringer and Sphinx v2.8.  His strategy was to dat-bomb
+and b-scan at the same time, using a spl-jmp stunner to catch replicators.
+A few weeks ago Sucker 4 was knocked off and now Sucker 5.  Is Sucker
+really dead, or can Strack pull off a Bram Stroker and resurrect this
+classic vampire?
+
+Some drop off, and some rise like good cream to the top.  This week
+Imprimis 6 passed the 1000-challenge barrier.  Kudos to - well - me!
+
+Speaking of successful imps, W. Mintardjo is faced with this dilemma:
+  1  40/ 21/ 39               Sphinx v4.9         W. Mintardjo     158       1
+  8  32/ 26/ 42               Sphinx v2.8         W. Mintardjo     138    1610
+So does he kill off Sphinx v2.8 just as it is approaching +0 Stormbringer's
+record 1778, or does he keep v4.9 under wraps until v2.8 gets pushed off?
+(which might be a long, long time :-)
+
+Strack's summer tournament rolls on with Mintardjo and Sheppard beating
+Ivner and Kline out of the loser bracket.  Yeeesh.  NOW I have a version
+that beats Snake :-(  These two will play off later today and the winner
+will face Nabutovsky for the championship.  Good luck!
+
+Sorry folks, there was no _Push Off_ last week.  I was too busy trying
+to convince Wayne to NOT use Snake in our tournament match, making him
+think I was working on a sure-fire anti-vamp routine, and also to
+make him think I was going to use a replicator so he would use a scanner
+that Emerald could beat.  But he stuck with Snake and won.  Hope you
+enjoyed the hijinks, anyway :-)
+
+Now for a bit of nostalgia.  Here was the current hill on July 16, 1992:
+
+ Title                       Author               Score   Age
+ -----                       ------               -----   ---
+ No Mucking About            Cambel Fraser          164    36
+ Charon v7.0                 J. Cisek & S.Strack    162    51
+ B-scanners live in vain     Matt Hastings          161    18
+ Crimp 2                     Andy Pierce            157   360
+ Flash Paper3.7              Matt Hastings          156    88
+ Sucker 4                    Stefan Strack          150   289
+ Note Paper                  Scott Nelson           148   687
+ Falling Leaf 1.21           Matt Hastings          144   174
+ Smooth Noodle Map           Matt Hastings          144   294
+ Dynamic Duo 4.01            Stefan Strack          141    39
+ PitTrap v4.0                J. Cisek               140   193
+ Quebec                      Eric Prestemon         139    22
+ RoadRunner I                S. Halvorsen           139   267
+ Trinity                     Matt Hastings          138   293
+ Nikita 1.4                  Jarkko Lindblad        136     1
+ Kobold                      Stefan Strack          133   148
+ Miny v.3                    Paul S. Kilroy         131     2
+ Relentless                  J. Cisek               131     9
+ RotLD 2                     nandor sieben          131     3
+ teszt                       nandor sieben          128    16
+
+The scanners were tough last summer!  And Flash Paper became the fave target
+of many challengers, only succumbing in the Fall with the onslaught of imps.
+And Sucker 4 nearly was the first to go over 1000 challenges before being
+pushed off for the same reason.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 4  29/ 18/ 53        Incrimination v1.0     Brant D. Thomsen     141       1
+ 6  41/ 38/ 20            Emerald 5.1011              P.Kline     144       1
+ 6  32/ 22/ 46             Oak Stake III             c w blue     141       1
+ 9  27/ 21/ 52              Oak Stake II             c w blue     132       1
+ 3  35/ 25/ 39              FlyPaper 3.0            J.Layland     145       1
+ 3  38/ 29/ 33              FlyPaper 4.0            J.Layland     148       1
+ 5  40/ 39/ 21               sub-type-v2             c w blue     141       1
+ 4  35/ 26/ 39                Passport 7              P.Kline     143       1
+ 9  40/ 41/ 20                  Herem IV         Anders Ivner     138       1
+ 3  47/ 42/ 11                   Cleaver       Wayne Sheppard     153       1
+ 5  32/ 25/ 44                       ttt        nandor sieben     139       1
+ 9  29/ 22/ 49                    Snake7       Wayne Sheppard     136       1
+ 9  39/ 41/ 20                 Emerald 5              P.Kline     138       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+21   1/ 84/ 14                        RG             KE Lewin      18       0
+21  10/ 43/ 48                       ick             KE Lewin      77       0
+19  35/ 43/ 22                       wwf            J.Layland     127       1
+21  27/ 59/ 14                      Bomb     Michael Constant      95       0
+20  25/ 68/  7                      Geek       Aaron Helleman      82       1
+16  36/ 41/ 22                      TWW2         W. Mintardjo     132       1
+21  23/ 36/ 41                      test              P.Kline     110       0
+21  30/ 53/ 17                      test            J.Layland     106       0
+12  39/ 38/ 23                     Twill          Andy Pierce     139       1
+21  14/ 85/  1                     XPDNC     Michael Constant      44       0
+21  28/ 71/  1                    A-bomb     Michael Constant      85       0
+21  25/ 72/  3                    Icebox     Fredrik Ohrstrom      78       0
+21  24/ 47/ 29                    Invest      Andre van Dalen     102       0
+21  17/ 71/ 12                    fester             c w blue      62       0
+18  29/ 34/ 37                    ptest1     Fredrik Ohrstrom     124       1
+21   3/ 88/  9                    spil63      Andre van Dalen      19       0
+21  24/ 35/ 41                    test 2              P.Kline     114       0
+20  36/ 53/ 11                   CraMPon             c w blue     119       1
+20   1/ 76/ 22                   Unknown             KE Lewin      27       1
+21  25/ 68/  7                  Icebox 2     Fredrik Ohrstrom      82       0
+21   8/ 54/ 38                  Impact 2              Jay Han      63       0
+19  25/ 31/ 44                  Passport              P.Kline     119       1
+21  19/ 40/ 40                  Pipin IV cArno Martin Fuhlend      99       0
+19  35/ 47/ 18                  Wimp 6.1     Brant D. Thomsen     123       1
+20  37/ 52/ 11                  a-test-a        nandor sieben     122       1
+21   3/ 74/ 23                 Eight 1.0     Devin Kilminster      32       0
+13  40/ 45/ 15                 Emerald 4              P.Kline     135       1
+21  23/ 74/  2                 Noise 1.0     Devin Kilminster      72       0
+21  27/ 72/  1                 Simplex 1                Scriv      81       0
+21  16/ 71/ 12                 Thrice 10        Steve Gunnell      61       0
+20  34/ 43/ 24                Early Bird             c w blue     125       1
+20  36/ 52/ 13                Eclipse II              P.Kline     120       1
+21  16/ 78/  7                Expediency     Michael Constant      54       0
+18  40/ 51/  9                Iron Sword       Wayne Sheppard     128       1
+14  42/ 51/  8                Irony v1.0     Brant D. Thomsen     133       1
+21  19/ 70/ 11                Thrice 10a        Steve Gunnell      67       0
+20  37/ 50/ 14                newscanner             c w blue     124       1
+20  35/ 53/ 13                sub-type-c             c w blue     117       1
+19  25/ 62/ 13               Spare Parts     Fredrik Ohrstrom      88       1
+21  23/ 67/ 10               Sparrowhawk     Michael Constant      79       0
+19  28/ 35/ 37               Stoned Ratz             c w blue     120       1
+21   1/ 88/ 11               Vampire 4PK       Wayne Sheppard      14       0
+21  22/ 43/ 35               sub-type-av             c w blue     102       0
+19  35/ 45/ 19               sub-type-bs             c w blue     126       1
+10  42/ 45/ 13               sub-type-gv             c w blue     138       1
+11  29/ 22/ 48               sub-type-os             c w blue     137       1
+21  17/ 61/ 21              Duplicator 1     Bruno Degiovanni      73       0
+21  23/ 55/ 22              Just testing             c w blue      92       0
+21  10/ 83/  7              Snake Hunter            J.Layland      36       0
+21  20/ 69/ 11              StunGun v1.3     Han-Wen Nienhuys      71       0
+20  27/ 56/ 17              sub-type-aix             c w blue      98       1
+21  16/ 83/  0             Ring of Death     Michael Constant      49       0
+19  33/ 45/ 21             Spare Parts 1     Fredrik Ohrstrom     122       1
+20  28/ 37/ 35            Anti-Imp Paper             c w blue     118       1
+10  28/ 19/ 52            Flash Paper3.7        Matt Hastings     138       1
+                                                  (W.Sheppard)
+21   9/ 46/ 45            Noisey Imp 1.0     Devin Kilminster      73       0
+20  27/ 57/ 17            Precision v1.0     Brant D. Thomsen      96       1
+21  16/ 81/  3            Snake Hunter 2            J.Layland      50       0
+19  37/ 49/ 14           Glass House 3.0            J.Layland     125       1
+21  19/ 52/ 29           Paper Noise 1.0     Devin Kilminster      87       0
+19  20/ 24/ 56           Simplicity v3.0     Brant D. Thomsen     117       1
+12  37/ 40/ 23           Winter Werewolf         W. Mintardjo     135       1
+                                                   (J.layland)
+21  19/ 76/  5         CheckYourFlyPaper            J.Layland      63       0
+21  32/ 57/ 11         RoadRunner K (26)         S. Halvorsen     107       0
+21  18/ 36/ 46         Spare Parts test2     Fredrik Ohrstrom     100       0
+20  21/ 39/ 40        Construction Paper             c w blue     102       1
+17  30/ 31/ 39        Spare Parts (test)     Fredrik Ohrstrom     129       1
+19  29/ 32/ 39        anti-vampire paper             c w blue     125       1
+20  31/ 41/ 29        testing Leprechaun         Anders Ivner     121       1
+13  32/ 30/ 38       ImpsAreMyFriend 1.1            J.Layland     133       1
+21  33/ 51/ 15       RoadRunner K (21.1)         S. Halvorsen     115       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+To boot or not to boot, that is the question.
+
+Bootstrapping means to copy some part of your program away from your
+initial code and start it running there.  It is a useful technique
+that offers several advantages to your fighters.
+
+One use of booting is to have your fighter running with the smallest
+profile possible, combined with a large 'decoy' of non-running code
+to distract scanners.  This is most effective against one-shot scanners
+like Plasma, Paratroops, Eclipse, Cleaver, FlyPaper, etc. that scan
+until they find something, bomb or stun it, then start some different
+process like core-clear or replicators.  They will usually target the
+decoy and go into their second phase very quickly, so you can use
+a strategy against that phase without worrying about the initial scan
+part.  One variation of this is to leave gaps in your program like
+Sucker 5 and Agony 5.1 do, which would not be possible without booting.
+
+Another use is to do some kind of setup work before starting the main
+program.  This could be to create reflections, do calculations, create
+multiple processes, etc.  This allows you to abandon the setup code
+and avoid the fallout when it is attacked by a scanner.  So for example,
+in Emerald 5.xxxx, I create multiple processes and jump them all into
+the bomber, anti-vamp, and core-clear parts which were booted out into
+core.  By having ten or more processes running at each spl-zero, I don't
+outrun an imp when it overruns my code and don't self-destruct.
+(Thanks to WM for sharing the multiple-process start code - it was new to me!)
+
+The disadvantage of booting is the delay in starting your fighter.  If
+you are up against a fast-starting bomber or scanner, you will sometimes
+be caught before you are ready.  As more and more successful fighters use
+booting however, this effect diminishes and the advantages become
+more pronounced.
+
+One caution - do NOT leave pointers to your bootstrapped code behind
+in your decoy :-)  Eclipse will eat you alive!
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+
