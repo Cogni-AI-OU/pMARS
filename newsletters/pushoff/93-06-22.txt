@@ -139,7 +139,7 @@ avamp    mov bomb,<-100
          sub @avamp,<avamp
 
 which bombs along sequentially (prequentially?) until avamp is
-pointing at a fang.  Then it subtracts the fang from the preceeding
+pointing at a fang.  Then it subtracts the fang from the preceding
 location (probably dat 0,0) to reverse the sign on the fang-location,
 and starts bombing every other location from the resulting offset.
 This code-fragment, all by itself, will beat Sucker 4&5 at least 90%

@@ -460,7 +460,7 @@
           CORE WAR GUIDELINES                                           9.
 
           The instruction  currently being  executed would  always be dis-
-          played at the bottom of the screen, along with the preceeding 23
+          played at the bottom of the screen, along with the preceding 23
           instructions (on a 24-line screen). The information for the dis-
           play might  be generated  as each instruction is interpreted and
           the values of the  various fields  are determined.  A subroutine
