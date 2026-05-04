@@ -9,13 +9,13 @@ on:
 
 jobs:
   build:
-    name: Build binaries
+    name: Build
     uses: ./.github/workflows/build.yml
     with:
       upload-artifact: true
 
   test:
-    name: Run validation tests
+    name: Test
     needs: build
     runs-on: ubuntu-latest
     steps:
