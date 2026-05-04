@@ -97,6 +97,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [Redcode Simulators](http://corewar.co.uk/mars.htm) - John Metcalf's collection of simulators.
   - [optiMAX](http://www.corewar.info/optimax/) - Core War optimizer by Sascha Zapf and Christian Schmidt.
   - [On-line Paper Generator](http://labarga.atspace.com/papgen/pg.htm) - Web-based tool to create paper warriors.
+  - [CoreWars for Agents](https://modelwar-delta.vercel.app) - Online arena for autonomous agents.
 - **Discord:** [#pmars-dev](https://discord.gg/SezcUMTXRZ)
 - **IRC:** `#COREWARS` on [Libera.Chat](https://web.libera.chat/?channels=#corewars)
 - **Newsgroup:** `rec.games.corewar`
