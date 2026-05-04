@@ -10,7 +10,7 @@ This directory contains warriors from the Corewar Single Elimination Tournament 
 - **Min. Distance**: 100
 
 ### Warriors
-- `sf_qual.red`: Grendel by S. Fernandes (3rd place in qualification)
+- `sf_qual.red` (`grendel.red`): Grendel by S. Fernandes (3rd place in qualification)
 
 ## Round 2
 - **Coresize**: 8192
@@ -20,7 +20,7 @@ This directory contains warriors from the Corewar Single Elimination Tournament 
 - **Min. Distance**: 100
 
 ### Warriors
-- `sf_r2.red`: Bewitching by S. Fernandes
+- `sf_r2.red` (`bewitch.red`): Bewitching by S. Fernandes
 
 ## Quarter Final
 - **Coresize**: 8000
@@ -30,7 +30,7 @@ This directory contains warriors from the Corewar Single Elimination Tournament 
 - **Min. Distance**: 100
 
 ### Warriors
-- `sf_qf.red`: Sandpaper by S. Fernandes
+- `sf_qf.red` (`sandpape.red`): Sandpaper by S. Fernandes
 
 ## Semi Final
 - **Coresize**: 16384
@@ -40,7 +40,7 @@ This directory contains warriors from the Corewar Single Elimination Tournament 
 - **Min. Distance**: 100
 
 ### Warriors
-- `sf_sf.red`: Sandstone by S. Fernandes
+- `sf_sf.red` (`sandston.red`): Sandstone by S. Fernandes
 
 ## Final (Battle for 3rd Place)
 - **Coresize**: 8000
@@ -50,4 +50,4 @@ This directory contains warriors from the Corewar Single Elimination Tournament 
 - **Min. Distance**: 100
 
 ### Warriors
-- `sf_final.red`: 8 mins until victory by S. Fernandes (Finished 3rd overall)
+- `sf_final.red` (`eightmin.red`): 8 mins until victory by S. Fernandes (Finished 3rd overall)

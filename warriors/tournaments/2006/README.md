@@ -19,7 +19,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - `neo_r1.red`: blhoddvsd by Neogryzor (G.Labarga)
 - `fizmo_r1.red`: Controlled Attack by Fizmo (Christian Schmidt)
 - `mhale_r1.red`: MyB1tch by Mike Hale
-- `sf_r1.red`: Chrysalid by S. Fernandes
+- `sf_r1.red` (`chrysal.red`): Chrysalid by S. Fernandes
 - `zul_r1.red`: noTime by Zul Nazdri
 - `sascha_r1.red`: Sinnloser Name by Sascha Zapf
 - `fluffy_r1.red`: Inconvenience by Fluffy (Jens Gutzeit)
@@ -37,7 +37,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - **P-Space**: Allowed, no restrictions
 
 ### Round 2 Warriors
-- `sf_r2.red`: no hope by S. Fernandes
+- `sf_r2.red` (`nohope.red`): no hope by S. Fernandes
 - `Baltus 2` by Heath Caldwell
 - `Smooch` by Chip Wendell
 - `One Bullet Symphony` by inversed
