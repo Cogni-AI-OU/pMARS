@@ -1,0 +1,227 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                                May 6, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 40/ 12              Dragon Spear             c w blue     157     357
+ 2  48/ 43/  8                 Agony 5.1        Stefan Strack     154     409
+ 3  46/ 41/ 13            Iron Gate 1.01       Wayne Sheppard     151      83
+ 4  47/ 43/ 10               Backstabber         Anders Ivner     150     175
+ 5  46/ 46/  8               Medusa's v7   Mintardjo & Strack     147     548
+ 6  34/ 21/ 46                     Snake       Wayne Sheppard     147      15
+ 7  34/ 22/ 44             Night Crawler       Wayne Sheppard     145     255
+ 8  39/ 38/ 23             Leprechaun 1b         Anders Ivner     141    1167
+ 9  43/ 48/  9                  Sting II      Arno Fuhlendorf     139      73
+10  31/ 24/ 45               Sphinx v2.8         W. Mintardjo     138    1253
+11  30/ 23/ 47                Imprimis 6              P.Kline     137     655
+12  29/ 22/ 49                     ttest        nandor sieben     136     131
+13  28/ 21/ 51                      ittt        nandor sieben     135     132
+14  39/ 46/ 15                  Sucker 6        Stefan Strack     132     277
+15  28/ 24/ 48           +0 Stormbringer       Dan Nabutovsky     131    1685
+16  27/ 28/ 45                   Hobbits      Arno Fuhlendorf     126      12
+17  38/ 53/ 10           Paratroops v2.1         W. Mintardjo     122      27
+18  26/ 32/ 43              FlyPaper 1.1            J.Layland     120      32
+19  37/ 56/  7                       XBS     Fredrik Ohrstrom     119       1
+20  23/ 28/ 49                Nurgle III             c w blue     118       8
+
+21  30/ 53/ 17                  FireTrap              P.Kline     106       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Well, this weeks biggest news item is S. Strack's announcement of
+a new tournament.  Based on the annual 'PeekaBoo' Valentine Tournament,
+Stefan is seeking to challenge competitors with a little different format.
+This is an elimination tournament, where the winners get to
+submit a different warrior for each upcoming round.  In order to give
+more people a chance he has divided things into expert and novice groups
+(I think he used the terms 'stable' and 'unstable' :-).
+
+One player trying to decide whether he wants to go with the big boys is
+J. Layland, whose FlyPaper 1.1 was seen momentarily in second place.
+Congrats!  Unfortunately FlyPaper knocked off a stone or two and fell
+into the bottom ten after.
+
+FlyPaper and Hobbits (my guess - replicators) are making the scanners
+happy.  Today's top five slots are all cmp-scanners.
+
+D. Nabutovsky put up his early-version imp-stone program, Impossible,
+to test the waters.  Guess it's too hot!
+  21   4/ 44/ 51                Impossible       Dan Nabutovsky      65
+Wow, last Fall Impossible would have had less than 20% losses - maybe we
+ARE making some progress against imps.
+
+And my nomination for the Optimist Trophy:
+   Program "miniscule" (length 2) by "Iain Scott"
+   (contact address "eoin@ecr.mu.oz.au"):
+   ;strategy
+   ;strategy if it's really small, no one will find it
+Yeah, right. :-)
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 4  35/ 18/ 46                     Snake       Wayne Sheppard     152       1
+ 1  49/ 41/  9                   Cleaver       Wayne Sheppard     157       1
+ 2  34/ 22/ 44                   Test II       Wayne Sheppard     147       1
+10  43/ 47/ 10                  Sting II      Arno Fuhlendorf     138       1
+ 9  45/ 45/ 10                  Zipp 440             c w blue     144       1
+ 5  46/ 41/ 13                 Emerald 4              P.Kline     151       1
+ 3  33/ 21/ 45                sub-type-i             c w blue     145       1
+ 2  33/ 21/ 46               Test II 1/2       Wayne Sheppard     146       1
+ 8  40/ 42/ 18               sub-type-bs             c w blue     138       1
+ 9  31/ 21/ 48              Chimera v3.5         W. Mintardjo     140       1
+ 2  37/ 27/ 37              FlyPaper 1.1            J.Layland     147       7
+10  42/ 45/ 14             Iron Gate 1.1       Wayne Sheppard     139       1
+ 8  43/ 47/ 11             Medusa's +7.2         Mintardjo W.     138       1
+ 5  32/ 20/ 48             Snake-crawler       Wayne Sheppard     144       1
+ 8  41/ 43/ 16            Iron Gate 1.02       Wayne Sheppard     139       1
+ 9  46/ 44/ 10           Glass House 2.0            j.layland     147       1
+ 7  44/ 46/ 11           Paratroops v2.1         W. Mintardjo     142       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+21  10/ 43/ 47                       TS3         W. Mintardjo      78       0
+20  28/ 57/ 15                       XBS     Fredrik Ohrstrom      99       1
+21  11/ 70/ 19                      6809       Rudi Cilibrasi      52       0
+21   7/ 84/  9                      BANG        David K. Peck      30       0
+21  29/ 55/ 16                      Harm             c w blue     104       0
+21  19/ 74/  8                      Tiny           Iain Scott      64       0
+21  19/ 72/  9                      bomp               Harvey      66       0
+21  27/ 73/  0                      simp              Unknown      81       0
+21  22/ 74/  4                     68010       Rudi Cilibrasi      70       0
+21  23/ 62/ 14                     68020       Rudi Cilibrasi      85       0
+21  16/ 74/ 10                     Dwarf        George Gorman      57       0
+20  25/ 37/ 38                     Paper       Wayne Sheppard     112       1
+21  34/ 61/  5                     Scnfo     Fredrik Ohrstrom     107       0
+20  24/ 51/ 25                     Sting      Arno Fuhlendorf      96       1
+21  21/ 79/  0                     ptest              Unknown      63       0
+21  16/ 71/ 14                     quick     Cliff Fitzmorris      61       0
+21   1/ 89/ 10                    BigImp        David K. Peck      12       0
+21  19/ 79/  2                    Circus        David K. Peck      58       0
+21   5/ 57/ 37                    Estone              Mestern      53       0
+21  25/ 71/  4                    Invest      Andre van Dalen      79       0
+21   5/ 64/ 31                    MiniMe        David K. Peck      46       0
+17  39/ 45/ 16                    Wimp 6     Brant D. Thomsen     134       1
+20  10/ 41/ 49                    rabbit         W. Mintardjo      78       1
+21   8/ 84/  9                   Acrobat        David K. Peck      32       0
+21   6/ 64/ 30                   Anarchy David K. Peck (95dpe      49       0
+19  24/ 24/ 53                   Hobbits      Arno Fuhlendorf     123       1
+21   9/ 71/ 20                   Leecher        David K. Peck      47       0
+21   5/ 93/  2                  Carnival        David K. Peck      17       0
+21   1/ 50/ 49                  Confused              Jay Han      51       0
+21  18/ 64/ 19                  FineHook        David K. Peck      72       0
+21  28/ 54/ 18                  FireTrap              P.Kline     102       0
+21  13/ 85/  2                  Hellfire        David K. Peck      40       0
+21  11/ 74/ 16                  Ice Cube             c w blue      48       0
+21  10/ 60/ 31                  MeAndYou        David K. Peck      59       0
+21  21/ 70/ 10                  New tiny           Iain Scott      71       0
+19  38/ 50/ 12                  Shredder             c w blue     125       1
+21  18/ 63/ 19                  SinkHook        David K. Peck      73       0
+20  33/ 59/  9                  Sunburst              Jay Han     107       1
+21   7/ 88/  4                  The Borg       Rudi Cilibrasi      26       0
+19  39/ 47/ 13                  Wimp 6.1     Brant D. Thomsen     132       1
+21  37/ 52/ 11                  Zipp 440             c w blue     122       0
+21   6/ 78/ 16                 Batallion        David K. Peck      35       0
+21   9/ 88/  3                 Biohazard        David K. Peck      29       0
+21   2/ 87/ 12                 Defensive        David K. Peck      17       0
+21  18/ 65/ 17                 Latchhook David K. Peck (95dpe      71       0
+21  36/ 61/  3                 Sunburst1              Jay Han     110       0
+20  36/ 52/ 12                 Wimp 6.11     Brant D. Thomsen     120       1
+20  31/ 54/ 14                 ministone            j.layland     108       1
+21  19/ 57/ 24                 s-n-a_1.0     Cliff Fitzmorris      81       0
+21   0/ 53/ 47                 test v0.1      Raistlin Majere      48       0
+21  25/ 62/ 13                Early Bird             c w blue      89       0
+20  36/ 50/ 14                Eclipse II              P.Kline     122       1
+21  12/ 54/ 34                Homunculus               Pi Qan      70       0
+20  23/ 25/ 52                Nurgle III             c w blue     121       1
+21  11/ 87/  2                ToxicWaste        David K. Peck      35       0
+21   0/ 43/ 56                Warp Speed           Iain Scott      57       0
+20  35/ 55/ 10                sub-type-s             c w blue     115       1
+21   1/ 38/ 61                test v0.4d      Raistlin Majere      63       0
+21   7/ 89/  4               Dracula 1.0       Rudi Cilibrasi      26       0
+21  23/ 47/ 30               Eclipse III              P.Kline      98       0
+18  39/ 46/ 15               Emerald 4.1              P.Kline     131       1
+21  10/ 78/ 12               Love Bomber           Iain Scott      41       0
+19  28/ 51/ 21              Emerald City              P.Kline     106       1
+21  30/ 41/ 30              FlyPaper 1.0            J.Layland     118       0
+21   7/ 83/ 10              Glass Houses              Unknown      32       0
+21  15/ 80/  5              Ground-Zero+        E. J. Andrews      51       0
+21  10/ 61/ 29              Parasite v 6      Roderick Easton      59       0
+21  22/ 27/ 51              Silver Paper         W. Mintardjo     117     235
+21  30/ 58/ 12              Vamkill Orff              Fredrik     103       0
+19  24/ 26/ 50              sub-type-b+r             c w blue     122       1
+21  20/ 79/  1             coloured tiny           Iain Scott      60       0
+20  27/ 41/ 32           Desperate I (b)     Brant D. Thomsen     114       1
+20  39/ 53/  8           Glass House 2.0            j.layland     124       1
+20  32/ 39/ 29           Plasma-Advanced       Wayne Sheppard     124       1
+21  16/ 75/  9           bomber (v. 1.A)         Th.F.Telkamp      56       0
+21  28/ 59/ 13          BSLIV - my style              P.Kline      97       0
+20  38/ 53/ 10          Glass House 2.01            j.layland     123       1
+20  33/ 43/ 23       No Ties Allowed 1.1       Wayne Sheppard     123       1
+21  13/ 86/  0          scan v0.1 -test-         Th.F.Telkamp      41       0
+19  37/ 47/ 16    Iron Gate testing.....       Wayne Sheppard     128       1
+21   3/ 97/  0    2 handed coloured tiny           Iain Scott       9       0
+20  15/ 46/ 39       Trident [version 2]         W. Mintardjo      85       1
+21   0/ 93/  7        Loving Stun Bomber           Iain Scott       7       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Here's an idea to make yourself a little more resistant to imps.  An imp-spiral
+kills you if it overruns your code and you have fewer processes running than
+it does.  You will outrun the spiral and execute garbage instructions.
+Many programs use gates to keep the imps away, and some put a simple
+imp (mov 0,1) following their code to provide an escape.  But another way
+to avoid being killed is to have more processes than the imp-spiral.
+
+Let's say you are executing a standard reverse core-clear:
+
+      spl 0,<-10
+      mov bomb,<-12
+bomb  dat <-11
+
+which will become a perfect gate once it completes clearing core.
+
+If you set it up so that only one process enters the spl-0, you will have
+three processes active at any one time (one is going to die at 'bomb').
+If the imp-spiral has more than three processes (it will), and it overruns
+you before you are ready, you will die.  Instead, if you can drop multiple
+processes into the routine, you won't die - you will just be overrun by
+the spiral and follow it around until the timer runs out on the battle.
+You get one point for the tie, and rob him of two points.
+
+The simplest variation (and the fastest core-clear) is to use this form:
+
+      spl 0,<-10
+      mov bomb,<-12
+      jmp -1,<-12
+bomb  dat <-11
+
+But if you don't want the extra length, you could try some other way of
+getting multiple processes in.
+
+Incidentally, even a partial gate like the above before completion, can
+be effective against Night Crawler whose imp-spiral is so short that
+one or two lucky hits will kill it.  (It's the stone that's hard to find :-)
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

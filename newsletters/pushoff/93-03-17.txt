@@ -1,0 +1,203 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                              March 17, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  38/ 24/ 38                        It        nandor sieben     153    1013
+ 2  46/ 42/ 12           Paratroops v2.1         W. Mintardjo     150      64
+ 3  38/ 28/ 34                Imprimis 6              P.Kline     149     103
+ 4  37/ 26/ 37           +0 Stormbringer       Dan Nabutovsky     147    1133
+ 5  42/ 37/ 21           Grimm's Vampyre             c w blue     147      37
+ 6  45/ 45/ 11               Medusa's v6   Mintardjo & Strack     145      58
+ 7  36/ 27/ 37               Sphinx v2.8         W. Mintardjo     145     701
+ 8  36/ 28/ 36                     Night       Wayne Sheppard     145     742
+ 9  43/ 45/ 11                 Iron Gate       Wayne Sheppard     142     659
+10  41/ 40/ 20              Stoned Again             c w blue     142      39
+11  42/ 43/ 14                  Sucker 5        Stefan Strack     141     997
+12  42/ 43/ 14         Twilight Pits 7.5         W. Mintardjo     141      15
+13  42/ 42/ 16                  Herem II         Anders Ivner     141     477
+14  41/ 43/ 15               sub-type-ps             c w blue     140      14
+15  43/ 46/ 11               Charon v8.1   Cisek,Strack,Kline     139     594
+16  43/ 49/  8                 Agony 4.1        Stefan Strack     137      67
+17  38/ 42/ 19             Leprechaun 1b         Anders Ivner     134     615
+18  42/ 50/  8           Juggernaut v1.3         Anders Ivner     134      45
+19  38/ 48/ 14                 Emerald 3              P.Kline     128       1
+20  36/ 47/ 17                Eclipse II              P.Kline     125       2
+
+21  34/ 48/ 18                  DumbLuck            j.layland     120      52
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Whoa!!  What a week we have had.  Did I say the anti-imp crowd had shot their
+wad?  Check out this bottom nine:
+
+12  33/ 28/ 38               Sphinx v2.8         W. Mintardjo     138     645
+13  40/ 42/ 18             Leprechaun 1b         Anders Ivner     137     559
+14  31/ 28/ 41              Chimera v3.5         W. Mintardjo     135     258
+15  31/ 28/ 42                        It        nandor sieben     134     957
+16  31/ 32/ 37                Imprimis 6              P.Kline     131      47
+17  30/ 30/ 40           +0 Stormbringer       Dan Nabutovsky     131    1077
+18  40/ 50/ 10                Eclipse II              P.Kline     130       1
+19  33/ 37/ 30        Construction Paper             c w blue     129      29
+20  30/ 32/ 38                     Night       Wayne Sheppard     127     686
+
+Wayne's fingernails suffered a severe stretching this week, but once again
+no imps were knocked off.  They are tough!  W. Mintardjo proved just how
+hard it is to knock off imps when he submitted:
+
+    21   2/ 98/  0 Remove TMs61 and Chimera          W. Mintardjo       7       0
+
+which failed to remove EITHER program.  Boy, when you can't even remove
+your own imp!  :-)
+
+Congratulations to Nandor Sieben and (by the time you read this) Stefan
+Strack, whose It and Sucker 5 warriors, respectively, passed 1000 challenges.
+We all remember that Sucker 4 nearly made it to 1000, but was knocked off
+by a flurry of imp-stone fighters last Fall.  After last week's comments,
+I received this:
+
+    This bites.  My original [name deleted] program was submitted just before
+    Sucker 5. Then a mistake in a ;kill line took it off.  I resubbmitted
+    the same program.
+
+To which I can only respond, :-)
+
+Redundant strategy line of the week:
+    ;strategy 4.1: tweaked constants
+Just can't get enough of that constant tweaking can we?
+
+Ominous submission of the week:
+    Program "Get Info. on the hill" (length 0) by "Unknown"
+    (contact address "fraserc@dcs.gla.ac.uk"):
+    21   2/ 98/  0     Get Info. on the hill              Unknown       7       0
+We KNOW who you are, CF.
+
+Another CoreWar addiction was recorded:
+
+    A challenger has arrived on the hill!  Vital statistics:
+    Program "manifold1" (length 8) by "Sasha Wait"
+    (contact address "g2sasha@cdf.toronto.edu"):
+    ;strategy v1.0  15/03/93  -- ignore pressing exams & problem sets
+
+Did we actually see a zero-length program submitted?  And did it
+actually win 02% of its battles?
+
+Wayne Sheppard bid goodbye for a while as he moves to a new school.  May
+you be reconnected soon!  He challenged us to knock his programs off the
+Hill while he is gone.  Since April 1 is coming up, maybe we could
+get WMS to prepare an appropriate report for him when he gets back:
+    20  21/ 59/ 20              Just Testing       Novice Player      121     1
+    21  20/ 59/ 21                     Night       Wayne Sheppard     120     742
+Followed by:
+    20  21/ 59/ 20              Just Testing2      Novice Player      121     1
+    21  20/ 59/ 21                  Iron Gate      Wayne Sheppard     120     659
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 1  49/ 43/  8           Juggernaut v1.3         Anders Ivner     154       1
+ 6  46/ 47/  7                 prototype        Stefan Strack     144       1
+ 1  52/ 39/  9           Paratroops v2.1         W. Mintardjo     164       3
+ 2  47/ 42/ 11                      Test       Wayne Sheppard     152       1
+ 5  46/ 46/  9                     TMs61         W. Mintardjo     145       1
+ 9  44/ 47/  9                     TMsv5         W. Mintardjo     140       1
+ 1  47/ 42/ 10               Medusa's v6   Mintardjo & Strack     152      10
+ 8  41/ 38/ 21               sub-type-v2             c w blue     145       1
+ 2  42/ 38/ 20           Grimm's Vampyre             c w blue     147       1
+ 5  41/ 38/ 21               sub-type-v2             c w blue     144       1
+ 7  46/ 46/  9               Medusa's v7   Mintardjo & Strack     146       1
+10  37/ 29/ 34        Construction Paper             c w blue     144       1
+ 6  44/ 41/ 15         Twilight Pits 7.5         W. Mintardjo     146       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+21   2/ 55/ 43 LOOSER - based on MICE (j  ???-Cedric D. Adjih      48       0
+21   0/ 90/ 10 Looser II - the non-reven Cedric D. Adjih (new      11       0
+21   1/ 62/ 38        Full Frequency 1.2          Joshua Houk      40       0
+21   3/ 58/ 39         Bad Pfenning v1.0          Joshua Houk      49       0
+21   6/ 66/ 29         Bad Pfenning v2.0          Joshua Houk      46       0
+21   8/ 55/ 37         Bad Pfenning v3.0          Joshua Houk      62       0
+21   6/ 91/  3                    sorrow     Chris Parrinello      21       0
+21  31/ 56/ 13                    Quasit             c w blue     106       0
+21  17/ 78/  5              stack attack     Chris Parrinello      57       0
+21  16/ 22/ 62                   bunnies       Steven Morrell     111       0
+21  14/ 76/  9               CMP-Trapper     Chris Parrinello      52       0
+21   6/ 73/ 21             Imp Hunter2.0          Kirk Gorden      40       0
+21  18/ 66/ 16               Iron Carpet       Wayne Sheppard      71       0
+21   9/ 46/ 46             SupaDwarf 0.3         Andrew Scott      72       0
+21  21/ 69/ 10                    PLASMA       Wayne Sheppard      73       0
+21  24/ 71/  5               CMP-Trapper     Chris Parrinello      77       0
+21   4/ 93/  3  The Emperors New Clothes           J. Horwich      16       0
+21  38/ 48/ 15                  DumbLuck            j.layland     128       0
+21  22/ 57/ 21                sub-type-g             c w blue      88       0
+21   3/ 85/ 12                 Victriola          Joshua Houk      21       0
+21  24/ 50/ 26                    Redips        Alex MacAulay      99       0
+21   7/ 70/ 23                     Polly      Magnus Sandberg      45       0
+21  15/ 53/ 32                         r            j.layland      77       0
+21   7/ 93/  1                    sorrow     Chris Parrinello      21       0
+21   0/ 69/ 31        Self-splitting IMP         W. Mintardjo      32       0
+21  31/ 40/ 29              sub-type-b+r             c w blue     123       0
+21   2/ 98/  0                   Unknown              Unknown       7       0
+21   7/ 58/ 35             sub-type-s-98             c w blue      55       0
+21   6/ 80/ 15                    B Mice       Rodney Schuler      31       0
+21  31/ 45/ 24                      Harm             c w blue     117       0
+21  19/ 71/ 10                 Gala V1.0     Chris Parrinello      68       0
+21  33/ 51/ 17                      Test       Wayne Sheppard     115       0
+21  23/ 65/ 12               multi dwarf        nandor sieben      80       0
+21  30/ 67/  3               CMP-Trapper     Chris Parrinello      93       0
+21  29/ 47/ 24               multi dwarf        nandor sieben     112       0
+21  29/ 45/ 26             multi dwarf 2        nandor sieben     112       0
+21   0/ 86/ 14                     Groff          Ziad Ismail      14       0
+21   6/ 93/  1                     Krupp              Fredrik      20       0
+21   7/ 85/  8            Little Warrior      Cedric D. Adjih      29       0
+21   2/ 98/  0                   Unknown              Unknown       7       0
+21  19/ 70/ 11                     dwarf              Fredrik      69       0
+21   9/ 46/ 45                 Gala V1.0     Chris Parrinello      72       0
+21  28/ 64/  8                        p1            j.layland      92       0
+21  27/ 73/  1                    Lander             c w blue      80       0
+21  31/ 49/ 21                   stone2e           Sasha Wait     112       0
+20  27/ 71/  2                    BeeBee       Wayne Sheppard      82       1
+20  27/ 69/  3         Plasma/variations       Wayne Sheppard      85       1
+20  30/ 54/ 16                 Gala V1.0     Chris Parrinello     106       1
+21   7/ 71/ 22                  ScanVamp      Cedric D. Adjih      43       0
+21   1/ 72/ 27                  Polly-II              Unknown      31       0
+21   2/ 98/  0                       Pip              Fredrik       7       0
+21   3/ 94/  4                   Florp 1              Fredrik      12       0
+21   0/ 93/  7                  Emeretta               Magnus       7       0
+21   1/ 53/ 47                       mer              Fredrik      49       0
+21   0/ 45/ 55               Kossa-Larma                 Ziad      55       0
+21   0/ 46/ 54               Kossa-Larma                 Ziad      54       0
+21   0/ 47/ 52              Kossa-Larma2                 Ziad      53       0
+21   1/ 48/ 51                        vc            j.layland      54       0
+
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Even if you are using an optimal pattern number, try another one.  I found
+that 2365 (mod-5) was ineffective against Night, but 3094 (mod-2) works
+great.  I don't think the mod-x part is important here, but somehow 2365,
+if it doesn't scan Night right away, continues scanning just ahead of
+the imps, and takes much longer to find him.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

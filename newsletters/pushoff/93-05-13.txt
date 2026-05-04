@@ -1,0 +1,188 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               May 13, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  35/ 21/ 43             Night Crawler       Wayne Sheppard     149     338
+ 2  37/ 26/ 37           ImpsAreMyFriend            J.Layland     148      12
+ 3  36/ 28/ 36              FlyPaper 2.0            J.Layland     145      43
+ 4  44/ 44/ 13              Dragon Spear             c w blue     144     440
+ 5  33/ 23/ 44                Imprimis 6              P.Kline     143     738
+ 6  33/ 25/ 42               Sphinx v2.8         W. Mintardjo     140    1336
+ 7  42/ 45/ 14            Iron Gate 1.01       Wayne Sheppard     139     166
+ 8  30/ 23/ 47           +0 Stormbringer       Dan Nabutovsky     138    1768
+ 9  41/ 44/ 15                  Sucker 6        Stefan Strack     138     360
+10  38/ 39/ 22             Leprechaun 1b         Anders Ivner     137    1250
+11  29/ 22/ 49                     ttest        nandor sieben     136     214
+12  42/ 49/  9                 Agony 5.1        Stefan Strack     136     492
+13  29/ 22/ 49                     Snake       Wayne Sheppard     136      98
+14  42/ 50/  9               Medusa's v7   Mintardjo & Strack     134     631
+15  38/ 43/ 20                  Herem II         Anders Ivner     133       2
+16  41/ 50/  9                  Sting II      Arno Fuhlendorf     132     156
+17  27/ 22/ 51                      ittt        nandor sieben     132     215
+18  40/ 50/ 10               Backstabber         Anders Ivner     130     258
+19  38/ 48/ 14                  ScanTest            J.Layland     127       1
+20  26/ 39/ 35              sub-type-b+r             c w blue     114       5
+
+21   2/  2/  1                  ScanTest            J.Layland       6       7
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Round 1 of S. Strack's tournament has been completed.  All human particpants
+breathed a sigh of relief as those who had non-human opponents ('Automatic
+Player') won :-)  As a help for the second round, Stefan mailed out the
+source code for all the submittals.  Just to make things interesting,
+he doubly-encrypted the source (Zip and uuencode) which gave some authors
+a bit of a puzzle.
+
+Just when things at the top of the Hill seemed to have settled down to
+a back-and-forth struggle between imps and scanners, along came J. Layland's
+FlyPaper 2.0 which is firmly locked in the top 5.  Not only that, but
+his ImpsAreMyFriend and ScanTest are also showing some muscle.
+ImpsAreMyFriend is especially interesting as it is challenging Night Crawler
+as the highest-ranked imp-program.  King of the Hill competitors are
+anxiously waiting some published code (WE'LL SETTLE FOR HINTS!) to see
+if J.L has uncovered some new principle or what :-)
+
+The Hill weathered a late shower of Dwarf's, Tests, and (everybody's
+favorite) 'Unknown by Unknown'.  The forecast is for a steady drizzle
+of new participants - WELCOME!  And an occasional blast from an old program
+just shows that the Hill continues to get tougher.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 5  44/ 44/ 12                  ScanTest            J.Layland     144       1
+ 8  28/ 20/ 52               Sphinx v4.3         W. Mintardjo     137       1
+ 3  34/ 24/ 42              FlyPaper 2.0            J.Layland     145       1
+ 3  46/ 44/ 10              sub-type-cmp             c w blue     148       1
+ 1  38/ 24/ 38           ImpsAreMyFriend            J.Layland     151       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+20  40/ 52/  8                        A2        Stefan Strack     127       1
+21  33/ 57/ 10                        BS            J.Layland     108       0
+20   1/ 45/ 54                       BTB              Fredrik      56       1
+21  26/ 54/ 20                       Tsp         W. Mintardjo      98       0
+20  26/ 52/ 22                       Tsp         W. Mintardjo     101       1
+20  36/ 58/  6                       XBS     Fredrik Ohrstrom     114       1
+20  27/ 61/ 12                       a11         S. Halvorsen      93       1
+21  29/ 69/  3                       rs2                Shade      89       0
+20  28/ 38/ 34                      Test       Wayne Sheppard     118       1
+21  18/ 74/  8                      Test T. M. Bezenek (Dewdn      63       0
+21   0/ 89/ 11                      imp4                Shade      11       0
+21  26/ 55/ 19                      test              P.Kline      97       0
+21  28/ 61/ 11                     Dwarf        George Gorman      95       0
+21   4/ 72/ 24                     Splat                Shade      35       0
+17  38/ 46/ 15                     TTp12         W. Mintardjo     130       1
+21  28/ 61/ 11                   Dwarf30        George Gorman      94       0
+21  15/ 53/ 31                   Frobozz     Fredrik Ohrstrom      77       0
+21   0/ 46/ 54                   Unknown                 Eric      55       0
+21  12/ 76/ 12                   impsimp               Harvey      49       0
+19  36/ 43/ 20                  Herem II         Anders Ivner     130       1
+21  18/ 72/ 10                  re-entry                  ECP      64       0
+21  20/ 78/  2                 test v0.6      Raistlin Majere      63       0
+21  20/ 63/ 17                Early Bird             c w blue      77       0
+18  26/ 25/ 49                Nurgle III             c w blue     128       1
+18  39/ 49/ 12                sub-type-s             c w blue     128       1
+21  25/ 75/  1                test v0.6g      Raistlin Majere      75       0
+21  23/ 74/  3               Dwarfold103        George Gorman      72       0
+20  26/ 35/ 38               FlashGordon            J.Layland     117       1
+18  35/ 42/ 22               Night Shade       Wayne Sheppard     128       1
+10  26/ 22/ 52               Sphinx v2.9         W. Mintardjo     130       1
+20  38/ 47/ 15               Sunburst 31              Jay Han     129       1
+21   2/ 76/ 22               The Curtain       Rudi Cilibrasi      27       0
+21  15/ 84/  1               sub-type-av             c w blue      47       0
+18  35/ 45/ 20              EarSplitting              P.Kline     125       1
+21  30/ 54/ 16              RoadRunner I         S. Halvorsen     106       0
+20  34/ 50/ 16              Sunburst 30b              Jay Han     118       1
+20  21/ 27/ 52              sub-type-aix             c w blue     115       1
+20  24/ 27/ 49              sub-type-b+r             c w blue     121       1
+21  37/ 52/ 11             Bomb The Base     Fredrik Ohrstrom     122       0
+18  36/ 44/ 20             Distance v6.1     Brant D. Thomsen     128       1
+21   0/ 45/ 55             George Gorman        George Gorman      56       0
+21  22/ 65/ 13             Inchworm 1.3a     Brant D. Thomsen      80       0
+21  28/ 62/ 11            Dwarf15nocolor        George Gorman      94       0
+21   8/ 49/ 44            Improved Dwarf            Ben Burch      67       0
+21   6/ 72/ 22            Parasite v 6.1      Roderick Easton      40       0
+20  31/ 51/ 18           Am I Evil 10.0d      Jarkko Lindblad     112       1
+20  38/ 50/ 12           Bomb The Base 2     Fredrik Ohrstrom     127       1
+21  27/ 42/ 32           Desperate I (b)     Brant D. Thomsen     111       0
+17  19/ 23/ 59           FlasherTest 0.1            J.Layland     115       1
+20  37/ 53/ 10          Glass House 2.1a            J.Layland     122       1
+21   4/ 45/ 51          Scars, Four Eyes          Joshua Houk      62       0
+21  26/ 74/  1          test v0.6h again      Raistlin Majere      78       0
+21   9/ 33/ 58        Bubble-scrape v3.1          Joshua Houk      85       0
+21   6/ 51/ 44        Improved Dwarf III            Ben Burch      61       0
+21  16/ 39/ 45       Trident [Version 2]         W. Mintardjo      93       0
+21   5/ 95/  0   shirley's neighbourhood            gg and is      15       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Part of the discussion related to the new draft of the redcode (Corewars)
+syntax, concerns the difference between 'in-register' and 'in-memory'
+evaluation of operands.
+
+Some of the discussion is available in the digests in pub/corewar at
+soda.berkeley.edu, but this difference was made clear to me (at last) this
+week when a program I was running successfully on Core! for the Mac
+got slaughtered on KotH.
+
+I was using this construct:
+
+        mov splbm,@tgt
+tgt     mov @0,<100
+        jmn tgt,@tgt
+        ...
+splbm   spl 0,5
+
+In Core!, this lays down a carpet like:
+
+tgt+100 spl 0,0
+        spl 0,1
+        spl 0,2
+        spl 0,3
+        spl 0,4
+
+but at KotH, this goes into an endless loop, after laying down:
+
+tgt+100 spl 0,1
+        spl 0,1
+        spl 0,2
+        spl 0,3
+        spl 0,5
+
+Core! uses in-memory evaluation, so 'spl 0,1' decrements to 'spl 0,0' and
+is overlaid on top of itself; then the 'jmn' sees a zero and falls through.
+Because KotH uses in-register evaluation, the 'spl 0,1' instruction keeps
+getting overlaid on tgt+100, so the 'jmn' never sees a zero and keeps
+jumping back.
+
+So beware when using a line like:
+
+        mov @0,<xxx
+or
+        mov <0,<xxx
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

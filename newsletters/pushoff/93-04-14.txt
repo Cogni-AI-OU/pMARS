@@ -1,0 +1,173 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                              April 14, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  40/ 20/ 40             Night Crawler       Wayne Sheppard     159      44
+ 2  49/ 41/ 11              Dragon Spear             c w blue     157     146
+ 3  38/ 20/ 41                    NC III       Wayne Sheppard     156       1
+ 4  48/ 41/ 12                      Zipp             c w blue     155      15
+ 5  48/ 44/  8                 Agony 5.1        Stefan Strack     152     198
+ 6  37/ 23/ 40                Imprimis 6              P.Kline     150     444
+ 7  47/ 45/  8               Medusa's v7   Mintardjo & Strack     150     337
+ 8  34/ 24/ 42               Sphinx v2.8         W. Mintardjo     144    1042
+ 9  43/ 44/ 12                 Iron Gate       Wayne Sheppard     143    1000
+10  32/ 22/ 46           +0 Stormbringer       Dan Nabutovsky     142    1474
+11  30/ 20/ 50                        It        nandor sieben     141       6
+12  38/ 37/ 24             Leprechaun 1b         Anders Ivner     139     956
+13  42/ 47/ 11               Pippin v2.0   Arno M. Fuhlendorf     138       3
+14  36/ 37/ 28                    Nurgle             c w blue     135      27
+15  29/ 25/ 46              Silver Paper         W. Mintardjo     133      75
+16  40/ 48/ 12                 Emerald 4              P.Kline     133      19
+17  39/ 46/ 15                  Sucker 6        Stefan Strack     131      66
+18  39/ 48/ 12               Charon v9.0   Cisek,Strack,Kline     131      31
+19  36/ 46/ 18               Eclipse III              P.Kline     126      16
+20  27/ 30/ 43          Consumption v2.0   Arno M. Fuhlendorf     124       8
+
+21  12/ 78/ 10                    Invest      Andre van Dalen      47       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Last week this newsletter reported the premature demise of W. Sheppard's
+Night warrior, the first of several long-standing imp-stone programs to
+fall of the Hill in months.  Well, Mr. Sheppard did not take that kindly,
+no-siree-bob!  He has unleashed a series of new fighters in what can only
+be called "The Week of Wayne's Weveange!".  Cover your eyes children :-)
+
+First to fall victim to Wayne's attack was S. Strack's much-emulated
+Sucker 5, at the ripe old age of 1261.  We all remember that Sucker 4
+fell off the Hill just before making 1000 (when imps reappeared), so
+we could almost consider this an effective age of over 2000 -- almost!
+Course it didn't take long for Sucker 6 to appear and stake out a claim,
+(though it's not riding as high as it used to).
+
+Wayne's second victim was N. Sieben's mysterious 'It', another imp-stone
+program of long-standing (1282).  Many times It seemed to be up when
+other imps were down and down when others were up.  Just recently, It
+was sharing the top 5 with four scanners.  But an unfortunate combination
+of opponents, and a determined Sheppard-attack was all-she-wrote for It.
+No telling yet how successful the new version of It will be :-).
+
+Not content to just knock fighters off of KotH, Wayne released his
+own stone-imp program, Night Crawler.  Studying all those opponents
+must have given him an idea, 'cause NC is sitting pretty on top of the
+Hill.  On top of that, his Iron Gate made 1000 just in time for this
+edition (hey, even electronic newsletters have lead times :-)
+
+D. Nabutovsky's +0 Stormbringer now has a 400+ lead in the
+geriatrics competition and still looks tough.
+
+Other programs of note to fall this week included Moonstone 1 by
+D. Nabutovsky (207), a surprising effective stone, and Paratroops v2.1 (393)
+by W. Mintardjo, which used a scan->bomb->multi-bomber strategy to good effect.
+
+Congrats to W. Mintardjo, whose Sphinx v2.8 has now passed 1000 challenges.
+
+A. Ma was kept busy handling bug-reports for his new Corewars
+emulator.  As the old saying goes, 'if you never write anything, you
+will never get written up' or something like that.  Hope you get time
+to work on fighters this week :-)
+
+C.W. Blue is a quiet fellow -- quietly been taking over the Hill :-)
+His Dragon Spear, Zipp, and Nurgle (and assorted sub-type-xxx's) are
+beating up on a lot of good fighters.  Keep it up!
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 6  34/ 23/ 43              Silver Paper         W. Mintardjo     145       1
+ 7  43/ 43/ 14               Charon v9.0   Cisek,Strack,Kline     144       1
+ 7  44/ 40/ 15                  Sucker 6        Stefan Strack     149       1
+10  39/ 36/ 25                    Nurgle             c w blue     142       1
+ 6  36/ 24/ 40              Bronze Paper         W. Mintardjo     149       1
+ 3  49/ 40/ 11                      Zipp             c w blue     159       1
+ 1  43/ 20/ 36             Night Crawler       Wayne Sheppard     166       4
+ 4  38/ 22/ 40                      Test       Wayne Sheppard     155       1
+ 2  40/ 20/ 40                     NC II       Wayne Sheppard     160       1
+ 2  36/ 20/ 44                    NC III       Wayne Sheppard     151       1
+10  28/ 20/ 52                        It        nandor sieben     136       1
+10  39/ 43/ 18               sub-type-ps             c w blue     136       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+21  32/ 47/ 22                        v5            j.layland     116       0
+21   9/ 82/  9                       Get      Andre van Dalen      35       0
+19  31/ 44/ 25                      Rain       Wayne Sheppard     119       1
+21  14/ 85/  1                      seer        Hank Turowski      43       0
+21  30/ 32/ 37                      test              Unknown     129       2
+21  31/ 66/  3                     Dwarf               Magnus      96       0
+20  26/ 68/  5                    Hunter        Hank Turowski      84       1
+20  23/ 59/ 18                    Invest      Andre van Dalen      88       1
+20  27/ 30/ 43                    Jester             c w blue     123       1
+21  28/ 50/ 22                    Plasma       Wayne Sheppard     106       0
+21  28/ 36/ 37                    Scaper             c w blue     119       0
+21  23/ 30/ 47                    p2roba        nandor sieben     115       0
+21  11/ 84/  6                   Boinger         Jason Grundy      38       0
+21  38/ 51/ 12                   CraMPon             c w blue     125       0
+21  20/ 68/ 12                   DemonIV         Cormac Walsh      71       0
+21  27/ 42/ 31                  DemonIII         Cormac Walsh     111       0
+21  21/ 73/  6                  Diplomat        Rodney Kinney      68       0
+20  28/ 35/ 37                 RotLD 2.2        nandor sieben     121       1
+21   3/ 67/ 30                 Wimp v1.0     Brant D. Thomsen      40       0
+19  33/ 48/ 20                Eclipse II              P.Kline     118       1
+18  40/ 51/ 10                Iron Fence       Wayne Sheppard     129       1
+21   1/ 90/  9                LERSSI III           Arto Vuori      12       0
+18  39/ 46/ 15                Tomb Stone             c w blue     132       1
+20  21/ 78/  1                sub-type-b             c w blue      64       1
+20   4/ 64/ 32               Ground-Zero        E. J. Andrews      45       1
+21  25/ 72/  2               dumb bomber        Hank Turowski      78       0
+21  26/ 55/ 20              Ground-Zero+        E. J. Andrews      97       0
+20   1/ 41/ 58              Hand of Doom      Jarkko Lindblad      61       1
+20  38/ 57/  5              Stoned Again             c w blue     120       1
+21  33/ 52/ 15              sub-type-cmp             c w blue     114       0
+21  24/ 64/ 11             Diplomat 1.03        Rodney Kinney      84       0
+21  27/ 55/ 18             Distance v1.1     Brant D. Thomsen      99       0
+21  26/ 58/ 16             Distance v2.0     Brant D. Thomsen      95       0
+21  32/ 39/ 29             Salamander II         Anders Ivner     125       0
+21   0/ 88/ 12             Validate 1.0R        Stefan Strack      12       0
+21   9/ 91/  0             cheap-scanner         A.T. Crowley      26       0
+21  30/ 43/ 27            Am I Evil 10.0      Jarkko Lindblad     117       0
+21  11/ 52/ 37            BscannerBomber       Wayne Sheppard      70       0
+20  37/ 47/ 16            Moonstone v1.1              Unknown     127       1
+18  28/ 29/ 43          Consumption v2.0   Arno M. Fuhlendorf     128       1
+21  23/ 56/ 20       Thundering buttocks       Jordan Horwich      90       0
+21  14/ 83/  2      JG-HI2-Hopping Imp 2         Jason Grundy      45       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Newcomers to the game frequently confuse their recode assembler syntax
+with actual runtime code.  Operators like * / + -, as well as EQU's
+and parens are only 'assembler' operators, they are evaluated before
+the program is loaded.  An example:
+
+        mov 100,@2*10
+
+is changed to:
+
+        mov 100,@20
+
+If you are suspicious that your emulator is not doing what you think
+it should, take a look at the assembled instructions.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+
