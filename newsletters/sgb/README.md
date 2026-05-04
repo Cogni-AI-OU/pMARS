@@ -1,6 +1,6 @@
 # Steve's Guide for Beginners
 
-Steve's Guide for Beginners was written by Steve Bailey between January and May 1996, and was serialised into 13 issues. It provides a gentle introduction to Core War and Redcode.
+Steve's Guide for Beginners was written by Steve Bailey between January and May 1996, and was serialised into 13 issues. It provides a gentle introduction to Core War and Redcode. The guide is also available online at [corewar.co.uk](https://corewar.co.uk/sgb.htm).
 
 - [Issue 1](sgb01.txt) - Introduction, What is Core Wars, How to start.
 - [Issue 2](sgb02.txt) - Warriors, BORING, USELESS.

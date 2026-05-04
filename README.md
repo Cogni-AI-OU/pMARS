@@ -89,6 +89,8 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [P-Key development](http://labarga.atspace.com/pkey_dev.html) - Analysis of a winning P-space warrior.
   - [CoreExplorer](http://corewar.co.uk/ce/ce001.txt) - Newsletter for beginners.
   - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
+  - [Steve's Guide for Beginners](newsletters/sgb/) - Gentle introduction to Core War and Redcode.
+  - [Push Off](newsletters/pushoff/) - Paul Kline's midweek review of Core War (1993-1994).
 - **Other Simulators & Tools:**
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
