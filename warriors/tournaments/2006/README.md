@@ -12,18 +12,18 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - **P-Space**: NONE
 
 ### Round 1 Warriors
-- `heath_r1.red`: Club by Heath Caldwell
+- `7919/heath_r1.red`: Club by Heath Caldwell
 - `nenad_r1.red`: Lavos7919 by Nenad Tomasev
-- `chip_r1.red`: Whole Cloth by Chip Wendell
+- `7919/chip_r1.red`: Whole Cloth by Chip Wendell
 - `inversed_r1.red`: Odd Warfare by inversed
 - `neo_r1.red`: blhoddvsd by Neogryzor (G.Labarga)
 - `fizmo_r1.red`: Controlled Attack by Fizmo (Christian Schmidt)
 - `mhale_r1.red`: MyB1tch by Mike Hale
-- `sf_r1.red` (`chrysal.red`): Chrysalid by S. Fernandes
-- `zul_r1.red`: noTime by Zul Nazdri
-- `sascha_r1.red`: Sinnloser Name by Sascha Zapf
-- `fluffy_r1.red`: Inconvenience by Fluffy (Jens Gutzeit)
-- `mizcu_r1.red`: Something quick by Mizcu
+- `7919/sf_r1.red` (`7919/chrysal.red`): Chrysalid by S. Fernandes
+- `7919/zul_r1.red`: noTime by Zul Nazdri
+- `7919/sascha_r1.red`: Sinnloser Name by Sascha Zapf
+- `7919/fluffy_r1.red`: Inconvenience by Fluffy (Jens Gutzeit)
+- `7919/mizcu_r1.red`: Something quick by Mizcu
 - `xman_r1.red`: Cool by X-Man
 - `roy_r1.red`: Drop and listen by Roy van Rijn
 
@@ -37,7 +37,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - **P-Space**: Allowed, no restrictions
 
 ### Round 2 Warriors
-- `sf_r2.red` (`nohope.red`): no hope by S. Fernandes
+- `666/sf_r2.red` (`666/nohope.red`): no hope by S. Fernandes
 - `Baltus 2` by Heath Caldwell
 - `Smooch` by Chip Wendell
 - `One Bullet Symphony` by inversed
@@ -87,7 +87,7 @@ Full information and results can be found at [corewar.co.uk/datagram](https://co
 - `Imp Army` by Zul Nazdri
 - `Stinky redecode` by Neogryzor
 - `NoTime NoTime` by Nenad Tomasev
-- `fluffy_r4.red`: Backup by Fluffy
+- `8192/fluffy_r4.red`: Backup by Fluffy
 - `London in tears` by Roy van Rijn
 
 ## Round 5 Information
