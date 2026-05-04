@@ -1,0 +1,497 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 40                                                         July 29, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+______________________________________________________________________________
+Greetings.
+
+Not much action this week - only 7 challenges (there were actually more but
+the Hill was reset for some reason). There were quite a few challenges in the
+weekend though so not everyone's asleep.
+
+This issue contains a hint list and Probe.
+
+--Anton Marsden
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  38.4/ 24.0/ 37.6              Simple v0.4b          Ian Oversby 152.8   19
+ 2  45.6/ 39.4/ 15.0                    Blur 2        Anton Marsden 151.7   67
+ 3  46.3/ 43.0/ 10.7                  Q^2 Miro         Anders Ivner 149.5  118
+ 4  42.3/ 36.4/ 21.3                     Probe        Anton Marsden 148.3   68
+ 5  43.9/ 40.0/ 16.1                 Goldfinch              P.Kline 147.9    9
+ 6  44.2/ 41.9/ 14.0                      Mist              P.Kline 146.5    8
+ 7  28.7/ 12.0/ 59.3      Return Of The Jedimp             John K W 145.5   56
+ 8  42.7/ 42.4/ 15.0                 myVamp5.4             Paulsson 143.0  116
+ 9  33.0/ 23.2/ 43.9                 Armory II             John K W 142.8  207
+10  33.8/ 25.7/ 40.5                 Pulp v0.2          Ian Oversby 141.9  163
+11  41.8/ 42.2/ 16.1           Earthquake v0.2         Bjoern & Ian 141.3   25
+12  39.5/ 37.7/ 22.9                 Yogi Bear              P.Kline 141.3  272
+13  41.4/ 42.0/ 16.7                   Harmony              P.Kline 140.7   33
+14  38.9/ 37.5/ 23.6                 Dura v0.1          Ian Oversby 140.4   97
+15  38.6/ 38.0/ 23.4                T.N.T. pro    Maurizio Vittuari 139.3  786
+16  30.9/ 23.1/ 46.0          blue flame c1/10       bjoern guenzel 138.7   52
+17  30.2/ 22.1/ 47.7                   Rosebud                Beppe 138.3  741
+18  32.9/ 27.6/ 39.6        Jack in the box II          Beppe Bezzi 138.2  425
+19  38.2/ 39.2/ 22.6 Paper, Scissors and Stone        David van Dam 137.3  196
+20  25.9/ 15.3/ 58.8                    ompega       Steven Morrell 136.4  183
+21  30.8/ 25.5/ 43.6      Forked Lightning 2.0       Philip Kendall 136.2    1
+22  36.4/ 38.4/ 25.2                    airBag             Paulsson 134.4  109
+23  37.5/ 42.0/ 20.6                   Twister          Beppe Bezzi 133.0  522
+24  36.1/ 39.5/ 24.4                Scimitar 2              P.Kline 132.8  134
+25  29.1/ 29.4/ 41.5           unrequited love                kafka 128.9    2
+
+Weekly age: 7 ( 31 last week, 84 the week before )
+New warriors: 2 Turnover/age rate 29%
+Average age:   176 ( 191 last week, 184 the week before )
+Average score: 141 ( 137 last week, 141 the week before )
+The top 25 warriors are represented by 13 authors: Kline with 5; Oversby with
+4; Bezzi with 3; Guenzel, JKW, Marsden, and Paulsson with 2.
+
+King Report: Simple v0.4b and Blur 2 were both on top this week.
+Kendall makes an appearance on the '94 Hill and kafka's warrior will soon
+disappear. The only significant loss was the historian. What more can I say?
+This week wasn't very exciting.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+25  27.4/ 30.3/ 42.3           unrequited love                kafka 124.5    1
+16  29.9/ 26.2/ 43.9      Forked Lightning 2.0       Philip Kendall 133.7    1
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  37.6/ 49.8/ 12.5                 test mef2          Beppe Bezzi 125.4   10
+26   1.6/  1.6/  0.8                  Nephrite             John K W   5.6    2
+26   1.8/  2.1/  0.0                  Nephrite             John K W   5.5    2
+26  29.4/ 35.7/ 34.9            the historian        bjoern guenzel 123.1  538
+26  36.1/ 53.8/ 10.1          dodger component          M R Bremer  118.5    2
+26   0.4/  0.5/  3.1           unrequited love                kafka   4.2    2
+26  36.9/ 50.8/ 12.4        pavement lb0.1+400       bjoern guenzel 123.0    5
+
+the historian departs.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+15  38.6/ 38.0/ 23.4                T.N.T. pro    Maurizio Vittuari 139.3  786
+17  30.2/ 22.1/ 47.7                   Rosebud                Beppe 138.3  741
+23  37.5/ 42.0/ 20.6                   Twister          Beppe Bezzi 133.0  522
+18  32.9/ 27.6/ 39.6        Jack in the box II          Beppe Bezzi 138.2  425
+
+No new entries, one loss.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+19  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+20  T.N.T. pro             Maurizio Vittuari  786 *  Bomber
+21  Blue Funk 3            Steven Morrell     766    Stone/ imp
+22  Night Train            Karl Lewin         755    Replicator
+23  Rosebud                Beppe              741 *  Stone/ imp
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+Rosebud moves up a slot.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  59.4/ 23.3/ 17.3                    Yet 4b           Justin Kao 195.6   54
+ 2  51.4/ 26.4/ 22.2                  Ick v1.5           Justin Kao 176.4    3
+ 3  51.2/ 26.6/ 22.2                  Ick v1.5           Justin Kao 175.8    4
+ 4  51.6/ 28.2/ 20.3          Velveeta Shift-F                 shar 175.0   52
+ 5  45.9/ 20.7/ 33.4                  (-:  :-)                 Ross 171.2   77
+ 6  47.3/ 28.6/ 24.1            Saboteur v0.4k                 shar 166.0   85
+ 7  45.4/ 24.9/ 29.7           Versatility 1.5   Ross Morgan-Linial 165.8   44
+ 8  42.4/ 28.0/ 29.6               Inferno 1.0       Philip Kendall 156.7   67
+ 9  31.9/ 14.0/ 54.2            Microsoft v1.0           Justin Kao 149.8   10
+10  25.8/ 14.2/ 60.0    Ties, Ties, Ties! (+2)                 Ross 137.4   79
+11  22.0/ 11.5/ 66.5         Ties and Wasps -s   Ross Morgan-Linial 132.6    1
+12  23.2/ 14.2/ 62.6            Ties and Wasps                 Ross 132.2    2
+13  20.2/ 10.2/ 69.7                 Wasps 1.3                 Ross 130.2   78
+14  26.5/ 28.1/ 45.4             Utility Knife     Robert J. Street 124.9   87
+15  16.8/ 10.7/ 72.5            Nematode v1.4b       Jonathan Stott 122.9   51
+16  16.5/ 10.6/ 72.9            Nematode v1.4e       Jonathan Stott 122.3   18
+17  18.7/ 15.7/ 65.7              more testing            Anonymous 121.7   38
+18  18.1/ 19.9/ 62.0                 Fork 4/13    Christoph C. Birk 116.2   71
+19  15.3/ 38.2/ 46.4              silken stomp             harleyQ2  92.5   27
+20   6.5/ 22.6/ 70.8                Mama's Boy     Robert J. Street  90.4   32
+21  12.3/ 34.5/ 53.3                 Handy Man     Robert J. Street  90.1   45
+22   7.8/ 25.8/ 66.4                silkbombQ2             harleyQ2  89.7   50
+23   5.9/ 28.5/ 65.5                     Snail                Edgar  83.4   16
+24  10.6/ 38.3/ 51.1                        b3             harleyQ2  82.9   19
+25  11.5/ 40.4/ 48.1              silken train             harleyQ2  82.5   20
+
+Top 25 Averages:
+    27.4/ 23.4/ 49.3                                                131.4   41
+
+An average of 49% draws on this Hill indicates there are a lot of papers/imps
+on it which explains why Yet 4b (qscan -> core clear) is doing so well. A one
+shot scanner could also obtain a good ranking.
+______________________________________________________________________________
+The Hint List (001-040)
+
+This list was created so that people could easily find what they wanted (and
+more) without reading every issue of CW. It may be incomplete in parts but
+does contain most hints/warriors/articles.
+
+001.  Replicators (part 1): basic silk
+         [Paperone by Beppe Bezzi]
+
+002.  Improving beginner warriors: code compression
+         [Mutagen by Scott Manley]
+
+003.  Replicators (part 2): timescape silk, optimising constants (cdb)
+         [paper01o by Beppe Bezzi]
+
+004.  Mutagen improved again (improved scanner)
+      Scanners: JMZ, CMP
+         [Iron Gate by Wayne Sheppard]
+         [Agony II by Stefan Strack]
+      Continuously launching imp spirals
+
+005.  PSpace basics, brainwashing
+         [juliet and paper by Myer Bremer/Beppe Bezzi]
+      [Thermite 1.0 by Robert Macrae]
+      [Phq by Maurizio Vittuari]
+
+006.  Bombers
+         [Blue Funk 3 by Steven Morrell]
+         [juliet storm by Myer Bremer]
+      Mutagen improved yet again (pspaced with small bomber)
+      Continuously launching imp spirals
+
+007.  Bombers: bomb types
+         [Ike v.21 by Paul Kilroy]
+      Continuously launching imp spirals
+         [Impfinity v3i by Planar]
+      QScans: where to scan, what order to scan, how to attack, area to
+         attack
+
+008.  Imp steps
+      Vampires
+         [myVamp v3.7 by Magnus Paulsson]
+
+009.  Improving beginner warriors
+         [Provascan by Beppe Bezzi]
+      [La Bomba by Beppe Bezzi]
+      [A5 by John Wilkinson]
+      CDB tutorial (part 1)
+
+010.  Improving beginner warriors: (no) boot, anti-imp clears
+      CDB tutorial (part 2)
+
+011.  Bombing/scanning steps
+      [Impfinity v4g1 by Planar]
+
+012.  Scanning
+         [Taking Names by Paul Kline]
+      [seventyfive by Anders Ivner]
+      [Porch Swing by Randy Graham]
+      CDB tutorial (part 3)
+
+013.  Anti-imp clears
+
+014.  Old warriors vs. current warriors
+      CDB tutorial (part 4)
+
+015.  Self bombing -> clear
+
+016.  Defence: self splitting, adding imps, boot and decoy, active decoys,
+         PSpace, DJN defence.
+
+017.  Spiral clears, 100% C DJN stream
+      CDB tutorial (part 5)
+
+018.  Bomb effectiveness: SPL, SSJ, S..S, SPL -1, SPL/MOV, etc.
+
+019.  Scanners
+      [Memories by Beppe Bezzi]
+
+020.  Handshaking
+
+021.  How to live longer: score distribution, boot, bombs, brainwashing,
+         imp protection, QScans
+         [Jack in the box by Beppe Bezzi]
+
+022.  JMZ scans: A/B/I
+
+023.  Wilkinson's beginner's benchmark (warrior review)
+
+024.  [Thermite II by Robert Macrae]
+
+025.  [Tornado 3.0 by Beppe Bezzi]
+      [Stepping Stone by Kurt Franke]
+
+026.  Switching techniques and brainwash recovery
+      [Grilled Octopus v0.5 by David Boeren]
+
+027.  Multi boot routines
+         [Grilled Octopus v0.7 by David Boeren]
+      Advanced benchmark scores
+
+028.  Bomber killers
+
+029.  Imps (launching)
+      [Scanny Boy by David van Dam]
+
+030.  Imp killing
+      -F numbers
+
+031.  [Rosebud by Beppe Bezzi]
+      [Flurry by Anton Marsden]
+
+032.  [P-clear by Paul Kline]
+      mopt tutorial
+
+033.  Decoy makers
+         [stoninc by Maurizio Vittuari]
+
+034.
+
+035.  A new p-switcher
+      [Twister by Beppe Bezzi]
+
+036.  Mirage/Blur scanner series
+
+037.  QScans: fast response
+      [Q^2 by Anders Ivner]
+      Mirrored imps
+
+038.  Bomb dodgers
+         [Manfred v0.3 by Ian Oversby]
+      [myVamp 5.4 by Magnus Paulsson]
+
+039.  A new p-brain
+      [Jack in the Box II by Beppe Bezzi]
+
+040.  THIS HINT LIST
+      [Probe by Anton Marsden]
+______________________________________________________________________________
+Extra Extra
+Probe
+by Anton Marsden
+
+Probe is a fast response QScan similar to Q^2 followed by the Tornado bomber.
+It took me a while to put the QScan together but then I just grabbed Tornado
+from Twister, made a few modifications, named it, and it was complete.
+
+;redcode-94
+;name Probe
+;author Anton Marsden
+;strategy QScan -> Tornado
+;assert CORESIZE==8000
+;kill Probe
+
+ORG start
+
+QB EQU (start+400)
+QS EQU 200
+QD EQU 100
+COUNT EQU 6
+
+GAP EQU 15
+REP EQU 6
+
+         dat    10*QS, 2*QS ; can get 21 values from this table
+table:   dat     4*QS, 1*QS ; and can also use the initial value
+         dat    23*QS, 3*QS ; of fnd
+qbomb:   jmp    -200,GAP
+qinc:    dat    GAP,-GAP
+
+tab:     add.a  table,table
+slow:    add.ab @tab,fnd
+fast:    add.b  *tab,@slow
+which:   sne.i  datz,@fnd
+         add.ab #QD,fnd
+
+         mov.i  qbomb,@fnd
+fnd:     mov.i  -GAP/2,@QB
+         add.ba fnd,fnd
+         mov.i  qbomb,*fnd
+         add.f  qinc,fnd
+         mov.i  qbomb,@fnd
+         djn.b  -3,#REP
+         jmp    boot,}-300
+
+start:
+         seq.i  QB+QS*0,QB+QS*0+QD
+         jmp    which,}QS*13 ; qinc+GAP
+
+         seq.i  QB+QS*1,QB+QS*1+QD
+         jmp    fast,}QB+QS*1+QD/2
+         seq.i  QB+QS*2,QB+QS*2+QD
+         jmp    fast,{tab
+         seq.i  QB+QS*3,QB+QS*3+QD
+         jmp    fast,}tab
+
+         seq.i  QB+QS*13,QB+QS*13+QD
+         jmp    fast,{fast
+
+         seq.i  QB+QS*4,QB+QS*4+QD
+         jmp    >fast,}QB+QS*4+QD/2
+         seq.i  QB+QS*5,QB+QS*5+QD
+         jmp    slow,}QB+QS*5+QD/2
+         seq.i  QB+QS*6,QB+QS*6+QD
+         jmp    slow,{tab
+         seq.i  QB+QS*7,QB+QS*7+QD
+         jmp    slow,}tab
+
+         seq.i  QB+QS*10,QB+QS*10+QD
+         jmp    >fast,<tab
+         seq.i  QB+QS*11,QB+QS*11+QD
+         jmp    slow,<tab
+         seq.i  QB+QS*12,QB+QS*12+QD
+         djn.f  slow,tab
+
+         seq.i  QB+QS*23,QB+QS*23+QD
+         jmp    >fast,>tab
+         seq.i  QB+QS*24,QB+QS*24+QD
+         jmp    slow,>tab
+
+         seq.i  QB+QS*17,QB+QS*17+QD
+         jmp    slow,{fast
+
+         seq.i  QB+QS*8,QB+QS*8+QD
+         jmp    <fast,}QB+QS*8+QD/2
+         seq.i  QB+QS*9,QB+QS*9+QD
+         jmp    tab,}QB+QS*9+QD/2
+
+         seq.i  QB+QS*15,QB+QS*15+QD
+         jmp    tab,<tab
+         seq.i  QB+QS*16,QB+QS*16+QD
+         jmp    tab,{tab
+         seq.i  QB+QS*20,QB+QS*20+QD
+         djn.f  <fast,tab
+         seq.i  QB+QS*21,QB+QS*21+QD
+         jmp    tab,{fast
+         seq.i  QB+QS*22,QB+QS*22+QD
+         djn.f  tab,tab
+         seq.i  QB+QS*27,QB+QS*27+QD
+         jmp    <fast,>tab
+         seq.i  QB+QS*28,QB+QS*28+QD
+         jmp    tab,>tab
+
+         seq.i  QB+QS*30,QB+QS*30+QD
+         jmp    tab,}tab
+
+; TORNADO BOMBER
+
+step    equ     -45
+away    equ     4000 ; not really
+gate1   equ     (gate-4)
+
+boot
+   mov     gate,   }pt2
+   mov     gate,   *pt2
+pt1 mov    last,   <pt2
+   spl     1,      1
+   mov     {pt1,   <pt2
+   mov     {pt1,   <pt2
+   mov     {pt1,   <pt2
+   mov     {pt1,   <pt2
+   mov     {pt1,   <pt2
+
+go      djn.b   @pt2,   #2      ;start Tornado
+   mov     gate,   <pt2
+pt2     div.f   #gate+away-5,#last+1+away
+   dat     -25,    last-gate1+5
+warr
+gate
+   dat     -25,    last-gate1+15
+bombs   spl     #(step+1),  -step           ;hit spl
+start1  sub     incr,   @b1
+stone   mov     (0*step)+jump,*(1*step)+jump
+b2      mov     bombs,  @stone
+b1      mov     bombm,  *stone
+jump    jmz.b   start1, #0         ;hit by spl
+clr     mov     @djmp,  >gate1
+   mov     @djmp,  >gate1
+djmp    djn.b   clr,    {bombs
+incr    dat     >-3*step,>-3*step
+last
+
+bombm   dat     <1,     {1
+      dat 0,0
+datz: dat 0,0
+FOR 5
+      dat 0,0
+ROF
+END
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>
