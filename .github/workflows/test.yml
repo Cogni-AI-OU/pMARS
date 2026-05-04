@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      upload-artifact: true
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pmars-Server
+          path: bin/
+      - name: Run test
+        run: |
+          chmod +x bin/pmars
+          ./bin/pmars -A warriors/validate.red
