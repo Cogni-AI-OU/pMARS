@@ -1,0 +1,83 @@
+I really like the idea of the weekly lightning-fast corewars
+tournaments on IRC. Not much chance to use a GA in a half hour window
+though.  Or could you.
+Last week's rules were to submit warriors that only used values of 
+"-1", "0", and "+1". That's certainly GA-friendly. Seized by the
+spirit of scientific inquiry, I did some tests and yes, when I ran my
+evolver program overnight, it found plenty of warriors that would have
+bested those actually submitted. (Naturally, I didn't use the warriors
+submitted to the contest to train the evolved ones.) But could it have
+been done in 30 minutes?
+After tireless investigation (before I got tired of it, I quit) I
+believe I have the answer. If I'd started with a clean version of the
+evolver program, the value restriction could have been accomplished by
+the addition of one line of code. Drawing on my many years of proposal
+writing, I'll budget one minute for software development and testing.
+Similarly, I'll budget zero time for delivery, leaving 29 minutes to
+let the GA run.
+
+;redcode verbose
+;assert 1
+;name Convolution Chromatograph
+;author Dave Hillis
+;strategy -   Created using RedRace.c.
+;strategy -   An evolving population playing KOTH.
+;strategy -   For a contest where only "-1", "0", and "+1" are allowed
+mod.ba {    -1, #    -1
+sub.i  $     1, $     0
+mod.i  #     1, *     0
+nop.i  }     0, #     0
+mod.b  #    -1, }    -1
+spl.i  @    -1, #     0
+slt.i  @    -1, #     0
+spl.i  }     0, {    -1
+jmp.f  }     0, #     0
+jmp.i  }     0, $     0
+sne.ab >     1, $     1
+add.ab #    -1, {     1
+sub.i  <     0, #    -1
+spl.f  #     1, >    -1
+mov.ab #    -1, #    -1
+mov.i  }    -1, }     0
+end   4
+
+Sadly, five independent runs with different parameters failed to
+produce competitive results. I needed an order of magnitude more
+processing power or, better yet, a contest on a tiny, 800-line core.
+Much later, I had another idea: start evolving on a tiny core, then
+switch to a standard size right at the end. I've used this technique
+before. The 6th run produced the warrior above, which would have won
+comfortably.
+
+benchmark for rdrc: Convolution Chromatograph. 200 battles
+1: ;Program "2 Craze 2" (length 83) by "Christian Schmidt"
+ 390 210
+2: ;Program "Bad Stone" (length 6) by "Paul Khuong"
+ 491 80
+3: ;Program "BinFool" (length 20) by "Philip Thorne"
+ 436 82
+4: ;Program "BinFool #3" (length 21) by "Philip Thorne"
+ 597 3
+5: ;Program "Desperate" (length 3) by "Miz"
+ 348 126
+6: ;Program "ere we go" (length 4) by "Miz"
+ 345 219
+7: ;Program "noname" (length 4) by "Lukasz Adamowski"
+ 593 5
+8: ;Program "2365*2^2936+1 is prime!" (length 7) by "John Metcalf"
+ 193 235
+9: ;Program "Repli" (length 4) by "Christian Schmidt"
+ 506 50
+10: ;Program "Safe Clear" (length 2) by "Lukasz Adamowski"
+ 475 82
+11: ;Program "Semi-Skilled Redcoder" (length 8) by "John Metcalf"
+ 186 414
+12: ;Program "tmp" (length 9) by "Joonas"
+ 591 6
+score (scaled to 100 battles) = 214.625000
+
+
+Conclusion: it's just barely possible but you'd have to be lucky and
+think reeeeally fast. In my case, the GA wouldn't be the weakest link.
+
+Dave Hillis
