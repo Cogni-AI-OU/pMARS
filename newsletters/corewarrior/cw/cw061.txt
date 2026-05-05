@@ -1,0 +1,437 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 61                                                      4 August, 1997
+______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar.  Emphasis is
+placed on the most active hills--currently the '94 draft hill and the beginner
+hill.  Coverage will follow where ever the action is.  If you have no clue what
+I'm talking about then check out these five-star internet locals for more
+information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note Stormking's new address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth/       ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.nc5.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+
+Welcome to my first issue of Core Warrior, following Christian's two weeks
+back. I hope at least someone finds it vaguely useful :-)
+
+The Hills are still quite, with very little action. Is everyone just off on
+their summer/winter break, or have we exhasted the possibilities of the '94
+Draft? It was a year ago last Tuesday that Anton Marsden published Probe,
+with its Q^2 scan, which is still seen on many of the warriors on the Hill. Who
+will come with something similar this year?
+
+STOP PRESS -- First and exclusive: the results of the second round of Anton's
+Core War Tournament -- see below -- STOP PRESS ENDS
+
+Phil Kendall
+______________________________________________________________________________
+
+Anton's Tournament Round 2 Results
+
+The aim of round 2 was to write a warrior designed to beat Electric Head,
+currently on top of the '94 Hill. (See _Core Warrior 59_ for the source)
+
+Rank    Name                    Author             Score   Points
+_________________________________________________________________
+  1     Shelter 1f3             Ilmari Karonen      2986        7
+  2     Head Basher             Brian Haskin        2940        6
+  3     PBeat v1.0              Philipp Offermann   2903        5
+  4     Short Circuit           Philip Kendall      2875        4
+  5     P^(1/2)                 Christian Schmidt   2389        3
+  6     Nautilus                Mole IX             2098        2
+  7     Anti Head               Ian Oversby         1533        1
+
+Congratulations to Ilmari Karonen for dropping only 14 points over the 1000
+round fight.
+_______________________________________________________________________
+
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  43.5/ 38.3/ 18.3             Electric Head        Anton Marsden 148.7   24
+ 2  45.6/ 45.6/  8.9            He Scans Again              P.Kline 145.6   12
+ 3  35.1/ 25.1/ 39.9                      Newt          Ian Oversby 145.1   15
+ 4  30.5/ 19.0/ 50.5      Return Of The Jedimp             John K W 142.0  269
+ 5  33.8/ 26.8/ 39.4                    RetroQ              P.Kline 140.9   69
+ 6  35.2/ 29.6/ 35.2              Head or Tail    Christian Schmidt 140.8   57
+ 7  35.5/ 30.8/ 33.7            Nine Seven Six           M R Bremer 140.2  133
+ 8  41.6/ 43.3/ 15.1                       C^2    Christian Schmidt 139.9   19
+ 9  37.4/ 36.2/ 26.4                PAN-TAU-RA    Christian Schmidt 138.6    4
+10  34.1/ 30.9/ 35.0               Ultraviolet         Ken Espiritu 137.3    6
+11  40.2/ 43.8/ 16.0                     Blain                Nimon 136.6   35
+12  31.2/ 26.6/ 42.2           unrequited love                kafka 135.8   16
+13  36.7/ 38.0/ 25.3              First Strike                Nimon 135.5   30
+14  31.8/ 28.3/ 39.9                Ultra-RQ^2         Ken Espiritu 135.3    7
+15  38.0/ 41.3/ 20.7                NCC-1701-A       Philip Kendall 134.8   72
+16  37.7/ 41.0/ 21.3              Guessed v0.1                  Ian 134.4    9
+17  26.5/ 18.9/ 54.6               Impish v0.2          Ian Oversby 134.1  308
+18  37.2/ 40.7/ 22.1       Damage Incorporated        Anton Marsden 133.6  310
+19  40.1/ 47.0/ 12.9                 Overdrive    Christian Schmidt 133.1    1
+20  30.9/ 30.1/ 39.0                    Gigolo   Core Warrior staff 131.6  323
+21  36.8/ 42.0/ 21.2              Solomon v0.8          Ian Oversby 131.5  115
+22  36.4/ 42.1/ 21.5                      Guru          Robert Hale 130.7    2
+23  31.3/ 32.3/ 36.5                Terkonit 3    Christian Schmidt 130.2   12
+24  37.4/ 45.7/ 16.9               Fawkes v0.2          Ian Oversby 129.2    7
+25  37.6/ 46.5/ 15.9                 myVamp5.4             Paulsson 128.7   19
+
+Age since last issue: 2 ( 2 last issue, 13 the issue before )
+New warriors: 2  Turnover/age rate 100%
+Average age: 74 ( 74 last issue, 72 the issue before )
+Average score: 142 ( 139 last issue, 142 the issue before )
+The top 25 warriors are represented by 13 independent authors: Schmidt with 6;
+Oversby with 5; Espiritu, Kline, Marsden and Nimon with 2. All others with one
+warrior each.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+19  36.9/ 41.9/ 21.2                      Guru          Robert Hale 131.9    1
+19  40.1/ 47.0/ 12.9                 Overdrive    Christian Schmidt 133.1    1
+
+We welcome Robert Hale to the '94 Hill.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  11.4/ 45.4/ 43.1               Pure Genius           Compudemon  77.4    0
+26  40.3/ 52.5/  7.1                  Obsidian                Nimon 128.2   29
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+
+20  30.9/ 30.1/ 39.0                    Gigolo   Core Warrior staff 131.6  323
+18  37.2/ 40.7/ 22.1       Damage Incorporated        Anton Marsden 133.6  310
+17  26.5/ 18.9/ 54.6               Impish v0.2          Ian Oversby 134.1  308
+ 4  30.5/ 19.0/ 50.5      Return Of The Jedimp             John K W 142.0  269
+
+The top three here have all looked in trouble in recent weeks, never leaving
+the lower reaches of the Hill. Jedimp, on the other hand, goes from strength
+to strength.
+______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  unrequited love        kafka              346    Q^2 -> Paper
+ 4  Gigolo                 Core Warrior staff 323 *  Q^2 -> Stone/imp
+ 5  Damage Incorporated    Anton Marsden      310 *  Q^2 -> Bomber
+ 6  Impish v0.2            Ian Oversby        308 *  Stone/imp
+ 7  Falcon v0.3            Ian Oversby        275    P-warrior
+ 8  Return Of The Jedimp   John K W           269 *  Q^2 -> Stone/imp
+ 9  Rosebud                Beppe              218    Stone/imp
+10  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+11  Instant Wolf 3.4       Edgar              205    P-warrior
+12  Goldfinch              P.Kline            201    P-warrior
+13  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+14  Trident^2              John K W           195    Q^2 -> Stone/imp
+15  ompega                 Steven Morrell     189    Stone/imp
+16  Frogz                  Franz              172    Q^2 -> Paper
+17  The Machine            Anton Marsden      164    Scanner
+18  Memories               Beppe              152    Scanner
+19  Nine Seven Six         M R Bremer         133 *  Q^2 -> Stone/imp
+20  Tiberius 3.1           Franz              130    Q^2 -> Paper
+21  Solomon v0.8           Ian Oversby        115 *  Stone and scanner
+22  CC Paper 3.3           Franz              107    Q^2 -> Paper
+23  mrb-test               m r bremer         106    ?
+24  T.N.T. pro             Maurizio Vittuari  105    Bomber
+25  Jack in the box II     Beppe Bezzi        100    P-warrior
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sat Aug 2 20:56:55 PDT 1997
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  51.6/ 37.1/ 11.4             Pentagram 2.a            J.A.Denny 166.1  94
+ 2  47.2/ 33.9/ 18.9                  Hexagram            J.A.Denny 160.5  92
+ 3  47.7/ 38.7/ 13.6              Guessed v0.1                  Ian 156.8  32
+ 4  45.6/ 37.0/ 17.5                 guru v0.1          Robert Hale 154.1   8
+ 5  39.9/ 25.7/ 34.5                  Sections           Zul Nadzri 154.1  52
+ 6  45.8/ 40.9/ 13.3                  Nautilus              Mole IX 150.6  11
+ 7  44.4/ 41.9/ 13.7             qDeath v .169         Ryan Coleman 146.8  39
+ 8  41.5/ 38.4/ 20.1            qbomber v .469         Ryan Coleman 144.5  43
+ 9  32.4/ 20.7/ 46.9                  Dust 7.0           Justin Kao 144.1  72
+10  34.1/ 24.4/ 41.6               Flimsy v0.6          Ian Oversby 143.8  93
+11  41.8/ 41.0/ 17.3                 guru v0.3          Robert Hale 142.6   2
+12  32.2/ 22.4/ 45.4           A Blaise Affair     Robert J. Street 142.1  12
+13  43.5/ 45.6/ 10.9             Short Sword 4            JS Pulido 141.4  74
+14  31.2/ 21.2/ 47.5            Scanitator 3.0     Christian Schmid 141.3  99
+15  38.8/ 37.3/ 23.9       Pain and Panic v0.1          Robert Hale 140.3   1
+16  31.0/ 23.5/ 45.5 Six-Finger Discount From          Ryan Coleman 138.5  46
+17  34.1/ 33.5/ 32.4    If I only had a brain?         Ryan Coleman 134.6  44
+18  39.4/ 47.4/ 13.2             Dwa Michaly b    Waldemar Bartolik 131.4  80
+19  26.0/ 21.3/ 52.7 4-Finger Discount From th         Ryan Coleman 130.7  47
+20  23.6/ 19.4/ 56.9                   Quantum    Christian Schmidt 127.9  96
+21  28.0/ 31.6/ 40.4                    Zorm-B            Anonymous 124.4  77
+22  23.7/ 23.3/ 53.0 It's a Harmless Addition           Robert Hale 124.1  30
+23  25.3/ 28.7/ 46.0 It's a Harmless Addiction          Robert Hale 121.9  33
+24  24.6/ 29.3/ 46.2          Kohonenian Dream     Robert J. Street 119.9  66
+25   1.1/ 54.6/ 44.4                  PruebaX5 Eleazar Martinez Can  47.5   3
+
+    35.0/ 32.7/ 32.3           Top 25 Averages                      137.2  49
+______________________________________________________________________________
+The Hint
+A new way of avoiding self-bombing
+
+[Note: the warriors mentioned in this article are available from Planar's Web
+page: http://pauillac.inria.fr/~doligez/corewar/]
+
+When writing a stone, if all else is equal (which it never is :-) ), a stone
+which bombs with a smaller mod will beat the one which bombs with a larger
+mod. However, if a stone has a small mod, then it will very often drop a bomb
+on itself. Sometimes this can be used to mutate the warrior (for example, see
+Beppe Bezzi's _Tornado 3.0_, which uses a spl bomb to change from a bomber to
+a coreclear), but often it is a thing to be avoided.
+
+This article gives a (hopefully) new way which means that the mod of a (self-
+splitting) bomber can be reduced. The actual method is rather complicated, so
+instead of doing a general analysis, I'll do a specific example instead:
+Consider this stone, taken from John K Wilkinson's _evoltmp_:
+
+(The actual stone is between the lines labelled p and l, with the d-clear bomb
+at jclr; the rest of the warrior is a boot routine and a dat 1,1 decoy)
+
+;redcode-94
+;name evoltmp's stone
+;author John K W & Philip Kendall
+;assert CORESIZE == 8000
+
+org EvolCap
+
+BOOT_DIST equ (2626+24*66)
+S       equ 24
+
+jclr:   dat     >2667,     S+10
+
+evol
+EvolCap mov.i   jclr,   evol+BOOT_DIST+S+4
+
+for 6
+        mov.i   {pptr,  <pptr
+rof
+        jmp     @pptr
+
+        for     84
+        dat.f   1,1
+        rof
+
+p       spl     #0,     {-S+1
+a       add.f   3,      1
+m       mov     }S-2,   -S+1
+d       djn.f   -2,     <-1160
+c       mov     S,      >-S
+l       djn.f   -1,     >-S-1
+
+pptr:   nop     0,      evol+BOOT_DIST+6
+
+        end
+
+(Note that this method will work only for self-splitting stones which have the
+add line _before_ one of the bombing lines)
+
+This stone is a stone -> d-clear, which mutates when the mov line looks like
+
+        mov     }-2,1
+
+which moves the spl at p on top of the first djn.f. Currently, it uses a mod-8
+step for bombing, with a-field increments offset from this by 3. If we trace
+the execution of the warrior once it is booted, the instructions execute in
+this order:
+
+[p]
+[a p]                   (*)
+[m a p]
+[d m a p]
+[a d m a p]             (*)
+[m a d m a p]
+[d m a d m a p]
+[a d m a d m a p]       (*)
+etc...
+
+If we look at the lines marked with * (those where the number of processes is
+congruent to 2 mod 3), we notice that there are more adds (a) executed than
+movs (m). Therefore there must be some of the mod-8 locations which we thought
+were going to be bombed which will not be, at least before the mutation occurs
+(a small amount of bombing still occurs after this due to the spl instruction
+at p still feeding processes into the loop). In fact, the locations which are
+missed are those which occur after (3/2)*n*(n+1) additions, where n=0,1,2,...
+
+This fact enables us to reduce the mod to 4 and, so long as we syncronise our
+stone correctly, still avoid self-bombing. As an example, let us consider a
+step size, S, of 28 (it is important to keep the step size small with this
+warrior as the region from (c-S) to (c+S) is not cleared). The mov instruction
+we are trying to miss is mov }2,-3, as this would increment our step size.
+
+Each time a is executed, 28 is added to the initial value of -2 of the a-field
+of m, so we require 28k mod 8000=4 (k=0,1,2,...) to get to mov.i }2,-3. This
+has a solution of k=1143. There is no value of n such that (3/2)*n*(n+1)=1143,
+but if we take n=27, this gives 1134. Then, if we start the warrior with m as
+
+        mov     }(-2+(9*S)),(1-(9*S))
+
+after 1134 additions (the point at which m is skipped), m will be
+
+        mov     }(-2+(1143*S)),(1-(1143*S))
+
+which is equivalent to
+
+        mov     }2,-3
+
+the instruction we are trying to miss. This only leaves one very small
+problem: before the mutation to d-clear occurs, at one stage m looks like
+
+        mov     }30,-31
+
+which increments the a-field of the bomb, so we must change the jclr
+instruction to
+
+jclr:   dat     >2666,     S+10
+
+(A better bomb to use would be dat >5335,S+10, which would have to start off
+as dat >5334,S+10 - see _Core Warrior 52_ for details)
+
+So, here's the complete source to the mod 4 version of evoltmp's stone:
+
+;redcode-94
+;name evoltmp's stone
+;author John K W & Philip Kendall
+;assert CORESIZE == 8000
+
+;see Core Warrior 61 for details of this warrior
+
+org EvolCap
+
+BOOT_DIST equ (2626+24*66)
+S       equ 28
+magic   equ     9               ; to avoid self-bombing
+
+jclr:   dat     >2666,     S+10 ; changed to >2667 by the stone
+
+evol
+EvolCap mov.i   jclr,   evol+BOOT_DIST+S+4
+
+for 6
+        mov.i   {pptr,  <pptr
+rof
+        jmp     @pptr
+
+        for     84
+        dat.f   1,1
+        rof
+
+        spl     #0,     {-S+1
+        add.f   3,      1
+        mov     }(-2+(magic*S)),(1-(magic*S))
+        djn.f   -2,     <-1160
+        mov     S,      >-S
+        djn.f   -1,     >-S-1
+
+pptr:   nop     0,      evol+BOOT_DIST+6
+
+        end
+
+At present, if this warrior is run off against some other warriors, its
+performance is actually worse than that of the mod-8 version; for example,
+versus Planar's _Impfinity v4g1_, the mod-8 version scores 61/86/53
+(236 points), whilst the mod-4 version scores 37/99/64 (175 points), and
+against Paul Kline's _Torch t18_, mod-8 scores 95/63/42 (327), but mod-4
+scores only 77/68/55 (286). One of the principal reasons for this change in
+performance is that the mod-4 version is in its bombing mode for
+(approximately) twice as long as the mod-8 version; this means that a)
+Impfinity has twice as long to build up processes in its imp spirals and b)
+the d-clear is running for less time, both of which make Impfinity harder to
+kill. This is shown by the fact that the change versus Impfinity is mostly
+from wins to ties. Similar considerations apply versus Torch, and many other
+warriors.
+
+The above is only an example of a technique, rather than an attempt to create
+a warrior which will do well on the Hills, so the fact that performance is
+actually degraded by this is not of prime importance; however, it does show
+that reducing the mod of a stone is not always a good point.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it>,  Anton Marsden <amarsden@mcs.vuw.ac.nz>,
+Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de> and Philip Kendall
+<pak21@cam.ac.uk>

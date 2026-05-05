@@ -36,7 +36,7 @@ tSelf     slt.b  @tScan   ,#tEnd-tPtr  ; self-check
 tSpl      spl    #1,{1143*2+1
           dat    0,0
           dat    0,0
-tPtr	dat 0,0
+tEnd      dat 0,0
       for 61
           dat.f 0,0
       rof
