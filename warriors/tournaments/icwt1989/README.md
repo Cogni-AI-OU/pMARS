@@ -1,6 +1,6 @@
 ## Tournament: Fourth International Core Wars Society Tournament (Feb 1990)
 
-The Fourth International Core Wars Society Tournament was held in February 1990 to coincide with the Second Artificial Life Conference. 19 warriors competed for a place in the finals.
+The Fourth International Core Wars Society Tournament was held in February 1990 to coincide with the Second Artificial Life Conference. The tournament was conducted under the **ICWS'88** standard. 19 warriors competed for a place in the finals.
 
 ### Results
 
