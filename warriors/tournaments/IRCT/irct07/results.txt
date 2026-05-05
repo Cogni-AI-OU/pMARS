@@ -1,0 +1,15 @@
+ #    %w   %l   %t  Name                      Author                Score     %
+ 1  68.5 15.1 16.4  the paper without a name  John Metcalf         222.00 100.0
+ 2  60.1 37.0  2.9  Cut, cut                  Jakub Kozisek        183.15  82.5
+ 3  60.3 39.3  0.4  R1                        Roy van Rijn         181.31  81.7
+ 4  51.5 47.6  0.8  Clear?                    Lukasz Adamowski     155.46  70.0
+ 5  47.3 39.3 13.4  Clearmore                 Lukasz Adamowski     155.31  70.0
+ 6  49.3 50.6  0.1  Irc7_Alpha                Miz                  148.00  66.7
+ 7  48.8 50.7  0.5  R2                        Roy van Rijn         146.85  66.1
+ 8  39.7 38.2 22.2  Irc7_Beta                 Miz                  141.23  63.6
+ 9  40.6 49.3 10.1  dclear                    Will 'Varfar'        131.92  59.4
+10  42.6 57.2  0.2  Mr. Proper                Jakub Kozisek        128.08  57.7
+11  34.5 45.3 20.2  Quick Coding!             John Metcalf         123.77  55.8
+12  39.8 58.4  1.8  inSaNe                    Christian Schmidt    121.31  54.6
+13  36.5 63.1  0.5  cRaZy                     Christian Schmidt    109.85  49.5
+14  35.6 64.2  0.2  foo                       Joonas               107.00  48.2
