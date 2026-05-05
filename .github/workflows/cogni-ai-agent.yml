@@ -63,7 +63,7 @@ on:
 
 jobs:
   cogni-ai-agent:
-    name: Cogni AI Agent Local
+    name: Cogni AI Agent
     runs-on: ubuntu-latest
     if: |
       github.event_name != 'issues' ||
