@@ -1,6 +1,11 @@
 ## Tournament: First German Branch Section Core War Tournament (Dec 1989)
 
-The **First German Branch Section Core War Tournament** was held on 10th December 1989 in Landau in der Pfalz, Germany. 12 warriors battled on an ACER 910-2, with top three warriors advancing to the Fourth International Core Wars Society (ICWS) Tournament.
+The **First German Branch Section Core War Tournament** was held on 10th December 1989 in Landau in der Pfalz, Germany. 12 warriors battled on an ACER 910-2, with the top three warriors advancing to the Fourth International Core Wars Society (ICWS) Tournament.
+
+### Rules and Parameters
+- **Standard**: [ICWS'86](https://corewar.co.uk/standards/icws86.txt)
+- **Core Size**: 8192 cells
+- **Maximum Processes**: 64
 
 ### Final Standings
 1st place: **Quarter** by Stefan Hänßgen
