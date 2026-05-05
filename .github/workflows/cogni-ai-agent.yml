@@ -143,7 +143,7 @@ jobs:
             }}
 
   summary:
-    name: Generate Summary
+    name: Summary
     needs: cogni-ai-agent
     if: always()
     runs-on: ubuntu-latest
