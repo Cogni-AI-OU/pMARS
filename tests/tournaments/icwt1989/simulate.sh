@@ -49,8 +49,8 @@ for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
     for ((j=i+1; j<${#ALL_WARRIORS[@]}; j++)); do
         w1=${ALL_WARRIORS[$i]}
         w2=${ALL_WARRIORS[$j]}
-        # Run pmars with ICWS'88 rules (-8)
-        output=$($PMARS -s 8000 -c 80000 -p 8000 -r 10 -l 1000 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
+        # Run pmars with deterministic results (-f) and fixed instruction limit
+        output=$($PMARS -f -s 8000 -c 80000 -p 8000 -r 10 -l 1000 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
         
         results_line=$(echo "$output" | grep "Results:")
         echo "$w1 $w2 $results_line" >> "$results_file"
