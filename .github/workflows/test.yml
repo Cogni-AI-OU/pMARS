@@ -28,7 +28,6 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: "**/*.red"
-          diff_filter: A
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -65,6 +64,11 @@ jobs:
               [ ! -z "$MP" ] && MAXPROCESSES=$MP
               MD=$(grep -i ";assert" "$file" | grep -oiP "MINDISTANCE\s*==\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$MD" ] && MINDISTANCE=$MD
+              
+              # Ensure MINDISTANCE is at least MAXLENGTH
+              if [ $MINDISTANCE -lt $MAXLENGTH ]; then
+                MINDISTANCE=$MAXLENGTH
+              fi
 
               echo "Settings: -s $CORESIZE -l $MAXLENGTH -c $MAXCYCLES -p $MAXPROCESSES -d $MINDISTANCE"
               ./bin/pmars -s $CORESIZE -l $MAXLENGTH -c $MAXCYCLES -p $MAXPROCESSES -d $MINDISTANCE -A "$file"
