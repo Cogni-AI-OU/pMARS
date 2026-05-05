@@ -4,6 +4,16 @@ In September 1986, the International Core Wars Society held their first Core War
 
 Chip Wendell's self-replicating program [Mice](mice.red) claimed first place, winning him a trophy incorporating the core-memory board from a CDC 6600 computer.
 
+### Testing & Standards
+
+The tournament was conducted using the **ICWS'86** standard, the first official standard published by the International Core Wars Society.
+
+- **Standard:** ICWS'86 (May 1986)
+- **Core Size:** 8,192 cells
+- **Max Processes:** 64
+- **Cycle Limit:** 100,000 cycles
+- **Hardware:** AT&T 6300 personal computers
+
 ### Results
 
 | Rank | Name | Author |
