@@ -2,18 +2,21 @@ import os
 import subprocess
 import glob
 
-warriors = glob.glob('*.red')
+warrior_dir = '../../../warriors/tournaments/icwt1989'
+warriors = [os.path.basename(f) for f in glob.glob(os.path.join(warrior_dir, '*.red'))]
 if 'test1.red' in warriors:
     warriors.remove('test1.red')
 
 scores = {w: 0 for w in warriors}
 
-print("Running round-robin...")
+print(f"Running round-robin with {len(warriors)} warriors...")
 
 for i in range(len(warriors)):
     for j in range(i + 1, len(warriors)):
-        w1 = warriors[i]
-        w2 = warriors[j]
+        w1_name = warriors[i]
+        w2_name = warriors[j]
+        w1 = os.path.join(warrior_dir, w1_name)
+        w2 = os.path.join(warrior_dir, w2_name)
         # Run pmars
         cmd = ['../../../src/pmars', '-8', '-s', '8192', '-c', '100000', '-l', '1000', '-r', '100', '-b', w1, w2]
         res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
@@ -25,8 +28,8 @@ for i in range(len(warriors)):
                 w1_wins = int(parts[1])
                 w2_wins = int(parts[2])
                 ties = int(parts[3])
-                scores[w1] += w1_wins * 3 + ties
-                scores[w2] += w2_wins * 3 + ties
+                scores[w1_name] += w1_wins * 3 + ties
+                scores[w2_name] += w2_wins * 3 + ties
 
 print("Final Scores:")
 sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)

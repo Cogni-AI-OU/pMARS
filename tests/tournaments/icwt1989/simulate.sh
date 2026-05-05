@@ -27,17 +27,7 @@ if [ ! -f "$PMARS" ]; then
 fi
 
 # List of available warriors for 1989
-ALL_WARRIORS=(
-    "hypray.red"
-    "wang1.red"
-    "powerbomb.red"
-    "quarter.red"
-    "randomfire.red"
-    "sad.red"
-    "kili.red"
-    "umaccp.red"
-    "vamp.red"
-)
+ALL_WARRIORS=($(ls "$WARRIORS_DIR"/*.red | xargs -n1 basename))
 
 echo "Simulating ICWT 1989 Tournament..."
 echo "Settings: 8000 core, 80000 cycles, 8000 max processes, 10 rounds"
