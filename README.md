@@ -98,6 +98,11 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [TinyWarrior](http://corewar.co.uk/tw/tw01.txt) - Newsletter focused on tiny hills.
   - [Steve's Guide for Beginners](newsletters/sgb/) - Gentle introduction to Core War and Redcode.
   - [Push Off](newsletters/pushoff/) - Paul Kline's midweek review of Core War (1993-1994).
+  - [CoreWarrior](newsletters/corewarrior/) - The longest running Core War newsletter.
+  - [nanoWarrior](newsletters/nanowarrior/) - Newsletter reporting the latest activity on the nano hill.
+  - [Redcode Talk](newsletters/redtalk/) - Newsletter promoting the game of Core War by Christian Schmidt.
+  - [CoreOps](newsletters/coreops/) - Newsletter by inversed focusing on single topics.
+  - [The '94 Warrior](newsletters/94war/) - Brant D. Thomsen's newsletter from 1994.
 - **Other Simulators & Tools:**
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
