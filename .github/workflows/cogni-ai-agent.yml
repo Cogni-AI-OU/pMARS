@@ -64,6 +64,7 @@ on:
 jobs:
   cogni-ai-agent:
     name: Cogni AI Agent
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     if: |
       github.event_name != 'issues' ||
