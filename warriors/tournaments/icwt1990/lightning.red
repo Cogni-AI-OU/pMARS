@@ -1,3 +1,4 @@
+; Fixed ICWS'88 syntax compatibility (commas, DAT modes, and B-operands) for pMARS strict mode.
 ;
 ;    Warrior: Lightning
 ;  File name: lightnin.red
