@@ -44,7 +44,8 @@ for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
         # -c 100000: cycles
         # -r 2: rounds
         # -b: brief output
-        output=$($PMARS -8 -s 8192 -p 64 -l 64 -c 100000 -r 2 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
+        # -f: fixed (deterministic) seed
+        output=$($PMARS -8 -f -s 8192 -p 64 -l 64 -c 100000 -r 2 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
         results_line=$(echo "$output" | grep "Results:")
         if [ -z "$results_line" ]; then
             echo "Error running $w1 vs $w2. Output:"
