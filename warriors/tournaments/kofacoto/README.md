@@ -181,7 +181,7 @@ imp2    mov.i   #d2,    *0
 ```
 
 ### Results
-The round saw 21 entries. Janeczek won with an outstanding warrior scoring over 95% wins.
+The round saw 21 entries. Michal Janeczek won with an outstanding warrior scoring over 95% wins! The top 4 entries were in a statistical dead heat, but there was a wide diversity of scores and strategies among the field.
 
 | Name | Wins | Losses | Ties | Score | Normalized Score |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -207,16 +207,14 @@ The round saw 21 entries. Janeczek won with an outstanding warrior scoring over 
 | Adamowski | 6 | 1544 | 450 | 468 | 81 |
 | Ankerl | 28 | 1882 | 90 | 174 | 30 |
 
-*   [Warriors Round 1](warriors/round1)
+*   [Warriors Round 1](round1/)
 
 ### Comments
 The top warriors from Round 1 utilized precision scanning techniques to exploit the known white warrior.
 
 **Robert Macrae's Analysis:**
-- Precision scan is the best way to handle any long white warrior.
-- White Quickscans are almost ineffective.
-- Decoy generators are great because the decoy is ideally placed.
-- Cleanup is easy once all the components have been found.
+
+A precision scan finds the long QS code, then scans for the beginning (or end) of it so that the black warrior knows *exactly* where to find all the components of the white. This makes it easy to boot a cleanup warrior somewhere safe and pick them off at leisure.
 
 *Detailed comments:*
 
@@ -233,6 +231,12 @@ The top warriors from Round 1 utilized precision scanning techniques to exploit 
 **Jedi Hunter** uses a stepped scanner and follows with a scan for the end of the QS. Lacking a decoy makes it vulnerable to the QS and DAT bombs.
 
 **Hyperclear** achieved excellent results for a general-purpose warrior, though precision scans significantly outperformed it.
+
+**Conclusions:**
+- Precision scan is the best way to handle any long white warrior.
+- White Quickscans are almost ineffective.
+- Decoy generators are great because the decoy is always ideally placed.
+- Cleanup is easy once all the components have been found.
 
 ---
 

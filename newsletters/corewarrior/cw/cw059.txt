@@ -1,0 +1,461 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 59                                                      29 June, 1997
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.ncs.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+There was a long delay between this issue and issue 58. However, there will
+probably be more frequent issues soon - we are taking on new staff. If you're
+interested in being an editor, let me know soon.
+
+I'm starting a tournament in a few days. Read the newsgroup for details.
+
+--Anton Marsden
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  46.2/ 36.1/ 17.7             Electric Head        Anton Marsden 156.3   20
+ 2  47.8/ 43.4/  8.8            He Scans Again              P.Kline 152.2    8
+ 3  36.7/ 23.8/ 39.5                      Newt          Ian Oversby 149.6   11
+ 4  32.4/ 17.5/ 50.1      Return Of The Jedimp             John K W 147.3  265
+ 5  37.4/ 28.0/ 34.6              Head or Tail    Christian Schmidt 146.8   53
+ 6  35.9/ 26.0/ 38.1                    RetroQ              P.Kline 145.8   65
+ 7  43.8/ 42.2/ 14.0                       C^2    Christian Schmidt 145.4   15
+ 8  37.3/ 29.8/ 32.9            Nine Seven Six           M R Bremer 144.9  129
+ 9  36.5/ 29.6/ 34.0               Ultraviolet         Ken Espiritu 143.3    2
+10  39.2/ 35.3/ 25.5                PAN-TAU-RA    Christian Schmidt 143.2    0
+11  39.3/ 36.2/ 24.5              First Strike                Nimon 142.5   26
+12  40.4/ 38.9/ 20.7                NCC-1701-A       Philip Kendall 142.0   68
+13  33.2/ 24.5/ 42.2           unrequited love                kafka 142.0   12
+14  42.1/ 42.3/ 15.6                     Blain                Nimon 141.9   31
+15  39.7/ 38.7/ 21.6              Guessed v0.1                  Ian 140.7    5
+16  33.8/ 28.1/ 38.1                Ultra-RQ^2         Ken Espiritu 139.5    3
+17  39.1/ 39.2/ 21.7       Damage Incorporated        Anton Marsden 139.0  306
+18  28.2/ 17.7/ 54.1               Impish v0.2          Ian Oversby 138.8  304
+19  39.0/ 39.9/ 21.1              Solomon v0.8          Ian Oversby 138.0  111
+20  33.3/ 28.8/ 37.8                    Gigolo   Core Warrior staff 137.9  319
+21  43.3/ 49.7/  7.0                  Obsidian                Nimon 136.8   25
+22  39.9/ 43.0/ 17.1               Fawkes v0.2          Ian Oversby 136.7    3
+23  33.7/ 30.8/ 35.6                Terkonit 3    Christian Schmidt 136.5    8
+24  39.9/ 44.1/ 16.0                 myVamp5.4             Paulsson 135.8   15
+25  37.8/ 42.5/ 19.7           Ace of Spades 3    Christian Schmidt 133.0    0
+
+Monthly age: 13 this issue ( 14 last issue, 12 the issue before )
+New warriors: 10  Turnover/age rate 77%
+Average age: 72 ( 80 last issue, 88 the issue before )
+Average score: 142 ( 138 last issue, 141 the issue before )
+The top 25 warriors are represented by 11 independent authors: Oversby and
+Schmidt with 5; Nimon with 3; Espiritu, Kline and Marsden with 2. All others
+with one warrior each.
+
+Electric Head is still on top but it's lead isn't as clear cut as it was last
+issue. Congratulations to Ken Espiritu for making the hill.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 2  46.7/ 45.9/  7.4            He Scans Again              P.Kline 147.6    1
+ 5  41.3/ 41.6/ 17.0               Fawkes v0.2          Ian Oversby 141.1    1
+ 7  39.0/ 39.1/ 21.9              Guessed v0.1                  Ian 138.8    1
+10  36.8/ 36.8/ 26.4                PAN-TAU-RA    Christian Schmidt 136.7    0
+12  33.0/ 30.8/ 36.2               Ultraviolet         Ken Espiritu 135.2    1
+14  31.1/ 28.9/ 40.0                Ultra-RQ^2         Ken Espiritu 133.4    1
+19  31.1/ 28.8/ 40.0                Terkonit 3    Christian Schmidt 133.4    1
+25  37.8/ 42.5/ 19.7           Ace of Spades 3    Christian Schmidt 133.0    0
+??  ??.?/ ??.?/ ??.?                      Newt          Ian Oversby ???.?
+??  ??.?/ ??.?/ ??.?           unrequited love                kafka ???.?
+
+Ten new warriors. Kline is back with a vengeance.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  35.2/ 45.3/ 19.5               The Machine        Anton Marsden 125.1  164
+26  36.0/ 47.3/ 16.7            Freebooter 1.5           Ian Sutton 124.7    4
+26  37.8/ 47.4/ 14.8                 Undecided                Nimon 128.2   20
+26  34.5/ 44.4/ 21.1              Scanitator 5    Christian Schmidt 124.6   26
+26  28.0/ 31.6/ 40.5                   I Stone                  Ian 124.4    2
+26  37.1/ 46.3/ 16.6            The Bloodhound           Ian Sutton 128.0   35
+26  34.4/ 45.0/ 20.6          Silver Talon 1.2                Edgar 123.8    6
+26  26.3/ 27.0/ 46.7                 Trident^2             John K W 125.5  195
+
+Two significant losses - The Machine and Trident^2.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+20  33.3/ 28.8/ 37.8                    Gigolo   Core Warrior staff 137.9  319
+17  39.1/ 39.2/ 21.7       Damage Incorporated        Anton Marsden 139.0  306
+18  28.2/ 17.7/ 54.1               Impish v0.2          Ian Oversby 138.8  304
+ 4  32.4/ 17.5/ 50.1      Return Of The Jedimp             John K W 147.3  265
+
+No new entries.
+______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  unrequited love        kafka              346    Q^2 -> Paper
+ 4  Gigolo                 Core Warrior staff 319 *  Q^2 -> Stone/imp
+ 5  Damage Incorporated    Anton Marsden      306 *  Q^2 -> Bomber
+ 6  Impish v0.2            Ian Oversby        304 *  Stone/imp
+ 7  Falcon v0.3            Ian Oversby        275    P-warrior
+ 8  Return Of The Jedimp   John K W           265 *  Q^2 -> Stone/imp
+ 9  Rosebud                Beppe              218    Stone/imp
+10  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+11  Instant Wolf 3.4       Edgar              205    P-warrior
+12  Goldfinch              P.Kline            201    P-warrior
+13  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+14  Trident^2              John K W           195    Q^2 -> Stone/imp
+15  ompega                 Steven Morrell     189    Stone/imp
+16  Frogz                  Franz              172    Q^2 -> Paper
+17  The Machine            Anton Marsden      164    Scanner
+18  Memories               Beppe              152    Scanner
+19  Tiberius 3.1           Franz              130    Q^2 -> Paper
+20  Nine Seven Six         M R Bremer         129 *  Q^2 -> Stone/imp
+21  Solomon v0.8           Ian Oversby        111 *  Stone and scanner
+22  CC Paper 3.3           Franz              107    Q^2 -> Paper
+23  mrb-test               m r bremer         106    ?
+24  T.N.T. pro             Maurizio Vittuari  105    Bomber
+25  Jack in the box II     Beppe Bezzi        100    P-warrior
+
+Trident^2 finishes in 14th place and The Machine finishes in 17th.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Fri Jun 27 12:07:19 PDT 1997
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  49.2/ 36.7/ 14.2              Guessed v0.1                  Ian 161.6    3
+ 2  49.2/ 39.9/ 10.9             Pentagram 2.a            J.A.Denny 158.5   65
+ 3  45.0/ 35.9/ 19.1                  Hexagram            J.A.Denny 154.0   63
+ 4  47.7/ 41.7/ 10.6   The Stainless Steel Rat    Christian Schmidt 153.7   86
+ 5  37.3/ 26.4/ 36.3                  Sections           Zul Nadzri 148.2   23
+ 6  39.7/ 33.3/ 27.1           Versatility 1.7   Ross Morgan-Linial 146.1   91
+ 7  36.4/ 26.8/ 36.8               Flimsy v0.6          Ian Oversby 146.0   64
+ 8  34.6/ 23.8/ 41.5            Scanitator 3.0    Christian Schmidt 145.4   70
+ 9  43.4/ 43.3/ 13.3             qDeath v .169         Ryan Coleman 143.5   10
+10  43.2/ 43.5/ 13.3      Mostly Harmless v1.1           Justin Kao 142.8   94
+11  41.8/ 45.2/ 12.9             Short Sword 4            JS Pulido 138.4   45
+12  27.0/ 15.9/ 57.1                DemonSpawn            J.A.Denny 138.2   73
+13  29.5/ 23.8/ 46.7                  Dust 7.0           Justin Kao 135.2   43
+14  29.3/ 24.6/ 46.1 Six-Finger Discount From          Ryan Coleman 134.1   17
+15  38.2/ 42.5/ 19.2            qbomber v .469         Ryan Coleman 134.0   14
+16  26.7/ 20.2/ 53.1                   Quantum    Christian Schmidt 133.1   67
+17  38.9/ 45.3/ 15.7             Dwa Michaly b    Waldemar Bartolik 132.5   51
+18  39.6/ 49.4/ 11.1            Scankiller 0.1    Christian Schmidt 129.8   75
+19  32.1/ 34.7/ 33.2    If I only had a brain?         Ryan Coleman 129.4   15
+20  25.8/ 24.4/ 49.8 It's a Harmless Addition           Robert Hale 127.3    1
+21  28.4/ 32.6/ 39.0                    Zorm-B            Anonymous 124.3   48
+22  22.5/ 21.2/ 56.3 4-Finger Discount From th         Ryan Coleman 123.8   18
+23  25.2/ 26.8/ 48.1                   Unknown         George Eadon 123.6   24
+24  26.3/ 29.4/ 44.3          Kohonenian Dream     Robert J. Street 123.1   37
+25  25.7/ 29.5/ 44.8 It's a Harmless Addition          Robert Hale 121.9    4
+
+Top 25 Averages:
+    35.3/ 32.7/ 32.0                                                137.9   44
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Limited Process Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 200
+ minimum distance: 200
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+Last challenge: Sat Jun 14 09:03:03 PDT 1997
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  58.4/ 30.9/ 10.8     Limb Rending Incisors           Ian Sutton 185.9   19
+ 2  54.0/ 35.4/ 10.6           Solomon LP v0.1          Ian Oversby 172.6   16
+ 3  53.4/ 35.5/ 11.1                  NX-74205       Philip Kendall 171.3    2
+ 4  51.0/ 34.2/ 14.9                Simplicity        Anton Marsden 167.8    9
+ 5  47.7/ 28.5/ 23.8             Paper 'LP' II       Philip Kendall 166.8   46
+ 6  48.6/ 34.9/ 16.5                     Flips           Zul Nadzri 162.4   20
+ 7  45.0/ 28.3/ 26.7           Indecisive v0.1          Ian Oversby 161.6   25
+ 8  43.6/ 31.3/ 25.1                Twin Flame          Ian Oversby 155.9   50
+ 9  44.2/ 34.1/ 21.8              Bolder v0.01          Ian Oversby 154.3   24
+10  46.9/ 40.2/ 12.9           Romulan Warbird       Philip Kendall 153.6   29
+11  42.2/ 30.9/ 26.9             Benchmark 1.0           Zul Nadzri 153.5   44
+12  42.3/ 37.3/ 20.4             Bag of Tricks        Anton Marsden 147.4   34
+13  41.1/ 37.2/ 21.8                red marble       bjoern guenzel 144.9   39
+14  42.0/ 41.0/ 17.1                   red eye       bjoern guenzel 142.9   40
+15  39.9/ 38.6/ 21.5                 Romantica           Zul Nadzri 141.1   17
+16  33.2/ 30.4/ 36.4                Paper 'LP'       Philip Kendall 136.1   67
+17  35.9/ 36.6/ 27.5                Iocane 0.0             John K W 135.2   33
+18  39.9/ 48.8/ 11.4             qDeath v .169         Ryan Coleman 131.0    1
+19  38.1/ 46.9/ 15.0 Hopefully Indestructible            Ian Sutton 129.2   38
+20  36.3/ 44.3/ 19.4               Dr. Gate v4                Franz 128.3   54
+21  34.8/ 43.9/ 21.2                  oldtimer       bjoern guenzel 125.7   52
+22  33.6/ 43.0/ 23.4                rimmer 2.0                  jkw 124.2   58
+23  33.5/ 44.7/ 21.7                  Dr. Gate                Franz 122.3   56
+24  37.8/ 53.9/  8.3    If I only had a brain?         Ryan Coleman 121.7    5
+25  30.5/ 47.0/ 22.5               Inferno 1.8       Philip Kendall 114.0   66
+
+Top 25 Averages:
+    42.2/ 38.3/ 19.5                                                146.0   33
+______________________________________________________________________________
+Extra Extra
+Electric Head by Anton Marsden
+
+Electric Head consists of 4 components:
+- The Core Clear
+- Mini HSA
+- A small paper
+- A modified version of Carbonite
+
+These components combined with a nice PSpace routine are the key to the
+success of this warrior. It has weaknesses but so does every warrior.
+However, one of it's strengths is the ability to kill heavy imp/stones.
+
+;redcode-94
+;name Electric Head
+;author Anton Marsden
+;strategy P-Warrior which uses the P^2 switcher (see CW 58)
+;assert CORESIZE==8000
+;kill Electric Head
+
+;--------------
+;THE CORE CLEAR
+;--------------
+
+gate1 EQU (bomb1-19)
+gate2 EQU (bomb1-18)
+bomb2 EQU (bomb1+22)
+cca EQU (-4000) ; not the actual value
+
+        dat     19      ,   500     ; 1: 1/1   
+        dat     -4040   ,   4045    ; 2: 2/2
+bomb1   spl     #bomb2-gate1 , 45   ;20: 5/4
+        mov     *gate1  ,   >gate1  ; 1: 1/1
+        mov     *bomb2+2,   >gate2  ; 2: 2/2
+        djn.f   -1      ,   {gate2  ; 3: 3/3
+        dat     1       ,   45      ; 2: 2/2
+        spl     #-40    ,   45      ; 3: 3/3
+
+ccb   mov bomb1-1,@ccd
+      mov {-1,<ccd
+      add #23,ccd
+      spl 1,bomb1+4
+      mov <ccb+3,<ccd
+ccd   mov {ccb+1,{cca
+      mov <ccb+3,<ccd
+      djn @ccd,#2
+      div.f #0,ccd
+
+;--------
+;MINI HSA
+;--------
+
+step EQU 9
+ptr EQU (bomb-5)
+away EQU (bomb1-4000) ; not the actual value
+
+bomb: spl    #1,{1
+kill: mov    bomb,<ptr
+mptr: mov    >ptr,>ptr
+      jmn.f  kill,>ptr
+a:    add    #step+1,@mptr
+scan: jmz.f  a,<ptr
+      slt    @mptr,#btm-ptr+3
+      djn    kill,@mptr
+      djn    a,#16
+btm:  jmp    a,{kill
+
+boot: mov    btm,@dest
+N FOR 8
+      mov    btm-N,<dest
+ROF
+      spl    @dest,1
+dest: mov    #250,@away
+      mov    bomb,<dest
+      div.f  #0,dest
+
+FOR 6
+      dat    0,0
+ROF
+
+dbomb dat    >-1,>1
+in    dat    0,loss_table-state
+p     spl    1,win_table-state
+      spl    1,tie_table-state
+
+;----------
+;MINI PAPER
+;----------
+
+      spl    @0,1234 ; not the actual value
+      mov    }-1,>-1
+      mov    {-2,<1
+      jmp    @0,>5678 ; not the actual value
+
+PSTATE EQU 250 ; pspace location containing current state
+STATES EQU 10  ; maximum number of states (for brainwash protection)
+
+;NOTE: state values go from 0 to STATES-1
+
+w0 EQU ccb   ; THE CORE CLEAR
+w1 EQU boot  ; MINI HSA
+w2 EQU p     ; MINI PAPER
+w3 EQU cboot ; CARBONITE
+
+
+think ldp.a  #0,in              ; get input value
+load  ldp.a  #PSTATE,state      ; load old state
+      mod.a  #STATES,state      ; brainwash protection
+      add.ba *in,state          ; select correct state table
+store stp.a  *state,load        ; store new state
+
+win_table
+state jmp    @0,w0              ; jump to warrior code
+
+init_state
+      spl    #0,w0
+      spl    #0,w0
+      spl    #3,w1
+      spl    #3,w1
+      spl    #4,w1
+      spl    #6,w2
+      spl    #7,w3
+      spl    #7,w3
+      spl    #8,w3
+
+tie_table      
+      spl    #1,w0
+      spl    #2,w0
+      spl    #3,w1
+      spl    #3,w1
+      spl    #4,w1
+      spl    #5,w1
+      spl    #0,w0
+      spl    #7,w3
+      spl    #8,w3
+      spl    #9,w3
+
+loss_table      
+      spl    #1,w0
+      spl    #2,w0
+      spl    #3,w1
+      spl    #4,w1
+      spl    #5,w1
+      spl    #6,w2
+      spl    #7,w3
+      spl    #8,w3
+      spl    #9,w3
+      spl    #3,w1
+
+;-----------
+;CARBONITE++
+;-----------
+
+caway EQU (-100) ; not the actual value
+
+cboot mov tar+1,<cdest
+      mov tar,<cdest
+      mov tar-1,<cdest
+cdest mov dbomb,*caway
+      spl <cdest,<2000
+      mov tar-2,@cdest
+      div.f #0,cdest
+      spl    #0,<-1151+3
+      mov    197,tar-197*3500
+tar   add.ab {0,}0    
+      djn.f  -2,<-1151
+
+END think
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@mcs.vuw.ac.nz>

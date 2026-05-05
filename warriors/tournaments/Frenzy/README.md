@@ -4,6 +4,17 @@ This directory contains warriors and results from The Redcoders Frenzy tournamen
 
 Reference: [Redcoders Frenzy - The ongoing corewar tournament](http://www.corewar.info/tournament/cwt.htm)
 
+## Rules
+
+- All battles will be run using pMARS v0.8, unless it is declared in the round rules different.
+- No self-fights, unless it is declared in the round rules different.
+- PINs are allowed, unless it is declared in the round rules different.
+- All warriors submitted will be published at the conclusion of the round.
+- A competitor can enter the tournament at any time, and is not obliged to take part in any round.
+- Up to two warriors per competitor are allowed, unless it is declared in the round rules different.
+- The decision of the round organiser is final.
+- The score each player receives from each round will be determined by giving the highest scoring player 100 points. The scores for other players will be allocated in proportion to this (eg if the winner scores 2302, and you score 1783, you will receive (1783/2302)*100=77.5 points).
+
 ## Rounds
 
 - [Round 01: The Tiny Core Round](./Round_01/README.md)
