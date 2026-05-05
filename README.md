@@ -81,6 +81,8 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
   - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html) ([Mirror](https://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html))
 - **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
+- **Philip Kendall's Core War Page:** [Philip Kendall](https://www.shadowmagic.org.uk/corewar/resource.html)
+- **A.K. Dewdney's Home Page:** [A.K. Dewdney](http://www.csd.uwo.ca/faculty/akd/index.html)
 - **KOTH@SAL:** [SAL](https://sal.discontinuity.info/)
 - **Inversed's Corewar Page:** [Inversed](http://inversed.ru/CoreWar.htm)
 - **Neo's World of Corewar:** [Neo](http://labarga.atspace.com/)
@@ -89,6 +91,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
 - **Tutorials & Guides:**
+  - [The Beginner's Guide to Redcode](http://corewar.co.uk/karonen/guide.htm) - Ilmari Karonen's classic introduction.
   - [pMARS Reference Guide](http://www.koth.org/info/pmars-redcode-94.txt) - Detailed reference for pMARS Redcode.
   - [Steven Morrell's Guide (Imps)](http://www.koth.org/info/chapter1.html) - Introduction to Imp-Rings.
   - [Steven Morrell's Guide (Stones)](http://www.koth.org/info/chapter2.html) - Introduction to Stone warriors.
@@ -99,6 +102,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [Steve's Guide for Beginners](newsletters/sgb/) - Gentle introduction to Core War and Redcode.
   - [Push Off](newsletters/pushoff/) - Paul Kline's midweek review of Core War (1993-1994).
 - **Other Simulators & Tools:**
+  - [Extra Redcode Kit (XRK)](https://mark0.net/soft-xrk-e.html) - Development system for DOS by Marco Pontello.
   - [RedCoder 2](http://redcoder.sourceforge.net/?p=redcoder) - Graphical simulator and debugger.
   - [ARES](http://harald.ist.org/ares/) - Complete simulator and debugger by Harald Markus Wirth.
   - [exMARS](http://corewar.co.uk/ankerl/exmars.htm#intro) - Fast simulator with Ruby interface by Martin Ankerl.
