@@ -5,14 +5,14 @@
 ;   Standard: CWS'88
 ;     Author: Matthew Skala
 ;
-KILLPTR   DAT            #0
-KILL      MOV  KILLPTR   <KILLPTR
-          DJN  KILL      #1024
-          MOV  #1024     -1
-START     SPL  KILL
-          MOV  0         5
-          MOV  0         5
-          MOV  0         5
-          MOV  0         5
-          MOV  0         5
+KILLPTR  DAT    <0, #0
+KILL     MOV    KILLPTR, <KILLPTR
+        DJN    KILL, #1024
+        MOV    #1024, -1
+START    SPL    KILL, 0
+        MOV    0, 5
+        MOV    0, 5
+        MOV    0, 5
+        MOV    0, 5
+        MOV    0, 5
           END       START

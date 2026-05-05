@@ -28,24 +28,24 @@
 ; All this makes XTC my warrior of choice. :-)
 ; Please start XTC at the label 'loop'.
 
-loop  add #412 ptr
-ptr   jmz loop trap
-      mov ptr  dest
-cnt   mov #23  cnt
-kill  mov @trap <dest
-      djn kill cnt
-      jmp loop
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-dest  dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-trap  dat bomb
-bomb  spl trap trap
+loop     add    #412, ptr
+ptr      jmz    loop, trap
+        mov    ptr, dest
+cnt      mov    #23, cnt
+kill     mov    @trap, <dest
+        djn    kill, cnt
+        jmp    loop, 0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+dest     dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+        dat    <0, <0
+trap     dat    <0, <bomb
+bomb     spl    trap, trap

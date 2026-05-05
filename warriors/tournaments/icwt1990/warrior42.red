@@ -7,12 +7,12 @@
 ;
 ; A warrior with a simple strategy but nevertheless hard to beat
 ;
-c     mov b 4026
-      mov a <c
-      mov p <c
-      mov l <c
-      spl @c
-l     add #124 p
-p     jmz l p
-a     mov 2 @p
-b     jmp l
+c        mov    b, 4026
+        mov    a, <c
+        mov    p, <c
+        mov    l, <c
+        spl    @c, 0
+l        add    #124, p
+p        jmz    l, p
+a        mov    2, @p
+b        jmp    l, 0

@@ -5,13 +5,13 @@
 ;   Standard: CWS'88
 ;     Author: Stephen Tavener
 ;
-start   SPL   6
-        MOV # 0      @ 2
-        DJN  -1        1
-        DAT           -3
-        SPL   0
-        DAT           -1
-        SUB # 5        -1
-        MOV  -3      @-2
-        JMP  -2
+start    SPL    6, 0
+        MOV    #0, @2
+        DJN    -1, 1
+        DAT    <0, <-3
+        SPL    0, 0
+        DAT    <0, <-1
+        SUB    #5, -1
+        MOV    -3, @-2
+        JMP    -2, 0
         END   start
