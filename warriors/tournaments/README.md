@@ -44,7 +44,7 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **[Oversby Autumn 1998 Corewar Tournament](https://corewar.co.uk/oversby/index.htm)** (Nov 1998 – Mar 1999): 1st place, Joonas Pihlaja.
 - **[Ilmari's Mini Tournament #1](https://corewar.co.uk/karonen/imt1/index.htm)** (Apr 1998): 1st place, [Type Three Quantum Singularity](https://corewar.co.uk/karonen/imt1/kendall3.red) by Philip Kendall.
 - **[Redcode Maniacs Tournament](http://www.shadowmagic.org.uk/corewar/maniacs)** (Jan – Apr 1998): 1st place, David Moore.
-- **[Anton's Core War Tournament](https://corewar.co.uk/acwt.htm)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
+- **[Anton's Core War Tournament](./acwt1997/README.md)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
 - **[Beppe's Direct Elimination Core War Tournament](./bdecwt1996/README.md)** (Oct – Nov 1996): 1st place, Philip Kendall.
 - **[Battle Royal](https://corewar.co.uk/battleroyal.htm)** (Apr 1996): 1st place, Iocane by John K. Wilkinson.
 - **[Intelligent Warrior Tournament v1.0](./iwt1996/README.md)** (Mar 1996): 1st place, [System Trap](./iwt1996/8000/systemtrap.red) by Kurt Franke.
