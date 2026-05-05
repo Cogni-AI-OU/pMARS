@@ -1,0 +1,263 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="jkw">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win98; I) [Netscape]">
+   <title>Corewars - King of the Hill</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#3333FF" vlink="#000099" alink="#3333FF">
+<script LANGUAGE = "JavaScript">
+//  Image changer
+//  Copyright(c) Ken Clingenpeel xxkenxx@earthlink.net home.earthlink.net/~xxkenxx/ all rights reserved
+<!--
+// Detect if browser is Netscape 3 + or IE 4 +.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+if ((bName == "Netscape" && bVer >= 3) || (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+else br = "n2";
+
+if (br== "n3") { 
+
+	indexon = new Image();
+	indexoff = new Image();
+	kothon = new Image();
+	kothoff = new Image();
+	infoon = new Image();
+	infooff = new Image();
+	linkson = new Image();
+	linksoff = new Image();
+	newsgroupon = new Image();
+	newsgroupoff = new Image();
+	feedbackon = new Image();
+	feedbackoff = new Image();
+
+	var thisToken = "";
+	var thisurl = document.URL.toString();
+	thisurl = thisurl.toLowerCase();
+	switch (thisurl)
+		{
+		case 'http://www.koth.org/': thisToken = "index"; break;
+		case 'http://www.koth.org/index.html': thisToken = "index"; break;
+		case 'http://www.koth.org/koth.html': thisToken = "koth"; break;
+		case 'http://www.koth.org/info.html': thisToken = "info"; break;
+		case 'http://www.koth.org/links.html': thisToken = "links"; break;
+		case 'http://www.koth.org/newsgroup.html': thisToken = "newsgroup"; break;
+		case 'http://www.koth.org/feedback.html': thisToken = "feedback"; break;
+		default: thisToken = "index"; break;
+		}
+	setTimeout('imgInactCur()',1000);
+	}
+
+function imgInactCur() {
+setTimeout('imgInactCur',1000);
+imgInact(thisToken);
+}
+
+function imgAct(imgName) { if (br == "n3") {
+if (thisToken == imgName) { document[thisToken].src = "http://www.KOTH.org/pics/button-" + thisToken + "-on.jpg"; return }
+document[thisToken].src = "http://www.KOTH.org/pics/button-" + thisToken + "-off.jpg";
+document[imgName].src = "http://www.KOTH.org/pics/button-" + imgName + "-on.jpg"; 
+} }
+
+function imgInact(imgName) { if (br == "n3") {
+if (thisToken == imgName) { document[thisToken].src = "http://www.KOTH.org/pics/button-" + thisToken + "-on.jpg"; return }
+document[thisToken].src = "http://www.KOTH.org/pics/button-" + thisToken + "-on.jpg";
+document[imgName].src = "http://www.KOTH.org/pics/button-" + imgName + "-off.jpg";
+} }
+
+// -->
+</script>
+
+<table BORDER=0 CELLPADDING=0 WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td>
+<table CELLPADDING=0 >
+<tr>
+<td><a href="http://www.KOTH.org/index.html" onMouseOver="imgAct('index')" onMouseOut="imgInact('index')"><img SRC="http://www.KOTH.org/pics/button-index-off.jpg" NAME="index" ALT="home" VSPACE=2 BORDER=0 height=65 width=115 align=CENTER></a></td>
+
+<td ROWSPAN="6" WIDTH="6" BGCOLOR="#9A96F1">&nbsp;</td>
+
+<td ROWSPAN="6" WIDTH="2" BGCOLOR="#999999"><font size=-2>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td><a href="http://www.KOTH.org/koth.html" onMouseOver="imgAct('koth')" onMouseOut="imgInact('koth')"><img SRC="http://www.KOTH.org/pics/button-koth-off.jpg" NAME="koth" ALT="koth" VSPACE=2 BORDER=0 height=65 width=115 align=CENTER></a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.KOTH.org/info.html" onMouseOver="imgAct('info')" onMouseOut="imgInact('info')"><img SRC="http://www.KOTH.org/pics/button-info-off.jpg" NAME="info" ALT="info" VSPACE=2 BORDER=0 height=65 width=115></a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.KOTH.org/links.html" onMouseOver="imgAct('links')" onMouseOut="imgInact('links')"><img SRC="http://www.KOTH.org/pics/button-links-off.jpg" NAME="links" ALT="links" VSPACE=2 BORDER=0 height=65 width=115></a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.KOTH.org/newsgroup.html" onMouseOver="imgAct('newsgroup')" onMouseOut="imgInact('newsgroup')"><img SRC="http://www.KOTH.org/pics/button-newsgroup-off.jpg" NAME="newsgroup" ALT="Newsgroup" VSPACE=2 BORDER=0 height=65 width=115 align=CENTER></a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.KOTH.org/feedback.html" onMouseOver="imgAct('feedback')" onMouseOut="imgInact('feedback')"><img SRC="http://www.KOTH.org/pics/button-feedback-off.jpg" NAME="feedback" ALT="Feedback" VSPACE=2 BORDER=0 height=65 width=115></a></td>
+</tr>
+</table>
+</td>
+
+<td ALIGN=LEFT VALIGN=TOP>
+<ul>
+<center><a href="http://www.KOTH.org/kofacoto"><img SRC="http://www.KOTH.org/kofacoto/kofacoto.jpg" ALT="kofacoto!" BORDER=0 height=69 width=368></a></center>
+<pre>
+Entries are due Sunday, October 8th midnight CST.
+
+Round 1: White Warrior
+
+At the bottom you will see the previously unpublished code of Return Of The Jedimp.
+I -believe- this is the version that at one time lasted quite a while on the Pizza
+'94 Hill, but I can't be exactly certain.
+
+If you look carefully at the imp spiral creation you'll see it uses a method that's
+never been independantly developed by anyone else as far as I know.  The imp spiral
+evolves over several generations of ring creation.  It's really quite interesting.
+
+I have a feeling that something along the lines of He Scans Alone is the best bet
+for victory, but don't let that sway your development. :)
+
+For the code to He Scans Alone see http://www.KOTH.org/planar/index.html
+
+I'll run 200+ rounds with each person's entry to get their score for this round.
+
+Standard '94 rules... as in: pmars.exe -r 200 -d 100 -c 80000 -p 8000 -l 100
+
+Remember overall scores in the
+opening rounds will determine your seed in the playoffs.
+
+And now the white warrior... enjoy!
+
+-jkw
+
+;redcode-94
+;name Return Of The Jedimp
+;kill Return Of The Jedimp
+;author John K W
+;strategy Return Of The Jedimp with Q^2 scan...
+;strategy v.q4 - altered engine.  new qscan.
+;strategy v.q52 - fixed spacing and qscan better
+;assert 1
+
+org start
+
+step equ 12             ; gap between qbombs
+strafelen equ 4         ; coverage area = step*strafelen*3
+
+bomb    dat &lt;1, step
+qstep	dat -step, 2*step
+
+;*************** QSCAN
+
+qs    equ   10
+
+QS1   equ   (100)
+QS2   equ   (3*QS1)
+QS3   equ   (6*QS2)
+QBASE equ   (tab+300)
+
+SIG01 equ   a01
+SIG02 equ   {a01
+SIG03 equ   }a01
+SIG04 equ   >a01
+SIG05 equ   &lt;a01
+SIG06 equ   a01
+
+start   seq     QBASE+QS2*0+QS1*0, QBASE +QS2*0 +QS1*0+QS3
+        jmp     aaa,  SIG01
+        seq     QBASE+QS2*1+QS1*0, QBASE +QS2*1 +QS1*0+QS3
+        jmp     a01,  SIG02
+        seq     QBASE+QS2*2+QS1*0, QBASE +QS2*2 +QS1*0+QS3
+        jmp     a01,  SIG03
+        seq     QBASE+QS2*3+QS1*0, QBASE +QS2*3 +QS1*0+QS3
+        jmp     aaa,  SIG04
+        seq     QBASE+QS2*4+QS1*0, QBASE +QS2*4 +QS1*0+QS3
+        jmp     aaa,  SIG05
+        seq     QBASE+QS2*5+QS1*0, QBASE +QS2*5 +QS1*0+QS3
+        djn.f   a01,  SIG06
+
+        seq     QBASE+QS2*0+QS1*1, QBASE +QS2*0+QS1*1+QS3
+        jmp     a02,  SIG01
+        seq     QBASE+QS2*1+QS1*1, QBASE +QS2*1+QS1*1+QS3
+        jmp     a02,  SIG02
+        seq     QBASE+QS2*2+QS1*1, QBASE +QS2*2+QS1*1+QS3
+        jmp     a02,  SIG03
+        seq     QBASE+QS2*3+QS1*1, QBASE +QS2*3+QS1*1+QS3
+        jmp     a02,  SIG04
+        seq     QBASE+QS2*4+QS1*1, QBASE +QS2*4+QS1*1+QS3
+        jmp     a02,  SIG05
+        seq     QBASE+QS2*5+QS1*1, QBASE +QS2*5+QS1*1+QS3
+        djn.f   a02,  SIG06
+
+        seq     QBASE+QS2*0+QS1*2, QBASE+QS2*0+QS1*2+QS3
+        jmp     a03,  SIG01
+        seq     QBASE+QS2*1+QS1*2, QBASE+QS2*1+QS1*2+QS3
+        jmp     a03,  SIG02
+        seq     QBASE+QS2*2+QS1*2, QBASE+QS2*2+QS1*2+QS3
+        jmp     a03,  SIG03
+        seq     QBASE+QS2*3+QS1*2, QBASE+QS2*3+QS1*2+QS3
+        jmp     a03,  SIG04
+        seq     QBASE+QS2*4+QS1*2, QBASE+QS2*4+QS1*2+QS3
+        jmp     a03,  SIG05
+        seq     QBASE+QS2*5+QS1*2, QBASE+QS2*5+QS1*2+QS3
+        djn.f   a03,  SIG06
+
+        jmp     evopac          ;nothing found
+
+        dat     1*QS2,  4*QS2+QBASE-ptr
+tab     dat     0*QS2,  0*QS2+QBASE-ptr
+        dat     2*QS2,  3*QS2+QBASE-ptr
+
+a03     add     #QS1,   @a01
+a02     add     #QS1,   @a01
+a01     add.ab  tab,    tab
+aaa     mov.ba  @a01,   ptr
+
+        sne     DEAD,   *ptr  ;which of the two?
+        add.a	#QS3,   ptr
+
+	add.ab	ptr,	ptr
+
+qbrun   mov 	bomb, 	@ptr
+	mov 	bomb, 	*ptr
+ptr     mov 	-0, 	@step
+	add.f	qstep, 	-1
+        djn     qbrun,  #strafelen
+	jmp	evopac
+
+;*************** EVOPAC
+
+DEAD
+ded for 32
+dat 0, 0
+rof
+
+d2    equ 1143
+TSTEP equ 1751
+bstep equ 1819 ;2283 ;1997
+boot  equ 1700-(80+15)*4-1
+
+evopac  spl     1
+        spl     1
+        spl     1
+        mov     &lt;1,     {1
+        jmp     boot,   imp2+1
+evol:   spl     @evol,  }TSTEP
+        mov.i   }evol,  >evol
+evoli:  spl     #d2,    bstep-1
+        mov     b,      >2
+        add.f   evoli,  j
+j:      jmp.f   imp2-d2*8, {-6+bstep
+b       dat     &lt;1,     1
+imp2    mov.i   #d2,    *0
+</pre>
+</td>
+</tr>
+</table>
+</body>
+</html>
