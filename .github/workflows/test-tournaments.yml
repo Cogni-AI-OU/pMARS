@@ -2,11 +2,13 @@ name: Tournament Tests
 
 on:
   push:
+    branches: [ master ]
     paths:
       - '.github/workflows/test-tournaments.yml'
       - 'tests/tournaments/**'
       - 'warriors/tournaments/**'
   pull_request:
+    branches: [ master ]
     paths:
       - '.github/workflows/test-tournaments.yml'
       - 'tests/tournaments/**'
