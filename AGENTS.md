@@ -47,3 +47,12 @@ After compilation, you should find the `pmars` executable in the `src` directory
 ```bash
 ./pmars
 ```
+
+## Redcode (.red) File Conventions
+
+To preserve the history and context of warrior development:
+- **Do not delete code:** When removing logic from `.red` files, comment it out instead of deleting it.
+- **Explain changes:** Always include a comment explaining the reason for the modification or why the code was commented out.
+- **Comment character:** Use `;` for comments in Redcode files.
+
+These instructions are maintained in this `AGENTS.md` file and must be followed by all agents.
