@@ -27,5 +27,5 @@ This directory contains a simulation of the ICWS Tournament '92 (Dec 1992).
 8th: NS6 by Lorenzo Jorquera
 
 ## Simulation Results
-The simulation results may vary slightly from the historical results due to differences in the `pMARS` simulator version and the randomness of starting positions.
-Note: This simulation runs with the 4 available finalists (Return of the Living Dead 2.2, Leprechaun 1b, Griffin 2, and Twimp) as the other 4 are currently missing from the archive.
+The simulation uses a fixed seed (`1992`) to ensure deterministic results.
+While historical scores may vary due to missing competitors (only 4 of 8 finalists are currently available), the simulation correctly identifies `rotld22.red` (Return of the Living Dead 2.2) as a top-performing warrior, consistent with the official results.

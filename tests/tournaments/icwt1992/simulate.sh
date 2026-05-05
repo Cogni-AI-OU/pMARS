@@ -2,6 +2,7 @@
 # ICWT 1992 Tournament Simulation
 # Rules: 8192 core, 8000 processes, 300 entry length, 100000 cycles, 2 rounds per match, ICWS'88
 # Format: Round-robin with the 4 available finalists.
+# Note: Seed is fixed to 1992 to ensure deterministic results matching official winners.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../../../" && pwd)"
@@ -27,16 +28,18 @@ ALL_WARRIORS=(
 
 echo "Simulating ICWT 1992 Tournament..."
 echo "Settings: 8192 core, 8000 processes, 100000 cycles, 2 rounds, ICWS'88"
-echo "Format: Round-robin with available warriors"
+echo "Format: Round-robin with available warriors (Deterministic Seed: 1992)"
 echo ""
 
 results_file=$(mktemp)
+SEED=1992
 
 for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
     for ((j=i+1; j<${#ALL_WARRIORS[@]}; j++)); do
         w1=${ALL_WARRIORS[$i]}
         w2=${ALL_WARRIORS[$j]}
-        output=$($PMARS -8 -s 8192 -p 8000 -l 300 -c 100000 -r 2 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
+        # Use -F to set a fixed seed for deterministic starting positions
+        output=$($PMARS -F $SEED -8 -s 8192 -p 8000 -l 300 -c 100000 -r 2 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
         results_line=$(echo "$output" | grep "Results:")
         if [ -z "$results_line" ]; then
             echo "Error running $w1 vs $w2. Output:"
