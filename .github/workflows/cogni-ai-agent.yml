@@ -26,7 +26,7 @@ on:
   workflow_dispatch:
     inputs:
       model:
-        default: opencode/gemini-3-flash
+        default: opencode/gpt-5.4-mini
         description: Model to use for OpenCode
         options:
           - opencode/big-pickle
