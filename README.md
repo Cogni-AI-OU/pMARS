@@ -82,7 +82,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
 - **Tutorials & Guides:**
-  - [link](http://www.koth.org/info.html)
+  - [Information & Tutorials](http://www.koth.org/info.html)
   - [pMARS Reference Guide](http://www.koth.org/info/pmars-redcode-94.txt) - Detailed reference for pMARS Redcode.
   - [Steven Morrell's Guide (Imps)](http://www.koth.org/info/chapter1.html) - Introduction to Imp-Rings.
   - [Steven Morrell's Guide (Stones)](http://www.koth.org/info/chapter2.html) - Introduction to Stone warriors.
