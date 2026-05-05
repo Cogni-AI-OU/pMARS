@@ -119,6 +119,7 @@ jobs:
               mv*: allow
               pipx*: allow
               pkg-config*: allow
+              pmars*: allow
               pre-commit*: allow
               printf*: allow
               ranlib*: allow
