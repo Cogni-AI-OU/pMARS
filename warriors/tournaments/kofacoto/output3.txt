@@ -1,0 +1,321 @@
+-
+HSA-Clone by Andy Nevermind scores 205
+Black Box v1 by JKW scores 409
+Results: 23 91 136
+-
+HSA-Clone by Andy Nevermind scores 206
+Black Box v1 by JKW scores 377
+Results: 13 70 167
+-
+HSA-Clone by Andy Nevermind scores 175
+Black Box v1 by JKW scores 466
+Results: 22 119 109
+-
+HSA-Clone by Andy Nevermind scores 170
+Black Box v1 by JKW scores 488
+Results: 26 132 92
+-
+HSA-Clone by Andy Nevermind scores 205
+Black Box v1 by JKW scores 388
+Results: 16 77 157
+-
+Oneder by Ben Ford scores 529
+Black Box v1 by JKW scores 112
+Results: 140 1 109
+-
+Oneder by Ben Ford scores 272
+Black Box v1 by JKW scores 239
+Results: 11 0 239
+-
+Oneder by Ben Ford scores 286
+Black Box v1 by JKW scores 232
+Results: 18 0 232
+-
+Oneder by Ben Ford scores 298
+Black Box v1 by JKW scores 226
+Results: 24 0 226
+-
+Oneder by Ben Ford scores 291
+Black Box v1 by JKW scores 231
+Results: 21 1 228
+-
+HoT by Christian Schmidt scores 734
+Black Box v1 by JKW scores 8
+Results: 242 0 8
+-
+HoT by Christian Schmidt scores 726
+Black Box v1 by JKW scores 12
+Results: 238 0 12
+-
+HoT by Christian Schmidt scores 706
+Black Box v1 by JKW scores 22
+Results: 228 0 22
+-
+HoT by Christian Schmidt scores 740
+Black Box v1 by JKW scores 5
+Results: 245 0 5
+-
+HoT by Christian Schmidt scores 736
+Black Box v1 by JKW scores 7
+Results: 243 0 7
+-
+The Truth Is Out There by David Moore scores 745
+Black Box v1 by JKW scores 4
+Results: 248 1 1
+-
+The Truth Is Out There by David Moore scores 750
+Black Box v1 by JKW scores 0
+Results: 250 0 0
+-
+The Truth Is Out There by David Moore scores 747
+Black Box v1 by JKW scores 3
+Results: 249 1 0
+-
+The Truth Is Out There by David Moore scores 750
+Black Box v1 by JKW scores 0
+Results: 250 0 0
+-
+The Truth Is Out There by David Moore scores 750
+Black Box v1 by JKW scores 0
+Results: 250 0 0
+-
+v1_40.red by Dave Hillis scores 605
+Black Box v1 by JKW scores 113
+Results: 191 27 32
+-
+v1_40.red by Dave Hillis scores 176
+Black Box v1 by JKW scores 401
+Results: 1 76 173
+-
+v1_40.red by Dave Hillis scores 276
+Black Box v1 by JKW scores 324
+Results: 42 58 150
+-
+v1_40.red by Dave Hillis scores 184
+Black Box v1 by JKW scores 394
+Results: 4 74 172
+-
+v1_40.red by Dave Hillis scores 458
+Black Box v1 by JKW scores 194
+Results: 120 32 98
+-
+Tie by Ilmari Karonen scores 244
+Black Box v1 by JKW scores 262
+Results: 0 6 244
+-
+Tie by Ilmari Karonen scores 245
+Black Box v1 by JKW scores 260
+Results: 0 5 245
+-
+Tie by Ilmari Karonen scores 248
+Black Box v1 by JKW scores 254
+Results: 0 2 248
+-
+Tie by Ilmari Karonen scores 248
+Black Box v1 by JKW scores 260
+Results: 2 6 242
+-
+Tie by Ilmari Karonen scores 241
+Black Box v1 by JKW scores 268
+Results: 0 9 241
+-
+Voodoo by Jeremy Chin scores 43
+Black Box v1 by JKW scores 667
+Results: 1 209 40
+-
+Voodoo by Jeremy Chin scores 39
+Black Box v1 by JKW scores 672
+Results: 0 211 39
+-
+Voodoo by Jeremy Chin scores 7
+Black Box v1 by JKW scores 736
+Results: 0 243 7
+-
+Voodoo by Jeremy Chin scores 35
+Black Box v1 by JKW scores 680
+Results: 0 215 35
+-
+Voodoo by Jeremy Chin scores 31
+Black Box v1 by JKW scores 688
+Results: 0 219 31
+-
+Hope by John Metcalf scores 248
+Black Box v1 by JKW scores 254
+Results: 0 2 248
+-
+Hope by John Metcalf scores 660
+Black Box v1 by JKW scores 45
+Results: 205 0 45
+-
+Hope by John Metcalf scores 255
+Black Box v1 by JKW scores 252
+Results: 4 3 243
+-
+Hope by John Metcalf scores 259
+Black Box v1 by JKW scores 247
+Results: 5 1 244
+-
+Hope by John Metcalf scores 367
+Black Box v1 by JKW scores 193
+Results: 59 1 190
+-
+The Brain Hungry by Leonardo H. Liporati scores 621
+Black Box v1 by JKW scores 123
+Results: 205 39 6
+-
+The Brain Hungry by Leonardo H. Liporati scores 658
+Black Box v1 by JKW scores 88
+Results: 218 28 4
+-
+The Brain Hungry by Leonardo H. Liporati scores 301
+Black Box v1 by JKW scores 421
+Results: 91 131 28
+-
+The Brain Hungry by Leonardo H. Liporati scores 559
+Black Box v1 by JKW scores 175
+Results: 181 53 16
+-
+The Brain Hungry by Leonardo H. Liporati scores 664
+Black Box v1 by JKW scores 82
+Results: 220 26 4
+-
+Rainbow Demon by Lukasz Adamowski scores 242
+Black Box v1 by JKW scores 287
+Results: 7 22 221
+-
+Rainbow Demon by Lukasz Adamowski scores 241
+Black Box v1 by JKW scores 268
+Results: 0 9 241
+-
+Rainbow Demon by Lukasz Adamowski scores 557
+Black Box v1 by JKW scores 104
+Results: 156 5 89
+-
+Rainbow Demon by Lukasz Adamowski scores 242
+Black Box v1 by JKW scores 287
+Results: 7 22 221
+-
+Rainbow Demon by Lukasz Adamowski scores 237
+Black Box v1 by JKW scores 276
+Results: 0 13 237
+-
+mySpiral by Magnus Paulsson scores 416
+Black Box v1 by JKW scores 299
+Results: 127 88 35
+-
+mySpiral by Magnus Paulsson scores 392
+Black Box v1 by JKW scores 329
+Results: 121 100 29
+-
+mySpiral by Magnus Paulsson scores 393
+Black Box v1 by JKW scores 327
+Results: 121 99 30
+-
+mySpiral by Magnus Paulsson scores 410
+Black Box v1 by JKW scores 308
+Results: 126 92 32
+-
+mySpiral by Magnus Paulsson scores 369
+Black Box v1 by JKW scores 336
+Results: 108 97 45
+-
+4-line Bomb Dodger by Josh Yeager scores 135
+Black Box v1 by JKW scores 486
+Results: 2 119 129
+-
+4-line Bomb Dodger by Josh Yeager scores 149
+Black Box v1 by JKW scores 464
+Results: 4 109 137
+-
+4-line Bomb Dodger by Josh Yeager scores 158
+Black Box v1 by JKW scores 452
+Results: 6 104 140
+-
+4-line Bomb Dodger by Josh Yeager scores 157
+Black Box v1 by JKW scores 439
+Results: 1 95 154
+-
+4-line Bomb Dodger by Josh Yeager scores 150
+Black Box v1 by JKW scores 450
+Results: 0 100 150
+-
+Reverse Engineering by Michal Janeczek scores 565
+Black Box v1 by JKW scores 178
+Results: 186 57 7
+-
+Reverse Engineering by Michal Janeczek scores 557
+Black Box v1 by JKW scores 185
+Results: 183 59 8
+-
+Reverse Engineering by Michal Janeczek scores 573
+Black Box v1 by JKW scores 165
+Results: 187 51 12
+-
+Reverse Engineering by Michal Janeczek scores 564
+Black Box v1 by JKW scores 174
+Results: 184 54 12
+-
+Reverse Engineering by Michal Janeczek scores 600
+Black Box v1 by JKW scores 141
+Results: 197 44 9
+-
+FireHouse by P.Kline scores 419
+Black Box v1 by JKW scores 257
+Results: 115 61 74
+-
+FireHouse by P.Kline scores 430
+Black Box v1 by JKW scores 253
+Results: 121 62 67
+-
+FireHouse by P.Kline scores 441
+Black Box v1 by JKW scores 246
+Results: 126 61 63
+-
+FireHouse by P.Kline scores 450
+Black Box v1 by JKW scores 237
+Results: 129 58 63
+-
+FireHouse by P.Kline scores 427
+Black Box v1 by JKW scores 223
+Results: 109 41 100
+-
+55HSB by Robert Macrae scores 512
+Black Box v1 by JKW scores 233
+Results: 169 76 5
+-
+55HSB by Robert Macrae scores 443
+Black Box v1 by JKW scores 302
+Results: 146 99 5
+-
+55HSB by Robert Macrae scores 481
+Black Box v1 by JKW scores 262
+Results: 158 85 7
+-
+55HSB by Robert Macrae scores 477
+Black Box v1 by JKW scores 270
+Results: 158 89 3
+-
+55HSB by Robert Macrae scores 470
+Black Box v1 by JKW scores 278
+Results: 156 92 2
+-
+Spray 'n Wipe by Steve Gunnell scores 313
+Black Box v1 by JKW scores 403
+Results: 93 123 34
+-
+Spray 'n Wipe by Steve Gunnell scores 276
+Black Box v1 by JKW scores 441
+Results: 81 136 33
+-
+Spray 'n Wipe by Steve Gunnell scores 350
+Black Box v1 by JKW scores 362
+Results: 104 108 38
+-
+Spray 'n Wipe by Steve Gunnell scores 330
+Black Box v1 by JKW scores 375
+Results: 95 110 45
+-
+Spray 'n Wipe by Steve Gunnell scores 319
+Black Box v1 by JKW scores 403
+Results: 97 125 28
+-
