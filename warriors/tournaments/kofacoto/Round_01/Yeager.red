@@ -6,7 +6,7 @@
 ;strategy All I changed was the SPL/DAT ratio in the attack
 ;strategy Original by P.Kline
 
-org       tStart
+; org       tStart ; Removed in favor of 'end tStart' for better compatibility
 
 tPtr      dat    100 ,4100-4             ; widely-spaced pointers
           dat    0,0
