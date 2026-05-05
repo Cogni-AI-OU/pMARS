@@ -1,11 +1,9 @@
-name: Test
+name: Tournament Tests
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   build:
@@ -14,8 +12,8 @@ jobs:
     with:
       upload-artifact: true
 
-  test:
-    name: Test
+  test-tournaments:
+    name: Tournament Test
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +23,7 @@ jobs:
         with:
           name: pmars-Server
           path: bin/
-      - name: Run test
+      - name: Run tournament tests
         run: |
           chmod +x bin/pmars
-          ./bin/pmars -A warriors/validate.red
+          make -C tests/tournaments/icwt1989 test
