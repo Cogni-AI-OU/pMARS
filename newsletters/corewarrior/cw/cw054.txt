@@ -1,0 +1,438 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 54                                                    20 January, 1997
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+Happy New Year everyone.  Hopefully 1997 will be an active, progressive year
+for corewar.  It's been about a month since last issue so most of the stats
+are for four weeks instead of one.
+
+Also be sure to check Kline's article in the hints section.  Paul is always
+quick to exploit the composition of the hill and find a niche.  RetroQ,
+currently sitting pretty on top of the hill, does battle with all those nasty
+Q^2 scans dominating the hill.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  37.4/ 20.8/ 41.8                    RetroQ              P.Kline 154.1    4
+ 2  33.4/ 17.7/ 48.9      Return Of The Jedimp             John K W 149.1  204
+ 3  38.2/ 27.4/ 34.4                    Gigolo   Core Warrior staff 149.1  258
+ 4  37.9/ 29.3/ 32.8            Nine Seven Six           M R Bremer 146.5   68
+ 5  34.4/ 23.5/ 42.1           unrequited love                kafka 145.3  302
+ 6  41.9/ 38.6/ 19.4                NCC-1701-A       Philip Kendall 145.2    7
+ 7  45.6/ 47.8/  6.6            He Scans Alone              P.Kline 143.4   19
+ 8  32.7/ 23.4/ 43.8                 Trident^2             John K W 142.0  134
+ 9  39.8/ 37.8/ 22.4              Solomon v0.8          Ian Oversby 141.8   50
+10  36.8/ 36.6/ 26.6       TEST FFF mod10 full                Franz 136.9    1
+11  29.3/ 22.1/ 48.6               Impish v0.2          Ian Oversby 136.5  243
+12  33.1/ 29.7/ 37.2              Terkonit 0.4    Christian Schmidt 136.4   10
+13  35.0/ 34.0/ 31.0         Fast Fast Fast v2                Franz 136.1   18
+14  38.6/ 41.4/ 20.0               The Machine        Anton Marsden 135.7  110
+15  37.9/ 41.6/ 20.5              Instant Wolf                Edgar 134.1   25
+16  36.9/ 41.2/ 22.0              Scanitator 4    Christian Schmidt 132.6    6
+17  36.5/ 40.8/ 22.7       Damage Incorporated        Anton Marsden 132.1  245
+18  38.1/ 44.5/ 17.4                  Oblivion           Ian Sutton 131.7   69
+19  40.2/ 49.2/ 10.6                  Memories               Beppe  131.2  118
+20  40.7/ 51.1/  8.3                ScanKiller    Christian Schmidt 130.3    2
+21  39.2/ 48.3/ 12.5                   Wallung    Christian Schmidt 130.1    8
+22  37.6/ 45.6/ 16.8                     Probe        Anton Marsden 129.6  382
+23  34.6/ 39.8/ 25.6              Tiberius 3.1                Franz 129.3  121
+24  36.9/ 45.0/ 18.1                    Blur 2        Anton Marsden 128.8  381
+25  35.8/ 42.9/ 21.3          Silver Talon 1.2                Edgar 128.7   91
+
+Weekly age: 15 this week ( 43 last issue, 22 the issue before )
+New warriors: 7  Turnover/age rate 47%
+Average age: 115 ( 119 last issue, 91 the issue before )
+Average score: 138 ( 142 last issue, 137 the issue before )
+The top 25 warriors are represented by 12 independent authors:  Schmidt and
+Marsden with 4; Franz with 3; Kline, JKW, Edgar, and Oversby with 2.  All
+others with one lonely warrior each.
+
+Kline rules the roost, first with He Scans Alone and than with RetroQ.  As
+usual, his top rated warrior has a comfortable lead over second place Jedimp.
+
+Venerable Blur 2 is in danger of falling of the hill completely.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+16  30.0/ 29.2/ 40.8              Terkonit 0.4    Christian Schmidt 130.9    1
+ 2  42.9/ 37.6/ 19.5                NCC-1701-A       Philip Kendall 148.2    1
+11  37.5/ 38.7/ 23.8              Scanitator 4    Christian Schmidt 136.3    1
+16  41.8/ 49.6/  8.5                ScanKiller    Christian Schmidt 134.0    1
+ 1  36.8/ 19.9/ 43.4                    RetroQ              P.Kline 153.6    1
+17  40.2/ 48.1/ 11.8                   Wallung    Christian Schmidt 132.3    1
+10  36.8/ 36.6/ 26.6       TEST FFF mod10 full                Franz 136.9    1
+
+New warriors entered the hill in the first and second position, although the
+Enterprise has fallen to sixth in recent challenges.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  37.1/ 49.8/ 13.1            Scankiller 0.1    Christian Schmidt 124.5   31
+26  32.1/ 36.7/ 31.2                       YAP                Franz 127.5   22
+26   1.3/  1.5/  1.1              Terkonit 0.3    Christian Schmidt   5.1    7
+26  30.7/ 32.1/ 37.2               Falcon v0.3          Ian Oversby 129.4  282
+26  33.8/ 42.4/ 23.7                CC Paper 2                Franz 125.2   91
+26   1.0/  1.9/  1.1              Tsunami v0.5          Ian Oversby   4.1   12
+26  31.3/ 35.6/ 33.1                    scTest              P.Kline 127.1   25
+
+The average age drops as Oversby's Falcon v0.3 falls from the hill.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+22  37.6/ 45.6/ 16.8                     Probe        Anton Marsden 129.6  382
+24  36.9/ 45.0/ 18.1                    Blur 2        Anton Marsden 128.8  381
+ 5  34.4/ 23.5/ 42.1           unrequited love                kafka 145.3  302
+ 3  38.2/ 27.4/ 34.4                    Gigolo   Core Warrior staff 149.1  258
+17  36.5/ 40.8/ 22.7       Damage Incorporated        Anton Marsden 132.1  245
+11  29.3/ 22.1/ 48.6               Impish v0.2          Ian Oversby 136.5  243
+ 2  33.4/ 17.7/ 48.9      Return Of The Jedimp             John K W 149.1  204
+
+JKW enters the bottom of the list.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+No changes this week, and I think we won't see any for long time, but we at
+the Core Warrior are working on a new hall of fame that addresses testing,
+etc.  Stay tuned for details or mail me with your opinions.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Thu Jan 16 17:26:45 PST 1997
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  49.9/ 33.7/ 16.4          Silver Talon 1.1                Edgar 166.1   89
+ 2  48.1/ 33.1/ 18.8                  Hexagram            J.A.Denny 163.0    8
+ 3  50.4/ 38.5/ 11.1             Pentagram 2.a            J.A.Denny 162.3   10
+ 4  40.4/ 18.9/ 40.7              Terkonit 0.4    Christian Schmidt 161.9    5
+ 5  46.2/ 33.4/ 20.4               Flimsy v0.6          Ian Oversby 159.0    9
+ 6  49.3/ 42.2/  8.5            Scankiller 0.1    Christian Schmidt 156.4   20
+ 7  43.2/ 31.3/ 25.5            Scanitator 3.0    Christian Schmidt 155.1   15
+ 8  40.9/ 29.0/ 30.1            Hammermill 4.0        Matt Lewinski 152.8   95
+ 9  47.5/ 43.6/  8.9   The Stainless Steel Rat    Christian Schmidt 151.5   31
+10  45.9/ 40.9/ 13.2          Goothmonger v1.2           Ian Sutton 150.9   33
+11  35.8/ 20.8/ 43.4                DemonSpawn            J.A.Denny 150.8   18
+12  42.3/ 34.3/ 23.5           Versatility 1.7   Ross Morgan-Linial 150.3   36
+13  40.8/ 31.5/ 27.6                Apocalypse        Matt Lewinski 150.1   66
+14  43.4/ 41.6/ 15.0      Mostly Harmless v1.1           Justin Kao 145.3   39
+15  41.6/ 39.4/ 19.0       Vivid Radiation 2.0        Matt Lewinski 143.8   57
+16  42.6/ 43.0/ 14.5            Flamberge 13.4        Matt Lewinski 142.2   58
+17  37.1/ 32.7/ 30.2                Dust 0.7.5           Justin Kao 141.6   35
+18  33.8/ 26.2/ 40.0                   Quantum    Christian Schmidt 141.4   12
+19  40.0/ 40.5/ 19.5      Microsoft Office '96           Justin Kao 139.6   85
+20  33.7/ 30.6/ 35.7                 Heartworm                Edgar 136.8    6
+21  32.7/ 30.9/ 36.5              Escargot 0.5           Justin Kao 134.4   55
+22  37.5/ 46.2/ 16.3         Bash the Rat V1.4           Ian Sutton 128.8   50
+23  32.8/ 57.8/  9.4                  Trap94_1    Waldemar Bartolik 107.8    4
+24  29.8/ 58.6/ 11.5                  Trap94_2    Waldemar Bartolik 101.0    2
+25  28.4/ 61.3/ 10.2               Gisela 7110   Andrzej Maciejczak  95.5    1
+
+26   8.9/ 83.0/  8.1               Forker v1.0         Andrew Bortz  34.8    0
+
+Top 25 Averages:
+    40.6/ 37.6/ 21.8                                                143.5   33
+______________________________________________________________________________
+The Hint
+                On QScans and CoreWar Strategy.
+
+QScans, particularly Q^2 scans modeled on Probe, are very successful on
+the '94 Hill.  A couple of tests show why.  My little silk-imp program
+'dTest' scores 120 points and gets zero wins against other replicators
+and imps.  Adding a Q^2 scan increased the score by 20 points and obtained
+20-30% wins against those other programs.  In fact, a dummy program
+consisting of the Q^2 scan and a 20-line do-nothing loop scored 52 points,
+with 20-30% wins against several programs (40% against Scanitator)!
+
+Probe's Q^2 scan checks 50 core locations in 25 instructions, jumping
+immediately to the calc/bomb routine when something is found.  His scan
+code is about 70 instructions long, making him a good target for other
+Q^2 scans.  Running the dummy Q^2 program against itself gives about
+45% wins to each for a 90% 'find' rate between the two of them, which
+is amazing.  This means that in a battle between two Q^2 scanning
+opponents, nearly 90% of the battles could be decided by the Q^2 scan,
+with the two of them exchanging wins at 3 points apiece.  No wonder
+non-scanners are struggling - by not cooperating with the Q^2 program,
+they have to slug it out with "real" strategies :-)
+
+Of course, any time you have several programs doing the same thing on
+the Hill, a niche is created which is also an opportunity.  The
+program 'He Scans Alone' puts a short decoy at minus-100 locations from
+the cmp-scanner, which sometimes diverts the Q^2 scanner's attack.
+
+Another approach is to put the Q^2 scan into reverse.  Scanning backwards
+along the mirrored trail of a normal Q^2 scan will result in the two
+scanners finding each other at the same time.  Then it's a race to
+see who can bomb the other faster, putting a lucky bomb in the right
+place before executing the opponent's bomb.  Still an even chance
+to win or lose.
+
+However, we don't want an even chance, we want more!  Either more wins
+or fewer losses.  A non-cooperating Q^2 scan that gets his share
+of wins but withholds them from others :-)  Which is where Retro-Q
+comes in.
+
+Retro-Q does a mirrored scan of the usual Q^2 so that he and a regular
+Q^2 scanner find each other at the same time.  Then he splits his attack
+into two routines which are located such that the opponent's attack will
+not kill both.  Now both programs bomb each other, but at least one of
+Retro-Q's routines will survive long enough to see his opponent die.
+
+How well does it work?  Using Probe's Q^2 scan, Retro-Q scored 42/42
+against Probe.  Using the RQ^2 scan he scored 58/25.  Against CCPaper2
+he went from 29/25 to 38/7.  Against Gigolo from 21/30 to 30/20.
+
+Of course this only works because Anton's scan routine has been copied
+as-is into several programs.  Jumbling up the scan order (as opposed
+to tweaking the scan 'step') would change the environment for Retro-Q,
+robbing him of his advantage.  Still, he will continue to have an
+advantage against non-redundant post-scan attacks in those matches
+where they find each other at the same time, mabye 1-2 times per
+200 fights.
+
+If the RQ^2 scan fails to win, the silk-imps are launched.  Imps are like:
+
+         mov.i #2*spcsz,}-spcsz*1
+
+with multiple processes spaced 'spcsz' locations apart.  This means that
+the imp is copying itself backward one step as well as forward one step
+at the same time, which gives it enormous strength against spl carpets.
+By themselves the silk-imps go 50/20 against The Machine and Scanitator.
+Since they don't dat-bomb they can only win by surviving and overwriting
+the opponent, like a good spiral should :-)
+
+(The term "Retin-A" comes from a wrinkle cream that came out a while back)
+
+;redcode-94
+;name RetroQ
+;kill RetroQ
+;author P.Kline
+;assert CORESIZE == 8000
+;strategy Retro Q^2 scan
+;strategy silk-imps with retin-A - clear up those ugly spl's
+
+spcsz    equ  (2000+381)
+impsz    equ  (127*22)
+
+;  RQ^2, like Anton's Probe only backward
+
+QB EQU (start-350)
+QS EQU (0-200)
+QD EQU (0+100)
+
+GAP EQU 8
+REP EQU 15
+datz     equ (start-200)         ; save one instruction
+
+         dat    10*QS, 2*QS      ; can get 21 values from this table
+table:   dat     4*QS, 1*QS      ; and can also use the initial value
+         dat    23*QS, 3*QS      ; of fnd
+qbomb:   dat    -GAP,GAP
+qincr    dat    -GAP,2*GAP
+
+         dat start+1,0           ; very important!
+tab:     add.a  table  ,table    ; translate found location
+slow:    add.ab @tab   ,fnd
+fast:    add.b  *tab   ,@slow
+which:   sne.i  datz   ,@fnd
+         add.ab #QD    ,fnd
+;break
+         add.ba fnd    ,fnd
+         spl    attack2          ; start primary bomber
+
+attack1  add.b  fnd,fnd2         ; redundant bomber bombs left-to-right
+bmb1     mov.i  qbomb  ,@fnd2
+fnd2     mov.i  qbomb  ,@fnd-(GAP*REP)/2-GAP/2
+         add    #2*GAP ,fnd2
+bcnt     djn    -3     ,#REP
+         spl   RetinB  ,<RetinB  ; start silk-imps
+         jmz   RetinA  ,RetinA   ; if not already started
+         dat 0,0
+
+RetinA   spl   1,0
+         mov.i -1,#0
+         spl   1
+b0       spl   @0,spcsz          ; two-level silk spawner
+         mov   }b0,>b0
+c0       spl   @0,impsz
+         mov   }c0,>c0
+         spl   c0,{c0            ; loop and split
+         mov.i #2*spcsz,}-spcsz*1
+         mov.i #2*spcsz,}-spcsz*1
+         mov.i #2*impsz,}-impsz*1
+
+start:   seq.i  QB+QS*0,QB+QS*0+QD
+         jmp    which,}QS*13 ; qinc+GAP
+
+         seq.i  QB+QS*1,QB+QS*1+QD
+         jmp    fast,}QB+QS*1+QD/2
+         seq.i  QB+QS*2,QB+QS*2+QD
+         jmp    fast,{tab
+         seq.i  QB+QS*3,QB+QS*3+QD
+         jmp    fast,}tab
+
+         seq.i  QB+QS*13,QB+QS*13+QD
+         jmp    fast,{fast
+
+         seq.i  QB+QS*4,QB+QS*4+QD
+         jmp    >fast,}QB+QS*4+QD/2
+         seq.i  QB+QS*5,QB+QS*5+QD
+         jmp    slow,}QB+QS*5+QD/2
+         seq.i  QB+QS*6,QB+QS*6+QD
+         jmp    slow,{tab
+         seq.i  QB+QS*7,QB+QS*7+QD
+         jmp    slow,}tab
+
+         seq.i  QB+QS*10,QB+QS*10+QD
+         jmp    >fast,<tab
+         seq.i  QB+QS*11,QB+QS*11+QD
+         jmp    slow,<tab
+         seq.i  QB+QS*12,QB+QS*12+QD
+         djn.f  slow,tab
+
+         seq.i  QB+QS*23,QB+QS*23+QD
+         jmp    >fast,>tab
+         seq.i  QB+QS*24,QB+QS*24+QD
+         jmp    slow,>tab
+
+         seq.i  QB+QS*17,QB+QS*17+QD
+         jmp    slow,{fast
+
+         seq.i  QB+QS*8,QB+QS*8+QD
+         jmp    <fast,}QB+QS*8+QD/2
+         seq.i  QB+QS*9,QB+QS*9+QD
+         jmp    tab,}QB+QS*9+QD/2
+
+         seq.i  QB+QS*15,QB+QS*15+QD
+         jmp    tab,<tab
+         seq.i  QB+QS*16,QB+QS*16+QD
+         jmp    tab,{tab
+         seq.i  QB+QS*20,QB+QS*20+QD
+         djn.f  <fast,tab
+         seq.i  QB+QS*21,QB+QS*21+QD
+         jmp    tab,{fast
+         seq.i  QB+QS*22,QB+QS*22+QD
+         djn.f  tab,tab
+         seq.i  QB+QS*27,QB+QS*27+QD
+         jmp    <fast,>tab
+         seq.i  QB+QS*28,QB+QS*28+QD
+         jmp    tab,>tab
+
+RetinB   spl   1,0
+         mov.i -1,#0
+         spl   1
+         mov   <1,{1             ; make another copy and start him
+         spl   4000+7,7          ;   safer than going back to RetinA
+                                 ;   which might have been spl-bombed by now
+
+d0       spl   @0,spcsz          ; two-level silk spawner
+         mov   }d0,>d0
+e0       spl   @0,impsz
+         mov   }e0,>e0
+         spl   e0,{e0            ; loop and split
+         mov.i #2*spcsz,}-spcsz*1
+         mov.i #2*spcsz,}-spcsz*1
+         mov.i #2*impsz,}-impsz*1
+
+attack2  mov    qbomb  ,*fnd     ; primary bomber
+         mov.i  qbomb  ,@fnd     ; bombs left and right from found location
+fnd:     mov.i  -GAP/2 ,@QB
+         add    qincr  ,fnd
+         djn    -4     ,bcnt
+         spl   RetinA  ,<RetinA  ; start silk-imps
+         jmz   RetinB  ,RetinB   ; if not already started
+         end start
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@etherspace.gen.nz>

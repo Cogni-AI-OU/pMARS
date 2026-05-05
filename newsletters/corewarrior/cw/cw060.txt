@@ -1,0 +1,464 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 60                                                      11 July, 1997
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar. Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new
+players are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.ncs.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+OK, with some delay, here I am. My first issue and also my first hint.
+Thereare at the moment not much movements on the hill. But after Anton Marsden
+published the p^2-engine and his incredible good Electric Head I think
+everybody is working on new p-warriors. The first round of Anton's Core War
+Tournament is now finish.
+
+--Christian Schmidt
+
+Round 1 Results
+---------------
+
+Name                Score
+-------------------------
+Brian Haskin        8
+Ilmari Karonen      7
+Mole IX             5
+Philipp Offermann   4
+Zul Nadzri          3
+Robert Hale         2
+Christian Schmidt   1
+
+Seaside sort (length 31) by Brian Haskin
+Notes: works, fastest program
+Average cycles:   320907
+
+Bubbly Sort 1b (length 10) by Ilmari Karonen
+Notes: works, smallest program
+Average cycles: 13505607
+
+Particle Sorter (length 12) by Mole IX
+Notes: works, could be made a little bit faster :-)
+Average cycles: 11644522
+
+PSort v1.0 (length 12) by Philipp Offermann
+Notes: works
+Average cycles: 11998609
+
+Sort v1.5 (length 20) by Zul Nadzri
+Notes: doesn't work for ITEMS==0
+Average cycles:  9066053
+
+Consort (length 14+1) by Robert Hale
+Notes: I had to add an extra line to make this terminate properly (it assumes
+that the data consists of DAT instructions). I also had to change some mov.i
+instructions to mov.f. This also sorts the list in descending order. Apart
+from these details, it works just fine. :-)
+Average cycles: 27968360
+
+Sortidator (length 31) by Christian Schmidt
+Notes: doesn't work for ITEMS==0 or ITEMS==CORESIZE/2
+Average cycles: 68427233
+
+_____________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+#   %W /  %L /  %T                       Name               Author Score  Age
+ 1  46.4/ 36.0/ 17.6             Electric Head        Anton Marsden 156.8  22
+ 2  47.6/ 43.6/  8.8            He Scans Again              P.Kline 151.6  10
+ 3  35.5/ 23.2/ 41.3                      Newt          Ian Oversby 147.8  13
+ 4  44.3/ 41.1/ 14.6                       C^2    Christian Schmidt 147.4  17
+ 5  30.7/ 16.7/ 52.6      Return Of The Jedimp             John K W 144.7 267
+ 6  36.5/ 28.7/ 34.9            Nine Seven Six           M R Bremer 144.3 131
+ 7  38.9/ 33.8/ 27.3                PAN-TAU-RA    Christian Schmidt 144.0   2
+ 8  35.4/ 27.2/ 37.4              Head or Tail    Christian Schmidt 143.6  55
+ 9  42.1/ 41.7/ 16.3                     Blain                Nimon 142.5  33
+10  40.5/ 38.6/ 20.9                NCC-1701-A       Philip Kendall 142.4  70
+11  40.2/ 38.4/ 21.4              Guessed v0.1                  Ian 142.0   7
+12  29.6/ 17.1/ 53.3               Impish v0.2          Ian Oversby 142.0 306
+13  37.7/ 34.6/ 27.8              First Strike                Nimon 140.8  28
+14  33.6/ 27.4/ 39.0                    Gigolo   Core Warrior staff 139.9 321
+15  39.7/ 39.7/ 20.7              Solomon v0.8          Ian Oversby 139.7 113
+16  41.0/ 42.4/ 16.6               Fawkes v0.2          Ian Oversby 139.5   5
+17  30.6/ 24.0/ 45.4           unrequited love                kafka 137.3  14
+18  30.8/ 24.7/ 44.5                    RetroQ              P.Kline 136.8  67
+19  37.9/ 39.1/ 23.0       Damage Incorporated        Anton Marsden 136.8 308
+20  40.2/ 43.9/ 15.9                 myVamp5.4             Paulsson 136.4  17
+21  42.9/ 49.9/  7.1                  Obsidian                Nimon 135.9  27
+22  31.2/ 28.2/ 40.6               Ultraviolet         Ken Espiritu 134.3   4
+23  31.1/ 29.2/ 39.7                Terkonit 3    Christian Schmidt 132.9  10
+24  28.9/ 26.5/ 44.6                Ultra-RQ^2         Ken Espiritu 131.3   5
+25  12.5/ 45.5/ 42.0               Pure Genius           Compudemon  79.5   0
+
+Monthly age: 2 this issue ( 13 last issue, 14 the issue before )
+New warriors: 3  Turnover/age rate 12%
+Average age: 74 ( 72 last issue, 80 the issue before )
+Average score: 139 ( 142 last issue, 138 the issue before )
+The top 25 warriors are represented by 11 independent authors: Oversby with 5;
+Schmidt with 4; Nimon with 3; Espiritu, Kline and Marsden with 2. All others
+with one warrior each.
+
+Electric Head is still on top followed by He Scans Again and Newt.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+??  ??.?/ ??.?/ ??.?                    Test T          Ian Oversby ???.?    1
+14  39.4/ 44.8/ 15.8                   Tranken                  Ian 134.1    0
+25   4.8/ 71.7/ 23.5               Super clone           Compudemon  38.0    1
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   1.5/  1.5/  1.0                    Test T          Ian Oversby   5.6    1
+26   3.6/  0.3/  0.1                   Tranken                  Ian  10.9    0
+26   4.5/ 69.1/ 26.3               Super clone           Compudemon  40.0    0
+
+No significant losses.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+14  33.6/ 27.4/ 39.0                    Gigolo   Core Warrior staff 139.9  321
+19  37.9/ 39.1/ 23.0       Damage Incorporated        Anton Marsden 136.8  308
+12  29.6/ 17.1/ 53.3               Impish v0.2          Ian Oversby 142.0  306
+5   30.7/ 16.7/ 52.6      Return Of The Jedimp             John K W 144.7  267
+
+No new entries.
+______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  unrequited love        kafka              346    Q^2 -> Paper
+ 4  Gigolo                 Core Warrior staff 321 *  Q^2 -> Stone/imp
+ 5  Damage Incorporated    Anton Marsden      306 *  Q^2 -> Bomber
+ 6  Impish v0.2            Ian Oversby        306 *  Stone/imp
+ 7  Falcon v0.3            Ian Oversby        275    P-warrior
+ 8  Return Of The Jedimp   John K W           267 *  Q^2 -> Stone/imp
+ 9  Rosebud                Beppe              218    Stone/imp
+10  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+11  Instant Wolf 3.4       Edgar              205    P-warrior
+12  Goldfinch              P.Kline            201    P-warrior
+13  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+14  Trident^2              John K W           195    Q^2 -> Stone/imp
+15  ompega                 Steven Morrell     189    Stone/imp
+16  Frogz                  Franz              172    Q^2 -> Paper
+17  The Machine            Anton Marsden      164    Scanner
+18  Memories               Beppe              152    Scanner
+19  Tiberius 3.1           Franz              130    Q^2 -> Paper
+20  Nine Seven Six         M R Bremer         131 *  Q^2 -> Stone/imp
+21  Solomon v0.8           Ian Oversby        113 *  Stone and scanner
+22  CC Paper 3.3           Franz              107    Q^2 -> Paper
+23  mrb-test               m r bremer         106    ?
+24  T.N.T. pro             Maurizio Vittuari  105    Bomber
+25  Jack in the box II     Beppe Bezzi        100    P-warrior
+
+No new entries.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+#   %W /  %L /  %T                       Name                Author Score  Age
+ 1  50.2/ 36.8/ 13.0              Guessed v0.1                  Ian 163.6   14
+ 2  50.8/ 38.1/ 11.1             Pentagram 2.a            J.A.Denny 163.4   76
+ 3  47.3/ 34.6/ 18.2                  Hexagram            J.A.Denny 160.0   74
+ 4  40.2/ 25.6/ 34.2                  Sections           Zul Nadzri 154.7   34
+ 5  39.4/ 27.5/ 33.1               Flimsy v0.6          Ian Oversby 151.2   75
+ 6  38.0/ 25.2/ 36.9            Scanitator 3.0    Christian Schmidt 150.8   81
+ 7  35.7/ 21.2/ 43.1                  Dust 7.0           Justin Kao 150.1   54
+ 8  46.3/ 43.1/ 10.5   The Stainless Steel Rat    Christian Schmidt 149.5   97
+ 9  45.6/ 42.7/ 11.7             qDeath v .169         Ryan Coleman 148.4   21
+10  30.5/ 15.1/ 54.4                DemonSpawn            J.A.Denny 145.8   84
+11  43.4/ 44.5/ 12.1             Short Sword 4            JS Pulido 142.4   56
+12  40.6/ 41.0/ 18.4            qbomber v .469         Ryan Coleman 140.2   25
+13  31.8/ 25.0/ 43.1 Six-Finger Discount From          Ryan Coleman 138.6   28
+14  29.4/ 21.4/ 49.2                   Quantum    Christian Schmidt 137.3   78
+15  34.7/ 34.3/ 31.0    If I only had a brain?         Ryan Coleman 135.2   26
+16  30.0/ 25.4/ 44.6 It's a Harmless Addition           Robert Hale 134.6   12
+17  40.9/ 47.5/ 11.6            Scankiller 0.1    Christian Schmidt 134.2   86
+18  39.7/ 45.3/ 15.0             Dwa Michaly b    Waldemar Bartolik 134.2   62
+19  31.3/ 29.8/ 38.9                    Zorm-B            Anonymous 132.7   59
+20  26.5/ 23.2/ 50.3 4-Finger Discount From th         Ryan Coleman 129.8   29
+21  30.0/ 30.3/ 39.7 It's a Harmless Addiction          Robert Hale 129.6   15
+22  28.8/ 30.6/ 40.6          Kohonenian Dream     Robert J. Street 127.1   48
+23  26.4/ 43.8/ 29.8                  Nautilus              Mole IX 109.1    1
+24   5.4/  1.0/  1.6                  Nautilus              Mole IX  17.8    2
+25   5.4/  1.0/  1.6                  Nautilus              Mole IX  17.8    4
+
+Top 25 Averages:
+    34.7/ 30.2/ 27.8                                                131.9   45
+
+______________________________________________________________________________
+
+The Hint
+
+Replicators (part 3)
+
+In the first two parts (issue 1 and 3) Beppe Bezzi discus the basics of
+replicators (called papers) and a way to optimize their constants. But over
+the time new ideas were tried to improve the offensive power of replicators
+(the greatest disadvantage of them) based on new strategies or in different
+ways of optimizing constants.
+
+In this hint I give with three examples only a short overview and how they
+work against some warriors. I hope this will animate to further ideas. You can
+find all of them at Planar's warrior archive.
+
+
+Let's start with kafkas unrequited love (IMPORTANT: I extract only the
+replicator of the appropriate programs for clarity. I hope the authors will
+forgive me these sacrilege) which was based on Beppes paper01o.
+
+;redcode-94
+;name unrequited love
+;author kafka
+;assert 1
+
+ dest0   equ   7889
+ dest1   equ   3602
+ dest2   equ   4095
+ range   equ   1253
+
+ paper   spl   1,      <-300
+         spl   1,      <-400
+         spl   1,      <-500
+
+ silk    spl   @0,     {dest0
+         mov.i }-1,    >-1
+ silk1   spl   @0,     <dest1
+         mov.i }-1,    >-1
+         mov   bomba,  }range
+         mov   {silk1, <silk2
+ silk2   jmp   @0,     >dest2
+ bomba   dat   <2667,  <5334
+
+
+;redcode-94
+;name paper01o
+;author Beppe Bezzi
+;strategy paper module, partially optimized with pmars
+;assert CORESIZE == 8000
+
+dest0   equ     2200
+dest1   equ     3740
+dest2   equ     -1278   ;pmars optimized
+range   equ     933     ;pmars optimized
+
+paper     spl     1,      <300    ;\
+          spl     1,      <400    ;-> generate 8 consecutive processes
+          spl     1,      <500    ;/
+
+silk    spl     @0,     {dest0
+          mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1
+          mov.i   }-1,    >-1
+          mov.i   bomba,  }range
+          mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+end     paper
+
+Kafka optimize the constants of his unrequited love against actual, published
+warriors of the hill. In contrast to Stefan Strack's cdb-macro Beppe described
+in issue 3, which find the best value for spreading, kafkas method can have a
+slightly advantage on the hill. But only as long as the used warriors are on
+the hill.
+
+Another way to improve the offensive power is to increase the number of
+bombing instruction, like in Beppe's huge Maria Trionfale. A smaller but also
+very aggressive one is for example Ian Oversby's Pulp.
+
+;redcode-94
+;name Pulp
+;author Ian Oversby
+;assert 1
+
+dest1   equ     1400    ; For Pulp v0.2
+dest2   equ     5460
+dest3   equ     725
+pos1    equ     930
+pos2    equ     3359
+pos3    equ     1009    ; clear old copies
+
+org paper
+
+paper   SPL.B   1,      <-300
+        MOV.I   -1,     0
+        MOV.I   -1,     0
+        SPL.B   1,      {-300
+
+silk    SPL.B   @0,     >dest1
+        MOV.I   }-1,    >-1
+        MOV.I   bomb,   >pos1
+silk2   SPL.B   @0,     >dest2
+        MOV.I   }-1,    >-1
+        MOV.I   bomb,   >pos2   ; linear bombing
+        MOV.I   bomb,   }pos3   ; anti-vamp
+        MOV.I   {silk2, <silk3
+silk3   JMP.B   @0,     >dest3
+bomb    DAT.F   <2667,  <5334
+
+A complete different strategy used franz, with great success, in his CC
+Paper. He don't throw bombs but he combined in a effective way a replicator
+with a coreclear. The advantage is that every copy starts his own coreclear
+and the chance to kill the opponent by a dat-wipe is much higher than by a
+single bomb.
+
+;redcode-94
+;name CC Paper 2
+;author Franz
+;assert CORESIZE==8000
+
+len EQU 9
+
+fcp EQU 3039
+scp EQU 2365
+tcp EQU 777
+
+
+boot    spl 1,<-3000  ;letz get 9 processes together
+        mov -1,0
+        mov -1,0
+        mov -1,0
+
+frog    spl     @0,     <fcp-len
+        mov     }-1,    >-1
+        spl     @0,     <scp
+        mov     }-1,    >-1
+        spl     @0,     <tcp
+        mov     }-1,    >-1
+        mov     2,      <-1
+        jmp     -1,     <-10
+        dat     <2667,  <2667*2
+datz    end
+
+Now, let's see how well (or worth) they work in 1000 fights against the
+following list of  warriors. As a standard paper is use also J. Pohjalainen's
+TimeScape (1.0)
+
+1) He scans alone (the publicated version, not the actual) (Scanner)
+2) MyVamp 5.4 (Vamp)
+3) Bluefunk (light stone/imp)
+4) Impish v0.2 (heavy stone/imp)
+5) Damage Incorporated (q^2 + stone)
+
+And here is the table of the results
+
+                    HSA         MyVamp      Bluefunk      Impish    Damag Inc.
+
+TimeScape       308-604- 88  376-422-202  204- 27-769   22-  9-969 268-193-539
+                  1012 Pts     1330 Pts     1381 Pts     1035 Pts    1343 Pts
+
+unrequited love 241-674- 85  534-311-155  231- 32-737   60-  3-937 302-219-479
+                   808 Pts     1757 Pts     1430 Pts     1117 Pts    1385 Pts
+
+paper 01o       227-687- 86  461-363-176  219- 43-738   38- 13-949 297-212-491
+                   767 Pts     1559 Pts     1395 Pts     1063 Pts    1382 Pts
+
+Pulp            252-682- 66  524-331-145  337-141-522  170- 28-802 313-350-337
+                   822 Pts     1717 Pts     1533 Pts     1312 Pts    1276 Pts
+
+CC Paper        242-680- 78  508-331-161  325-211-464   97-166-737 335-311-354
+                   804 Pts     1685 Pts     1439 Pts      1028 Pts   1359 Pts
+
+He Scans Alone kick them all. Only TimeScape scores slightly better than the
+rest but he works worther against MyVamp. The other paper win in contrast more
+or less the half of the fights. Against the both Stone/imp-warriors Pulp get
+the most points. And finally against Damage Incorporated no one scores
+significant better. If we compare the unrequited love and paper01o we can see
+a slight advantage of kafka's warrior. Mmmh, it seems to be that unrequited
+love are not only optimized against the warriors which kafka used, but also
+against all other. The strengths of Ian Oversby's Pulp is the good scoring
+against stone/imps. And finally franz's CC Paper shows no significant
+disadvantage and is for my feeling a good all-round paper.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Philip Kendall <pak21@ cam.ac.uk> or
+Anton Marsden <amarsden@mcs.vuw.ac.nz> or Christian Schmidt
+<schmc003@goofy.zdv. uni-mainz.de>

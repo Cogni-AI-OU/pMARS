@@ -3,6 +3,8 @@
 ;
 ;           UMACCP
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 ;        developed by
 ;      De Masi Gabriele
 ;
@@ -469,14 +471,14 @@
            djn     26,             3956
            djn     13,             3968
            djn     0,              3980
-start      mov     w,            @ 2320
-           mov     w,            @ 2831
-           mov     w,            @ 3342
-           mov     w,            @ 3853
-           mov     w,            @ 4364
-           mov     w,            @ 4875
-           mov     w,            @ 5386
-           mov   # 64,             f
+start      mov     w,            @2320
+           mov     w,            @2831
+           mov     w,            @3342
+           mov     w,            @3853
+           mov     w,            @4364
+           mov     w,            @4875
+           mov     w,            @5386
+           mov   #64,             f
            mov     21,             3984
            mov     21,             3984
            mov     21,             3984
@@ -497,24 +499,24 @@ start      mov     w,            @ 2320
            mov     22,             3985
            mov     22,             3985
            mov     22,             3985
-           jmp     3976,
+           jmp     3976
            jmp     2
 cont       dat                     175
 v          djn     r,              f
            mov     w,              r
 obj2       dat                     400
 r          spl                     v
-           mov     obj,          < obj
+           mov     obj,          <obj
            djn     r,              cont
            mov     obj2,           obj
-           add   # 200,            obj2
-           mov   # 175,            cont
+           add   #200,            obj2
+           mov   #175,            cont
 f          jmp     r
-start1     mov   < 0,            @-4005
-           mov   < 0,            @-4236
+start1     mov   <0,            @-4005
+           mov   <0,            @-4236
            jmp    -2
            dat                     0
-k          mov     w,            < pun
+k          mov     w,            <pun
            djn     k,              pun
 w          dat                    -3
 pun        dat                    -99
