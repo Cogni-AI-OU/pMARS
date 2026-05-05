@@ -1,0 +1,45 @@
+Date: Fri, 4 Jul 1997 11:29:22 -0400
+From: Anton Marsden <amarsden@mcs.vuw.ac.nz>
+Subject: Anton's Core War Tournament Round 1 Rules
+
+Round 1 of the tournament involves writing a sorting program.
+
+The program should be written in Redcode ('94 Draft) and the maximum program
+length is 100. It should sort a list of items starting at location 
+ITEMLIST in ascending order. The number of items to sort is ITEMS. Both 
+ITEMLIST and ITEMS will be defined externally to your program. The item 
+list itself will be appended directly to the end of your program when 
+your code is tested (for those who are concerned about memory conflicts). 
+ITEMS will be a value ranging from 0 to CORESIZE/2. Each item is a 
+(value, key) pair where the A-field contains the value and the B-field 
+contains the key (sorting is done using the key). Note that the key can 
+range from 0 to CORESIZE-1 (no negative numbers). When the program 
+terminates, the list of items at ITEMLIST should be sorted by key in 
+ascending order.
+
+Entries will be judged on size (initial program length), speed (cycles before
+termination) and correctness (does it work properly?). The winner will be
+the program with the best size/speed ratio that works. Bonus points will 
+also be given for the fastest working entry and the smallest working 
+entry (so if you aren't confident of winning you might grab a minor bonus 
+point).
+
+Basic scoring method: programs will be ranked according to their size/speed
+ratios. The worst program will be given 1 point, the next best will be given
+2 points, etc. If two programs have the same size/speed ratio they will get
+the same amount of points. Then the fastest program is given 1 point and the
+smallest program is given 1 point. Note that bonus points have a small
+affect on your final score if there are a lot of entries. Programs that don't
+work don't get any points.
+
+If you submit more than one entry, the last entry submitted will be used.
+Anyone may enter the tournament at any stage by submitting an entry. The
+deadline for submissions is Friday July 11 1997. Late entries (before the 
+end of the weekend) will be accepted provided you have a good excuse :-)
+
+Note that each round in the tournament will have an equal affect on your
+total score.
+
+If you need clarification of the rules, just mail me.
+
+Anton.

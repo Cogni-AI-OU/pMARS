@@ -1,0 +1,25 @@
+Date: Fri, 15 Aug 1997 03:38:37 -0400
+From: Anton Marsden <amarsden@mcs.vuw.ac.nz>
+Subject: Anton's Core War Tournament Round 3 Rules
+
+Sorry for being so slow coming up with some rules for round 3. I've been
+very busy lately (and am still very busy). I think some of you will find
+this round fun - it's a little different from anything tried before. Some
+of you may not be able to complete this round properly (especially if you
+don't have access to a PMARS viewer)... and I'm sorry. If you're one of
+these people, send me a mail and I'll organise some alternative rules for
+you.
+ 
+The objective in round 3 is to write a Redcode (same parameters as the '94
+draft hill) program which draws a pretty picture (and perhaps animates it
+too) on the screen. The maximum code size is 100. The standard colours for 
+warrior 0 will be used, ie. green for executing code and cyan for killed
+off processes, and increments/decrements also make "marks" in the viewer.
+Obviously, the picture/animation generated will look different depending
+on the width of your viewer, so when you submit your entry, let me know
+what the width (in instructions) of the viewer you used was.
+ 
+Entries will be judged purely on creativity. Entries are due on Monday,
+25 August, 1997.
+ 
+Anton.
