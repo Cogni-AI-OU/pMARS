@@ -78,6 +78,10 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [pMARS Page](https://corewar.co.uk/pmars.htm)
   - [Index of /pmars/](https://corewar.co.uk/pmars/)
   - [Corewar Hills](https://corewar.co.uk/datagram/hills.html)
+  - [Core War History](https://corewar.co.uk/hist.htm)
+    - [Timeline](https://corewar.co.uk/history.htm) - A brief history of key events and publications.
+    - [Who's Who](https://corewar.co.uk/whoswho.htm) - Biographies of members of the Core War community.
+    - [History of the 94 No Pspace Hill](https://corewar.co.uk/gutzeit/history/94nop.htm) by Jens Gutzeit.
 - **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
   - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html) ([Mirror](https://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html))
 - **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
@@ -133,6 +137,8 @@ The [Core Science](https://corewar.co.uk/science.htm) page maintained by John Me
 - [The Garden: Evolving Warriors in Core Wars](http://www.angio.net/res/garden.html) by David G. Andersen.
 - [An Evolutionary Approach Generates Human Competitive Corewar Programs](https://corewar.co.uk/vowk/alife9ac.pdf) by Barkley Vowk, Alexander Wait, and Christian Schmidt.
 - [Assimilated evolution](https://corewar.co.uk/roosendaal/roosendaal-assimilated-evolution2.doc) by Loren Roosendaal - Defeating new strategies by exploiting predecessors.
+- [Evolving Warriors](https://corewar.co.uk/thorsell/paper.htm) by Linus Thorsell.
+- [Learning By Simulating Evolution Using Corewars](https://corewar.co.uk/coleman/index.htm) by Ryan Coleman.
 
 ### [Digital Red Queen: Adversarial Program Evolution in Core War with LLMs](https://pub.sakana.ai/drq/)
 - **Paper:** [arXiv:2601.03335](https://arxiv.org/abs/2601.03335)
