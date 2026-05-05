@@ -45,5 +45,11 @@
 /* Defined if we're using the X interface */
 #undef XWINGRAPHX
 
+/* Defined if we're using the SDL interface */
+#undef SDLGRAPHX
+
+/* Defined if we're using read/write limits */
+#undef RWLIMIT
+
 /* Defined if we're using X interface and OS has 'usleep' system call */
 #undef HAVE_USLEEP

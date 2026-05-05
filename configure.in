@@ -50,7 +50,26 @@ else
 
   if test "$pmars_display" = "yes"; then
 
-    dnl Use X if we can find it (and the user hasn't disabled it), else
+    dnl Use SDL if requested
+    AC_ARG_ENABLE(sdl,
+      [  --enable-sdl            enable use of SDL display (default=no)],
+      pmars_sdl="$enableval", pmars_sdl="no" )
+
+    if test "$pmars_sdl" = "yes"; then
+      AC_CHECK_PROG(SDL_CONFIG, sdl-config, yes, no)
+      if test "$SDL_CONFIG" = "yes"; then
+        AC_DEFINE(SDLGRAPHX)
+        CFLAGS="$CFLAGS `sdl-config --cflags`"
+        LIBS="$LIBS `sdl-config --libs`"
+        pmars_display="no"
+      else
+        AC_MSG_WARN(sdl-config not found; disabling SDL display)
+        pmars_sdl="no"
+      fi
+    fi
+
+    if test "$pmars_display" = "yes"; then
+      dnl Use X if we can find it (and the user hasn't disabled it), else
     dnl use platform-specific display
     AC_PATH_XTRA
     if test "$no_x" = "yes"; then
@@ -135,6 +154,15 @@ AC_ARG_ENABLE(permutate,
 
 if test "$pmars_permutate" = yes; then
   AC_DEFINE(PERMUTATE)
+fi
+
+dnl Test whether to enable read/write limits (enabled by default)
+AC_ARG_ENABLE(rwlimit,
+  [  --enable-rwlimit        enable read/write limits (default=yes)],
+  pmars_rwlimit="$enableval", pmars_rwlimit="yes" )
+
+if test "$pmars_rwlimit" = yes; then
+  AC_DEFINE(RWLIMIT)
 fi
 
 dnl Test whether to enter debugger on keypress (SysV only, disabled by default)

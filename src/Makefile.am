@@ -28,8 +28,9 @@ bin_PROGRAMS = pmars
 pmars_SOURCES = asm.c cdb.c clparse.c disasm.c eval.c global.c pmars.c pos.c\
 	sim.c str_eng.c token.c
 EXTRA_pmars_SOURCES = alldisp.c curdisp.c grxdisp.c gtdisp.c lnxdisp.c\
-	uidisp.c xgraphio.c xwindisp.c
+	sdldisp.c stddisp.c uidisp.c xgraphio.c xwindisp.c
 
-noinst_HEADERS = asm.h config.h global.h lnxdisp.h pmarsicn.h sim.h xwindisp.h
+noinst_HEADERS = asm.h config.h global.h lnxdisp.h pmarsicn.h pmarsicnsdl.h\
+	sim.h xwindisp.h
 
 EXTRA_DIST = Makefile.djg Makefile.wat
