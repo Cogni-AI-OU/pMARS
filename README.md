@@ -83,6 +83,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
     - [Who's Who](https://corewar.co.uk/whoswho.htm) - Biographies of members of the Core War community.
     - [Hall of Fame](https://corewar.co.uk/hof.htm) and [Hill Logs](https://corewar.co.uk/logs.htm) - Records and activity from the KOTH.org hills.
     - [History of the 94 No Pspace Hill](https://corewar.co.uk/gutzeit/history/94nop.htm) by Jens Gutzeit.
+    - [94 No Pspace Hill](http://www.koth.org/lcgi-bin/current.pl?hill94nop) - Current status of the standard '94 hill at KOTH.org.
     - [New Redcode Opcodes](https://corewar.co.uk/opcodes.htm) - A collection of 140 suggested enhancements to Redcode.
     - [Guerra nuclear: una batalla en tu ordenador](https://www.grafotema.com/agullo/articulos/guerra_nuclear.html) by Nacho Agulló - History of Core War in Spain.
     - [Core War History in Poland](https://corewar.co.uk/ryba/index.htm) by Adam Ryba and [Andrzej Stasiewicz](https://corewar.co.uk/stasiewicz/index.htm).
@@ -141,6 +142,7 @@ The [Core Science](https://corewar.co.uk/science.htm) page maintained by John Me
 - [Evolving Core Warriors](https://corewar.co.uk/hillis/evolving.txt) by Dave Hillis - Experiments with different techniques to improve performance.
 - [The Garden: Evolving Warriors in Core Wars](http://www.angio.net/res/garden.html) by David G. Andersen.
 - [An Evolutionary Approach Generates Human Competitive Corewar Programs](https://corewar.co.uk/vowk/alife9ac.pdf) by Barkley Vowk, Alexander Wait, and Christian Schmidt.
+- [100% Evolved warrior on 94-nop](http://groups.google.com/group/rec.games.corewar/browse_frm/thread/82c3cb75a00ff483) - Barkley Vowk's announcement of the first completely evolved warrior to stick on the 94nop hill.
 - [Assimilated evolution](https://corewar.co.uk/roosendaal/roosendaal-assimilated-evolution2.doc) by Loren Roosendaal - Defeating new strategies by exploiting predecessors.
 - [Evolving Warriors](https://corewar.co.uk/thorsell/paper.htm) by Linus Thorsell.
 - [Learning By Simulating Evolution Using Corewars](https://corewar.co.uk/coleman/index.htm) by Ryan Coleman.
