@@ -1,91 +1,111 @@
-   Corewars - King of the Hill 
+# KOFACOTO Tournament
 
-[![home](http://www.KOTH.org/pics/button-index-off.jpg)](http://www.KOTH.org/index.html)
+The KOFACOTO (KotH Fall Corewar Tournament) was held in 2000, sponsored by TTSG Internet Services and presented by www.KOTH.org. It featured several preliminary rounds followed by playoffs, with a total prize pool of $850.
 
- 
+This directory archives the KOTH Fall Core War Tournament (KOFACOTO), based on the tournament home page at [kofacoto](http://www.koth.org/kofacoto/).
 
- 
+## Final Results
 
-[![koth](http://www.KOTH.org/pics/button-koth-off.jpg)](http://www.KOTH.org/koth.html)
+1. **Robert Macrae**
+2. Michal Janeczek
+3. David Moore
 
-[![info](http://www.KOTH.org/pics/button-info-off.jpg)](http://www.KOTH.org/info.html)
+## Rounds
 
-[![links](http://www.KOTH.org/pics/button-links-off.jpg)](http://www.KOTH.org/links.html)
+- [Round 01: White Warrior](./Round_01/README.md)
+- [Round 02: Multiwarrior Melee](./Round_02/README.md)
+- [Round 03](./Round_03/README.md)
+- [Round 04](./Round_04/README.md)
+- [Round 05](./Round_05/README.md)
+- [Round 06](./Round_06/README.md)
+- [Round 07](./Round_07/README.md)
 
-[![Newsgroup](http://www.KOTH.org/pics/button-newsgroup-off.jpg)](http://www.KOTH.org/newsgroup.html)
+## Prizes
 
-[![Feedback](http://www.KOTH.org/pics/button-feedback-off.jpg)](http://www.KOTH.org/feedback.html)
+$500 for first, $250 for second, $100 for third!
 
-[![kofacoto!](http://www.KOTH.org/kofacoto/kofacoto.jpg)](http://www.KOTH.org/kofacoto)
+## General Information
 
-[KOFACOTO is over!](results7.md)
+I've received several more questions about the KOFACOTO... here's some more info to answer everyone:
 
-1st: Robert Macrae  
-2nd: Michal Janeczek  
-3rd: David Moore
+### Entry
 
-KOFACOTO was sponsored by [TTSG Internet Services](http://www.ttsg.com)! Thanks to Tuc for making this happen!
+There is no requirement for entry into the tournament other than submitting a warrior for at least 1 of the preliminary rounds. Once you've submitted a warrior, by emailing it to jkw@koth.org, you're in.
 
-[TTSG Internet Services](http://www.ttsg.com) will be awardeding the following prizes! Woo! $500 for first, $250 for second, $100 for third!
+### Scoring
 
-Presented by [www.KOTH.org](http://www.KOTH.org), Tuc, and JKW... :)
+As for the points scored per round, the person earning the best winning score will receive 1000 points in round 1. Everyone else will receive a score normalized to 1000, so if the best program got 500 pts against the white warrior, and you got 400 pts against the white warrior, the best one receives 1000 pts, and you receive 800.
 
-Thanks to all who participated. Robert Macrae gave me some fairly in-depth comments on his warrior choices for the finals. I've linked them at the bottom under 'comments' for rounds 5,6,7... If anyone else would like to do send me in depth comments, please send them my way.
+The number of pts for round 2 might change to be more or less than 1000...
 
-\-jkw
+### Rounds
 
----
+I haven't decided on the number of initial rounds. I haven't decided on the exact number of rounds, but there will be 4 at the very least, I should think, possibly up to 8? I'd like some feedback on that if people have preferences.
 
-[Here's the total scores for each player, from the first 4 preliminary rounds.](totals.md)
+### Submissions
 
----
+You may submit as many warriors as you want to me. Only the last one will be used. I won't be running any simulations until after the deadline, this Sunday at midnight.
 
-[Updated Information](info.md) - Q&A from the [Corewars listserv](http://www.KOTH.org/newsgroup.html).
+**ATTN:** For your entries, please place your full name on the ";author" line of your warrior.
 
----
+Some people felt uneasy using someone else's unedited warrior. I assure you there's nothing wrong with this. If your submission is truly identical to a previously published warrior, it'd be nice if you put that in the comments of the warrior. But for Round 2, I think it's highly unlikely people will be using previously published warriors. I guess it's possible though, hehe.
 
-[Rules Round 1](rules1.md) - Due Sunday, Oct 8th midnight, CST  
-[Results Round 1](results1.md)  
-[Warriors Round 1](warriors/round1)  
-[Comments Round 1](comments1.md)
+### Publishing
 
----
+No one (including me) has mentioned anything about publishing warriors. I intend to post all the warriors that were submitted for Round 1. If anyone has objections let me know ASAP.
 
-[Rules Round 2](rules2.md) - Due Sunday, Oct 22nd midnight, CST  
-[Results Round 2](results2.md)  
-[Warriors Round 2](warriors/round2)
+## Total Scores (First 4 Preliminary Rounds)
 
----
+| Name | Score |
+| :--- | :--- |
+| janeczek | 3614 |
+| moore | 3256 |
+| liporati | 2874 |
+| macrae | 2868 |
+| p.kline | 2867 |
+| schmidt | 2761 |
+| paulsson | 2723 |
+| ford | 1736 |
+| gunnell | 1654 |
+| guenzel | 1399 |
+| karonen | 1184 |
+| stefan | 1094 |
+| hillis | 1089 |
+| yeager | 1015 |
+| pihlaja | 895 |
+| nevermind | 630 |
+| chakrabarti | 605 |
+| adamowski | 553 |
+| khuong | 538 |
+| metcalf | 478 |
+| kacza | 345 |
+| ankerl | 227 |
+| chin | 184 |
 
-[Rules Round 3](rules3.md) - Due Sunday, Oct 29th midnight, CST  
-[Results Round 3](results3.md)  
-[Warriors Round 3](warriors/round3)  
-[Followup... p^3 information](followup3.md)
+## Source Links
 
----
-
-[Rules Round 4](rules4.md) - Due Sunday, Nov 5th midnight, CST  
-[Results Round 4](results4.md)  
-[Warriors Round 4](warriors/round4)
-
----
-
-[Rules Round 5 (Quarterfinals)](rules5.md) - Due Sunday, Nov 12th midnight, CST  
-[Results Round 5](results5.md)  
-[Warriors Round 5](warriors/round5)  
-[Comments Round 5](comments5.md)
-
----
-
-[Rules Round 6 (Semifinals)](rules6.md) - Due Sunday, Nov 19th midnight, CST  
-[Results Round 6](results6.md)  
-[Warriors Round 6](warriors/round6)  
-[Comments Round 6](comments6.md)
-
----
-
-[Round 7 (Finals)](results7.md)  
-[Warriors Round 7](warriors/round7)  
-[Comments Round 7](comments7.md)
-
----
+- [Tournament home page](http://www.koth.org/kofacoto/)
+- [Total scores](http://www.koth.org/kofacoto/totals.html)
+- [Updated information](http://www.koth.org/kofacoto/info.html)
+- [Round 1 rules](http://www.koth.org/kofacoto/rules1.html)
+- [Round 1 results](http://www.koth.org/kofacoto/results1.html)
+- [Round 1 warriors](http://www.koth.org/kofacoto/warriors/round1)
+- [Round 2 rules](http://www.koth.org/kofacoto/rules2.html)
+- [Round 2 results](http://www.koth.org/kofacoto/results2.html)
+- [Round 2 warriors](http://www.koth.org/kofacoto/warriors/round2)
+- [Round 3 rules](http://www.koth.org/kofacoto/rules3.html)
+- [Round 3 results](http://www.koth.org/kofacoto/results3.html)
+- [Round 3 warriors](http://www.koth.org/kofacoto/warriors/round3)
+- [Round 3 followup](http://www.koth.org/kofacoto/followup3.html)
+- [Round 4 rules](http://www.koth.org/kofacoto/rules4.html)
+- [Round 4 results](http://www.koth.org/kofacoto/results4.html)
+- [Round 4 warriors](http://www.koth.org/kofacoto/warriors/round4)
+- [Round 5 rules](http://www.koth.org/kofacoto/rules5.html)
+- [Round 5 results](http://www.koth.org/kofacoto/results5.html)
+- [Round 5 warriors](http://www.koth.org/kofacoto/warriors/round5)
+- [Round 5 comments](http://www.koth.org/kofacoto/comments5.html)
+- [Round 6 rules](http://www.koth.org/kofacoto/rules6.html)
+- [Round 6 warriors](http://www.koth.org/kofacoto/warriors/round6)
+- [Round 6 comments](http://www.koth.org/kofacoto/comments6.html)
+- [Round 7 warriors](http://www.koth.org/kofacoto/warriors/round7)
+- [Round 7 comments](http://www.koth.org/kofacoto/comments7.html)

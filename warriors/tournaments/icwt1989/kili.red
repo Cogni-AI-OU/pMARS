@@ -3,6 +3,8 @@
 ;
 ;            KILI
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 ;        developed by
 ;      Botta Francesco
 ;   & Gramenzi Pieramato
@@ -15,38 +17,38 @@ start      mov     w1,          @-2304
            mov     w1,          @-4869
            mov     w1,          @-5382
            mov   #-2,             j
-a          jmn   < 0,           @ uno
-b          jmn   < 0,           @ due
-c          jmn   < 0,           @ tre
-d          jmn   < 0,           @ quattro
+a          jmn   <0,           @uno
+b          jmn   <0,           @due
+c          jmn   <0,           @tre
+d          jmn   <0,           @quattro
            djn     a,             cont
            jmp     escape
 cont       dat                    25
-c1         mov   @ a,             tar
+c1         mov   @a,             tar
            add     a,             tar
            jmp     copia
-c2         mov   @ b,             tar
+c2         mov   @b,             tar
            add     b,             tar
            jmp     copia
-c3         mov   @ c,             tar
+c3         mov   @c,             tar
            add     c,             tar
            jmp     copia
-c4         mov   @ d,             tar
+c4         mov   @d,             tar
            add     d,             tar
-copia      add   # 50,            tar
-           mov     20,          < tar
-           mov     18,          < tar
-           mov     16,          < tar
-           mov     14,          < tar
-           mov     12,          < tar
-           mov     10,          < tar
-           mov     8,           < tar
-           mov     6,           < tar
-           mov     4,           < tar
-           mov     2,           < tar
-           jmp   @ tar
-fire       mov   @ w1,          < pun
-           mov   @ w2,          < pun
+copia      add   #50,            tar
+           mov     20,          <tar
+           mov     18,          <tar
+           mov     16,          <tar
+           mov     14,          <tar
+           mov     12,          <tar
+           mov     10,          <tar
+           mov     8,           <tar
+           mov     6,           <tar
+           mov     4,           <tar
+           mov     2,           <tar
+           jmp   @tar
+fire       mov   @w1,          <pun
+           mov   @w2,          <pun
            djn     fire,          pun
            dat                   -9
 pun        dat                   -9
@@ -57,8 +59,8 @@ w1         dat                    1
 j          jmp    -1
 tar        dat                    4096
 escape     mov   #-27,            j1
-           mov   # 20,            j2
-           mov   # 741,           conta
+           mov   #20,            j2
+           mov   #741,           conta
            mov     21,            4096
            mov     21,            4096
            mov     21,            4096
@@ -85,16 +87,16 @@ v          djn     piu,           quanti
            mov     quanti,        piu
 quanti     dat                    64
 piu        spl                    v
-           mov     targ,        < targ
+           mov     targ,        <targ
 conta      jmp     piu
-j2         jmp   @ 0
-j1         jmp   @ 0
-scan       mov     j1,          @ j2
-           mov     j2,          < j1
-           add   # 11,            j2
-           sub   # 10,            j1
+j2         jmp   @0
+j1         jmp   @0
+scan       mov     j1,          @j2
+           mov     j2,          <j1
+           add   #11,            j2
+           sub   #10,            j1
            djn     scan,          conta
-k          mov     w3,          < dove
+k          mov     w3,          <dove
            djn     k,             dove
 w3         dat                   -5
 dove       dat                   -17
