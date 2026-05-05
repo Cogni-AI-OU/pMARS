@@ -29,3 +29,4 @@ jobs:
         run: |
           chmod +x bin/pmars
           ./bin/pmars -A warriors/validate.red
+          make -C tests/tournaments/icwt1989 test
