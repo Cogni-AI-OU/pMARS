@@ -461,11 +461,12 @@ agets5(str, maxchar, attr)
           str--;
           maxchar++;
           leaveok(curwin, TRUE);
-          if (ox = curwin->_curx) {
-            mvwaddch(curwin, curwin->_cury, --ox, ' ');
-            wmove(curwin, curwin->_cury, ox);
+          getyx(curwin, oy, ox);
+          if (ox) {
+            mvwaddch(curwin, oy, --ox, ' ');
+            wmove(curwin, oy, ox);
           } else {
-            oy = curwin->_cury - 1;
+            oy--;
             mvwaddch(curwin, oy, COLS - 1, ' ');
             wmove(curwin, oy, COLS - 1);
           }
@@ -477,7 +478,7 @@ agets5(str, maxchar, attr)
         leaveok(curwin, TRUE);
         for (getyx(curwin, oy, ox); str > ostr; str--, maxchar++) {
           if (ox--)
-            mvwaddch(curwin, curwin->_cury, ox, ' ');
+            mvwaddch(curwin, oy, ox, ' ');
           else
           mvwaddch(curwin, oy, ox = COLS, ' ');
         }
