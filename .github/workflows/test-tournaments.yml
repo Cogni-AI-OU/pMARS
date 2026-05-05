@@ -1,4 +1,4 @@
-name: Test
+name: Test Tournaments
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
       upload-artifact: true
 
   test:
-    name: Test
+    name: Tournament Tests
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
         with:
           name: pmars-Server
           path: bin/
-      - name: Run test
+      - name: Run ICWT tests
         run: |
           chmod +x bin/pmars
-          ./bin/pmars -A warriors/validate.red
+          find warriors/tournaments/icwt* -name "*.red" -exec ./bin/pmars -A {} + > /dev/null
