@@ -1,3 +1,4 @@
+;assert CORESIZE==8192
 ;
 ;    Warrior: DAC - Divide and Conquer
 ;  File name: dac.red

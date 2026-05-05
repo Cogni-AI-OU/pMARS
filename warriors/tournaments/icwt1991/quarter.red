@@ -1,9 +1,10 @@
 ; QUARTER by Stefan Hänßgen
 ; 5th place in 1991 ICWS Tournament
 ;
-z1      DAT              2062    ; Pointer to copies
-z2      DAT              4110
-z3      DAT              6158
+;assert CORESIZE==8192
+z1      DAT #0, #2062
+z2      DAT #0, #4110
+z3      DAT #0, #6158
 
 start   MOV     kill,  < z2      ; Copy one killer
         MOV     loop,  < z2      ; .. and ..

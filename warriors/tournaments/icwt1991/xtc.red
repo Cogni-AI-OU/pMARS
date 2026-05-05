@@ -28,6 +28,7 @@
 ; All this makes XTC my warrior of choice. :-)
 ; Please start XTC at the label 'loop'.
   
+;assert CORESIZE==8192
 loop  add #412, ptr
 ptr   jmz loop, trap
       mov ptr,  dest
@@ -35,17 +36,17 @@ cnt   mov #23,  cnt
 kill  mov @trap, <dest
       djn kill, cnt
       jmp loop
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-dest  dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-trap  dat bomb
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+dest  dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+trap  dat #bomb, #0
 bomb  spl trap, trap
