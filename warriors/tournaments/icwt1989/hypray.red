@@ -3,6 +3,8 @@
 ;
 ;           HYPRAY
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 ;        developed by
 ;      Botta  Francesco
 ;

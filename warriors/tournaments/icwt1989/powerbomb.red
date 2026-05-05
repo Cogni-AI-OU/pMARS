@@ -1,5 +1,7 @@
 ; Power Bomb
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 ; Author: Bram Cohen
 ;
 GLANCE   ADD  #412,              OUTPTR

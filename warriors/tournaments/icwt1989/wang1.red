@@ -1,6 +1,8 @@
 ;    Wang1
 ;    by Alan Wang
-
+;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 start  mov #-1,             sbeg   ;  set up counts for
        mov #-256,           dbeg   ;  self-copying
        mov #12,            left

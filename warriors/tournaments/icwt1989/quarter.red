@@ -1,5 +1,7 @@
 ; QUARTER by Stefan Haenssgen
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 z1      DAT              2062    ; Pointer to copies
 z2      DAT              4110
 z3      DAT              6158

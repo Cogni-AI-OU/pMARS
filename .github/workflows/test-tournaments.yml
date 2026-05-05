@@ -1,6 +1,16 @@
 name: Tournament Tests
 
 on:
+  push:
+    paths:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
+  pull_request:
+    paths:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
   workflow_dispatch:
   pull_request_review:
     types: [submitted]

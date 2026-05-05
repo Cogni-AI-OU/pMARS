@@ -1,5 +1,7 @@
 ;Random Fire
 ;
+; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+;
 ; Author: Bram Cohen
 ;
 ;
