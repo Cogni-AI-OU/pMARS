@@ -22,4 +22,4 @@ This directory contains a simulation of the Fifth Annual International Core Wars
 3rd: Ecstacy by Stefan Röttger
 
 ## Simulation Results
-The simulation results may vary slightly from the historical results due to differences in the `pMARS` simulator version and the randomness of starting positions.
+The simulation uses the `-f` (fixed) flag in `pMARS` to ensure deterministic and reproducible results. While historical scores might vary slightly due to minor `pMARS` implementation differences, the standings should be consistent.

@@ -40,7 +40,7 @@ for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
     for ((j=i+1; j<${#ALL_WARRIORS[@]}; j++)); do
         w1=${ALL_WARRIORS[$i]}
         w2=${ALL_WARRIORS[$j]}
-        output=$($PMARS -8 -s 8192 -p 64 -l 64 -c 125000 -r 6 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
+        output=$($PMARS -f -8 -s 8192 -p 64 -l 64 -c 125000 -r 6 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>&1)
         results_line=$(echo "$output" | grep "Results:")
         if [ -z "$results_line" ]; then
             echo "Error running $w1 vs $w2. Output:"
