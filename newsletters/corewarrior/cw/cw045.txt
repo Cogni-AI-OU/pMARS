@@ -1,0 +1,284 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 45                                                   September 30, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Greetings.
+
+A good week for corewar.  There were over a 100 challenges for the the '94
+draft hill, testing and otherwise.  Looks like weekly ages of under 20 are
+going to be pretty standard.  It's going to be monumentally difficult to
+enter the hall of fame.  Bezzi mentioned last issue that Steven Morrell was
+offering to recalculate the HOF by eliminating artificial aging, but we need
+to specify exactly how to do this.  Since I haven't seen much discussion on
+this in the newsgroup, maybe Morrell should use his best judgement and
+present us with the 'new' hall of fame.  There will probably be lots of
+discussion as soon as one of us sees our warrior drop ten places!  Speak now
+or forever hold your peace (piece?).
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  37.4/ 19.4/ 43.2                    Gigolo   Core Warrior staff 155.5   14
+ 2  42.6/ 34.1/ 23.2       Damage Incorporated        Anton Marsden 151.1    1
+ 3  35.5/ 21.1/ 43.4           unrequited love                kafka 149.8   58
+ 4  40.5/ 31.8/ 27.6                CC Paper 2                Franz 149.2   13
+ 5  42.1/ 39.6/ 18.3                    Blur 2        Anton Marsden 144.6  137
+ 6  31.4/ 18.6/ 50.0                   Rosebud                Beppe 144.1  811
+ 7  40.3/ 38.6/ 21.1                     Probe        Anton Marsden 142.1  138
+ 8  40.4/ 39.6/ 20.0                 Goldfinch              P.Kline 141.2   79
+ 9  36.9/ 33.2/ 29.9                     Frogz                Franz 140.5   18
+10  26.7/ 14.5/ 58.8      Return Of The Jedimp             John K W 138.8  126
+11  25.7/ 12.9/ 61.3                    ompega       Steven Morrell 138.5  253
+12  41.7/ 45.8/ 12.5                  Q^2 Miro         Anders Ivner 137.7  188
+13  29.2/ 20.7/ 50.2               Impish v0.1          Ian Oversby 137.7   15
+14  32.7/ 28.1/ 39.2              Simple v0.4b          Ian Oversby 137.4   89
+15  37.6/ 38.5/ 23.9                      Test        Anton Marsden 136.7   48
+16  25.0/ 13.4/ 61.7          Implication v0.3          Ian Oversby 136.6    6
+17  32.1/ 29.1/ 38.8               Falcon v0.3          Ian Oversby 135.0   43
+18  39.6/ 44.9/ 15.5              Taking Names              P.Kline 134.4    3
+19  36.7/ 39.8/ 23.6                  mrb-test           m r bremer 133.6   44
+20  36.2/ 38.9/ 24.9               Inferno 2.4       Philip Kendall 133.5   16
+21  36.5/ 39.7/ 23.8          Instant Wolf 3.4                Edgar 133.2   21
+22  34.7/ 36.7/ 28.6                T.N.T. pro    Maurizio Vittuari 132.7  856
+23  38.0/ 43.4/ 18.5                 myVamp5.5             Paulsson 132.6   28
+24  31.7/ 31.6/ 36.7        Jack in the box II          Beppe Bezzi 131.9  495
+25  26.8/ 24.1/ 49.1                Papyrus 13           Justin Kao 129.6    2
+
+Weekly age: 13 ( 15 last issue, 9 the month before ) more than 100 tests
+New warriors: 8  Turnover/age rate 53%
+Average age:   140 ( 146 last issue, 174 the week before )
+Average score: 140 ( 142 last issue, 136 the week before )
+The top 25 warriors are represented by 16 authors:  Marsden and Oversby
+with 4; Franz and Bezzi with 2; singles for everyone else.
+
+Testing, testing, testing . . . over 100 tests this week.  Unfortunately for
+some authors (the gigolos), a test warrior can score a lot higher than the
+real warrior.  You have been warned.  Franz was probably the biggest tester
+this week, followed by JKW and Marsden.
+
+Q^2 scans to bomber/imps seem to be the play of the day, but CC Paper 2 is
+bucking the trend.  40% wins is pretty good for a replicator.  The power of
+the qscan is amazing.
+
+Kline was testing some new warriors on the hill this week:  Harmony III and
+a table based switcher--Yogi's replacement most likely.  Neither have climbed
+too far up the hill by Paul has a way of chipping at a problem.
+
+Damage Incorporated makes a strong showing, debuting in the second spot.  The
+secret to its success?  Qscan -> bomber.  Try it; You'll like it.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 2  42.1/ 31.4/ 26.5                CC Paper 2                Franz 152.8    1
+14  20.5/ 12.2/ 67.3          Implication v0.3          Ian Oversby 128.9    1
+24  37.0/ 48.3/ 14.7              Taking Names              P.Kline 125.8    1
+24  25.2/ 24.5/ 50.4                Papyrus 13           Justin Kao 125.9    1
+ 2  42.6/ 34.1/ 23.2       Damage Incorporated        Anton Marsden 151.1    1
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   1.7/  1.9/  0.4                  CC Paper                Franz   5.6    5
+26  35.6/ 45.0/ 19.4          BackFromVacation                Edgar 126.3   19
+26   0.3/  0.3/  3.4              Flimsy v0.5c          Ian Oversby   4.3   14
+26  31.4/ 40.6/ 28.0                 Yogi Bear              P.Kline 122.3  341
+26  35.8/ 47.7/ 16.4           Earthquake v0.2         Bjoern & Ian 123.9   95
+
+With the loss of Yogi Bear this week, and Twister and Armory last week,
+average age of the hill is heading down and will probably never recover as
+old pre-test warrior are pushed off.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+21  36.1/ 39.0/ 24.9                T.N.T. pro    Maurizio Vittuari 133.2  856
+ 9  31.5/ 19.7/ 48.8                   Rosebud                Beppe 143.2  811
+17  33.8/ 30.3/ 35.9        Jack in the box II          Beppe Bezzi 137.2  495
+16  25.1/ 12.6/ 62.3                    ompega       Steven Morrell 137.6  253
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  T.N.T. pro             Maurizio Vittuari  856 *  Bomber
+19  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Rosebud                Beppe Bezzi        811 *  Stone/ imp
+20  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+Rosebud climbs one rank.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+The current Beginner hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  51.2/ 36.5/ 12.3          nSplit Lite v1.2                 shar 165.8   30
+ 2  50.1/ 38.3/ 11.6                 Throw Rug             J E Long 161.9   66
+ 3  41.1/ 25.8/ 33.1                  Sapphire       Philip Kendall 156.5    1
+ 4  45.8/ 37.8/ 16.4          Velveeta Shift-I                 shar 153.8   42
+ 5  46.9/ 40.7/ 12.4       Violent Micro v0.4d             basehead 153.0   80
+ 6  39.3/ 26.7/ 34.0                 Gravel 11           Justin Kao 151.9    3
+ 7  41.5/ 33.5/ 25.0           Versatility 1.6                 Ross 149.4   78
+ 8  43.5/ 38.5/ 18.0               Heretic 1.0       Philip Kendall 148.5   91
+ 9  43.8/ 39.2/ 17.0             Flamberge 9.0        Matt Lewinski 148.4    2
+10  41.6/ 35.2/ 23.2                Black v0.1           Justin Kao 147.9   81
+11  43.6/ 39.6/ 16.8           BloodSucker 1.0       Philip Kendall 147.7   90
+12  36.9/ 26.7/ 36.4                Papyrus 13           Justin Kao 147.1    4
+13  38.8/ 30.8/ 30.4              FastScan 1.0       Philip Kendall 146.8   22
+14  45.4/ 45.0/  9.6                  Hawk 1.0       Philip Kendall 145.8   63
+15  42.9/ 40.8/ 16.3                  Eagle.b1       Philip Kendall 144.9    7
+16  36.7/ 28.5/ 34.8                 Papyrus 6           Justin Kao 144.9   97
+17  44.0/ 43.6/ 12.4   Neverending Brutality 7                Franz 144.3   57
+18  43.3/ 44.4/ 12.3               Conquest II           Zul Nadzri 142.1   23
+19  39.0/ 37.4/ 23.7               Inferno 2.3       Philip Kendall 140.6   67
+20  37.1/ 38.4/ 24.5                  murder.p             harleyQ2 135.9   24
+21  35.1/ 34.5/ 30.4           Hammermill v2.4        Matt Lewinski 135.8   38
+22  35.0/ 34.4/ 30.6                      Frog                Franz 135.5   44
+23  35.6/ 38.5/ 25.8                       RSB             harleyQ2 132.7   51
+24  37.5/ 42.3/ 20.2             Vampirism 1.4       Philip Kendall 132.6   84
+25  37.6/ 55.7/  6.7                    Rex II                Franz 119.4    6
+
+Top scores plunge from the 170+ the top three warriors had last week.  With
+the loss of the successful Tsunami, you would think some warriors would get
+big boosts to their scores.  But new programs by Kendall, Kao, and Lewinski
+have only made the hill more competitive.
+______________________________________________________________________________
+The Hint
+Qscan bombing engines
+by M R Bremer
+
+Q^2 scans are optimized to detect the opposing warrior's footprint as quickly
+as possible.  But a quick detect and decode does little if your bombing
+methodology is flawed.  I made that mistake with mrb-test (which will never
+have a real name because it doesn't deserve one).  Once the qscan finds the
+location, I subtract 100 and bomb through the scan to location+100.  Pretty
+dumb, huh?  The highest probability of enemy code should lie close to the
+originally scanned location.  So here are some thoughts on bombing engines
+that should be much more successful.
+
+Bomb forward from target-CONSTANT and target:
+qbomb   dat     1, -CONSTANT
+...
+loop    mov.i   qbomb, @1
+        mov.i   qbomb, @target        <-- detected location
+        add.ab  #x, -1
+        djn.b   loop, #10
+
+Everything following the target gets bombed quickly.  However, code
+immediately above will be hit much more slowly.  If your qscan flows forward
+through core in small increments, then this will be less of a problem.
+Becuase a smaller increment qscan scanning forward in core should find the
+'top' of the enemy's code.
+
+Bomb forward and backwards from target:
+qbomb   dat     -step, step
+found   dat     x, x+step
+
+;this one bombs x and x+step then x-step and x+2*step ...
+...
+loop    mov     qbomb, @found
+        mov     qbomb, *found
+        add.f   qbomb, found
+        djn.b   loop, #10
+
+This code is slower to start up because of the extra add statement needed to
+set up the operands of 'found' instruction.
+
+Going faster is possible using a tornado engine, but we'll lose symmetry.
+Which may not be too bad since instructions above the target are arguably
+worth 'less' than instructions below it.  This code snippet bombs down in
+core at .4c and up at .2c.  We could even modify this code for incendiary
+bombing forward in core.
+
+bomb    dat x, step
+incr    dat -step, 2*step
+
+
+start   mov bomb, @ptr
+        mov bomb, *ptr
+ptr     mov -step, @step
+        add incr, -1
+        djn -5, #10
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

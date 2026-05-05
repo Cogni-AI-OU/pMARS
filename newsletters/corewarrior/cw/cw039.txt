@@ -1,0 +1,413 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 39                                                         July 22, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+______________________________________________________________________________
+Greetings.
+
+The '94 draft hill is quiet this week, as Pizza was (is?) down.  My mail is
+currently bouncing off the server.  Hopefully the problems will be fixed soon
+and service restored.  All the Stormking hills are open and with noticeably
+faster response times.  You can satisfy your corewar craving there.  Enjoy.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  39.6/ 25.6/ 34.8              Simple v0.4b          Ian Oversby 153.7   12
+ 2  29.3/ 13.1/ 57.6      Return Of The Jedimp             John K W 145.4   49
+ 3  41.2/ 37.8/ 21.0                     Probe        Anton Marsden 144.7   61
+ 4  33.2/ 23.7/ 43.1                 Armory II             John K W 142.8  200
+ 5  43.4/ 45.8/ 10.8                  Q^2 Miro         Anders Ivner 141.1  111
+ 6  39.4/ 38.7/ 21.9                 Yogi Bear              P.Kline 140.1  265
+ 7  41.4/ 42.8/ 15.8                 Goldfinch              P.Kline 140.1    2
+ 8  41.5/ 43.2/ 15.4                      Mist              P.Kline 139.8    1
+ 9  41.6/ 43.6/ 14.8                    Blur 2        Anton Marsden 139.7   60
+10  33.1/ 28.1/ 38.8                 Pulp v0.2          Ian Oversby 138.2  156
+11  40.7/ 43.6/ 15.7                 myVamp5.4             Paulsson 137.7  109
+12  40.1/ 43.4/ 16.5           Earthquake v0.2         Bjoern & Ian 136.8   18
+13  30.6/ 24.4/ 45.0                   Rosebud                Beppe 136.7  734
+14  37.8/ 39.4/ 22.8                T.N.T. pro    Maurizio Vittuari 136.2  779
+15  26.4/ 17.0/ 56.6                    ompega       Steven Morrell 135.8  176
+16  37.1/ 39.3/ 23.6                 Dura v0.1          Ian Oversby 135.0   90
+17  29.9/ 26.9/ 43.2          blue flame c1/10       bjoern guenzel 133.0   45
+18  31.5/ 30.8/ 37.7        Jack in the box II          Beppe Bezzi 132.1  418
+19  36.2/ 40.7/ 23.2 Paper, Scissors and Stone        David van Dam 131.6  189
+20  36.8/ 43.3/ 19.9                   Twister          Beppe Bezzi 130.3  515
+21  35.4/ 40.9/ 23.7                    airBag             Paulsson 129.9  102
+22  31.7/ 33.4/ 34.9            the historian        bjoern guenzel 129.9  534
+23  35.2/ 40.7/ 24.1                Scimitar 2              P.Kline 129.7  127
+24  36.9/ 46.2/ 16.9                   Harmony              P.Kline 127.5   26
+25  37.3/ 49.4/ 13.3                 test mef2          Beppe Bezzi 125.2    9
+
+
+Weekly age: 31 ( 84 last week, 90 the week before )
+New warriors:  6 Turnover/age rate 19%
+Average age:   191 ( 184 last week, 158 the week before )
+Average score: 137 ( 141 last week, 141 the week before )
+The top 25 warriors are represented by 11 authors: Kline with 5; Bezzi,
+and Oversby with 4; Guenzel with 3; JKW, Marsden, and Paulsson with 2.
+
+King Report: The top 3 warriors have all been vying for the top slot, but
+Ian's new Simple version 0.4b is slightly more effective than the previous
+version giving Oversby a commanding 8 point lead over second place.  Other
+warriors seen on the top of the hill include Mist (quite a few times) and
+Q^2 Miro and Blur 2 (once each).
+
+Most of the veterans are in the middle of the pack.  Twister and the
+historian have not recovered and are in danger of being pushed off.  Armory
+gets a nice boost since last week moving up to the 4th position.
+
+Question of the day:  Is Macrae going to put a Q^2 scan on Thermite and take
+up space on the hill for months to come?  Or has someone already beat him to
+it?
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 6  42.1/ 42.3/ 15.6                 Goldfinch              P.Kline 141.9    1
+ 8  41.5/ 43.2/ 15.4                      Mist              P.Kline 139.8    1
+ 1  36.4/ 26.0/ 37.5              Simple v0.4b          Ian Oversby 146.8    1
+18  38.9/ 44.1/ 16.9                   Harmony              P.Kline 133.7    1
+25  38.0/ 49.9/ 12.1                 test mef2          Beppe Bezzi 126.1    1
+13  41.4/ 42.2/ 16.4           Earthquake v0.2         Bjoern & Ian 140.6    1
+
+Goldfinch was hanging around in the middle of the pack until Paul decided to
+replace it.  The new warrior is holding its place well in the top ten.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   1.8/  2.1/  0.0                 Goldfinch              P.Kline   5.5  206
+26   1.3/  1.5/  1.2                   Harmony              P.Kline   5.1    8
+26   1.6/  1.7/  0.7                      Mist              P.Kline   5.4   30
+26   1.2/  1.3/  1.6               Simple v0.4          Ian Oversby   5.1  146
+26  24.0/ 23.7/ 52.3    Ties, Ties, Ties! (+3)   Ross Morgan-Linial 124.4    2
+26  33.5/ 42.4/ 24.1                   Goliath        David van Dam 124.7  181
+
+Kline revamps three of his warriors while Oversby updates sometime-king
+Simple.  The only real loss is van Dam's Goliath.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+14  37.8/ 39.4/ 22.8                T.N.T. pro    Maurizio Vittuari 136.2  779
+13  30.6/ 24.4/ 45.0                   Rosebud                Beppe 136.7  734
+22  31.7/ 33.4/ 34.9            the historian        bjoern guenzel 129.9  534
+20  36.8/ 43.3/ 19.9                   Twister          Beppe Bezzi 130.3  515
+18  31.5/ 30.8/ 37.7        Jack in the box II          Beppe Bezzi 132.1  418
+
+No new entries.  No losses.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+19  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+20  T.N.T. pro             Maurizio Vittuari  779 *  Bomber
+21  Blue Funk 3            Steven Morrell     766    Stone/ imp
+22  Night Train            Karl Lewin         755    Replicator
+23  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+24  Rosebud                Beppe              734 *  Stone/ imp
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+T.N.T. pro moves up two spots while Rosebud climbs to 24th position.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  58.3/ 20.9/ 20.8                    Yet 4b           Justin Kao 195.8   48
+ 2  45.5/ 16.5/ 38.0                  (-:  :-)                 Ross 174.6   71
+ 3  49.6/ 29.0/ 21.5          Velveeta Shift-F                 shar 170.1   46
+ 4  45.4/ 23.2/ 31.4           Versatility 1.5   Ross Morgan-Linial 167.6   38
+ 5  46.1/ 26.2/ 27.7            Saboteur v0.4k                 shar 165.9   79
+ 6  40.3/ 27.8/ 31.9               Inferno 1.0       Philip Kendall 152.8   61
+ 7  29.5/ 11.0/ 59.5            Microsoft v1.0           Justin Kao 148.0    4
+ 8  22.7/ 10.7/ 66.7    Ties, Ties, Ties! (+2)                 Ross 134.6   73
+ 9  26.2/ 23.2/ 50.6             Utility Knife     Robert J. Street 129.2   81
+10  19.8/ 13.8/ 66.4                   HAL 204           Justin Kao 125.7    1
+11  14.0/  8.5/ 77.6                 Wasps 1.3                 Ross 119.5   72
+12  15.0/ 10.8/ 74.2              more testing            Anonymous 119.2   32
+13  11.9/  6.9/ 81.2            Nematode v1.4e       Jonathan Stott 116.8   12
+14  13.2/  9.6/ 77.3            Ties and Wasps                 Ross 116.7   25
+15  11.5/  7.0/ 81.4            Nematode v1.4b       Jonathan Stott 116.0   45
+16  16.0/ 16.9/ 67.1                 Fork 4/13    Christoph C. Birk 115.1   65
+17  11.6/ 27.7/ 60.8                 Handy Man     Robert J. Street  95.5   39
+18   2.5/ 16.9/ 80.5                Mama's Boy     Robert J. Street  88.2   26
+19  11.3/ 35.2/ 53.6              silken stomp             harleyQ2  87.4   21
+20   3.5/ 19.8/ 76.6                silkbombQ2             harleyQ2  87.3   44
+21   3.3/ 21.4/ 75.2                     Snail                Edgar  85.2   10
+22  10.1/ 36.8/ 53.1              silken train             harleyQ2  83.4   14
+23   6.4/ 38.6/ 55.0                        b3             harleyQ2  74.1   13
+24   3.8/ 33.8/ 62.4                         b             harleyQ2  73.7   20
+25   3.2/ 33.8/ 63.0                     abc.i             harleyQ2  72.6    2
+
+I see a lot of familiar names on the beginner's hill.  Is Kao implying the
+Microsoft programs are really just big viruses with his warrior Microsoft
+v1.0 or is he predicting Gates and Co. will dominate KotH as the do the
+desktop?  (-:  :-), very cute.
+______________________________________________________________________________
+The Hint
+
+In a weak attempt to gain a foothold on the hill, I thought I would develop
+a new type of p-brain (pea-brain as it turns out).  I usually use the basic
+switch on loss or tie p-logic like Chameleon's.
+
+res     ldp.ab  _RES,   #0
+str     ldp.a   _STR,   str1    ;load strategy in use
+        seq.ab  #1,     res     ;check result
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure result
+win     stp.ab  str1,   _STR
+str1    jmp     @0,     strat1
+        dat     0,      strat2
+
+The p-logic is quick and doesn't self destruct when brainwashed.  Quickness
+is especially important now with the new Q^2 quickscans flooding the hill.
+The downside is no matter what _effective_ strategy you are using, a spurious
+loss will switch you to a less effective one.  It may take even another loss
+to return to the optimal strategy if you are switching more than one
+component.  To combat this phenomena, I developed a switch on two consecutive
+tie/loss combinations.  Strategies will only change on a loss loss, tie loss,
+loss tie, or tie tie.
+
+A loss or tie will advance the table pointer contained in _STRAT.  If the
+_STRAT pointer is 0 or 2, that strategy will get its 'second chance'.  If the
+index is 1 or 3, strategies will switch.  A win should reset the pointer to
+either 0 or 3 depending on what strategy is currently in use.  I do this by
+taking the index modulo 2 and subtracting the result from the current index.
+
+_RES EQU #0
+_STRAT EQU #1
+
+result  ldp.ab _RES, wlt
+strat   ldp.a _STRAT, choice
+wlt     sne.ab #1, #0
+        jmp win                 ; win has occured
+        add.a #1, choice        ; loss or tie has occured
+        mod.a #4, choice
+        stp.a choice, _STRAT
+choice  jmp @0, strat1          ; _STRAT = 0, choose strat1
+        nop 0, strat1           ; _STRAT = 1, choose strat1
+        nop 0, strat2           ; _STRAT = 2, choose strat2
+        nop 0, strat2           ; _STRAT = 3, choose strat2
+win     mov.ab choice, #0       ; reset index becuase of win
+        mod.ab #2, win
+        sub.ba win, choice
+        jmp choice-1
+
+strat1  jmp 0
+strat2  jmp 0
+
+All in all, the brain is much bigger (8 vs. 15) and a bit slower.  But I
+thought it had the smarts necessary to defeat non-pspace programs quite
+handily.  However this wasn't the case.  When switching the components in
+Chameleon (mod 5 bomber and .66c scanner), the new logic performed similarly
+or worse!  The optimal strategy would win for awhile, but the occasional loss
+tie combination would cause it to switch.  The secondary strategy (being a
+somewhat general purpose strategy) would not switch out as fast due to the
+new switching rules.  This seemed to balance the extra wins gained.  I
+believe the p-logic would be much more effective if the secondary strategy
+is very specialized against one type of program and losses quickly against
+everything else.  But don't take my word for it.  Use your nifty cut and
+paste and try a few components.
+______________________________________________________________________________
+Extra Extra
+by Beppe Bezzi
+
+Here is Jack in the box II, there is nothing really innovative in it.
+The bomber is in practice the same published in Twister, there is a little
+variation in the bomb pattern, but nothing worth mention.
+The replicator is a part of that in the old Jack, just booted away to have a
+faster reaction time against qscanners, even if not fast enough against Q^2
+(It would need a lighter paper)
+The switcher is exacltly the same of old Jack, no need to change it being
+safe and brainwash resistant.
+
+Overall I don't expect it to live much longer than old version, even if
+nobody knows :-)
+
+;redcode-94
+;name Jack in the box II
+;author Beppe Bezzi
+;kill Jack
+;strategy Same old strategy, improved components
+;strategy p-switching Tornado and silk
+
+;assert CORESIZE == 8000
+org     think                   ;v 2.03
+
+PIN     3371
+
+_RES    equ     #0
+_STR    equ     #1              ;more or less 500 :-)
+
+step    equ     -45
+DIST
+away    equ     4000            ;more or less 3900 :-)
+gate1   equ     (gate-4)
+
+A0      equ     3488
+A1      equ     1860
+A2      equ     3740
+
+marcia
+
+        spl     1,      <300    ;\
+        spl     1,      <400    ;-\ generate 15
+        spl     1,      <500    ;-/ parallel processes
+        mov     -1,     0       ;/
+
+        mov     <bootslk,{bootslk
+bootslk spl     4000,   silk+15       ;more or less 4000
+
+silk    spl     @0,     }A0     ;split
+        mov.i   }-1,    >-1     ;copy
+        mov.i   bomb1,  >123    ;bombing
+silk2   spl     @0,     }A1     ;split
+        mov.i   }-1,    >-1     ;copy
+        mov.i   bomb1,  >1001   ;bombing
+        mov.i   bomb ,  }2042   ;A-indirect bombing
+        mov.i   {silk2, <silk3  ;copy
+silk3   jmp     @0,     >A2     ;jmp new copy
+bomb    dat.f   >2667,  >5334   ;anti-imp bomb
+bomb1   dat     >1,     }1      ;anti clear bomb
+
+for 12
+        dat     0,0
+rof
+
+think
+res     ldp.ab  _RES,   #0
+str     ldp.a   _STR,   str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure result
+win     stp.ab  str1,   _STR
+str1    jmp     @0,     tornado
+        dat     0,      marcia
+
+
+for 12
+        dat     0,0
+rof
+
+tornado
+        mov     gate,   }pt2
+        mov     gate,   *pt2
+        mov     last,   <pt1
+        spl     1,      1
+        mov     {pt1,   <pt1
+        mov     {pt1,   <pt1
+        mov     {pt1,   <pt1
+        mov     {pt1,   <pt1
+        mov     {pt1,   <pt1
+
+go      djn.b   @pt1,   #2      ;start Tornado
+        mov     gate,   <pt1
+
+
+pt1     div.f   #last,  #last+1+away
+pt2     div.f   #gate+away-5,#1
+
+
+;--- Tornado 3.8
+for MAXLENGTH-CURLINE-14
+        dat     0,0
+rof
+
+start
+
+        dat     -25,    last-gate1+5
+warr
+gate
+        dat     -25,    last-gate1+15
+bombs   spl     #(step+1),  -step           ;hit spl
+start1  sub     incr,   @b1
+stone   mov     (0*step)+jump+1,*(1*step)+jump
+b2      mov     bombs,  @stone
+b1      mov     bombm,  *stone
+jump    jmz.b   start1, #0         ;hit by spl
+clr     mov     @djmp,  >gate1
+        mov     @djmp,  >gate1
+djmp    djn.b   clr,    {bombs
+incr    dat     >-3*step,>-3*step
+last
+bombm   dat     <1,     {1
+
+
+end
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

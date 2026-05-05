@@ -1,0 +1,187 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               July 28, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 41/ 18           Grimm's Vampyre             c w blue     143      95
+ 2  45/ 46/  9                 Agony 6.0        Stefan Strack     143     166
+ 3  35/ 27/ 38              FlyPaper 3.0            J.Layland     142     336
+ 4  39/ 36/ 25         Winter Werewolf 3         W. Mintardjo     142     230
+ 5  42/ 43/ 14              Dragon Spear             c w blue     141    1014
+ 6  43/ 44/ 13            Iron Gate 1.01       Wayne Sheppard     141      55
+ 7  43/ 46/ 11                   Impurge     Fredrik Ohrstrom     140     236
+ 8  37/ 34/ 29                  Herem VI         Anders Ivner     139      84
+ 9  32/ 25/ 43       Deck of Many Things             c w blue     138      41
+10  31/ 23/ 46                       ttt        nandor sieben     138     136
+11  30/ 22/ 48               Impact v1.0         Anders Ivner     138      49
+12  30/ 23/ 47             Night Crawler       Wayne Sheppard     137     912
+13  30/ 23/ 46                Imprimis 7              P.Kline     137     152
+14  30/ 23/ 47               Sphinx v2.8         W. Mintardjo     137    1910
+15  30/ 24/ 47        Incrimination v1.0     Brant D. Thomsen     136     316
+16  40/ 46/ 14           Fire Storm v1.1         W. Mintardjo     135     551
+17  30/ 26/ 45                     Hydra      Stephen Linhart     134      19
+18  22/ 13/ 64       Imps! Imps! Imps!-d       Steven Morrell     131     146
+19  40/ 50/ 10              Creampuff II             P. Kline     130       9
+20  35/ 46/ 20               lil' shears              P.Kline     124       1
+
+21   7/ 50/ 43            Hyper Cat V2.1         E.C et P.E.M      64       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Accolades to CW Blue whose Dragon Spear passed 1000 challenges this week.
+Considering its age, Dragon Spear has been unusually successful the last
+few days, frequently occupying the #1 spot.  Can't recall whether we
+ever saw DS's source - hint-hint - :-).
+
+A flurry of apparent newcomers has been assaulting the Hill recently.
+Linhart's interesting 'Hydra' program is the most successful entry.
+Note to Steve: some of us spent months before getting on KotH.
+Additional Note to Steve, whose email was bounced back to me:
+
+   I noticed you are able to ;kill some versions of Hydra but not all.
+   Did you submit a version from another computer account?  KotH uses
+   the sender's mail address not the ;author line to distinguish ownership.
+   If not, you can contact Bill Shubert by sending a regular mail message
+   to the same address as KotH.
+
+   Going to give us any hints about what makes Hydra work? :-)
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 8  30/ 25/ 44                     Hydra      Stephen Linhart     135       1
+ 8  43/ 47/  9              Creampuff II             P. Kline     139       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+20  26/ 45/ 28                 nugget v6         Nick Bourner     108       1
+21   0/ 47/ 53                 Tie Me Up          M. S. Veach      54       0
+21   0/ 87/ 13              Findimp Test            G. Ritter      13       0
+21   0/ 89/ 11                   frontv0           Mike Feier      11       0
+21   0/ 89/ 11       Pink Nightmare V1.2           Mike Feier      11       0
+21   1/ 30/ 69                     Thing            G. Ritter      72       0
+21   1/ 34/ 66               Infest v1.0            M. Burton      68       0
+21   1/ 35/ 64                      fork          E. Djikstra      67       0
+21   1/ 54/ 45              Pause&Clear2         James Ojaste      49       0
+21   1/ 72/ 28                front242v3           Mike Feier      29       0
+21   1/ 84/ 14              Crazed Dwarf            G. Ritter      19       0
+21   2/ 29/ 69             Deflagellator            G. Ritter      74       0
+21   2/ 62/ 36                    Quartz            G. Ritter      42       0
+21   2/ 64/ 34                    Kimp3!         James Ojaste      41       0
+21   2/ 98/  0                 gImp 1.00     Patrice Cummings       7       0
+21   3/ 76/ 21                 banzai_pe          P.E. Moreau      31       0
+21   5/ 70/ 25          Crazed Dwarf 1.1            G. Ritter      41       0
+21   6/ 57/ 36                     Kimp!         James Ojaste      55       0
+21   6/ 90/  5               Mantis 8000            D. Ritter      21       0
+21   7/ 40/ 53                Thing 1.21            G. Ritter      73       0
+21   7/ 56/ 38                    Thief!         James Ojaste      57       0
+21   7/ 66/ 26                     Clone            G. Ritter      48       0
+21   9/ 68/ 23                  Test IRP       Rodney Schuler      51       0
+21   9/ 77/ 13                  VFC V2.0          P.E. Moreau      42       0
+21  10/ 29/ 61                   Test-IS            G. Ritter      92       0
+21  10/ 88/  2                Sieve v1.0         James Ojaste      33       0
+21  11/ 82/  7                Dopey 1.04     Patrice Cummings      40       0
+21  12/ 80/  8            Kammakazi V0.0           Mike Feier      44       0
+21  13/ 35/ 52                 Thing 1.2            G. Ritter      92       0
+21  13/ 59/ 28            threescore 1.0        Steve Gunnell      66       0
+21  13/ 69/ 18                 Scan v1.3         James Ojaste      58       0
+21  13/ 72/ 15                    Bang2!         James Ojaste      53       0
+21  13/ 87/  1                      Wipe         James Ojaste      39       0
+21  14/ 76/ 10              Hyper Cat V2         E.C et P.E.M      52       0
+21  15/ 71/ 14                     Bang!         James Ojaste      58       0
+21  15/ 79/  6                  Plit 1.0            G. Ritter      51       0
+21  16/ 79/  5                sore loser       Steven Morrell      53       0
+21  16/ 83/  1                     dopey     patrice cummings      48       0
+21  17/ 68/ 15                      test              P.Kline      67       0
+21  17/ 80/  3                    D2.2ab         James Ojaste      55       0
+21  18/ 29/ 53             gen1417062609          the sun god     108       0
+21  19/ 32/ 49         toilet paper v1.0       Steven Morrell     107       0
+21  19/ 75/  6                     mauve          Greg Ritter      64       0
+21  22/ 27/ 51             Test-IS,S +13              Unknown     117       0
+21  22/ 28/ 50              Test-IS,S +5            G. Ritter     115       0
+21  22/ 35/ 44                 Test-IS,S            G. Ritter     109       0
+21  22/ 75/  3                     D2.2a         James Ojaste      70       0
+21  23/ 38/ 40       Jason's Super Hydra Jason & Stephen Linh     108       0
+21  23/ 47/ 30                  minimite         Cormac Walsh     100       0
+21  24/ 34/ 43               Test-IS,D,S            G. Ritter     114       0
+21  26/ 65/  9                      D2.2         James Ojaste      87       0
+21  28/ 46/ 25              Passport 1.1              P.Kline     110       0
+21  29/ 61/ 10                    Spiral      Stephen Linhart      98       0
+21  32/ 45/ 23               Emerald 4.1              P.Kline     119       0
+21  32/ 52/ 16                   :( v1.1       Steven Morrell     111       0
+21  33/ 46/ 22            Emerald 5.1000              P.Kline     120       0
+21  33/ 48/ 19               lil' shears              P.Kline     118       3
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Last week I mentioned that there could be a difference in success between
+ADDing your steps and SUBtracting them.  Here is the result of a little
+test I ran, using +12 and -12 as step sizes in Lil' Shears:
+
+Opponent                  sub #12    add #12    sub - add
+------------------        --------   --------  -----------
+Impurge                   50/44/06   74/23/03  -24/+21/+03
+FlyPaper 3.0              22/56/22   06/78/16  +14/-22/+06
+Creampuff II              65/28/07   53/31/16  +12/-03/-09
+Fire Storm v1.1           30/53/17   44/45/11  -14/+08/+06
+Dragon Spear              51/29/20   44/41/15  -07/+12/-05
+ttt                       11/71/18   12/68/20  -01/+03/-02
+Winter Werewolf 3         44/35/21   48/30/22  -04/+05/-01
+Grimm's Vampyre           36/49/15   35/52/13  +01/-03/+02
+Agony 6.0                 53/39/08   47/39/14  +06/+00/-06
+Iron Gate 1.01            40/36/24   43/43/14  -03/-07/+10
+Herem VI                  30/45/25   32/42/26  -02/+03/-01
+Hydra                     17/60/23   22/54/24  -05/+06/-01
+Imprimis 7                26/42/32   22/55/23  +04/-13/+09
+Night Crawler             20/58/22   27/49/24  -07/+09/-02
+Impact v1.0               26/34/40   22/40/38  +04/-06/+02
+Deck of Many Things       09/31/60   05/38/57  +04/-07/+03
+Sphinx v2.8               29/43/28   32/44/24  -03/-01/+04
+Imps! Imps! Imps!-d       05/68/27   07/67/26  -02/+01/+01
+Incrimination v1.0        35/33/32   43/31/26  -08/+02/+06
+lil' shears (self)        36/36/28   42/42/16  -06/-06/+12
+
+Against Impurge and FlyPaper I definitely suspect a difference.  Against
+Creampuff and Fire Storm, maybe.  Unfortunately the differences seemed
+to cancel each other out, so no overall advantage is gained :-(.
+Other differences are probably due to the randomness inherant in KotH.
+Here is the source for Lil' Shears, an 8-line spl-jmp bombing b-scanner
+with a gate.  The gate is not obvious, but develops after the core-clear.
+
+;redcode
+;name lil' shears
+;kill lil' shears
+;author P.Kline
+;strategy bscanning spl-jmp bomber with core-clear & gate
+bbmb     mov bjmp,@bjmp
+bnex     add #12,@2
+         jmz bnex,@bbmb
+         mov bspl,@bbmb
+bjmp     jmp @-1,-1      ; this gets bombed with bspl to start core-clear
+bspl     spl 0,<1        ; this gets decremented by above to <7872
+         mov 1,-3
+         dat <7871,<-1   ; this decrements the mov for the core-clear
+         end bnex
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

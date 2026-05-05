@@ -1,0 +1,259 @@
+============================================================================                                           
+ ___               _                    _            _____       _    _     
+|  _`\            ( )                  ( )          (_   _)     (_ ) ( )    
+| (_) )   __     _| |   ___    _      _| |   __       | |   _ _  | | | |/') 
+| ,  /  /'__`\ /'_` | /'___) /'_`\  /'_` | /'__`\     | | /'_` ) | | | , <  
+| |\ \ (  ___/( (_| |( (___ ( (_) )( (_| |(  ___/     | |( (_| | | | | |\`\ 
+(_) (_)`\____)`\__,_)`\____)`\___/'`\__,_)`\____)     (_)`\__,_)(___)(_) (_)
+
+============================================================================
+#2                                                            September 2010
+
+Redcode Talk is a newsletter promoting the game of Corewar, a game of skill
+played between two or more computer programs on behalf of the players who
+create them.
+
+Emphasis is placed on the most active hills - currently the '94 no-pspace,
+'94 draft and the beginner hill.  Coverage will follow wherever the action is.
+If you haven't a clue what I'm talking about then check out the following
+websites for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://bio.freelogy.org/wiki/REC.GAMES.COREWAR.FAQ
+
+Web pages are at:
+  http://www.koth.org/                            - KOTH
+  http://sal.math.ualberta.ca/                    - SAL Hills
+  http://www.corewar.co.uk/                       - J.Metcalf
+  http://www.corewar.info/                        - Fizmo
+http://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html  - C.Birk
+  http://para.inria.fr/~doligez/corewar           - Planar
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to news://rec.games.corewar or come to
+#corewars at 
+
+irc://irc.freenode.net/#COREWARS
+
+All new players are infinitely welcome!
+_______________________________________________________________________________
+Greetings!
+
+Hi all,
+
+Wow, I'm ready with the second issue of Redcode Talk. Looks, that I am still
+on track to provide a monthly corewar newsletter ;-)
+
+I hope you enjoy reading the two articles.
+
+Fizmo
+
+
+_______________________________________________________________________________
+The undiscovered area between LP and 94draft                           by Fizmo
+Part II:  Scanner vs. Paper/Imps
+
+
+This time I will show the impact of -p between scanner and paper/imps. For this
+reason I run every scanner (scn) from the fsh94nopv0.3 against the paper/imps
+(pwi).
+
+Well, my first impression is that the defensive power of a paper/imp strongly 
+depends on the max. process setting. As more processes available as more strong 
+the imps. 
+
+Let's see first how well Recon 2 performs. It is one of the best warriors
+to beat paper/imps.
+
+Recon 2
+-p      %W      %L      %T
+16000   57.4    29.1    13.5
+8000    57.1    29.1    13.8
+4000    34.3    29.7    36.0
+2000    18.1    31.1    50.8
+1000    18.3    32.8    48.9
+500     24.3    35.4    40.3
+200     40.0    36.7    23.3
+100     53.7    34.5    11.8
+
+Woahh, that's by far not what I expected. Down to -p 200 Recon loses most of
+the offensiv power, with a minimum around -p 1000-2000. Just at -p 100 it
+scores similar to -p 8000.
+
+Let's see first how P. Kline's He Scans Alone performs against the 12 paper/imps:
+
+He Scans Alone
+-p      %W      %L      %T
+16000   42.5    37.5    20.0
+8000    42.0    39.8    18.2
+4000    40.0    44.1    15.9
+2000    38.6    46.1    15.3
+1000    38.6    47.0    14.4
+500     40.4    44.4    15.2
+200     43.9    42.2    13.9
+100     48.3    37.6    14.1
+
+Also He Scans Alone shows a similar behaviour than Recon 2 but much less
+pronounced. The minimum percentage of wins is again around -p 1000-2000.
+The same can be found also Mischief, The Marsupial Lion, Qutrum, Razor,
+Solo 3, Willow and Win.
+
+The only exceptions are Agony II and Deathstar, which shows a sligh
+increase in wins with decreasing max. processes down to -p 500. Below
+this they start to perform well.
+
+Deathstar
+-p      %W      %L      %T
+16000   21.1    40.4    38.5
+8000    21.1    40.8    38.1
+4000    20.8    41.1    38.1
+2000    23.3    40.0    36.7
+1000    27.5    37.3    35.2
+500     33.3    34.6    32.1
+200     47.9    30.7    21.4
+100     55.5    27.8    16.7
+
+
+Overall one can say, that paper/imps gain strength with decreasing max.
+processes. Just below -p 500 they start to become vulnerable against
+scanner. 
+
+Next time I will review the third strategy pair. As more I am working on
+this as more I am curious. 
+
+So, stay tuned
+
+_______________________________________________________________________________
+The Random Warrior Talk                                              Drawn v1.2
+
+
+This time I picked B. Cook's Drawn v1.2. It was sent some years ago onto the
+Sourceforge Corewars Beginner Hill. The strategy line claims a Paper-launched 
+Imp Ring. Cool, that are my 'pet subjects' in corewar, papers and imps ;-)
+At a first glance on can see that it is a 'pure' warrior without any boot, 
+decoy or qscan. The paper itself is the so called 'silk' style, i.e. splitting 
+before copying. 
+
+However, this warrior contains some uncommon code I haven't seen before in a 
+paper, so I'm curious to make a deeper look into the code.
+
+;redcode-94
+;name Drawn v1.2
+;author B. Cook
+;strategy Paper-launched Imp Ring
+;assert 1
+
+org     start
+
+step    equ     1143
+
+cnst1   equ     2393    ;apparently magic
+cnst2   equ     2341    ;prime numbers
+
+start   spl     1,      0
+        mov.i   -1,     0
+        mov.i   -1,     0
+        spl     1,      0
+
+silk1   spl     @0,     cnst1
+        mov.i   }silk1, >silk1
+silk2   spl     @0,     cnst2
+        mov.i   }silk2, >silk2
+lawn    spl     2,      <0
+go      jmp     @0,     imp
+sprd    add.ab  #step,  go
+        mov.i   die,    {go
+die     dat     <0,     <lawn
+imp     mov.i   #step,  }0
+
+        end
+
+
+Let's have a look to the first four lines. They do nothing else than generating 
+parallel processes. This is needed to run a silk-style paper properly. The number 
+of parallel processes is usually similar to the number of replicated lines.
+
+0000*SPL.B  $1,       $0       
+0001 MOV.I  $-1,      $0       
+0002 MOV.I  $-1,      $0       
+0003 SPL.B  $1,       $0       
+
+There is a common rule for the parallel process generation. Simply converting the 
+number required in binary 3 -> 11, subtract one -> 10, use a spl 1 for every one 
+and a mov -1,0 for every zero. In this case we have a 1001, which generates 10
+parallel processes.
+
+The next two lines is the first of the two silk pairs. They copy the whole code to 
+a different location and start to execute them there.
+
+0004 SPL.B  @0,       $2393    
+0005 MOV.I  }-1,      >-1      
+    
+Line 0004 split at the a-field address i.e. the address pointed by b-field zero 
+locations away, the b-field of the line they are executing, 2393 locations away. 
+When all ten processes executed this line we have ten other processes ready to 
+execute line 0004+2393, there is nothing to execute here but the twenty processes 
+executes now in alternating order. I suggest to follow this e.g. in Corewin to 
+get a better understanding what the spl instruction is doing. Line 0005 move 
+what's pointed by the a-field of line 0004 to the location pointed by b-field of 
+line 0004 then they increment both a and b field of line 0004. This means, that 
+the first of the twenty process moves line 0004 2393 cells away from line 0004 
+and leaves line 0004 changed such a way:
+
+0004 SPL.B  @1,       $2394
+
+The second process executes the line 0004+2393 which isn't empty anymore now, while 
+the third process executes again line 0005. This copies now line 0005 2394 cells 
+away from 0004, just after the previous line. 
+
+The same happens with line 0006 and 0007 for another location:
+
+0006 SPL.B  @0,       $2341    
+0007 MOV.I  }-1,      >-1  
+
+
+The 5 last lines belongs to a jmp/add-launcher which generates a 7-pts imp spiral
+with 10 processes:
+
+
+0008 SPL.B  $2        <0       
+0009 JMP.B  @0        $4       
+0010 ADD.AB #1143     $-1      
+0011 MOV.I  $1        {-2      
+0012 DAT.F  <0        <-4      
+0013 MOV.I  #1143     }0       
+
+Line 0011 is quite interesting as it wipes the already executed code and leaves
+just the jmp/add-launcher for the imps. Line 0012 finally terminates the
+ten processes of the paper.
+
+Let's see how well he do against the different strategies. For that I've 
+choosen the fsh94nopv0.3 benchmark from optimax:
+
+pap: Paper; pwi: paper with imps; pws: stone/paper
+scn: scanner; cds: clear directing scanner; clr: coreclears, oneshots
+stn: bomber, vampires; sai: stone/a-imps; sbi: stone/b-imps
+
+Strategy   %W      %L      %T     Score
+pap        0.6    27.9    71.5     73.3
+pwi        0.2    12.1    87.7     87.7
+pws        1.8    39.6    58.5     64.0
+scn       15.8    72.5    11.7     59.0
+cds       17.6    65.6    16.8     69.5
+clr       13.8    68.0    18.2     59.5
+stn       17.0    58.3    24.7     75.7
+sai        1.7    30.2    68.1     73.2
+sbi        2.7    28.8    68.6     76.6
+
+Well, from the ties one can see that the replication and the imps work as 
+expected, but it clearly misses some offensive power. One could add a
+quickscanner for some easy extra wins or launch it together with a second, 
+more agressive paper. Also a combination with a stone would be worth to try.
+
+Overall one can say that it's a nicely written, unique warrior with some good 
+potential for improvements.
+
+_______________________________________________________________________________
+Questions? Concerns? Comments? Complaints? Post them to rec.games.corewar or
+tell them in irc://irc.freenode.net/#COREWARS.

@@ -1,0 +1,70 @@
+# Triggering build
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      upload-artifact:
+        description: 'Upload build artifact'
+        required: false
+        type: boolean
+        default: false
+  workflow_call:
+    inputs:
+      upload-artifact:
+        description: 'Upload build artifact'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    name: Build (${{ matrix.config }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - config: X11
+            target: xwin
+            deps: "libx11-dev"
+          - config: Curses
+            target: curses
+            deps: "libncurses-dev"
+          - config: Server
+            target: server
+            deps: ""
+          - config: SmallMem
+            target: smallmem
+            deps: ""
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      if: matrix.deps != ''
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ${{ matrix.deps }}
+
+    - name: Compile
+      run: |
+        cd src
+        make clean
+        make ${{ matrix.target }}
+
+    - name: Verify executable
+      run: |
+        ls -l src/pmars
+        ./src/pmars -A warriors/excalibur.red
+
+    - name: Upload artifact
+      if: inputs.upload-artifact == true
+      uses: actions/upload-artifact@v4
+      with:
+        name: pmars-${{ matrix.config }}
+        path: src/pmars

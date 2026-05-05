@@ -1,0 +1,567 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 26                                                       April  22, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is still out of service, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+______________________________________________________________________________
+Greetings.
+
+First thing:  We, the authors of Core Warrior (all two of us), would like to
+support the nomination of Anders Ivner into the Core War Hall of Fame.  The
+father of the imp is much more deserving than I'll ever be.  However this is
+done, let's make it happen.
+
+A slow week, so not a huge amount to report on.  But to redeem this issue,
+Core Warrior has the source code to Grilled Octopus v0.5 by David Boeren.
+Check it out in Extra Extra.  The hint section also delves into the inner
+workings of effective p-logic.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  46/ 40/ 14              Solomon v0.3          Ian Oversby     152      33
+ 2  43/ 36/ 21                  Mirage 2        Anton Marsden     150     187
+ 3  44/ 40/ 17                Scanny Boy        David van Dam     148     251
+ 4  42/ 36/ 22            The Core Clear        David van Dam     148      10
+ 5  41/ 34/ 25               Thermite II        Robert Macrae     147    1421
+ 6  35/ 24/ 41     Walk Like An Egyptian             John K W     146     102
+ 7  41/ 36/ 23                 Chameleon           M R Bremer     145     892
+ 8  43/ 41/ 16            Stepping Stone          Kurt Franke     145     234
+ 9  39/ 36/ 25      Grilled Octopus v0.5         David Boeren     143     637
+10  39/ 35/ 26                     prova    Maurizio Vittuari     142     397
+11  39/ 37/ 24             Blanket Party             J E Long     141     145
+12  39/ 38/ 23          Gem of the Ocean              P.Kline     140     290
+13  36/ 32/ 32                   Lithium     John K Wilkinson     140     428
+14  36/ 33/ 31                      test          Beppe Bezzi     139       1
+15  26/ 13/ 61             Hazy Shade II             John K W     139     380
+16  42/ 46/ 12          Wind-up Toy v0.7          Ian Oversby     139     101
+17  25/ 11/ 65                EvolCap XI       John Wilkinson     138     130
+18  29/ 20/ 51            Impfinity v4g1               Planar     138    1620
+19  35/ 33/ 31               Tornado 3.0                Beppe     138    1222
+20  33/ 28/ 39                      test          Beppe Bezzi     137       2
+21  37/ 37/ 26                    T.N.T.    Maurizio Vittuari     137    1146
+22  32/ 31/ 37                    Flurry        Anton Marsden     133     382
+23  31/ 31/ 38               Blue Funk 5       Steven Morrell     131     565
+24  33/ 38/ 28                 test t36b          Beppe Bezzi     129       9
+25  26/ 26/ 48                     Wtest              P.Kline     126       6
+
+Weekly age: 91
+New warriors 6  Turnover/age rate 7%
+Average age: 424 ( 386 last week, 397 the week before )
+Average score: 141 ( 130 last week, 140 the week before )
+The top 25 warriors are represented by 14 authors, JKW and Bezzi with 4,
+Oversby, Marsden, van Dam, Vittuari, and Kline with 2.
+
+Not really that much going on in terms of volume or number of new warriors,
+but the quality of the new warriors is superb.  Solomon v0.3 entered the hill
+in third, but on the next challenge rose to the top slot, a position it held
+for 12 challenges.  Since then, it's been bouncing all over the hill, but it
+just so happens to hold the king position as this issue was created.  The
+Core Clear performed a similar feat, rising to the number one ranking at the
+age of two.  It was only for one challenge, but this warrior continues to do
+well.  However, the real Kings this week have been Scanny Boy and Mirage 2.
+
+I'm amazed at the quality of programs the hill is receiving from new authors.
+Just take a look some of the top ten.  Oversby, Marsden, van Dam, Franke,
+Boeren--all have made the jump from the b-hill in the past few months.  And
+they aren't struggling at the bottom of the hill, but are often challenging
+the King of the Hill.  Of course it is really remarkable to someone like me
+who still has a bit of core war hero worship for the old days of Kline,
+Morrell, Mintardjo, Strack, Sieben, Sheppard, et al.  Keep up the competition
+level.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 3  45/ 42/ 13              Solomon v0.3          Ian Oversby     148       1
+ 4  43/ 37/ 20            The Core Clear        David van Dam     148       1
+23  32/ 41/ 27                 test t36b          Beppe Bezzi     124       1
+23  25/ 30/ 45                     Wtest              P.Kline     121       1
+11  33/ 28/ 39                      test          Beppe Bezzi     138       1
+13  34/ 34/ 32                      test          Beppe Bezzi     135       1
+
+Both Solomon and The Core Clear have seen first place.
+______________________________________________________________________________
+94 - What's No More.
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26   2/  2/  0                    Test 4          Ian Oversby       7       2
+26   4/  2/  1                    Test 3          Ian Oversby      13       4
+26   6/  4/  2                   testest           M R Bremer      20       6
+26  36/ 47/ 17          Wind-up Toy v0.6          Ian Oversby     125      48
+26  35/ 46/ 20                   Harmony              P.Kline     123      41
+26  29/ 33/ 38                   Barrage        Anton Marsden     124     876
+
+Barrage, a qscan -> replicator, was lost this week.
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+18  29/ 20/ 51            Impfinity v4g1               Planar     138    1620
+ 5  41/ 34/ 25               Thermite II        Robert Macrae     147    1421
+19  35/ 33/ 31               Tornado 3.0                Beppe     138    1222
+21  37/ 37/ 26                    T.N.T.    Maurizio Vittuari     137    1146
+ 7  41/ 36/ 23                 Chameleon           M R Bremer     145     892
+ 9  39/ 36/ 25      Grilled Octopus v0.5         David Boeren     143     637
+23  31/ 31/ 38               Blue Funk 5       Steven Morrell     131     565
+13  36/ 32/ 32                   Lithium     John K Wilkinson     140     428
+10  39/ 35/ 26                     prova    Maurizio Vittuari     142     397
+22  32/ 31/ 37                    Flurry        Anton Marsden     133     382
+15  26/ 13/ 61             Hazy Shade II             John K W     139     380
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 1  Impfinity v4g1         Planar            1620 *  Stone/ imp
+ 3  Torch t18              P.Kline           1539    Bomber
+ 4  Thermite II            Robert Macrae     1421 *  Qscan -> bomber
+ 5  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 6  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 7  quiz                   Schitzo           1262    Scanner/ bomber
+ 8  Tornado 3.0            Beppe Bezzi       1222 *  Bomber
+ 9  T.N.T.                 Maurizio Vittuari 1146 *  Bomber
+10  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+11  Agony II               Stefan Strack      912    CMP scanner
+12  Chameleon              Myer R Bremer     892 *  P-warrior
+13  Barrage                Anton Marsden      876    Qscan -> replicator
+14  Blue Funk              Steven Morrell     869    Stone/ imp
+15  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+16  Blue Funk 3            Steven Morrell     766    Stone/ imp
+17  Night Train            Karl Lewin         755    Replicator
+18  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+19  Blizzard               Anton Marsden      713    Qscan -> replicator
+20  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+21  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+22  myVamp v3.7            Paulsson           643    Vampire
+23  Grilled Octopus v0.5   David Boeren       637 *  P-warrior
+24  Hazy Shade Of Winter   John Wilkinson     616    P-warrior
+25  Armory - A5            John Wilkinson     609    P-warrior
+
+Impfinity v4g1 by archive master Damien Doligez is tied for the all time lead
+of the core war hall of fame.  This veteran has been floating in the lower
+half of the hill and just last challenge, fallen into the 20s.  Impfinity has
+rebounded before, but continued attacks by p-warriors could spell its demise.
+
+New entry Grilled Octopus v0.5 pushes off juliet and paper by Bremer & Bezzi.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  62/ 29/  9        Violent Micro v0.3             basehead     196      89
+ 2  59/ 34/  7              Gunslinger 2               Julian     184      59
+ 3  49/ 26/ 25                Reluctance       Andy Nevermind     172      19
+ 4  51/ 35/ 14          C-Seagal II 1.02             jShelton     167      72
+ 5  48/ 35/ 17                       why       bjoern guenzel     162      44
+ 6  50/ 39/ 11                     AK-47               Julian     161      64
+ 7  50/ 39/ 11                   AK-47.1               Julian     160      63
+ 8  47/ 36/ 16                  why rave       bjoern guenzel     159      42
+ 9  43/ 30/ 27                  Toxin II                Edgar     156       9
+10  42/ 28/ 30                     Toxin                Edgar     155      10
+11  46/ 39/ 15                  x-frog 2       bjoern guenzel     152      13
+12  45/ 41/ 14               frog vamp 2       bjoern guenzel     149       8
+13  46/ 44/ 10        Uni Charm Password             jShelton     149      80
+14  44/ 48/  8          Optma Dwarf v5.3              Phoenix     140      87
+15  37/ 41/ 22       Bye Bye Badman v1.1            Iain Hogg     133      23
+16  38/ 43/ 19      Forked Lite Ning 4.1 Ansel Greenwood Serm     132      38
+17  38/ 43/ 19                Bloodhound        Andrew Fabbro     132      11
+18  32/ 40/ 28                    Killer          Ian Oversby     124      16
+19  31/ 38/ 31              Assassinator        David van Dam     124       6
+20  31/ 38/ 31              Assassinator        David van Dam     124       3
+21  34/ 46/ 20    C Seagal II v 2.0 Test             jShelton     121      18
+22  38/ 59/  3                 lightning       Jens Heunemann     116      24
+23  17/ 71/ 12               Centurion x                Edgar      64       2
+24  10/  0/  1            The Core Clear        David van Dam      31       5
+25   2/ 98/  0                   Unknown            Anonymous       6       1
+
+Fifty challenges since last week.  basehead still rules the roost, but
+Oversby and van Dam have leap frogged to the '94 draft hill.
+______________________________________________________________________________
+The Hint
+Switching Techniques and Brainwash Recovery
+
+When pspace was first implemented on the hills, one of the first switching
+algorithms was the simple 'switch on loss' or 'switch on tie or loss'.
+
+res     ldp.ab  _RESULT, #0
+str     ldp.a   _STRATEGY, str1     ;load strategy in use
+        sne.ab  #0, res             ;check result
+lost    add.a   #1, str1            ;lost change
+        mod.a   #X, str1            ;X = number of strategies to switch
+win     stp.ab  str1, _STRATEGY
+str1    jmp     @0, strat0
+        dat     0, strat1
+        dat     0, strat2
+        . . .
+        dat     0, stratX-1
+
+The code is short and decisions are made quickly.  However it is definitely
+lacking in sophistication ( which you don't always need to be effective ).
+The mod instruction ensures that a valid strategy is chosen even if brain-
+washed.  However, since there is no active wash detection, the strategy
+chosen is essentially random.  The algorithm does average ( for a pspace
+warrior ) against non-pspace opponents, but tends to do better against
+slower p-opponents that take multiple rounds to make decisions.  Jack in the
+box uses this type of p-logic.
+
+To equip this switcher with a decent detection system is simple.  One method
+is to simply load of number into pspace on the first round and check it every
+remaining round to see if it's been tampered with.  You could reset it and
+run a special anti-wash warrior or stick with the anti-wash warrior for the
+rest of the battles.  This could take a lot of extra p-code.  A better method
+may be this:
+
+res     ldp.ab _RESULT, #0
+str     ldp.a _STRATEGY, str1   ;load strategy in use
+
+        mod.a #97, str1         ;valid strategies are are all mod 97
+        jmn.a washed, str1      ;do 'have been washed' code [then reset?]
+        ldp.a _STRATEGY, str1   ;got to be a way to get rid of repeating this
+
+        sne.ab  #0, res         ;check result
+lost    add.a   #97, str1       ;lost change
+        mod.a   #X, str1        ;X = number of strategies to switch
+win     stp.ab  str1, _STRATEGY
+str1    jmp     @0, strat0
+        dat     0, strat1
+        dat     0, strat2
+        . . .
+        dat     0, stratX-1
+
+This is almost exactly the same p-code with the addition of three extra lines
+of instructions to ensure that all valid strategies are mod 97.  A brainwash
+would have to wash with a multiple of 97 (unfortunately zero is one of them)
+to escape detection.  Of course you special number can vary as long as the
+mod.a #X instruction yields the proper series to switch your components.  I
+used this type of detection along with a custom scoring system in my warrior
+'testestest' which held first place for a challenge and then dropped off the
+hill a few challenges later.  It could have used better components.
+
+start   ldp.ab _STRATEGY, check
+        jmz.b switch, check     ; washed or first round, just do a switch
+check   mod.ab #97, #0000       ; if not multiple of 97, have been washed!
+        jmn.b scanner, check    ; washed --> do scanner (can do any plogic)
+        ldp.a _RESULT, keeper
+        ldp.ab _SCORE, adjust
+keeper  jmp @0, adjust+1        ; result == 0 == loss
+        jmp 0, adjust           ; result == 1 == win
+        jmp 0, adjust+2         ; result == 2 == tie
+adjust  add.ab #6, #0           ; win
+        add.ab #-2, adjust      ; lose
+        add.ab #-1, adjust      ; tie
+        ldp.a _STRATEGY, select ; again.  can't seem to save it.
+        slt.b adjust, #7000     ; did it go negative?
+        jmp switch
+return  stp.b adjust, _SCORE
+        mod.a #3, select
+select  jmp @0, scanner
+        jmp 0, stone
+        jmp 0, paper
+switch  add.a #97, select
+        stp.ab select, _STRATEGY
+        mov.ab #10, adjust
+        jmp return
+
+This code creates a 'score' for each strategy starting at 10.  For every
+win the score increases by 3, tie--decrease by 1, loss--decrease by 3.  The
+strategy switches when the score goes negative.  When fighting a non-pspace
+opponent, the logic should quickly find the proper strategy and not deviate
+from the optimum.
+
+One of the neatest switcher I've seen so far is Kline's Gem of the Ocean.  It
+is very effective while maintaining simplicity.  (For a complex, effective
+switcher see Boeren's Grilled Octopus).  It uses an array to determine its
+next strategy thereby controlling the sequence of warriors.  The key here is
+to select the proper sequence of warriors as well as good componets.  Kline
+provides a lengthy explanation of his choices in the post of Gem.
+
+
+parray    dat 0,choose1         ;table for pswitching
+          dat 0,choose3         ;- stay after win
+          dat 0,choose1         ;- go to ptie after tie
+          dat 0,choose4         ;- move up one after loss
+          dat 0,choose1
+          dat 0,choose3
+ptie      dat 0,choose2
+          dat 0,choose4
+
+presult   ldp.ab #0,#0                  ;pswitch code, nice and short
+pselect   ldp.ab #PFLAG,#0
+          sne.ab #0,presult             ;advance table selection after a loss   add.ab #1,pselect
+          sne.ab #2,presult             ;go to Sweep after a tie
+          mov    #ptie-parray,pselect
+          stp.ba pselect,pselect
+          mod.ab #presult-parray,pselect
+          add.ba pselect,pchoice
+pchoice   jmp    @parray,{pselect       ;jump to selection
+
+
+A few things to consider:  most programs switch on losses.  Keeping the same
+strategy after a win can be quite dangerous to you.  Quick scanners feast on
+bloated code.  Consider switching step sizes or bomb types instead of entire
+strategies.  Often pspacers do not use booted components.  There has to be a
+way to write common boot code that will handle every p-component ( most
+likely in next week's issue ).  How difficult can it be to write a switcher
+that creams stand still programs?  And one that takes advantage of the stay
+on win, switch on loss algorithm?  And then switches both of those?  Let me
+know when you find out.
+______________________________________________________________________________
+Planar's Corner
+
+                           Mount Olympus
+
+
+"Mt Olympus" is the name of a little experiment I'm working on.  You
+can check it out at: http://pauillac.inria.fr/~doligez/corewar/olympus/
+
+In real life, Mount Olympus is the biggest mountain of the solar
+system, 21 km high.  It is located on the planet Mars.
+
+In my Web page, Mt Olympus is a hill with room for all warriors.
+
+Of course, I'm not running all the battles.  The Web page gives an
+explanation of how it works.  Even then, it'll take a few months
+before I'm through with all the old warriors.  In the meantime, you
+can climb in my time machine and see which warriors were state of the
+art back in 1992, and which ones were already outclassed.
+
+-- Planar
+______________________________________________________________________________
+Extra Extra
+Grilled Octopus by David Boeren
+
+Here's the source code for the version of Grilled Octopus which is currently
+on the Hill.  He no longer terrorizes the Hill like he used to, so I thought
+it was finally time to let you know how it works.  Basically, I use two
+threshold-switching algorithms (like Clisson) and one switch-on-loss algorithm
+(like Jack).  There is also some very good brainwash detection which will
+make me permanently switch to a brainwash-handling component.  My first
+component is my best one, it's a 6-instruction self-splitting .5c DAT bomber
+with a 1-pass (suicidal) DAT coreclear.  You can hardly ask for a better
+anti-scanner component due to the small size, and it does pretty well against
+other bombers too.  It's quick to boot, and hard to see/hit.  It's also
+guaranteed to lose horribly against any paper and any normal imp spiral.
+If this component fails, then I switch to a 1-shot scanner->coreclear, which
+is also my anti-brainwash component.  Nothing special about it, but it seems
+to work fairly well vs. papers and some bombers.  Finally, if this also
+fails I end up in a switch-on-loss between my bomber and paper0.  I tried
+other papers, but the only ones that scored better than paper0 were all much
+larger, and thus unsuitable as components.  The switch-on-loss helps me
+score better against other pspacers, particularly those which are slow to
+adapt.
+
+The pspace code used here is pretty neat, and fast as well.  I have not
+had much trouble with qscanners, since I'm generally finished booting away
+in 22 cycles or so.  Some components go faster than others, and if I detect
+brainwash I boot VERY fast due to skipping almost all the thinking.
+
+I don't really know for sure if the re-stepping code for my bomber helps
+much or not.  I may drop the idea in future warriors.  It was intended to
+help me adjust to the step size of my opponent, but results on the Hill were
+pretty ambiguous.
+
+If you read my earlier article on pspace you'll see that I still use the
+same methods of erasing my boot pointers, but I have rigged the code so that
+I only have to erase one location to erase my pspace pointers now.
+
+I've made some improvements since this code, but I was sick of ;killing my
+programs all the time when they were doing so well and throwing away all my
+hard-won age.  It may interest some to know that if I'd left v0.1 on the
+Hill it would be #10 in the Hall of fame right now!
+
+For next week, I'll be writing an article on how to make a multi-boot
+routine that you can use to boot all of your components with only minimal
+overhead.  By using one of these I was able to save 16 instructions, which
+is enough to add a 4th component.
+
+;redcode-94
+;name Grilled Octopus v0.5
+;author David Boeren
+;assert CORESIZE == 8000
+;strategy Aggressive P-warrior
+;strategy Death awaits you all, with nasty big pointy teeth!
+;strategy     v0.1 Initial Release
+;strategy     v0.2 More aggressive, wins are better than ties!
+;strategy     v0.5 Totally new pspace techniques, upgraded components
+
+step    equ 95
+stepb   equ (step*2)
+stepz   equ (184*2)                  ; "second chance" step for Fei-Oh
+gate    equ (inc-95)
+
+dest0   equ   2200
+dest1   equ   3740
+dest2   equ  -1278                   ; pmars optimized
+range   equ    933                   ; pmars optimized
+
+sid     equ    143                   ; Stage ID
+pdata   equ     23                   ; Win/Loss data
+Pmod    equ     29
+
+; 5=7859, 7=7801, 8=7772, 10=7685, 13=7598, 16=7511, 20=7385
+Pinit   equ   7598                   ; Fei-Oh loss tolerance
+Pmorf   equ   7801                   ; Fei-Oh re-stepping tolerance
+Pinit2  equ   7772                   ; Paper Shredder loss tolerance
+
+bdist1  equ   (sflag+3317)           ; Fei-Oh boot distance
+bdist2  equ   (sflag+3268)           ; Paper Shredder boot distance
+bdist3  equ   (sflag+3243)           ; Paper boot distance
+
+        org start
+sflag   DAT.F      #sid,   #pdata    ; pspace data pointers
+        DAT.F        #0,   +Pinit    ; first round
+PRESULT DAT.F        #0,    +Pmod    ; loss
+        DAT.F        #0,    -Pmod    ; win
+        DAT.F        #0,       #0    ; tie
+
+start   LDP.A        #0,  PRESULT    ; Get results of last round
+        SNE.A       #-1,  PRESULT    ; Is it the 1st round?
+        STP.A     #1003,    sflag    ;     If so, init stage ID
+        LDP.A     sflag,     jtab    ; Load stage ID
+        SUB.A     #1003,     jtab    ; Subtract secret number...
+        SLT.AB     jtab,       #3    ; Are we brainwashed?
+        JMP.B        @0,   nowash    ;     If so, jump to handler
+        LDP.BA    sflag,    PTEST    ; Get the current win/loss counter
+jtab    JMP.B        @0,   stage1    ; Jump table to correct component
+        DAT.F        #0,   stage2
+        DAT.F        #0,   stage3
+
+stage1  ADD.AB    PTEST, *PRESULT    ; Update win/loss counter
+        STP.B  *PRESULT,    sflag    ; Store updated counter
+        MOD.AB    #Pmod, *PRESULT    ; Check the MOD
+        SLT.B  *PRESULT,   #Pmorf    ; See if Fei-Oh is losing...
+        MOV.A    #stepz,   loop+1    ;     Try a new step
+        JMZ.B    fei_oh, *PRESULT
+        STP.A     #1004,    sflag    ; Engage stage 2 pspace algorithm
+        STP.AB  #Pinit2,    sflag    ; Reset stage 2 loss counter
+                                     ; Too many losses, fall through...
+shred
+        MOV.I         0,    sflag    ; Safety-net for our pspace stuff
+nowash
+boot3   MOV.I   clear+1,   bdist2    ; fast boot away tail first
+for 7
+        MOV.I    {boot3,   <boot3
+rof
+        ADD.AB       #3,    boot3    ; adjust so we split to "loop"
+        SPL.B    @boot3,       #1    ; split to main program
+        MOV.I         0,    boot3    ; obliterate boot pointer
+                                     ; fall through and die...
+ptr     DAT.F       #10,       #5
+        DAT.F       #10,       #1
+        SPL.B        -1,       #1
+scan    ADD.A        #8,      ptr   ; "Ippatsu" one-shot scanner
+        JMZ.F      scan,     *ptr
+        SPL.B       #10,       #2
+clear   MOV.I      @ptr,     }ptr
+        DJN.F     clear,    <gate
+
+stage2  ADD.AB    PTEST, *PRESULT    ; Update win/loss counter
+        STP.B  *PRESULT,    sflag    ; Store updated counter
+        MOD.AB    #Pmod, *PRESULT    ; if flag is not the right mod:
+        JMZ.B     shred, *PRESULT
+        STP.A     #1005,    sflag    ; Engage stage 3 pspace algorithm
+                                     ; Fall through to backup strategy...
+pboot
+        MOV.I         0,    sflag    ; Safety-net for our pspace stuff
+boot2   MOV.I     ibomb,   bdist3    ; fast boot away tail first
+for 10
+        MOV.I    {boot2,   <boot2
+rof
+        SPL.B    @boot2,       #1    ; split to main program
+        MOV.I         0,    boot2    ; obliterate boot pointer
+        DAT.F        #0,       #0    ; die
+
+paper   SPL.B         1,       #0    ;\
+        SPL.B         1,       #0    ;-> generate 8 processes
+        SPL.B         1,       #0    ;/
+
+silk    SPL.B        @0,   {dest0
+        MOV.I       }-1,      >-1
+silk1   SPL.B        @0,   <dest1
+        MOV.I       }-1,      >-1
+        MOV.I     ibomb,   }range
+        MOV.I    {silk1,   <silk2
+silk2   JMP.B        @0,   >dest2
+ibomb   DAT.F     <2667,    <5334
+
+inc     SPL.B        #0,    <gate    ; Fei-Oh v0.6
+loop    MOV.I      bomb,    @targ
+        ADD.AB   #stepb,     targ
+targ    MOV.I      bomb, }stepb-1
+        DJN.F      loop,    <gate
+bomb    DAT.F     #step,       >1
+
+; stage 3 is a switch-on-loss module against pspacers and paper/imps
+
+stage3  SNE.A        #0,  PRESULT    ; check result
+lost    ADD.A        #1,    PTEST    ; lost change
+        MOD.A        #2,    PTEST    ; secure result
+win     STP.AB    PTEST,    sflag
+PTEST   JMP.B        @0,   fei_oh
+        DAT.F         0,    pboot
+
+fei_oh
+        MOV.I         0,    sflag    ; Safety-net for our pspace stuff
+boot    MOV.I      bomb,   bdist1    ; fast boot away tail first
+for 5
+        MOV.I     {boot,    <boot
+rof
+        SPL.B     @boot,       #1    ; split to main program
+        MOV.I         0,     boot    ; obliterate boot pointer
+                                     ; fall through and die...
+        END
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+

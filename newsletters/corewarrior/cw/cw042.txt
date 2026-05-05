@@ -1,0 +1,223 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 42                                                    September 9, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Greetings.
+
+The pizza hills are back and so are we.  Sorry for the short vacation, but
+there just wasn't much to report on in the last few weeks.  The new 'test'
+option is seeing heavy use.  There are disagreements whether tests results
+should be included in the standard output reporting option.  Personally, I
+would like the option of not receiving test results.  Also, the 'testing'
+will greatly reduce artificial hill aging (wasn't that the point?), and along
+with it--entries into the Hall of Fame.  Is there something we should do
+about this?  Perhaps the most important question about the 'test' option is
+whether it is safe or not.  Should test warriors be allowed to ;kill a warrior
+on the hill?
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  38.6/ 20.4/ 41.0           unrequited love                kafka 156.7   22
+ 2  43.3/ 36.7/ 20.0                     Probe        Anton Marsden 150.0  102
+ 3  46.5/ 43.6/  9.9                  Q^2 Miro         Anders Ivner 149.4  152
+ 4  37.4/ 25.7/ 36.9              Simple v0.4b          Ian Oversby 149.2   53
+ 5  39.5/ 31.0/ 29.5              Flimsy v0.5a          Ian Oversby 147.9    1
+ 6  43.4/ 41.5/ 15.1                    Blur 2        Anton Marsden 145.4  101
+ 7  29.6/ 13.8/ 56.6      Return Of The Jedimp             John K W 145.3   90
+ 8  32.8/ 20.4/ 46.8                   Rosebud                Beppe 145.1  775
+ 9  42.6/ 40.8/ 16.6                 Goldfinch              P.Kline 144.4   43
+10  37.0/ 29.9/ 33.1                 September                Beppe 144.0    4
+11  40.3/ 38.1/ 21.6                  mrb-test           m r bremer 142.5    8
+12  39.7/ 37.3/ 23.0                 Yogi Bear              P.Kline 142.0  306
+13  40.0/ 38.7/ 21.2                      Test        Anton Marsden 141.3   12
+14  36.0/ 31.0/ 33.0               Falcon v0.3          Ian Oversby 141.1    7
+15  39.5/ 38.2/ 22.2                T.N.T. pro    Maurizio Vittuari 140.9  820
+16  41.4/ 43.1/ 15.5           Earthquake v0.2         Bjoern & Ian 139.7   59
+17  41.4/ 43.7/ 14.9                 myVamp5.4             Paulsson 139.1  150
+18  26.5/ 14.0/ 59.5                    ompega       Steven Morrell 138.9  217
+19  41.5/ 46.0/ 12.5                      Mist              P.Kline 137.0   42
+20  28.4/ 21.3/ 50.3                 Armory II             John K W 135.5  241
+21  40.0/ 44.7/ 15.3                   Harmony              P.Kline 135.2   67
+22  32.7/ 31.7/ 35.6        Jack in the box II          Beppe Bezzi 133.7  459
+23  29.5/ 25.6/ 44.9    Ties, Ties, Ties! (+3)   Ross Morgan-Linial 133.5    2
+24  38.3/ 43.5/ 18.2                   Twister          Beppe Bezzi 133.2  556
+25  36.3/ 41.6/ 22.1 Paper, Scissors and Stone        David van Dam 131.0  230
+
+Top 25 Averages:
+    37.7/ 33.7/ 28.6                                                141.7  180
+
+Weekly age: 9 in a month! ( 26 last issue, 7 the week before )
+New warriors: 5  Turnover/age rate 56% (will be higher with 'test' option)
+Average age:   180 ( 186 last issue, 176 the week before )
+Average score: 142 ( 137 last issue, 141 the week before )
+The top 25 warriors are represented by 14 authors: Beppe and Kline with 4;
+Oversby with 3 and 1/2; Marsden with 3; and JKW with 2.
+
+Four of the top five warriors use quick scans, most likely the new Q^2 scans.
+urequited love might use one too, but it is not mentioned in the ;strategy
+lines.  Return of the Jedimp and mrb-test are also using the Q^2 quick scan.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 5  39.5/ 31.0/ 29.5              Flimsy v0.5a          Ian Oversby 147.9    1
+10  37.0/ 29.9/ 33.1                 September                Beppe 144.0    4
+11  40.3/ 38.1/ 21.6                  mrb-test           m r bremer 142.5    8
+14  36.0/ 31.0/ 33.0               Falcon v0.3          Ian Oversby 141.1    7
+23  29.5/ 25.6/ 44.9    Ties, Ties, Ties! (+3)   Ross Morgan-Linial 133.5    2
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   4.0/  0.0/  0.0                 Dura v0.1          Ian Oversby  12.0  122
+26  25.6/ 30.5/ 44.0      Forked Lightning 2.0       Philip Kendall 120.7   29
+26  36.1/ 47.1/ 16.8                   Test Sc          Ian Oversby 125.2    5
+26   1.3/  1.3/  1.4    Ties, Ties, Ties! (+3)   Ross Morgan-Linial   5.3   17
+26   2.0/  1.6/  0.5                 Pulp v0.2          Ian Oversby   6.3  197
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 8  40.7/ 36.8/ 22.5                T.N.T. pro    Maurizio Vittuari 144.6  820
+14  31.8/ 21.6/ 46.5                   Rosebud                Beppe 142.0  775
+21  38.7/ 41.9/ 19.5                   Twister          Beppe Bezzi 135.5  556
+22  31.0/ 30.8/ 38.1        Jack in the box II          Beppe Bezzi 131.3  459
+12  39.7/ 37.3/ 23.0                 Yogi Bear              P.Kline 142.0  306
+
+Yogi Bear joins the list.  Twister and Jack could be pushed off very soon!
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+19  T.N.T. pro             Maurizio Vittuari  820 *  Bomber
+20  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+21  Rosebud                Beppe Bezzi        775 *  Stone/ imp
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+Good luck assulting this hill with the new 'test' option.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+The current Beginner hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  55.3/ 24.1/ 20.6              Tsunami v0.3          Ian Oversby 186.5   18
+ 2  53.5/ 23.3/ 23.1           Versatility 1.5   Ross Morgan-Linial 183.7   91
+ 3  52.5/ 27.4/ 20.1               T-1 w/decoy                 Ross 177.7   28
+ 4  46.0/ 24.3/ 29.7                  Ick v1.5           Justin Kao 167.6   47
+ 5  49.1/ 31.1/ 19.7                       T-1                 Ross 167.1   36
+ 6  39.1/ 22.3/ 38.6                  (-:  :-)                 Ross 155.9   24
+ 7  38.9/ 24.2/ 36.9               TIE Fighter                 Ross 153.6   23
+ 8  42.5/ 32.7/ 24.8          Velveeta Shift-G                 shar 152.3   14
+ 9  29.1/ 15.3/ 55.7    Ties, Ties, Ties! (+3)                 Ross 142.9   37
+10  35.8/ 34.1/ 30.1             Vampirism 1.2       Philip Kendall 137.5   16
+11  32.1/ 27.1/ 40.8              Together 0.3       Ilmari Karonen 137.1   25
+12  25.5/ 16.7/ 57.8                 Papyrus 6           Justin Kao 134.4    6
+13  26.1/ 18.3/ 55.6            Microsoft v1.0           Justin Kao 133.8   57
+14  20.0/ 10.3/ 69.7            Nematode v1.4b       Jonathan Stott 129.7   98
+15  16.9/  9.7/ 73.4            Nematode v1.4e       Jonathan Stott 124.1   65
+16  19.2/ 18.4/ 62.4                      CCCP             harleyQ2 120.1    5
+17  15.7/ 12.3/ 72.0                       SIN             harleyQ2 119.2    3
+18  17.0/ 21.5/ 61.5    Bronze Dragonflies 0.1                 Ross 112.5    4
+19  10.1/  8.2/ 81.7                        si             harleyQ2 112.1   15
+20  25.1/ 51.0/ 23.9                  Gravel 2           Justin Kao  99.1    1
+21  20.2/ 44.1/ 35.6                      bump             harleyQ2  96.3    9
+22   8.6/ 21.0/ 70.4                 super-imp             harleyQ2  96.1    7
+23   7.5/ 19.9/ 72.6               Ties Engine                 Ross  95.0   26
+24   9.5/ 24.2/ 66.3            silkstomp v2.i             harleyQ2  94.8   33
+25   5.3/ 38.9/ 55.7                     Imp++           Justin Kao  71.8    2
+
+Twenty-one challenges.  Tsunami is new and sits atop the heap.  But is Ian
+playing fair when he has over three warriors to his name on the '94 draft
+hill?  Bad boy.  Ross Morgan-Linial is trying out some super-imp program on
+the draft hill, but it has yet to claim a solid rank.  He is well represented
+on the b-hill with 7 warriors.
+______________________________________________________________________________
+The Hint
+
+Sorry no hint this issue.  I probably won't have any hints until I start
+actively playing again.  Maybe when I get my class schedule under control . .
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

@@ -1,0 +1,233 @@
+===============================================================================
+  ___               _                    _            _____       _    _     
+ |  _`\            ( )                  ( )          (_   _)     (_ ) ( )    
+ | (_) )   __     _| |   ___    _      _| |   __       | |   _ _  | | | |/') 
+ | ,  /  /'__`\ /'_` | /'___) /'_`\  /'_` | /'__`\     | | /'_` ) | | | , <  
+ | |\ \ (  ___/( (_| |( (___ ( (_) )( (_| |(  ___/     | |( (_| | | | | |\`\ 
+ (_) (_)`\____)`\__,_)`\____)`\___/'`\__,_)`\____)     (_)`\__,_)(___)(_) (_)
+ 
+===============================================================================
+#1 August 2010
+
+Redcode Talk is a newsletter promoting the game of Corewar, a game of skill
+played between two or more computer programs on behalf of the players who
+create them. If you haven't a clue what I'm talking about then check out the 
+following websites for more information:
+
+FAQs are available from:
+http://www.koth.org/corewar-faq.html
+http://bio.freelogy.org/wiki/REC.GAMES.COREWAR.FAQ
+
+Web pages are at:
+http://www.koth.org/                            - KOTH
+http://sal.math.ualberta.ca/                    - SAL Hills
+http://www.corewar.co.uk/                       - J.Metcalf
+http://www.corewar.info/                        - Fizmo
+http://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html  - C.Birk
+http://para.inria.fr/~doligez/corewar           - Planar
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to news://rec.games.corewar or come to
+#corewars at 
+
+irc://irc.freenode.net/#COREWARS
+
+All new players are infinitely welcome!
+===============================================================================
+Greetings!
+
+It's been a while since I did the last work on a corewar related newsletter.
+But somehow I felt myself in a little revival. So I started to work on a new
+kind of corewar newsletter The Redcode Talk. It doesn't summaries the progress
+on the KotH and SAL hills, but collects some little articles and stories
+which came into my mind.
+
+I hope you like to enjoy to read something about corewar. I'm very glad if
+also other corewar player send me their stories, articles, observations for
+the next issue.
+
+Fizmo
+
+_______________________________________________________________________________
+The undiscovered area between LP and 94draft                           by Fizmo
+Part I:  Scanner vs. Paper
+
+
+What's between 8 and 8000? 
+
+That's an easy question. It's 9-7999.
+
+But how is it in Corewar between max. processes 8, which is used for the well 
+known Low Process (LP) hills and max. processes 8000, the common value for all 
+other hills with a hill size of 8000.
+
+If you look to the most successful warriors of the LP hill and the 94nop hill
+you will find significant differences. Mainly that 94 warriors extensively
+using the spl instruction, while LP warriors not. If you're try to use 94
+warriors on the LP they will perform not very successful, while LP warriors
+not perform well on the 94 hills.
+
+But at which max. process setting things will change? Is it at 4000 or 40? 
+To figure this out I let run every scanner (scn) from the fsh94nopv0.3 
+against the papers (pap).
+
+Let's see what happens if I change -p for Recon 2 against the 12 papers:
+
+Recon 2
+-p      %W      %L      %T
+16000   55,3    33,7    11,0
+8000    55,2    34,2    10,6
+4000    55,4    34,1    10,5
+2000    55,0    34,6    10,4
+1000    55,6    35,4     9,0
+500     55,2    37,2     7,6
+200     57,3    35,9     6,8
+100     59,0    34,4     6,6
+
+Well, that's not what I expected. There is no any significant change until
+-p 500. Just starting at -p 200 the wins starts to increase. The same happens
+for Solo 3, Razor, Qutrum, and Mischief as well. Willow, He Scans Alone, and
+Win have somewhere between 4000 and 500 their minimum of wins before they
+go up below -p 500.
+
+A different behaviour shows Deathstar, Agony II, and The Marsupial Lion,
+with a constant slight increase of wins with decreasing -p. Below -p 500 the
+wins increases significantly.
+
+Agony II
+-p      %W      %L      %T
+16000   24,6    38,9    36,5
+8000    30,6    40,0    29,4
+4000    31,7    40,8    27,5
+2000    32,4    43,5    24,1
+1000    35,7    43,5    20,8
+500     41,3    43,3    15,4
+200     45,1    41,3    13,6
+100     48,0    40,7    11,3
+
+Win and Rascal shows on the other side a decrease in wins from -p 4000 to 500
+before the wins went up.
+
+Rascal
+-p      %W      %L      %T
+16000   34,7    52,9    12,4
+8000    34,7    53,2    12,1
+4000    33,7    54,3    12,0
+2000    30,5    58,6    10,9
+1000    28,7    61,3    10,0
+500     34,2    57,3     8,5
+200     35,2    54,3    10,5
+100     44,4    46,4     9,2
+
+Overall one can say, that down to -p 4000 no significant changes are
+observed, while between 4000 and 1000 first slight changes are seen. But
+drastic changes seems to start just far below -p 1000.
+
+After the first investigations I am curious if the -p could be set down to
+1000 without significant changes in the common paper/stone/scissor rules.
+
+Next time I will present the next strategy pair to be reviewed.
+
+So, stay tuned
+
+
+
+_______________________________________________________________________________
+The Random Warrior Talk                                       One Man Army v1.0
+
+
+This time I picked Ian Sutton's One Man Army v1.0. It's #467 on the CoreWar
+94-Draft - 'Koenigstuhl' and #346 on the CoreWar 94nop - 'Koenigstuhl'. The
+strategy line claims a lightning fast large bomber, which makes me curious
+what it could mean. At a first glance on can see that it is a 'pure' warrior 
+without any boot, decoy or qscan.
+
+
+;redcode-94
+;name One Man Army v1.0
+;author Ian Sutton
+;strategy lightning fast large bomber
+;assert 1
+
+gate    equ     (stcode-3)
+step    equ     -6503
+stbomb  equ     (ecode+1489)
+
+        org     strt
+
+
+stcode
+drop2   mov     bomb2, *drop
+loop
+strt    mov     bomb, @drop
+drop    mov     stbomb+step*2, *stbomb
+        add     incr, drop
+nxt     jmz.f   loop, *drop
+        jmn.f   drop2, @drop2           ; gets bombed with spl to start clear
+bomb    spl     #step, >step*2+1        ; yes 2 spls in a row
+        mov     cbomb, >gate
+ecode   djn.f   -1, >gate
+        dat     0,0
+        dat     0,0
+
+cbomb   dat     >5335, 20
+incr    spl     #step*3, #step*3
+bomb2   mov     -step*2, >-step*2
+
+
+
+Let's have a look to the bomb loop after compilation:
+
+0000  MOV.I  13       ,*2 
+0001 *MOV.I  5        ,@1       
+0002  MOV.I  4489     ,*1495    
+0003  ADD.F  9        ,-1      
+0004  JMZ.F  -3       ,*-2   
+0005  JMN.F  -5       ,@-5      
+
+The warrior has a 4 instruction loop and bomb two locations and scans
+a third location. The way of bombing is a bit tricky to understand but I'll 
+try to explain it: 
+
+The warrior starts in line 0001. The first thing what happens is that a bomb 
+(that one from line 0006) is dropped to where the b-filed of the mov instruction 
+in line 0002 is pointing (0002 + 1495). The mov in line 0002 drops a second
+bomb to where the already dropped bomb is pointing in its a-field. The a-field
+of the mov in line 0002 is used by the jmz in line 0004 as a pointer for
+the scan. If something is found the jmz passes the process to the jmn in 
+line 0005 which guides to line 0000 if the b-field of line 0002 is non-zero
+and drop a bomb. You might wonder why a mov-instruction is used instead of an
+spl-instruction. In case the opponent executes the mov-bomb it will lay a trail
+with a previously dropped spl-bomb in front of it (depending how often it is
+executed). 
+
+After the jmn in line 0005 got bombed the bomb run is finished by starting the
+endgame strategy. In this case it is a d-clear having two spl instructions
+in a row.
+
+Let's see how well he do against the different strategies. For that I've 
+chosen the fsh94nopv0.3 benchmark from optimax:
+
+pap: Paper; pwi: paper with imps; pws: stone/paper
+scn: scanner; cds: clear directing scanner; clr: coreclears, oneshots
+stn: bomber, vampires; sai: stone/a-imps; sbi: stone/b-imps
+
+Strategy   %W      %L      %T     Score
+pap        8.1    74.2    17.6     42.0
+pwi        6.0    53.9    40.2     58.1
+pws       10.2    75.6    14.2     44.9
+scn       50.9    38.2    10.9    163.6
+cds       44.9    42.1    13.1    147.7
+clr       48.2    41.2    10.6    155.1
+stn       43.7    43.9    12.4    143.4
+sai       21.1    51.8    27.1     90.3
+sbi       26.4    55.6    18.0     97.2
+
+That's pretty much what I expected. The stun power isn't strong enough to
+win against papers. Just some wins with lucky early hits. Good scores against
+scanner, bombers, vampires etc. and a mediocre wins against stone/imps thanks
+to the d-clear as endgame.
+
+_______________________________________________________________________________
+Questions? Concerns? Comments? Complaints? Post them to rec.games.corewar or
+tell them in irc://irc.freenode.net/#COREWARS.

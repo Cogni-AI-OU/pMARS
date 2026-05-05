@@ -1,0 +1,1257 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 90                                                          08 June, 2004
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of Corewar.  Emphasis is
+placed on the most active hills - currently the '94 no-pspace, '94 draft
+and beginner hills.  Coverage will follow wherever the action is.  If you
+haven't a clue what I'm talking about then check out these five-star
+Internet locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://sal.math.ualberta.ca/               ;Sal Hills
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+  http://www.corewar.info/                   ;Fizmo
+  http://www.corewar.co.uk/                  ;J.Metcalf
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+Yes, I am back!!!
+
+There have been a lot of issues published since I prepared my last Core
+Warrior. It's exactly 30 issues since I sent the first one to r.g.c. ;-)
+
+You are wondering who am I? This time it's not John Metcalf. This time
+Core Warrior has been prepared by me, Christian Schmidt.
+
+And there is one thing I really wanted to say for a very long time:
+
+               _   _                 _
+              | | | |               | |
+              | |_| |__   __ _ _ __ | | __  _   _  ___  _   _
+              | __| '_ \ / _` | '_ \| |/ / | | | |/ _ \| | | |
+              | |_| | | | (_| | | | |   <  | |_| | (_) | |_| |
+               \__|_| |_|\__,_|_| |_|_|\_\  \__, |\___/ \__,_|
+                                             __/ |
+                                            |___/
+                            ___       _
+                           |_  |     | |
+                             | | ___ | |__  _ __
+                             | |/ _ \| '_ \| '_ \
+                         /\__/ / (_) | | | | | | |
+                         \____/ \___/|_| |_|_| |_|
+
+
+      for providing us for 5 YEARS continuously with new issues of the
+                                Core Warrior.
+
+
+
+Since #70 he has prepared all issues of Core Warrior for us. I think that
+is a good reason beside many, many others to admit him into the Corewar
+Hall of Fame!!!
+
+                                  ---
+
+I think I should remind everyone again that there will be a corewar meeting
+on July 23-25, 2004 in Berlin.
+
+All player who would like to participate in the meeting should contact me as
+soon as possible. I will pick all people up at the airport, train station,
+etc., help find in advance accommodation (hotel etc.) and take care of them
+during their stay in Berlin.
+
+The following activities are planned so far:
+
+- Sightseeing tour
+
+- Berlin by night
+
+- A pen'n'paper corewar tournament (no PC allowed for writing the warriors ;-)
+
+- Corewar Workshops (who would also like to give a workshop? I hope I am not
+                     the only one!!!)
+
+Further ideas are welcome. I'll keep the website updated with the latest news.
+
+                                  ---
+
+Redcode Frenzy News:  The results of the Capture The Flag '88 Round are online
+now. Congratulations to the winner: Chip Wendell.
+
+Round 19 will be organised by me (Christian Schmidt) and Round 20 by Sascha
+Zapf.
+
+                                  ---
+
+Web-News:  John Metcalf's homepage has moved to:
+
+  http://www.corewar.co.uk/
+
+Terry Newton's page has move to:
+
+  http://www.infionline.net/~wtnewton/corewar/
+
+                                  ---
+
+Okay, coming to this issue. It has turned out much larger than expected.
+This time, we introduce the interesting LP hill on SAL including some hints
+and ExtraExtras. But that's not all. We have some more hints and ExtraExtras
+for you, which shows again after so many years of corewar, there are many
+things waiting to discover :-)
+
+I hope we are able to push your interests to a new level and will see you
+soon on one of the hills. The battle between the corewar warriors still
+goes on.
+
+Now enjoy this issue!!!!
+
+
+-- Christian Schmidt
+
+
+                            '94 No Pspace Hill
+                            *******************
+
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  33/ 27/ 39                     Yorba                  Roy     139      65
+ 2  30/ 23/ 47 paper(paper(paper(clear))          Sascha Zapf     138      35
+ 3  42/ 47/ 11                     Arrow    Christian Schmidt     138     134
+ 4  41/ 44/ 15               Dandelion 3    Christian Schmidt     138      52
+ 5  42/ 46/ 12                      O--*       Bremer/Schmidt     137      60
+ 6  26/ 16/ 57                 Maelstrom         Roy van Rijn     137      75
+ 7  41/ 45/ 14             HazyLazy C 11                CS SG     136     143
+ 8  31/ 25/ 44                  Triturus         Roy van Rijn     136      19
+ 9  31/ 27/ 42                   Gremlin      van Rijn/Grabun     136     165
+10  41/ 47/ 12            Bottomless Pit            Fizmo/Roy     136      96
+11  31/ 27/ 42           slime test 1.00        David Houston     135     261
+12  32/ 30/ 38                   Frantic         Roy van Rijn     134      48
+13  41/ 48/ 11                    Speeed    Christian Schmidt     133       2
+14  40/ 47/ 13              High Voltage          Sascha Zapf     133       9
+15  27/ 21/ 53              Black Knight    Christian Schmidt     133      14
+16  31/ 29/ 40               Son of Vain      Oversby/Pihlaja     133    2499
+17  27/ 22/ 51         Bvowkium Fizmoxid          bvowk/fizmo     131       1
+18  38/ 45/ 16          Solar Flare test         John Morahan     131      10
+19  41/ 51/  8                Aoshi A 34        Steve Gunnell     131      37
+20  31/ 32/ 37 Spiritual Black Dimension    Christian Schmidt     130     290
+
+
+The hill has aged just 94 since last issue, bringing it to a total age of 3253.
+All but seven warriors have been pushed from the hill.
+
+Those who didn't last the duration include Ironic Imps (age 403), Armadillo
+(233), Quirk (207), Arctica (178), Devilstick (167) and Kenshin D 10 (111).
+
+Warriors which entered the hill since last issue and were pushed off age
+50+: something strange (87) and Deathstar (86).
+
+Koth report: 7 warriors resided at number one for at least 5 challenges.
+Most often seen there has been Maelstrom (24), followed by Yorba (16),
+Bottomless Pit (11), Arrow (8), HazyLazy C 11 (5), O--* (5) and Son of
+Vain (5).
+
+Son of Vain again increased it's oldest Koth record, taking first place
+age 2431.
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Son of Vain            Oversby/Pihlaja   2499 *  Q^4 -> Stone/imp
+ 2  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 3  Reepicheep             Grabun/Metcalf    1347    Q^4 -> Paper/stone
+ 4  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 5  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 6  Hazy Test 63           Steve Gunnell     1119    Scanner
+ 7  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 8  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 9  Recon 2                David Moore        826    Scanner
+10  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+11  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+12  Eraser II              Ken Espiritu       781    Scanner
+13  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+14  Toxic Spirit           Philip Thorne      685    One-shot
+15  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+16  Blade                  Fizmo              643    Qscan -> Scanner
+17  Return of Vanquisher   Lukasz Grabun      640    Q^4 -> Bomber
+18  Revenge of the Papers  Fizmo/Roy          605    Q^4 -> Paper
+19  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+20  Firestorm              John Metcalf       589    MiniQ^3 -> Paper/imp
+21  Claw                   Fizmo              525    Qscan -> Scanner
+22  G3-b                   David Moore        503    Twoshot
+23  Thunderstrike          Lukasz Grabun      484    Q^4 -> Stone/imp
+24  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+25  Revival Fire           P.Kline            468    Bomber
+26  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+27  The Stormkeeper        Christian Schmidt  460    Q^3 -> Stone/imp
+28  Positive Knife         Ken Espiritu       449    Q^4 -> Stone/imp
+29  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+31  G2-b                   David Moore        413    Twoshot
+32  Ironic Imps            Roy van Rijn       403    Q^4 -> Stone/imp
+33  Qtest                  Christian Schmidt  394    Q^3 -> Paper
+34  Stalker                P.Kline            393    Scanner
+35  Decoy Signal           Ben Ford           378    Q^4 -> Paper/imp
+36  unheard-of             Christian Schmidt  355    Q^4 -> Paper/imp
+37  Hazy Lazy ... again    Steve Gunnell      350    Scanner
+ =  Dawn                   Roy van Rijn       350    Q^4 -> Paper/imp
+39  Static                 Miz                344    Q^4 -> Stone/imp
+40  devilish 2             David Houston      330    Q^4 -> Stone/imp
+ =  Vain                   Ian Oversby        330    Q^2 -> Stone/imp
+42  Omnibus                John Metcalf       327    Q^2 -> Stone/imp
+43  Win!                   David Moore        322    Scanner
+44  Return of the PendragonChristian Schmidt  318    Q^4 -> Stone/imp
+45  Numb                   Roy van Rijn       312    Q^4 -> Paper/stone
+46  Hazy Lazy...           Steve Gunnell      309    Scanner
+47  Now you're in trouble! John Metcalf       290    Q^4 -> Stone/imp
+ =  Spiritual Black Dim.   Christian Schmidt  290 *  Q^4.5 -> Paper/stone
+49  Hazy Lazy ... reborn   Steve Gunnell      284    Scanner
+50  Candy II               Lukasz Grabun      282    Q^4 -> Stone/imp
+ =  Pixie                  Lukasz Grabun      282    Q^4 -> Stone/imp
+
+There are only 2 active warriors in this extended HoF, compared to last
+issue's 2.  The warriors are represented by 18 Stone/imps, 13 scanners,
+6 paper/imps, 4 bombers and paper/stones and 3 each of one-shots
+and papers.
+
+18 authors hold a place in the HoF.  Schmidt has most, with 9 warriors.
+Grabun and Metcalf both have 6 - Gunnell, Moore, Oversby and van Rijn
+4 each - Ford has 3 - Espiritu, Janeczek, Kline and Marsden have 2 each
+and the remaining 6 authors, just the one warrior.
+
+Of these redcoders, 3 have 4 different strategies in the HoF.  They are
+Metcalf, van Rijn and Schmidt.
+
+Next warrior which will enter is David Houston's slime test 1.00.
+
+
+                              '94 Draft Hill
+                            *******************
+
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 43/ 14          Lord of the Core    Christian Schmidt     142       2
+ 2  35/ 29/ 37 Spiritual Black Dimension    Christian Schmidt     141      67
+ 3  41/ 42/ 17                 Cyberpunk    Christian Schmidt     140      75
+ 4  43/ 47/ 10                     Arrow    Christian Schmidt     139      48
+ 5  35/ 34/ 31                   Sunrise           Zul Nadzri     136      77
+ 6  32/ 28/ 41                Devilish 2        David Houston     136      37
+ 7  31/ 26/ 43                Reepicheep       Grabun/Metcalf     135     497
+ 8  26/ 17/ 56                 Maelstrom         Roy van Rijn     135      27
+ 9  27/ 18/ 55              Black Knight    Christian Schmidt     135       9
+10  31/ 27/ 42                 Armadillo        Lukasz Grabun     134       8
+11  33/ 32/ 35                        KL           Zul Nadzri     134       7
+12  37/ 40/ 23            Dettol Test 45        Steve Gunnell     134       3
+13  29/ 26/ 45                   Gremlin      van Rijn/Grabun     133      53
+14  40/ 48/ 12               Dandelion 3         Schmidt/Zapf     133      51
+15  27/ 22/ 51             Muscle Hammer           Zul Nadzri     132      32
+16  26/ 20/ 54         Bvowkium Fizmoxid          bvowk/fizmo     132      20
+17  29/ 27/ 43       season of adventure         John Metcalf     131       6
+18  31/ 31/ 38                   Arctica    Christian Schmidt     131      57
+19  38/ 45/ 17         something strange         John Metcalf     130      33
+20  39/ 49/ 12                    Speeed    Christian Schmidt     130       1
+
+
+After an age of 32, 11 warriors remain on the hill from last issue.
+Those who didn't last the duration include Son of Vain (441), Return of
+Vanquisher PsP (284) and Bitter Sweet (262) leaving the hill with just
+one warrior at an age higher than 100.
+
+Reepicheep is now by far the oldest warrior with an age of 497.
+
+p-Warriors are in top spots now but pure scanners are scoring surprisingly
+well and can still survive for a lengthy term on the hill.
+_______________________________________________________________________________
+The '94 Draft Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Reepicheep             Grabun/Metcalf     497 *  Q^4 -> Paper/stone
+ 2  Son of Vain            Oversby/Pihlaja    441    Q^4 -> Stone/imp
+ 3  Return of Vanquisher   Lukasz Grabun      284    Q^4 -> Bomber
+ 4  Bitter Sweet           Lukasz Grabun      262    Q^4 -> Stone/imp
+ 5  CrazyShot 2            Christian Schmidt  249    Q^4 -> One-shot
+ 6  Herbal Avenger         Michal Janeczek    237    Scanner
+ 7  Bustling Spirit        Christian Schmidt  216    P-warrior
+ 8  Revenge of the Papers  Fizmo/Roy          204    Q^4 -> Paper
+ 9  Uninvited              John Metcalf       194    MiniQ^3 -> Stone/imp
+10  Blowrag                Metcalf/Schmidt    192    Q^4 -> Paper/imp
+11  Incredible!            John Metcalf       180    Paper/imp
+12  Wallpaper              Christian Schmidt  175    Q^4 -> Paper/stone
+13  Mantrap Arcade         Dave Hillis        170    P-warrior
+14  Numb                   Roy van Rijn       167    Q^4 -> Paper/stone
+15  PolyPap                Jakub Kozisek      160    Qscan -> Paper
+16  Recon 2                David Moore        156    Scanner
+17  Joyful Maw             Dave Hillis        143    P-warrior
+18  Paperazor              Christian Schmidt  141    Q^4 -> Paper
+19  Sunset                 David Moore        138    P-warrior
+20  Dawn                   Roy van Rijn       137    Q^4 -> Paper/imp
+21  Self-Modifying Code    Ben Ford           132    P-warrior
+22  Combatra               David Moore        131    Boot distance calculator
+23  unheard-of             Christian Schmidt  128    Q^4 -> Paper/imp
+24  Mad                    Christian Schmidt  123    P-warrior
+25  Microvenator           Michal Janeczek    122    P-warrior
+
+No new entries this time. Reepicheep is the only active warrior. Next to
+enter will be Sunrise and Cyberpunk.
+
+                            SAL  Beginners Hill
+                            *******************
+
+_______________________________________________________________________________
+Current Status of the SAL Beginners Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  50.7/ 30.9/ 18.4       Studie strikes back        Sascha Zapf 170.6    29
+ 2  49.4/ 31.3/ 19.3      Shooting Star v0.262                brx 167.4     7
+ 3  50.1/ 35.1/ 14.8                  Frullato              LAchi 165.2    46
+ 4  48.7/ 33.7/ 17.6                   ssoBeht        Sascha Zapf 163.8    20
+ 5  49.1/ 42.2/  8.8                      Star        Sascha Zapf 156.0    34
+ 6  33.9/ 20.7/ 45.4              Uneven Twins        Sascha Zapf 147.1    33
+ 7  43.4/ 41.1/ 15.5               French Kiss              LAchi 145.8    27
+ 8  30.3/ 18.9/ 50.8               Veenah V0.8        Sascha Zapf 141.6     5
+ 9  42.1/ 45.8/ 12.0                  scizzory                Miz 138.5    76
+10  40.7/ 43.0/ 16.3              Neverland II       John Metcalf 138.3    75
+11  27.6/ 19.1/ 53.4        Paper of yesterday        Sascha Zapf 136.1    81
+12  26.1/ 17.5/ 56.4                       Tom        David Moore 134.7    17
+13  28.7/ 26.4/ 45.0                 Fatty boy          G.Labarga 131.0    87
+14  37.2/ 43.5/ 19.3                     Lifer        Sascha Zapf 130.9     4
+15  27.1/ 31.4/ 41.5        Manufactured paper                Neo 122.9     3
+16  21.7/ 21.3/ 57.0                Grand Jury      Andrew Hunter 122.1     1
+17  17.2/ 17.8/ 65.0                   Unknown          Anonymous 116.6    26
+18  18.4/ 20.5/ 61.1                    Enigma                brx 116.4    13
+19  16.8/ 18.4/ 64.9                    nGrave        Ken Hubbard 115.2    38
+20  19.9/ 24.9/ 55.1                 Smaug Imp        Ken Hubbard 114.9    43
+21  17.4/ 20.1/ 62.5                 Plastered      Andrew Hunter 114.7     2
+22  18.9/ 26.3/ 54.9                     test3                miz 111.5    90
+23  29.8/ 51.3/ 18.8                    Stoney                Miz 108.3    77
+24  27.1/ 58.5/ 14.4                Sugartooth                Miz  95.8    41
+25  24.9/ 57.9/ 17.2                 Brimstone       John Metcalf  91.8    23
+
+Just 4 challenges, so not much action here :-/ Is the hill too strong for the
+beginner?
+
+
+                                '94 LP Hill
+                            *******************
+
+
+We will try to focus in every coming issue on a different hill. This time we
+have chosen SAL's Limited Process Hill.
+
+The hill specifications are:
+
+coresize:          8000
+max. processes:    8
+duration:          after 80,000 cycles, a tie is declared.
+max. entry length: 200
+minimum distance:  200
+rounds fought:     250
+instruction set:   ICWS '94 Draft
+
+_______________________________________________________________________________
+Current Status of the SAL Limited Process Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  49.6/ 21.8/ 28.6                  The King                Neo 177.3     8
+ 2  40.8/ 30.8/ 28.3          Lord of the Core  Christian Schmidt 150.9     2
+ 3  38.0/ 27.3/ 34.7                      Duke  Christian Schmidt 148.6    26
+ 4  40.0/ 33.1/ 26.9                  Reclon 2          G.Labarga 146.8     9
+ 5  40.3/ 36.1/ 23.5           Viper's Bugloss  Christian Schmidt 144.5    27
+ 6  38.6/ 33.9/ 27.5                 Muffineer  Christian Schmidt 143.4    21
+ 7  29.2/ 16.1/ 54.7                    Eve 15      bvowk + Fizmo 142.3    55
+ 8  29.3/ 23.1/ 47.6            The LP Machine         Zul Nadzri 135.5     5
+ 9  38.4/ 42.6/ 18.9                   fbomber    Michal Janeczek 134.2   107
+10  29.3/ 24.9/ 45.9                  Roskilde  Christian Schmidt 133.6    86
+11  24.6/ 17.1/ 58.4    8366-4510-cs-sdk-eve15              bvowk 132.1    57
+12  29.0/ 26.2/ 44.8                       xXx         Zul Nadzri 131.9     6
+13  33.2/ 34.7/ 32.2    Achillu 2004 - Revenge LAchi+Fizmo+Neogry 131.7     1
+14  34.8/ 38.1/ 27.2 Revenge of the Silklander  Christian Schmidt 131.4    65
+15  39.0/ 48.0/ 13.0                  FlipSide         Zul Nadzri 129.9    68
+16  36.8/ 43.9/ 19.3     ~~ The 9th Process ~~         Zul Nadzri 129.8    98
+17  30.3/ 31.2/ 38.5             Histeric imps          G.Labarga 129.4    13
+18  38.3/ 47.4/ 14.2                   Asfixia          G.Labarga 129.2    12
+19  36.1/ 44.1/ 19.8                 100% Evil       Roy van Rijn 128.0    46
+20  29.7/ 32.2/ 38.1               Royal guard          G.Labarga 127.3    14
+21  34.8/ 42.5/ 22.7                    Mad LP  Christian Schmidt 127.2    74
+22  32.9/ 39.8/ 27.3            Dental Disease  Christian Schmidt 126.1    78
+23  30.9/ 36.2/ 32.9        wandering redcoder       John Metcalf 125.7     4
+24  25.5/ 25.5/ 49.0   4310-4309-xt430-0-eve15              bvowk 125.5    25
+25  33.6/ 42.2/ 24.2                      scan          G.Labarga 125.1    24
+
+The total age of this new hill is 118. Two warrior reached a three-digit age
+while the oldest of the two, The 8 Kings (112), has been recently pushed off.
+
+The hill is dominated by Neo's The King which has a 26 points gap to the 2nd
+place. He takes a strong advantage by handshaking with several other of his
+warriors.
+
+Bvowk's evolved warrior 8366-4510-cs-sdk-eve15 is still going strong as well
+as its human-optimized brother Eve 15.
+
+Do we see soon the first purely evolved warrior which passes the requirements
+for a hill's Hall of Fame? We will be carefully watching this....
+
+_______________________________________________________________________________
+The Story - A Short History of '94 LP Hills by Christian Schmidt
+
+
+The Wasted Youth hill
+---------------------
+
+The beginnings of the first '94 LP hill lay in the ancient ages around 1996
+and only few things are known from this time. John K. Lewis opened the hill.
+The first of the LP hills closed in the beginning of '97.
+
+
+The Pizza LP hill
+-----------------
+
+Beginning March 1997 some threads on r.g.cw discussed new hills with different
+specs. Anton Marsden mentioned in that sense on r.g.cw:
+
+"LP hills provide some interesting new strategies:
+- papers which are constructed differently to the "standard" '88/'94 papers.
+- self-repairing programs
+- multiple function programs, eg. 4 stones combined with 4 scanners
+
+Add pspace to this and it could be a great hill."
+
+                                                  Anton Marsden, March 2, 1997
+
+
+After an e-mail vote the Pizza LP hill was announced by Thomas "Thos" Davies
+on March 14, 1997 using the same specification as the Wasted Youth Hill.
+
+Ian Sutton's Limb Rending Incisors was dominating this hill.
+
+Around spring 2001 the Pizza Hills closed.
+
+
+SAL LP hill
+-----------
+
+End of 2003 Joonas Pihlaja and Barkley Vowk announced the SAL server. It
+provides beside others, a new LP hill following the spec of the previous two.
+It's quite a young hill and recently reached the age of 100. It has received
+since the beginning a continuously mediocre traffic.
+
+
+--  Christian Schmidt
+
+_______________________________________________________________________________
+The Hint - a few remarks about LP strategies by Christian Schmidt
+
+If only 8 processes are available the process limit can be reached very fast.
+If a warrior is running at its process limit, a spl acts just like a nop.
+This leads to some very specific differences to the 94nop and 94draft hill:
+
+- Spl-bombs are by far less effective than jmp #0 bombs
+
+- low-process papers are scoring better than silk-style
+
+- different multiple strategy warriors are effective. For example, 2 stones
+  with one process each and the rest in imps or a number of parallel running
+  stones and scanners, etc.
+
+Check the following warriors at Koenigstuhl's Infinite LP Hill to get an
+impression of LP warrior design:
+
+Paper: Revenge of the Silklander, Grained Paper, Achillu 94, Elusive, Oldtimer,
+       Skinner, 2LPap
+Stone/Paper: Roskilde, Evil Twin Brother, Tempest
+Scanner, Oneshots: lp-Shot v0.1, LP-Scan v0.1, One Hop
+Stone/Imps: Philosopher's Stone
+Stones, Vamps: fbomber, Limb Rending Incisors, The 8 Kings
+
+
+--  Christian Schmidt
+
+
+_______________________________________________________________________________
+Extra Extra - New approaches in evolving warriors and finding new strategies
+              by Christian Schmidt and Barkley Vowk
+
+
+
+The warrior 189602-1978-xt642-2-eve15 shows a really interesting scoring
+pattern on the LP hill. Although it is a very defensive strategy it's able to
+beat most of the papers quite nicely.
+
+A closer look at the code shows, that the warrior executes just 8 instructions.
+The remaining 192 lines are not in use and seems to act as a huge decoy only.
+
+The 'active' part of the warrior containing some additional comments is shown
+below:
+
+mov.i  $    7 , {    2  ;boot the imp
+spl.a  $    5 , # 1867  ;split behind the imp-gate
+spl.ab $ 2317 , $  931  ;launch the booted imp
+djn.a  #   -1 , < -145  ;imp-gate / djn-train
+djn.f  #   -1 , < -145  ;\
+jmp.ba #   21 , <  -43  ; ->safety instructions?
+mov.b  # 2667 , $    8  ;useless instruction
+mov.i  #   -1 , $    1  ;the imp instruction
+
+The first impression is: What? That's all!?! Just two imps and an imp-gate?
+But how can it be such defensive and be able to beat LP papers?
+
+Only on a second view it unfurls its barbaric brilliancy: A strategy which was
+never seen in a hand-coded warrior for the LP-hill before.
+
+Both imps are running fast enough to being not caught by a coreclear or a
+scanner wipe on their way through the core. And if they overwrites an opponent
+they convert it into an imp. And they are fast enough to catch the papers
+while still in process of replicating themselves. At the end of all this waits
+the imp-gate killing every imp that approaches. This means if the two imps
+were able to convert all processes of the paper into imps while running
+through the core the paper will lose.
+
+The next step after understanding the strategy was to write a hand-coded
+version and finally optimize it. For some additional points a quickscanner
+was added which works also as a decoy.
+
+And without further ado, here is the final code:
+
+;redcode-lp
+;name Eve 15
+;strategy No humans were used in the creation
+;strategy of this strategy
+;author bvowk + Fizmo
+;assert 1
+
+
+;------>qscan constants
+
+zero    equ     qbomb
+qtab3   equ     qbomb
+qc2     equ     ((1+(qtab3-qptr)*qy) % CORESIZE)
+qb1     equ     ((1+(qtab2-1-qptr)*qy) % CORESIZE)
+qb2     equ     ((1+(qtab2-qptr)*qy) % CORESIZE)
+qb3     equ     ((1+(qtab2+1-qptr)*qy) % CORESIZE)
+qa1     equ     ((1+(qtab1-1-qptr)*qy) % CORESIZE)
+qa2     equ     ((1+(qtab1-qptr)*qy) % CORESIZE)
+qz      equ     2108
+qy      equ     243
+
+;------>qbomb constants
+
+qoff    equ     -87
+qstep   equ     -7
+qtime   equ     14
+
+;------>eve 15 constants
+
+iAwa    equ     4174
+train   equ     7903
+
+;------>eve 15 code
+
+pGo     mov.i   imp,            *2
+        spl     imp
+        spl     iAwa
+        djn.a   #0,             <train
+        djn.f   #0,             <train
+        jmp.ba  #0,             <train
+imp     mov.i   #-1,            1
+
+        for     51
+        dat     0,              0
+        rof
+
+;------>qscan code
+
+qbomb   dat     >qoff,          >qc2
+        dat     0,              0
+
+        dat     0,              <qb1
+qtab2   dat     0,              <qb2
+        dat     0,              <qb3
+
+        for     16
+        dat     0,              0
+        rof
+
+        dat     zero - 1,       qa1
+qtab1   dat     zero - 1,       qa2
+
+        for     42
+        dat     0,              0
+        rof
+
+qgo sne qptr+qz*qc2, qptr+qz*qc2+qb2
+    seq <qtab3,      qptr+qz*(qc2-1)+qb2
+    jmp q0,          }q0
+
+    sne qptr+qz*qa2, qptr+qz*qa2+qb2
+    seq <qtab1,      qptr+qz*(qa2-1)+qb2
+    jmp q0,          {q0
+
+    sne qptr+qz*qa1, qptr+qz*qa1+qb2
+    seq <(qtab1-1),  qptr+qz*(qa1-1)+qb2
+    djn.a q0,        {q0
+
+    sne qptr+qz*qb3, qptr+qz*qb3+qb3
+    seq <(qtab2+1),  qptr+qz*(qb3-1)+(qb3-1)
+    jmp q0,          }q1
+
+    sne qptr+qz*qb1, qptr+qz*qb1+qb1
+    seq <(qtab2-1),  qptr+qz*(qb1-1)+(qb1-1)
+    jmp q0,          {q1
+
+    sne qptr+qz*qb2, qptr+qz*qb2+qb2
+    seq <qtab2,      qptr+qz*(qb2-1)+(qb2-1)
+    jmp q0
+
+    seq >qptr,       qptr+qz+(qb2-1)
+    jmp q2,          <qptr
+
+seq qptr+(qz+1)*(qc2-1),qptr+(qz+1)*(qc2-1)+(qb2-1)
+jmp q0, }q0
+
+seq qptr+(qz+1)*(qa2-1),qptr+(qz+1)*(qa2-1)+(qb2-1)
+jmp q0, {q0
+
+seq qptr+(qz+1)*(qa1-1),qptr+(qz+1)*(qa1-1)+(qb2-1)
+djn.a q0, {q0
+
+    jmz.f pGo,       qptr+(qz+1)*(qb2-1)+(qb2-1)
+
+;------>qbomb code
+
+q0      mul.b   *2,             qptr
+q2      sne     {qtab1,         @qptr
+q1      add.b   qtab2,          qptr
+        mov     qtab3,          @qptr
+qptr    mov     qbomb,          }qz
+        sub     #qstep,         qptr
+        djn     -3,             #qtime
+        jmp     pGo
+
+        end qgo
+
+
+And now a few words on how this warrior was evolved:
+
+Each run of the evolver starts out with "seeding the pool", this is done by
+running a utility called makepop. makepop creates a new warrior by filling it
+full of code chosen randomly from instruction distributions pulled from
+successful handcoded warriors, and then checking to see if it can pass test
+battle against a random warrior from a benchmark set.
+
+Once the pool is filled with warriors, I run the server program master. Master
+reads all the generated warriors, the benchmark warriors, then shuffles the
+generated warriors into species. The evolver considers a species to be a group
+of warriors in the pool that breed only with other members of their group. The
+benchmark typically sits around 6-12 warriors. When master is online and
+listening, I start clients on any computers I have available. The clients
+contact the master, and checkout a section of the pool to calculate scores
+for. Once the client finishes calculating the initial warrior scores, it
+returns the information to the server and checks out another small section.
+
+Once all the warriors have an initial score assigned, the server begins
+sending the clients the completed pool. The clients breed new warriors. Any
+new warriors that exceed the score of the current lowest warrior in a species
+are copied in over that warrior, removing it from the pool.
+
+The "breeding" process selects two warriors of the same species, one of the
+parents is chosen to be the source. After each instruction is copied to the
+child warrior, there is a chance the source will be swapped to a different
+parent warrior, and instructions will be copied from that parent instead.
+On average there are 4 cross-overs between parents in each child. As well,
+there is a chance of mutation for every instruction, this can take the form
+of either a small change to the current instruction, dropping this instruction
+completely, or adding a new instruction. Once the child has been filled with
+code, it is validated against a random benchmark warrior to ensure it is worth
+the cycles to calculate a full score. If it passes, we continue as above, if
+the child scores better than the current low, it replaces the lowest warrior
+in the pool.
+
+After the client has found enough improved warriors, it returns its pool to the
+server, which adds the improved warriors to the main pool. This will continue
+until someone stops the master, and the clients exit when they can check-out no
+more work.
+
+There is also a simple proxy server, to allow clients to be run on machines that
+don't have direct access to the internet. The proxy checks out work (from either
+the master, or another proxy), and hands it out to clients that connect to it.
+Once the proxy recieves enough improved warriors, it checks them back into the
+main server, and requests a new pool.
+
+   --------         ---------
+   |Master|---------|Clients|
+   --------   |     ---------
+              |
+              |     ---------      --------------
+              ------|Proxy S|------|More Clients|
+                    ---------      --------------
+                        |
+                        |
+                        |     ---------    ------------------
+                        ------|Proxy S|----|Yet More Clients|
+                              ---------    ------------------
+
+I have found that best results are obtained by starting the validation score
+very low, and ramping it up as the baseline score of the warriors improves.
+When most warriors are capable of scoring >50% of the tie barrier (the score
+achieved with 100% ties), the validation score is bumped so only warriors that
+can exceed the tie barrier will have their score calculated. This prevents
+warriors that have no strong offensive ability from breeding out all the very
+offensive warriors from the pool, as offensive seem to have a more difficult
+time finding improvements. The mutation rate is started quite high, about 60%
+chance per instruction, and is dropped quickly as the warriors improve. Towards
+the end, the mutation rate is typically held somewhere around 2% chance per
+instruction. If the mutation rate is not dropped, the mutation rate will cause
+the pool to flail around aimlessly and never converge. If the mutation rate is
+started too low, there will not be enough variation in the pool, and it is
+unlikely to find optimizations. The typical path of the evolver is to start
+with low scores, quickly increase as we approach the tie barrier, then there is
+a significant slowdown after the validation score bump described above. Once
+most of the population starts to shift towards more offensive warriors, the
+climb upwards starts again. This will continue until the pool converges on a
+monoculture, where all warriors effectively use the same tactics, and we no
+longer find further improvements. At this point, the pool can be considered
+done.
+
+I generally run the evolver several times from a random start to until the pool
+converges on a monoculture, then collect the top warriors from the finished
+pools into a new pool, and re-run the evolver hoping for further improvements.
+This strategy has proven quite successful in the past. Typically it will take
+days or weeks to run each pool to completion.
+
+As mentioned above, the code generated by the evolver is seeded from patterns
+seen in human coded warriors. The theory here is to emulate natural organisms.
+In nature there are only a limited number of working combinations of proteins,
+and the creation of un-workable proteins is suppressed through various means.
+
+The same is true in corewars, wherein we want to maximize the working
+combinations we see in "nature" (human coded warriors), and supress the random
+ones that we don't see. To do this, I devised a system I think of as chains.
+
+A chain might look like:
+
+ Start instruction:
+   SEQ occured    69 times (39.884%)
+   MOV occured    49 times (28.324%)
+   SNE occured    23 times (13.295%)
+   SPL occured    17 times (9.827%)
+   ADD occured     7 times (4.046%)
+   SUB occured     3 times (1.734%)
+   JMZ occured     3 times (1.734%)
+   DIV occured     1 times (0.578%)
+   NOP occured     1 times (0.578%)
+
+ 2nd Instruction:
+   If previous instruction was spl:
+      SEQ occured   771 times (60.613%)
+      SNE occured   170 times (13.365%)
+      DAT occured   137 times (10.770%)
+      SPL occured    69 times (5.425%)
+      JMP occured    36 times (2.830%)
+      MOV occured    34 times (2.673%)
+      ADD occured    16 times (1.258%)
+      DJN occured     6 times (0.472%)
+      SUB occured     3 times (0.236%)
+      JMZ occured     1 times (0.079%)
+
+   If previous instruction was djn:
+      DAT occured   128 times (22.980%)
+      SEQ occured   127 times (22.801%)
+      JMP occured   100 times (17.953%)
+      MOV occured    50 times (8.977%)
+      SNE occured    46 times (8.259%)
+      SPL occured    38 times (6.822%)
+      DJN occured    21 times (3.770%)
+      ADD occured    11 times (1.975%)
+      JMN occured    10 times (1.795%)
+      SUB occured     6 times (1.077%)
+      MUL occured     2 times (0.359%)
+      JMZ occured     2 times (0.359%)
+
+patterns are examined up to 5 instructions deep, which means the fifth
+instruction will look like:
+
+ If 4 ins ago was spl:
+   If 3 ins ago was spl:
+     If 2 ins ago was spl:
+       If 1 ins ago was spl:
+         ADD occured     1 times (50.000%)
+         MOV occured     1 times (50.000%)
+
+So the fifth instruction would be an ADD or a MOV.
+
+The modifiers and the operands are tied only to the current instruction they
+are being selected for. This is done to keep the size of the tables down to a
+minimum.
+
+When creating the tables for selecting random instructions, a group of
+successful warriors (I used Koenigstuhl's LP) is selected and converted to the
+format that exhaust requires. I then run a program called statcode.pl, this
+program counts every instruction, tallies all the start instructions it sees,
+makes a note of which instructions follow which instructions, and tallies
+which modifiers and operands are seen with any given instruction. The start
+instructions are tallied separately to ensure that all warriors start with a
+valid instruction. The program then outputs a C source file, which I compile
+and link into makepop and client programs.
+
+The source file defines several calls, get_start_instruction, get_operands,
+get_imod, get_omod, and get_{second,third,fourth,fifth}_instruction.
+get_start_instruction returns an instruction selected randomly from the list
+of valid start instructions, weighted by the number of occurances. So in the
+above example, we would expect nearly 40% of our start instructions to be SEQ,
+and nearly 10% to be SPL.
+
+The following is a source snippet from makepop.c showing how a warrior is
+filled using these chains (c is a pointer to the code section of the warrior):
+
+getstartins(&(c[0]));
+op = c[0].in;
+getsecondins(&(c[1]),op);
+op2 = c[1].in;
+getthirdins(&(c[2]),op,op2);
+op3 = c[2].in;
+getfourthins(&(c[3]),op,op2,op3);
+op4 = c[3].in;
+getfifthins(&(c[4]),op,op2,op3,op4);
+for(i = 5; i < max_length; i++){
+ getfifthins(&c[i], c[i - 1].in, c[i - 2].in, c[i - 3].in, c[i - 4].in);
+}
+
+A second pass would then be made to mate each of the instructions with operands
+and modifiers.
+
+This method has made a significant difference in the time required to generate
+a viable start population. The instruction calls are also used to suggest
+mutations, reducing the chance of destructive mutations by using possibilities
+that fit chains used to generate the warrior.
+
+allowing for a small chance that we will change some part of the instruction
+based on the chains that match the warriors code.
+
+If you would like to look at the code, it is currently available for download
+at www.evil-empire.info/files/ccai-1.0.tgz
+
+Thank you to Joonas, John, Will 'Varfar' and Christian for all their ideas.
+Will, thanks for the friendly competition, but I think you're behind a couple
+points right now :) Joonas, thank you for repeatedly rewriting exhaust based
+on my whims.
+
+_______________________________________________________________________________
+Extra Extra - Muffineer by Christian Schmidt
+
+Here is my latest idea for a paper-stone for the LP hill. The big difference
+compared with Achillu 94 or Skinner is, that the bomb run and the replication
+are within the same loop. It bombs and replicate at the same time. This seems
+an advantage when fighting against scanner.
+
+
+;redcode-lp
+;name Muffineer
+;author Christian Schmidt
+;strategy stone/replicator clone
+;assert 1
+;optimax pap
+
+pStep1  equ   5229
+pStep2  equ   3704
+pAdd    equ   963
+pOff    equ   (pHit+pAdd)
+
+zero    equ qbomb
+qtab3   equ qbomb
+
+pRef    mov     #9,             #9
+pGo     mov     <pRef,          <pBck
+pPtr    mov     <pAdd,          }pOff
+        add.ab  {0,             }0
+pHit    mov     pBmb,           @pPtr
+        jmn     pGo,            pRef
+        spl     @pRef,          <pStep2
+pBck    jmz     @0,             pStep1
+pBmb    dat     }7506,          >7279
+
+    for 85
+        dat     0,              0
+    rof
+
+qbomb   dat     >qoff,          >qc2
+        dat     0,              0
+
+        dat     0,              <qb1
+qtab2   dat     0,              <qb2
+        dat     0,              <qb3
+
+        for     16
+        dat     0,              0
+        rof
+
+        dat     zero - 1,       qa1
+qtab1   dat     zero - 1,       qa2
+
+    for 42
+        dat     0,              0
+    rof
+
+qc2 equ ((1 + (qtab3-qptr)*qy) % CORESIZE)
+qb1 equ ((1 + (qtab2-1-qptr)*qy) % CORESIZE)
+qb2 equ ((1 + (qtab2-qptr)*qy) % CORESIZE)
+qb3 equ ((1 + (qtab2+1-qptr)*qy) % CORESIZE)
+qa1 equ ((1 + (qtab1-1-qptr)*qy) % CORESIZE)
+qa2 equ ((1 + (qtab1-qptr)*qy) % CORESIZE)
+qz equ 2108
+qy equ 243
+qgo sne qptr + qz*qc2, qptr + qz*qc2 + qb2
+ seq <qtab3, qptr + qz*(qc2-1) + qb2
+ jmp q0, }q0
+ sne qptr + qz*qa2, qptr + qz*qa2 + qb2
+ seq <qtab1, qptr + qz*(qa2-1) + qb2
+ jmp q0, {q0
+sne qptr + qz*qa1, qptr + qz*qa1 + qb2
+ seq <(qtab1-1), qptr + qz*(qa1-1) + qb2
+ djn.a q0, {q0
+ sne qptr + qz*qb3, qptr + qz*qb3 + qb3
+ seq <(qtab2+1), qptr + qz*(qb3-1) + (qb3-1)
+ jmp q0, }q1
+sne qptr + qz*qb1, qptr + qz*qb1 + qb1
+ seq <(qtab2-1), qptr + qz*(qb1-1) + (qb1-1)
+ jmp q0, {q1
+ sne qptr + qz*qb2, qptr + qz*qb2 + qb2
+ seq <qtab2, qptr + qz*(qb2-1) + (qb2-1)
+ jmp q0
+ seq >qptr, qptr + qz + (qb2-1)
+ jmp q2, <qptr
+seq qptr+(qz+1)*(qc2-1),qptr+(qz+1)*(qc2-1)+(qb2-1)
+ jmp q0, }q0
+seq qptr+(qz+1)*(qa2-1),qptr+(qz+1)*(qa2-1)+(qb2-1)
+ jmp q0, {q0
+seq qptr+(qz+1)*(qa1-1),qptr+(qz+1)*(qa1-1)+(qb2-1)
+ djn.a q0, {q0
+ jmz.f pGo, qptr + (qz+1)*(qb2-1) + (qb2-1)
+qoff equ -87
+qstep equ -7
+qtime equ 14
+q0 mul.b *2, qptr
+q2 sne {qtab1, @qptr
+q1 add.b qtab2, qptr
+ mov qtab3, @qptr
+qptr mov qbomb, }qz
+ sub #qstep, qptr
+ djn -3, #qtime
+ jmp pGo
+end qgo
+
+
+--  Christian Schmidt
+
+_______________________________________________________________________________
+The Hint - Further Code snippets by Christian Schmidt
+
+For warriors which contain a multi-process paper, or a vector launched imp, it
+is neccessary to create a number of processes running in parallel. Beppe Bezzi
+(Binary CODE) and John Metcalf (ALT 1 CODE) already discussed in their hints
+possible code snippets to achieve multi-processes. In this sense I would like
+to show some more snippets which sometimes can save an instruction.
+
+The magic behind the 'new' snippets is the following single instruction:
+
+    spl   0,   }0
+
+The creates three parallel processes instead of two in the case of a spl 1.
+A disadvantage is that it creates processes ahead of the rest.
+
+
+N   Binary CODE      ALT 1 CODE       ALT 2 CODE
+
+2   spl  1, <xxx
+
+3   spl  1, <xxx     spl  2, <xxx     spl   0,   }0
+    mov -1,    0     spl  1, <yyy
+
+4   spl  1, <xxx
+    spl  1, <yyy
+
+5   spl  1, <xxx     spl  2, <xxx     spl   0,   }0
+    mov -1,    0     spl  2, <yyy     mov   asd, 0
+    mov -1,    0     spl  1, <zzz     (asd  spl 1)
+
+6   spl  1, <xxx                      spl   0,   }0
+    mov -1,    0                      spl   1,   <xxx
+    spl  1, <yyy
+
+7   spl  1, <xxx     spl  1, <xxx     spl   }0,  <xxx
+    spl  1, <yyy     spl  1,   }0     spl   0,   <xxx
+    mov -1,    0     spl  1, <yyy
+
+8   spl  1, <xxx
+    spl  1, <yyy
+    spl  1, <zzz
+
+9   spl  1, <xxx     spl 2, <xxx      spl   0,   }0
+    mov -1,    0     spl 2, <yyy      mov   -1,  0
+    mov -1,    0     spl 1,   }0      spl   1,   <xxx
+    mov -1,    0     spl 1, <zzz
+
+10  spl  1, <xxx     spl 1, <xxx      spl   0,   }0
+    mov -1,    0     spl 1, <yyy      mov   1,   0
+    mov -1,    0     spl 2,   }0      spl   1,   <xxx
+    mov -1,    0     mov -2,  0
+
+11  spl  1, <xxx     spl  1, <xxx     spl   0,   }0
+    mov -1,    0     spl  1,  }0      spl   1,   <xxx
+    spl  1, <xxx     spl  2, <yyy     mov   -1,  0
+    mov -1,    0     spl  1, <zzz
+
+Also interesting snippets are the following two, which creates 7 and 8
+parallel processes. Both are using a table which is implemented in their code.
+From the dat instruction only the 1 in the a- or b-field is neccessary.
+The code will be launched at pGo.
+
+7 parallel processes:
+
+    dat 1,   0
+pGo spl *-1, }0
+    spl 1,   0
+
+8 parallel processes:
+
+    dat 0,   1
+pGo spl @-1, }0
+    spl 1,   0
+
+I think there are much more snippets to discover. Maybe we can show next time
+some more.
+
+--  Christian Schmidt
+
+_______________________________________________________________________________
+Extra Extra - Goin' Mobile by anonymous
+
+
+Goin' Mobile is a "bomb dodger" that detects recent changes
+to the core. When it finds a change, it assumes that the cell
+was attacked by its opponent and that the cell won't be attacked
+again anytime soon. That spot is considered safe by Goin' Mobile,
+so it relocates there and then resumes operation.
+
+How does it know when a cell has been altered recently?
+It lays a trail of DATs as part of its normal attack plan; later,
+it checks that trail for changes.
+
+
+;redcode-94
+;assert 1
+;name Goin' Mobile
+;strategy dodge stones, forward clears, and some scanners
+;strategy (e.g. He Scans Alone, Blur 2)
+
+pointer equ (top + (top-first))
+
+top     dat  -100,   0
+move    sub.ab top, #-100
+        mov    top,  pointer
+        mov   @top, }pointer  ; copy self over footprint
+        jmn.f   -1, >top
+        jmp   *top,  0     ; jump to the new copy
+first   mov.ba move, top
+wipe    mov    top, <move  ; clear fast, scan slow
+        mov    top, <move
+        jmz.b wipe, {top   ; check for fresh "footprints"
+        jmp   move,  0
+
+end wipe
+
+
+If you are fighting Goin' Mobile and you have a hard time
+hitting it, then consider changing your pattern of attack
+to be less predictable. For example, instead of clearing the core
+in the usual order (1, 2, 3, ...), you could use MUL to calculate
+the attack sequence.
+
+
+;redcode-94
+;assert CORESIZE==8000
+;name Random Dwarf
+
+dwarf   mov what, <where
+        mov what, <where
+where   mul.ab #7961, #78
+        jmp dwarf, 0
+what    dat 1, 1
+
+end dwarf
+
+
+--  anonymous
+
+_______________________________________________________________________________
+Extra Extra - Sith by Christian Schmidt
+
+There were introduced in the past some successful paper-stones, which are
+using different 'mechanisms' to achieve nice bombing papers. Christian Schmidt's
+unheard-of embedded a pure stone into the paper while David Houston's Netpaper
+followed up Paul Kline' Paper Dreaming which achieves a nice bombing pattern by
+co-operation of all paper copies.
+
+A more primitive way to achieve a nice bombing pattern early in the battle looks
+quite similar to a jmp/add imp launcher. It uses a spl 2 to ensure alternate
+execution of the mov and add instructions.
+
+pap1    spl     @0,            }pStep1
+        mov.i   }-1,           >-1
+        spl     @0,            }pStep2
+        mov.i   }-1,            >-1
+        spl     2,             <pStep3
+        mov.i   bOff1,         {bOff2
+        add.ab  {0,            }0
+pEnd    djn.f   -4,            <pStep4
+
+Keep in mind that we are running several parallel processes.
+
+After constant optimization, adding a quickscanner and additional paper/imps
+for a better defence it finally looks as shown below:
+
+
+;redcode-94nop
+;name Sith
+;author Christian Schmidt
+;assert CORESIZE==8000
+;strategy qscan -> silk/stone & silk/imps
+
+zero    equ     qbomb
+qtab3   equ     qbomb
+
+iStep   equ     1143
+pStep   equ     7342
+sStep   equ     5965
+
+pStep1  equ     182
+pStep2  equ     2007
+pStep3  equ     7549
+pStep4  equ     958
+bOff1   equ     7505
+bOff2   equ     4568
+
+pAwa1   equ     qbomb + 4594
+pAwa2   equ     qbomb + 5475
+
+qbomb   dat     >qoff,          >qc2
+        dat     0,              0
+
+paper   spl     1,              <qb1
+qtab2   spl     1,              <qb2
+        spl     1,              <qb3
+
+        mov.i   <1,             {1
+        spl     pAwa1,          pEnd+1
+        mov.i   <1,             {1
+        jmp     pAwa2,          imp+1
+
+pap1    spl     @0,             }pStep1
+        mov.i   }-1,            >-1
+        spl     @0,             }pStep2
+        mov.i   }-1,            >-1
+        spl     2,             <pStep3
+        mov.i   bOff1,         {bOff2
+        add.ab  {0,            }0
+pEnd    djn.f   -4,            <pStep4
+
+        for     4
+        dat     0,              0
+        rof
+
+        dat     zero-1,         qa1
+qtab1   dat     zero-1,         qa2
+
+pap2    spl     @0,             }pStep
+        mov.i   }-1,            >-1
+        spl     #0,             0
+        mov     pBomb,          >pPtr
+        add.x   imp,            pPtr
+pPtr    jmp     imp-iStep*8,    >sStep-6
+pBomb   dat     >1,             }1
+imp     mov.i   #sStep-1,       iStep
+
+
+        for     34
+        dat     0,              0
+        rof
+
+qc2 equ ((1 + (qtab3-qptr)*qy) % CORESIZE)
+qb1 equ ((1 + (qtab2-1-qptr)*qy) % CORESIZE)
+qb2 equ ((1 + (qtab2-qptr)*qy) % CORESIZE)
+qb3 equ ((1 + (qtab2+1-qptr)*qy) % CORESIZE)
+qa1 equ ((1 + (qtab1-1-qptr)*qy) % CORESIZE)
+qa2 equ ((1 + (qtab1-qptr)*qy) % CORESIZE)
+qz equ 2108
+qy equ 243
+qgo sne qptr + qz*qc2, qptr + qz*qc2 + qb2
+ seq <qtab3, qptr + qz*(qc2-1) + qb2
+ jmp q0, }q0
+ sne qptr + qz*qa2, qptr + qz*qa2 + qb2
+ seq <qtab1, qptr + qz*(qa2-1) + qb2
+ jmp q0, {q0
+sne qptr + qz*qa1, qptr + qz*qa1 + qb2
+ seq <(qtab1-1), qptr + qz*(qa1-1) + qb2
+ djn.a q0, {q0
+ sne qptr + qz*qb3, qptr + qz*qb3 + qb3
+ seq <(qtab2+1), qptr + qz*(qb3-1) + (qb3-1)
+ jmp q0, }q1
+sne qptr + qz*qb1, qptr + qz*qb1 + qb1
+ seq <(qtab2-1), qptr + qz*(qb1-1) + (qb1-1)
+ jmp q0, {q1
+ sne qptr + qz*qb2, qptr + qz*qb2 + qb2
+ seq <qtab2, qptr + qz*(qb2-1) + (qb2-1)
+ jmp q0
+ seq >qptr, qptr + qz + (qb2-1)
+ jmp q2, <qptr
+seq qptr+(qz+1)*(qc2-1),qptr+(qz+1)*(qc2-1)+(qb2-1)
+ jmp q0, }q0
+seq qptr+(qz+1)*(qa2-1),qptr+(qz+1)*(qa2-1)+(qb2-1)
+ jmp q0, {q0
+seq qptr+(qz+1)*(qa1-1),qptr+(qz+1)*(qa1-1)+(qb2-1)
+ djn.a q0, {q0
+ jmz.f paper, qptr + (qz+1)*(qb2-1) + (qb2-1)
+qoff equ -87
+qstep equ -7
+qtime equ 14
+q0 mul.b *2, qptr
+q2 sne {qtab1, @qptr
+q1 add.b qtab2, qptr
+ mov qtab3, @qptr
+qptr mov qbomb, }qz
+ sub #qstep, qptr
+ djn -3, #qtime
+ jmp paper
+end qgo
+
+
+--  Christian Schmidt
+
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
+care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
+<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
+<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>

@@ -1,0 +1,465 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 44                                                    September 23, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Greetings.
+
+After a forced break in late summer, due to Pizza maintenance, the 94 hill
+has gone back to his standard level of activity; don't be fouled by the
+small number of new warriors, more than 50 test that would have made the
+hill have been submitted. The test option proved in fat very popular even if
+there are a few drawbacks; one is that the aging of warriors cannot be
+ompared with that of past ones being now far more difficult. The second is
+that opponent don't have chanes to challenge a warrior under test, as Paul
+Kline pointed out, until it's released in offiial form. Last, as I
+experimented, a test warrior can score very different once it's released,
+this because test works on but 100 fights and the real fight on 200, and I'm
+not very lucky having lost more than 10 points :-(
+
+Steven Morrell volunteered to recalculate the hall of fame removing
+unnatural aging from the scores one we agree on a method to do it. The
+better one seems to disount aging if the pushed off warrior has an score
+under a treshold; I proposed 125 but Planar told me that some warriors,
+Impfinity to tell one, have been pushed off with lower scores. Having to set
+one, to allow Steven start his work, what about 120.
+
+Another hot topic in the newsgrou is if there is a need of a central
+organization, to take the place of the near dead ICWS, or if we can go on
+without it. The discussion is still hot.
+
+For those loving the old 88 redcode standard; it's worth noting that the 88
+hill, available at koth@koth.org (Stormking), has a new leader with an
+incredible 17 pts lead. Congratulations to David Moore for his Racer X.
+
+
+--Beppe Bezzi
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  40.3/ 19.0/ 40.7                    Gigolo   Core Warrior staff 161.6    1
+ 2  38.8/ 20.2/ 41.0           unrequited love                kafka 157.3   45
+ 3  42.8/ 32.0/ 25.2                  CC Paper                Franz 153.5    4
+ 4  42.1/ 32.0/ 25.9                     Frogz                Franz 152.2    5
+ 5  31.5/ 14.8/ 53.7      Return Of The Jedimp             John K W 148.2  113
+ 6  44.1/ 40.6/ 15.3                    Blur 2        Anton Marsden 147.6  124
+ 7  42.8/ 40.2/ 17.0                 Goldfinch              P.Kline 145.3   66
+ 8  42.4/ 39.4/ 18.2                     Probe        Anton Marsden 145.3  125
+ 9  31.5/ 19.7/ 48.8                   Rosebud                Beppe 143.2  798
+10  35.9/ 28.6/ 35.6              Simple v0.4b          Ian Oversby 143.2   76
+11  38.7/ 35.3/ 26.1              Flimsy v0.5c          Ian Oversby 142.1    6
+12  43.4/ 47.2/  9.4                  Q^2 Miro         Anders Ivner 139.6  175
+13  30.0/ 20.5/ 49.6               Impish v0.1          Ian Oversby 139.4    2
+14  39.3/ 39.3/ 21.4                  mrb-test           m r bremer 139.4   31
+15  39.1/ 40.2/ 20.7                      Test        Anton Marsden 138.1   35
+16  25.1/ 12.6/ 62.3                    ompega       Steven Morrell 137.6  240
+17  33.8/ 30.3/ 35.9        Jack in the box II          Beppe Bezzi 137.2  482
+18  33.8/ 30.7/ 35.5               Falcon v0.3          Ian Oversby 136.9   30
+19  38.3/ 40.3/ 21.4          Instant Wolf 3.4                Edgar 136.4    8
+20  37.8/ 39.8/ 22.4               Inferno 2.4       Philip Kendall 135.9    3
+21  36.1/ 39.0/ 24.9                T.N.T. pro    Maurizio Vittuari 133.2  843
+22  39.6/ 46.2/ 14.2           Earthquake v0.2         Bjoern & Ian 132.9   82
+23  38.3/ 45.3/ 16.3                 myVamp5.5             Paulsson 131.3   15
+24  35.7/ 40.7/ 23.6                 Yogi Bear              P.Kline 130.8  329
+25  36.7/ 44.0/ 19.3          BackFromVacation                Edgar 129.5   17
+
+Weekly age: 15 ( 9 last issue, 9 the month before ) more than 50 test
+New warriors: 8  Turnover/age rate 53%
+Average age:   146 ( 174 last issue, 180 the week before )
+Average score: 142 ( 136 last issue, 142 the week before )
+The top 25 warriors are represented by several authors :-) Sorry, I don't
+have the patience to fill in the details this week.
+
+Lots of new warriors in the top position. Bezzi made many test during the
+week, some of which scored very high, to shodown with the new King, Gigolo,
+a cooperative warrior made with the others of Core Warrior staff. Don't ask
+him why after scoring 12 points over the second his warrior setted with but
+three unless you want to learn some new Italian words :-)
+Kafka's unrequited love loses top position after two weeks of domain, but
+remains near the top. Franz puts two warriors in top ranks, both using the
+qscan->silk combination; perhaps replicators are back vith vengeance.
+Q^2 scans are dominating the hill at expense of pspacers.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  37.2/ 19.8/ 43.0                    Gigolo   Core Warrior staff 154.5    1
+ 2  42.8/ 31.4/ 25.8                     Frogz                Franz 154.3    1
+ 4  41.5/ 32.9/ 25.5                  CC Paper                Franz 150.1    1
+ 5  39.3/ 35.2/ 25.5              Flimsy v0.5c          Ian Oversby 143.3    1
+ 8  38.9/ 39.3/ 21.8          Instant Wolf 3.4                Edgar 138.5    1
+13  27.4/ 21.5/ 51.1               Impish v0.1          Ian Oversby 133.3    1
+17  36.6/ 41.0/ 22.4               Inferno 2.4       Philip Kendall 132.1    1
+17  37.9/ 45.4/ 16.7                 myVamp5.5             Paulsson 130.5    1
+
+Revolution in the first spots, we have a new 1st, 3rd and 4th.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  35.3/ 45.6/ 19.1                   Twister          Beppe Bezzi 125.0  575
+26  23.6/ 21.1/ 55.3                 Armory II             John K W 126.0  257
+26   1.5/  1.7/  0.8                 myVamp5.4             Paulsson   5.4  159
+26   0.2/  1.0/  2.8                 September                Beppe   3.4   21
+26  36.1/ 46.9/ 17.0       Violent Micro v0.4d             basehead 125.2   16
+26   1.8/  1.8/  0.4          Instant Wolf 3.4                Edgar   5.9   15
+26   1.6/  2.1/  0.3              Flimsy v0.5a          Ian Oversby   5.2   14
+26   4.0/  2.5/  1.5            Atom Smasher 2        Anton Marsden  13.5    3
+
+Twister leaves us at the age of 575 and Armory at 257; all other are very
+young or killed by the author.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+21  36.1/ 39.0/ 24.9                T.N.T. pro    Maurizio Vittuari 133.2  843
+ 9  31.5/ 19.7/ 48.8                   Rosebud                Beppe 143.2  798
+17  33.8/ 30.3/ 35.9        Jack in the box II          Beppe Bezzi 137.2  482
+24  35.7/ 40.7/ 23.6                 Yogi Bear              P.Kline 130.8  329
+16  25.1/ 12.6/ 62.3                    ompega       Steven Morrell 137.6  240
+
+Rosebud keeps his position while T.N.T. pro and Yogi lose some spots and
+Jack a few. Seen the sarcity of veterans I decided to include them starting
+at 200 age.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  T.N.T. pro             Maurizio Vittuari  843 *  Bomber
+19  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+20  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+21  Rosebud                Beppe Bezzi        798 *  Stone/ imp
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+T.N.T. pro gains a spot; no new entries and we won't have for long being
+next scheduled at more than 200 distance.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+The current Beginner hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  54.6/ 34.4/ 11.0                 Throw Rug             J E Long 174.8   30
+ 2  55.2/ 36.1/  8.7              Tsunami v0.3          Ian Oversby 174.3   73
+ 3  53.4/ 35.2/ 11.4       Violent Micro v0.4d             basehead 171.6   44
+ 4  48.9/ 33.3/ 17.8               Heretic 1.0       Philip Kendall 164.6   55
+ 5  44.8/ 31.8/ 23.3           Versatility 1.6                 Ross 157.8   42
+ 6  44.8/ 33.2/ 22.0               Inferno 2.3       Philip Kendall 156.5   31
+ 7  46.3/ 37.8/ 15.9          Velveeta Shift-I                 shar 154.7    6
+ 8  48.7/ 42.8/  8.5                  Hawk 1.0       Philip Kendall 154.7   27
+ 9  39.5/ 25.6/ 34.9                  Gravel 7           Justin Kao 153.5   50
+10  44.7/ 38.8/ 16.6           BloodSucker 1.0       Philip Kendall 150.6   54
+11  37.3/ 25.9/ 36.8    Ties, Ties, Ties! (+3)                 Ross 148.7   92
+12  44.5/ 40.9/ 14.6   Neverending Brutality 7                Franz 148.1   21
+13  42.3/ 36.7/ 21.0                Black v0.1           Justin Kao 147.9   45
+14  37.6/ 28.2/ 34.1                 Papyrus 6           Justin Kao 147.0   61
+15  41.9/ 38.7/ 19.4             Vampirism 1.4       Philip Kendall 145.0   48
+16  41.1/ 37.3/ 21.5                       RSB             harleyQ2 144.9   15
+17  44.6/ 46.3/  9.1               T-1 w/decoy                 Ross 143.0   83
+18  43.9/ 46.4/  9.6                       T-1                 Ross 141.4   91
+19  39.9/ 39.2/ 20.9                  (-:  :-)                 Ross 140.5   79
+20  38.7/ 38.7/ 22.6               TIE Fighter                 Ross 138.8   78
+21  33.9/ 35.5/ 30.6                      Frog                Franz 132.4    8
+22  40.0/ 52.1/  8.0                Syzygy 1.2       Philip Kendall 127.9   29
+23  32.2/ 38.5/ 29.4           Hammermill v2.4        Matt Lewinski 125.9    2
+24  34.8/ 53.4/ 11.9                  jmztest2         George Eadon 116.1    3
+25   4.0/  0.0/  0.0               Epithelioma        Matt Lewinski  12.0    1
+
+Ick died of old age. The scanner Throw rug is the new leader
+______________________________________________________________________________
+The Hint
+Killing imps
+by Beppe Bezzi
+
+Imp stones are proliferating in the 94 hill, sometimes with a qscan
+sometimes not. Against the qscan the only defence is booting away as fast as
+you can, little else to say. Against stones, apart being a replicator, one
+have to be resistant against decrements/increments and djn streams, I'll
+speak of that in future. Against imps the best defence is a good gate.
+
+94 standard allows combining the gate with a forward running coreclear, but
+there are a few different ways to do that, what's the best ?
+
+I ran a few test pitting the more common gate clears against some different
+imp spirals; the spirals are all 3 points, 8 processes, binary launched and
+differ but in the imp instruction:
+
+Spiral #0,2667          mov.i   #0,     2667
+Spiral #1,2667          mov.i   #1,     2667
+Spiral #-1,2667         mov.i   #-1,    2667
+Spiral #2667,*0         mov.i   #2667,  *0
+
+One can think that the first three will behave in the same way, but that's
+not true as we'll see. The last one is a different kind that's getting more
+and more popular; it's the a-driven imp, used by Die Hard and now by Rosebud.
+
+Now the clears. All those clears can easily be fitted inside your favourite
+bomber or scanner.
+
+;name   gate c-c1
+
+gate1   equ     (gate-5)
+        org     start
+for 10
+        dat 0,0
+rof
+        dat     -5,   100
+gate    dat     -5,   jump-gate1+5
+        spl     #-5,  jump-gate1+5
+for 10
+        dat     0,0             ;the warrior goes here
+rof
+start   spl     #-10,#10
+        mov     @jump,>gate1
+jump    djn     start+1,{gate+1
+
+That's the clear used by Torch 18 and Thermite 2, just to say two successful
+warriors, it's a two pass spl/dat clear, switching to dat one its djn stream
+derements the b-field of 'jump' line.
+Here is how it scored:
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     gate c-c1               Anonymous                85   1  14   1074
+  2     Spiral #2667,*0         Anonymous                 1  45  54   57
+  3     Spiral #0,2667          Anonymous                 1  98   1   4
+  4     Spiral #1,2667          Anonymous                 1  98   1   4
+  5     Spiral #-1,2667         Anonymous                 1  98   1   4
+
+You can see it's very effective against mov #xx,2667 imps, when the imp hits
+the gate the  attack is transferred to the next branch of the spiral, but
+scores less than 50% wins against a-driven imps.
+
+;name   gate c-c2
+;assert 1
+gate1   equ     (gate-5)
+        org     start
+for 10
+        dat 0,0
+rof
+        dat     -5,   100
+gate    dat     -5,   jump-gate1+5
+        spl     #-5,  jump-gate1+5
+for 10
+        dat     0,0
+rof
+start   spl     #-10,#10
+        mov     @jump,>gate1
+        mov     @jump,>gate1
+jump    djn     start+1,{gate+1
+
+This clear is the same of gate c-c1 but has one more mov line. This makes
+the clear more vulnerable against bombs, but improves our performances
+against both silk and imps. Tornado 3.0 used this clear.
+
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     gate c-c2               Anonymous                92   1   8   1128
+  2     Spiral #2667,*0         Anonymous                 1  69  30   33
+  3     Spiral #0,2667          Anonymous                 1  99   0   3
+  4     Spiral #1,2667          Anonymous                 1  99   0   3
+  5     Spiral #-1,2667         Anonymous                 1  99   0   3
+
+As you can notice the a-driven imp has less chances to slip through the gate.
+
+;name   gate c-ca
+;assert 1
+gate1   equ     (gate-5)
+        org     start
+for 10
+        dat 0,0
+rof
+        dat     100
+gate    dat     jump-gate1+5,-5
+        spl     #jump-gate1+5,-5
+for 10
+        dat     0,0
+rof
+start   spl     #-10,#10
+        mov     @jump,}gate1
+jump    djn     start+1,<gate+1
+
+This is the same clear of c-c1, but it's driven by the a-field of the gate
+line. Frontwards used this clear.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     gate c-ca               Anonymous                41   4  56   711
+  2     Spiral #-1,2667         Anonymous                 8  14  78   102
+  3     Spiral #1,2667          Anonymous                 5  18  77   92
+  4     Spiral #0,2667          Anonymous                 1  33  66   69
+  5     Spiral #2667,*0         Anonymous                 1  98   1   4
+
+It's very effective against a-driven imps but much less against classic
+ones, expecially against mov.i #-1,2667 because the gate copies an imp
+instruction to attack the imp itself, and this has, obviously, no effect.
+
+;name stargate
+;assert 1
+
+org stun
+
+gate    dat     stun,kill+10
+for 10
+        dat     0,0
+rof
+
+stun    spl     #kill-gate,kill-gate+10
+        mov     *gate,>gate
+        djn.f   -1,{gate-kill-15
+kill    dat     kill-gate,kill-gate+10
+
+This one is a less used clear, MyVamp 3.7 used it. It's main advantage is
+that it allows the use on djn.f, better against replicators.
+I named it stargate because of the mov *gate,>gate line.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     stargate                Anonymous                37   1  63   691
+  2     Spiral #0,2667          Anonymous                 1   4  95   98
+  3     Spiral #-1,2667         Anonymous                 1   4  95   98
+  4     Spiral #2667,*0         Anonymous                 1  40  59   62
+  5     Spiral #1,2667          Anonymous                 0  99   1   1
+
+As you an see it's near unable to kill spirals with an a field of zero or
+small negative.
+
+The last clear we discuss is Bjorn Guenzel's d-clear
+
+;redcode-94
+;name d-clear
+;author bjoern guenzel
+;strategy clear (no scanning)
+;assert CORESIZE==8000
+;release 23.5.96
+;kill d-clear
+
+shift           equ -3000
+
+ptr             dat >0,4000
+                dat 0,0
+start           spl #0,>ptr
+                mov.i bomb,>ptr
+                djn.f -1,>ptr
+bomb            dat >2667,bomb-ptr+3
+bsource         dat 0,0
+boot z for 6
+                mov.i {bsource,<bootptr
+rof
+bootptr         spl start+shift,bsource+shift
+                mov.i #0,-1
+                dat 0,0
+
+z for MAXLENGTH-CURLINE
+                spl #z*100,z*101
+rof
+
+
+                end boot
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     d-clear                 bjoern guenzel           92   1   8   1129
+  2     Spiral #0,2667          Anonymous                 1  90   9   12
+  3     Spiral #1,2667          Anonymous                 1  90   9   12
+  4     Spiral #-1,2667         Anonymous                 1  90   9   12
+  5     Spiral #2667,*0         Anonymous                 0  96   4   4
+
+As you can see it's equally good against all imp species. Results may be a
+little distorted because I didn't remove the boot, but not too much.
+
+Before everyone chooses d-clear as the best one, give a look at those
+results; unless you have some stunning power in your warrior you'll fall
+prey of every replicator.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     TimeScape (1.0)         J. Pohjalainen           44  21  35   833
+  2     gate c-c2               Anonymous                38  15  47   161
+  3     stargate                Anonymous                35  35  30   135
+  4     gate c-c1               Anonymous                23  40  37   106
+  5     gate c-ca               Anonymous                11  38  51   84
+  6     d-clear                 bjoern guenzel            0  92   8   8
+
+
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

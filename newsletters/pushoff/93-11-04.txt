@@ -1,0 +1,227 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                             November 4, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  47/ 40/ 13                 Iron Trap       Wayne Sheppard     154      53
+ 2  47/ 42/ 11           Dragon Spear II             c w blue     153      11
+ 3  42/ 32/ 26         Winter Werewolf 3         W. Mintardjo     152     678
+ 4  42/ 35/ 22              Keystone t13              P.Kline     149     207
+ 5  35/ 21/ 45                 Cannonade              P.Kline     148     203
+ 6  43/ 38/ 19            Fast Food v2.1     Brant D. Thomsen     148      17
+ 7  35/ 22/ 43        One Bad Apple v1.2      Mike Nonemacher     147       7
+ 8  43/ 41/ 15           Twilight Pits 8         W. Mintardjo     146     104
+ 9  39/ 31/ 30                  Vagabond              P.Kline     146      35
+10  46/ 46/  8                 Agony 6.0        Stefan Strack     145     312
+11  41/ 38/ 22             Distance v8.0     Brant D. Thomsen     144      89
+12  42/ 41/ 17              sub-type-cmp             c w blue     143       2
+13  34/ 26/ 40                Imprimis 7              P.Kline     143     600
+14  44/ 45/ 11                   Impurge     Fredrik Ohrstrom     142     684
+15  35/ 30/ 35                      test        James Layland     140     125
+16  32/ 25/ 43               Impact v1.0         Anders Ivner     139     497
+17  30/ 23/ 47                     pMARS        pMARS project     137     409
+18  32/ 28/ 40             Night Crawler       Wayne Sheppard     136    1360
+19  40/ 46/ 14                    dproba        nandor sieben     135      14
+20  35/ 36/ 29          Yop La Boum v2.1         P.E.M & E.C.     133       1
+
+21   2/ 98/  0                      test              P.Kline       7       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives, including many helpful articles, warrior source
+        code, and reliable emulators, are available via anonymous FTP
+        at soda.berkeley.edu in pub/corewar.
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+My oh my!  Another seasoned battle-program bit the dust this week, as
+N. Sieben's 'ttt' was pushed off at the age of 539.  Unpublished, ttt
+is suspected to be a lean-and-mean stone-imp that proved an intractable
+opponent.  Have to give credit to W. Sheppard's Iron Trap, which is a
+for-real, take-me-seriously, imp-killer - as his own Night Crawler is
+discovering :-)
+
+But Iron Trap is not the only shiny new thing on KotH.  B. Thomsen's
+Fast Food item is proving tough too.  Introducing a very fast
+initial scan, ala QuickFreeze, Fast Food's vampire-attack is giving
+some players fits.
+
+M. Nonemacher's 'One Bad Apple' is struggling to find its niche on KotH.
+With a gate-busting spiral(s), One Bad Apple is trying to shake up
+the Hill and see who falls off :-)
+
+And another mystery resolved.  (Maybe I need a Mystery-of-the-Week section)
+My apologies to Michael Constant.  I had 'submitted' several entries to the
+'94 Hill at Stormking, but never heard anything back, so gave it up.
+Today I discovered that my submittal-program is buggy and nothing
+ever left my computer.  Hopefully this is fixed, and we can start
+including the '94 rankings in _Push Off_.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 1  31/ 16/ 53             One Bad Apple      Mike Nonemacher     147       1
+ 1  48/ 40/ 12                 Iron Trap       Wayne Sheppard     155       1
+ 2  38/ 34/ 28                  Vagabond              P.Kline     142       1
+ 3  33/ 20/ 46        One Bad Apple v1.2      Mike Nonemacher     146       1
+ 4  43/ 45/ 12             Iron Gate 1.2       Wayne Sheppard     140      14
+ 5  40/ 42/ 18             Distance v8.0     Brant D. Thomsen     139       1
+10  42/ 45/ 13              sub-type-cmp             c w blue     139       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+11  42/ 45/ 13           Dragon Spear II             c w blue     139       1
+12  39/ 41/ 20            Fast Food v2.1     Brant D. Thomsen     137       1
+12  40/ 46/ 14              Stoned Again             c w blue     135       1
+16  31/ 30/ 39       Deck of Many Things             c w blue     131       1
+16  35/ 37/ 28               Match Stick             c w blue     132       1
+18  32/ 39/ 29          Yop La Boum v1.0         P.E.M & E.C.     126       1
+18  38/ 46/ 16                    dproba        nandor sieben     130       1
+19  30/ 33/ 36                   Hydra 2      Stephen Linhart     128       1
+19  33/ 37/ 30             Herem VI-test         Anders Ivner     129       1
+19  38/ 52/ 10    All That Glitters v5.6      Mike Nonemacher     124       1
+20  19/ 17/ 65         Imps! Imps! Imps!       Steven Morrell     120       1
+20  27/ 27/ 46                      test      Mike Nonemacher     126       1
+20  33/ 56/ 11                    Nova 2              Jay Han     110       1
+20  34/ 51/ 15         Red Baron ][ v2.1      Mike Nonemacher     118       1
+20  36/ 52/ 12           Juggernaut v1.5         Anders Ivner     121       1
+20  37/ 47/ 15               Dagger v3.1     Michael Constant     128       1
+21   0/ 47/ 53                      wipe   Peter Nyman Hansen      53       0
+21   2/ 81/ 17                     chaos             Rob Weir      23       0
+21   6/ 61/ 33                  copybomb   Peter Nyman Hansen      51       0
+21   6/ 68/ 26              SuperImp 1.0         Jonathan Roy      43       0
+21   8/ 35/ 57                bangle 4.1        Steve Gunnell      82       0
+21   8/ 90/  2                     Trash         Mitch Burton      25       0
+21  10/ 59/ 31                    cloner   Peter Nyman Hansen      61       0
+21  10/ 70/ 19                m2 program             Ray Hann      51       0
+21  10/ 86/  4                 Ponderous         Mitch Burton      34       0
+21  13/ 84/  3              disrupta 1.0    Fredrik Appelberg      41       0
+21  14/ 72/ 14              Mammascan1.0    Fredrik Appelberg      56       0
+21  14/ 77/  9                   cascade        Steve Gunnell      51       0
+21  17/ 61/ 22                Impervious              Jay Han      73       0
+21  17/ 82/  1                   Unknown    Fredrik Appelberg      52       0
+21  18/ 81/  1            fastblitza 1.0    Fredrik Appelberg      55       0
+21  19/ 71/ 10                  FireWall         Bryan Kilian      66       0
+21  23/ 59/ 17                        K1           Karl Lewin      87       0
+21  24/ 67/  9           Multiblitza 1.0    Fredrik APpelberg      82       0
+21  25/ 39/ 37        Incrimination v3.2     Brant D. Thomsen     111       0
+21  28/ 52/ 19               Sunburst 40              Jay Han     104       0
+21  28/ 55/ 16                     death       Steven Morrell     101       0
+21  28/ 62/ 10              Morannon 4.1         J Kyle Kelso     94       0
+21  29/ 56/ 15                      test         Anders Ivner     103       0
+21  29/ 61/ 10                   Sling 5              Jay Han     96       0
+21  29/ 63/  8           Paratroops v3.5         Mintardjo W.      95       0
+21  32/ 54/ 14                   Nova 19              Jay Han     110       0
+21  33/ 53/ 14              Permafrost 1              Jay Han     112       0
+21  34/ 46/ 20                    eproba        nandor sieben     122       0
+21  34/ 46/ 20       testing a B scanner             c w blue     122       0
+21  34/ 49/ 17                Early Bird             c w blue     120       0
+21  35/ 52/ 13                      test              P.Kline     118       0
+21  37/ 52/ 12               sub-type-os             c w blue     121       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+(This is a follow-up to P.E.M. and E.C.'s posting of their 2668-imp)
+
+This is great!  I'm glad I described Cannonade's spiral in such
+a vague fashion, because what you have is very different and
+interesting.  In fact Cannonade HAS to launch a 2667-imp to follow the
+2668 because the standard gate always kills the 2668.  Yours
+doesn't need the 2667.  (Which suggests a way to beat Iron Trap which
+is currently whacking Cannonade :-)
+
+Here is a portion of your launch, commented to show the order
+of execution, and the mov-destination for each process:
+
+      spl 8
+      spl 4       ; mov-from      mov-to
+      spl 2       ; --------      ------
+      jmp imp     ; N             N+2668        a
+      jmp imp1+1  ; N+2668        N+2668+2668   b
+      spl 2
+      jmp imp2    ; N+2667+2667   N+2           c
+      jmp imp+1   ; N+1           N+1+2668      d
+      spl 4
+      spl 2
+      jmp imp1    ; N+2667        N+2667+2668   e
+      jmp imp2+1  ; N+2667+2668   N+3           f
+      spl 2
+      dat #0
+
+Note that only a and e set up the next process.  The rest leave
+a gap between moving the imp and executing it.  A few tests
+showed in some cases there are up to 16 cycles between moving
+and executing the imp, which leaves you more vulnerable to
+bombing.
+
+If you are combining your imps with a stone, be sure
+to split off the stone process before entering the spiral-launch.
+Don't just take one of the extra processes out of the end
+of the launch code, it may leave huge gaps in your spiral
+execution sequence and weaken it greatly.
+
+For the same reason, you might try using SPL 32 and SPL 16 to
+start the other two spirals, rather than taking processes out of
+the end of each preceding one.
+
+On the other hand, you partly overcome the execution gaps by
+interleaving three spirals, creating some redundancy.
+
+On the other-other hand, your launch is so complex, I may be mis-
+understanding it, so feel free to rebut :-)
+
+Here's a stripped-down version of Cannonade's 2668-launch:
+
+start    mov imp1,imp1+5
+         mov imp1,<start
+         mov imp1,<start
+         mov imp1,<start
+         mov imp1,<start
+
+lnch2    spl lnch2b
+lnch2a   spl lnch2ab
+lnch2aa  spl 2
+         jmp imp1+(2668*0)
+         jmp imp1+(2668*1)
+lnch2ab  spl 2
+         jmp imp1+(2668*2)
+         jmp imp1+(2668*3)
+lnch2b   spl lnch2bb
+lnch2ba  spl 2
+         jmp imp1+(2668*4)
+         jmp imp1+(2668*5)
+lnch2bb  spl 2
+         jmp imp1+(2668*6)
+         jmp imp1+(2668*7)
+imp1     mov 0,2668
+
+This is a true spiral where every instruction moves the imp to
+the very next location to be executed (except the last one).
+It does have a weakness in pushing four unprotected instructions
+along ahead of it.  I overcome that by 'braiding' a pair of spirals
+two instructions apart, making it much stronger and more resistant
+to spl-jmp attack.  A single spiral needed 4-5 'twitches' to
+clear a spl-jmp bomb, but against most scanners there was never
+time for that.  The braided pair needs only 2-3 'twitches' to
+overcome spl-jmp's and survive the opponent's core-clear.
+
+BTW, I advise taking a look at Chimera for a very neat launch-time
+trick that is incorporated into Cannonade.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

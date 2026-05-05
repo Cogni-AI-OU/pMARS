@@ -1,0 +1,384 @@
+     _______                               _______
+    //  __  \  _____    __ ____  _____    //      \  _____    ______
+   //  /  \\/ //    \  // '___/ // __ \  //   /   / //    \  //  __/
+  //  /____  //  /  / //  /    // ____/ //   /   / //  /  / _\\  \
+  \\______/  \\____/ //__/     \\____/  \\______/ //  ,__/ //____/
+................................................ //  / .................
+                                Resonant Papers //__/  Issue 2
+                                                       2020.01.27
+
+Hello  and welcome to CoreOps newsletter dedicated to CoreWar, the ulti-
+mate programming game. I'm inversed and it is my mission  to  bring  you
+the  latest  news  from the virtual frontline. Beginners and prospective
+redcoders are advised to read the tutorials at
+
+                   https://corewar.co.uk/guides.htm .
+
+This issue covers silk step interactions with a focus on the  tiny  set-
+ting. Warm up your emulator!
+_______
+THEORY \________________________________________________________________
+
+Barkley Vowk's new warriors 7b15f4b8-..., 4b0804b3-..., and 7fe57f81-...
+have set the new standard for tiny papers, taking the 1st, 2nd  and  5th
+places  at Koenigstuhl at the moment of publication. Yet at first glance
+they look completely unremarkable -- two-silk coreclear-type papers with
+plain  MOV  attacks.  Let's dive into the mechanism behind their perfor-
+mance.
+
+      7b15f4b8-...              4b0804b3-...              7fe57f81-...
+    7 processes               7 processes               5 processes
+
+spl.i   @   0, > 236      spl.i   @   0, > 236      spl.i   @   0, {  66
+mov     }  -1, >  -1      mov     }  -1, >  -1      mov     }  -1, >  -1
+spl.i   @   0, >  92      spl.f   @   0, <  83      mov     }  -2, >  -2
+mov     }  -1, >  -1      mov     }  -1, >  -1      spl.i   @   0, >-261
+mov     @   4, { -21      mov     } -53, { 115      mov     }  -1, >  -1
+mov     }-121, {-392      mov     < -30, {-341      mov     >  25, {-164
+jmp.ba     -2, > 177      djn.x      -1, < -41      djn.a      -2, >-305
+
+The first thing to note is that the papers do not boot, which in  theory
+should leave them vulnerable to oneshots and table scans. However, exam-
+ination reveals that the original paper soon gets partially  overwritten
+with  another copy. This in turn happens to other copies and has two ef-
+fects. First, any processes caught in an SPL carpet are rescued and even
+put  to  useful  work. Second, if the overwritten paper was not stunned,
+the processes from the two copies will be combined, resulting in  either
+doubled attacks or increased process generation (more on that later).
+
+The  exact sequence of steps leading to self-overwriting can be revealed
+by examining the table of the form i * X + j * Y, where X and Y are  the
+inner  and  outer  silk  steps  respectively. Denoting congruence modulo
+coresize by ~=, we have:
+
+7b15f4b8-...    1 * X + 3 * Y ~= 0   When plotted on the (X,  Y)  plane,
+4b0804b3-...    4 * X + 2 * Y ~= 4   such  equalities  look  like  lines
+7fe57f81-...    1 * X + 4 * Y ~= 3   with  rational   slopes,   wrapping
+                                     around  the  edges. These lines are
+clearly visible on the score surface images [1]. By analogy with  celes-
+tial  mechanics  I  call such step interactions resonances. The larger a
+resonance's coefficients are, the less salient it is. The  most  notice-
+able  lines  correspond  to  detrimental  resonances that prevent proper
+replications.
+
+The properties of paper steps mirror those of stone steps. The behaviour
+of  the latter can in principle be understood by replacing the core with
+a unit interval and studying the sequence of bombed locations (fraction-
+al parts of step multiples). The worst possible step sizes in this model
+are the rational numbers p / q, covering only q distinct locations.  Ir-
+rational  numbers  fare better, densely covering the "core", but not all
+of them are equally good. The worse the step can be approximated by  ra-
+tional  numbers,  the  more uniform the resulting sequence is. The least
+approximable number is the golden ratio.
+
+With paper steps we see a similar picture but in more dimensions. For  a
+two  silk  paper  with steps X, Y we have a 2D "sequence" of paper loca-
+tions within the unit square i * X + j * Y.  If the steps are rationally
+dependent -- that  is,  p * X + q * Y  is  an  integer for some integers
+p, q, then the sequence is periodic with period (p, q) and the ratio  of
+unique  locations  goes  to zero. So in terms of replication efficiency,
+resonances are the worst possible choices. But in a  real,  finite-sized
+core, this deficit can be easily outweighed by stun resistance. The best
+steps in this model are certain cubic irrationals analogous to the gold-
+en ratio. There is a lot of fascinating math behind this problem deserv-
+ing a separate exposition.
+______________________
+REPLICATION IN DETAIL \_________________________________________________
+
+Now let's move on to the actual replicators, starting with  a  two  silk
+coreclear-type paper:
+
+spl   @ 0  ,  > Y   This paper structure means that any replication path
+mov   }-1  ,  >-1   consists of Y steps followed by X steps.  The  over-
+spl   @ 0  ,  > X   writing code initially lands over a paper containing
+mov   }-1  ,  >-1   both silks and then spreads over its X step  descen-
+( p a y l o a d )   dants  via  natural  replication. The inner silk has
+                    the time to fully execute the number of  instruction
+equal  to the sum of the resonance's step coefficients. Thus the minimal
+useful resonances have a coefficient sum of 3, paper-launched imps being
+an example. Payloads containing more than one instruction require higher
+values. In my experiments with a typical tiny paper (payload  length 2),
+resonances  with  sums 4 and 5 worked best. It is assumed that both step
+coefficients are positive. Resonances with a single negative coefficient
+are  technically  possible,  but are less practical as the initial paper
+and some early copies (the most vulnerable code) never get overwritten.
+
+Another important parameter is the remainder, or the offset between  the
+overwriting copy and the original one, for it largely determines the ef-
+fect of the resonance.  There  are  two  particularly  important  cases.
+First,  a  zero remainder. Since the instructions effectively remain un-
+changed, the original processes continue the  execution  as  if  nothing
+happened.  This means that now we have two sets of processes in the loop
+(assuming that the payload contains one). Not all attack types are  com-
+patible with such resonance though, because all the fields will be reset
+to their original values. The original processes may also interfere with
+replication  if  they execute the silk's MOV at the wrong time. However,
+the fact that we now have two sets of processes  within  the  same  code
+opens up intriguing possibilities. It is tempting to exploit the process
+alternation to perform some kind of bombing. 7b15f4b8-... has  zero  re-
+mainder.
+
+Second,  the  silk's SPL can land right on top of an instruction that is
+about to be executed. This type  of  resonance  leads  to  an  extremely
+rapid, avalanche-like process generation. The overwriting copy will then
+have twice the normal process amount. The copy that overwrites  it  will
+double  the  process count again and so on. Under the tiny settings, the
+process count can be maxed out as early as  2.5  CORESIZE  cycles.  This
+serves  as another type of stun resistance - the closer the paper to the
+process limit, the less effect an SPL carpet will  have.  This  type  of
+resonance is employed by 4b0804b3-... .
+
+In  my  experiments these two resonance types worked best. Other remain-
+ders are possible too, but they can lead to unexpected effects. For  ex-
+ample,  in  7fe57f81-... the overwriting silk's SPL and MOV instructions
+alternate, spilling processes to random locations.
+
+sX  spl  @  0   ,  >  X    Timescape-style  papers  behave  differently.
+    mov  } -1   ,  > -1    Unlike the coreclear papers, all 2^n replica-
+    (  p a y l o a d  )    tion paths of length n  are  valid.  However,
+    mov  {  sX  ,  {  sY   every  end  silk  replication  increments the
+sY  jmp     Y+1            front silk step, so the different path permu-
+                           tations  in  general  lead to different loca-
+tions. The set of paths with A and B steps of types X and Y respectively
+leads to locations ranging
+
+          from: A * X + B * Y              (path XXX ... YYY)
+            to: A * X + B * Y + A * B * dX (path YYY ... XXX),
+
+where dX is the X step increment. All paths of length n lead to
+
+            Sum (1 + i (n - i)) = (n + 1) (n^2 - n + 6) / 6
+
+distinct  locations  (OEIS A000125 [2]). The papers come in clusters and
+the table i X + j Y gives their starting locations. In case of  a  reso-
+nance,  any  cluster  is  eventually  overwritten. Since the overwriting
+cluster is  larger  by  at  least  dX,  the  remainder  can  be  in  the
+[-dX .. L - 1]  range, where L is the paper length. However, the head of
+the cluster gets written first, so it makes more sense to use the values
+from  [0 .. L - 1]  range  to  minimize the delay. The code must execute
+completely before being overwritten, otherwise there is no point in hav-
+ing an end silk. This means that the Y coefficient must be 1 or greater,
+or the X coefficient must be greater or equal  to  the  number  of  exe-
+cutable instructions.
+
+The process stacking effect can be achieved without a resonance by using
+an end silk of the form jmp @0, <sY + 1. This cancels the changes to the
+X  step,  so  the  paths XY and YX lead to the same location and combine
+their processes. The replication pattern then gets  rather  complicated,
+as  any  extraneous  processes effectively change the Y step. Paths XYX,
+YXX and XXY lead to the same location, but XYY, YXY and YYX do  not,  so
+the degree of stacking varies.
+
+All  resonances  have a mirrored version in which a copy of the paper is
+booted CORESIZE / 2 locations away. The reflected copies then  overwrite
+each other. This version is twice as slow, but more reliable. In a regu-
+lar resonance, a paper stunned before it could make any copies will  re-
+main stunned. In a mirrored resonance, the descendants of its reflection
+will come to the rescue. Although I've been focusing on the  tiny  hill,
+resonances play a special role under the standard settings, allowing the
+papers to kill imp spirals efficiently (see Numb, Burning Metal).  Reso-
+nance  types completely different from the ones discussed above are also
+possible. For example, in a satellite paper the payload part can land on
+top of the executing replication part.
+_____________
+OPTIMIZATION \__________________________________________________________
+
+The  fraction  of  resonances with small coefficients among all the step
+pairs is low. The fraction of beneficial resonances is lower  still.  It
+is  therefore  a good idea to design them deliberately instead of hoping
+that they would be found by chance. I start by picking the  coefficients
+and the range of possible remainders, which gives the inequality
+
+             rMin <= (A * X + B * Y) mod CORESIZE <= rMax.
+
+If some step pair (X, Y) satisfies the inequality, so does
+
+                    (X + t * B / g, Y - t * A / g),
+
+where g is the greatest common divisor of A and B.  The set of all reso-
+nant steps can then be parametrised in terms of a few base solutions and
+the  parameter  t.  Geometrically,  we're looking at g distinct parallel
+lines. The base solutions can  be  found  visually  by  looking  at  the
+A * X + B * Y  inequality  table  in the vicinity of each line. Once all
+base solutions have been identified, an extra parameter  can  be  intro-
+duced to switch between them as shown below:
+
+                         for IdBase == 1
+                             X0      equ     0
+                             Y0      equ     0
+                         rof
+                         for IdBase == 2
+                             X0      equ     0
+                             Y0      equ     1
+                         rof
+                         ...
+
+The  constants  IdBase  and  t  can  then be optimized with the reader's
+method of choice. Here are two tiny warriors optimized in this manner:
+
+;redcode-tiny
+;author inversed
+;name Consonance
+;strategy Quickscan -> resonant coreclear-type paper
+;assert CORESIZE == 800
+
+; 3 * X + Y = 1
+stepX   equ     0 + (1 * time)
+stepY   equ     1 - (3 * time)
+time    equ     106
+ma      equ     523
+djs     equ     403
+
+qx      equ     150
+qy      equ     577
+qa1     equ     ((qx - 1) * qy + 1) * (((qx - 1) * qy) % 800)
+qb1     equ     (qx - 1) * qy
+qa2     equ     (qx * qy + 1) * ((qx * qy) % 800)
+qa3     equ     ((qx + 1) * qy + 1) * (((qx + 1) * qy) % 800)
+qb3     equ     (qx + 1) * qy
+
+org     qscan
+
+qscan   sne.f     qf + qa1  ,     qf + qb1
+        seq.f     qf + qa2  ,   } qf
+        jmp     @ qlo + 1   ,   { qf
+        sne.f     qf + qa3  ,     qf + qb3
+        jmz.f     start     ,   < qf
+
+qf      mul.x   # qx        ,   # qy
+        jmz.f   @ qlo + 1   ,   > qf
+
+qlo     mov     } djs       ,   > qf
+        mov     } qlo       ,   { qf
+        seq     { qf        ,   > qf
+        djn.f     qlo       ,   > qf
+
+start   spl       2         ,   {-djs
+        spl       1         ,   {-djs - 2
+        spl       1         ,   {-djs - 4
+
+silkY   spl     @ 0         ,   > stepY
+        mov     } silkY     ,   > silkY
+silkX   spl     @ 0         ,   > stepX
+        mov     } silkX     ,   > silkX
+        mov     > ma        ,   { 0
+        djn.f    -2         ,   < djs
+
+;redcode-tiny
+;author inversed
+;name Chorus
+;strategy Quickbomb -> Timescape-type paper with mirrored resonance
+;assert CORESIZE == 800
+
+stepX   equ     67  ; 6 * 67 = 402
+stepY   equ     12
+m1a     equ     688
+m1b     equ     368
+m2a     equ     703
+m2b     equ     788
+djs     equ     45
+bdist   equ     400
+
+qa      equ     179
+qb      equ     411
+qc      equ     764
+qd      equ     388
+
+x0      equ     (-CURLINE)
+mirror  equ     silkX + bdist + 6
+qalpha  equ     x0 + qa + i * qb
+qbeta   equ     x0 + qc + i * qd
+
+i for 9
+        mov     { qalpha    ,     qbeta
+rof
+
+start   spl       2         ,   { x0 + qa + 10 * qb
+        spl       1         ,   { x0 + qa + 11 * qb
+        spl       1         ,   { x0 + qa + 12 * qb
+
+        mov     { silkX     ,   { bp
+bp      spl       mirror    ,   { x0 + qa + 13 * qb
+
+silkX   spl     @ 6         ,   > stepX
+        mov     } silkX     ,   > silkX
+        mov     > m1a       ,   { m1b
+        mov     > m2a       ,   { m2b
+        mov     { silkX     ,   { silkY
+silkY   djn.f     stepY + 1 ,   < djs
+_____________________
+PERFORMANCE ANALYSIS \__________________________________________________
+
+Let's take a look at the scores of various warriors against  five  reso-
+nant  papers  (bvowk's  trio,  Chorus and Consonance).  Once dominant,
+oneshots are struggling against the new threat. The best result most ex-
+isting  designs  can  hope  to  achieve is not losing horribly. Scanners
+don't fare any better. Only four scanning warriors score more  than  135
+points:
+
+      +-----------------------------------------------------------+
+      |NAME                     AUTHOR              TAKEN   GIVEN |
+      +-----------------------------------------------------------+
+      |Table Scan               John Metcalf        147     125   |
+      |SmarterLiner             Christian Schmidt   146     138   |
+      |s774++                   Michal Janeczek     144     135   |
+      |T-Scan                   John Metcalf        139     134   |
+      +-----------------------------------------------------------+
+
+Table scans can catch the unbooted paper quickly enough in order for the
+spl carpet to be effective.  On  the  other  hand,  if  the  paper  uses
+quickscanning  instead  of quickbombing, large scan table becomes a lia-
+bility. Smartliner uses bombing in combination with a scan step of  619,
+also  allowing  it  to frequently find the original code quickly. s774++
+uses a scan step of -26. Negative steps are  rarely  used  by  oneshots,
+since  attacking  the  locations that were recently found to be empty is
+not very efficient. On the other hand, papers optimized against  regular
+oneshots  can be poorly adapted to such strategy. Oneshot authors hoping
+to score well against the replicating beasts should consider alternative
+attack methods such as multiple shots and extra spl stripes.
+
+Every  strategy  has a counterstrategy and the new papers are not an ex-
+ception to this fundamental rule, evolved papers being a hard counter:
+
+      +-----------------------------------------------------------+
+      |NAME                     AUTHOR              TAKEN   GIVEN |
+      +-----------------------------------------------------------+
+      |bestwar4.red             Dave Hillis         191     96    |
+      |[RS] Chaderia Nelitha    inversed            187     100   |
+      |[RS] Chaderia Hysura     inversed            178     100   |
+      |Evolving Threat          Dave Hillis         174     115   |
+      |Evolver 105814574x500    R.Daneel            165     108   |
+      |redrace (3/05/01) v1     Dave Hillis         165     108   |
+      +-----------------------------------------------------------+
+
+Stone+imps tend to do rather well,  oftentimes  outperforming  oneshots.
+Prolonged bombing and infinite imp spirals seem to be the key factors.
+
+      +-----------------------------------------------------------+
+      |NAME                     AUTHOR              TAKEN   GIVEN |
+      +-----------------------------------------------------------+
+      |Resin                    John Metcalf        148     107   |
+      |Drypht                   inversed            135     126   |
+      |backdraft                Sascha Zapf         133     127   |
+      |Windkeeper               Christian Schmidt   133     124   |
+      |Tiny Black Knight        Christian Schmidt   130     130   |
+      |Cristalline form v2      G.Labarga           129     126   |
+      |Creeping Horror          John Metcalf        128     115   |
+      |Tiny Last Judgement      Christian Schmidt   127     134   |
+      +-----------------------------------------------------------+
+
+The  resonance  technology  turns the tiny hill balance upside down. The
+new equilibrium looks like this: resonant papers beat oneshots, oneshots
+beat evolved papers, evolved papers beat resonant papers. Stone+imps are
+no longer the only hard counter to scanners and should rely on  balanced
+performance in order to adapt. A new tiny hill era requiring new strate-
+gies begins.
+___________
+REFERENCES \____________________________________________________________
+
+[1] https://corewar.co.uk/gutzeit/score_surfaces/yap/index.htm
+[2] http://oeis.org/A000125
+
+news:rec.games.corewar                             mailto:reoser@mail.ru
+
+      Typeset in GNU Troff by Anton Shepelev (anton.txtgmail.com).
