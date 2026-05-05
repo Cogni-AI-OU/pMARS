@@ -1,4 +1,5 @@
 ;   the pied piper of hamlin
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;   by adam king
 
 cliff dat	#0, #0

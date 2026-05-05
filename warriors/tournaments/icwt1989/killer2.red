@@ -1,4 +1,5 @@
 ;  killer 2     by thm
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;
 jmp	start
 ptr1 dat	#0, #111

@@ -1,4 +1,5 @@
 ;warrior vamp
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;by stefan roettger, d-8525 uttenreuth
 ;
 ;

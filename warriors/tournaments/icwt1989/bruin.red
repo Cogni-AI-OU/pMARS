@@ -1,4 +1,5 @@
 ;    bruin
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;    by alan wang
 ;    and john perry
 ;

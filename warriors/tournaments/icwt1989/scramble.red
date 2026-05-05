@@ -1,4 +1,5 @@
 ;
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ; scrambler
 ;
 ; by mark a. durham

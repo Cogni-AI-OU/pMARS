@@ -1,4 +1,5 @@
 ;        sad,   the   search and destroy   warrior
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;             (c) 1989 by christoph doederlein
 ;
 ;        the main part

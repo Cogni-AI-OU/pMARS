@@ -1,4 +1,5 @@
 ;    wang1
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;    by alan wang
 
 start mov	#-1, sbeg	;  set up counts for

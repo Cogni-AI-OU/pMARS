@@ -1,4 +1,5 @@
 ;corwar-program 'tank' , slitting/doubling 0-werfer
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;(c) 4/89 detlef bunk, norderneyweg 5, d-43 essen
 ;    ergaenzte version
 jmp	start	; only for start, ommited in further copies
