@@ -1,40 +1,32 @@
-# KOFACOTO Tournament - Round 1
+# KOFACOTO Round 1: White Warrior
 
-## Rules: White Warrior
+## Rules
 
-**Entries due:** Sunday, October 8th midnight CST.
+Entries were due Sunday, October 8th 2000, midnight CST.
 
 ### Round 1: White Warrior
 
-At the bottom you will see the previously unpublished code of Return Of The Jedimp.
-I -believe- this is the version that at one time lasted quite a while on the Pizza
-'94 Hill, but I can't be exactly certain.
+At the bottom you will see the previously unpublished code of Return Of The Jedimp. I -believe- this is the version that at one time lasted quite a while on the Pizza '94 Hill, but I can't be exactly certain.
 
-If you look carefully at the imp spiral creation you'll see it uses a method that's
-never been independantly developed by anyone else as far as I know. The imp spiral
-evolves over several generations of ring creation. It's really quite interesting.
+If you look carefully at the imp spiral creation you'll see it uses a method that's never been independently developed by anyone else as far as I know. The imp spiral evolves over several generations of ring creation. It's really quite interesting.
 
-I have a feeling that something along the lines of He Scans Alone is the best bet
-for victory, but don't let that sway your development. :)
+I have a feeling that something along the lines of He Scans Alone is the best bet for victory, but don't let that sway your development. :)
 
 For the code to He Scans Alone see http://www.KOTH.org/planar/index.html
 
 I'll run 200+ rounds with each person's entry to get their score for this round.
 
-**Standard '94 rules:** `pmars.exe -r 200 -d 100 -c 80000 -p 8000 -l 100`
+Standard '94 rules: `pmars -r 200 -d 100 -c 80000 -p 8000 -l 100`
 
 Remember overall scores in the opening rounds will determine your seed in the playoffs.
 
 And now the white warrior... enjoy!
-
--jkw
 
 ### Return Of The Jedimp
 
 ```redcode
 ;redcode-94
 ;name Return Of The Jedimp
-;kill Return Of The Jedimp
 ;author John K W
 ;strategy Return Of The Jedimp with Q^2 scan...
 ;strategy v.q4 - altered engine. new qscan.
@@ -154,9 +146,9 @@ b dat <1, 1
 imp2 mov.i #d2, *0
 ```
 
-## Results Round 1
+## Results
 
-The final total was 21 entries.
+Janeczek barely edges out the competition in Round 1 with an outstanding warrior scoring over 95% wins! The top 4 entries were pretty much in a statistical dead heat... But I was amazed at the wide diversity of scores, and differing strategies.
 
 | Name | Wins | Losses | Ties | Score | Normalized Score |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -182,42 +174,35 @@ The final total was 21 entries.
 | Adamowski | 6 | 1544 | 450 | 468 | 81 |
 | Ankerl | 28 | 1882 | 90 | 174 | 30 |
 
-## Comments Round 1
+## Comments
 
 The top 6 warriors from Round 1 all use a precision scanning technique, and I thought that corewarriors who are not familiar with it might like a short introduction.
 
 A precision scan finds the long QS code, then scans for the beginning (or end) of it so that the black warrior knows *exactly* where to find all the components of the white. This makes it pretty easy to boot a cleanup warrior somewhere safe and pick them off at leisure; you can even kill a replicator with DAT bombs when you know exactly where to hit.
 
-I first met it a couple of tournaments ago when Paul Kline used it to win a white warrior round by a landslide. Most long white warriors are best dealt with this way. I have often used in in White warrior rounds, and my multiwarrior :-= used a similar "precision fang" approach to get on to the multiwarrior hill by exploiting a single known opponent.
+I first met it a couple of tournaments ago when Paul Kline used it to win a white warrior round by a landslide. Most long white warriors are best dealt with this way. I have often used in in White warrior rounds, and my multiwarrior `:-=` used a similar "precision fang" approach to get on to the multiwarrior hill by exploiting a single known opponent.
 
-All the warriors are available in the `warriors/` directory.
+### Strategy Comments
 
-### Force feedback (janeczek)
-Uses a 0.5c scanner. I am a little surprised that it beat Darkside because the longer the scan takes, the more time the replicator has to overwrite the black warrior. OTOH it is shorter, which makes it less vulnerable to both the QS and the replicators, and it looks as if it comes out a little ahead on balance. If you have not seen a decoy generator before, watch it in cdb. The QS spacing makes -300 a very effective place to put a decoy because the QS will usually scan it 1 cycle before it would have found your real warrior.
+**Force feedback** (Macrae) uses a 0.5c scanner. I am a little surprised that it beat Darkside because the longer the scan takes, the more time the replicator has to overwrite the black warrior. OTOH it is shorter, which makes it less vulnerable to both the QS and the replicators, and it looks as if it comes out a little ahead on balance. If you have not seen a decoy generator before, watch it in cdb. The QS spacing makes -300 a very effective place to put a decoy because the QS will usually scan it 1 cycle before it would have found your real warrior.
 
-### Darkside (Macrae)
-Uses a 0.8c scan to find the QS faster, but it is longer and so more vulnerable. It is also a bit difficult to reset the pointers if I happen to scan a replicator before I get the QS and so the scan pattern is not always perfect. I discovered that short DAT carpets would kill the replicators very quickly, so I did not bother to boot the bomber but maybe this was a mistake.
+**Darkside** (janeczek) uses a 0.8c scan to find the QS faster, but it is longer and so more vulnerable. It is also a bit difficult to reset the pointers if I happen to scan a replicator before I get the QS and so the scan pattern is not always perfect. I discovered that short DAT carpets would kill the replicators very quickly, so I did not bother to boot the bomber but maybe this was a mistake.
 
-### JedimPURGE (paulsson)
-A 0.8c scan coupled with a short 2c QS -- more for fun than effect, I suspect! It SPL carpets the replicators before starting a spiral clear. This requires greater length, but the spiral clear can win even if the scan has missed the QS and found a replicator.
+**JedimPURGE** (paulsson) is a 0.8c scan coupled with a short 2c QS -- more for fun than effect, I suspect! It SPL carpets the replicators before starting a spiral clear. This requires greater length, but the spiral clear can win even if the scan has missed the QS and found a replicator.
 
-### myBlack (moore)
-Different, because the QS is handled by precision spacing of the components; the warrior will often be hit but because the bombs are known to be exactly 12 apart, the components are aranged so that one scanner and payload will (always?) remain intact. This is another neat example of the kind of power that perfect knowledge of your opponent gives you. The warrior is otherwise very similar with a 0.5c scan booting a spiral clear.
+**myBlack** (moore) is different, because the QS is handled by precision spacing of the components; the warrior will often be hit but because the bombs are known to be exactly 12 apart, the components are arranged so that one scanner and payload will (always?) remain intact. This is another neat example of the kind of power that perfect knowledge of your opponent gives you. The warrior is otherwise very similar with a 0.5c scan booting a spiral clear.
 
-### Tsetse (kline)
-Takes the usual approach, but performs rather worse than the first three. I think this is because it uses a short but slow decoy generator which gives the QS too many chances to hit before the decoy is in place. This is an odd decision because AFAIK Paul invented the 3c decoy generator. It is safe to use a long decoy generator because even if it is spotted by the QS the bombs start to fall on it after it has finished running, and don't reach back to the main warrior. However, the resulting warrior is very compact.
+**Tsetse** (kline) takes the usual approach, but performs rather worse than the first three. I think this is because it uses a short but slow decoy generator which gives the QS too many chances to hit before the decoy is in place. This is an odd decision because AFAIK Paul invented the 3c decoy generator. It is safe to use a long decoy generator because even if it is spotted by the QS the bombs start to fall on it after it has finished running, and don't reach back to the main warrior. However, the resulting warrior is very compact.
 
-### Jedi Hunter (pihlaja)
-Follows a 0.5c scan with a scan for the end of the QS. However, unlike all the others that use a 1.0c linear scan, it uses a longer-but-faster stepped scanner. I suspect that this is not a very effective use of space, and that it would have been better to use the space to raise the initial scan to 0.8c, or simply to shorten the warrior. The attack is a SPL/JMP bomber, which again is a bit bulky compared to the other kinds of attack. Finally, the biggest problem is that there is no decoy at all! The warrior is long, so it suffers many hits from the QS and, unlike myBlack, it is not very resistant to DAT bombs.
+**Jedi Hunter** (pihlaja) follows a 0.5c scan with a scan for the end of the QS. However, unlike all the others that use a 1.0c linear scan, it uses a longer-but-faster stepped scanner. I suspect that this is not a very effective use of space, and that it would have been better to use the space to raise the initial scan to 0.8c, or simply to shorten the warrior. The attack is a SPL/JMP bomber, which again is a bit bulky compared to the other kinds of attack. Finally, the biggest problem is that there is no decoy at all! The warrior is long, so it suffers many hits from the QS and, unlike myBlack, it is not very resistant to DAT bombs.
 
-### Hyperclear
-Achieves excellent results for a general-purpose warrior but the gap between it and the precision scans is huge; it score is about 75% of Force Feedback, compared to 90-99% for the other precision scans. In some ways grey warriors (in which the constants are unknown) are a richer challenge because you have to write something that resembles a normal warrior rather than just rehashing the precision scan theme. If the boot and replicator steps were not known then something like Hyperclear would probably be the best approach.
+For comparison to the precision scans, **Hyperclear** (Gunnell) achieves excellent results for a general-purpose warrior but the gap between it and the precision scans is huge; it score is about 75% of Force Feedback, compared to 90-99% for the other precision scans. In some ways grey warriors (in which the constants are unknown) are a richer challenge because you have to write something that resembles a normal warrior rather than just rehashing the precision scan theme. If the boot and replicator steps were not known then something like Hyperclear would probably be the best approach.
 
 ### Conclusions
+
 - Precision scan is the best way to handle any long white warrior.
-- White Quickscans are almost inneffective.
+- White Quickscans are almost ineffective.
 - Decoy generators are great because the decoy is always ideally placed.
 - Cleanup is easy once all the components have been found.
 
-Regards,
-Robert Macrae
+-- Robert Macrae

@@ -43,4 +43,3 @@ tStart    mov    <tDecoy+0,{tDecoy+2     ; make a quick-decoy
           mov    <tDecoy+3,{tDecoy+5     ; to foil one-shots
           mov    <tDecoy+6,{tDecoy+8     ; and the occasional q-scan
           djn.f  tScan+1  ,<tDecoy+10
-          end tStart
