@@ -1,0 +1,896 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 69                                                        20 august, 1998
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills--currently the '94 draft hill and the beginner hill.
+Coverage will follow where ever the action is.  If you have no clue what I'm
+talking about then check out these five-star internet locals for more
+information:
+
+FAQs are available from:
+ftp://rtfm.mit.edu/pub/usenet/news.answers/games/corewar-faq.Z
+http://www.koth.org/corewar-faq.html
+FTP site is: ftp://ftp.csua.berkeley.edu/pub/corewar
+Mirrored at: ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+        and: ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+Stormking web pages--http://www.koth.org/pmars.html
+Terry's web page--http://www.ncs.infi.net/~wtnewton/corewar/
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+Web pages are at:
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+_______________________________________________________________________________
+Welcome back.
+
+You can find in this issue three hints written by John Metcalf and Ian Oversby.
+So enjoy and happy programming.
+
+-- Christian Schmidt
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  44.2/ 35.6/ 20.3             Recycled Bits          David Moore 152.7    7
+ 2  35.7/ 25.5/ 38.8                      Vain          Ian Oversby 145.9   93
+ 3  36.4/ 28.2/ 35.4                     Vigor         Ken Espiritu 144.6   81
+ 4  39.4/ 34.5/ 26.1                  Defender          Ian Oversby 144.3    1
+ 5  36.4/ 28.7/ 35.0                     Fixed         Ken Espiritu 144.1   77
+ 6  35.3/ 26.6/ 38.1                    Shadow    Christian Schmidt 144.0    0
+ 7  33.5/ 23.5/ 43.0                      Newt          Ian Oversby 143.4  171
+ 8  27.8/ 14.0/ 58.2                  Fugitive          David Moore 141.5   47
+ 9  33.5/ 25.5/ 41.0         Tuesday Afternoon             John K W 141.5   21
+10  40.4/ 40.1/ 19.6      Diamonds and Rust v2    Christian Schmidt 140.7   12
+11  36.9/ 33.6/ 29.5                     Shape    Christian Schmidt 140.2   18
+12  31.9/ 25.1/ 43.0             Ultraviolet-B         Ken Espiritu 138.6  103
+13  27.7/ 16.9/ 55.4 Return Of Return Of The J             John K W 138.6   43
+14  35.5/ 32.4/ 32.1              Fire and Ice          David Moore 138.6   66
+15  33.4/ 29.1/ 37.5                     Alien    Christian Schmidt 137.6   26
+16  36.7/ 36.2/ 27.1               Digitalis 4    Christian Schmidt 137.3   65
+17  37.2/ 37.2/ 25.5            The Body Guard          Ian Oversby 137.3   20
+18  39.0/ 42.5/ 18.5                 Blurstone        M. J. Pihlaja 135.6   17
+19  33.0/ 31.0/ 36.0            Nine Seven Six           M R bremer 135.0    2
+20  38.4/ 42.3/ 19.3           Electric Head 2        Anton Marsden 134.4   21
+21  30.0/ 26.1/ 43.9                    Gigolo   Core Warrior staff 133.9    3
+22  34.9/ 36.5/ 28.6                 Tornado 4          Beppe Bezzi 133.3    4
+23  36.1/ 41.7/ 22.1                    Eraser         Ken Espiritu 130.6   18
+24  32.6/ 34.9/ 32.5               Falcon v0.5          Ian Oversby 130.3    0
+25  31.7/ 35.7/ 32.6                     C I A         Anders Ivner 127.6    7
+
+Age since last issue: 13 ( 7 last issue, 34 the issue before )
+New warriors: 9  Turnover/age rate 69%
+Average age: 36 ( 34 last issue, 32 the issue before )
+Average score: 138 ( 134 last issue, 133 the issue before )
+The top 25 warriors are represented by just 9 independent authors: Schmidt and
+Oversby with 5, Espiritu with 4, Moore with 3, Wilkinson with 2, and the rest
+with one each.
+
+David Moore's Recycled Bits dominates with a big gap the hill.
+_______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 2  38.5/ 35.9/ 25.6                  Defender          Ian Oversby 141.1    0
+21  29.4/ 28.6/ 42.0                 Faces 0.1           Csaba Biro 130.1    1
+ 1  41.7/ 37.3/ 21.0      Diamonds and Rust v2    Christian Schmidt 146.0    0
+ 3  41.9/ 43.9/ 14.3                Red Carpet          David Moore 139.9    1
+ 1  45.6/ 34.5/ 19.8             Recycled Bits          David Moore 156.7    0
+18  32.8/ 35.8/ 31.4                     C I A         Anders Ivner 129.8    0
+23  30.6/ 36.3/ 33.1               Falcon v0.5          Ian Oversby 124.9    0
+ 4  33.4/ 27.8/ 38.8                    Shadow    Christian Schmidt 138.9    0
+??   ?  /  ?  /  ?              Nine Seven Six           M R bremer   ?      1
+??   ?  /  ?  /  ?                      Gigolo   Core Warrior staff   ?      1
+??   ?  /  ?  /  ?                   Tornado 4          Beppe Bezzi   ?      1
+
+Diamonds and Rust v2 spots the first place until Moore strikes back with his
+new version of Recycled Bits.
+_______________________________________________________________________________
+94 - What's No More
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  29.4/ 33.3/ 37.3 obvious to those who know        Robert Macrae 125.4  117
+26   1.9/  2.0/  0.1                Red Carpet          David Moore   5.8    3
+26  32.5/ 41.9/ 25.6 He Scans a Little Crooked              P.Kline 123.0    7
+26   1.2/  1.6/  1.2                    Shadow    Christian Schmidt   4.8   17
+
+The only significant loss here is Macrae's obviouse to those...
+_______________________________________________________________________________
+94 - What's Old
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 7  33.5/ 23.5/ 43.0                      Newt          Ian Oversby 143.4  171
+12  31.9/ 25.1/ 43.0             Ultraviolet-B         Ken Espiritu 138.6  103
+ 2  35.7/ 25.5/ 38.8                      Vain          Ian Oversby 145.9   93
+
+Newt keeps on going followed by Ultraviolet-B and Ian's next stone/imp Vain.
+_______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            193    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+_______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+12  Instant Wolf 3.4       Edgar              205    P-warrior
+13  Goldfinch              P.Kline            201    P-warrior
+14  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+15  Trident^2              John K W           195    Q^2 -> Stone/imp
+16  ompega                 Steven Morrell     189    Stone/imp
+17  Frogz                  Franz              172    Q^2 -> Paper
+18  Newt                   Ian Oversby        171 *  Q^2 -> Stone/imp
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+22  Electric Head          Anton Marsden      140    P-warrior
+23  Tiberius 3.1           Franz              130    Q^2 -> Paper
+24  obvious to those who k Robert Macrae      117    Q^2 -> Paper
+25  Solomon v0.8           Ian Oversby        116    Stone and scanner
+
+Obviouse stops at 24th, while Newt climbs another place to 18th.
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+#   %W /  %L /  %T                       Name               Author Score  Age
+ 1  60.3/ 26.9/ 12.9          Hostile Takeover         Ryan Coleman 193.7   25
+ 2  49.0/ 31.9/ 19.2              Cut 'n Paste          Mark Howard 166.0   19
+ 3  48.1/ 39.6/ 12.3                 Have Pity         John Metcalf 156.6    4
+ 4  46.8/ 39.2/ 14.0                   OXY-10           Mark Howard 154.4   17
+ 5  45.9/ 39.8/ 14.2              Snowman v4.2         John Metcalf 152.1    3
+ 6  42.4/ 33.5/ 24.1          Jam Major Zick 3         Ryan Coleman 151.2   31
+ 7  44.7/ 39.1/ 16.2            Look or Drop??         Ryan Coleman 150.3   27
+ 8  37.6/ 30.5/ 32.0                 StiZ v0.1                Stajp 144.6   38
+ 9  32.4/ 21.6/ 46.0                    SpiImp      Sergio Camarena 143.3   54
+10  32.4/ 21.6/ 46.0                    SpiImp      Sergio Camarena 143.2   55
+11  36.4/ 30.5/ 33.1                  Stranger         John Metcalf 142.2    9
+12  33.7/ 26.7/ 39.6                    Weasel                  WFB 140.7   18
+13  40.8/ 41.8/ 17.5     stargate derivative 1 P._V._K., Beppe Bezz 139.7   21
+14  33.2/ 27.0/ 39.8                 StiY v0.1                Stajp 139.3   39
+15  38.1/ 37.2/ 24.7                 Arsonic B             P._V._K. 139.1   33
+16  32.3/ 25.7/ 42.0        Multiply or Drop??         Ryan Coleman 138.8   32
+17  31.8/ 25.4/ 42.8        More Snotty CSnots                  WFB 138.2   35
+18  39.5/ 40.9/ 19.6          Silly Evil Quack         Ryan Coleman 138.0   30
+19  27.2/ 18.1/ 54.7          Unknown Quantity         John Metcalf 136.4    2
+20  37.0/ 38.5/ 24.5                   Big Guy           John Lewis 135.4   64
+21  39.7/ 44.0/ 16.3                 Neverland         John Metcalf 135.4    5
+22  30.7/ 26.7/ 42.6         More Snotty Snots                  WFB 134.7   36
+23  35.3/ 42.9/ 21.9           One Step Beyond         John Metcalf 127.6   79
+24   5.6/ 79.5/ 14.8                 Whatisit?         John Metcalf  31.7    1
+25   7.7/  0.2/  0.1                 Multipack         John Metcalf  23.3   11
+
+Ryan dominates with a very, very big gap the Beginner's Hill. Mmmmhhhh, he
+gets 100% wins against his own warriors. Mmmhhh, looks like hostile takeover?!
+
+_______________________________________________________________________________
+The Hint - Code snippets by John Metcalf
+
+For warriors which contain a multi-process paper, or a vector
+launched imp, it is neccessary to create a number of processes
+running in parallel. The usual method of achieving this is to
+use a combination of spl 1 and mov -1,0 instructions.
+
+So says Beppe Bezzi in Corewarrior #1:
+: The simpler way to generate an exact number of parallel
+: processes is converting the number required in binary 3 -> 11,
+: subtract one -> 10, use a spl 1 for every one and a mov -1,0
+: for every zero.
+
+E.g. 5 decimal = 101 binary, take away one = 100 binary. This
+becomes the following code,
+
+   spl 1     ;
+   mov -1,0  ; Generate 5 processes
+   mov -1,0  ;
+
+However, by using these long-overlooked snippets of code I have
+found, it is possible to do this slightly faster, and perhaps
+even gain an extra b-field or two into the bargain, which can
+be used for storing data, or decrementing locations in core.
+
+To date, I have managed to find snippets which product 3,5,7 and
+9 processes. If required, it is possible to add a number of
+spl 1,<nnn instructions to the end of the snippet. Each one will
+double the number of processes.
+
+N   OLD CODE         NEW CODE         COMMENTS
+
+2   spl  1, <xxx     spl  1, <xxx     Here only for completeness
+
+3   spl  1, <xxx     spl  2, <xxx     One cycle faster, and one
+    mov -1,    0     spl  1, <yyy     extra b-field
+
+5   spl  1, <xxx     spl  2, <xxx     Faster by two cycles, and
+    mov -1,    0     spl  2, <yyy     two extra b-fields
+    mov -1,    0     spl  1, <zzz
+
+7   spl  1, <xxx     spl  1, <xxx     One cycle faster, but no
+    spl  1, <yyy     spl  1,   }0     extra b-fields, and won't
+    mov -1,    0     spl  1, <yyy     work under ICWS'88 and is
+                                      self-modifying.
+
+9   spl  1, <xxx     spl 2, <xxx      Three cycles faster, plus
+    mov -1,    0     spl 2, <yyy      two extra b-fields, but
+    mov -1,    0     spl 1,   }0      won't work under ICWS'88
+    mov -1,    0     spl 1, <zzz      and is self-modifying.
+
+While you will be lucky if this method gains your paper a
+fraction of a point on the hill, it is still clearly better.
+Of course, the code for 2^n processes remains identical, and
+cannot be improved.
+
+Finally, I'm certain there are some other interesting code
+snippets just waiting to be found. Its always interesting
+to see that sometimes, the way we've always done something
+is not neccessarily the best way :-)
+
+John Metcalf
+
+_______________________________________________________________________________
+The Hint - Improving a beginner's warrior by Ian Oversby
+
+Once again, this hint is concerned with improving a beginner's
+warrior.  Thank you to WFB for sharing his warrior Weasel with
+us.
+
+Here is the original:
+
+;redcode-b
+;name Weasel
+;author WFB
+;strategy P-spacer...combines Diamond in the Rough and
+;strategy More Snotty CSnots.
+;assert CORESIZE==8000
+_RES    equ     #0
+_STR    equ     #1    ;Not that obviously
+step    equ 3044
+start
+res     ldp.ab  _RES,   #0
+str     ldp.a   _STR,   str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure result
+win     stp.ab  str1,   _STR
+str1    jmp     @0,     dstart
+        dat     0,      csnots
+
+for 69
+dat }-2667,<2667
+rof
+
+dstart  spl #1234
+diamond spl #-step,<step
+rough   mov >-step,step+1
+        add diamond,rough
+        djn.f  rough,<diamond-50
+        dat #0,#0
+        dat #-7
+csnots  spl 1,<-200
+        mov -1,0
+        spl 1,<-800
+        mov -1,0
+s1      spl @0,}1100 ;experimenting with values-original is 1100
+        mov }-1,>-1
+s2      spl @0,<2620 ;original is 2620
+        mov }-1,>-1
+s3      spl @0,{1870 ;original value is 1870
+        mov }-1,>-1
+        mov snot,<88 ;88
+s4      mov {-3,<1
+        spl @0,}-639 ;-639
+        mov 2,<-4
+        jmp -1,<-13
+snot    dat <2667,<2667*2
+end start
+
+This is a switch on loss p-spacer combining a paper and a stone.
+I can see a few minor modifications that may improve it a little.
+
+Firstly, I boot the stone as otherwise we are easily found and
+destroyed by one-shot scanners.  I changed the first spl line to
+spl #0, #0 for invisibility to f-scans.
+
+I notice the number of processes for the paper does not match the
+number of lines.  Maybe removing the final launcher would not
+matter too much either.  At the same time I add another mov line
+to the first launcher and use the correct number of processes for
+the number of lines in the paper.
+
+The result is:
+
+;redcode-b test
+;name Weasel
+;author WFB
+;strategy P-spacer...combines Diamond in the Rough and
+;strategy More Snotty CSnots.
+;assert CORESIZE==8000
+_RES    equ     #0
+_STR    equ     #1    ;Not that obviously
+step    equ 3044
+start
+res     ldp.ab  _RES,   #0
+str     ldp.a   _STR,   str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure result
+win     stp.ab  str1,   _STR
+str1    jmp     @0,     sboot
+        dat     0,      csnots
+for 40
+        dat }-2667,<2667
+rof
+
+sdist   equ     2000
+sboot   mov.i   {loc, <sptr
+for 4
+        mov.i   {loc, <sptr
+rof
+        mov.ab  #-7,    *sptr
+        spl.b   @sptr,  <-700
+sptr    div.f   #sdist, #sdist-1
+        dat.f   }300,   >200
+
+dstart  spl #0, #0
+diamond spl #-step,<step
+rough   mov >-step,step+1
+        add diamond,rough
+        djn.f  rough,<diamond-50
+loc     dat #0,#0
+
+csnots  spl 1,<-200
+        spl 1,<-800
+        spl 1,<-800
+s1      spl @0,}1100 ;experimenting with values-original is 1100
+        mov }-1,>-1
+        mov }-2,>-2
+s2      spl @0,<2620 ;original is 2620
+        mov }-1,>-1
+s3      spl @0,{1870 ;original value is 1870
+        mov }-1,>-1
+        mov snot,<88 ;88
+        mov 2,<-4
+        jmp -1,<-13
+snot    dat <2667,<2667*2
+
+end start
+
+15  32.4/ 32.9/ 34.7    Weasel  WFB 131.9    1
+...
+19  29.0/ 30.3/ 40.7    Weasel  WFB 127.7   12
+
+This scores about 4 points better than the original.  Time for some
+analysis.
+
+The score against the hill is as follows:
+
+Hostile Takeover        : 38/34/28      P-Spacer
+OXY-10                  : 32/41/27      Core-clear
+Multipack               : 53/35/12      Scanner/something
+Cut'n'Paste             : 24/44/32      Scanner (Oneshot?)
+Look or Drop            : 63/25/12      Scanner/Stone
+Jam Major Zick 3        : 33/48/19      Scanner
+Stranger                : 36/29/35      Incendiary Bomber
+Stranger in town        : 44/20/36      ???
+StiZ v0.1               : 14/54/32      Paper/Scissors
+SpiImp                  : 22/06/72      Something with imps ?
+SpiImp                  : 22/06/72      Something with imps ?
+Arsonic B               : 45/37/18      Bomber ?
+Multiply or Drop        : 02/24/74      Paper/Stone
+Stargate...             : 35/41/24      Core-clear
+Incisor+                : 24/60/16      One-shot
+StiY v0.1               : 03/17/80      Paper/Scissors
+Weasel                  : 18/25/57      Paper/Stone
+Rusty                   : 30/51/19      Scanner
+More Snotty C...        : 14/32/54      Paper
+More Snotty Snots       : 30/29/41      Paper
+One Step Beyond         : 55/30/15      Scanner
+Silly Evil Quack        : 59/35/06      Scanner
+Big Guy                 : 14/29/57      ???
+Scarecrow               : 64/24/12      Scanner
+Sword in the...         : 36/46/18      ???
+
+I can see a definite weakness against one-shot scanners and
+core-clears.  We don't score too well against papers either
+as we have no stunning power.  I think we will try to counter
+the first problem without modifying the warrior too much
+away from the original idea.
+
+To kill scanners, we should run the stone more often but
+then we are vulnerable to papers.  How about adding an imp to
+the stone.  As it has a double spl we aren't slowed too much
+and now we have resistance to papers and other stones.  In
+addition, maybe the other scanners do not have much imp
+resistance and we can improve our score against them.
+
+I took the imp out of Juliet Storm and tacked it on the end.
+I also changed the decoy to dat 1,1 to slow djn streams and
+moved our own djn stream a little further back to decoy the
+enemy one-shots better.  I run the imp/stone twice as often
+as the paper although subsequent tests showed this was not as
+much improvement as I expected.
+
+The code:
+
+;redcode-b test
+;name Weasel
+;author WFB
+;strategy P-spacer...combines Diamond in the Rough and More Snotty
+;strategy CSnots.
+;strategy More testing (Ian)
+;assert CORESIZE==8000
+
+_RES    equ     #0
+_STR    equ     #121    ;Not that obviously
+step    equ 3044
+start
+res     ldp.ab  _RES,   #0
+str     ldp.a   _STR,   str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure result
+win     stp.ab  str1,   _STR
+str1    jmp     @0,     sboot
+        dat     0,      sboot
+        dat     0,      csnots
+
+for 17
+        dat.f   #1,     @1
+        dat.f   #1,     *1
+        dat.f   #1,     #1
+rof
+        dat.f   #1,     @1
+
+sdist   equ     4620
+sboot   mov.i   {loc, <sptr
+for 4
+        mov.i   {loc, <sptr
+rof
+        mov.ab  #-7,    *sptr
+        spl.b   impboot,        <-707
+        spl.b   @sptr,  <-700
+sptr    div.f   #sdist, #sdist-1
+        dat.f   }300,   >200
+
+dstart  spl #0, #0
+diamond spl #-step,<step
+rough   mov >-step,step+1
+        add diamond,rough
+        djn.f  rough,<diamond-1051
+loc     dat #0,#0
+
+csnots  spl 1,<-200
+        spl 1,<-800
+        spl 1,<-800
+s1      spl @0,}1100 ;experimenting with values-original is 1100
+        mov }-1,>-1
+        mov }-2,>-2
+s2      spl @0,<2620 ;original is 2620
+        mov }-1,>-1
+s3      spl @0,{1870 ;orginal value is 1870
+        mov }-1,>-1
+        mov snot,<88 ;88
+        mov 2,<-4
+        jmp -1,<-13
+snot    dat <2667,<2667*2
+
+imp_sz  equ     2667
+
+impboot spl     1      ,<-450
+        spl     1      ,<-458
+        spl     <0     ,#vector+1
+        djn.a   @vector,#0
+
+imp     mov.i   #imp_sz, *0
+
+        jmp     imp+imp_sz*7,imp+imp_sz*6
+        jmp     imp+imp_sz*5,imp+imp_sz*4
+        jmp     imp+imp_sz*3,imp+imp_sz*2
+vector  jmp     imp+imp_sz  ,imp
+
+end start
+
+The result:
+
+ 2  37.5/ 21.7/ 40.8    Weasel  WFB 153.3    1
+...
+19  29.0/ 30.3/ 40.7    Weasel  WFB 127.7   12
+
+Not bad!  We lose very badly against Have Pity and the score is worse
+than the original against Multipack.  Fixing these problems is left
+as an exercise.
+
+_______________________________________________________________________________
+The Hint - Longevity, Imp/Stones and Newt by Ian Oversby
+
+In Core War, the true value of a fighter is measured by its age.  Beppe Bezzi,
+a veteran redcoder who should know a few things about long-lasting warriors,
+once pointed out that longevity comes from scoring points not only against the
+current hill but also the hill of the future.  As we do not know how the hill
+of the future is going to look, how can we do this. The answer is simple -
+score well against everything that is viable on the hill.
+
+So, how is it possible to future-proof your new program?  I believe we must
+look at the problem in the correct light.  If we take the traditional analogy
+of warriors to stone/paper/scissors then we condemn our warrior to death as
+the hill balance changes.  If we wrote a scanner then when many stones enter
+the hill we will surely die.  However, this analogy holds very loosely.  For
+example, it is possible to write a stone that will kill paper or paper that
+will kill scissors.  That attitude that we _can_ beat a warrior type that
+would usually beat us is very important.  It is interesting to note that
+Vigor, allegedly a paper, suffers its worst defeat at the hands of a stone
+- Newt.
+
+I will use Newt to illustrate the points I wish to discuss.  Firstly we will
+see how the warrior operates and then we will see how he performs against
+various enemies.
+
+The stone itself bombs and decrements in a mod-5 pattern with the decrements
+offset from the bombs by 2.  This gives as good a pattern as I could wish for.
+When the bombing run is finished the core should look like this:
+
+        *.X..*.X..*.X..*
+
+where * is decrement, X is bomb and . is unbombed.  The stone at this point
+will look like this:
+
+        spl.b  #0,    <-step+1
+stone   spl.b  #step, <-step
+        mov.i  {0,     2
+        add.f  stone, -1
+hit     djn.f  -2,    <stone-step
+        mov.i  cbmb,  >gate
+        djn.f  -1,    >gate
+
+The mov line executes, decrementing itself and moving the spl at stone over
+the hit line.  This moves the stone into the core-clear phase.  The stone is
+quite big and slow at seven lines and 0.33c.  However, a correctly placed bomb
+is usually fatal to scanner.  The decrements are also quite useful, sometimes
+wounding opponents.  The stone scores well against traditional scanners and
+bombers.  He Scans Alone scores around even.  I believe this is because of the
+mod-5 bombing - Tornado scores similarly against HSA.  I feel I could have
+improved this by leaving the spl above stone as a spl #0, #0 making it
+invisible to HSA.  Alternatively, the a-field could be changed to (say) 100
+so it doesn't point to the rest of the stone.  This may have a small effect
+against silk a-field bombing.
+
+The spl line above the stone can be hit with either spl or dat with no effect
+to the correct operation.  The hit line may also be hit with either spl or
+dat.  A dat will slow the warrior but the clear phase will still be entered.
+This helps against both stones and bombers.
+
+The p-spacers are handled by the Q^2 scan and the resistance to imp/stone
+enemies clears and one-shots.  The pattern of bombing provides this
+resistance.  There are five possibilities against a standard d-clear.
+
+        spl #0
+        mov bmb, >gate
+        djn -1, >gate
+
+1.      Bomb hits the spl, decrement misses  No real harm done
+2.      Bomb hits the mov, decrement misses  Clear disabled
+3.      Bomb hits the djn, decrement hits spl, Clear 1/3 speed
+4.      Bomb misses, decrement hits mov.  Maybe clear moving dat 0,0
+5.      Bomb misses, decrement hits djn.  Clear slowed
+
+In cases 2 and 3 we have an excellent chance to kill with our own d-clear
+which is entered after around 6000 cycles.  In case 4 we should tie as the
+d-clear stops when the bomb reaches its own gate.  In case 5 we have an even
+chance to win or lose.  Case 1 often results in a loss.  We may also hit the
+gate or the bomb with our bomb giving more chances to win or draw.
+
+The double spl gives additional protection against d-clear.  D-clear often
+misses adjacent locations with its bombs.  The stone part is cleared later
+in the round and the imps have less time to reach the gate often resulting
+in a draw.  Now, new clears are appearing in p-spacers which perform better
+against Newt (although not against Vain :-)  A more effective clear may look
+like this:
+
+gate    dat.f   #0,     #4000
+        dat.f   #0,     last-gate+1
+bmb     dat.f   #0,     last-gate+1
+        spl.b   #0,     #0
+        mov.i   bmb,    >gate
+        mov.i   bmb,    >gate
+        djn.f   -1,     >gate
+
+Newt is not so effective against this warrior as decrementing the djn and
+bombing lines no longer really hamper it.  Newt scores about 25/50/25 against
+this new clear.  Bombing the djn line or the first line slows the clear. Newt
+enters its own clear after 6000 cycles and this gives chances to win.  This
+clear is very tuned against Newt with the a-field decrement.
+We could improve Newt against this new clear in a few ways.
+        1.      Shorter bombing run entering clear earlier
+        2.      Heavier imp so our imps do not reach the gate
+        3.      A-field increment to more readily disable the clear.
+
+I tried the last of these which was fairly effective.
+
+stone   spl.b   #step, <-step   # swapped the two spl lines
+        spl.b   #0,    <-step-1
+        mov.i   }step-1, hit-step       # changed to point at -1
+        add.f   stone, -1
+hit     djn.f   -2,    <stone-step
+        mov.i   cbmb,  >gate
+        djn.f   -2,    >gate    # changed to -2
+
+The clear could also optimize against this new form of Newt but I don't
+really think it is worth beating just one warrior badly.  Besides, we can't
+expect to beat everything. I feel these changes weaken Newt against stones as
+now both top spls are vulnerable.  A spl striking the hit line will no longer
+cause Newt to enter the perfect d-clear until part way through the bombing
+run.  I think the a-field decrement is more effective against paper too.
+Consider:
+
+        spl     @-1,    >x
+        mov     }-1,    >-1
+
+        spl     @1,     >x
+        mov     }-1,    >-1
+
+        spl     @0,     >x
+        mov     }-2,    >-1
+
+        spl     @0,     >x
+        mov     }0,     >-1
+
+It is just a vague feeling and an untested exercise for the reader.
+
+Specialised p-spacer components such as p-clear can give Newt some problems.
+The solution is simple.  Be the _best_ imp/stone on the hill.  This way, when
+the other imp/stones drop off the hill and the specialists lose their prey,
+they also drop off the hill and Newt recovers.  This just leaves papers and
+other imp/stones to worry about.  When I wrote Newt, the hill contained seven
+papers and five imp/stones.  As I write this, the hill has six imp/stones and
+seven papers (of sorts).  It is important to do well against both of these
+classes.
+
+Newt has a similar size/speed ratio to other imp/stones.  It has imp-killing
+power with the d-clear and resistance to other d-clears and spl/dat bombs and
+decrements.  The result is reasonable scores against other imp/stones,
+particularly those with no gate of their own. I think the d-clear bomb should
+have been <2667 as this works better against the medium 3 point imps found in
+many imp stones.
+
+Papers are a real problem for imp/stones such as Newt.  The main difficulty is
+the size of the warrior for the enemy Qscan.  The stone and stone boot alone
+is 18 instructions.  Add this to 12 lines to boot the imp-launch and that
+makes 30 lines on top of the QScan.  Compare this to a typical paper that is
+about 11 lines long or 13 if a boot is included.  This 15+ line difference
+means that the imp/stone does not score so well in the QScan shootout.
+Slimming the launch can reduce this problem a little.
+
+I re-ordered the QScan for the hill version and computer-optimized it against
+the Gigolo QScan and Probe QScan.  I believe this may have given some good
+scores against papers on the hill as they tend to have a very similar QScan
+order to these early Q^2 scans.  Using a published QScan order in particular
+can be very dangerous.
+
+Generally, the two ways for an imp/stone to beat a paper enemy are a long
+period of intense bombing like Gigolo or a stone suicide late in heel for a
+warrior.  It is very dangerous to have the same QScan order as a published
+warrior.
+
+While writing this article, I noticed the scores against papers were not so
+good as I remember.  So saying, I present a new version of Newt with some of
+the ideas from the article.
+* Imp launch entered earlier for heavier imp
+* Imp launch unbooted for slimmer launch -> better QScan performance
+* Imp launch decrement decoy further behind full decoy, better against
+  one-shots
+* Stone first spl points after end of stone for [minor] paper protection
+
+and finally...
+
+* QScan scans backwards for hopefully better score on Mt Olympus ;-)
+
+;redcode-94 test
+;name Newt v0.2
+;author Ian Oversby
+;strategy Q^2 -> Imp/Stone
+;assert 1
+
+gate1   equ     (init-7-dist)
+pat     equ     3315
+sval    equ     (spin+5220)
+dist    equ     3
+
+impy    equ     (imp+sep)
+sep     equ     1100
+st      equ     2667
+
+QB EQU (start-550)
+QS EQU (QD*2)
+QD EQU -100
+
+GAP EQU 12
+REP EQU 8
+REP2 EQU 2
+
+datz EQU (table-3)
+
+iboot   MOV.I imp, impy
+spin    SPL.B   #st+1,  >prime
+prime   MOV.I   impy,   impy
+        ADD.F   spin,   jump
+jump    JMP.B   impy-st-1, <-2200
+imp     MOV.I   #st,    *0
+
+for 8
+ dat 0, 0
+rof
+
+         dat    10*QS, 2*QS ; can get 21 values from this table
+table:   dat     4*QS, 1*QS ; and can also use the initial value
+         dat    23*QS, 3*QS ; of fnd
+
+qinc:    spl    #GAP,-GAP
+tab:     add.a  table,table
+slow:    add.a  @tab,fnd
+fast:    add.ba *tab,@slow
+which:   sne.i  datz,*fnd
+         add.a  #QD,fnd
+         mov.i  cbomb,*fnd
+         add.ab fnd,fnd
+
+fnd:    mov.i  QB,GAP/2
+        add.f  qinc,fnd
+ mov.i  cbomb,*fnd
+ djn.b  fnd,#REP
+ jmp    boot,}QS*13
+
+start:
+     ; WHICH
+ seq.i  QB+QS*0,QB+QS*0+QD
+ jmp    which,}QB+QS*0+QD/2
+
+      ; FAST
+  seq.i  QB+QS*1,QB+QS*1+QD
+  jmp    fast,}QB+QS*1+QD/2
+
+  seq.i  QB+QS*13,QB+QS*13+QD
+  jmp    fast,{fast
+  seq.i  QB+QS*2,QB+QS*2+QD
+  jmp    fast,{tab
+  seq.i  QB+QS*3,QB+QS*3+QD
+  jmp    fast,}tab
+
+     ; SLOW
+  seq.i  QB+QS*4,QB+QS*4+QD
+  jmp    >fast,}QB+QS*4+QD/2
+  seq.i  QB+QS*5,QB+QS*5+QD
+  jmp    slow,}QB+QS*5+QD/2
+
+  seq.i  QB+QS*6,QB+QS*6+QD
+  jmp    slow,{tab
+  seq.i  QB+QS*7,QB+QS*7+QD
+  jmp    slow,}tab
+  seq.i  QB+QS*10,QB+QS*10+QD
+  jmp    >fast,<tab
+  seq.i  QB+QS*11,QB+QS*11+QD
+  jmp    slow,<tab
+  seq..i  QB+QS*12,QB+QS*12+QD
+  djn.f  slow,tab
+  seq.i  QB+QS*23,QB+QS*23+QD
+  jmp    >fast,>tab
+  seq.i  QB+QS*24,QB+QS*24+QD
+  jmp    slow,>tab
+  seq.i  QB+QS*17,QB+QS*17+QD
+  jmp    slow,{fast
+
+     ; TAB
+
+  seq.i  QB+QS*8,QB+QS*8+QD
+  jmp    <fast,}QB+QS*8+QD/2
+  seq.i  QB+QS*9,QB+QS*9+QD
+  jmp    tab,}QB+QS*9+QD/2
+
+         seq.i  QB+QS*15,QB+QS*15+QD
+  jmp    tab,<tab
+
+  seq.i  QB+QS*16,QB+QS*16+QD
+  jmp    tab,{tab
+  seq.i  QB+QS*20,QB+QS*20+QD
+  djn.f  <fast,tab
+
+boot    MOV.I   cbomb,  @sptr
+for 3
+        MOV.I   <spos,  {sptr
+rof
+ spl.b iboot, <-1000
+for 4
+        MOV.I   <spos,  {sptr
+rof
+
+        SPL.B   *sptr,  <-200
+
+sptr    DIV.F   #init+sval,     #init+sval-7-3
+
+cbomb   DAT.F   #1, #3+hit-gate1
+; 2 DATS
+init    SPL.B   #0,     <stone-pat
+stone   SPL.B   #pat,   <-pat
+loop    MOV.I   {0+pat, hit-pat
+        ADD.F   stone,  loop
+hit     DJN.F   loop,   <stone-pat
+        MOV.I   init-dist, >gate1
+last    DJN.F   -1,     {gate1
+
+spos    DAT.F   $0,     $0
+
+for 10
+        DAT.F   $0,     $0
+rof
+
+end start
+
+Ian Oversby
+
+____________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Authors: Beppe Bezzi <giuseppe.bezzi@galactica.it>,  Anton Marsden
+<amarsden@mcs.vuw.ac.nz>, Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de>
+and Philip Kendall <pak21@cam.ac.uk>
+

@@ -1,0 +1,331 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 50                                                     11 November, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+Stefan has released a new faster version of pmars; the source of new sim.c
+is available at
+        ftp://koth.org/incoming/sim.zip
+
+soon coming a full release of pmars
+
+Elimination rounds of the tornament are over and Final Four direct
+elimination part has began. The best four challenging for final victory are
+Ian Oversby, winning all five matches played, Philip Kendall, Franz and
+George Eadon.
+
+--Beppe Bezzi
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  40.0/ 21.7/ 38.2           unrequited love                kafka 158.4  222
+ 2  45.4/ 37.3/ 17.3               The Machine        Anton Marsden 153.5   30
+ 3  34.9/ 17.0/ 48.1                 Trident^2             John K W 152.9   54
+ 4  33.1/ 13.7/ 53.2      Return Of The Jedimp             John K W 152.5  124
+ 5  38.8/ 26.0/ 35.3                    Gigolo   Core Warrior staff 151.5  178
+ 6  45.3/ 44.9/  9.7                  Memories               Beppe  145.7   38
+ 7  42.2/ 39.7/ 18.1                     Probe        Anton Marsden 144.7  302
+ 8  41.2/ 38.0/ 20.9       Damage Incorporated        Anton Marsden 144.3  165
+ 9  42.9/ 41.8/ 15.3                    Blur 2        Anton Marsden 144.1  301
+10  38.9/ 33.8/ 27.3              Tiberius 3.1                Franz 144.1   41
+11  31.9/ 20.2/ 47.9               Impish v0.2          Ian Oversby 143.5  163
+12  40.8/ 40.2/ 19.0          Silver Talon 1.2                Edgar 141.4   11
+13  36.6/ 32.1/ 31.3            Nine Seven Six           M R bremer 141.0   14
+14  32.3/ 24.0/ 43.7                   Rosebud                Beppe 140.7  975
+15  40.3/ 40.5/ 19.2                 vamp 0.2b       bjoern guenzel 140.2    1
+16  37.9/ 35.9/ 26.2                CC Paper 2                Franz 140.0   13
+17  41.1/ 43.4/ 15.5                     AK-47                Franz 138.8   16
+18  42.6/ 47.6/  9.8                  Q^2 Miro         Anders Ivner 137.7  352
+19  35.3/ 33.3/ 31.3               Falcon v0.3          Ian Oversby 137.3  207
+20  32.7/ 28.2/ 39.1            delay 0.02b 50       bjoern guenzel 137.2    5
+21  38.4/ 39.8/ 21.7          Instant Wolf 3.4                Edgar 137.0  185
+22  37.1/ 37.6/ 25.3            Scanitator 2.1    Christian Schmidt 136.6    2
+23  40.6/ 45.4/ 14.0            Flamberge 13.4        Matt Lewinski 135.7    3
+24  39.2/ 43.2/ 17.6                 Goldfinch              P.Kline 135.3  243
+25  39.4/ 43.8/ 16.7                Dr. Gate Q                Franz 135.0    7
+
+Weekly age: 5 this week ( 15 last issue, 13 the week before )
+New warriors: 4  Turnover/age rate 80%
+Average age: 146( 152 last issue, 173 the week before )
+Average score: 143 ( 138 last issue, 136 the week before )
+The top 25 warriors are represented by 13 independent authors: Franz and
+Marsden with 4; Oversby 3; and Beppe and JKW have two. C. Schmidt makes the
+hill for first time
+
+King Report: very little to report, unrequited love kept best spot all the week.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 8  37.6/ 36.9/ 25.5            Scanitator 2.1    Christian Schmidt 138.3    1
+14  38.3/ 41.8/ 19.9                 vamp 0.2b       bjoern guenzel 134.7    1
+14  31.1/ 28.5/ 40.4            delay 0.02b 50       bjoern guenzel 133.8    1
+23  38.7/ 47.3/ 14.0            Flamberge 13.4        Matt Lewinski 130.1    1
+
+Five challenges and four new warriors, none in top spots.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  33.6/ 42.8/ 23.6                   cryptos       bjoern guenzel 124.5    2
+26  32.1/ 35.6/ 32.3              Simple v0.4b          Ian Oversby 128.7  250
+26  37.2/ 49.0/ 13.8             Golden Gate 3                Franz 125.4    9
+26  36.8/ 45.0/ 18.2          Silver Talon 1.1                Edgar 128.6   15
+
+Oversby lost his most aged warrior at 250 age.
+
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+14  32.3/ 24.0/ 43.7                   Rosebud                Beppe 140.7  975
+18  42.6/ 47.6/  9.8                  Q^2 Miro         Anders Ivner 137.7  352
+ 7  42.2/ 39.7/ 18.1                     Probe        Anton Marsden 144.7  302
+ 9  42.9/ 41.8/ 15.3                    Blur 2        Anton Marsden 144.1  301
+24  39.2/ 43.2/ 17.6                 Goldfinch              P.Kline 135.3  243
+ 1  40.0/ 21.7/ 38.2           unrequited love                kafka 158.4  222
+19  35.3/ 33.3/ 31.3               Falcon v0.3          Ian Oversby 137.3  207
+
+No new entries, one loss: Simple.
+
+
+______________________________________________________________________________
+Tournament time
+
+The first part of the tournament is over, the best four are now qualified
+for Semi final direct elimination round. Giving a look at standing, and
+noticing the names of those eliminated with 9 points, little more remains to
+say about the value of the top four.
+
+Thank you to all for playing and let's look who will be the players of the
+final.
+
+Pos.    #       Player                Score   Opp. met       2nd lev score
+-----------------------------------------------------------------------------
+ 1       5      Ian Oversby            15       6.7.1.9.18      29
+ 2      14      Philip Kendall         12       13.15.2.3.9     30
+ 3       1      Franz                  10       2.4.5.18.15     41
+ 4      18      George Eadon           10       17.2.3.1.5      31
+
+ 5       9      Steven Morrell          9       10.12.15.5.14   42
+ 6      15      Magnus Paulsson         9       16.14.9.13.1    37
+ 7      13      David M. Moore          9       14.11.16.15.4   34
+ 8      10      Anton Marsden           9       9.8.6.7.2       22
+ 8      11      Robert McRae            9       12.13.17.16.8   22
+10       4      Joshua                  7       3.1.7.8.13      29
+11       8      J. K. Wilkinson         7       7.10.12.4.11    28
+12      16      Zul Nadzri              6       15.17.13.11.6   24
+13      17      Bjoern Guenzel          6       18.16.11.6.12   22
+14       7      Justin Kao              4       8.5.4.10.3      36
+15       3      J. K. Lewis             4       4.6.18.14.7     30
+16       2      M. R. Bremer            3       1.18.14.12.10   41
+17      12      Matt Lewinski           3       11.9.8.2.17     31
+18       6      Ross Morgan-Linial      0       5.3.10.17.16    30
+
+------------------------------------------------------------------------------
+Congratulations to Ian Oversby, winning all five rounds, and also to
+PhilKendall, Franz and George Eadon, qualifying for the semifinal round.
+
+Thank you to all others for playing, better luck next time.
+
+Semifinal pairings are as follow
+
+Oversby - Eadon
+Kendall - Franz
+
+
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        975 *  Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+No changes.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  51.9/ 34.5/ 13.6          Silver Talon 1.1                Edgar 169.3   49
+ 2  51.4/ 36.7/ 11.8            Flamberge 13.4        Matt Lewinski 166.1   18
+ 3  48.3/ 33.0/ 18.7      Microsoft Office '96           Justin Kao 163.6   45
+ 4  45.9/ 39.4/ 14.7      Mostly Harmless v1.0           Justin Kao 152.3    8
+ 5  40.4/ 28.7/ 30.9            Scanitator 2.3    Christian Schmidt 152.1   12
+ 6  45.7/ 40.9/ 13.4            Cruise Missile       Philip Kendall 150.5   14
+ 7  41.8/ 37.2/ 21.0       Vivid Radiation 2.0        Matt Lewinski 146.5   17
+ 8  42.8/ 40.0/ 17.2                       MI6       Philip Kendall 145.7   42
+ 9  41.4/ 37.6/ 21.0         Bash the Rat V1.4           Ian Sutton 145.1   10
+10  41.7/ 38.8/ 19.5                  HAL 9000           Justin Kao 144.7   61
+11  35.7/ 27.1/ 37.2              Escargot 0.5           Justin Kao 144.3   15
+12  39.3/ 35.7/ 24.9          Sandstorm Q/0.6c       Ilmari Karonen 142.9   40
+13  41.8/ 43.1/ 15.1               Termite 1.0        Matt Lewinski 140.4   20
+14  32.8/ 27.0/ 40.2              Escargot 0.6           Justin Kao 138.5    2
+15  41.3/ 44.9/ 13.9 Goothmonger, Berserker of           Ian Sutton 137.7    5
+16  33.9/ 30.2/ 35.9            Hammermill 4.0        Matt Lewinski 137.6   55
+17  38.1/ 41.4/ 20.4        Daemon of Zteentch    Christian Schmidt 134.8   73
+18  33.6/ 32.7/ 33.7                Apocalypse        Matt Lewinski 134.5   26
+19  28.8/ 30.3/ 40.9                Papyrus 21           Justin Kao 127.3   44
+20  34.6/ 43.8/ 21.6 Supercritical Carbondioxi        Matt Lewinski 125.5   19
+21  30.0/ 39.5/ 30.5              Throttle 2.0        Matt Lewinski 120.5   47
+22  14.8/ 10.0/ 75.3           Beast of Nurgle    Christian Schmidt 119.6   74
+23  23.2/ 31.9/ 44.9             Rock 1.5 beta           Justin Kao 114.5    1
+24  24.1/ 18.2/  5.6            Flamberge 13.3        Matt Lewinski  78.0   28
+25   8.3/  1.2/  2.5  Microsoft Office Pro '96           Justin Kao  27.4    6
+
+Top 25 Averages:
+    30.7/ 28.7/ 40.5                                                132.7   31
+
+Flamberge, able to enter 94 hill too, enters in second spot
+______________________________________________________________________________
+The Hint
+
+Sorry no hint :-( the tournament is getting almost all my Corewar time, and
+I don't want to post Gigolo being its code the first prize of the tournament :-)
+______________________________________________________________________________
+Extra Extra
+HAL 9000 by Justin Kao
+
+Justin asked me if I could do something with his scanner/clear that lived
+for some time in the bottom of 94 hill. My first impression is that a
+warrior doing a clear and a scanning in the same time is better done using
+Blur engine
+
+cc:   spl.i  #0,#btm-ptr+3
+top:  mov.i  $cc,>ptr
+scan: seq.i  $2*step,}2*step+5
+      mov.b  $scan,$ptr
+a:    add.f  $inc,$scan
+      jmn.a  $top,$scan        ; Falls through when all locations scanned
+...
+
+with more scanning and less clear, compared to HAL, and a much reduced
+footprint, but this is just an impression having not tested HAL too well.
+Anyway here is the code of HAL 9000 for anyone wanting to improve it.
+
+;redcode-94
+;name HAL 9000
+;author Justin Kao
+;strategy A core clear directed by scanner.
+;strategy v9.1 @date@ --the version on the hill.
+;strategy NEW: more spl pass
+;strategy Formerly Paper Shredder until I discovered the name
+;strategy was previously used.  No relation to HAL the stone.
+;assert 1
+
+step    equ     2936
+scans   equ     400
+
+        org     start
+
+clrptr  dat     4000,   0       ;clear pointer
+clrbmb2 dat     {20,    <2667   ;first clear bomb
+clrbmb  spl     #25,    100     ;second clear bomb and also djn pointer
+scnloop add     clear,  scan    ;\
+scan    seq.a   -10,    -2      ; \ scan
+        mov.a   scan,   clrptr  ; / loop
+        djn     scnloop,#scans  ;/
+clear   spl     #step,  <step   ;\----------also the scan step
+clrloop mov     clrbmb, }clrptr ;-\
+        mov     clrbmb, }clrptr ;  > clear loop
+        mov     clrbmb, }clrptr ; /
+        djn.a   clrloop,>clrbmb ;/
+        jmp     clrloop,>clrbmb ;catch fall through and move djn stream faster
+
+        for     84
+        dat     0,      0
+        rof
+
+start   spl     scnloop         ;start scan
+        jmp     clrloop         ;start clear
+
+
+
+
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz> [this address will change soon]

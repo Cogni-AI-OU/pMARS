@@ -119,6 +119,7 @@ jobs:
               mv*: allow
               pipx*: allow
               pkg-config*: allow
+              pmars*: allow
               pre-commit*: allow
               printf*: allow
               ranlib*: allow
@@ -141,6 +142,7 @@ jobs:
               github.event.pull_request.body ||
               inputs.prompt
             }}
+    timeout-minutes: 60
 
   summary:
     name: Summary
