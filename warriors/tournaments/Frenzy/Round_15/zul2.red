@@ -5,7 +5,7 @@
 ;strategy willing to die for its master. Any question?
 ;strategy Let's ban slavery!
 ;strategy Jan 2004
-;assert 1
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
 PIN 3
 

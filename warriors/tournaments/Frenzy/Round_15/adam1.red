@@ -1,7 +1,7 @@
 ;redcode
 ;name MinuteMan
 ;author Lukasz Adamowski
-;assert 1
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
 start	spl	1
 	spl	1

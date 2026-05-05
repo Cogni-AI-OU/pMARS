@@ -1,7 +1,7 @@
 ;redcode-94x
 ;name Venom
 ;author Ben Ford
-;assert 1
+;assert CORESIZE==800 && MAXLENGTH==20 ; Added round-specific settings for Redcoders Frenzy Round 01
 ;strategy paper
 
 start	equ	paper

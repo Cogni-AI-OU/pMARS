@@ -2,7 +2,7 @@
 ;name Tiny Talon
 ;author Robert Macrae
 ;strategy scan with transparent decoy [But not tested]
-;assert 1
+;assert CORESIZE==800 && MAXLENGTH==20 ; Added round-specific settings for Redcoders Frenzy Round 01
 
         org loop
 

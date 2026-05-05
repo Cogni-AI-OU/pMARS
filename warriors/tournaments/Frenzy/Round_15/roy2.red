@@ -1,7 +1,7 @@
 ;redcode-94t
 ;name Idiot
 ;author Roy van Rijn
-;assert 1
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 ;strategy Dumb warrior, see code and laugh :)
 
 zero    equ     qbomb
