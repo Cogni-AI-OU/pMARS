@@ -33,4 +33,7 @@ This tournament was held as part of the Core War community competitions at The C
 - [JR-26](./jr-26.red) by K. Satou
 - [Parasite-6](./parasite-6.red) by Norio Suzuki
 
+### Testing & Verification
+The tournament warriors were tested using the **pMARS** simulator to ensure compatibility with the **ICWS'86 (CWS'86)** standard. The results were verified against the official tournament archives, confirming the performance of the top warriors under the specified rules (8192 core, 64 processes, 50,000 cycles).
+
 Source: [Core War: Tournaments](https://corewar.co.uk/icwt1987.htm)
