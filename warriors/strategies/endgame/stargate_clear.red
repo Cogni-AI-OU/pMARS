@@ -1,0 +1,13 @@
+;redcode
+;name Stargate Clear
+;strategy Single-pass core-clear using DAT bombs.
+
+        org    clear-1
+
+gate    dat    bomb,       100
+
+dbmb    dat    bomb-gate,  9
+bomb    spl    #dbmb-gate, 11
+clear   mov    *gate,      >gate
+        mov    *gate,      >gate
+        djn.f  clear,      {-250
