@@ -32,9 +32,9 @@ jobs:
           - config: X11
             target: xwin
             deps: "libx11-dev"
-#          - config: Curses
-#            target: curses
-#            deps: "libncurses-dev"
+          - config: Curses
+            target: curses
+            deps: "libncurses-dev"
           - config: Server
             target: server
             deps: ""

@@ -2,6 +2,9 @@ test:
 	@cd ../../../src && make server
 	python3 test.py
 
+test-sh:
+	@bash simulate.sh
+
 debug:
 	-../../../src/pmars -8 -s 8192 -l 1000 -r 10 -b wang1.red wang1.red
 	-../../../src/pmars -8 -s 8192 -l 1000 -r 10 -b bruin.red bruin.red
