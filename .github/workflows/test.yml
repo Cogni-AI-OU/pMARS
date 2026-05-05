@@ -4,8 +4,16 @@ on:
   workflow_dispatch:
   push:
     branches: [ master ]
+    paths-ignore:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
   pull_request:
     branches: [ master ]
+    paths-ignore:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
 
 jobs:
   build:
@@ -46,7 +54,8 @@ jobs:
             echo "Testing added warriors..."
             for file in ${{ steps.added-warriors.outputs.all_changed_files }}; do
               echo "Testing $file..."
-              ./bin/pmars -A "$file"
+              # Use -l 1000 to accommodate larger warriors
+              ./bin/pmars -l 1000 -A "$file"
             done
           else
             echo "No new warriors added."

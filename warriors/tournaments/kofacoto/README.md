@@ -1,26 +1,60 @@
-# KOFACOTO
+# KOFACOTO Tournament
 
-![kofacoto!](http://www.KOTH.org/kofacoto/kofacoto.jpg)
+The KOFACOTO (KotH Fall Corewar Tournament) was held in 2000, sponsored by TTSG Internet Services and presented by www.KOTH.org. It featured several preliminary rounds followed by playoffs, with a total prize pool of $850.
 
-**KOFACOTO is over!**
+This directory archives the KOTH Fall Core War Tournament (KOFACOTO), based on the tournament home page at [kofacoto](http://www.koth.org/kofacoto/).
 
-*   **1st:** Robert Macrae
-*   **2nd:** Michal Janeczek
-*   **3rd:** David Moore
+## Final Results
 
-KOFACOTO was sponsored by [TTSG Internet Services](http://www.ttsg.com)! Thanks to Tuc for making this happen! [TTSG Internet Services](http://www.ttsg.com) awarded prizes of $500 for first, $250 for second, and $100 for third.
+1. **Robert Macrae**
+2. Michal Janeczek
+3. David Moore
 
-Presented by [www.KOTH.org](http://www.KOTH.org), Tuc, and [jkw](mailto:jkw@koth.org).
+## Rounds
 
----
+- [Round 01: White Warrior](./Round_01/README.md)
+- [Round 02: Multiwarrior Melee](./Round_02/README.md)
+- [Round 03](./Round_03/README.md)
+- [Round 04](./Round_04/README.md)
+- [Round 05](./Round_05/README.md)
+- [Round 06](./Round_06/README.md)
+- [Round 07](./Round_07/README.md)
 
-## Tournament Information
+## Prizes
+
+$500 for first, $250 for second, $100 for third!
+
+## General Information
+
+I've received several more questions about the KOFACOTO... here's some more info to answer everyone:
+
+### Entry
+
+There is no requirement for entry into the tournament other than submitting a warrior for at least 1 of the preliminary rounds. Once you've submitted a warrior, by emailing it to jkw@koth.org, you're in.
 
 ### Scoring
-The person earning the best winning score received 1000 points in each preliminary round. Everyone else received a score normalized to 1000. For example, if the best program got 500 pts against the white warrior and you got 400 pts, the best one receives 1000 pts and you receive 800.
 
-### Total Scores
-*Total scores for each player from the first 4 preliminary rounds.*
+As for the points scored per round, the person earning the best winning score will receive 1000 points in round 1. Everyone else will receive a score normalized to 1000, so if the best program got 500 pts against the white warrior, and you got 400 pts against the white warrior, the best one receives 1000 pts, and you receive 800.
+
+The number of pts for round 2 might change to be more or less than 1000...
+
+### Rounds
+
+I haven't decided on the number of initial rounds. I haven't decided on the exact number of rounds, but there will be 4 at the very least, I should think, possibly up to 8? I'd like some feedback on that if people have preferences.
+
+### Submissions
+
+You may submit as many warriors as you want to me. Only the last one will be used. I won't be running any simulations until after the deadline, this Sunday at midnight.
+
+**ATTN:** For your entries, please place your full name on the ";author" line of your warrior.
+
+Some people felt uneasy using someone else's unedited warrior. I assure you there's nothing wrong with this. If your submission is truly identical to a previously published warrior, it'd be nice if you put that in the comments of the warrior. But for Round 2, I think it's highly unlikely people will be using previously published warriors. I guess it's possible though, hehe.
+
+### Publishing
+
+No one (including me) has mentioned anything about publishing warriors. I intend to post all the warriors that were submitted for Round 1. If anyone has objections let me know ASAP.
+
+## Total Scores (First 4 Preliminary Rounds)
 
 | Name | Score |
 | :--- | :--- |
@@ -48,202 +82,30 @@ The person earning the best winning score received 1000 points in each prelimina
 | ankerl | 227 |
 | chin | 184 |
 
----
+## Source Links
 
-## Round 1
-
-### White Warrior: Return Of The Jedimp
-The white warrior for Round 1 was **Return Of The Jedimp**. This version uses an imp spiral creation method where the spiral evolves over several generations of ring creation.
-
-**Rules:** Standard '94 rules: `pmars -r 200 -d 100 -c 80000 -p 8000 -l 100`
-
-```redcode
-;redcode-94
-;name Return Of The Jedimp
-;kill Return Of The Jedimp
-;author John K W
-;strategy Return Of The Jedimp with Q^2 scan...
-;strategy v.q4 - altered engine.  new qscan.
-;strategy v.q52 - fixed spacing and qscan better
-;assert 1
-
-org start
-
-step equ 12             ; gap between qbombs
-strafelen equ 4         ; coverage area = step*strafelen*3
-
-bomb    dat <1, step
-qstep	dat -step, 2*step
-
-;*************** QSCAN
-
-qs    equ   10
-
-QS1   equ   (100)
-QS2   equ   (3*QS1)
-QS3   equ   (6*QS2)
-QBASE equ   (tab+300)
-
-SIG01 equ   a01
-SIG02 equ   {a01
-SIG03 equ   }a01
-SIG04 equ   >a01
-SIG05 equ   <a01
-SIG06 equ   a01
-
-start   seq     QBASE+QS2*0+QS1*0, QBASE +QS2*0 +QS1*0+QS3
-        jmp     aaa,  SIG01
-        seq     QBASE+QS2*1+QS1*0, QBASE +QS2*1 +QS1*0+QS3
-        jmp     a01,  SIG02
-        seq     QBASE+QS2*2+QS1*0, QBASE +QS2*2 +QS1*0+QS3
-        jmp     a01,  SIG03
-        seq     QBASE+QS2*3+QS1*0, QBASE +QS2*3 +QS1*0+QS3
-        jmp     aaa,  SIG04
-        seq     QBASE+QS2*4+QS1*0, QBASE +QS2*4 +QS1*0+QS3
-        jmp     aaa,  SIG05
-        seq     QBASE+QS2*5+QS1*0, QBASE +QS2*5 +QS1*0+QS3
-        djn.f   a01,  SIG06
-
-        seq     QBASE+QS2*0+QS1*1, QBASE +QS2*0+QS1*1+QS3
-        jmp     a02,  SIG01
-        seq     QBASE+QS2*1+QS1*1, QBASE +QS2*1+QS1*1+QS3
-        jmp     a02,  SIG02
-        seq     QBASE+QS2*2+QS1*1, QBASE +QS2*2+QS1*1+QS3
-        jmp     a02,  SIG03
-        seq     QBASE+QS2*3+QS1*1, QBASE +QS2*3+QS1*1+QS3
-        jmp     a02,  SIG04
-        seq     QBASE+QS2*4+QS1*1, QBASE +QS2*4+QS1*1+QS3
-        jmp     a02,  SIG05
-        seq     QBASE+QS2*5+QS1*1, QBASE +QS2*5+QS1*1+QS3
-        djn.f   a02,  SIG06
-
-        seq     QBASE+QS2*0+QS1*2, QBASE+QS2*0+QS1*2+QS3
-        jmp     a03,  SIG01
-        seq     QBASE+QS2*1+QS1*2, QBASE+QS2*1+QS1*2+QS3
-        jmp     a03,  SIG02
-        seq     QBASE+QS2*2+QS1*2, QBASE+QS2*2+QS1*2+QS3
-        jmp     a03,  SIG03
-        seq     QBASE+QS2*3+QS1*2, QBASE+QS2*3+QS1*2+QS3
-        jmp     a03,  SIG04
-        seq     QBASE+QS2*4+QS1*2, QBASE+QS2*4+QS1*2+QS3
-        jmp     a03,  SIG05
-        seq     QBASE+QS2*5+QS1*2, QBASE+QS2*5+QS1*2+QS3
-        djn.f   a03,  SIG06
-
-        jmp     evopac          ;nothing found
-
-        dat     1*QS2,  4*QS2+QBASE-ptr
-tab     dat     0*QS2,  0*QS2+QBASE-ptr
-        dat     2*QS2,  3*QS2+QBASE-ptr
-
-a03     add     #QS1,   @a01
-a02     add     #QS1,   @a01
-a01     add.ab  tab,    tab
-aaa     mov.ba  @a01,   ptr
-
-        sne     DEAD,   *ptr  ;which of the two?
-        add.a	#QS3,   ptr
-
-	add.ab	ptr,	ptr
-
-qbrun   mov 	bomb, 	@ptr
-	mov 	bomb, 	*ptr
-ptr     mov 	-0, 	@step
-	add.f	qstep, 	-1
-        djn     qbrun,  #strafelen
-	jmp	evopac
-
-;*************** EVOPAC
-
-DEAD
-ded for 32
-dat 0, 0
-rof
-
-d2    equ 1143
-TSTEP equ 1751
-bstep equ 1819 ;2283 ;1997
-boot  equ 1700-(80+15)*4-1
-
-evopac  spl     1
-        spl     1
-        spl     1
-        mov     <1,     {1
-        jmp     boot,   imp2+1
-evol:   spl     @evol,  }TSTEP
-        mov.i   }evol,  >evol
-evoli:  spl     #d2,    bstep-1
-        mov     b,      >2
-        add.f   evoli,  j
-j:      jmp.f   imp2-d2*8, {-6+bstep
-b       dat     <1,     1
-imp2    mov.i   #d2,    *0
-```
-
-### Results
-The round saw 21 entries. Michal Janeczek won with an outstanding warrior scoring over 95% wins! The top 4 entries were in a statistical dead heat, but there was a wide diversity of scores and strategies among the field.
-
-| Name | Wins | Losses | Ties | Score | Normalized Score |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| janeczek | 1904 | 85 | 11 | 5723 | 1000 |
-| Macrae | 1884 | 103 | 13 | 5665 | 989 |
-| paulsson | 1860 | 128 | 12 | 5592 | 977 |
-| moore | 1833 | 123 | 44 | 5543 | 968 |
-| kline | 1744 | 206 | 50 | 5282 | 922 |
-| pihlaja | 1678 | 233 | 89 | 5123 | 895 |
-| Gunnell | 1400 | 478 | 122 | 4322 | 755 |
-| Liporati | 1362 | 557 | 81 | 4167 | 728 |
-| Schmidt | 1352 | 557 | 91 | 4147 | 724 |
-| Guenzel | 1333 | 581 | 86 | 4085 | 713 |
-| Karonen | 1243 | 639 | 118 | 3847 | 672 |
-| stefan | 1149 | 565 | 286 | 3733 | 652 |
-| Ford | 1124 | 643 | 233 | 3605 | 629 |
-| Chakrabarti | 1048 | 809 | 143 | 3287 | 574 |
-| Yeager | 1016 | 814 | 170 | 3218 | 562 |
-| Khuong | 957 | 833 | 210 | 3081 | 538 |
-| Kacza | 12 | 46 | 1942 | 1978 | 345 |
-| Hillis | 2 | 46 | 1952 | 1958 | 342 |
-| chin | 0 | 1209 | 791 | 791 | 138 |
-| Adamowski | 6 | 1544 | 450 | 468 | 81 |
-| Ankerl | 28 | 1882 | 90 | 174 | 30 |
-
-*   [Warriors Round 1](round1/)
-
-### Comments
-The top warriors from Round 1 utilized precision scanning techniques to exploit the known white warrior.
-
-**Robert Macrae's Analysis:**
-
-A precision scan finds the long QS code, then scans for the beginning (or end) of it so that the black warrior knows *exactly* where to find all the components of the white. This makes it easy to boot a cleanup warrior somewhere safe and pick them off at leisure.
-
-*Detailed comments:*
-
-**Force Feedback** uses a 0.5c scanner. The QS spacing makes -300 a very effective place to put a decoy because the QS will usually scan it 1 cycle before it would have found your real warrior.
-
-**Darkside** uses a 0.8c scan to find the QS faster, but it is longer and so more vulnerable. It is also a bit difficult to reset the pointers if it scans a replicator before getting the QS.
-
-**JedimPURGE** is a 0.8c scan coupled with a short 2c QS. It SPL carpets the replicators before starting a spiral clear.
-
-**myBlack** handles the QS by precision spacing of the components; the components are arranged so that one scanner and payload will remain intact even when hit.
-
-**Tsetse** uses a short but slow decoy generator. It is generally safe to use a long decoy generator as even if it's spotted, bombs reach it after it's finished.
-
-**Jedi Hunter** uses a stepped scanner and follows with a scan for the end of the QS. Lacking a decoy makes it vulnerable to the QS and DAT bombs.
-
-**Hyperclear** achieved excellent results for a general-purpose warrior, though precision scans significantly outperformed it.
-
-**Conclusions:**
-- Precision scan is the best way to handle any long white warrior.
-- White Quickscans are almost ineffective.
-- Decoy generators are great because the decoy is always ideally placed.
-- Cleanup is easy once all the components have been found.
-
----
-
-## Future Rounds
-*   Round 2
-*   Round 3
-*   Round 4
-*   Round 5 (Quarterfinals)
-*   Round 6 (Semifinals)
-*   Round 7 (Finals)
+- [Tournament home page](http://www.koth.org/kofacoto/)
+- [Total scores](http://www.koth.org/kofacoto/totals.html)
+- [Updated information](http://www.koth.org/kofacoto/info.html)
+- [Round 1 rules](http://www.koth.org/kofacoto/rules1.html)
+- [Round 1 results](http://www.koth.org/kofacoto/results1.html)
+- [Round 1 warriors](http://www.koth.org/kofacoto/warriors/round1)
+- [Round 2 rules](http://www.koth.org/kofacoto/rules2.html)
+- [Round 2 results](http://www.koth.org/kofacoto/results2.html)
+- [Round 2 warriors](http://www.koth.org/kofacoto/warriors/round2)
+- [Round 3 rules](http://www.koth.org/kofacoto/rules3.html)
+- [Round 3 results](http://www.koth.org/kofacoto/results3.html)
+- [Round 3 warriors](http://www.koth.org/kofacoto/warriors/round3)
+- [Round 3 followup](http://www.koth.org/kofacoto/followup3.html)
+- [Round 4 rules](http://www.koth.org/kofacoto/rules4.html)
+- [Round 4 results](http://www.koth.org/kofacoto/results4.html)
+- [Round 4 warriors](http://www.koth.org/kofacoto/warriors/round4)
+- [Round 5 rules](http://www.koth.org/kofacoto/rules5.html)
+- [Round 5 results](http://www.koth.org/kofacoto/results5.html)
+- [Round 5 warriors](http://www.koth.org/kofacoto/warriors/round5)
+- [Round 5 comments](http://www.koth.org/kofacoto/comments5.html)
+- [Round 6 rules](http://www.koth.org/kofacoto/rules6.html)
+- [Round 6 warriors](http://www.koth.org/kofacoto/warriors/round6)
+- [Round 6 comments](http://www.koth.org/kofacoto/comments6.html)
+- [Round 7 warriors](http://www.koth.org/kofacoto/warriors/round7)
+- [Round 7 comments](http://www.koth.org/kofacoto/comments7.html)
