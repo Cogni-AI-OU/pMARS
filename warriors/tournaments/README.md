@@ -40,14 +40,14 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **[Spring/Summer 2002 Corewar Tournament](https://corewar.co.uk/ss2002/index.htm)** (Mar 2002 – Jan 2003): 1st place, Michał Janeczek.
 - **[KOTH Fall Corewars Tournament](http://www.koth.org/kofacoto)** (Oct – Nov 2000): 1st place, Robert Macrae.
 - **[Ilmari's Mini Tournament #2](https://corewar.co.uk/karonen/imt2/index.htm)** (Nov 1999): 1st place, [h1_36.red](https://corewar.co.uk/hillis/h1_36.red) by Dave Hillis.
-- **Intelligent Warrior Tournament v2.0** (Aug 1999): 1st place, [Mine v0.3](https://corewar.co.uk/iwt1999/minev03.red) by John K. Wilkinson.
+- **[Intelligent Warrior Tournament v2.0](./iwt1999/README.md)** (Aug 1999): 1st place, [Mine v0.3](./iwt1999/minev03.red) by John K. Wilkinson.
 - **[Oversby Autumn 1998 Corewar Tournament](https://corewar.co.uk/oversby/index.htm)** (Nov 1998 – Mar 1999): 1st place, Joonas Pihlaja.
 - **[Ilmari's Mini Tournament #1](https://corewar.co.uk/karonen/imt1/index.htm)** (Apr 1998): 1st place, [Type Three Quantum Singularity](https://corewar.co.uk/karonen/imt1/kendall3.red) by Philip Kendall.
 - **[Redcode Maniacs Tournament](http://www.shadowmagic.org.uk/corewar/maniacs)** (Jan – Apr 1998): 1st place, David Moore.
 - **[Anton's Core War Tournament](https://corewar.co.uk/acwt.htm)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
-- **[Beppe's Direct Elimination Core War Tournament](https://corewar.co.uk/bezzi/cwtourn.htm)** (Oct – Nov 1996): 1st place, Philip Kendall.
+- **[Beppe's Direct Elimination Core War Tournament](./bdecwt1996/README.md)** (Oct – Nov 1996): 1st place, Philip Kendall.
 - **[Battle Royal](https://corewar.co.uk/battleroyal.htm)** (Apr 1996): 1st place, Iocane by John K. Wilkinson.
-- **[Intelligent Warrior Tournament v1.0](https://corewar.co.uk/iwt1996.htm)** (Mar 1996): 1st place, [System Trap](https://corewar.co.uk/iwt1996/systemtrap.red) by Kurt Franke.
+- **[Intelligent Warrior Tournament v1.0](./iwt1996/README.md)** (Mar 1996): 1st place, [System Trap](./iwt1996/8000/systemtrap.red) by Kurt Franke.
 - **[Nándor and Stefan's Fall Core War Tournament](https://corewar.co.uk/nsfcwt/index.htm)** (Oct – Dec 1995): 1st place, Steven Morrell.
 - **II Mistrzostwa Polski w Wojnach Rdzeniowych** (Apr 1994): 1st place, [Gisela2](https://corewar.co.uk/polski1994/gisela2.red) by Andrzej Maciejczak.
 - **Michael's New Corewar Tournament** (Oct 1993 – Mar 1994): 1st place, Stefan Strack and Anders Ivner.

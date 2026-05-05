@@ -55,3 +55,12 @@ To ensure tournament tests and results are deterministic and reproducible, use t
 ```bash
 ./pmars -f warrior1.red warrior2.red
 ```
+
+## Redcode (.red) File Conventions
+
+To preserve the history and context of warrior development:
+- **Do not delete code:** When removing logic from `.red` files, comment it out instead of deleting it.
+- **Explain changes:** Always include a comment explaining the reason for the modification or why the code was commented out.
+- **Comment character:** Use `;` for comments in Redcode files.
+
+These instructions are maintained in this `AGENTS.md` file and must be followed by all agents.
