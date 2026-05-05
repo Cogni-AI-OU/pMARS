@@ -81,7 +81,12 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
   - [Core War History](https://corewar.co.uk/hist.htm)
     - [Timeline](https://corewar.co.uk/history.htm) - A brief history of key events and publications.
     - [Who's Who](https://corewar.co.uk/whoswho.htm) - Biographies of members of the Core War community.
+    - [Hall of Fame](https://corewar.co.uk/hof.htm) and [Hill Logs](https://corewar.co.uk/logs.htm) - Records and activity from the KOTH.org hills.
     - [History of the 94 No Pspace Hill](https://corewar.co.uk/gutzeit/history/94nop.htm) by Jens Gutzeit.
+    - [New Redcode Opcodes](https://corewar.co.uk/opcodes.htm) - A collection of 140 suggested enhancements to Redcode.
+    - [Guerra nuclear: una batalla en tu ordenador](https://www.grafotema.com/agullo/articulos/guerra_nuclear.html) by Nacho Agulló - History of Core War in Spain.
+    - [Core War History in Poland](https://corewar.co.uk/ryba/index.htm) by Adam Ryba and [Andrzej Stasiewicz](https://corewar.co.uk/stasiewicz/index.htm).
+    - [Wojny rdzeniowe](https://grabun.pl/wr/) by Łukasz Grabuń - Transcripts of Core War articles from Enter magazine.
 - **Christoph C. Birk's Corewar Page:** [asdflkj.net](https://asdflkj.net/COREWAR/corewar.html)
   - [Koenigstuhl Infinite Hills](https://asdflkj.net/COREWAR/koenigstuhl.html) ([Mirror](https://users.obs.carnegiescience.edu/birk/COREWAR/koenigstuhl.html))
 - **Planar's Corewar Page:** [Planar](http://moscova.inria.fr/~doligez/corewar)
