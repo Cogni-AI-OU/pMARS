@@ -1,0 +1,341 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 65                                                   6 February, 1998
+______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills--currently the '94 draft hill and the beginner hill.
+Coverage will follow where ever the action is.  If you have no clue what I'm
+talking about then check out these five-star internet locals for more
+information:
+
+FAQs are available from:
+ftp://rtfm.mit.edu/pub/usenet/news.answers/games/corewar-faq.Z
+http://www.koth.org/corewar-faq.html
+
+FTP site is: ftp://ftp.csua.berkeley.edu/pub/corewar
+Mirrored at: ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+        and: ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+Stormking web pages--http://www.koth.org/pmars.html
+Terry's web page--http://www.ncs.infi.net/~wtnewton/corewar/
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+Web pages are at:
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Hello again.
+
+All change on the '94 Hill this week -- see below for details. Also,
+don't forget the Redcode Maniacs Tournament, being run by Christian
+Schmidt and myself; visit
+http://www.geocities.com/SiliconValley/Park/5427/maniacs.htm for info.
+
+Sorry this issue is a little short, but with Pizza being down my testing has
+been somewhat curtailed :-( Thanks to Paul Kline for revealing one of the
+secrets behind Alladin's Cave -- see the hint section.
+
+-- Philip Kendall
+_____________________________________________________________________________
+
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  42.1/ 38.0/ 20.0            The Next Baron    Christian Schmidt 146.2    2
+ 2  37.2/ 33.7/ 29.2              Fire and Ice          David Moore 140.6    1
+ 3  41.2/ 43.0/ 15.9             Alladins Cave              P.Kline 139.4   12
+ 4  34.0/ 29.1/ 36.9                     Fixed         Ken Espiritu 138.9   11
+ 5  31.5/ 24.3/ 44.2                      Newt          Ian Oversby 138.7  105
+ 6  32.7/ 28.0/ 39.2                      Vain          Ian Oversby 137.4   27
+ 7  39.5/ 42.9/ 17.6          Silver Talon 1.2                Edgar 136.1   13
+ 8  39.8/ 43.6/ 16.5 The Boys are Back in Town       Philip Kendall 136.1    9
+ 9  34.3/ 32.5/ 33.2                   Nomolos          Ian Oversby 136.0   16
+10  31.7/ 27.9/ 40.5                     Vigor         Ken Espiritu 135.5   15
+11  28.8/ 22.9/ 48.3            Benchmark [94]           Zul Nadzri 134.7   27
+12  37.2/ 40.9/ 21.9             Electric Head        Anton Marsden 133.5  114
+13  35.3/ 37.6/ 27.1                 Tornado 4          Beppe Bezzi 132.9   29
+14  29.0/ 25.7/ 45.4             Ultraviolet-B         Ken Espiritu 132.3   37
+15  30.5/ 28.8/ 40.7                 Vengeance          Robert Hale 132.2   62
+16  31.6/ 31.2/ 37.1 obvious to those who know        Robert Macrae 132.0   63
+17  29.6/ 28.0/ 42.3                 Pulp v0.5          Ian Oversby 131.2   62
+18  39.7/ 49.1/ 11.2            He Scans Alone              P.Kline 130.3    4
+19  30.5/ 31.2/ 38.3                     test                   JKW 129.9    1
+20  31.2/ 32.7/ 36.1          traumatic smurf        bjoern guenzel 129.7    3
+21  31.2/ 32.8/ 36.0            Nine Seven Six           M R Bremer 129.6  223
+22  33.6/ 37.9/ 28.6               Digitalis 3    Christian Schmidt 129.2    5
+23  33.3/ 37.7/ 29.0                PAN-TAU-RA    Christian Schmidt 128.8   12
+24  23.3/ 18.0/ 58.7                 Metal IIa       Ivan Krajnovic 128.6    6
+25  30.2/ 33.8/ 35.9 The Return of the PaperBo          Robert Hale 126.7    4
+
+Age since last issue: 6 ( 26 last issue, 31 the issue before )
+New warriors: 7  Turnover/age rate 117%
+Average age: 34 ( 53 last issue, 63 the issue before )
+Average score: 134 ( 142 last issue, 136 the issue before )
+The top 25 warriors are represented by 15 independent authors: Oversby with 4,
+Schmidt and Espiritu with 3, Kline and Hale with 2, and everyone else with
+just the one.
+
+Paul Kline's Alladin's Cave dominated the Hill at the start with a good lead,
+before Schmidt came back with The New Baron to take the lead, with David
+Moore's Fire and Ice close behind.  Also, this week saw the loss of by far the
+oldest warrior on the hill, John K Wilkinson's Return of the Jedimp, leaving
+the hill with its youngest age since its formation.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+??  ??.?/ ??.?/ ??.?                 Metal IIa       Ivan Krajnovic ???.?    ?
+16  36.0/ 38.6/ 25.5               Digitalis 3    Christian Schmidt 133.4    1
+16  41.6/ 50.0/  8.4            He Scans Alone              P.Kline 133.2    0
+20  31.9/ 32.8/ 35.4 The Return of the PaperBo          Robert Hale 131.0    1
+??  ??.?/ ??.?/ ??.?          traumatic smurf        bjoern guenzel ???.?    ?
+ 1  43.9/ 37.1/ 19.1            The Next Baron    Christian Schmidt 150.7    0
+ 2  37.0/ 33.9/ 29.1              Fire and Ice          David Moore 140.1    0
+19  30.5/ 31.2/ 38.3                     test                   JKW 129.9    1
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   1.9/  2.0/ 0.0             He Scans Again              P.Kline   5.9    3
+26     (killed)                      Red Baron    Christian Schmidt
+26  34.0/ 41.7/24.4                     Stasis          David Moore 126.3    8
+26  ??.?/ ??.?/??.?       Return Of The Jedimp             John K W ???.?  357?
+26  38.2/ 52.0/ 9.8                   Memories          Beppe Bezzi 124.5   32
+26  34.8/ 43.3/21.8                     HnK II       Ivan Krajnovic 126.3    8
+26  ??.?/ ??.?/??.?               Head or Tail    Christian Schmidt ???.?  ???
+26  35.5/ 44.8/19.7           It's not a trick    Christian Schmidt 126.2   14
+
+If someone could confirm the ages of Jedimp and Head or Tail when they were
+pushed off, that would be appreciated.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+21  31.2/ 32.8/ 36.0            Nine Seven Six           M R Bremer 129.6  223
+14  35.6/ 40.3/ 24.1             Electric Head        Anton Marsden 131.0  108
+ 5  31.5/ 24.3/ 44.2                      Newt          Ian Oversby 138.7  105
+
+Two of the old guard (Return of the Jedimp and Head or Tail) are pushed off,
+whilst Newt joins the 100+ club.
+______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos Name                   Author            Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ mp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357(?) Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         223 *  Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+12  Instant Wolf 3.4       Edgar              205    P-warrior
+13  Goldfinch              P.Kline            201    P-warrior
+14  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+15  Trident^2              John K W           195    Q^2 -> Stone/imp
+16  ompega                 Steven Morrell     189    Stone/imp
+17  Frogz                  Franz              172    Q^2 -> Paper
+18  The Machine            Anton Marsden      164    Scanner
+19  Memories               Beppe              152    Scanner
+20  Head or Tail           Christian Schmidt  141(?) Q^2 -> Paper
+21  Tiberius 3.1           Franz              130    Q^2 -> Paper
+22  Solomon v0.8           Ian Oversby        116    Stone and scanner
+23  Electric Head          Anton Marsden      108 *  P-warrior
+24  CC Paper 3.3           Franz              107    Q^2 -> Paper
+25  mrb-test               m r bremer         106    ?
+
+(Ages with ? need confirming)
+
+Nine Seven Six creeps up a place, whilst Electric Head enters and kicks
+T.N.T. pro off; Newt is just outside the top 25.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  52.3/  9.8/ 37.9                 Metal IIa       Ivan Krajnovic 194.8   22
+ 2  52.2/ 11.7/ 36.1                  Metal II       Ivan Krajnovic 192.6   60
+ 3  50.2/  8.0/ 41.9                      Vain          Ian Oversby 192.4  100
+ 4  45.3/ 23.3/ 31.4                    HnK II       Ivan Krajnovic 167.3   94
+ 5  31.8/ 14.0/ 54.1                   p-U v.2         Ryan Coleman 149.6   24
+ 6  29.7/ 11.7/ 58.6             Moderation II       Andy Nevermind 147.7   98
+ 7  33.4/ 26.4/ 40.1            I.R. Baboon v1           Gene Gomez 140.4   31
+ 8  36.5/ 36.5/ 27.0    Voodoo Glow Skull v2.1           Gene Gomez 136.4   33
+ 9  33.9/ 35.8/ 30.3                  QScissor         Ryan Coleman 132.1   32
+10  23.8/ 21.8/ 54.5             cascade 12,41        Steve Gunnell 125.8    1
+11  20.7/ 18.1/ 61.1             Paper Test v3           Gene Gomez 123.3   52
+12  36.4/ 51.1/ 12.6              Iced Creamer           Compudemon 121.7    9
+13  26.0/ 31.4/ 42.7                 archangel        John K. Lewis 120.5   15
+14  29.9/ 42.2/ 27.9              Tornado -1.0         George Eadon 117.5    2
+15  32.6/ 49.4/ 18.0               I am EMCFDT          Compudemon  115.9   13
+16  15.8/ 16.4/ 67.8                  saturn 3        Steve Gunnell 115.2   36
+17  21.6/ 28.0/ 50.4             Werewolf 1.25           Compudemon 115.1   10
+18  27.2/ 39.8/ 32.9                  KPO 2.02           Csaba Biro 114.6   16
+19  16.7/ 28.8/ 54.5                Q-paper v1           Gene Gomez 104.6   21
+20  21.5/ 43.1/ 35.3                      RTFM        John K. Lewis  99.9   17
+21  15.7/ 34.2/ 50.2             qDeath v .269         Ryan Coleman  97.2   26
+22  16.2/ 39.8/ 44.0          Pure Genius 1.21           Compudemon  92.5   11
+23   3.9/  1.8/  2.3               Tornado 3.0                Beppe  13.9    6
+24   0.2/ 92.9/  6.9                 NO v .069         Ryan Coleman   7.4    4
+25   0.3/  0.3/  3.4             cascade 27,20        Steve Gunnell   4.3   14
+
+    26.9/ 28.7/ 36.9            Top 25 Averages                     117.7   29
+
+The very low proportion of wins on the hill (26.9%) suggests to me that a
+scanner would be a good idea here. Also, I would tend to say that you learn
+more about Core War by trying to write one component very well, rather than a
+p-spacer; would anyone object if the b-hill were made no pspace?
+______________________________________________________________________________
+The Hint
+(by Paul Kline)
+
+A while back I posted a 3-line bomber which performed somewhat
+better than the usual mod-4/5 version by modifying its step
+one or more times during the battle.  Since that time I have
+uncovered a number of these that actually dat-bomb nearly
+ninety percent of core without self-destructing and use
+an efficient starting step.  These are remarkably effective
+against cmp-scanners and also against larger self-splitting
+bombers because they have an improved ability to destroy
+spl-zero instructions.
+
+The trick in designing these is to find an ascending or
+descending sequence of steps that never leads to a self-bomb.
+The initial step is somewhat flexible since you can choose the
+starting bomb location and the number of bombs dropped, after
+that each step will drop 4000 bombs in 12000 cycles.  Six full
+steps occupy 72000 cycles, leaving one or two partial runs.
+
+So we need a series of seven or eight sequential steps, some of
+which are mod-4/5/8 or greater, and some of which are imp
+numbers.  The imp numbers have to be chosen such that they
+can bomb 4000 locations while leaving at least one gap of
+three locations for the bomber to hide in.  In spite of these
+requirements the NUM8000.DAT file reveals quite a few candidate
+series.
+
+Tesing a series amounts to choosing a starting position for the
+first bomb, and the number of bombs that the first step is allowed.
+Watch it run and see how long before a self-bomb.  Adjust
+the starting position or number and try again.
+
+There must be many, many of these that I did not identify, but
+here are some of them, one of which is used by Alladin's Cave.
+
+sStep     equ    5266
+Stone     mov    }1629    ,1-sStep
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+sStep     equ    4954
+Stone     mov    {1601    ,1-sStep
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+sStep     equ    4154
+Stone     mov    {1685    ,1-sStep
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+sStep     equ    3174
+Stone     mov    {1545     ,1-sStep
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+sStep     equ    3054
+Stone     mov    {1481     ,1-sStep
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+I have found these bombers to be as close to a silver bullet
+against cmp-scanners as can be hoped, and since several of
+those scanners have come back to the 94 Hill, this accounts
+for much of the success of Alladin's Cave.  That plus the
+one-shot scanner killer "CLP".  AC losesterribly to qscannin
+replicators and fast bombers, but also wins 70-90% against
+some good opponents.  It does not contain a HSA-type scanner
+which I miss, but does include a mini one-shot that gets
+some wins against replicators.
+
+Now that Christian has replaced Red Baron with The Next Baron
+AC looks a little less magical.  Red Baron gave up 90% losses
+to AC, while The Next Baron only gives up 44%.
+
+Paul Kline
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Authors: Beppe Bezzi <bezzi@nemo.it>,  Anton Marsden <amarsden@mcs.vuw.ac.nz>,
+Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de> and Philip Kendall
+<pak21@cam.ac.uk>
+
