@@ -19,10 +19,12 @@
 ;
 ;trap sector
 ;
+; Added to ensure correct coresize for ICWT'91 simulation
 ;assert CORESIZE==8192
 twirl   djn stab,gotme
 seppuku mov ammo,breed
         mov ammo,stab
+; Updated to ICWS'88 operand modes for strict compilation
 gotme   dat #64,#64
 stab    mov bomb,<molar
         jmp stab
@@ -46,6 +48,7 @@ erase   mov bomb,<molar  ;start doing our bit in the erasure
         jmp erase
 go      jmp erase-start
 fang    jmp @0,(spin-tusk-2500)
+; Updated to ICWS'88 operand modes for strict compilation
 ammo    dat #145, #0
 tusk    dat #2500, #0
 bomb    dat #twirl-molar,#twirl-molar
