@@ -1,0 +1,1250 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 66                                     			 8 April, 1998
+______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills--currently the '94 draft hill and the beginner hill.
+Coverage will follow where ever the action is.  If you have no clue what I'm
+talking about then check out these five-star internet locals for more
+information:
+
+FAQs are available from:
+ftp://rtfm.mit.edu/pub/usenet/news.answers/games/corewar-faq.Z
+http://www.koth.org/corewar-faq.html
+
+FTP site is: ftp://ftp.csua.berkeley.edu/pub/corewar
+Mirrored at: ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+        and: ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+Stormking web pages--http://www.koth.org/pmars.html
+Terry's web page--http://www.ncs.infi.net/~wtnewton/corewar/
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+Web pages are at:
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Hello again.
+
+With Pizza being down for almost all of the time since the last issue, most
+of the Core War action has been taking place in the Redcode Maniacs
+Tournament, being run by Christian Schmidt and myself. Round 8, the
+penultimate round, is almost over (about 23 hours to enter from when I posted
+this message), and it looks like either Robert Macrae or David Moore will go
+on to win, but it still isn't too late to enter: see
+
+http://www.geocities.com/SiliconValley/Park/5427/maniacs.htm
+
+for details.
+
+Pizza is now back up though so we can all get back to beating Alladin's Cave,
+a task which may be made considerably easier due to it being published further
+down in this issue. Thanks to Paul Kline for his code and Robert Macrae for the
+analysis. (and apologies for forgetting to put this in the last issue ;-( )
+
+-- Philip Kendall
+_____________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  42.1/ 38.4/ 19.5         Diamonds and Rust    Christian Schmidt 145.7    3
+ 2  38.0/ 31.8/ 30.2                   Nomolos          Ian Oversby 144.1   28
+ 3  38.7/ 35.2/ 26.1              Fire and Ice          David Moore 142.3   12
+ 4  41.2/ 42.3/ 16.5          Three Musketeers        Robert Macrae 140.2    2
+ 5  34.4/ 30.3/ 35.2                     Fixed         Ken Espiritu 138.6   23
+ 6  31.9/ 25.5/ 42.6                      Newt          Ian Oversby 138.3  117
+ 7  33.0/ 27.9/ 39.1                     Vigor         Ken Espiritu 138.1   27
+ 8  33.3/ 29.7/ 37.0                      Vain          Ian Oversby 136.8   39
+ 9  40.1/ 43.7/ 16.1             Alladins Cave              P.Kline 136.6   24
+10  36.9/ 37.7/ 25.4                 Tornado 4          Beppe Bezzi 136.1   41
+11  33.8/ 32.2/ 34.1 obvious to those who know        Robert Macrae 135.3   75
+12  29.2/ 23.5/ 47.3            Benchmark [94]           Zul Nadzri 134.9   39
+13  37.9/ 41.3/ 20.8             Electric Head        Anton Marsden 134.5  126
+14  39.5/ 45.2/ 15.4 The Boys are Back in Town       Philip Kendall 133.8   21
+15  31.9/ 30.2/ 38.0                 Vengeance          Robert Hale 133.5   74
+16  41.8/ 50.6/  7.6              Seven-Eleven        Robert Macrae 133.0    1
+17  38.7/ 44.6/ 16.8          Silver Talon 1.2                Edgar 132.8   25
+18  30.5/ 28.6/ 40.9                 Pulp v0.5          Ian Oversby 132.4   74
+19  32.9/ 33.4/ 33.6          traumatic smurf        bjoern guenzel 132.4   15
+20  28.9/ 26.4/ 44.7               LeatherNeck          Robert Hale 131.3    6
+21  35.3/ 39.5/ 25.2               Digitalis 4    Christian Schmidt 131.2   11
+22  38.2/ 45.7/ 16.1                 Sharkrage    Christian Schmidt 130.7    0
+23  30.5/ 31.0/ 38.5          Head or Tail 1.1    Christian Schmidt 130.0    6
+24  29.2/ 28.4/ 42.5             Ultraviolet-B         Ken Espiritu 130.0   49
+25  30.5/ 35.2/ 34.3 The Return of the PaperBo          Robert Hale 125.9   16
+
+Age since last issue: 11 ( 6 last issue, 26 the issue before )
+New warriors: 7  Turnover/age rate 64%
+Average age: 34 ( 34 last issue, 53 the issue before )
+Average score: 135 ( 134 last issue, 142 the issue before )
+The top 25 warriors are represented by 13 independent authors: Oversby and
+Schmidt with 4 each, Hale, Espiritu and Macrae with 3 and everyone else with
+just one.
+
+Since the last issue, all of Fire and Ice, Nomolos, The Next Baron,
+Alladins Cave and Diamonds and Rust have been King. The loss of Electric Head
+once again gave the Hill its youngest age since formation (31).
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+10  36.7/ 37.6/ 25.6               Digitalis 4    Christian Schmidt 135.9    0
+11  31.3/ 29.2/ 39.5          Head or Tail 1.1    Christian Schmidt 133.5    0
+16  29.3/ 24.8/ 45.9               LeatherNeck          Robert Hale 133.7    0
+ 2  42.0/ 39.1/ 18.9         Diamonds and Rust    Christian Schmidt 144.9    0
+ 7  40.2/ 42.1/ 17.7          Three Musketeers        Robert Macrae 138.3    1
+24  40.4/ 52.0/  7.6              Seven-Eleven        Robert Macrae 128.9    1
+22  38.2/ 45.7/ 16.1                 Sharkrage    Christian Schmidt 130.7    0
+
+Schmidt replaces one pspacer with another to go back to King, whilst
+Macrae sends in two of his entries from the Redcode Maniacs Tournament.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26   1.5/  1.4/  1.1                     test                   JKW   5.5    1
+26  21.5/ 17.4/ 61.1                 Metal IIa       Ivan Krajnovic 125.7    7
+26   1.8/  2.0/  0.2               Digitalis 3    Christian Schmidt   5.7    6
+26  38.8/ 52.4/  8.7            He Scans Alone              P.Kline 125.3    6
+26  32.1/ 39.1/ 28.8                PAN-TAU-RA    Christian Schmidt 125.2   17
+26  29.3/ 34.4/ 36.3            Nine Seven Six           M R Bremer 124.2  232
+26   1.6/  2.1/  0.3            The Next Baron    Christian Schmidt   5.2   14
+
+For the second consecutive issue, the Hill loses its oldest warrior.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+13  37.9/ 41.3/ 20.8             Electric Head        Anton Marsden 134.5  126
+ 6  31.9/ 25.5/ 42.6                      Newt          Ian Oversby 138.3  117
+11  33.8/ 32.2/ 34.1 obvious to those who know        Robert Macrae 135.3   75
+18  30.5/ 28.6/ 40.9                 Pulp v0.5          Ian Oversby 132.4   74
+
+Electric Head has been in trouble in the lower reaches of the Hill for a while
+now, but Newt continues to do well.
+______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+12  Instant Wolf 3.4       Edgar              205    P-warrior
+13  Goldfinch              P.Kline            201    P-warrior
+14  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+15  Trident^2              John K W           195    Q^2 -> Stone/imp
+16  ompega                 Steven Morrell     189    Stone/imp
+17  Frogz                  Franz              172    Q^2 -> Paper
+18  The Machine            Anton Marsden      164    Scanner
+19  Memories               Beppe              152    Scanner
+20  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+21  Tiberius 3.1           Franz              130    Q^2 -> Paper
+22  Electric Head          Anton Marsden      126 *  P-warrior
+23  Solomon v0.8           Ian Oversby        116    Stone and scanner
+24  Newt		   Ian Oversby	      117 *  Q^2 -> Stone/imp
+25  CC Paper 3.3           Franz              107    Q^2 -> Paper
+
+Nine Seven Six finishes in 9th place, whilst Electric Head climbs one place to
+22nd and Newt appears, forcing mrb-test out of the top 25.
+_____________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  44.2/  9.7/ 46.1                 Metal IIa       Ivan Krajnovic 178.7   77
+ 2  41.9/ 30.7/ 27.4                      cute        John K. Lewis 153.1   16
+ 3  43.4/ 38.0/ 18.6                Death kiss      Anders Rosendal 148.8   33
+ 4  42.0/ 35.7/ 22.3                  Incisor+         John Metcalf 148.2    1
+ 5  37.1/ 26.2/ 36.7                      Torn        M. J. Pihlaja 148.1   14
+ 6  42.2/ 37.5/ 20.3                   Beescan        M. J. Pihlaja 146.9    4
+ 7  40.5/ 35.1/ 24.3            qbomber v .469         Ryan Coleman 146.0   32
+ 8  40.4/ 37.1/ 22.5                   Incisor         John Metcalf 143.7    3
+ 9  37.7/ 35.7/ 26.6                   Arsonic                  pvk 139.7   18
+10  25.0/ 17.3/ 57.7                  p-U  v.2         Ryan Coleman 132.8   79
+11  23.8/ 18.5/ 57.7                     fylle                Klaus 129.0   12
+12  29.6/ 34.2/ 36.2          Get A-life V2.04         Don H. McGee 125.1    9
+13  30.8/ 37.3/ 31.9    Voodoo Glow Skull v2.1           Gene Gomez 124.2   88
+14  25.6/ 28.0/ 46.4            I.R. Baboon v1           Gene Gomez 123.2   86
+15  27.7/ 32.3/ 40.0                 Gold fish             P._V._K. 123.2   20
+16  27.5/ 32.5/ 40.0                 Gold fish             P._V._K. 122.5   19
+17  23.3/ 25.1/ 51.6               March 0.92c           Csaba Biro 121.6    8
+18  21.8/ 22.7/ 55.5                March 0.94           Csaba Biro 120.9    2
+19  19.3/ 17.7/ 63.1                 paperlike      Anders Rosendal 120.9   30
+20  20.7/ 21.8/ 57.5              Cold Company         John Metcalf 119.6   21
+21  24.2/ 29.3/ 46.5              cascade 9,66        Steve Gunnell 119.2   36
+22  33.4/ 50.1/ 16.5              Iced Creamer           Compudemon 116.6   64
+23  27.6/ 40.5/ 31.9 trying my first multipass                  PVK 114.8   22
+24  30.1/ 47.5/ 22.4  WannaChatInWarriorNames?         John Metcalf 112.8   28
+25  14.7/ 19.7/ 65.5                     Bilbo         John Metcalf 109.8   38
+
+Krajnovic continues to thrash the rest of the Hill with his Metal IIa --
+should the age limit for this hill be lowered now that Thos has removed
+almost all artifical ageing? Comments/suggestions to the newsgroup.
+_____________________________________________________________________________
+
+The Hint - Improving a beginner's warrior
+Philip Kendall
+
+For this hint, I'm going to take a beginner's warrior, and see how much I can
+improve it. The warrior I'm going to use is qDeath v .269 by Ryan Coleman;
+thanks to Ryan for sharing his code.
+
+Here's the original version of the warrior:
+
+;redcode-b verbose
+;name qDeath v .269
+;author Ryan Coleman
+;strategy QScan -> Scissor
+;strategy v .269 modified scissor
+;assert 1
+
+;this warrior is the prototypical 'beginner' warrior.  One simply gets 
+;code for a q-scan and code for a scissor or paper from planar's archives
+;or other sources around the net.  I did improve the qscan a bit by 
+;switching around the order somewhat.  My idea was to put the ones most 
+;likely to find the other warrior first.  I know that odds are a warrior 
+;will be randomly placed in the middle of the code rather than immediately 
+;after or before mine.  
+
+;my strategy as far as the scissor went was that i see a lot of papers on 
+;the hill and a good paper should 'beat up' on them.  The more I messed with
+;the code for the scissor portion of the code, the more it didn't work
+;I eventually gave up and submitted it 'as is'.  One improvement I have done
+;(in another version) was to boot the scissor away, scoring better against
+;scanners.
+
+;Well, it's obvious I'm a beginner and have a lot to learn.  But one day....
+
+ORG start
+
+QB EQU (start+400)
+QS EQU 200
+QD EQU 100
+;COUNT EQU 6
+;        _RES    equ 0           
+;        _STR    equ 1           
+;dest0   equ     2200
+;dest1   equ     3740
+;dest2   equ     -1278   
+;range   equ     933     
+CDIST   equ 12
+IVAL    equ 42
+FIRST   equ scan+OFFSET+IVAL
+OFFSET  equ (2*IVAL)
+DJNOFF  equ -431
+BOMBLEN equ CDIST+2
+
+
+GAP EQU 15
+REP EQU 6
+
+         dat    10*QS, 2*QS ; can get 21 values from this table
+table:   dat     4*QS, 1*QS ; and can also use the initial value
+         dat    23*QS, 3*QS ; of fnd
+qbomb:   jmp    -200,GAP
+qinc:    dat    GAP,-GAP
+
+tab:     add.a  table,table
+slow:    add.ab @tab,fnd
+fast:    add.b  *tab,@slow
+which:   sne.i  datz,@fnd
+         add.ab #QD,fnd
+
+         mov.i  qbomb,@fnd
+fnd:     mov.i  -GAP/2,@QB
+         add.ba fnd,fnd
+         mov.i  qbomb,*fnd
+         add.f  qinc,fnd
+         mov.i  qbomb,@fnd
+         djn.b  -3,#REP
+         jmp    comp,}-300
+
+start:
+
+         seq.i  QB+QS*13,QB+QS*13+QD
+         jmp    fast,{fast
+
+         seq.i  QB+QS*21,QB+QS*21+QD
+         jmp    tab,{fast
+         seq.i  QB+QS*22,QB+QS*22+QD
+         djn.f  tab,tab
+         seq.i  QB+QS*27,QB+QS*27+QD
+         jmp    <fast,>tab
+         seq.i  QB+QS*28,QB+QS*28+QD
+         jmp    tab,>tab
+
+
+         seq.i  QB+QS*4,QB+QS*4+QD
+         jmp    >fast,}QB+QS*4+QD/2
+         seq.i  QB+QS*5,QB+QS*5+QD
+         jmp    slow,}QB+QS*5+QD/2
+         seq.i  QB+QS*6,QB+QS*6+QD
+         jmp    slow,{tab
+         seq.i  QB+QS*7,QB+QS*7+QD
+         jmp    slow,}tab
+
+         seq.i  QB+QS*10,QB+QS*10+QD
+         jmp    >fast,<tab
+         seq.i  QB+QS*11,QB+QS*11+QD
+         jmp    slow,<tab
+         seq.i  QB+QS*12,QB+QS*12+QD
+         djn.f  slow,tab
+
+         seq.i  QB+QS*23,QB+QS*23+QD
+         jmp    >fast,>tab
+         seq.i  QB+QS*24,QB+QS*24+QD
+         jmp    slow,>tab
+
+         seq.i  QB+QS*17,QB+QS*17+QD
+         jmp    slow,{fast
+
+         seq.i  QB+QS*8,QB+QS*8+QD
+         jmp    <fast,}QB+QS*8+QD/2
+         seq.i  QB+QS*9,QB+QS*9+QD
+         jmp    tab,}QB+QS*9+QD/2
+
+         seq.i  QB+QS*15,QB+QS*15+QD
+         jmp    tab,<tab
+         seq.i  QB+QS*16,QB+QS*16+QD
+         jmp    tab,{tab
+         seq.i  QB+QS*20,QB+QS*20+QD
+         djn.f  <fast,tab
+         seq.i  QB+QS*0,QB+QS*0+QD
+         jmp    which,}QS*13 ; qinc+GAP
+
+         seq.i  QB+QS*1,QB+QS*1+QD
+         jmp    fast,}QB+QS*1+QD/2
+         seq.i  QB+QS*2,QB+QS*2+QD
+         jmp    fast,{tab
+         seq.i  QB+QS*3,QB+QS*3+QD
+         jmp    fast,}tab
+
+
+         seq.i  QB+QS*30,QB+QS*30+QD
+         jmp    tab,}tab
+
+
+; insert stuff here
+
+jmp comp, comp
+scan    sub.f  incr,comp
+comp    cmp.i  FIRST,FIRST-CDIST        
+        slt.a  #incr-comp+BOMBLEN,comp  
+        djn.f  scan,<FIRST+DJNOFF       
+        mov.ab #BOMBLEN,count
+split   mov.i  bomb,>comp               
+count   djn.b  split,#0
+        sub.ab #BOMBLEN,comp
+        jmn.b  scan,scan
+bomb    spl.a  0,{-1
+        mov.i  incr,<count
+incr    dat.f  <0-IVAL,<0-IVAL
+
+
+
+
+datz dat 0,0              ;keep here!
+     dat 0,0
+     dat 0,0
+
+This is simply a Q^2 scan, followed by Stefan Strack's Rave, a classic
+cmp-scanner. Let's submit it to Pizza's b-hill (hoping it's up today :-) ) and
+see how it does:
+
+21  12.7/ 26.6/ 60.7             qDeath v .269 Ryan Coleman (submit  98.9    1
+
+Yikes! That's not too good really. The thing which really stands out here is
+the lack of wins, and the very high percentage of ties: both the qscan and
+scanner are very offensive components, which generally get many wins, many
+losses and only a few ties. What's going wrong?
+
+[If you're feeling studious at this point, it's probably a good idea to try and
+find out for yourself: the best of to learn is by doing! Issue 12 of Steve
+Bailey's Guide for Beginners (available from http://www.koth.org/sgb/) has a
+very good analysis of Rave]
+
+The problem is with this line:
+
+bomb    spl.a  0,{-1
+
+Rave eventually bombs its first line (sub.f incr,comp) with this bomb, and then
+detects this fact to switch to its coreclear and kill off the opponents which
+it has stunned. However, the test is made with the
+
+        jmn.b  scan,scan
+
+line, which will now never be satisfied, as the b-field of `loop' is non-zero
+even after it has been bombed. Probably the simplest way to remove this problem
+is to change the test to
+
+	jmn.a	loop,*0
+
+and re-submit the warrior. Any better?
+
+ 4  50.0/ 29.9/ 20.1                 qDeath II Ryan Coleman/Philip  170.1    1
+
+Yes :-) Let's see if we can get anywhere near the '94 Draft Hill:
+
+25  31.0/ 32.8/ 36.2 The Return of the PaperBo          Robert Hale 129.1    4
+26  24.3/ 61.4/ 14.2                 qDeath II Ryan Coleman/Philip   87.2    0
+
+No :-(
+
+The next problem with this warrior is what happens if the qscan misses, or
+fails to find a target: when this occurs, the main code loop is now executing
+next to an enormous (in Core War terms) number of dead instructions, which do
+nothing apart from give away our position to other scanners. To alleviate this
+problem, let's boot the scanner portion of the code away after scanning. Now,
+we have:
+
+Beginner's Hill:
+
+ 4  43.0/ 37.3/ 19.7                qDeath 2.1 Ryan Coleman/Philip  148.7    1
+
+Surprisingly, this doesn't do as well (the hill had changed a bit between the
+submission of qDeath II and qDeath 2.1, so this isn't really a fair test)
+
+However, it does do better than the unbooted version on the '94 Hill:
+
+26  29.4/ 59.6/ 11.0                qDeath 2.1 Ryan Coleman/Philip   99.2    0
+
+Next, Rave's endgame is a simple one-pass dat clear, which isn't going to be
+effective enough to wipe out many of the imp-heavy defensives around today. A
+much more effective clear for killing imps is the d-clear, as invented by
+Bjoern Guenzel. Adding one of these to qDeath means increasing its size by 2
+instructions (never a good thing...), but let's see what happens:
+
+Beginner's Hill:
+
+11  30.9/ 36.6/ 32.4                qDeath 2.2 Ryan Coleman/Philip  125.2    1
+
+'94 Hill:
+
+26  29.0/ 55.8/ 15.2                qDeath 2.2 Ryan Coleman/Philip  102.2    0
+
+This doesn't do as well on the Beginner's Hill (again, there was some change
+in the hill make-up between submissions), but once again does better on the
+'94 Hill. What this says? Principally the fact that a warrior doing better on
+the Beginner's Hill will not necessarily do better on the '94 Hill due to
+their different make-up.
+
+A couple more points whilst I'm here:
+
+1) Ryan states in the original comments "changed the qscan order to hit
+locations where the enemy is more likely to be earlier". In a two warrior
+fight, the second warrior is equally (*) likely to start anywhere in the
+range 100 to 7900, which means that the locations 199 to 7900 are equally
+likely to contain your opponent (assuming it has length 100). All th
+locations scanned by the standard Q^2 code are in this range, so there is no
+gain to be made from this. The best order for a qscan _may_ be to put the
+fastest response scans first (as was done in Gigolo), but there are warriors
+designed to take advantage of this (eg Paul Kline's RetroQ).
+
+2) I'm not sure of the effectiveness of qscan -> scanner as a strategy.
+Scanners are at there most effective early in the round, before other
+warriors have filled much of core with bombs, decoys, etc, and qscanning loses
+much of this advantage. However, qDeath does worse on both the Beginner's and
+'94 Hill without its qscan, so the Q^2 is obviously useful in the current
+climate on both hills.
+
+To finish, here's qDeath 2.2; I hope at least some of you found this useful :-)
+
+Philip Kendall
+
+;redcode-b test
+;name qDeath 2.2
+;author Ryan Coleman/Philip Kendall
+;strategy QScan -> Scissor
+;strategy Testing some ideas for CW 66
+;assert CORESIZE==8000
+
+ORG start
+
+CDIST	equ 12
+IVAL	equ 42
+OFFSET	equ (2*IVAL)
+FIRST	equ scan+OFFSET+IVAL
+DJNOFF	equ -431
+BOMBLEN equ CDIST+2
+gate	equ	(scan-3)
+
+scan	sub.f  incr,comp
+comp	cmp.i  FIRST,FIRST-CDIST
+	slt.a  #bomb-comp+BOMBLEN,comp
+	djn.f  scan,<FIRST+DJNOFF
+	mov.ab #BOMBLEN,count
+split	mov.i  bomb,>comp
+count	djn.b  split,#0
+	sub.ab #BOMBLEN,comp
+	jmn.a  scan,scan
+incr	spl.a  #-IVAL,>-IVAL
+clear	mov.i  cbomb,>gate
+	djn.f  clear,>gate
+cbomb	dat.f  >5335,(cbomb-gate+3)
+bomb	spl.a  #0,0
+
+QB EQU (start+400)
+QS EQU 200
+QD EQU 100
+
+GAP EQU 15
+REP EQU 6
+datz	equ	(-CURLINE-1)
+
+	 dat	10*QS, 2*QS ; can get 21 values from this table
+table:	 dat	 4*QS, 1*QS ; and can also use the initial value
+	 dat	23*QS, 3*QS ; of fnd
+qbomb:	 jmp	-200,GAP
+qinc:	 dat	GAP,-GAP
+
+tab:	 add.a	table,table
+slow:	 add.ab @tab,fnd
+fast:	 add.b	*tab,@slow
+which:	 sne.i	datz,@fnd
+	 add.ab #QD,fnd
+
+	 mov.i	qbomb,@fnd
+fnd:	 mov.i	-GAP/2,@QB
+	 add.ba fnd,fnd
+	 mov.i	qbomb,*fnd
+	 add.f	qinc,fnd
+	 mov.i	qbomb,@fnd
+	 djn.b	-3,#REP
+	 jmp	boot,}-300
+
+start:	 seq.i	QB+QS*13,QB+QS*13+QD
+	 jmp	fast,{fast
+
+	 seq.i	QB+QS*21,QB+QS*21+QD
+	 jmp	tab,{fast
+	 seq.i	QB+QS*22,QB+QS*22+QD
+	 djn.f	tab,tab
+	 seq.i	QB+QS*27,QB+QS*27+QD
+	 jmp	<fast,>tab
+	 seq.i	QB+QS*28,QB+QS*28+QD
+	 jmp	tab,>tab
+
+
+	 seq.i	QB+QS*4,QB+QS*4+QD
+	 jmp	>fast,}QB+QS*4+QD/2
+	 seq.i	QB+QS*5,QB+QS*5+QD
+	 jmp	slow,}QB+QS*5+QD/2
+	 seq.i	QB+QS*6,QB+QS*6+QD
+	 jmp	slow,{tab
+	 seq.i	QB+QS*7,QB+QS*7+QD
+	 jmp	slow,}tab
+
+	 seq.i	QB+QS*10,QB+QS*10+QD
+	 jmp	>fast,<tab
+	 seq.i	QB+QS*11,QB+QS*11+QD
+	 jmp	slow,<tab
+	 seq.i	QB+QS*12,QB+QS*12+QD
+	 djn.f	slow,tab
+
+	 seq.i	QB+QS*23,QB+QS*23+QD
+	 jmp	>fast,>tab
+	 seq.i	QB+QS*24,QB+QS*24+QD
+	 jmp	slow,>tab
+
+	 seq.i	QB+QS*17,QB+QS*17+QD
+	 jmp	slow,{fast
+
+	 seq.i	QB+QS*8,QB+QS*8+QD
+	 jmp	<fast,}QB+QS*8+QD/2
+	 seq.i	QB+QS*9,QB+QS*9+QD
+	 jmp	tab,}QB+QS*9+QD/2
+
+	 seq.i	QB+QS*15,QB+QS*15+QD
+	 jmp	tab,<tab
+	 seq.i	QB+QS*16,QB+QS*16+QD
+	 jmp	tab,{tab
+	 seq.i	QB+QS*20,QB+QS*20+QD
+	 djn.f	<fast,tab
+	 seq.i	QB+QS*0,QB+QS*0+QD
+	 jmp	which,}QS*13 ; qinc+GAP
+
+	 seq.i	QB+QS*1,QB+QS*1+QD
+	 jmp	fast,}QB+QS*1+QD/2
+	 seq.i	QB+QS*2,QB+QS*2+QD
+	 jmp	fast,{tab
+	 seq.i	QB+QS*3,QB+QS*3+QD
+	 jmp	fast,}tab
+
+	 seq.i	QB+QS*30,QB+QS*30+QD
+	 jmp	tab,}tab
+
+bdist	equ	3422
+
+boot
+i	for	(bomb-scan+1)
+	mov.i	(bomb+1-i),{bptr
+	rof
+bptr	spl.a	(bomb+bdist),#0
+	div.f	bptr,bptr
+
+______________________________________________________________________________
+Extra Extra - Alladin's Cave by Paul Kline, with analysis by Robert Macrae
+
+Robert Macrae foolishly wrote:
+
+> r.g.c is generally free from flaming. When you *really* hate
+> someone, you write a suite of specialists to destroy their
+> warriors. Look at Alladins Cave -- Kline must hate nearly everyone
+> :-)
+
+But I didn't realise what I was letting myself in for. In a typically
+devious counterstrike, Paul asked me to review Alladin's Cave for him
+thus 1) saving himself about 3000 words 2) keeping me out of mischief
+for a week and 3) providing some harmless amusement when I fail to
+understand the P-engine. Oh well...
+
+Perhaps the best start is Paul's own description:
+
+        Alladin's Cave began with "Curious Little Program" which
+        revealed significant numbers of one-shots on the 94 Hill and
+        beat them about 90%. I added to it a 3-line bomber to kill cmp-
+        scanners about 70%, and a one-shot/dclear and one-shot spl-dat
+        wiper to broaden the strength. Then reworked the brains for
+        more efficiency.
+
+Lets take a look at the components in turn.
+
+
+CLP
+---
+
+This is a highly specialised component. A slow vampire with a linear
+attack, 17 cells long cannot be expected to do well against any
+general-purpose warrior but against coreclears it is deadly. The key
+lies in the bombing loop, where an SNE checks the state of two fixed
+"Fence" cells every 4 cycles. The fences are above and below CLP so
+an enemy clear must overwrite one of them before it reaches CLP. When
+this happens, CLP copies itself away to a distant location so that it
+can proceed with its own leisurely vampiric coreclear.
+
+The pit contains a brainwash so I guess there were once many P-
+Spacers which brainwashed to a oneshot. This is no longer fashionable
+:-]
+
+Speed and length are not critical for this warrior since it already
+has virtually no chance against non-clears, but I think a couple of
+cells could be shaved here and there. How about a 3-cycle loop using
+> and { on the fang, instead of an ADD instruction? Can the pit becleaner?
+Gain would come from the faster boot, the smaller target
+offered to Quickscans and the shorter delay before the carpet built
+into a decoy.
+
+I'm not convinced that booting is worthwhile; a few QS kills are
+avoided -- but how many, given the boot takes 30 cycles to complete?
+Perhaps a few oneshot kills are avoided where the oneshot would
+otherwise scan the launch code after the fence. Both gains sound
+minor, but I suppose the cost is even smaller: 5 cells, and 25 cycles
+time wasted before the carpet starts to create the second decoy.
+
+What can go wrong against coreclears? Well, very occasionally CLP
+will copy itself onto its enemy. Some clears leave occasional gaps in
+their carpets (for example a Dclear which has a line like SPL #0,
+>gate) and this will give a few losses if gap falls on a fence, butboth of
+these problems are minor. CLP eats coreclears.
+
+Against oneshots, CLP needs some help against the scan. The first
+line of defence is the launch code; oneshots often use a small
+positive step (say 10-20) between scan locations so they are almost
+certain to hit the launch code, and once the clear starts CLP is
+safe. To protect against oneshots that make negative steps, the fangs
+build a carpet, which acts as a decoy following the second fence.
+This takes about 60 cycles to reach an effective length (about 15),
+so negative-step oneshots do not have long to detect CLP. Could it be
+worth adding a decoy-generator to reduce even this possibility?
+
+Building a oneshot which is resistant to CLP with is hard work --
+I've tried with Phantasm. I see two techniques. One is to combine
+bombs with your scans with something like
+
+        ADD #10, 2
+        MOV db, @1
+        JMZ -2, @X
+
+db      DAT 0, 4000
+
+Unfortunately, this scanner is slow to pick up Silks and the oneshot
+becomes significantly less effective against other warriors; tests of
+Phantasm using this approach dropped from about #6 to #12 on the hill
+as a result, though gaining over 100 points against AC.
+
+Another tack is to tune the scan step to avoid the decoys, but any
+such warrior would be useless against a version of CLP with slightly
+different constants, so this is not a general solution.
+
+
+Stone
+-----
+
+sStep     equ    4954
+
+Stone     mov    {1601    ,1-sStep    ; dat-bomb about 90% of core
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+
+
+MOV {X, Y is a conventional dwarf attack. SUB.x has the effect of
+stepping the Y by -sStep and X by +1, while permitting sStep to be
+modified by the { attack. Finally the JMP increments X so that the
+decrement trail grows at 0.66c. This permits the trail to over-run
+the stone without damage, but reduces the colouring speed because the
+{ no longer picks up a decremented cell.
+
+With minimalist pattern bombers the step is everything. 4954 has been
+chosen with exquisite care, because not only this but 4953, 4952, ...
+4948 all contribute to the bombing pattern -- the trail wraps around
+core every 12k cycles so the step is decremented 6 times. As the step
+changes, the pattern magically avoids hitting the stone -- this is
+where the exquisite care comes in :-) Most of core is bombed, but a
+few spaces lurk so warriors with an SPL may sometimes survive.
+
+Again this is a specialist, helpless against replicators and imps. It
+is acceptable against fast bombers and dwarves because it is smaller
+and the { trail is quite effective, but both torch and the rosebud
+stone beat it. Against scanners it is very strong because it colours
+core and, even disregarding the trail, it has a higher attack/size
+ratio. This component is another elegant specialist.
+
+
+Scanner/Bomber/D-Clear/Thing
+----------------------------
+
+So far the warrior will lose to any imp-stone and any replicator;
+with about 6 of each on the hill this is not an obvious recipe for
+success! This unusual component handles the imp-stones.
+
+Clear     spl    clSpl+1                ; Run clear and scan in parallel
+          add    #6667  ,clGate
+          jmz.f  -1     ,@clGate    ; 0.25c scan
+clSpl     spl    #4000  ,{clGate
+          mov    clBomb ,>clGate    ; 0.5c DClear
+          djn.f  -1     ,>clGate
+          jmp    -3                   ; protect Dclear during scan
+          dat    {5335,12
+clBomb    dat    {5335,12
+
+The parallel execution of the ADD/JMZ scan with the MOV/DJN DClear
+maximised its resistance to DAT bombs; only a hit to the MOV
+instruction is certain to destroy the attack.
+
+I am not sure that JMP -3 is ideal. The good side is that when the
+initial, 1-process Dclear hits a 1,1 cell (which Paul thoughtfully
+provides in the stone boot:) it will convert into a robuster normal
+Dclear. OTOH, a JMP -2 would avoid a loss if the SPL is bombed. With
+JMP -2, clBomb should be modified to DAT {5335,13 so the 1-process
+Dclear will still sweep the whole of core. Health Warning: this is
+untested. The bomb seems to be tuned to prevent MOV #2667, *0 imps
+from leaping the gate.
+
+How effective a component is this? Well, the "scanner" runs rather
+slowly at 0.25c, but it also yanks the "carpet" along every 2 cycles.
+The end result of the redundancy is that the code fights much like a
+2-cell, 0.25c bomber converting to a D-Clear when the JMZ finds
+something. Two-cell bombs are thrown 14 cells apart, which is
+efficient against scanners. It might be worth experimenting with
+other step sizes, but against bombers the scan is likely to be
+triggered early in any case, because a bomb will be found.
+ 
+To disable this component, DAT bombers have to hit the SPL or MOV
+instruction so it is effectively length 2 and it is very resistant to
+inc/dec attacks. The "Scanner"'s 0.25c attack against a length-4
+dwarf is pretty much equivalent to the Dclear's 1.0c linear attack
+(linear attacks can only hit the first cell of an enemy, so every
+opponent is effectively length 1). Comparing them to a dwarves attack
+at 0.33, for a relative efficiency of about
+        Scanner     0.25 / 2 : 0.33 / 4   =   1.5 : 1.0, or
+        Dclear      1.00 / 2 : 0.33 / 1   =   1.5 : 1.0.
+
+Consequently this component should win roughly 60% of the battles
+against dwarves. Against fast bombers the DClear does worse because
+their greater length does not make them any easier for the linear
+attack to hit, but the scanner remains competitive. It helps that the
+component is rather resistant to SPL 0 bombs, which often just
+trigger the Dclear.
+
+Once it has flattened the bomber, it needs to kill the imp and
+Dclears really shine at this, though if the imp has a lot of
+processes it may not reach the gate. This component does well against
+Rosebud, but less well against Gigolo (imps too heavy to reach gate)
+and Impfinity (linear attach weak against the widely-spaced dwarves).
+
+
+Oneshot TwoPass
+---------------
+
+... which leaves the replicators. The scan step may again provide
+some resistance to triggering by imps. I prefer to have the scanner
+after the wiper because this improves performance against scanners
+(if they hit the used scan, they might not carpet the sweep) and to
+separate the two (harder to hit) but this would make the launch
+harder.
+
+Anyway, improving a component against warriors which are still going
+to beat it may be counterproductive; it is better for the engine to
+move on to the next specialist quickly. Optimising against Silks, I
+think here it is better to start the carpet further back; as it
+stands you often hit the last few instructions of a Silk which would
+delay the stun by 500+ cycles. There is some compensation, in that
+the copies made in this time will carry the carpet with them, but I
+believe the net effect should be negative.
+
+However, when I checked this by deleting the trailing JMP and adding
+SUB.ab #7, Sweep after the scan, it lost about 10 points against a
+range of papers. Hmmm... where did I leave Phantasm..?
+ 
+Sweep     add    #2671   ,#2681           ;one-shot scan
+          jmz.f  Sweep   ,@Sweep          ;with spl-dat wipe
+          jmp    @6      ,<Sweep
+          dat    #-100   ,{swWipe+7-Sweep
+          dat    #-100   ,{swWipe+7-Sweep
+swWipe    spl    #5900   ,{swWipe+7-Sweep
+          mov    @2      ,>Sweep
+          mov    @1      ,>Sweep
+          djn.b  -2      ,{swWipe
+          jmp    swWipe  ,swWipe
+
+This component beats aggressive papers like Pulp and Sad about half
+the time, for scores around 175 -- it is hard to do better than this
+without redundant copies. Against Diehard it is poor as it cannot
+handle the imps, but at least it draws; if it mainly lost it would
+expose the other components which do worse! Against Ultraviolet, it
+has no problem at all though I am sure Ken Espiritu is working on
+this.
+
+
+P-Logic
+-------
+
+I guess I can't avoid this, but let me warn you; P-Code is not my
+forte.
+
+think ldp.a  #0,in              ; get input value
+load  ldp.a  #PSTATE,state      ; load old state
+      mod.a  #STATES,state      ; brainwash protection
+      add.ba *in,state          ; select correct state table
+store stp.a  *state,load        ; store new state
+state jmp    @0        ,w1
+
+This is a fast, flexible engine that uses two DAT tables to control
+performance. All that is hard-coded here is that the state
+transitions depend on current state and results in an additive way.
+The first table,
+
+      dat    0,init_table-state
+in    dat    0,loss_table-state
+      dat    0,win_table-state
+      dat    0,tie_table-state
+
+tells us that the second table is organised as 4 separate sub-tables
+covering the 4 possible results (-1/init, 0/loss, 1/win, 2/tie). In
+Fact the win and tie tables are identical, so the same table is used
+twice to save space.
+
+tie_table
+win_table
+
+      spl    #wx0-win_table,w0   ; Brainwash
+ww1   spl    #ww1-win_table,w1   ; Sweep
+wx1   spl    #ww1-win_table,w1
+      spl    #ww1-win_table,w1
+ww0   spl    #ww0-win_table,w0   ; Clear
+wx0   spl    #ww0-win_table,w0
+      spl    #ww0-win_table,w0
+ww2   spl    #ww2-win_table,w2   ; Stone
+      spl    #ww2-win_table,w2
+      spl    #ww2-win_table,w2
+ww3   spl    #ww3-win_table,w3   ; Dodger
+      spl    #ww3-win_table,w3
+      spl    #ww3-win_table,w3
+
+loss_table
+      spl    #wx0-win_table ,w0  ; Brainwash
+      spl    #1-loss_table  ,w1  ; Sweep
+      spl    #1-loss_table  ,w1
+      spl    #2-loss_table  ,w0
+      spl    #1-loss_table  ,w0  ; Clear
+      spl    #1-loss_table  ,w0
+      spl    #3-loss_table  ,w2
+      spl    #1-loss_table  ,w2  ; Stone
+      spl    #1-loss_table  ,w2
+      spl    #wx1-win_table ,w1
+      spl    #1-loss_table  ,w3  ; Dodger (not after first trial)
+
+init_table
+      spl    #1-loss_table  ,w3
+      spl    #wx1-win_table ,w1
+
+This is simpler than it at first appears, honest. The .b fields
+contain the address of the warrior to be executed. The .a fields
+contain the state which is to be stored.
+
+The effect of the win/tie sub-table is that any warrior which wins or
+ties a battle is used again, and the state is reset to the first of
+the 3 states which use that warrior. The effect of the #1-loss_table
+entries in the loss table is that if a warrior loses the state is
+increased by 1, so after 3 losses in a row the next warrior is
+selected.
+
+To make life more interesting, the #2-, #3- and #wx1 entries mean
+that the first time a new warrior is used, it already has two strikes
+against it for the stone, or 1 for the clear and dclear, thus
+more quickly switching out a poorly selected warrior. Finally, CLP
+is never tried as a result of another component losing -- if it ever
+takes 3 strikes, it is out for good. It is much simpler to see all of
+this in cdb.
+
+Phew.
+ 
+Is this a good system? Well, it is very reluctant to change warriors.
+Partly this represents tuning against Q^2s, which will score a fair
+number of wins even when the right warrior is selected. CLP is only
+tried once because 3 running losses are implausible against its
+intended victims, and it gives away too many points against other
+warriors to try again. This will make switch-on-loss P-spacers with
+Oneshot/Other almost immune... hmmm.
+
+The approach of counting draws as wins may suit a set of real
+specialists such as this, because draws will be relatively rare, but
+in general I think it would be better not to change the state on
+draws. That way a warrior with a mediocre mix of draws and losses
+would be replaced fairly quickly. The current requirement of "three
+losses in a row" may be much rarer than "three losses before the next
+win". However, there are an infinity of other variations available.
+There is no rule, for example, which says that all components must be
+treated alike. The rule could be two losses for some warriors, 3 or
+more for the others...
+
+Of course the current scheme has been selected partly because it is
+very efficient in table space and p-logic, but I think the "Ignore 
+Draws" rule could be implemented (at least approximately) with a single
+SLT instruction. This is untested, as is the assumption that it would
+be beneficial.
+ 
+Warrior sequence will also matter somewhat, because when fighting
+other P-Spacers both warriors will cycle frequently; as soon as one
+starts winning, the other will change warrior and changing to the
+*right* one may give a couple of wins before the enemy adapts in
+turn. Currently the sequence is Stone-Clear-DClear-Stone.
+
+Examining this engine has taught me *why* the hill can be so
+sensitive to start positions. With a criterion as specific as "Three
+losses in a row", we are relying on rather rare events to determine
+which warrior is picked. The difference between DLLL and LDLL will
+lead to a completely different warrior being fielded for in many or
+most subsequent rounds, so random variation plays a large role.
+
+The choice of engine is critical to the success of a warrior like
+this, where each component is so specialised, and I the engine could
+only be improved by extensive testing on the hill -- more tuning.
+
+
+Testing
+-------
+
+I hardwired the P-Engine to select each component in turn and
+submitted them to the hill. This table shows the results, with P-
+spacers at the top. "Best" is the best component score, "AC" is the
+score of the complete P-Spacer, and "Effic" is the ratio of the two.
+
+                Test Scores for Components and Whole Warrior
+
+                CLP     DClr    Stone  2Pass       Best    AC      Effic
+Alladins Cave   175     99      131     48         175     116     66%
+Electric Head   270     113     87      108        270     273     101%
+Nomolos         18      110     100     84         110     145     132%
+The Next Baron  13      161     136     82         161     129     80%
+Fire and Ice    10      64      22      29         64      88      138%
+                                                                
+The Boys are Bk 48      96      232     120        232     201     87%
+He Scans Alone  12      115     192     167        192     168     88%
+Pulp v0.5       0       13      52      190        190     165     87%
+Silver Taln 1.2 24      90      208     71         208     162     78%
+Stasis          38      119     176     159        176     161     91%
+Return of Paper 0       22      24      180        180     159     88%
+Ultraviolet-B   16      31      24      175        175     159     91%
+obvious         6       39      28      165        165     156     95%
+Vain            2       157     19      158        158     155     98%
+Digitalis 3     84      171     33      152        171     147     86%
+Newt            4       185     22      165        185     144     78%
+Metal IIa       8       152     15      136        152     140     92%
+PAN-TAU-RA      9       171     37      128        171     136     80%
+Vigor           0       40      57      150        150     131     87%
+Tornado 4       22      143     158     147        158     124     78%
+Nine Seven Six  23      152     37      158        158     115     73%
+Fixed           1       70      63      137        137     107     78%
+traumatic smurf 34      109     133     73         133     99      74%
+Benchmark [94]  5       112     20      95         112     96      86%
+Vengeance       3       122     21      129        129     95      74%
+
+
+There are a few surprises here. Firstly, the 2-pass is by far the
+most effective component. It is best in 9 cases, and close-second in
+another 9! It is so effective that the Dclear is reduced to a very
+minor role -- there are few warriors that the stone and 2-pass cannot
+handle between them. CLP also plays a very minor role, terrorising
+Alladins Cave (!) and Electric Head but otherwise useless. I suspect
+it has hunted its original prey into extinction.
+
+Ignoring the P-Spacers, the average efficiency is 84%. This suggests
+that the engine is doing a pretty good job of selecting the right
+component against the non-P warriors; I would be interested to know
+how other P-spacers compare on this measure.
+
+Against the P-spacers, the engine does pretty well except against AC
+(it is psyched out of CLP, and cannot re-use it) and Next Baron which
+has been tuned against it. Fire and Ice has been tuned in a different
+way, beating the individual components rather than outsmarting the
+engine.
+
+
+Conclusion
+----------
+
+This is a highly-tuned P-Spacer. It has a team of strong, specialised
+components and they have been selected to beat most of the warriors
+on the hill when it was created. The result of this tuning has been a
+dominant position at the top of the table. By the same token, the
+tuning makes it vulnerable to new warriors; for example, none of the
+next generation of P-spacers will brainwash into oneshots making CLP
+a dead weight, at least until I perfect Phantasm :)
+
+With such specialised warriors on the hill, we can expect continued
+rapid turnover because specialists age fast. Penultimate word goes to
+Paul:
+
+        There are several programs that beat AC on the Hill, fast
+        bombers and qscanning silks do very well against him. But those
+        silks feed the scanners that AC eats so it balances out. I
+        think I serendipitously anticipated the return of several cmp-
+        scanners which accounts for part of the success.
+
+I don't want to write another qscanning silk just yet, so... look out
+hill, here comes Thermite III :-]
+
+
+-------------------------------------------------------------------------
+
+;redcode-94
+;name Alladin's Cave
+;author P.Kline
+;assert CORESIZE == 8000
+;strategy pswitch stone, CLP, one-shot dclear, and one-shot spl/dat wiper
+
+slStone   mov    <btStone ,{btStone
+          mov    <btStone ,{btStone
+          mov    <btStone ,{btStone
+btStone   jmp    -300     ,4
+sStep     equ    4954
+Stone     mov    {1601    ,1-sStep         ; dat-bomb about 90% of core
+          sub.x  #sStep   ,-1
+          jmp    -2       ,}-2
+      for 4
+          dat 0,0
+      rof
+clBoot    equ    (2800)
+slClear   mov    clGate     ,clGate+clBoot ;clear and sweep share
+boot
+code
+          mov    btClear    ,btSweep
+slSweep   mov    <btSweep   ,{btSweep
+          mov    <btSweep   ,{btSweep
+          mov    <btSweep   ,{btSweep
+          mov    <btSweep   ,{btSweep
+          djn    -3         ,#3
+btSweep   jmp    Sweep+10+5600,Sweep+10
+clGate    dat    0,clBomb
+btClear   jmp    Clear+10-btSweep+clBoot ,Clear+10-btSweep
+
+Clear     spl    clSpl+1
+          add    #6667  ,clGate           ;one-shot scan
+          jmz.f  -1     ,@clGate          ;with dclear
+
+clSpl     spl    #4000  ,{clGate
+          mov    clBomb ,>clGate
+          djn.f  -1     ,>clGate
+          jmp    -3
+          dat    {5335,12
+clBomb    dat    {5335,12
+          dat    0,0
+
+Sweep     add    #2671   ,#2681           ;one-shot scan
+          jmz.f  Sweep   ,@Sweep          ;with spl-dat wipe
+          jmp    @6      ,<Sweep
+          dat    #-100   ,{swWipe+7-Sweep
+          dat    #-100   ,{swWipe+7-Sweep
+swWipe    spl    #5900   ,{swWipe+7-Sweep
+          mov    @2      ,>Sweep
+          mov    @1      ,>Sweep
+          djn.b  -2      ,{swWipe
+          jmp    swWipe  ,swWipe
+
+PSTATE EQU 110
+STATES EQU (loss_table-win_table)
+      dat    0,init_table-state
+in    dat    0,loss_table-state
+      dat    0,win_table-state
+      dat    0,tie_table-state
+
+think ldp.a  #0,in              ; get input value
+load  ldp.a  #PSTATE,state      ; load old state
+      mod.a  #STATES,state      ; brainwash protection
+      add.ba *in,state          ; select correct state table
+store stp.a  *state,load        ; store new state
+      mov    0,-1               ; eliminate accidental stp's
+
+                                 ; p-table managing four options plus bw
+                                 ; note that any number of brainwash vals
+                                 ; could be put in between valid values
+                                 ;
+                                 ; loss-table is designed to speed up
+                                 ; search for best routine by skipping
+                                 ; one or more trials of each program
+w0 EQU slClear
+w1 EQU slSweep
+w2 EQU slStone
+w3 EQU slDodger
+
+state jmp    @0        ,w1
+
+tie_table
+win_table
+      spl    #wx0-win_table,w0   ; Brainwash  (zero should not happen!)
+ww1   spl    #ww1-win_table,w1   ; Sweep
+wx1   spl    #ww1-win_table,w1
+      spl    #ww1-win_table,w1
+ww0   spl    #ww0-win_table,w0   ; Clear
+wx0   spl    #ww0-win_table,w0
+      spl    #ww0-win_table,w0
+ww2   spl    #ww2-win_table,w2   ; Stone
+      spl    #ww2-win_table,w2
+      spl    #ww2-win_table,w2
+ww3   spl    #ww3-win_table,w3   ; Dodger
+      spl    #ww3-win_table,w3
+      spl    #ww3-win_table,w3
+loss_table
+      spl    #wx0-win_table ,w0  ; Brainwash
+      spl    #1-loss_table  ,w1  ; Sweep
+      spl    #1-loss_table  ,w1
+      spl    #2-loss_table  ,w0
+      spl    #1-loss_table  ,w0  ; Clear
+      spl    #1-loss_table  ,w0
+      spl    #3-loss_table  ,w2
+      spl    #1-loss_table  ,w2  ; Stone
+      spl    #1-loss_table  ,w2
+      spl    #wx1-win_table ,w1
+      spl    #1-loss_table  ,w3  ; Dodger (never selected after first trial)
+init_table
+      spl    #1-loss_table  ,w3
+      spl    #wx1-win_table ,w1
+
+slDodger  mov    <btDodger,{btDodger
+          mov    <btDodger,{btDodger
+          mov    <btDodger,{btDodger
+          djn    -3,#6
+btDodger  jmp    pescape+300,pescape+1
+                                    ; code from "Curious Little Program"
+                                    ; after "Cowboy"
+pescape   equ    (pb+1)
+plen      equ    (pescape-p1)
+pstep     equ    (5093)
+p1        mov    pb       ,@pfence  ; build fences
+          mov    pb       ,*pfence
+ploop     add    pincr    ,psnare   ; snare opponent
+          mov    psnare   ,@psnare
+pfence    sne    pb-56    ,pb+26    ; monitor fences
+          djn.f  ploop    ,>p1-pstep
+pmove     add    preset   ,psnare   ; adjust snare for new base
+          mov    pb       ,pescape  ; set copy pointers
+pcopy     mov    >pescape ,}pescape ; make copy
+          jmn.b  -1       ,pescape  ;
+preset    jmp    p1+pstep ,-p1-pstep; jump to new location
+psnare    jmp    ptrap-2000,+2000
+ptrap     spl    #0       ,0        ; brainwash pit
+          mov    -1       ,<-1      ; (not used anymore)
+          stp.ab #0       ,#1
+          jmp    -2       ,0
+pincr     dat    pstep    ,pstep
+pb        dat    0        ,0
+          end    think
+
+

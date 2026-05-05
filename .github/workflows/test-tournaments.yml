@@ -1,11 +1,21 @@
-name: Test Tournaments
+name: Tournament Tests
 
 on:
-  workflow_dispatch:
   push:
     branches: [ master ]
+    paths:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
   pull_request:
     branches: [ master ]
+    paths:
+      - '.github/workflows/test-tournaments.yml'
+      - 'tests/tournaments/**'
+      - 'warriors/tournaments/**'
+  workflow_dispatch:
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   build:
@@ -14,8 +24,8 @@ jobs:
     with:
       upload-artifact: true
 
-  test:
-    name: Tournament Tests
+  test-tournaments:
+    name: Tournament Test
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +35,33 @@ jobs:
         with:
           name: pmars-Server
           path: bin/
-      - name: Run ICWT tests
+      - name: Run Tournament Assembly Tests
         run: |
           chmod +x bin/pmars
-          find warriors/tournaments/icwt* -name "*.red" -exec ./bin/pmars -A {} + > /dev/null
+          echo "Checking all warriors in warriors/tournaments/..."
+          if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -A {} + > /dev/null; then
+            echo "All warriors assembled successfully."
+          else
+            echo "Error: Some warriors failed to assemble!"
+            find warriors/tournaments/ -name "*.red" | while read f; do
+              ./bin/pmars -A "$f" > /dev/null || echo "FAILED: $f"
+            done
+            exit 1
+          fi
+      - name: Run Specialized Tournament Tests
+        run: |
+          echo "Running Makefile-based tests in tests/tournaments/..."
+          failed=0
+          for d in tests/tournaments/*/; do
+            if [ -d "$d" ] && [ -f "${d}Makefile" ]; then
+              echo "::group::Testing $d"
+              if ! make -C "$d" test; then
+                echo "FAILED: $d"
+                failed=1
+              fi
+              echo "::endgroup::"
+            fi
+          done
+          if [ $failed -ne 0 ]; then
+            exit 1
+          fi
