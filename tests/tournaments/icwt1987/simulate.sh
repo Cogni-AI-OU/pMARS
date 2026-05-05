@@ -6,8 +6,27 @@
 # 2. Round-robin with 4 warriors, top 2 advance.
 # 3. Final match between top 2.
 
-PMARS="/home/runner/work/pMARS/pMARS/pmars"
-WARRIORS_DIR="/home/runner/work/pMARS/pMARS/warriors/tournaments/icwt1987"
+# Determine paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/../../../" && pwd)"
+PMARS="$ROOT_DIR/pmars"
+WARRIORS_DIR="$ROOT_DIR/warriors/tournaments/icwt1987"
+
+# Check if pmars exists, try src/pmars as fallback
+if [ ! -f "$PMARS" ]; then
+    if [ -f "$ROOT_DIR/src/pmars" ]; then
+        PMARS="$ROOT_DIR/src/pmars"
+    else
+        # Try finding it in PATH
+        if command -v pmars >/dev/null 2>&1; then
+            PMARS="pmars"
+        else
+            echo "Error: pmars not found at $PMARS or in PATH."
+            exit 1
+        fi
+    fi
+fi
+
 ALL_WARRIORS=("dracula.red" "ferret.red" "jr-26.red" "kiss.red" "parasite-6.red" "piper.red" "plague.red" "w2.red")
 
 echo "Simulating ICWT 1987 Tournament..."
@@ -64,12 +83,26 @@ third_place=$(echo "$stage2_results" | sed -n '3p' | awk '{print $2}')
 echo ""
 echo "--- Stage 3: Final Match ---"
 echo "Finalists: ${top2[*]}"
-final_output=$($PMARS -8 -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/${top2[0]}" "$WARRIORS_DIR/${top2[1]}" 2>/dev/null)
+if [ ${#top2[@]} -lt 2 ]; then
+    echo "Error: Not enough finalists to run Stage 3."
+    exit 1
+fi
+final_output=$($PMARS -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/${top2[0]}" "$WARRIORS_DIR/${top2[1]}" 2>/dev/null)
 final_results_line=$(echo "$final_output" | grep "Results:")
 echo "Results: $final_results_line"
 
+if [ -z "$final_results_line" ]; then
+    echo "Error: Final match failed to produce results."
+    exit 1
+fi
+
 win1=$(echo "$final_results_line" | awk '{print $2}')
 win2=$(echo "$final_results_line" | awk '{print $3}')
+
+if [[ ! "$win1" =~ ^[0-9]+$ ]] || [[ ! "$win2" =~ ^[0-9]+$ ]]; then
+    echo "Error: Invalid win counts: win1='$win1', win2='$win2'"
+    exit 1
+fi
 
 if [ "$win1" -ge "$win2" ]; then
     winner=${top2[0]}
