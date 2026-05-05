@@ -63,12 +63,13 @@ on:
 
 jobs:
   cogni-ai-agent:
-    name: Run Cogni AI agent
+    name: Cogni AI Agent
     runs-on: ubuntu-latest
     if: |
       github.event_name != 'issues' ||
       !github.event.issue.pull_request
     permissions:
+      actions: read
       contents: write
       id-token: write
       issues: write
@@ -140,3 +141,20 @@ jobs:
               github.event.pull_request.body ||
               inputs.prompt
             }}
+
+  summary:
+    name: Summary
+    needs: cogni-ai-agent
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      id-token: write
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Generate Summary
+        uses: Cogni-AI-OU/cogni-ai-agent-action/ai-inference/summary@main
+        with:
+          agent_job_id: cogni-ai-agent
+          github_token: ${{ secrets.GITHUB_TOKEN }}
