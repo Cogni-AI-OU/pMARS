@@ -33,7 +33,7 @@ evolves over several generations of ring creation.  It's really quite interestin
 I have a feeling that something along the lines of He Scans Alone is the best bet
 for victory, but don't let that sway your development. :)
 
-For the code to He Scans Alone see http://www.KOTH.org/planar/index.html
+For the code to He Scans Alone see http://www.KOTH.org/planar/README.html
 
 I'll run 200+ rounds with each person's entry to get their score for this round.
 

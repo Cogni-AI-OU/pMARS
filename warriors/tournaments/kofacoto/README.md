@@ -18,7 +18,7 @@
 
 [![kofacoto!](http://www.KOTH.org/kofacoto/kofacoto.jpg)](http://www.KOTH.org/kofacoto)
 
-[KOFACOTO is over!](results7.html)
+[KOFACOTO is over!](results7.md)
 
 1st: Robert Macrae  
 2nd: Michal Janeczek  
@@ -36,56 +36,56 @@ Thanks to all who participated. Robert Macrae gave me some fairly in-depth comme
 
 ---
 
-[Here's the total scores for each player, from the first 4 preliminary rounds.](totals.html)
+[Here's the total scores for each player, from the first 4 preliminary rounds.](totals.md)
 
 ---
 
-[Updated Information](info.html) - Q&A from the [Corewars listserv](http://www.KOTH.org/newsgroup.html).
+[Updated Information](info.md) - Q&A from the [Corewars listserv](http://www.KOTH.org/newsgroup.html).
 
 ---
 
-[Rules Round 1](rules1.html) - Due Sunday, Oct 8th midnight, CST  
-[Results Round 1](results1.html)  
+[Rules Round 1](rules1.md) - Due Sunday, Oct 8th midnight, CST  
+[Results Round 1](results1.md)  
 [Warriors Round 1](warriors/round1)  
-[Comments Round 1](comments1.html)
+[Comments Round 1](comments1.md)
 
 ---
 
-[Rules Round 2](rules2.html) - Due Sunday, Oct 22nd midnight, CST  
-[Results Round 2](results2.html)  
+[Rules Round 2](rules2.md) - Due Sunday, Oct 22nd midnight, CST  
+[Results Round 2](results2.md)  
 [Warriors Round 2](warriors/round2)
 
 ---
 
-[Rules Round 3](rules3.html) - Due Sunday, Oct 29th midnight, CST  
-[Results Round 3](results3.html)  
+[Rules Round 3](rules3.md) - Due Sunday, Oct 29th midnight, CST  
+[Results Round 3](results3.md)  
 [Warriors Round 3](warriors/round3)  
-[Followup... p^3 information](followup3.html)
+[Followup... p^3 information](followup3.md)
 
 ---
 
-[Rules Round 4](rules4.html) - Due Sunday, Nov 5th midnight, CST  
-[Results Round 4](results4.html)  
+[Rules Round 4](rules4.md) - Due Sunday, Nov 5th midnight, CST  
+[Results Round 4](results4.md)  
 [Warriors Round 4](warriors/round4)
 
 ---
 
-[Rules Round 5 (Quarterfinals)](rules5.html) - Due Sunday, Nov 12th midnight, CST  
-[Results Round 5](results5.html)  
+[Rules Round 5 (Quarterfinals)](rules5.md) - Due Sunday, Nov 12th midnight, CST  
+[Results Round 5](results5.md)  
 [Warriors Round 5](warriors/round5)  
-[Comments Round 5](http://www.koth.org/lcgi-bin/v.pl?f=kofacoto/comments5.html)
+[Comments Round 5](comments5.md)
 
 ---
 
-[Rules Round 6 (Semifinals)](rules6.html) - Due Sunday, Nov 19th midnight, CST  
-[Results Round 6](results6.html)  
+[Rules Round 6 (Semifinals)](rules6.md) - Due Sunday, Nov 19th midnight, CST  
+[Results Round 6](results6.md)  
 [Warriors Round 6](warriors/round6)  
-[Comments Round 6](http://www.koth.org/lcgi-bin/v.pl?f=kofacoto/comments6.html)
+[Comments Round 6](comments6.md)
 
 ---
 
-[Round 7 (Finals)](results7.html)  
+[Round 7 (Finals)](results7.md)  
 [Warriors Round 7](warriors/round7)  
-[Comments Round 7](http://www.koth.org/lcgi-bin/v.pl?f=kofacoto/comments7.html)
+[Comments Round 7](comments7.md)
 
 ---

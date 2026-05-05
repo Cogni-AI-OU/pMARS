@@ -1,6 +1,6 @@
 Corewars - King of the Hill    
 
-[![](../pics/button-index-off.jpg)](../index.html) [![](../pics/button-koth-off.jpg)](../koth.html) [![](../pics/button-info-off.jpg)](../info.html) [![](../pics/button-links-off.jpg)](../links.html) [![](../pics/button-newsgroup-off.jpg)](../newsgroup.html) [![](../pics/button-feedback-off.jpg)](../feedback.html)
+[![](../pics/button-index-off.jpg)](../README.md) [![](../pics/button-koth-off.jpg)](../koth.md) [![](../pics/button-info-off.jpg)](../info.md) [![](../pics/button-links-off.jpg)](../links.md) [![](../pics/button-newsgroup-off.jpg)](../newsgroup.md) [![](../pics/button-feedback-off.jpg)](../feedback.md)
 
 [![kofacoto!](http://www.KOTH.org/kofacoto/kofacoto.jpg)](http://www.KOTH.org/kofacoto)
 

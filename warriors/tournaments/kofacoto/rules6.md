@@ -20,7 +20,7 @@
 
 **Round 6, Semi-finals Rules**
 
-According to http://www.koth.org/kofacoto/totals.html
+According to http://www.koth.org/kofacoto/totals.md
 the 4 survivors will face off as follows:
 
 Battles will take place under standard '94x rules.
