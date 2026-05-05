@@ -1,0 +1,357 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 52                                                     9 December, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+There were a lot of significant losses to the '94 hill since last issue. The
+hill is now much younger.
+
+A reminder: Pizza's '94x hill now has the following specs:
+         coresize: 800
+   max. processes: 800
+         duration: after 8000 cycles, a tie is declared.
+max. entry length: 20
+ minimum distance: 20
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+--Anton Marsden
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  36.5/ 24.2/ 39.3           unrequited love                kafka 148.8  244
+ 2  31.2/ 16.3/ 52.5      Return Of The Jedimp             John K W 146.2  146
+ 3  32.3/ 19.4/ 48.2                 Trident^2             John K W 145.3   76
+ 4  42.4/ 40.0/ 17.6                  Oblivion           Ian Sutton 144.9   11
+ 5  36.1/ 28.4/ 35.5                    Gigolo   Core Warrior staff 143.9  200
+ 6  41.3/ 40.0/ 18.7               The Machine        Anton Marsden 142.6   52
+ 7  41.5/ 41.8/ 16.7                    Blur 2        Anton Marsden 141.2  323
+ 8  40.1/ 40.1/ 19.8          Silver Talon 1.2                Edgar 140.2   33
+ 9  36.4/ 32.6/ 31.0            Nine Seven Six           M R Bremer 140.2   10
+10  43.1/ 46.1/ 10.9                  Memories               Beppe  140.1   60
+11  43.6/ 47.3/  9.1                  Tim Tack              P.Kline 140.0    2
+12  40.5/ 42.5/ 17.0                     Probe        Anton Marsden 138.5  324
+13  38.2/ 40.9/ 20.9       Damage Incorporated        Anton Marsden 135.5  187
+14  35.6/ 37.5/ 26.9              Tiberius 3.1                Franz 133.8   63
+15  33.8/ 33.8/ 32.4            Fast Fast Fast                Franz 133.7    3
+16  34.8/ 36.1/ 29.0                   Test ft          Ian Oversby 133.5    7
+17  35.8/ 39.0/ 25.2                CC Paper 2                Franz 132.6   35
+18  27.8/ 23.3/ 48.9               Impish v0.2          Ian Oversby 132.3  185
+19  33.8/ 35.6/ 30.6                   No Vice          Ian Oversby 132.0   13
+20  37.2/ 42.8/ 20.1                 vamp 0.2b       bjoern guenzel 131.5   23
+21  38.4/ 45.5/ 16.2                     AK-47                Franz 131.2   38
+22  35.5/ 41.3/ 23.2            Scanitator 2.4    Christian Schmidt 129.6   17
+23  32.3/ 35.6/ 32.1               Falcon v0.3          Ian Oversby 129.0  229
+24  36.7/ 45.1/ 18.2             Frontwards v2       Steven Morrell 128.4    6
+25  31.8/ 38.0/ 30.2                    scTest              P.Kline 125.6    1
+
+Weekly age: 22 this week ( 11 last issue, 5 the issue before )
+New warriors: 9  Turnover/age rate 41%
+Average age: 91 ( 145 last issue, 146 the issue before )
+Average score: 137 ( 137 last issue, 143 the issue before )
+The top 25 warriors are represented by 14 independent authors: Franz, Marsden
+and Oversby with 4; JKW and Kline with 2; everyone else with one.
+______________________________________________________________________________
+94 - What's New ( or this week:  the uplook )
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+11  36.9/ 37.1/ 26.0            Scanitator 2.4    Christian Schmidt 136.6    1
+22  32.8/ 36.7/ 30.4                   No Vice          Ian Oversby 128.9    1
+ 2  44.7/ 38.7/ 16.7                  Oblivion           Ian Sutton 150.6    1
+ 7  36.2/ 31.1/ 32.7            Nine Seven Six           M R Bremer 141.3    1
+20  32.3/ 36.4/ 31.2                   Test ft          Ian Oversby 128.3    1
+14  38.5/ 43.6/ 17.9             Frontwards v2       Steven Morrell 133.4    1
+16  34.3/ 33.9/ 31.7            Fast Fast Fast                Franz 134.8    1
+ 9  43.9/ 47.4/  8.7                  Tim Tack              P.Kline 140.5    1
+25  31.8/ 38.0/ 30.2                    scTest              P.Kline 125.6    1
+
+Ian Sutton makes it onto the hill in style - 2nd place for his new warrior
+Oblivion. Kline is back in business with Tim Tack.
+______________________________________________________________________________
+94 - What's No More ( or this week:  the outlook )
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  36.2/ 45.8/ 18.0                 Goldfinch              P.Kline 126.6  244
+26  36.6/ 46.0/ 17.4                Dr. Gate Q                Franz 127.2    9
+26  38.0/ 48.3/ 13.6            Flamberge 13.4        Matt Lewinski 127.7    6
+26  36.9/ 47.5/ 15.6          Goothmonger v1.3           Ian Sutton 126.3    2
+26  33.7/ 54.1/ 12.2                  Hologram       Philip Kendall 113.2    2
+26  36.4/ 50.2/ 13.4            Golden Gate v4                Franz 122.6    5
+26  16.8/ 17.0/ 66.2                  U-lat II           Zul Nadzri 116.7    2
+26  37.2/ 46.5/ 16.4          Goothmonger v1.4           Ian Sutton 127.8    4
+26  39.0/ 51.2/  9.8                  Q^2 Miro         Anders Ivner 126.8  366
+26  36.0/ 49.2/ 14.8            Scankiller 0.1    Christian Schmidt 122.9    2
+26  28.8/ 31.0/ 40.1            delay 0.02b 50       bjoern guenzel 126.6   22
+26  27.6/ 27.4/ 45.0                   Rosebud                Beppe 127.7  993
+26  38.1/ 47.8/ 14.1      Mostly Harmless v1.1           Justin Kao 128.5   18
+26  35.3/ 44.0/ 20.7          Instant Wolf 3.4                Edgar 126.7  205
+
+Rosebud finally kicks the bucket, much to Beppe's dismay. Other significant
+losses were Goldfinch, Q^2 Miro and Instant Wolf.
+______________________________________________________________________________
+94 - What's Old ( or this week:  the grey look )
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+12  40.5/ 42.5/ 17.0                     Probe        Anton Marsden 138.5  324
+ 7  41.5/ 41.8/ 16.7                    Blur 2        Anton Marsden 141.2  323
+ 1  36.5/ 24.2/ 39.3           unrequited love                kafka 148.8  244
+23  32.3/ 35.6/ 32.1               Falcon v0.3          Ian Oversby 129.0  229
+ 5  36.1/ 28.4/ 35.5                    Gigolo   Core Warrior staff 143.9  200
+
+A lot of old warriors disappeared this week. Gigolo is a new entry.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+Rosebud stops getting older and now there are no active warriors in the HOF.
+Probe and Blur 2 will be the next warriors to enter the HOF, assuming they
+survive long enough.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  50.9/ 33.9/ 15.2          Silver Talon 1.1                Edgar 167.9   73
+ 2  50.8/ 40.0/  9.3          Goothmonger v1.2           Ian Sutton 161.6   17
+ 3  47.2/ 38.2/ 14.5                 Pentagram            J.A.Denny 156.3    1
+ 4  48.1/ 42.7/  9.2            Scankiller 0.1    Christian Schmidt 153.5    4
+ 5  46.5/ 40.9/ 12.6            Flamberge 13.4        Matt Lewinski 152.2   42
+ 6  41.8/ 33.8/ 24.3            Scanitator 2.4    Christian Schmidt 149.8   16
+ 7  47.1/ 44.6/  8.3   The Stainless Steel Rat    Christian Schmidt 149.5   15
+ 8  43.8/ 39.7/ 16.5      Microsoft Office '96           Justin Kao 147.9   69
+ 9  44.2/ 44.2/ 11.6      Mostly Harmless v1.1           Justin Kao 144.2   23
+10  39.6/ 36.4/ 24.0           Versatility 1.7   Ross Morgan-Linial 142.8   20
+11  42.6/ 43.1/ 14.3            Cruise Missile       Philip Kendall 142.2   38
+12  40.9/ 42.8/ 16.3                  HAL 9000           Justin Kao 139.0   85
+13  29.4/ 20.0/ 50.6                DemonSpawn            J.A.Denny 138.9    2
+14  39.9/ 41.4/ 18.7       Vivid Radiation 2.0        Matt Lewinski 138.4   41
+15  42.4/ 46.8/ 10.8                  Hologram       Philip Kendall 138.1   13
+16  40.6/ 43.2/ 16.2         Bash the Rat V1.4           Ian Sutton 138.0   34
+17  35.6/ 34.3/ 30.1                Dust 0.7.5           Justin Kao 137.0   19
+18  35.0/ 33.9/ 31.0            Hammermill 4.0        Matt Lewinski 136.1   79
+19  39.3/ 43.0/ 17.7                       MI6       Philip Kendall 135.7   66
+20  38.0/ 40.9/ 21.0          Sandstorm Q/0.6c       Ilmari Karonen 135.1   64
+21  34.7/ 35.8/ 29.5                Apocalypse        Matt Lewinski 133.7   50
+22  32.5/ 34.3/ 33.2              Escargot 0.5           Justin Kao 130.8   39
+23  33.6/ 38.8/ 27.7                Fusion 0.5           Justin Kao 128.3   11
+24  28.6/ 30.7/ 40.8                   Paper V         D. D. Randel 126.4    3
+25  33.5/ 43.1/ 23.4        Daemon of Zteentch    Christian Schmidt 124.0   97
+
+Top 25 Averages:
+    40.3/ 38.7/ 21.1                                                141.9   36
+______________________________________________________________________________
+The Hint
+Dclears by Paul Kline
+
+Last issue Myer revealed the bomber form he is using in his Nine Seven Six
+fighter, which is quite interesting.  In order to make other use of
+the SPL's b-operand he is using the DJN line for the bombing increment.
+This alternative can be used in a scanner or other bombers as well.
+
+Actually any line in the source can be used as the increment, and
+leads to the possibility of changing the increment on the fly.
+Planar's Impfinity uses the ADD line itself:
+
+        add.f   #istep+1, ptr&i
+
+Myer created a 'perfect dclear gate' something like this:
+
+        spl     #0    ,>gate
+        mov     wipe  ,>gate
+        djn.f   -1    ,>gate
+wipe    dat     <2667 ,2-gate
+
+This will certainly stop an imp which tries to overrun the gate, but
+does suffer from an occasional self-destruct.  If either the
+MOV or the DJN changes gate to zero and the SPL executes next
+then it will self-wipe.  This will happen rarely but can be
+prevented by using this form:
+
+        spl     #0
+        mov     wipe  ,>gate
+        djn.f   -1    ,>gate
+wipe    dat     <2667 ,2-gate
+
+This second form suffers somewhat in that an imp can pass if it
+tries when the SPL is executed.  But if the gate is far enough
+back then it should be wiped anyway before it can reach the
+SPL.  If the gate is near, this may be a problem.  So there is
+one way to tell which form to use - if the gate can be positioned
+well back use form #2, else use form #1.  However if you have other
+uses for the SPL operands then that may determine your form.
+
+Now for the exciting part!
+
+A while back I serendipitously discovered that <5335 is MUCH
+better than <2667 against paper-based or continuously-launched
+imps, and just got around to trying some more variations.
+I created two versions of Die Hard using these imp forms:
+
+    mov.i   #2667,*0
+    mov.i   #100 ,2667
+
+and ran against a dclear continuous wiper with combinations of predec/
+postinc using imp and near-imp numbers.  Here are the resulting win/loss/tie
+results:
+
+ wiper    2667 ,*0      #100,2667
+------    --------      --------
+<2667     00/25/75      00/21/79
+>2667     00/28/72      00/22/78
+{2667     00/22/78      00/21/79
+}2667     00/21/79      00/22/78
+<2668     00/24/76      00/26/74
+>2668     00/26/74      00/27/73
+{2668     00/23/77      00/24/76
+}2668     00/27/73      00/25/75
+<5334     00/21/79      00/22/78
+>5334     00/21/79      00/28/72
+{5334     00/17/83      00/19/81
+}5334     00/18/82      00/20/80
+<5335     36/20/44      57/18/25
+>5335     55/20/25      52/21/27
+{5335     54/19/27      00/19/81
+}5335     55/18/27      00/19/81
+<5336     00/19/81      00/19/81
+>5336     00/18/82      00/22/78
+{5336     00/18/82      00/18/82
+}5336     00/18/82      00/19/81
+<1        00/16/84      00/18/82
+>1        00/19/81      00/21/79
+{1        00/18/82      00/19/81
+}1        00/21/79      00/20/80
+
+Most of them have that moribund loser look, but wow! those 5335 numbers
+are very interesting.  From this I recommend using this Dclear form:
+
+        spl     #0
+        mov     wipe  ,>gate
+        djn.f   -1    ,>gate
+wipe    dat     >5335 ,2-gate
+
+Paul Kline
+pk6811s@acad.drake.edu
+______________________________________________________________________________
+Extra Extra
+Blur '88 by Anton Marsden
+
+I wanted to see how "advanced" the '88 warriors were so I wrote Blur '88 to
+test a modern technique against them. As it turns out, Blur '88 did quite
+well.
+
+This warrior is somewhat resistant to DAT ?a,?0 bombs - if some of the code is
+hit, the jmn line will fall through if the lines 'scan' or 'a' are hit.
+The one thing I was frustrated with was the coreclear. I can't seem to improve
+it much. Any ideas?
+
+;redcode
+;name Blur '88
+;author Anton Marsden
+;strategy Carpet goes backwards
+;assert CORESIZE==8000
+
+step EQU 70
+
+top:  mov bomb,<ptr
+a:    add inc,scan
+scan: cmp -3*step+5,-3*step
+      mov scan,@-3
+      jmn top,@-3
+bomb: spl 0,<1-step
+      mov inc,<bomb-2
+      djn -1,@-1-step
+inc:  dat <-step,<-step
+ptr:  dat #0,#-2*step
+
+END scan
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@etherspace.gen.nz>
+
