@@ -14,7 +14,7 @@ LOOPA         MOV   #  0,          @  WHOB
               ADD   #  101,           WHOB
 WHOA          MOV   #  1,             BANG
 PARTB         JMP      LOOPA
-WHOB          DAT                     500
+WHOB          DAT                      <500, <500
 CENTER        CMP   @  BOMB,       @  BOMB
               JMP      KILL
               CMP   # -1,             BOMB
@@ -42,10 +42,10 @@ SKIP5         MOV   #  1,             ZAP
               JMP      MID
 KILL          MOV   @  BOMB,       @  BOMB+1
               JMP      CENTER
-BOMB          DAT                     SPAWNA
-              DAT                     -75
-              DAT                     1
-BANG          DAT                     1
-DONG          DAT                     1
-              DAT                     1
+BOMB          DAT                      <SPAWNA, <SPAWNA
+              DAT                      <-75, <-75
+              DAT                      <1, <1
+BANG          DAT                      <1, <1
+DONG          DAT                      <1, <1
+              DAT                      <1, <1
               END                     START

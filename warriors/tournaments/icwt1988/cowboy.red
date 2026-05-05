@@ -5,17 +5,17 @@
 ;The snare for the opponent's processes.
 ;Bison commits suicide when all 64 processes are captured.
 ;
-FIRE          DAT                    FIRE
+FIRE          DAT                     <FIRE, <FIRE
 ;
-BEG           DAT                    BEG
+BEG           DAT                     <BEG, <BEG
 FENCE         MOV      SUCCESS,      SWITCH
 DEMON         SUB   #  1,            BISON
 HELP          SPL                    DEMON
 BOMBING       MOV      FIRE,       < FIRE
               JMN      HELP,         BISON
               MOV      BOMB,         HELP
-BOMB          DAT                    BOMB
-BISON         DAT                    64
+BOMB          DAT                     <BOMB, <BOMB
+BISON         DAT                     <64, <64
 COUNT         JMP      FENCE
 ;
 ;Welcome to the snare!

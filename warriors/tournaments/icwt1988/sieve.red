@@ -2,7 +2,7 @@
 ;by Dirk Wolff-Klammer
 ;West Germany
 ;
-A             DAT                    0
+A             DAT                     <0, <0
 START         MOV   <  COUNT,        DEST
 ;
               JMZ      LEND,         COUNT
@@ -13,12 +13,12 @@ LOOP          MOV   @  A,          < DEST
               JMZ      START,        A
 LEND          MOV   #  7,            COUNT
               JMZ      START,        A
-COUNT         DAT                    7
-              DAT                    125
-              DAT                    250
-              DAT                    500
-              DAT                    1000
-              DAT                    2000
-              DAT                    4000
-DEST          DAT                    0
+COUNT         DAT                     <7, <7
+              DAT                     <125, <125
+              DAT                     <250, <250
+              DAT                     <500, <500
+              DAT                     <1000, <1000
+              DAT                     <2000, <2000
+              DAT                     <4000, <4000
+DEST          DAT                     <0, <0
               END      START

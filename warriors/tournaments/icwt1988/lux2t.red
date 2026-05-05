@@ -249,7 +249,7 @@ JJ            JMP                    JJ-1
 SS            SPL                    0
 START         ADD      JJB,          COUNT1
               JMZ      SSS,       @  COUNT
-              CMP      COUNT,     #  47
+              CMP # 47, COUNT
 COUNT         JMN      JJJ,       # -2169
 JJB           JMN      BBB,       #  12
               DAT                 #  0

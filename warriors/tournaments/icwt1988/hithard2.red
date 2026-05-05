@@ -13,6 +13,6 @@ START2        MOV   # -8008,          LOOP1
 LOOP2         MOV      BOMB2,      <  TARGET2
 CNT           JMP      LOOP2,         TARGET2+1
 BOMB1         SPL      0,             11
-BOMB2         DAT                    -10
-TARGET2       DAT                    -10
+BOMB2         DAT                     <-10, <-10
+TARGET2       DAT                     <-10, <-10
               END      START

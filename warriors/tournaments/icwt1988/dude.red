@@ -5,7 +5,7 @@
 I             MOV   #  0,             I-1
 J             JMP      I
               MOV      TRP2,          J
-C3            DAT                     C3
+C3            DAT                      <C3, <C3
 DUDE          MOV   #  0,             CNT
               MOV   #  201,           C2
               MOV   #  -99,           C3
@@ -18,5 +18,5 @@ TTT           SPL                     188
               JMP      I
 TRP2          JMP      TTT
 BMB           SPL                     BMB
-CNT           DAT                     CNT
+CNT           DAT                      <CNT, <CNT
               END      DUDE

@@ -12,9 +12,9 @@ LOOP          MOV      S1,         < PTR
               JMP      LOOP
 S1            SPL                    S1
 J1            JMP     -1
-PTR           DAT                   -64
-              DAT                    842
-              DAT                    842
-              DAT                    842
-              DAT                    842
+PTR           DAT                    <-64, <-64
+              DAT                     <842, <842
+              DAT                     <842, <842
+              DAT                     <842, <842
+              DAT                     <842, <842
               END      KILL

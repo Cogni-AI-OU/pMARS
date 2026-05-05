@@ -1,7 +1,7 @@
 ;Wipe 5
 ;by Anonymous
 ;
-COUNT         DAT                    0
+COUNT         DAT                     <0, <0
 START         MOV      COUNT-1,      CLEAR
 LOOP1         SUB      SUBT,         PNTR
               CMP      CLEAR,      @ PNTR
@@ -36,9 +36,9 @@ LOOP4         MOV   <  COUNT,        CLEAR
               MOV      PNTR,         PTR
 LOOP3         MOV      PTR,        < PNTR
               JMP      LOOP3
-IMPPTR        DAT                    66
-IMPPTR2       DAT                    66
-VELOCITY      DAT                    3
+IMPPTR        DAT                     <66, <66
+IMPPTR2       DAT                     <66, <66
+VELOCITY      DAT                     <3, <3
 GETIMP        ADD      PNTR,         IMPPTR
               MOV      CLOSED,       GATE
               MOV      IMPPTR,       IMPPTR2
@@ -53,24 +53,24 @@ LOOP5         MOV      CLEAR,      @ IMPPTR
               ADD   #  1,            VELOCITY
               JMP      LOOP5
 IMP           MOV      IMP,          IMP+1
-SUBT          DAT                    12
+SUBT          DAT                     <12, <12
 SPLIT2        SPL                    SPLIT2
-CLEAR         DAT                    0
-PTR           DAT                    0
+CLEAR         DAT                     <0, <0
+PTR           DAT                     <0, <0
 SPLIT         SPL                    PTR
-PNTR          DAT                   -58
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
+PNTR          DAT                    <-58, <-58
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
 ;
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
-              DAT                    1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
+              DAT                     <1, <1
               END      START

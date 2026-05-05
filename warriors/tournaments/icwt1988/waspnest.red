@@ -7,7 +7,7 @@ PUSK          MOV      FB,         <  B
               MOV   <  A,          <  B
               SUB   <  A,          <  A
               JMP   @  B
-U             DAT                     4000
+U             DAT                      <4000, <4000
 SKIPA         MOV      U,          <  U
               DJN      SKIPA,      <  U
 S             SPL                     SKIPA
@@ -52,5 +52,5 @@ PAUSE         JMP                    1
               MOV   # -1000,         K
 LOOP          MOV      K,          < K
               DJN      LOOP,       < K
-K             DAT                    7
+K             DAT                     <7, <7
               END      START

@@ -4,8 +4,8 @@
 ;
 START         SPL                      STARTA
               JMP       STARTB
-PTRC          DAT                      26
-PTRA          DAT                      32
+PTRC          DAT                       <26, <26
+PTRA          DAT                       <32, <32
 IMMBLZEA      MOV    #  32,            PTRA
 STARTA        MOV       SPLBOMBA,    @ PTRA
               ADD    #  16,            PTRA
@@ -16,9 +16,9 @@ SKIPA         MOV       PTRA,        @ PTRC
               JMN       SKIPA,         PTRC
               JMP       IMMBLZEA
 SPLBOMBA      SPL                      SPLBOMBA
-              DAT                      0
-              DAT                      0
-              DAT                      0
+              DAT                       <0, <0
+              DAT                       <0, <0
+              DAT                       <0, <0
 IMMBLZEB      MOV    # -32,            PTRB
 STARTB        MOV       SPLBOMBB,    @ PTRB
               SUB    #  16,            PTRB
@@ -29,5 +29,5 @@ SKIPB         MOV       PTRB,        @ PTRB
               JMN       SKIPB,         PTRB
               JMP       IMMBLZEB
 SPLBOMBB      SPL                      SPLBOMBB
-PTRB          DAT                     -32
+PTRB          DAT                      <-32, <-32
               END      START
