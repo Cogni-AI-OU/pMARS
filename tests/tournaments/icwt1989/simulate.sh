@@ -9,10 +9,12 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/../../../" && pwd)"
 PMARS="$ROOT_DIR/pmars"
 WARRIORS_DIR="$ROOT_DIR/warriors/tournaments/icwt1989"
 
-# Check if pmars exists, try src/pmars as fallback
+# Check if pmars exists, try src/pmars or bin/pmars as fallback
 if [ ! -f "$PMARS" ]; then
     if [ -f "$ROOT_DIR/src/pmars" ]; then
         PMARS="$ROOT_DIR/src/pmars"
+    elif [ -f "$ROOT_DIR/bin/pmars" ]; then
+        PMARS="$ROOT_DIR/bin/pmars"
     else
         # Try finding it in PATH
         if command -v pmars >/dev/null 2>&1; then
@@ -38,7 +40,7 @@ ALL_WARRIORS=(
 )
 
 echo "Simulating ICWT 1989 Tournament..."
-echo "Settings: ICWS'88, 8000 core, 80000 cycles, 10 rounds"
+echo "Settings: 8000 core, 80000 cycles, 8000 max processes, 10 rounds"
 echo ""
 
 results_file=$(mktemp)
@@ -48,7 +50,7 @@ for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
         w1=${ALL_WARRIORS[$i]}
         w2=${ALL_WARRIORS[$j]}
         # Run pmars with ICWS'88 rules (-8)
-        output=$($PMARS -8 -s 8000 -c 80000 -p 8000 -r 10 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
+        output=$($PMARS -s 8000 -c 80000 -p 8000 -r 10 -l 1000 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
         
         results_line=$(echo "$output" | grep "Results:")
         echo "$w1 $w2 $results_line" >> "$results_file"
