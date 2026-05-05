@@ -72,7 +72,7 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **[EBS ICWS Qualification Tournament](ebs1991/README.md)** (Nov 1991): 1st place, [XTC](ebs1991/xtc.red) by Stefan Röttger.
 - **[Sociedad Española de Redcode Tournament](ser1991/README.md)** (Nov 1991): 1st place, Arania by Cristobal Jiménez López & Juan A. Molina Corpas.
 - **[First German Branch Section Core War Tournament](https://corewar.co.uk/gbs1989.htm)** (Dec 1989): 1st place, [Quarter](https://corewar.co.uk/gbs1989/quarter.red) by Stefan Hänßgen.
-- **[Secondo Torneo Italiano di Core Wars](https://corewar.co.uk/torneoitaliano1989.htm)** (Nov 1989): 1st place, [Hypray](https://corewar.co.uk/ti1989/hypray.red) by Francesco Botta.
+- **[Secondo Torneo Italiano di Core Wars](./ti1989/README.md)** (Nov 1989): 1st place, [Hypray](./ti1989/hypray.red) by Francesco Botta. Also featuring [UMACCP](./ti1989/umaccp.red), [Kili](./ti1989/kili.red), and [Storm](./ti1989/storm.red).
 - **[Primo Torneo Italiano di Core Wars](https://corewar.co.uk/torneoitaliano1988.htm)** (Oct 1988): 1st place, [Lux 2](https://corewar.co.uk/ti1988/lux2.red) by Luca Crosara.
 
 ### ICWS Tournaments
