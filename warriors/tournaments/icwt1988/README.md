@@ -1,6 +1,6 @@
 ## Tournament: Third International Core Wars Society Tournament (Dec 1988)
 
-In December 1988, the ICWS met at the offices of JT Technology in Los Angeles to hold their third annual Core War tournament. More than 60 warriors entered the preliminary rounds, with 15 progressing to the finals.
+In December 1988, the ICWS met at the offices of JT Technology in Los Angeles to hold their third annual Core War tournament. Held under the ICWS'86 standard, more than 60 warriors entered the preliminary rounds, with 15 progressing to the finals.
 
 ### Results
 
