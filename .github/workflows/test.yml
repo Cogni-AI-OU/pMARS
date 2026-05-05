@@ -7,13 +7,11 @@ on:
     paths-ignore:
       - '.github/workflows/test-tournaments.yml'
       - 'tests/tournaments/**'
-      - 'warriors/tournaments/**'
   pull_request:
     branches: [ master ]
     paths-ignore:
       - '.github/workflows/test-tournaments.yml'
       - 'tests/tournaments/**'
-      - 'warriors/tournaments/**'
 
 jobs:
   build:
