@@ -6,6 +6,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 warrior_dir = os.path.normpath(os.path.join(BASE_DIR, '../../../warriors/tournaments/kofacoto/round1'))
 warriors = ['moore.red', 'Schmidt.red', 'Macrae.red', 'pihlaja.red']
 
+print("Simulating Oversby Autumn 1998 Tournament (Deterministic Subset)...")
+print("Settings: 8000 core, 8000 processes, 80000 cycles, 200 rounds, ICWS'94")
+
 
 def run_match(w1_name, w2_name):
     w1 = os.path.join(warrior_dir, w1_name)
@@ -43,6 +46,16 @@ for i in range(len(warriors)):
         scores[w1_name] += w1_wins * 3 + ties
         scores[w2_name] += w2_wins * 3 + ties
 
+print("\n--- Final Results ---")
 sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)
+for i, (name, score) in enumerate(sorted_scores):
+    print(f"{i+1}. {name}: {score} points")
 
-assert sorted_scores[0][0] == 'Schmidt.red', sorted_scores
+winner = sorted_scores[0][0]
+print("\nOfficial Results Check:")
+if winner == 'Schmidt.red':
+    print("SUCCESS: Schmidt is the winner in this subset, matching regression fixture expectation!")
+else:
+    print(f"NOTE: Simulated winner is {winner}. Expected Schmidt.red for this subset.")
+
+assert winner == 'Schmidt.red', sorted_scores
