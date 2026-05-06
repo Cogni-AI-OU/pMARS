@@ -88,3 +88,6 @@ $(OBJ): Makefile config.h global.h
 clean:
 	rm -f $(OBJ) $(MAINFILE) core
 
+gen_asm:
+	@cd .. && bash scripts/gen_red_asm.sh $(DIR) "$(FLAGS)"
+
