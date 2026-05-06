@@ -89,5 +89,11 @@ To preserve the history and context of warrior development:
 - **Do not delete code:** When removing logic from `.red` files, comment it out instead of deleting it.
 - **Explain changes:** Always include a comment explaining the reason for the modification or why the code was commented out.
 - **Comment character:** Use `;` for comments in Redcode files.
+- **Update Legacy Documentation:** When compatibility issues between different standards (e.g., ICWS '88 vs ICWS '94) are identified and resolved, ensure that `docs/LEGACY.md` is updated with these new findings to guide future development.
+
+## Maintenance
+
+- **Keep AGENTS.md Up-to-Date:** This file must be kept up-to-date to ensure all agents are following the most recent project standards and procedures.
+- **Incorporate PR Information:** When new relevant information or patterns are established in a Pull Request (PR), this file should be updated to capture that knowledge for future tasks.
 
 These instructions are maintained in this `AGENTS.md` file and must be followed by all agents.
