@@ -60,32 +60,11 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 
 ## Examples
 
-### Case: Yeager.red (KOFACOTO Tournament)
+### Case: ]enigma[ (KOFACOTO Tournament Round 7)
 
-In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+The warrior `]enigma[` was found on an archive site with non-standard addressing modes (`<<`) and missing/misaligned constants. It was modernized for ICWS '88 compatibility in pMARS.
 
-**Before:**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-org tStart
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-```
+- **Addressing Modes:** Changed `<<` to `<` to comply with the ICWS '88 standard.
+- **Parameters:** Identified `eStep 1751` and `-p 256` as the correct environment parameters to match the historical 14-1-985 tournament results.
+- **Boot Structure:** Fixed the parallel copy boot by ensuring labels and lengths aligned with the 8-line replicated module.
 
-**After (Consistent & Compatible):**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-; org       tStart ; Removed in favor of 'end tStart' for better compatibility
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-; Added 'end tStart' to ensure compatibility and explicit entry point definition
-          end    tStart
-```
-
-This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
