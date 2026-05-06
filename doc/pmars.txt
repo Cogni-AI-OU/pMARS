@@ -838,7 +838,7 @@ ACKNOWLEDGMENTS
 APPENDIX
 PMARSV
        pMARSv is a DOS version of pMARS with a graphical core display. You can
-       chose  between  EGA/VGA  graphics or text mode with the -v command line
+       choose  between  EGA/VGA  graphics or text mode with the -v command line
        options or by pressing 'v' during the game. The -v option takes a three
        digit argument 'xyz'. Digit 'x' specifies the initial display speed and
        ranges from 0 (fastest) to 7 (slowest).  'y'  is  the  initial  display
