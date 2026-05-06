@@ -60,32 +60,20 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 
 ## Examples
 
-### Case: Yeager.red (KOFACOTO Tournament)
+### Case: KOFACOTO Tournament
 
-In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point. This includes warriors from Round 1, Round 2, Round 3, and Round 4.
 
-**Before:**
+**Example (Retribution.red from Round 4):**
 ```redcode
 ;redcode-94
-;name He Scans Alone B
+;name Retribution
+;author Michal Janeczek
 ...
-org tStart
+; org    cPtr ; Removed in favor of 'end cPtr' for better compatibility
 ...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-```
-
-**After (Consistent & Compatible):**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-; org       tStart ; Removed in favor of 'end tStart' for better compatibility
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-; Added 'end tStart' to ensure compatibility and explicit entry point definition
-          end    tStart
+; Added 'end cPtr' to ensure compatibility and explicit entry point definition
+      end    cPtr
 ```
 
 This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
