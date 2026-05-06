@@ -10,7 +10,7 @@ slt.x  {   -6 , @  -27
 spl.ba $2 , >45
 mul.b  <  -11 , @7
 mul.ab {   -4 , {   -3
-mov.ab *    2 , @ -173
+mov.ab *2 , @ -173
 djn.f  $   -1 , <100
 mov.ab >202 , $17
 mov.ab $   -1 , <2
@@ -24,5 +24,5 @@ mov.ab {  -24 , @  -93
 mov.ab {2 , >  -95
 mov.ab $ -359 , >  -37
 mov.ab $15 , $277
-mov.ab *   28 , $   -8
+mov.ab *28 , $   -8
 mov.ab $3 , $ -390

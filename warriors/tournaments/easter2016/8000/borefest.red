@@ -12,20 +12,20 @@ half    equ     4000
 gap     equ     13
 istart  equ     1-4*istep
 
-        spl       1         ,   { scratch
-        spl       1         ,   { scratch
+        spl       1         ,   {scratch
+        spl       1         ,   {scratch
 p2      spl       L1+half   ,     L2
-        mov     > p2        ,   } p2
-L1      spl     # 0         ,   > 2
-        add.f   # istep     ,     1
-        jmp       istart    ,   { scratch
-        mov.i   # istep/2   ,     istep
+        mov     >p2        ,   }p2
+L1      spl     #0         ,   >2
+        add.f   #istep     ,     1
+        jmp       istart    ,   {scratch
+        mov.i   #istep/2   ,     istep
 
   for   gap
         dat       0         ,     0
   rof
 
-L2      spl     # 0         ,   > 2
-        add.f   # istep     ,     1
-        jmp       istart    ,   { scratch
-        mov.i   # istep     ,   * 0
+L2      spl     #0         ,   >2
+        add.f   #istep     ,     1
+        jmp       istart    ,   {scratch
+        mov.i   #istep     ,   *0

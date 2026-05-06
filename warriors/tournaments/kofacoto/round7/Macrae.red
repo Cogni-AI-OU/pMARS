@@ -19,9 +19,9 @@ front equ (found4-2)
 qbs  equ 7
 qbn  equ 7
 
-found4  add # qint*4, qptr
-found2  add # qint*2, @-1
-found1  add # qint*1, @-2
+found4  add #qint*4, qptr
+found2  add #qint*2, @-1
+found1  add #qint*1, @-2
 found0
 
 qbite   cmp @qptr, front

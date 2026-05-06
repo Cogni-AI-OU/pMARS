@@ -6,21 +6,21 @@
 
 
 bdist equ (adj+772)
-STEP	equ   70
+step	equ   70
 x	equ	-2
 
 adj   mov   #1    ,     top
 top	mov	sptr	,	@2
 	mov	bspl	,	<cptr
 	sub	step	,	sptr
-sptr	mov	STEP+x,	<STEP+1+5+x
+sptr	mov	step+x,	<step+1+5+x
 scan	jmz	@top	,	<sptr
       djn   adj   ,     #17
-bspl	spl	0	,	<-STEP+1
+bspl	spl	0	,	<-step+1
 	mov	step	,	<top-6
 tp	djn	-1	,	<top-7+2667
-step	dat	<-STEP,	#-STEP-1
-cptr	dat	<-STEP,	#-4500
+step	dat	<-step,	#-step-1
+cptr	dat	<-step,	#-4500
 
 boot  mov   cptr  ,     bdist+11
       mov   <from ,     <boot

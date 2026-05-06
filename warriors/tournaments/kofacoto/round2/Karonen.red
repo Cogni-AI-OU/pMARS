@@ -45,7 +45,7 @@ lri
 
 
         for     34
-        dat     #0,# 0
+        dat     #0,#0
         rof
 
 ; ---PIT---
@@ -54,24 +54,24 @@ pit     spl     1, pclear
 hit1    jmp     pit, pclear
 ; ---------
 
-        dat     #0,# 0
-        dat     #0,# 0
-        dat     #0,# 0
-        dat     #0,# 0
+        dat     #0,#0
+        dat     #0,#0
+        dat     #0,#0
+        dat     #0,#0
 
-hit2    dat     #0,# 0
-        dat     #0,# 0
-        dat     #0,# 0
+hit2    dat     #0,#0
+        dat     #0,#0
+        dat     #0,#0
 pclear  dat     #0,# -50
-        dat     #0,# 0
+        dat     #0,#0
 
-hit3    dat     #0,# 0
-        dat     #0,# 0
-        dat     #0,# 0
-        dat     #0,# 0
+hit3    dat     #0,#0
+        dat     #0,#0
+        dat     #0,#0
+        dat     #0,#0
 jbomb   jmp     0, 0
 
-hit4    dat     #0,# 0
+hit4    dat     #0,#0
 
 
 ; --Bomber--
@@ -83,17 +83,17 @@ pfang   mov     fang, @fang     ; drop fang
 ;        add     0*jbomb, 0*fang    ; drop jmp bomb
         jmp     vamp, @pfang    ; My memory's hazy about this line
                                 ; a jmp vamp, 0 should work exactly the same
-        dat     #0,# 0
-        dat     #0,# 0
+        dat     #0,#0
+        dat     #0,#0
 ; --Clear--
 ; works with the same ptr as the pit for a fast clear (max 200% c with enemy)
 myclear mov     dbomb, <pclear
         jmp     myclear, pclear
 
 hit5    dat     #0,#0
-dbomb   dat     #0,# 50
-        dat     #0,# 0
-        dat     #0,# 0
+dbomb   dat     #0,#50
+        dat     #0,#0
+        dat     #0,#0
 fang    jmp     pit-stfang, stfang
 
 	end lri

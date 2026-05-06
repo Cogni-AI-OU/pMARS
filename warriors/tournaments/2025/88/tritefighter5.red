@@ -16,9 +16,9 @@
 STEP equ 2234 ;NTA orig - not designed for -c 800000
 BOFF equ 333
 COFF equ ((Clear-Stone)+BOFF-2+STEP+cp)
-BOOT equ (Stone-BOFF)
+boot equ (Stone-BOFF)
 COOT equ (Clear-COFF)
-CSTART equ (BOOT-(COOT+cp)+4000)
+CSTART equ (boot-(COOT+cp)+4000)
 cp equ 12
 D for 100-27-3
 spl D+CURLINE, #1
@@ -33,7 +33,7 @@ Clear: mov dbmb+2, <Stone+2-STEP-BOFF+COFF
 jmp -1, <-12
 dbmb: dat <2667, #-cp
 bust: mov <2663, <2663 ;DM anti-crashing-imp idea
-boot: mov Stone+2, BOOT+2
+boot: mov Stone+2, boot+2
 mov Stone+1, <boot
 mov Stone, <boot
 mov Stone-1, <boot
@@ -52,7 +52,7 @@ route: dat #0, #loc
 jmp Stone+2-BOFF
 jmp Stone+1-BOFF
 jmp Stone-BOFF
-jmp Stone+2-BOFF -1
-jmp Stone-BOFF -0
-loc: jmp Stone-1-BOFF -0
+jmp Stone+2-BOFF, -1
+jmp Stone-BOFF, -0
+loc: jmp Stone-1-BOFF, -0
 end boot

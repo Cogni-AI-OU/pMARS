@@ -7,7 +7,7 @@
 ;strategy an endless mod-4 bombing loop. 
 ;assert 1
 
-VSTEP equ -3044
+vstep equ -3044
 SLOC  equ -24 
 
 for 15
@@ -26,7 +26,7 @@ fang    jmp  pit, -fang
         dat  #0,  #0
         dat  #0,  #0
         dat  #0,  #0
-vstep   dat #VSTEP,#-VSTEP
+vstep   dat #vstep,#-vstep
         dat  #0,  #0
         dat  #0,  #0
         dat  #0,  #0

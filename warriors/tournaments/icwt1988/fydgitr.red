@@ -13,14 +13,14 @@ TOP2          DAT      #0,            #0
               DAT      #0,            #0
               DAT      #0,            #0
 TOP1          DAT      #0,            #0
-RESTOMP       MOV      ZERO,       @  DEST1
-STOMP         MOV   <  DEST1,      <  DEST2
-              MOV   <  DEST1,      <  DEST2
-              MOV   <  DEST1,      <  DEST2
-              MOV   <  DEST1,      <  DEST2
-              JMZ      STOMP,      @  DEST1
-              ADD   #  9,             DEST1
-SPLITA        ADD   #  9,             DEST2
+RESTOMP       MOV      ZERO,       @DEST1
+STOMP         MOV   <DEST1,      <DEST2
+              MOV   <DEST1,      <DEST2
+              MOV   <DEST1,      <DEST2
+              MOV   <DEST1,      <DEST2
+              JMZ      STOMP,      @DEST1
+              ADD   #9,             DEST1
+SPLITA        ADD   #9,             DEST2
               JMP      RESTOMP,       0
 DEST1         DAT      #0,            #-10
 DEST2         DAT      #0,            #-16
@@ -36,12 +36,12 @@ SKIPA         DAT      #0,            #325
               JMP      SKIPA,         0
               DAT      #0,            #1993
               DAT      #0,            #325
-START         MOV   <  ZERO,          DEST
-              MOV   <  ZERO,          DEST
-              MOV   <  ZERO,          STOP
-LOOP          MOV      NUM1,       <  DEST
-              MOV      NUM2,       <  DEST
-              ADD   #  14,            DEST
+START         MOV   <ZERO,          DEST
+              MOV   <ZERO,          DEST
+              MOV   <ZERO,          STOP
+LOOP          MOV      NUM1,       <DEST
+              MOV      NUM2,       <DEST
+              ADD   #14,            DEST
               DJN      LOOP,          COUNT
 STOP          JMP      START,         0
               JMP      RESTOMP,       0

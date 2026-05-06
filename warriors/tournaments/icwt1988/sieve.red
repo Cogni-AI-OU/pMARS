@@ -8,15 +8,15 @@
 ;assert 1
 ;
 A             DAT      #0,           #0
-START         MOV   <  COUNT,        DEST
+START         MOV   <COUNT,        DEST
 ;
               JMZ      LEND,         COUNT
-              MOV   #  16,           A
-LOOP          MOV   @  A,          < DEST
+              MOV   #16,           A
+LOOP          MOV   @A,          <DEST
               DJN      LOOP,         A
-              SPL                 @  DEST,          0
+              SPL                 @DEST,          0
               JMZ      START,        A
-LEND          MOV   #  7,            COUNT
+LEND          MOV   #7,            COUNT
               JMZ      START,        A
 COUNT         DAT      #0,           #7
               DAT      #0,           #125

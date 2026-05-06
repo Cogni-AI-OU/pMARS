@@ -155,7 +155,7 @@ qSelect sne.i   (start - 1),    @found ; use 1st position?
        qDist   EQU     (qTimes*qStep2 - 10)
 
 qLoop   mov     qBomb,          @found
-found   mov     qBomb,          * qStep
+found   mov     qBomb,          *qStep
        sub     #qStep2,       found
        djn     qLoop,          #qTimes
 

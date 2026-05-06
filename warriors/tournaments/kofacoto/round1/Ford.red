@@ -13,7 +13,7 @@ SORG equ (2667)
 SINC equ (STEP+1)
 SLEN equ (send-sptr+1)
  
-sptr spl #SORG, {   1
+sptr spl #SORG, {1
 smov mov  sptr, }sptr
  jmn.f  smov, *sptr
 scan add.a #SINC,  sptr

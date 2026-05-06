@@ -20,30 +20,30 @@ b0      equ     3+(step*time)
 x0      equ     boot
 
 boot    mov   db    ,   x0+stbd+dd
-        mov   imp   , < imp1
-        mov   imp   , < imp2
+        mov   imp   , <imp1
+        mov   imp   , <imp2
 main    spl   1     ,   launch+4
 imp1    spl   1     ,   x0+c1bd+2+id+1
-        mov < sfrom , < gost
+        mov <sfrom , <gost
        
-gost    spl @ 0     ,   x0+stbd+4
-        mov < main  , < gol1
-        mov < launch, < gol2
+gost    spl @0     ,   x0+stbd+4
+        mov <main  , <gol1
+        mov <launch, <gol2
 sfrom   spl   1     ,   stone+4
 imp2    spl   2     ,   x0+c2bd+2+id+1
-gol1    jmp @ 0     ,   x0+c1bd+4
-gol2    jmp @ 0     ,   x0+c2bd+4
+gol1    jmp @0     ,   x0+c1bd+4
+gol2    jmp @0     ,   x0+c2bd+4
 
-db      dat < 2667  , < 1
+db      dat <2667  , <1
 imp     mov   0     ,   is
 
-stone   mov < a0    ,   b0
-        spl  -1     , < 2-step
+stone   mov <a0    ,   b0
+        spl  -1     , <2-step
         add   1     ,  -2
         djn  -2     , <-step
 
 launch  spl   0     ,  4
-        add # is    ,  1
-        jmp @ 0     ,  id-8*is
+        add #is    ,  1
+        jmp @0     ,  id-8*is
 
 end boot

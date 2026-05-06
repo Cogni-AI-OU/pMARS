@@ -38,13 +38,13 @@ switch  sne.a   >0,         0
         djn.b   wB,         @first  ; asymmetric if num>2
 
 ;=== boot
-BOOT    equ (-2532)                     ;Stone boot
+boot    equ (-2532)                     ;Stone boot
 
 wA
 ddd for 10
         mov.i   <boot,      {boot
     rof
-boot:   spl     BOOT,       stone+10
+boot:   spl     boot,       stone+10
         mul.x   {0,         }0
         dat     0,          0
 
@@ -57,16 +57,16 @@ boot:   spl     BOOT,       stone+10
 ;10lines, start at top
 
 stone:
-        SPL.B  #     0, {     0     ;start here
-        SPL.B  #     0, < -2721     
-        MOV.I  $     7, {  -162     
-        MOV.I  $     6, @    -1     
-        SUB.AB #    81, $    -2     
+        SPL.B  #0, {0     ;start here
+        SPL.B  #0, < -2721     
+        MOV.I  $7, {  -162     
+        MOV.I  $6, @    -1     
+        SUB.AB #81, $    -2     
         DJN.F  $    -3, < -2725     
         dat 0,0
         dat 0,0
         dat 0,0
-        DAT.F  < -2722, >     1     
+        DAT.F  < -2722, >1     
 ;==
         dat     0,          0
         dat     0,          0
@@ -92,8 +92,8 @@ clr:    dat    1,           #18
         dat     0,          0
 ;==
 ;Scanner boot. 
-SBOOT    equ (-1532)
-sBoot:  spl  SBOOT+(sBoot-boot), scanner+10+(sBoot-boot)
-wB:     mov.i   head,       (sBoot-wB) + SBOOT-10
+sBoot    equ (-1532)
+sBoot:  spl  sBoot+(sBoot-boot), scanner+10+(sBoot-boot)
+wB:     mov.i   head,       (sBoot-wB) + sBoot-10
         mov.i   sBoot,      boot
         jmp     boot-9

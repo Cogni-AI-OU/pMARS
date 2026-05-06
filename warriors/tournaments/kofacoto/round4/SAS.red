@@ -18,7 +18,7 @@ qst     equ     qstart -(4*bigst)
 
 ; SAS constants
 step     equ 190				      ; mod-10 for Mod-5 scan
-BombCopy equ (Scan-1)
+BombCopy equ (scan-1)
 gate     equ cPtr 
 cPtr     equ Hijack
 

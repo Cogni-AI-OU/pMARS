@@ -18,7 +18,7 @@ qstep equ 100
 qn    equ  40  ;number of scans in unrolled loop
 
 ;oops, I missed CIA's decoy!
-qmiss add.ab # 30,   qptr  ;adjust and scan again
+qmiss add.ab #30,   qptr  ;adjust and scan again
       jmn.f   qdec, @qptr
       mov.ab  qptr,  qptr
       add.ab #qstep, qptr
@@ -30,14 +30,14 @@ qscan sne last+MINDISTANCE+(qstep*16), last+MINDISTANCE+(qstep*17)
       sne last+MINDISTANCE+(qstep*12), last+MINDISTANCE+(qstep*13)
       seq last+MINDISTANCE+(qstep*14), last+MINDISTANCE+(qstep*15)
       mov.a #qstep*(12-qn-2), qadj
-      sne last+MINDISTANCE+(qstep* 8), last+MINDISTANCE+(qstep* 9)
+      sne last+MINDISTANCE+(qstep*8), last+MINDISTANCE+(qstep*9)
       seq last+MINDISTANCE+(qstep*10), last+MINDISTANCE+(qstep*11)
       mov.a #qstep*( 8-qn-2), qadj
-      sne last+MINDISTANCE+(qstep* 4), last+MINDISTANCE+(qstep* 5)
-      seq last+MINDISTANCE+(qstep* 6), last+MINDISTANCE+(qstep* 7)
+      sne last+MINDISTANCE+(qstep*4), last+MINDISTANCE+(qstep*5)
+      seq last+MINDISTANCE+(qstep*6), last+MINDISTANCE+(qstep*7)
       mov.a #qstep*( 4-qn-2), qadj
-      sne last+MINDISTANCE+(qstep* 0), last+MINDISTANCE+(qstep* 1)
-      seq last+MINDISTANCE+(qstep* 2), last+MINDISTANCE+(qstep* 3)
+      sne last+MINDISTANCE+(qstep*0), last+MINDISTANCE+(qstep*1)
+      seq last+MINDISTANCE+(qstep*2), last+MINDISTANCE+(qstep*3)
       mov.a #qstep*( 0-qn-2), qadj
       jmn.a qadj, qadj
       sne last+MINDISTANCE+(qstep*36), last+MINDISTANCE+(qstep*37)
@@ -101,10 +101,10 @@ scan  jmz.f   -1, @sp  ;HSA-like scanner
       mov.b   sp,  top
       jmn.b attk,  sp
       add.b    3,   5  ;anti-imp clear
-      mov    *-1, < 4
+      mov    *-1, <4
       jmp     -2,   0
-      spl    # 5, 382
-trap2 jmp    # 0,   0  ;protect CIA
+      spl    #5, 382
+trap2 jmp    #0,   0  ;protect CIA
       dat      0,   0
 
 for 4

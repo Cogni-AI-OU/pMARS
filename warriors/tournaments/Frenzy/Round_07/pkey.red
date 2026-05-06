@@ -7,7 +7,7 @@
 ;strategy	It should defeat any single switcher
 ;strategy	Redcoders Frenzy, round 7, Feb. 22th 2003
 
-	STEP EQU 2667
+	step EQU 2667
 	D_STRAT EQU 249
 	D_PREV EQU 250
 	D_LOS EQU D_PREV+1
@@ -39,15 +39,15 @@ AWLT:	ADD.AB #0,WLT
 	STP.BA WLT,WLT
 ACT:	ADD.BA RESULT,1
 ACTS:	LDP.AB #D_PREV+1,#0		;Switches strategy depending W/L/T
-	MUL.AB #STEP,ACTS
+	MUL.AB #step,ACTS
 	ADD.B ACTS,STRAT
 
 SAVE:	STP.B RESULT,#D_PREV
 	STP.B STRAT,#D_STRAT
 
-SLCT:	SLT #STEP,STRAT			;Launch
+SLCT:	SLT #step,STRAT			;Launch
 	JMP SRC				;Cloner II
-	SLT #2*STEP,STRAT
+	SLT #2*step,STRAT
 	JMP slDodger			;CLP
 	JMP boot			;Frontwards
 

@@ -26,11 +26,11 @@ scan  jmz.b main, @top            ;scan for jedimps
       mov   wash, <-1   ;brainwashing clear
       djn     -1, #-11
       add.b    3,   4   ;anti-imp clear
-      mov    *-1, < 3
+      mov    *-1, <3
       jmp     -2,   0
-      spl    # 4,  imp+1
+      spl    #4,  imp+1
       dat      0,   0
-wash  stp.ab # 5, # 100
-sb    spl    # 0, { 0
+wash  stp.ab #5, #100
+sb    spl    #0, {0
 
 end scan 

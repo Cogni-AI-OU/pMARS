@@ -12,9 +12,9 @@
 ;strat -   important, and the '94x hill perfectly
 ;strat -   mirrors results from the 'x2 hill which
 ;strat -   is a pity. Maybe I'll be lucky.
-spl.i  # -2894, $     1
+spl.i  # -2894, $1
 spl.i  # -1941, }    -3
-add.i  #   138, @     2
+add.i  #138, @2
 mov.i  # -1854, }    -2
 mov.i  # -1854, }    -3
 jmp.x  $    -4, <    -4

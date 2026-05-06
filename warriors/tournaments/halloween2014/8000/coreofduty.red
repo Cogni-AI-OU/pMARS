@@ -35,24 +35,24 @@ s1      spl       1             ,         0
         mov       s1            ,         0
         mov       s1            ,         0
         mov       s1            ,         0
-        mov     < bpp           ,       { bpp
+        mov     <bpp           ,       {bpp
 bpp     jmp       x0+bdp+plen   ,         silk1+plen
 b2      spl       1             ,         0
-        mov     < bpi           ,       { bpi
+        mov     <bpi           ,       {bpi
 bpi     jmp       x0+bdil+ilen  ,         il+ilen
 
-silk1   spl     @ 0             ,       { pstep1
-        mov     } silk1         ,       > silk1
-silk2   spl     @ 0             ,       > pstep2
-        mov     } silk2         ,       > silk2
-        mov       kill          ,       > bstep1
-        mov       kill          ,       } bstep2
-        mov     { silk2         ,       < silk3
-silk3   djn.f   @ 0             ,       > pstep3
-kill    dat     < istep         ,       < 2*istep
+silk1   spl     @0             ,       {pstep1
+        mov     }silk1         ,       >silk1
+silk2   spl     @0             ,       >pstep2
+        mov     }silk2         ,       >silk2
+        mov       kill          ,       >bstep1
+        mov       kill          ,       }bstep2
+        mov     {silk2         ,       <silk3
+silk3   djn.f   @0             ,       >pstep3
+kill    dat     <istep         ,       <2*istep
 
-il      spl     # sstep+1       ,         istep
-        mov       il+po+plen-1  ,       < iptr
+il      spl     #sstep+1       ,         istep
+        mov       il+po+plen-1  ,       <iptr
         add.x     il            ,         iptr
-iptr    djn.f     il+io-4*istep ,       { sofs
-imp     mov.i   # istep/2       ,         istep
+iptr    djn.f     il+io-4*istep ,       {sofs
+imp     mov.i   #istep/2       ,         istep

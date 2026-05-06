@@ -22,9 +22,9 @@ scan      add.ab #873   , ptr
           slt.b  @scan     ,#tail-ptr+3
           jmp    back       ,<ptr
           add.ab #tail-ptr+4,@scan
-          mov.i  comp       ,scan
+          mov.I  comp       ,scan
           jmp    scan       ,}wipe
-comp      sne.i  >ptr-scan  ,>ptr-scan
+comp      sne.I  >ptr-scan  ,>ptr-scan
 wipe      spl #0, }0
           spl #0, }0
           spl #0, }0

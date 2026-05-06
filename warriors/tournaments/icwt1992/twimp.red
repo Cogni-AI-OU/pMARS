@@ -31,7 +31,7 @@ start   mov imp,imp+ds
         jmp imp+(d+d+d+d)
         jmp imp+(d+d+d+d+d)
         spl 2
-        jmp imp    +ds
+        jmp imp, +ds
         jmp imp+(d)+ds
 
         spl 8

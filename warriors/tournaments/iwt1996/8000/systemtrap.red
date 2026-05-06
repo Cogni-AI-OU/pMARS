@@ -14,11 +14,11 @@
 
 	PIN	191
 
-MAGICP		equ	378
+magicp		equ	378
 WINP		equ	379
 LOSEP		equ	380
-WARRIOR		equ	decoy		;; if handshake requires many cycles
-QWARRIOR	equ	decoy		;; if we have more time
+WARRIOR		equ	DECOY		;; if handshake requires many cycles
+QWARRIOR	equ	DECOY		;; if we have more time
 
 ;; - - - - - - - - - handshake initialize - - - - - - - - - - - - - -
 
@@ -42,7 +42,7 @@ lost	stp	#0, #WINP		;; reset the expected flag
 	stp	#1, #LOSEP
 winner	ldp	#WINP, #0		;; and then check it
 	jmz	>foe, $winner
-magicp	dat	#MAGICP, #0		;; lose again
+magicp	dat	#magicp, #0		;; lose again
 
 ;; - - - - - - - - - - - flag enemy warrior - - - - - - - - - - - - - - -
 
@@ -116,7 +116,7 @@ three	jmp	@three, >CSTEP
 
 DECOY	equ	(sbomb-200)
 
-decoy	;; make a decoy -- 100 places in front should deter qscanners
+DECOY	;; make a decoy -- 100 places in front should deter qscanners
 	;; using code from the FAQ (Neat - I didn't realize I could do
 	;; this at 3c)
 
@@ -144,7 +144,7 @@ dbomb	dat	#0, #dbomb+1-ptr
 FIRST	equ	(magic+200)
 ACTION	equ	boot
 BACKUP	equ	paper
-BOOT	equ	-2793
+boot	equ	-2793
 EMPTY	equ	(magic+110)
 
 match1 mov.i $6, $-30				;; a couple lines to check OS
@@ -187,7 +187,7 @@ recall	jmp	ACTION-BACKUP			;; vamp for me
 
 slave	mov	$recall, $BACKUP		;; stop paper strategy
 
-boot	mov.i	$dbomb, $BOOT			;; boot coreclear
+boot	mov.i	$dbomb, $boot			;; boot coreclear
 
 	for	3
 	  mov.i	{boot, <boot

@@ -62,27 +62,27 @@ rof
 qGo     sne     qPtr+(qM+0)*(qN+0)+qStep*0 ,qPtr+(qM+0)*(qN+0)+qStep*1
         seq     qPtr+(qM+0)*(qN+0)+qStep*2 ,qPtr+(qM+0)*(qN+0)+qStep*3
 qJump   jmp     qDec
-for 0 + 0 > 0
+for 0 + 0 >0
         sne     qPtr+(qM+1)*(qN+0)+qStep*0 ,qPtr+(qM+1)*(qN+0)+qStep*1
         seq     qPtr+(qM+1)*(qN+0)+qStep*2 ,qPtr+(qM+1)*(qN+0)+qStep*3
 qAinc   jmp     qDec ,}qDec
 rof
-for 0 + 0 > 0
+for 0 + 0 >0
         sne     qPtr+(qM-1)*(qN+0)+qStep*0 ,qPtr+(qM-1)*(qN+0)+qStep*1
         seq     qPtr+(qM-1)*(qN+0)+qStep*2 ,qPtr+(qM-1)*(qN+0)+qStep*3
 qAdec   jmp     qDec ,{qDec
 rof
-for 0 + 0 + 0 + 0 > 0
+for 0 + 0 + 0 + 0 >0
         sne     qPtr+(qM+0)*(qN+1)+qStep*0 ,qPtr+(qM+0)*(qN+1)+qStep*1
         seq     qPtr+(qM+0)*(qN+1)+qStep*2 ,qPtr+(qM+0)*(qN+1)+qStep*3
 qBinc   jmp     qDec ,>qDec
 rof
-for 0 + 1 + 1 > 0
+for 0 + 1 + 1 >0
         sne     qPtr+(qM+0)*(qN-1)+qStep*0 ,qPtr+(qM+0)*(qN-1)+qStep*1
         seq     qPtr+(qM+0)*(qN-1)+qStep*2 ,qPtr+(qM+0)*(qN-1)+qStep*3
 qBdec   jmp     qDec ,<qDec
 rof
-for 0 + 0 + 0 + 0 > 0
+for 0 + 0 + 0 + 0 >0
         sne     qPtr+(qM-1)*(qN-1)+qStep*0 ,qPtr+(qM-1)*(qN-1)+qStep*1
         seq     qPtr+(qM-1)*(qN-1)+qStep*2 ,qPtr+(qM-1)*(qN-1)+qStep*3
 qFdec   djn.f   qDec ,qDec
