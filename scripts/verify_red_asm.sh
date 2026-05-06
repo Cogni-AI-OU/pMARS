@@ -31,9 +31,24 @@ for asm in $ASM_FILES; do
     FLAGS=""
     
     # Check for ;assert CORESIZE==...
-    CORESIZE=$(grep -i ";assert.*CORESIZE==" "$red" | sed 's/.*;assert.*CORESIZE==\([0-9]*\).*/\1/')
-    if [ -n "$CORESIZE" ]; then
+    CORESIZE=$(grep -i ";assert.*CORESIZE==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*CORESIZE==([0-9]+).*/\1/')
+    if [[ "$CORESIZE" =~ ^[0-9]+$ ]]; then
         FLAGS="$FLAGS -s $CORESIZE"
+    fi
+
+    # Check for ;assert MAXPROCESSES==...
+    MAXPROCESSES=$(grep -i ";assert.*MAXPROCESSES==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXPROCESSES==([0-9]+).*/\1/')
+    if [[ "$MAXPROCESSES" =~ ^[0-9]+$ ]]; then
+        FLAGS="$FLAGS -p $MAXPROCESSES"
+    fi
+
+    # Check for ;assert MAXLENGTH==... or MAXINST==
+    MAXLENGTH=$(grep -i ";assert.*MAXLENGTH==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXLENGTH==([0-9]+).*/\1/')
+    if [[ ! "$MAXLENGTH" =~ ^[0-9]+$ ]]; then
+        MAXLENGTH=$(grep -i ";assert.*MAXINST==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXINST==([0-9]+).*/\1/')
+    fi
+    if [[ "$MAXLENGTH" =~ ^[0-9]+$ ]]; then
+        FLAGS="$FLAGS -l $MAXLENGTH"
     fi
     
     # Check for ;pmars-flags:
@@ -43,12 +58,23 @@ for asm in $ASM_FILES; do
     fi
     
     # Directory based defaults if not already set
-    if [[ "$red" == *"warriors/88Standard"* && ! "$FLAGS" == *"-s "* ]]; then
-        # Actually many 88Standard assert 8000, which is default.
-        # But some might need 8192. We'll stick to what's in the file or default.
+    if [[ "$red" == *"warriors/94Nano"* ]]; then
+        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 80"
+        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 80"
+    elif [[ "$red" == *"warriors/94tiny"* ]]; then
+        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 800"
+        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 800"
+    elif [[ "$red" == *"warriors/94LP"* ]]; then
+        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 500"
+    elif [[ "$red" == *"warriors/88Standard"* && ! "$FLAGS" == *"-s "* ]]; then
+        # Default for 88 is often 8000, but some need 8192.
         : 
-    elif [[ "$red" == *"warriors/88Tourney"* && ! "$FLAGS" == *"-s "* ]]; then
-        FLAGS="$FLAGS -s 8192"
+    elif [[ "$red" == *"warriors/88Tourney"* ]]; then
+        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
+        # Fingerprint needs more length
+        if [[ "$red" == *"fingerprint.red" ]]; then
+             [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 300"
+        fi
     fi
 
     # Ensure we use -A
