@@ -1,6 +1,8 @@
 ; Sturm und Drang
 ; Giovanni Ciraolo e Luca Pancani
 ;
+; Modernized for ICWS'88 compatibility: added mandatory commas and explicit B-fields.
+;
 ;assert CORESIZE==8192
         dat     #0, #0
         dat     #0, #0

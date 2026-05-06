@@ -1,6 +1,8 @@
 ; Panca 1
 ; Luca Pancani e Giovanni Ciraolo
 ;
+; Modernized for ICWS'88 compatibility: added mandatory commas and explicit B-fields.
+;
 ;assert CORESIZE==8192
 p       dat     #2068, #0
 start   spl     b, 0

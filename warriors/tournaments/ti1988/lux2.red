@@ -1,6 +1,9 @@
 ; Lux 2
 ; Luca Crosara
 ;
+; Modernized for ICWS'88 compatibility: added mandatory commas, explicit
+; B-fields, and immediate operand restrictions for DAT, CMP, and JMN.
+;
 ;assert CORESIZE==8192
         dat     #1, #0
 ;          (...)
