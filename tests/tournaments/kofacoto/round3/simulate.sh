@@ -5,7 +5,7 @@
 # Determine paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../../../../" && pwd)"
-PMARS="$ROOT_DIR/pmars"
+PMARS="$ROOT_DIR/src/pmars"
 WARRIORS_DIR="$ROOT_DIR/warriors/tournaments/kofacoto/round3"
 
 # Check if pmars exists

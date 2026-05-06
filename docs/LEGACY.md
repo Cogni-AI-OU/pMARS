@@ -124,3 +124,10 @@ Several warriors were adjusted to satisfy modern pMARS assembly:
 - **Macrae.red (55HSB):** Changed `;assert TRUE` to `;assert 1` as `TRUE` is not a recognized constant in pMARS.
 - **BlackBox.red:** The opponent warrior was included in the tournament archive to allow reproducible tests.
 
+### Case: ]enigma[ (KOFACOTO Tournament Round 7)
+
+The warrior `]enigma[` was found on an archive site with non-standard addressing modes (`<<`) and missing/misaligned constants. It was modernized for ICWS '88 compatibility in pMARS.
+
+- **Addressing Modes:** Changed `<<` to `<` to comply with the ICWS '88 standard.
+- **Parameters:** Identified `eStep 1751` and `-p 256` as the correct environment parameters to match the historical 14-1-985 tournament results.
+- **Boot Structure:** Fixed the parallel copy boot by ensuring labels and lengths aligned with the 8-line replicated module.
