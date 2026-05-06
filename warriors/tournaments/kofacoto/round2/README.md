@@ -65,5 +65,5 @@ Warriors will still be run in multiwarrior groups of 8.
 
 ## Notes
 
-- Only 9 warriors were successfully retrieved from the web archive for this round. The others (Adamowski, Ankerl, Chakrabarti, Gunnell, Karonen, Liporati, Moore, Paulsson, Schmidt) were listed in the directory index but their individual files were not captured.
+- All 18 warriors for this round have been successfully retrieved and are included in this directory.
 - The source page also links ZIP and RAR battle archives.

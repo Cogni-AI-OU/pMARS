@@ -49,7 +49,46 @@ Do not use both `org` and `end` directives in the same file. Using both triggers
 - **Modifiers:** While pMARS is permissive, using explicit modifiers (e.g., `mov.i`) is encouraged for "strict" syntax to avoid ambiguity across different simulator implementations.
 
 ## Historical Compatibility
-Many historical warriors (from the 1980s and early 90s) were written for parsers that were more lenient (e.g., allowing space-separated operands or omitting the B-field). 
+Many historical warriors (from the 1980s and early 90s) were written for parsers that were more lenient (e.g., allowing space-separated operands or omitting the B-field).
+
+## ICWS '88 Compatibility
+
+When working with legacy Redcode designed for the ICWS '88 standard, certain adjustments are often required to ensure they assemble correctly in pMARS (especially when using the `-8` flag).
+
+### DAT Operand Requirements
+
+In strict ICWS '88 mode, the `DAT` opcode may require two explicit operands even if only one was historically used.
+
+- **Legacy:** `DAT 0`
+- **Strict:** `DAT #0, #0`
+
+### Explicit Modifiers and Direct Addressing
+
+While ICWS '88 used space or no character for direct addressing, modern Redcode (ICWS '94) introduced the `$` symbol for direct addressing. For maximum compatibility across different pMARS modes:
+
+1. **Avoid `$` in ICWS '88:** If a warrior is intended for the `-8` mode, avoid using the `$` modifier. Use the naked value for direct addressing.
+2. **Use `#` for Constants:** Ensure that constants used in `DAT` or as immediate operands are explicitly prefixed with `#`.
+
+### Case: ICWT 1989 Warriors
+
+The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+
+- **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
+- **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
+- **Operand Formatting:** Immediate values were explicitly marked with `#`.
+
+## Simulator Parameter Limits
+
+### Instruction Limit (MAXINSTR)
+
+Historically, pMARS had a default `MAXINSTR` of 1000, which limited the maximum length that could be specified with the `-l` flag.
+
+**Optimization:**
+In recent updates, `MAXINSTR` has been increased to **10000** to accommodate complex tournament warriors and allow for more extensive assembly validation tests (e.g., using `-l 8000` to bypass length checks during initial assembly tests).
+
+If a warrior fails to assemble with a "too many instructions" error even when `-l` is provided, ensure the value is within the new `MAXINSTR` limit.
+
+## Preservation of Historical Code
 
 When incorporating these into the repository for simulation or testing:
 1. **Preserve Logic:** Modifications should be strictly limited to syntax cleanup. Adding a comma or an explicit `0` as a B-field does not change the execution behavior in ICWS'88.
@@ -57,6 +96,16 @@ When incorporating these into the repository for simulation or testing:
 3. **Incompatible Formats:** Warriors using incompatible syntax (like hex notation `$0FFFF` or binary object formats `.MOB`) should be moved to an `incompatible/` subdirectory to avoid breaking general assembly tests.
 
 ## ICWS '94x Large Core Compatibility
+
+### Case: KOFACOTO Round 5 Warriors
+
+For Round 5 of the KOFACOTO tournament, several warriors were reconstructed or recovered from historical archives:
+
+- **Self-Modifying Code (Ben Ford):** Reconstructed using components from David Moore's 'Recycled Bits' and the P^3 brain logic from Leonardo Liporati's 'Stolen RedCode', following the historical description.
+- **Recovered Warriors:** 'Round5.2000' (P. Kline), '2 Crazy' (Christian Schmidt), 'Quicksilver' (Michal Janeczek), and 'G2' (David Moore) were recovered from the web archive of koth.org.
+
+### Case: Yeager.red (KOFACOTO Tournament)
+
 Some tournaments, like KOFACOTO Round 6, used a large core with extended modifiers (`-x` flag in pMARS).
 
 ### Core Parameters
@@ -76,29 +125,24 @@ Ensure P-space size is appropriate for the core size. By default, pMARS sets it 
 ## Case Studies
 
 ### ICWT 1989 Warriors
+
 The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
 - **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
 - **Operand Formatting:** Immediate values were explicitly marked with `#`.
 
 ### ICWT 1990 Warriors
+
 The 1990 tournament simulation uses strict ICWS'88 mode. Warriors were updated to include commas and explicit B-operands. Explanatory comments were added to each modified file.
 
 ### Case: Yeager.red (KOFACOTO Tournament)
+
 In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+### Case: Entry Point Modernization (KOFACOTO Tournament)
 
-**Before:**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-org tStart
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-```
+In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point. This includes warriors from Round 1, Round 2, Round 3, and Round 4.
 
-**After (Consistent & Compatible):**
+**Example (He Scans Alone B from Round 6):**
 ```redcode
 ;redcode-94
 ;name He Scans Alone B
@@ -109,6 +153,18 @@ tStart mov <tDecoy+0,{tDecoy+2
 ...
 ; Added 'end tStart' to ensure compatibility and explicit entry point definition
           end    tStart
+```
+
+**Example (Retribution.red from Round 4):**
+```redcode
+;redcode-94
+;name Retribution
+;author Michal Janeczek
+...
+; org    cPtr ; Removed in favor of 'end cPtr' for better compatibility
+...
+; Added 'end cPtr' to ensure compatibility and explicit entry point definition
+      end    cPtr
 ```
 
 ### Case: KOFACOTO Round 3 (Black Warrior Round)

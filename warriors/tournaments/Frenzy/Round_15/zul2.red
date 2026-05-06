@@ -1,16 +1,14 @@
 ;redcode-94t quiet
-;name The T Machine
+;name The T Machine's slave
 ;author Zul Nadzri
-;strategy My smartbomb/combatra warrior still buggy.
-;strategy So, I have to satisfy with straight forward warrior.
-;strategy May be can't successfully defeat others.
-;strategy Hopefully its SureWin & slave will balance the losses.
+;strategy Definition of slave: Gives hard time to others but,
+;strategy willing to die for its master. Any question?
+;strategy Let's ban slavery!
 ;strategy Jan 2004
 ;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
 PIN 3
 
-;------ Okay, I confess. I love the machine! ----
 step EQU 72
 gate EQU top
 away EQU clr+1995
@@ -49,13 +47,13 @@ dx    jmp pat, }-2750
       spl.a  #1,*1
 pat   mov.i  {boot,<dest
       mov.i btm, bomb
-	mov.i zero, out1
-	mov.i pat, out2
-	mov.i out4, out3
+	mov.i out3, out4
+pom1	mov.i pat, out2
+	mov.i pom2, pom1
 	mov.i clr, a
-	mov.i out5+5, out5
+	mov.i win, pom3
 	mov.i dest-2, dest-7
-      dat >499, >1701
+pom2  dat >498, >1701
 ;      spl.i  #1,#1
 
 FOR 12+40-6-1
@@ -65,38 +63,42 @@ FOR 12+40-6-1
       spl.ba #1,}1
       spl.i  #1,#1
 ROF
-FOR 4      
+FOR 1      
       spl.i  #1,#1
 ROF
 
-;---- This is SureWin Technology ---------------
+;------ This is SureWin Technology -------------------
 win	stp #30, #3
 pat3	nop 0,0
 	stp #39, #3
-	jmp boot
+
 
 start	ldp #0, #0	
-out3	sne.ab #-1, -1
-	jmp x1		
+	sne.ab #-1, -1
+pom3	jmp x1		
 test	ldp #3, #0		
 	seq.ab #30, -1	
-	jmp boot, }4378	
-out4	stp #39, #3		
-	ldp #1, #0		
-	seq.ab #10, -1	
-out1	jmp boot, >4000
-	seq.ab #0, start	
+out3	jmp boot, }4378	
+	stp #39, #3		
+zap5	ldp #1, #0		
+out1	seq.ab #10, -1	
+	jmp boot, >4000
+out4	seq.ab #0, start	
 	jmp win, >3500
 x3	stp #10, #1		
+zero	nop 0,0
+	dat 0
+x1	stp #30, #3	
+out5	stp #10, #1		
 	nop 0,0
-zero	dat 0
-x1	stp #30, #3		
-	stp #10, #1		
-out5	stp #20, #2
+	nop 0,0
+	ldp #2,#0
+	sne.ab #20,-1
+	dat 0,0
 
 search  jmz.f   search, {count          
 count   sne.i   #-310, {count           
         jmp     $0, {count
 
 end start
-;END boot
+;end boot

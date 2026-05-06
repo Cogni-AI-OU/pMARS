@@ -45,5 +45,10 @@ In this round, warriors competed against a secret opponent named **Black Box**.
 | 15 | Josh Yeager | 749 | 200 |
 | 16 | Jeremy Chin | 155 | 41 |
 
+## Notes
+
+- The tournament page links a p^3 followup for this round.
+- The results page identifies this as the point where the standings tightened around the top five.
+
 ## Reference
 [KOFACOTO home page](http://www.koth.org/kofacoto/) | [Results](http://www.koth.org/kofacoto/results3.html) | [Warriors](http://www.koth.org/kofacoto/warriors/round3) | [Followup](http://www.koth.org/kofacoto/followup3.html)
