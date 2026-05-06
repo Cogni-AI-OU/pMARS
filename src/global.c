@@ -20,6 +20,7 @@
 /*
  * global.c: global data declarations
  * $Id: global.c,v 1.3 2000/12/25 00:49:08 iltzu Exp $
+#include "autoconf.h"
  */
 
 #ifndef _GLOBAL_INCLUDED

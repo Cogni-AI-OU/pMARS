@@ -20,6 +20,7 @@
 /*
  * eval.c: expression evaluator used by assembler and debugger
  * $Id: eval.c,v 1.3 2000/12/25 00:49:08 iltzu Exp $
+#include "autoconf.h"
  */
 
 #include <ctype.h>

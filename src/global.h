@@ -26,6 +26,7 @@
  */
 
 #include "config.h"
+#include "config.h"
 #include <stdio.h>
 #ifndef INT_MAX
 #include <limits.h>

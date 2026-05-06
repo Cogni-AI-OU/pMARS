@@ -20,6 +20,7 @@
  * pmars.c: main(), toplevel, initialization, cleanup
  * $Id: pmars.c,v 1.1.1.1 2000/08/20 13:29:40 iltzu Exp $
  */
+#include "autoconf.h"
 
 #include <stdio.h>
 #if defined(unix) || defined(VMS) || defined(SDLGRAPHX)

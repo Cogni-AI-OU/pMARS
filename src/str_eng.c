@@ -20,6 +20,7 @@
 /*
  * str_eng.c: externalized messages for easy translation (ENGLISH version)
  * $Id: str_eng.c,v 1.5 2000/12/25 00:49:08 iltzu Exp $
+#include "autoconf.h"
  */
 
 #include "global.h"

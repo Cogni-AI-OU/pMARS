@@ -20,6 +20,7 @@
  * $Id: token.c,v 1.1.1.1 2000/08/20 13:29:46 iltzu Exp $
  */
 
+#include "autoconf.h"
 #include <ctype.h>
 #include <string.h>
 

@@ -20,6 +20,7 @@
 /*
  * clparse.c: command line parser
  * $Id: clparse.c,v 1.5 2000/12/25 00:49:08 iltzu Exp $
+#include "autoconf.h"
  */
 
 /*******************************************************************

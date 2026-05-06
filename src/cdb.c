@@ -20,6 +20,7 @@
 /*
  * cdb.c: debugger
  * $Id: cdb.c,v 1.3 2000/12/25 00:49:07 iltzu Exp $
+#include "autoconf.h"
  *
  * cdb - line-oriented core debugger by Stefan Strack
  */

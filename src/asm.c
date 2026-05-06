@@ -20,6 +20,7 @@
 /*
  * asm.c: assembler
  * $Id: asm.c,v 1.3 2000/12/25 00:49:07 iltzu Exp $
+#include "autoconf.h"
  *
  *    usage: int assemble(char *filename, FIELD_T warriornum);
  *     parameters:
