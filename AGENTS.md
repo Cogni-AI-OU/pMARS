@@ -89,6 +89,7 @@ To preserve the history and context of warrior development:
 - **Do not delete code:** When removing logic from `.red` files, comment it out instead of deleting it.
 - **Explain changes:** Always include a comment explaining the reason for the modification or why the code was commented out.
 - **Comment character:** Use `;` for comments in Redcode files.
+- **Syntax Standards:** Adhere to strict ICWS'88 syntax for compatibility: use commas between operands, avoid colons in labels, remove parentheses from expressions, and replace negative constants (e.g., `-2793` -> `0-2793`).
 - **Update Legacy Documentation:** When compatibility issues between different standards (e.g., ICWS '88 vs ICWS '94) are identified and resolved, ensure that `docs/LEGACY.md` is updated with these new findings to guide future development.
 
 ## Available Skills
