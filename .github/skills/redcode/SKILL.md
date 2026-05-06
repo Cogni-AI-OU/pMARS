@@ -23,7 +23,7 @@ Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly
   - **Explicit DAT Modes**: `DAT` needs prefix modes and two operands (`DAT #0, #0`).
   - **Addressing**: Avoid `$` in ICWS '88. Always use `#` for immediate constants.
 - **Entry Points**: Prefer `end <label>` at EOF over legacy `org <label>` at SOF. Never use both.
-- **Mathematical Topology**: Treat the core as `Z/CZ` (modulo CORESIZE). Step sizes must be coprime to CORESIZE (avoid divisibility by prime factors: 2, 5 for 8k; 2, 3, 5, 7 for 25.2k).
+- **Mathematical Topology**: Treat the core as `Z/CZ` (modulo CORESIZE). Step sizes must be coprime to CORESIZE (avoid divisibility by prime factors of CORESIZE).
 - **Process Dynamics**: SPL creates parallel processes but dilutes speed. SPL bombs paralyze opponents by filling the queue.
 - **Metagame (Rock-Paper-Scissors)**: Bombers (tiny, fast) > Scanners (detectors) > Replicators (exponential resilience) > Bombers.
 
@@ -50,7 +50,7 @@ Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly
 
 ## What to Avoid
 
-- **Blindly Porting 8k Constants**: Never use 8k step sizes (e.g., 3044) or imp spacings (e.g., 2667) in a 25,200 or 55,440 core without recalculating modular relationships.
+- **Blindly Porting Constants**: Never use step sizes (e.g., 3044) or imp spacings (e.g., 2667) for a different core size without recalculating modular relationships.
 - **Deleting Legacy Code**: When fixing legacy syntax, comment out the old instruction (`;`) and write the correct one.
 - **Self-Bombing**: Always ensure bomb patterns and step sizes skip the warrior's own code range.
 
