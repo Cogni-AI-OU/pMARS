@@ -3,14 +3,14 @@ import subprocess
 import sys
 
 def run_test():
-    pmars = "../../../src/pmars"
-    warrior_dir = "../../../warriors/tournaments/kofacoto/round7"
+    pmars = "../../../../src/pmars"
+    warrior_dir = "../../../../warriors/tournaments/kofacoto/round7"
     w1 = os.path.join(warrior_dir, "Macrae.red")
     w2 = os.path.join(warrior_dir, "Janeczek.red")
 
     if not os.path.exists(pmars):
         # try bin/pmars
-        pmars = "../../../bin/pmars"
+        pmars = "../../../../bin/pmars"
         if not os.path.exists(pmars):
             print(f"Error: pmars not found")
             return False

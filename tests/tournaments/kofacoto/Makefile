@@ -1,8 +1,12 @@
-PYTHON = python3
+.PHONY: test test_round3 test_round6 test_round7
 
-.PHONY: test test_round7
+test: test_round3 test_round6 test_round7
 
-test: test_round7
+test_round3:
+	$(MAKE) -C round3 test
+
+test_round6:
+	$(MAKE) -C round6 test
 
 test_round7:
-	$(PYTHON) test_round7.py
+	$(MAKE) -C round7 test
