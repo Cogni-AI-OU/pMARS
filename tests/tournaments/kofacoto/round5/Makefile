@@ -1,7 +1,6 @@
 WARRIOR_DIR = '../../../../warriors/tournaments/kofacoto/round5'
 
 test:
-	@cd ../../../../src && make server
 	python3 test.py
 
 debug:
