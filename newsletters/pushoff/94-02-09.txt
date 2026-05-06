@@ -1,0 +1,165 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                             February 9, 1994
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  46/ 37/ 17                     SJ-4a            J.Layland     154     108
+ 2  37/ 26/ 37               Match Stick             c w blue     149      86
+ 3  46/ 44/ 10             Iron Gate 1.1       Wayne Sheppard     148      71
+ 4  44/ 40/ 16                Blitzkrieg      Mike Nonemacher     148     101
+ 5  41/ 35/ 24         Winter Werewolf 3         W. Mintardjo     148     917
+ 6  42/ 37/ 22               Christopher       Steven Morrell     147      11
+ 7  45/ 44/ 10             Medusa's v5.1         W. Mintardjo     146     111
+ 8  34/ 27/ 39                  NC decoy       Wayne Sheppard     141     192
+ 9  33/ 26/ 41           Killer instinct         Anders Ivner     140     171
+10  38/ 36/ 27                  Genocide      Mike Nonemacher     140       3
+11  30/ 20/ 50                 Cannonade              P.Kline     140     180
+12  28/ 17/ 54                   test t6              P.Kline     140       1
+13  41/ 44/ 14                   test-tw     Fredrik Ohrstrom     139      75
+14  37/ 38/ 25                Clown v8.1          P.E.M & E.C     136     190
+15  30/ 24/ 46                Imprimis 7              P.Kline     136     839
+16  27/ 19/ 54                      ttti        nandor sieben     136     187
+17  36/ 36/ 28               Double V1.1          P.E.M & E.C     135       8
+18  27/ 19/ 54 Walk Between the Raindrop      Mike Nonemacher     134      44
+19  34/ 37/ 30              Keystone t13              P.Kline     131     446
+20  25/ 22/ 53                      test      Mike Nonemacher     128       2
+
+21   2/ 98/  0                   looking              P.Kline       7       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives, including many helpful articles, warrior source
+        code, and reliable emulators, are available via anonymous FTP
+        at soda.berkeley.edu in pub/corewar.
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+This week's standings show J. Layland's remarkable SJ-4a program on top
+of the Hill.  Layland has combined a 3-line bomber and b-scanner into
+a very strong competitor.  That and a 2-pass spl/dat core clear are
+putting the heat on some excellent warriors.
+
+S. Morrell has challenged us with a new vampire (the only one on KotH to my
+knowledge).  "Throw your best anti-vamp against it" he says :-)  Thought
+we killed those guys off for good, but no, they just wait for a full moon
+and rise up again.
+
+Then there is the mysterious Match Stick which when last published was
+a paper designed to overtake other paper as well as imps and stones.
+Somewhere in the last weeks Match Stick took a big jump toward the top
+of KotH and has stayed in the top 5 or so ever since.  Any suggestions for
+the rest of us, CW?
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 4  35/ 28/ 37               Match Stick             c w blue     141       1
+ 5  39/ 34/ 27               Double V1.1          P.E.M & E.C     143       1
+ 6  39/ 38/ 23               Christopher       Steven Morrell     139       1
+ 6  40/ 37/ 22 Six Counts of Genocide v2      Mike Nonemacher     144       1
+ 7  38/ 39/ 24                  Genocide      Mike Nonemacher     136       1
+ 9  27/ 20/ 53 Walk Between the Raindrop      Mike Nonemacher     134       1
+12  38/ 41/ 21      My wife is pregnant!       Steven Morrell     136       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+19  14/ 39/ 47                 Chaos v2!          Gil Richard      89       1
+20  17/ 45/ 38                  Multibom          Gil Richard      90       1
+20  23/ 59/ 18             Smartbomb 4.1     Devin Kilminster      87       1
+21   0/ 45/ 55                   wipe-me              Richard      55       0
+21   5/ 61/ 34                 ImpBuster          Gil Richard      50       0
+21   5/ 80/ 15               Smartbomber          Gil Richard      29       0
+21   7/ 88/  5 The Full-Auto Hopsplat Gu          Gil Richard      26       0
+21   8/ 75/ 17                     Clamp          Gil Richard      40       0
+21  12/ 81/  7                      Tank        Mark Tuempfel      43       0
+21  13/ 73/ 14                   A Dwarf          Gil Richard      53       0
+21  13/ 85/  2                       xxx                  AMP      42       0
+21  13/ 86/  1                       NO3                  AMP      40       0
+21  14/ 78/  9                 cascade 1        Steve Gunnell      49       0
+21  29/ 33/ 38          Yop La Boum v2.2          P.E.M & E.C     124       0
+21  20/ 52/ 18    Looks Like Lines to Me       Steven Morrell     107       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+More and more fighters are going to a 2-pass spl/dat core-clear,
+filling the entire core with spl-zero then wiping it with dat's.
+Of the warriors on KotH: SJ-4a, Winter Werewolf 3, and Blitzkrieg all
+claim to be using a double core-clear (tho' maybe that's what S. Morrell
+means by "my sister-in-law is having twins" :-).  And these are proving
+to be some very tough hombres.
+
+Here is one way to set up a spl/dat core-clear:
+
+db      dat <c1-ptr2-1,#0  ; <- core-clear dat bomb, also imp-gate
+        dat #0
+        dat #0
+ptr1    dat #c1            ; <- move from this pointer
+c1      spl 0,<-ptr2       ; <- core-clear spl bomb, also imp-gate
+c2      mov @ptr1,<ptr2    ; <- does all the moves
+c3      jmp -1             ;
+ptr2    dat <db-5          ; <- move to this pointer
+        end c1
+
+Notice that c2 is doing all the moves, based on two pointers.  The first
+pass is as shown, moving c1 through core, until it overwrites ptr2.
+Then our code looks like this:
+
+db      dat <c1-ptr2-1,#0  ;
+        dat #0
+        dat #0
+ptr1    dat #c1            ;
+c1      spl 0,<-ptr2       ;  spl 0,-3
+c2      mov @ptr1,<ptr2    ;  mov @-2,<2
+c3      jmp -1             ;  jmp -1
+ptr2    spl 0,<c1          ;  spl 0,-3
+
+The next move decrements ptr2 and overwrites ptr1:
+
+db      dat <c1-ptr2-1,#0  ;
+        dat #0
+        dat #0
+ptr1    spl 0,<-3          ;  spl 0,-3
+c1      spl 0,<-ptr2       ;  spl 0,-3
+c2      mov @ptr1,<ptr2    ;  mov @-2,<2
+c3      jmp -1             ;  jmp -1
+ptr2    spl 0,<c1          ;  spl 0,-4
+
+>From here the program moves the dat-bomb at db through core until it
+overlays c2, turning the spl-0 and dat < into an imp-gate:
+
+db      dat <c1-ptr2-1,#0  ;
+        dat #0
+        dat #0
+ptr1    spl 0,<-3          ;
+c1      spl 0,<-3          ;  <- imp-gate
+c2      dat <-4,#0         ;  <- imp-gate
+c3      dat <-4,#0
+ptr2    dat <-4,#-2
+
+As always this works best if parts of the above code can serve double duty
+during the previous phase(s) of your program.  In particular, ptr2 can be
+any instruction, not necessarily 'dat'.  And there's room for some code
+between ptr1 and c1.
+
+The spl-dat core-clear is very effective against replicators, and the
+resulting gate deters the standard imp-spiral.  There is also an insidious :-)
+affect on Cannonade-style gate-busting spirals.  The 2-pass clear seems
+to gum up the works on putting the gate-passing code beyond the gate.  Yuck!
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

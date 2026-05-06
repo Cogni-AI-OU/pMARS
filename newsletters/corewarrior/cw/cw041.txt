@@ -1,0 +1,204 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 41                                                        August 5, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of my hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+______________________________________________________________________________
+Greetings.
+
+Another very quiet week; summer, Olympic games and Pizza down for the week
+end are the main causes. Thos implemented the test option to challenge the
+hill without aging it. From now on aging will become harder and harder
+
+--Beppe Bezzi
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  37.0/ 20.6/ 42.4           unrequited love                kafka 153.5   13
+ 2  44.0/ 35.9/ 20.2                     Probe        Anton Marsden 152.0   93
+ 3  46.8/ 42.6/ 10.6                  Q^2 Miro         Anders Ivner 151.0  143
+ 4  37.7/ 24.8/ 37.5              Simple v0.4b          Ian Oversby 150.7   44
+ 5  43.8/ 39.7/ 16.5                 Goldfinch              P.Kline 147.9   34
+ 6  44.1/ 40.6/ 15.3                    Blur 2        Anton Marsden 147.6   92
+ 7  28.9/ 12.6/ 58.5      Return Of The Jedimp             John K W 145.2   81
+ 8  40.7/ 36.8/ 22.5                T.N.T. pro    Maurizio Vittuari 144.6  811
+ 9  43.0/ 41.6/ 15.4           Earthquake v0.2         Bjoern & Ian 144.4   50
+10  43.0/ 41.9/ 15.1                 myVamp5.4             Paulsson 144.1  141
+11  43.5/ 43.1/ 13.4                      Mist              P.Kline 143.8   33
+12  40.7/ 37.8/ 21.4                      Test        Anton Marsden 143.7    3
+13  41.8/ 41.1/ 17.1                   Harmony              P.Kline 142.5   58
+14  31.8/ 21.6/ 46.5                   Rosebud                Beppe 142.0  766
+15  27.7/ 14.2/ 58.1                    ompega       Steven Morrell 141.2  208
+16  39.0/ 38.8/ 22.2                 Yogi Bear              P.Kline 139.2  297
+17  32.9/ 29.2/ 37.9                 Pulp v0.2          Ian Oversby 136.6  188
+18  29.3/ 22.4/ 48.3                 Armory II             John K W 136.2  232
+19  38.3/ 40.6/ 21.1 Paper, Scissors and Stone        David van Dam 136.1  221
+20  39.7/ 43.5/ 16.8                   Test Sc          Ian Oversby 135.8    1
+21  38.7/ 41.9/ 19.5                   Twister          Beppe Bezzi 135.5  547
+22  31.0/ 30.8/ 38.1        Jack in the box II          Beppe Bezzi 131.3  450
+23  26.9/ 24.5/ 48.5    Ties, Ties, Ties! (+3)   Ross Morgan-Linial 129.4   10
+24  28.3/ 29.2/ 42.5      Forked Lightning 2.0       Philip Kendall 127.3   26
+25   4.0/  0.0/  0.0                 Dura v0.1          Ian Oversby  12.0  122
+
+Weekly age: 26 ( 7 last week, 31 the week before )
+New warriors: 4 Turnover/age rate 15%
+Average age:   186 ( 176 last week, 191 the week before )
+Average score: 137 ( 141 last week, 137 the week before )
+The top 25 warriors are represented by 13 authors: Oversby with 5(5.5 :-);
+Kline with 4;  Bezzi and Marsden with 3; JKW with 2.
+
+King Report: Blur 2 at the beginning, then Simple until Kafka showed down
+with unrequited love. Few challenges this week too.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  34.3/ 17.8/ 47.9           unrequited love                kafka 150.7    1
+ 6  39.8/ 38.0/ 22.2                      Test        Anton Marsden 141.7    1
+19  38.7/ 43.8/ 17.5                   Test Sc          Ian Oversby 133.6    1
+24  22.4/ 22.3/ 55.2    Ties, Ties, Ties! (+3)   Ross Morgan-Linial 122.5    1
+
+A new King: unrequited love.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  25.3/ 29.5/ 45.2           unrequited love                kafka 121.1    3
+26  32.3/ 42.2/ 25.5                Scimitar 2              P.Kline 122.5  139
+26  29.5/ 41.6/ 28.9                    airBag             Paulsson 117.3  126
+26   2.5/  0.3/  1.2          blue flame c1/10       bjoern guenzel   8.7   72
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 8  40.7/ 36.8/ 22.5                T.N.T. pro    Maurizio Vittuari 144.6  811
+14  31.8/ 21.6/ 46.5                   Rosebud                Beppe 142.0  766
+21  38.7/ 41.9/ 19.5                   Twister          Beppe Bezzi 135.5  547
+22  31.0/ 30.8/ 38.1        Jack in the box II          Beppe Bezzi 131.3  450
+
+Nothing new from the front.
+Yogi Bear is very near, TNT is in good shape, Twister and Jack are suffering.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+19  T.N.T. pro             Maurizio Vittuari  811 *  Bomber
+20  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+21  Blue Funk 3            Steven Morrell     766    Stone/ imp
+21  Rosebud                Beppe              766*  Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+T.N.T. pro climbs a slot and Rosebud two, pairing Blue Funk 3.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  53.7/ 24.2/ 22.0                    Yet 4b           Justin Kao 183.2   80
+ 2  50.8/ 23.6/ 25.6           Versatility 1.5   Ross Morgan-Linial 178.0   70
+ 3  51.2/ 25.6/ 23.2                  Ick v1.5           Justin Kao 176.8   26
+ 4  52.9/ 31.3/ 15.8               T-1 w/decoy                 Ross 174.5    7
+ 5  48.6/ 29.4/ 22.0          Velveeta Shift-F                 shar 167.9   78
+ 6  46.6/ 36.1/ 17.3                       T-1                 Ross 157.2   15
+ 7  39.1/ 22.3/ 38.6               Inferno 1.0       Philip Kendall 151.3   93
+ 8  41.4/ 33.1/ 25.4             Vampirism 1.2       Philip Kendall 149.8    1
+ 9  37.1/ 28.8/ 34.1                  (-:  :-)                 Ross 145.4    3
+10  36.6/ 31.0/ 32.3               TIE Fighter                 Ross 142.2    2
+11  28.8/ 19.6/ 51.6            Microsoft v1.0           Justin Kao 138.0   36
+12  27.0/ 18.3/ 54.7    Ties, Ties, Ties! (+3)                 Ross 135.6   16
+13  32.6/ 31.5/ 36.0              Together 0.3       Ilmari Karonen 133.6    4
+14  21.0/ 16.4/ 62.7              more testing            Anonymous 125.6   64
+15  19.4/ 13.6/ 67.0            Nematode v1.4b       Jonathan Stott 125.2   77
+16  17.0/ 13.7/ 69.3            Nematode v1.4e       Jonathan Stott 120.2   44
+17  19.9/ 31.5/ 48.6                 Fork 4/13    Christoph C. Birk 108.2   97
+18   9.5/ 30.1/ 60.4            silkstomp v2.i             harleyQ2  88.8   12
+19   5.8/ 26.2/ 68.0               Ties Engine                 Ross  85.4    5
+20   8.4/ 32.6/ 59.1                Mama's Boy     Robert J. Street  84.2   58
+21   8.5/ 50.4/ 41.1                Kill Wasps                 Ross  66.5    6
+22  10.3/  4.0/ 13.6         Ties and Wasps -s   Ross Morgan-Linial  44.7   27
+23   9.9/  7.1/  3.0              Together 0.2       Ilmari Karonen  32.7   13
+24   9.9/  7.2/  2.9                  Together       Ilmari Karonen  32.6   21
+25   6.8/  3.5/  1.7             TIE Fighter B                 Ross  22.0   19
+
+26 challenges; Yet is always King.
+______________________________________________________________________________
+The Hint
+
+Sorry no hint this issue.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

@@ -1,0 +1,441 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 36                                                         July 1, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar fpt site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+______________________________________________________________________________
+Greetings.
+
+At least some of the hill changes have been implemented at Pizza.  Check out
+all the spiffy decimals on the hill reports for greater precision.  Apologies
+to our European players who prefer commas.  It will definitely take some
+getting used to.  If you have any comments or requests for new features,
+mail them to Thos at <sd@ecst.csuchico.edu>.  In case you missed them, I have
+kept the 'New Pizza Features' seen in the last issue.
+
+Personally, I was hoping the ;test option could be used to fight individual
+warriors in addition to challenging the entire hill.  Otherwise, I fully
+support all the changes proposed.
+
+Just a reminder that the 'limited process hill' is open.  Send your warriors
+to <koth@wastedyouth.us.itd.umich.edu> with a ;redcode-94lp header.  To get
+more information, send an e-mail with a subject line of 'help' (no quotation)
+marks to the above address.  Thanks to J K Lewis and Andrew Fabbro for their
+work on the new hill.
+
+Next week, we will have a very special issue brought to you by Anton Marsden.
+Check out some of his work in this week's hint.
+
+Before anyone yells at me, I just noticed that the hill reports Bezzi has
+been feeding me are _very_ out of order my apologies for any confusion.  It's
+not Beppe's fault.  I need to get back on the hill soon.
+
+--M R Bremer
+______________________________________________________________________________
+New Pizza features
+
+ o Remove self fights on all hills that use pspace.
+
+ o Add the "test" command to decrease artificial aging of the hill.
+   I think the best (and easiest) way to do this would be as an
+   argument to the ";redcode" command like "quiet" and "verbose" are
+   now.  ";redcode test" would challenge all the warriors on the hill
+   (only 100 times?), but the results would be discarded.  This way
+   you could see how your changes affect your performance against all
+   the warriors on the hill, but you get the results back twice as
+   fast.
+
+ o Add the ";password" command, to make it harder to forge ";kill"
+   commands.
+
+ o Make ";name" commands mandatory, and make blank ";kill" commands
+   illegal.
+
+ o Add the ";url" and ";show" commands for web access.  ";url" is
+   pretty much self explanatory, but ";show" will be used to customize
+   how much info on your warrior you want to make public.  "[no]source"
+   and "[no]score" are two possible arguments to add.
+
+ o Add the ";change [warrior name]" command to allow you to change info
+   in your warrior without having to kill it and resubmit it.  If you
+   wanted to make it "quiet" while you go on vacation, or change the
+   ";url", just send one piece of mail with ";change" in it.  This would
+   do a substring match like ";kill", and any other commands in the mail
+   would be changed in the warrior.  Does this make sense?
+
+Any other ideas, or comments on the above proposals?
+
+Thos
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  42.8/ 39.9/ 17.3                    Blur 2        Anton Marsden 145.7    2
+ 2  41.7/ 41.8/ 16.5                 myVamp5.3             Paulsson 141.5   11
+ 3  37.6/ 34.3/ 28.1                   Goliath        David van Dam 140.9    3
+ 4  38.8/ 38.0/ 23.3                 Yogi Bear              P.Kline 139.5   59
+ 5  40.4/ 43.9/ 15.7                 Goldfinch              P.Kline 137.0    4
+ 6  37.4/ 39.4/ 23.2                   Twister          Beppe Bezzi 135.5  309
+ 7  36.0/ 37.3/ 26.7                T.N.T. pro    Maurizio Vittuari 134.8  573
+ 8  36.0/ 37.5/ 26.5                      test            Anonymous 134.6   20
+ 9  35.8/ 37.9/ 26.3               Thermite II        Robert Macrae 133.6 2194
+10  26.7/ 20.1/ 53.2             blue flame c2       bjoern guenzel 133.3   23
+11  32.0/ 31.2/ 36.8               Simple v0.3          Ian Oversby 132.9   14
+12  34.2/ 35.7/ 30.1               Jo Clark II          Ian Oversby 132.8  213
+13  30.0/ 27.2/ 42.8        Jack in the box II          Beppe Bezzi 132.8  212
+14  29.1/ 26.8/ 44.1                 Armory II             John K W 131.3   48
+15  29.1/ 27.1/ 43.8            the historian        bjoern guenzel 131.1  328
+16  38.7/ 46.3/ 15.0            Stepping Stone          Kurt Franke 131.1 1007
+17  19.1/  7.2/ 73.7             The Avalanche       John Wilkinson 131.0   78
+18  27.6/ 24.6/ 47.9               blue candle       bjoern guenzel 130.6  442
+19  25.5/ 20.6/ 53.9                   Rosebud                Beppe 130.5  528
+20  32.7/ 35.5/ 31.8                      test             Maurizio 130.0  253
+21  29.3/ 29.3/ 41.3                 Pulp v0.1          Ian Oversby 129.3   12
+22  22.4/ 16.0/ 61.6                      test    Maurizio Vittuari 128.7    7
+23  36.7/ 46.1/ 17.2             HopScotch 1.6        Robert Macrae 127.3  322
+24  19.4/ 11.7/ 68.9                    ompega       Steven Morrell 127.1  206
+25  35.0/ 44.8/ 20.2                    Yet 3c           Justin Kao 125.1    1
+
+Weekly age: 56 ( 108 last week, 67 the week before )
+New warriors: 11  Turnover/age rate 20%
+Average age:    275 ( 296 last week, 269 the week before )
+Average score:  133 ( 127 last week, 133 the week before )
+The top 25 warriors are represented by 13 authors: Vittuari, Bezzi, guenzel,
+and Oversby with 3 (hogs), and Kline, Macrae, and JKW with 2.
+
+King Report:  Blur 2 has had a commanding hold on the hill, but there were
+a few surprises this week.  Miro by Ivner popped up into first place on its
+second submission, and just as quickly, he killed it from the hill.
+Interesting strategy.  blue flame by guenzel also appeared briefly in the
+king position.  blue flame c2 is already out, but at the less prestigious
+position of 10th place.  Kline had both Goldfinch and Yogi Bear on top at
+times, but that's no real surprise there.  I would hazard a guess that Kline
+has had more different warriors on top of the '94 hill than any current
+author on the hill.  I could be wrong though . . .
+
+Speaking of Kline:  his test retinA was seen on the hill tying over 80% when
+paired with mirrored imps.  One reason I find replicators so frustrating is
+that they can't win massively against any other warrior.  I believe Evol Cap
+used separate bombers to help gain some wins.  However, as a p-component,
+papers do take losses and turn them into ties.
+
+Heavy pspacer Armory II and Goliath are doing well.  Goliath did have Scan
+Man, Bomber Boy, and a move bomber in it, but a test with Goliath's brain
+and three basic warriors called 'Paper, Scissors, and Stone' actually scored
+a bit higher when it was submitted aginst the hill.
+
+There are lots of pspacers and imp heavy programs on the hill.  If you want
+to make it on, you could utilize a quick scan (but not as effective with the
+new qscan detection system) or be extremely imp hostile.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 7  27.2/ 20.0/ 52.7             blue flame c2       bjoern guenzel 134.4    1
+ 8  36.7/ 38.4/ 25.0                      test            Anonymous 134.9    1
+13  25.8/ 22.2/ 52.0                 Armory II             John K W 129.3    1
+ 1  41.7/ 40.6/ 17.7                    Blur 2        Anton Marsden 142.7    1
+ 3  41.7/ 42.6/ 15.6                 Goldfinch              P.Kline 140.8    1
+ 4  37.0/ 34.9/ 28.1                   Goliath        David van Dam 139.2    1
+ 4  41.7/ 41.7/ 16.7                 myVamp5.3             Paulsson 141.7    1
+24  28.6/ 29.9/ 41.5                 Pulp v0.1          Ian Oversby 127.4    1
+16  30.8/ 29.6/ 39.6               Simple v0.3          Ian Oversby 132.1    1
+22  22.0/ 15.1/ 62.9                      test    Maurizio Vittuari 129.0    1
+25  35.0/ 44.8/ 20.2                    Yet 3c           Justin Kao 125.1    1
+
+Half of the top ten warriors are, again, new submissions.  Although most are
+slight tweaks on old versions.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  31.2/ 35.4/ 33.5                * Satura *       bjoern guenzel 127.0   12
+26  22.2/ 17.7/ 60.3             Hazy Shade II             John K W 126.8 1102
+26   1.6/  2.0/  0.4                    Blur 2        Anton Marsden   5.0    6
+26   2.1/  1.7/  0.1                 Goldfinch              P.Kline   6.4   11
+26   1.3/  1.6/  1.0                   Goliath        David van Dam   4.9   43
+26   1.2/  1.2/  1.6                 myVamp5.1             Paulsson   5.0   53
+26  31.0/ 35.0/ 34.2              Thalamus mod                Edgar 127.0  203
+26   2.0/  1.1/  4.6              rhodium v1.3   Martin M. Pedersen  10.6   64
+26  29.8/ 37.9/ 32.3          Scotch Broth 1.2        Robert Macrae 121.8   98
+26   0.3/  0.7/  2.9                    test E              P.Kline   3.8   19
+26   0.2/  0.2/  3.6                 test jb21          Beppe Bezzi   4.1   15
+
+Hazy Shade II is dead.  JKW is in mourning, evidenced by his Armory
+submissions . . .
+
+A challenger has arrived on the ICWS '94 Draft hill!  Vital statistics:
+Program "Armory II" (length 100) by "John K W"
+(contact address "jwilkinson@mail.utexas.edu"):
+;strategy Alas, poor Hazy, I knew thee well...
+
+The loss of Edgar's Thalamus mod pushed him completely off the hill.
+Hopefully he will have a new one on the '94 hill soon.
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 9  35.8/ 37.9/ 26.3               Thermite II        Robert Macrae 133.6 2194
+16  38.7/ 46.3/ 15.0            Stepping Stone          Kurt Franke 131.1 1007
+ 7  36.0/ 37.3/ 26.7                T.N.T. pro    Maurizio Vittuari 134.8  573
+19  25.5/ 20.6/ 53.9                   Rosebud                Beppe 130.5  528
+18  27.6/ 24.6/ 47.9               blue candle       bjoern guenzel 130.6  442
+15  29.1/ 27.1/ 43.8            the historian        bjoern guenzel 131.1  328
+23  36.7/ 46.1/ 17.2             HopScotch 1.6        Robert Macrae 127.3  322
+ 6  37.4/ 39.4/ 23.2                   Twister          Beppe Bezzi 135.5  309
+
+Stepping Stone breaks the 1000 mark, the first vampire to do so.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2194 *  Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1007 *  Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  Barrage                Anton Marsden      876    Qscan -> replicator
+17  Blue Funk              Steven Morrell     869    Stone/ imp
+18  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+19  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+20  Blue Funk 3            Steven Morrell     766    Stone/ imp
+21  Night Train            Karl Lewin         755    Replicator
+22  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+23  Blizzard               Anton Marsden      713    Qscan -> replicator
+24  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+25  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+
+Thermite II continues on, yaddah, yaddah--the thing is like the Energizer
+Bunny.  Qscan detectors are a definite threat though and someone has a anti-
+qscan qscan, whatever that is.  But Thermite seems to be holding it's own,
+even with the wave of new blood entering the hill.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  52.4/ 29.1/ 18.5           Versatility 1.2   Ross Morgan-Linial 175.7   58
+ 2  53.9/ 33.3/ 12.8                Syzygy 1.0       Philip Kendall 174.5   43
+ 3  53.6/ 34.2/ 12.2             Saboteur 0.4k                 shar 173.0    1
+ 4  52.7/ 34.3/ 13.0                    Yet 3c           Justin Kao 171.0   39
+ 5  49.6/ 35.3/ 15.1             Phoenix Alpha       Andy Nevermind 163.9   44
+ 6  51.0/ 38.8/ 10.2            Saboteur v0.3p                 shar 163.3   65
+ 7  50.8/ 39.3/ 10.0                  Thalamus                Edgar 162.2   91
+ 8  48.8/ 36.1/ 15.1             Sandwich Bags       Andy Nevermind 161.4   32
+ 9  46.2/ 43.2/ 10.6               3-clear 0.6       Ilmari Karonen 149.1   66
+10  45.6/ 44.2/ 10.2       Not Very Pretty 2.0   Ross Morgan-Linial 147.1   89
+11  45.1/ 43.6/ 11.3                    Yet 3a           Justin Kao 146.6   40
+12  41.6/ 37.5/ 20.9                 Antivenin                 Ross 145.7   31
+13  40.3/ 37.9/ 21.8                      test           Justin Kao 142.8   55
+14  43.5/ 44.2/ 12.2        Switch Hitter 0.3t   Ross Morgan-Linial 142.8   70
+15  34.4/ 26.4/ 39.2             Cannon Fodder           I. Karonen 142.3   45
+16  31.6/ 20.9/ 47.5        Ties, Ties, Ties!+                 Ross 142.2   10
+17  25.4/  9.5/ 65.1            Nematode v1.3c       Jonathan Stott 141.3   25
+18  41.0/ 41.0/ 18.0               3-clear 0.5           I. Karonen 141.0   80
+19  42.3/ 46.2/ 11.5                 hyper 1.0                 Ross 138.5   63
+20  28.8/ 20.0/ 51.2         Ties, Ties, Ties!                 Ross 137.7   28
+21  30.8/ 27.3/ 41.9                 Avenger I       Oliver Fechner 134.2   62
+22  32.2/ 42.4/ 25.4             Utility Knife     Robert J. Street 122.1    2
+23  19.8/ 60.4/ 19.8                   WarHawk     Robert J. Street  79.1    7
+24  23.1/ 70.8/  6.2                 Kevorkian     Robert J. Street  75.4    5
+25   3.8/  0.0/  0.0 1234567890123456789012345            Anonymous  11.5   17
+
+Versatility is still on top.  With strong components from '94 hill warriors,
+this code should live up to its name.
+
+Syzygy 1.0 is a scan/spl carpet to spl/dat clear.  Is the scan one shot or
+repetitive.  Check out this week's hint.  Blur utilizes a scan/carpet -->
+spl/dat clear.
+
+Lots of pspace and core clear warriors.  Make sure you check out the latest
+and greatest core clear innovation.  d-clear by guenzel is a dat/djn clear
+wiping at 1.0c.  It makes a great p-component, especially if you can get it
+a spl clear tacked onto it without increasing the length (I'm trying).
+______________________________________________________________________________
+The Hint
+
+I suppose this should be an Extra Extra and not a Hint, but if I had any good
+hints, I would be on the hill right now.
+------------------------------------------------------------------------------
+The Mirage/Blur Scanner Series
+by Anton Marsden
+
+Mirage 1.5 was my first successful warrior. It was a 33% scanner with
+continuous 33% carpet in the scanning loop. It did quite well against
+imp-type warriors and papers but was thrashed by bombers. I wrote several
+similar warriors similar to Mirage 1.5 and didn't want to publish them
+immediately - I was still experimenting. But now I'm quite happy with my
+latest version and have decided to release them all now, including the Hill
+version. I haven't included the booting code and decoy but they're nothing
+special. If there's enough demand for the full versions I'll post them in the
+newsgroup at a later date.
+
+Mirage 2 was based on the same technique as Mirage 1.5 but used a SEQ scan.
+Here is Mirage 2:
+
+;redcode-94
+;name Mirage 2
+;author Anton Marsden
+;strategy Faster version, boot and decoy, no pspace
+;assert CORESIZE==8000
+;kill Mirage 2
+
+ORG scan
+step EQU 3024; mod-16
+
+ptr:  dat.f  >0,$step
+      dat.f  >0,$btm-ptr+3
+cc:   spl.a  #1,$btm-ptr+4
+top:  mov.i  $cc,>ptr
+scan: seq.i  $2*step+8,$2*step
+      mov.b  $scan,$ptr
+a:    add.f  $inc,$scan
+      jmn.b  $top,$scan
+inc:  spl.a  #step,>step
+      mov.i  @1,>ptr
+btm:  djn.b  $-1,{cc
+
+This warrior had several weaknesses, the major one being that it was only
+a mod-8 scan. I knew that mod-5 was achievable (and also mod-4) but had the
+disadvantage that the locations scanned would be only 5 apart (not exactly
+optimal!).
+
+As Mirage 2 slowly made its way off the Hill I was wrote a mod-5 version and
+named it Blur (two versions is enough for me!):
+
+;redcode-94
+;name Blur
+;author Anton Marsden
+;assert CORESIZE==8000
+;strategy 0.5c scan, 0.25c carpet -> SPL/DAT core clear
+;strategy Mirage 2 with a better step and some other changes.
+;strategy This product is PSpace Free :-)
+;kill Blur
+
+ptr:  dat.f  $0,$step+5
+      dat.f  $0,$0
+      dat.f  $0,$0
+      dat.f  >0,#btm-ptr+3
+cc:   spl.i  #0,#btm-ptr+3     ; DJN stream protection
+top:  mov.i  $cc,>ptr          ; Putting this line here enhances protection
+scan: seq.i  $2*step,}2*step+5 ; A-indirect ensures B field is attacked with
+      mov.b  $scan,$ptr        ; no delay. Also leaves decoy for scanners
+a:    add.f  $inc,$scan
+      jmn.a  $top,$scan        ; Falls through when all locations scanned
+inc:  spl.a  #step,>step
+      mov.i  @1,>ptr
+btm:  djn.b  $inc+1,{cc
+
+The A-indirect scan improved Blur's score against bombers but left "bombs" in
+core that a decent dodger could take advantage of.
+
+One of the things I had discovered about all these scanners was that if the
+mod step in the scan was sufficiently good (ie. enough scans were done) then
+there was no need for a SPL/DAT core clear against non-imp warriors. Then I
+found the perfect clear for Blur - DAT/DJN (dclear?). I added this to Blur
+and made a few more adjustments and came up with Blur 2:
+
+;redcode-94
+;name Blur 2
+;author Anton Marsden
+;assert CORESIZE==8000
+;strategy 0.5c scan, 0.25c SPL carpet -> DAT/DJN clear
+;strategy Final version (for a while)
+;kill Blur
+
+ORG scan
+step EQU 70; mod-10
+gate EQU top
+
+ptr:  mov.i  $inc+1,>step ; New DJN protection... better than a SPL?
+top:  mov.i  $inc,>ptr    ;                       Or worse?
+scan: seq.i  $2*step+5,$2*step
+chg:  mov.b  $scan,@top
+a:    add.f  $inc,$scan
+      djn.b  $top,#800
+inc:  spl.i  #step,#step
+      mov.i  $clr,>gate
+btm:  djn.f  $-1,>gate
+clr:  dat.f  <1,#clr-gate+2
+
+Note on booting: The decoy and boot code was aligned such that Blur didn't
+attack it's old code at all.
+
+There are many variations on the basic engine I have tried and probably a
+few that I haven't. Can you improve on it?
+
+Things to try:
+- different gap, eg. seq.i  $2*step+15,$2*step, mod-5 scan
+- different (ptr-scan) offsets
+- psuedo mod-1 scan using A/B indirect scanning, eg.
+
+   top:  mov.i  $BOMB,>ptr ; bomb should probably be spl #0,0
+   scan: seq.F  $2*step,}2*step+5 ; could also try seq.f >2*step,}2*step+5
+         mov.b  $scan,$ptr
+   a:    add.f  $inc,$scan
+         djn.b  $top,#0
+   inc:  spl.i  #step,#step
+         mov.i  $clr-10,>gate; A field incremented 10 times in 8000 loops
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>

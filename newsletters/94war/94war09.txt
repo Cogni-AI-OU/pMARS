@@ -1,0 +1,207 @@
+__ __| |            ) _ \  |  |    \ \        /              _)
+   |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+   |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+  _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+June 21, 1994                                                         Issue #9
+______________________________________________________________________________
+
+This newsletter covers the current status of the ICWS '94 Draft hills,
+and also attempts to keep up with the latest ideas in how the new standard
+will affect corewars in general.  I hope you enjoy it!
+
+If you are unfamiliar with the '94 draft standard, you can learn more about
+it by reading the FAQ for this newsgroup.  In addition, the program pMARS
+includes a highly recommended tutorial on the new standard.  Feel free
+to send me e-mail if you have any difficulty finding either of them, if you
+need to have a corewar item mailed to you, or if you have any other questions.
+
+The FAQ is available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z
+______________________________________________________________________________
+
+CHANGES and CORRECTIONS:
+
+A new version of pMARS has been released.  The latest version of pMARS now
+has A-field indirection, and encourages the use of the ";assert" command
+to make sure that the hill you are running your program on is adequate.
+You can get it through anonymous FTP to soda.berkeley.edu.
+
+I also owe Michael Constant an apology.  Sauron was removed (killed) by it's
+owner, rather than being pushed off of the '94 draft hill -- as I stated
+in the last issue of _The_'94_Warrior_.
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 34/ 21              Pyramid v5.5     Michael Constant     155      89
+ 2  45/ 36/ 18              Keystone t33              P.Kline     154     111
+ 3  40/ 27/ 33                  Torch t5              P.Kline     154       4
+ 4  36/ 23/ 40                    Sasami                T.Hsu     150      24
+ 5  38/ 34/ 27               Stimpy v2.0     Brant D. Thomsen     143      40
+ 6  39/ 37/ 23               Christopher       Steven Morrell     141     232
+ 7  30/ 19/ 51                      Aeka                T.Hsu     141       1
+ 8  31/ 22/ 47                 Cannonade              P.Kline     141     169
+ 9  39/ 38/ 23              Request v2.0     Brant D. Thomsen     141     342
+10  30/ 19/ 51                 Blue Funk       Steven Morrell     140     311
+11  30/ 20/ 51              Insight v1.0     Brant D. Thomsen     139      31
+12  41/ 44/ 14             Iron Gate 1.5       Wayne Sheppard     138     288
+13  30/ 22/ 48               B-Panama IX       Steven Morrell     138      39
+14  42/ 47/ 11                  Rave 4.1        Stefan Strack     137     276
+15  39/ 41/ 20               Sauron v6.0     Michael Constant     137      35
+16  35/ 32/ 33                   mmfP v2           Karl Lewin     137      42
+17  32/ 28/ 41                   Lucky 3        Stefan Strack     136     304
+18  40/ 44/ 16              Dragon Spear             c w blue     136     344
+19  30/ 24/ 46                     NC 94       Wayne Sheppard     136     324
+20  38/ 42/ 20                  Aleph 0+              Jay Han     135      21
+
+The top three programs are still Pyramid, Keystone, and Torch.  However, there
+is a new entry that seems to be giving them some stiff competition.
+Sasami, by T. Hsu, was submitted to the hill a few days ago, and has been
+clinging to fourth place ever since.  The rest of the hill, as far as I can
+tell, is total chaos.  I have a feeling that the next couple of weeks will
+be really interesting -- especially as more programs are submitted that take
+advantage of the latest pMARS additions.
+
+The current ICWS '94 Draft hill on "Stormking":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 29/ 26               Sauron v3.6     Michael Constant     160       1
+ 2  41/ 27/ 32           Killer instinct         Anders Ivner     155      24
+ 3  36/ 21/ 43         Twimpede+/8000-d1              Jay Han     150      14
+ 4  44/ 38/ 17               Ntttgtstitd         Simon Hovell     150      25
+ 5  43/ 38/ 19              Request v2.0     Brant D. Thomsen     148      17
+ 6  34/ 21/ 44                   Lucky 3        Stefan Strack     147      12
+ 7  35/ 23/ 42                     NC II       Wayne Sheppard     147      79
+ 8  35/ 25/ 40               Sphinx v5.1         W. Mintardjo     145      82
+ 9  43/ 41/ 17            Sylvester v1.0     Brant D. Thomsen     144      61
+10  29/ 19/ 53                      ttti        nandor sieben     139      35
+11  32/ 26/ 42        JustTakingALookSee            J.Layland     138      78
+12  31/ 24/ 45                     Snake       Wayne Sheppard     138      34
+13  43/ 47/ 10                  Rave 4.1        Stefan Strack     138       7
+14  39/ 40/ 21                      tiny            J.Layland     138      59
+15  29/ 20/ 51                    ttti94        nandor sieben     137      30
+16  39/ 42/ 19       Beholder's Eye v1.7         W. Mintardjo     137      91
+17  38/ 42/ 19               Christopher       Steven Morrell     135      23
+18  39/ 43/ 18                      SJ-4            J.Layland     134      28
+19  37/ 43/ 20            Fast Food v2.1     Brant D. Thomsen     131      37
+20  35/ 40/ 26                    pepper              P.Kline     129       6
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental (Big) hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  50/ 34/ 16                  ivscan6b            J.Layland     165      17
+ 2  49/ 33/ 18             Request-55440     Brant D. Thomsen     164     153
+ 3  49/ 35/ 17              Pyramid v5.3     Michael Constant     163      44
+ 4  37/ 18/ 46                   Aleph 1              Jay Han     156      15
+ 5  42/ 34/ 24               Stimpy v2.0     Brant D. Thomsen     151       8
+ 6  36/ 27/ 37             Variation G-1              Jay Han     145     117
+ 7  41/ 38/ 21                   Aleph 0              Jay Han     145      16
+ 8  42/ 41/ 17                     Fscan              Jay Han     142       1
+ 9  32/ 25/ 43              NotSoBigImps        James Layland     140      13
+10  38/ 37/ 25                      Lump            J.Layland     139      98
+11  39/ 39/ 22                Vanity IIx        Stefan Strack     138     108
+12  43/ 47/ 10                 Rave B4.1        Stefan Strack     138     114
+13  32/ 27/ 41 Der Zweite Blitzkrieg - 9      Mike Nonemacher     138     115
+14  31/ 25/ 43                 Blue Funk       Steven Morrell     137       7
+15  42/ 46/ 12                    Squint      Mike Nonemacher     137      91
+16  33/ 31/ 35                  Lucky 13        Stefan Strack     135     159
+17  42/ 48/ 10                 Plasma v5       Wayne Sheppard     135      55
+18  31/ 32/ 37            Sasami / 55440                T.Hsu     131       3
+19  30/ 30/ 39                  Splash 1              Jay Han     130     118
+20   7/  2/  0                     Fscan              Jay Han      21       2
+
+Not too much is happening on the big hill at the moment.  I've noticed that
+the intensity tends to switch between the '94 draft and the '94 experimental
+hills.  Then again, perhaps it's just summer break.
+
+The current ICWS '94 Experimental (Big) hill on "Stormking":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 12/ 40             Variation M-1              Jay Han     184       2
+ 2  46/ 30/ 24             Request-55440     Brant D. Thomsen     162      54
+ 3  40/ 20/ 40                  Lucky 13        Stefan Strack     161      20
+ 4  46/ 36/ 18                    Raiden Richard van der Brug     157       3
+ 5  45/ 35/ 19                Vanity IIx        Stefan Strack     155       8
+ 6  35/ 18/ 47              Bakers Dozen       Wayne Sheppard     153      13
+ 7  40/ 30/ 31               Sauron v2.4     Michael Constant     150       5
+ 8  30/ 15/ 55         Imperfection v2.3     Michael Constant     146      48
+ 9  36/ 31/ 33             Variation D-1              Jay Han     142      15
+10  44/ 47/ 10                 Rave B4.1        Stefan Strack     141       9
+11  42/ 46/ 12                  bigproba        nandor sieben     138      12
+12  41/ 46/ 14               Dagger v7.0     Michael Constant     136      14
+13  40/ 48/ 11                 The Count              Jay Han     132      44
+14  27/ 23/ 50                    BigImp        Alex MacAulay     132      95
+15  30/ 29/ 41         jmpWetPaper-94x-a      J.M.Pohjalainen     131       1
+16  26/ 23/ 51                   BigImps        James Layland     129     114
+17  31/ 35/ 34                Veeble Jr.         T. H. Davies     126      16
+18  28/ 37/ 34               Industrious        Stefan Strack     119       4
+19  29/ 40/ 31                 Open Arms        Stefan Strack     117       7
+20  29/ 41/ 30                      Test        Stefan Strack     116       6
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+For this issue's hint, I'd like to make some suggestions about what new
+abilities the A-field indirection in the latest pMARS release makes possible.
+(I tried to come up with examples for each of these points, but couldn't find
+any that I was really pleased with.)
+
+Probably the most obvious benefit is the enhanced ability to store information
+in the A-field of instructions.  With the increasing use of SPL #a, JMP #a,
+and MOV.I #a instructions, there are an increasing number of instructions in
+a program that can have their A-field used to store information.  Take a
+look at your old programs and see if there isn't another DAT that you can
+eliminate, or if you can now implement a SPL/DAT core-clear with that code.
+
+Another feature that is made possible by the latest enhancements to pMARS is
+that anti-vampiric code is now much easier to write.  It is no longer
+necessary to extract the A-field value from an instruction, as you can now
+simply use the value in that location as a pointer instead.  (Actually, I'm
+not that excited about having better anti-vampiric programs, since I've grown
+fond of Request over the last few months.)  I tried to take advantage of this
+ability when I submitted the program Insight to the hill, but it did much
+worse against vampires -- and better against several other programs -- than I
+expected.
+
+Along these same lines, I have the feeling that the latest changes to pMARS
+will result in more intelligent programs.  For instance, much more information
+can be found in boot-strapping code.  Instead of just being able to trace
+where MOV statements point to, the SPL and JMP statements will always be
+traceable as well.  I wouldn't be surprised if there is soon a warrior on the
+hill that uses a quick-scanner to find bootstrapping code, then tries to
+exploit any information in that code.  Now, more than ever, I think it will
+become important to spend a couple of extra instructions covering up your
+trail after you boot-strap.
+
+I have no doubt that there will be some interesting changes to the hill when
+using these new addressing modes becomes more common.  I have already found
+myself writing programs differently to account for their effects.
+______________________________________________________________________________
+
+Looking to the Future:
+
+I'd like to (again) encourage everyone to experiment around with the latest
+additions to the pMARS language.  Remember that A-field indirection, and the
+NOP and SNE instructions, have not been added to the draft of the '94
+language.  It will be your input that will be used to decide, later on,
+whether or not they will be.
+
+If you have any comments or questions about the '94 hills or the '94 draft
+standard that you think might be of general interest, please let me know.
+Also, if there are any particular topics you would like to see covered in
+future editions of _The_'94_Warrior_, please send me e-mail on that as well.
+
+Good luck, and happy computing!

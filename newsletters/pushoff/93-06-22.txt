@@ -1,0 +1,320 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               June 22, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 35/ 20         Winter Werewolf 3         W. Mintardjo     156      82
+ 2  47/ 44/  9                 Agony 6.0        Stefan Strack     150      18
+ 3  46/ 43/ 12              Dragon Spear             c w blue     148     866
+ 4  45/ 43/ 12                   Impurge     Fredrik Ohrstrom     147      88
+ 5  46/ 46/  8               Backstabber         Anders Ivner     146     315
+ 6  44/ 43/ 13            Iron Gate 1.01       Wayne Sheppard     145     592
+ 7  44/ 45/ 11           Fire Storm v1.1         W. Mintardjo     144     403
+ 8  36/ 29/ 34              FlyPaper 3.0            J.Layland     143     188
+ 9  44/ 46/ 10                    cproba        nandor sieben     142     106
+10  33/ 25/ 42                     Snake       Wayne Sheppard     142     524
+11  33/ 24/ 43                Imprimis 7              P.Kline     142       4
+12  42/ 42/ 16                   Herem V         Anders Ivner     141       6
+13  32/ 23/ 44        Incrimination v1.0     Brant D. Thomsen     141     168
+14  32/ 25/ 43             Night Crawler       Wayne Sheppard     139     764
+15  32/ 26/ 42               Sphinx v2.8         W. Mintardjo     139    1762
+16  39/ 42/ 19             Distance v6.3     Brant D. Thomsen     137     258
+17  38/ 43/ 19            Emerald 5.1000              P.Kline     132       1
+18  30/ 28/ 43           HeremPaper v0.9         Anders Ivner     132       7
+19  33/ 36/ 30                  Passport              P.Kline     130      23
+20  17/ 15/ 30                Imprimis 6              P.Kline      80    1164
+
+21   9/ 67/ 23                 Antidwarf            Phil Long      52       0
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Well, Sphinx v2.8 has probably set a new record for duration on KotH by
+the time you read this.  Congratulations!  How high can he go?  Or how
+low can he go and survive, since, like Imprimis 6, Sphinx has had the
+ho-hum-score flu lately, and has been skulking around the bottom of
+the Hill.  I got tired of watching Imprimis holding up the other
+19 players and thought I would get a jump on Mintardjo's new version
+of Sphinx by releasing Imprimis 7 early :-)
+
+Imprimis 7 puts fewer processes in the 7-point imps, and arranges to have
+a jmp -1 dropped on the core-clear routine for faster clearing (got
+that one from Moonstone :-).
+
+Meanwhile S. Strack gassed up Agony with some fresh numbers and raced
+back into the top five.  Looks good, however WM's Winter Werewolf 3
+_owns_ the number one spot (for now).
+
+Last week's Hint stirred up some interest in Vampires, and a flock
+of them assaulted the Hill, all unsuccessfully I think.  We'll see
+what happens after this weeks follow-up Hint.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 2  47/ 45/  8                 Agony 6.0        Stefan Strack     150       1
+ 7  41/ 43/ 16                   Herem V         Anders Ivner     140       1
+ 9  31/ 25/ 43                Imprimis 7              P.Kline     138       1
+ 9  39/ 42/ 19                  Herem II         Anders Ivner     137       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+17  28/ 28/ 44           HeremPaper v0.9         Anders Ivner     129       1
+18  39/ 43/ 18           Grimm's Vampyre             c w blue     134       1
+19  18/ 17/ 65            Pergament 0.32       Dan Nabutovsky     118       1
+19  40/ 51/  9                   Cleaver       Wayne Sheppard     128       1
+20   6/ 90/  4                 challange           Peter Auer      22       1
+20  15/ 51/ 35                challange2           Peter Auer      78       1
+20  16/ 35/ 49         Seventh Circle v1     Peter van Rossum      97       1
+20  28/ 30/ 42              Stoned Again             c w blue     125       1
+20  32/ 38/ 30               Integrity t              P.Kline     126       1
+20  34/ 43/ 23                 Herem III         Anders Ivner     126       1
+20  36/ 43/ 21                  Herem IV         Anders Ivner     128       1
+21   0/ 67/ 33                 multi-imp           Peter Auer      33       0
+21   0/ 92/  7                      Sufo     Fredrik Ohrstrom       8       0
+21   1/ 64/ 35           King Wannabe v0               Planar      38       0
+21   3/ 62/ 36             Double spiral            Phil Long      43       0
+21   7/ 55/ 38             SuperImp 1.1a         Jonathan Roy      59       0
+21   9/ 67/ 23                 Antidwarf            Phil Long      52       0
+21   9/ 79/ 12                multi-bomb           Peter Auer      39       0
+21  10/ 54/ 36                Expediency     Michael Constant      67       0
+21  10/ 68/ 21                       pit           Peter Auer      53       0
+21  10/ 69/ 21                  imp-gate           Peter Auer      51       0
+21  10/ 76/ 13             Bloodsucker I            Phil Long      45       0
+21  11/ 77/ 11                     Chimp            Phil Long      45       0
+21  13/ 71/ 16                 fast-bomb           Peter Auer      54       0
+21  16/ 38/ 45                multi mice        nandor sieben     94       0
+21  16/ 78/  5                   KSC 1.0     Devin Kilminster      55       0
+21  20/ 73/  7                     Genie     Michael Constant      67       0
+21  21/ 42/ 37                   Unknown            Albert Ma     101       0
+21  23/ 32/ 46       Deck of Many Things             c w blue     114       0
+21  24/ 45/ 31                 JRoy Imps              P.Kline     102       0
+21  25/ 52/ 24                     IHTFP            Albert Ma      97       0
+21  26/ 59/ 16             Little Killer            Phil Long      93       0
+21  26/ 63/ 11                 Dwarf28.2 Peter Auer and Phil       90       0
+21  27/ 62/ 11                   Dwarf52            Phil Long      93       0
+21  27/ 64/  9                   Dwarf84            Phil Long      90       0
+21  27/ 69/  4                fast-dwarf           Peter Auer      85       0
+21  29/ 52/ 19       Anti-Anti-Vamp Vamp     Michael Constant     106       0
+21  29/ 65/  6              BloodStalker     Fredrik Ohrstrom      93       0
+21  30/ 40/ 30                 Integrity              P.Kline     119       0
+21  32/ 51/ 17                  Wimp 7.0     Brant D. Thomsen     113       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Vampires - deadly opponents or patsies?
+
+The Achille's heel of Vampires is their 'fang'.  What other warrior
+puts pointers to itself all over core?  (well, imps okay, but that's
+another topic :-)  Here's what a typical fang in core looks like:
+
+    jmp a,b
+
+In reality, here's what it represents:
+
+    jmp pitlocation,-fangsource
+
+Now if we could turn either of those pointers to advantage, we
+could zero in on the vamp and squelch him.
+
+Since several of the better vampires (Sucker, Twilight Pits, and
+Grimm's Vampyre) locate the fang just after their bombing code, they
+are easily attacked by this code:
+
+         spl 0
+avamp    mov bomb,<-100
+         sub @avamp,<avamp
+
+which bombs along sequentially (prequentially?) until avamp is
+pointing at a fang.  Then it subtracts the fang from the preceding
+location (probably dat 0,0) to reverse the sign on the fang-location,
+and starts bombing every other location from the resulting offset.
+This code-fragment, all by itself, will beat Sucker 4&5 at least 90%
+of the time.
+
+CW Blue pointed out to me that the two avamp lines can be incorporated
+into paper where they also work, even though there are multiple
+processes going on.
+
+My experience has been that only a small amount of time needs to be
+devoted to avamp; if the opponent is a vampire he will create scads of
+fangs, and you will eventually find one.  Therefore in Imprimis and
+Emerald I create an anti-vamp component in core and start it running
+while the stone and imps get most of the cycles.  You can speed up the
+search for fangs by putting a
+    jmz 0,<avamp
+line ahead of the spl-0.
+
+In Passport (which is anti-imp paper) I have one kind of paper
+(well more like Gemini actually) which contains avamp while the rest
+contain anti-imp stuff.  One of the nice things about paper is that
+you can mix different kinds to deal with different opponents.
+
+Now W Sheppard introduces Snake which has the fang ahead of the
+vampire bomber, rendering avamp ineffective.  Blue suggested that
+we add a constant to the fang to sort of back it up, which may
+work - I haven't tested it yet.  After his remark about using it
+in paper, I got to thinking about using multiple processes and came
+up with this code:
+
+avptr   equ avamp-100
+        spl 1
+        spl 1   ; create 8 processes (more is good too)
+        spl 1
+loop    sub <avptr-8,avptr
+avamp   mov bomb,<avptr
+        jmp loop
+
+Which subtracts 8 consecutive locations from avptr, then bombs 8 times
+from the resulting offset.  The subtraction will pick up a fang
+and subtract it (along with 7 dat 0,0's) from avptr.  Since avptr
+is higher in core than the found-fang the bombing starts higher
+in core than the fangsource.  This code will usually kill the fang-
+bomber in Snake leaving 'only' the imps to deal with.  If you
+are using multi-process paper, you only need to incorporate the
+two lines 'loop and avamp'.
+
+In Snake 7, Wayne put the fangsource way off in core so anti-vamp
+won't kill the fang-bomber.  But this is okay if we are paper, because
+by bombing the fangsource we convert the vampire into a slow (33%)
+dat-bomber which is easily defeated.
+
+Super-antivamp takes advantage of the fang's a-operand.  Boy, will
+this get easier if the proposed draft is approved!  Here's one
+implementation, from Passport:
+(credit WMS - I think - for showing how to extract an a-operand)
+
+p2w     equ p2av-100
+        spl 1
+        mov -1,0          ; create 9 processes
+        mov -1,0
+        mov -1,0
+
+p2      mov #9,0
+        mov <p2,<p2n      ; make a new copy and start it
+p2n     spl @0,1889
+        add <p2w,p2av     ; add 9 consecutive locations to p2av
+        mov #p2w-1,p2av   ; reset p2av to point to p2w
+p2av    mov #0,p2w        ; mov the a-operand to p2w
+        mov 2,<p2w        ; start bombing from where p2w points
+        jmp -1,<p2w-1     ; keep bombing (and partial gate)
+        dat <-2667,<-5334
+
+This code makes and starts one copy of itself, then begins anti-vamp.
+It examines 9 locations for a fang, extracts the a-operand which
+is the pit-location, and starts core-clearing from there.  It does
+well against all the vampires because the pit is usually just higher
+in core than the fang-bomber itself.  By bombing the pit it also destroys
+any captured processes which is a great advantage.  Also, it is
+irrelevant where the vampire puts his fangsource, since we are targeting
+the pit instead.
+
+Can vampires make themselves immune to these kind of attacks?
+Of course.  One method would be to drop fangs only on non-zero b-field
+locations (bscan).  Unfortunately (for them :-) that adds one more
+line to the fang-bomber making it that much larger, prevents
+it from fang-bombing locations with zero b-fields, and maybe
+moves them to a sparser bombing pattern.  So they become
+slightly less effective - maybe - which is the whole point.
+
+Make your programs more effective, and push opponents off their most
+efficient implementation.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+From dmi.ens.fr!julienas!mcsun!uunet!haven.umd.edu!darwin.sura.net!howland.reston.ans.net!usc!elroy.jpl.nasa.gov!kilroy!jlayland Wed Jun 23 10:46:16 MET DST 1993
+Article 1578 of rec.games.corewar:
+Path: dmi.ens.fr!julienas!mcsun!uunet!haven.umd.edu!darwin.sura.net!howland.reston.ans.net!usc!elroy.jpl.nasa.gov!kilroy!jlayland
+>From: jlayland@kilroy.Jpl.Nasa.Gov (James Layland)
+Newsgroups: rec.games.corewar
+Subject: Sample Vampire from _Push Off_
+Date: 22 Jun 1993 17:28:23 GMT
+Organization: Jet Propulsion Laboratory, Pasadena, CA
+Lines: 22
+Message-ID: <207ffn$e15@elroy.jpl.nasa.gov>
+NNTP-Posting-Host: kilroy.jpl.nasa.gov
+
+I was just looking over the Hint from Paul's last _Push Off_.  I believe
+there is a minor error in the sample vampire he posted.  It should be:
+
+inc   dat #3364,#-3364
+fang  jmp trap-4,4
+              ^^
+start spl 0
+      add inc,fang
+      mov fang,@fang
+      jmp -2
+
+trap  mov 10,<-10
+      spl -1
+      jmp -2
+
+As originally posted, the fangs will caused bombed programs to jump to trap+4
+(presumably a DAT), which makes this simply a dwarf-type bomber rather than a
+pit-trapper.  Makes a big difference against replicators.
+
+James
+
+
+
+
+From dmi.ens.fr!julienas!mcsun!uunet!europa.eng.gtefsd.com!howland.reston.ans.net!ux1.cso.uiuc.edu!newsrelay.iastate.edu!dunix.drake.edu!acad.drake.edu!pk6811s Wed Jun 23 10:47:10 MET DST 1993
+Article 1579 of rec.games.corewar:
+Newsgroups: rec.games.corewar
+Path: dmi.ens.fr!julienas!mcsun!uunet!europa.eng.gtefsd.com!howland.reston.ans.net!ux1.cso.uiuc.edu!newsrelay.iastate.edu!dunix.drake.edu!acad.drake.edu!pk6811s
+>From: pk6811s@acad.drake.edu
+Subject: Re: Sample Vampire from _Push Off_
+Message-ID: <1993Jun22.134214.1@acad.drake.edu>
+Lines: 25
+Sender: news@dunix.drake.edu (USENET News System)
+Nntp-Posting-Host: acad.drake.edu
+Organization: Drake University, Des Moines, Iowa, USA
+References: <207ffn$e15@elroy.jpl.nasa.gov>
+Date: Tue, 22 Jun 1993 19:42:14 GMT
+
+In article <207ffn$e15@elroy.jpl.nasa.gov>, jlayland@kilroy.Jpl.Nasa.Gov (James Layland) writes:
+> I was just looking over the Hint from Paul's last _Push Off_.  I believe
+> there is a minor error in the sample vampire he posted.  It should be:
+>. . . .
+
+Nope, it works as written:
+
+inc   dat #3364,#-3364
+fang  jmp trap,0
+start spl 0
+      add inc,fang
+      mov fang,@fang
+      jmp -2
+
+trap  mov 10,<-10
+      spl -1
+      jmp -2
+      end start
+
+Yours works too, you have just offset the fang's a- and b-operands by
+4 and -4 respectively.  Which points out another vampire feature, namely
+that any X/-X can be used to increment the fang _AND_ that X can change
+during the run while maintaining fang viability.
+
+-Paul
+
+
+

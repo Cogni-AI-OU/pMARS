@@ -1,0 +1,585 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 74                                                          27 July, 1999
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+The ftp site and it's mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars                  ;pMARS home page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the above pages for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+A timely flurry of activity has occurred since last issue, with even the
+alternative (and secret) hills receiving at least a successful submission
+or two.
+
+The '94 hill has been the scene of many a battle for control, whether
+you perceive the opponents to be veterans and new players, p-spacers
+and pure warriors, or even magic age warriors and recent submissions.
+
+The deadline for the IWT has been extended, so if you haven't do so
+already, find out how to enter at the tournament's home page:
+
+  http://www.concentric.net/~liminal/IWT/index.html
+
+A guide from getting started through to submitting a warrior to one of
+the hills is now available on Philip Kendall's corewar page:
+
+  http://www.kendalls.demon.co.uk/pak21/corewar/index.html
+
+This issue - Ben Ford shares his code for WingShot, and Ken Espiritu
+reveals his stone/imp Baseline Plus.
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  42.5/ 34.7/ 22.8               Digitalis 5    Christian Schmidt 150.2   15
+ 2  41.4/ 35.0/ 23.6       Self-Modifying Code             Ben Ford 147.8   18
+ 3  36.1/ 26.7/ 37.2                      Vain          Ian Oversby 145.4   19
+ 4  36.3/ 27.5/ 36.3          The Stormbringer    Christian Schmidt 145.1   72
+ 5  37.4/ 29.8/ 32.8               Stonewashed    Christian Schmidt 145.0   12
+ 6  34.5/ 24.2/ 41.3           One Step Beyond         John Metcalf 144.8   33
+ 7  39.6/ 36.5/ 23.9             Recycled Bits          David Moore 142.7   72
+ 8  32.4/ 22.4/ 45.2                     Glass             Ben Ford 142.4   11
+ 9  40.5/ 39.1/ 20.4                  Stranger         John Metcalf 142.0   29
+10  40.8/ 40.0/ 19.2                   Snowman         John Metcalf 141.6   16
+11  42.9/ 44.2/ 13.0                     Qshot    Christian Schmidt 141.5    2
+12  36.8/ 33.3/ 29.9              The Outsider     Simon Wainwright 140.2   36
+13  39.4/ 39.1/ 21.5                    Rubble              P.Kline 139.7    7
+14  39.3/ 39.0/ 21.8          death by redcode     Simon Wainwright 139.6   51
+15  31.7/ 24.2/ 44.1 Alive and K(qu)icking Zet Leonardo H. Liporati 139.2   28
+16  32.0/ 24.8/ 43.2             Slippery Eels             Ben Ford 139.1   14
+17  34.2/ 29.7/ 36.1                   Icepick             Ben Ford 138.7   13
+18  38.6/ 38.7/ 22.7               Draken Fire             Ben Ford 138.6   30
+19  37.1/ 35.9/ 26.9             Pitch Shifter    Christian Schmidt 138.3   26
+20  28.2/ 18.3/ 53.5         No More Innocuous Leonardo H. Liporati 138.2    4
+21  36.9/ 36.0/ 27.1      Serenade to a Cuckoo                  WFB 137.7    1
+22  32.9/ 28.2/ 38.9                      Icen             Ben Ford 137.6   20
+23  36.5/ 36.3/ 27.1                        PC                  WFB 136.7    2
+24  38.1/ 39.5/ 22.4                  WingShot             Ben Ford 136.6   40
+25  38.4/ 41.2/ 20.4            Circle of Fire         John Metcalf 135.6   43
+
+Age since last issue: 43 ( 16 last issue, 10 the issue before )
+Days since last issue: 61 ( 44 last issue, 36 the issue before )
+Average age: 24 ( 19 last issue, 8 the issue before )
+Average score: 141 ( 145 last issue, 138 the issue before )
+
+The top 25 warriors are represented by just 9 independent authors: Ford
+with 7, Schmidt with 5, Metcalf with 4, Wainwright, Liporati and WFB with
+2 and the remainder with a single warrior each. ( 11 authors last issue,
+10 the issue before )
+
+Only four warriors survive since last issue as some powerful warriors are
+unleashed and the hill stabilises.  Three authors have been either using
+or testing Q^4 scans using sne/seq/jmp technology.  The full implications
+of this remains to be seen.
+
+Perhaps, the Q^4 will cause the demise of the q-scan!  Afterall they are
+smaller than older qscans, and will gradually push them from the hill.
+However, their advantage also works against them - having a smaller
+memory footprint means a Q^4 battling another Q^4 will score less hits
+and consequently less points.  The hill will be held in the icy grasp of
+p-spacers and scanners once again :-)
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  46.9/ 35.2/ 17.9                      Toki    Christian Schmidt 158.7    1
+ 1  42.5/ 32.8/ 24.6               Digitalis 5    Christian Schmidt 152.2    1
+ 1  41.8/ 35.0/ 23.2       Self-Modifying Code             Ben Ford 148.6    1
+ 1  34.2/ 22.3/ 43.5           One Step Beyond         John Metcalf 146.1    0
+ 1  39.2/ 33.0/ 27.8              The Outsider     Simon Wainwright 145.4    0
+ 1  32.6/ 20.0/ 47.4 Alive and K(qu)icking Zet Leonardo H. Liporati 145.1    1
+ 1  34.0/ 25.1/ 40.9                      Vain          Ian Oversby 143.0    1
+ 1  40.1/ 37.3/ 22.6                    Rubble              P.Kline 142.9    0
+ 2  42.4/ 43.2/ 14.4              Shapechanger    Christian Schmidt 141.6    1
+ 3  46.4/ 41.7/ 11.9 +,_,+'~'+,_,+'~'+,_,+'~'+         John Metcalf 151.1    0
+ 3  35.1/ 29.1/ 35.8               Stonewashed    Christian Schmidt 141.1    1
+ 4  38.4/ 38.4/ 23.3                  Stranger         John Metcalf 138.3    1
+ 5  39.2/ 40.9/ 20.0                   Snowman         John Metcalf 137.5    1
+ 5  35.6/ 35.6/ 28.8             Pitch Shifter    Christian Schmidt 135.5    1
+ 6  28.7/ 21.3/ 50.0                     Glass             Ben Ford 136.2    1
+ 7  35.7/ 35.2/ 29.1              Dry Ice v0.1             Ben Ford 136.2    1
+ 8  41.4/ 38.4/ 20.1                  WingShot             Ben Ford 144.5    1
+ 8  33.5/ 29.8/ 36.7               Ant Factory    Christian Schmidt 137.3    1
+ 8  41.5/ 45.6/ 12.9                     Qshot    Christian Schmidt 137.3    0
+ 8  30.4/ 24.4/ 45.2             Slippery Eels             Ben Ford 136.4    1
+ 9  27.3/ 19.9/ 52.9                Redemption         John Metcalf 134.7    0
+11  34.0/ 34.1/ 31.9        Codename: Veronica             Ben Ford 134.0    1
+11  25.8/ 17.9/ 56.3         No More Innocuous Leonardo H. Liporati 133.6    1
+12  32.1/ 30.2/ 37.8                   Icepick             Ben Ford 134.0    1
+12  42.4/ 52.2/  5.3                  Whooops!         John Metcalf 132.6    1
+13  22.8/ 14.0/ 63.2                Reepicheep         John Metcalf 131.7    1
+14  36.1/ 38.4/ 25.5               Draken Fire             Ben Ford 133.7    1
+16  40.4/ 45.1/ 14.6                       C^3    Christian Schmidt 135.6    1
+16  28.4/ 27.2/ 44.4                      Icen             Ben Ford 129.5    1
+17  35.6/ 41.3/ 23.2  Goidaskilernian Bleatons         John Metcalf 129.9    0
+18  36.9/ 43.0/ 20.0       Security Purge v0.3             Ben Ford 130.9    1
+18  29.8/ 30.4/ 39.9                  Recovery          Ian Oversby 129.2    1
+19  32.3/ 31.8/ 35.9                  PlumBoom    Christian Schmidt 132.8    1
+20  28.8/ 28.5/ 42.6                Methuselah     Simon Wainwright 129.1    0
+22  33.9/ 37.4/ 28.7             Root Vegtable         John Metcalf 130.4    1
+23  34.7/ 38.0/ 27.2      Serenade to a Cuckoo                  WFB 131.4    1
+24  34.8/ 38.7/ 26.5                        PC                  WFB 130.9    1
+
+Players entering hill since last issue: 8 ( 6 last issue, 7 the issue before )
+Average rank of new entries: 9 ( 14 last issue, 14 the issue before )
+
+Almost every participant since last issue has had a warrior enter as KoTH,
+though the congratulations are reserved for WFB who has just this week
+moved up from the beginners' hill.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  23.1/ 19.0/ 57.9              The Fugitive          David Moore 127.3   70
+26  30.1/ 35.2/ 34.7                     Fixed         Ken Espiritu 125.0   54
+26  34.2/ 43.8/ 22.0            Pattel's Virus             Ben Ford 124.6   52
+26  34.0/ 41.9/ 24.2                   Galatea             Ben Ford 126.0   51
+26  35.4/ 43.6/ 21.0          Silver Talon 1.2                Edgar 127.1   50
+26  30.7/ 35.1/ 34.2                Puddleglum         John Metcalf 126.4   49
+26  32.3/ 39.6/ 28.1            trefoil 23 226        Steve Gunnell 125.0   49
+26  30.1/ 32.9/ 37.0                    Shadow    Christian Schmidt 127.4   45
+26  32.4/ 36.4/ 31.2                      Twin    Christian Schmidt 128.3   44
+26  29.7/ 34.4/ 35.9              Spooky Wench         John Metcalf 124.9   42
+26  24.7/ 27.9/ 47.4       Even Less Innocuous               TeamQ3 121.5   42
+26  27.1/ 29.6/ 43.3        Freight Train v0.2          David Moore 124.6   40
+26  26.2/ 27.7/ 46.1     chained to the system     Simon Wainwright 124.7   33
+26  33.1/ 42.1/ 24.8                    BiShot    Christian Schmidt 124.2   26
+26  37.2/ 49.4/ 13.3                  Zooom...         John Metcalf 125.1   24
+26  26.3/ 30.0/ 43.7                Methuselah     Simon Wainwright 122.6   24
+26  30.9/ 36.7/ 32.4        Codename: Veronica             Ben Ford 125.1   21
+26  37.7/ 47.3/ 15.0 +,_,+'~'+,_,+'~'+,_,+'~'+         John Metcalf 128.0   20
+26  35.5/ 48.6/ 15.9 Boys are Back in Town 1.1       Philip Kendall 122.4   20
+26  38.7/ 55.1/  6.2               Neon Spring         John Metcalf 122.3   20
+26  33.0/ 42.9/ 24.1                      Toki    Christian Schmidt 123.1   12
+26   1.7/  1.9/  0.5          Nuke it! (V 0.4)     Silvio Sampietro   5.5   12
+26  38.3/ 49.5/ 12.2              Shapechanger    Christian Schmidt 127.0   11
+26  29.4/ 32.3/ 38.4                  PlumBoom    Christian Schmidt 126.4   11
+26  38.3/ 54.2/  7.5       fatal lure of pMars     Simon Wainwright 122.4   10
+26  35.6/ 49.5/ 15.0                       C^3    Christian Schmidt 121.7   10
+26  39.3/ 52.5/  8.2 .sS$Ss.sS$Ss.sS$Ss.sS$Ss.     Simon Wainwright 126.2    9
+26  28.9/ 31.7/ 39.4                  Recovery          Ian Oversby 126.1    9
+26   1.3/  1.6/  1.1                Redemption         John Metcalf   4.9    9
+26  41.3/ 52.8/  5.9                  Whooops!         John Metcalf 129.9    8
+26  31.9/ 38.4/ 29.7              Dry Ice v0.1             Ben Ford 125.4    8
+26  34.5/ 43.3/ 22.1  Goidaskilernian Bleatons         John Metcalf 125.8    7
+26  21.1/ 17.9/ 61.1                Reepicheep         John Metcalf 124.2    6
+26   1.7/  1.6/  0.7             The Pendragon    Christian Schmidt   5.8    5
+26  34.5/ 44.7/ 20.8       Security Purge v0.3             Ben Ford 124.4    4
+26  30.5/ 36.9/ 32.6             Root Vegtable         John Metcalf 124.2    4
+26  36.7/ 46.2/ 17.0                    myBlur     Simon Wainwright 127.3    3
+
+The scanners were amoung the first to go, causing Toki to drop off the hill
+from KoTH within 12 challenges.
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 4  36.3/ 27.5/ 36.3          The Stormbringer    Christian Schmidt 145.1   72
+ 7  39.6/ 36.5/ 23.9             Recycled Bits          David Moore 142.7   72
+14  39.3/ 39.0/ 21.8          death by redcode     Simon Wainwright 139.6   51
+
+The Stormbringer and Recycled Bits are still going strong, though RB has
+slipped down several ranks since last issue.
+_______________________________________________________________________________
+The Extended New Hall of Fame:
+* indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+22  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+23  Electric Head          Anton Marsden      140    P-warrior
+24  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+25  Fixed                  Ken Espiritu       135    Q^2 -> Paper
+26  Tiberius 3.1           Franz              130    Q^2 -> Paper
+27  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+28  obvious to those who k Robert Macrae      117    Q^2 -> Paper
+29  Solomon v0.8           Ian Oversby        116    Stone and scanner
+30  CC Paper 3.3           Franz              107    Q^2 -> Paper
+31  mrb-test               M R Bremer         106    *Unknown*
+32= T.N.T. pro             Maurizio Vittuari  105    Bomber
+32= Pulp v0.5              Ian Oversby        105    Q^2 -> Paper
+34  Fugitive               David Moore        102    Q^2 -> Paper/imp
+35  Vengeance              Robert Hale        101    Q^2 -> Stone/imp
+36= Jack in the box II     Beppe Bezzi        100    P-warrior
+36= Fire and Ice           David Moore        100    P-warrior
+38  Oblivion               Ian Sutton          99    P-warrior
+39  Silver Talon 1.2       Edgar               93    Scanner
+40  Bodge 1                Robert Macrae       85    Q^2 -> Scanner
+41  Inferno 2.4            Philip Kendall      84    Qscan -> Bomber
+42= Test                   Anton Marsden       83    *Unknown*
+42= NCC-1701-A             Philip Kendall      83    P-warrior
+44  RetroQ                 Paul Kline          82    Q^2 -> Paper
+45  Tornado 4              Beppe Bezzi         78    Bomber
+46  He Scans Again         Paul Kline          76    Scanner
+47  Digitalis 4            Christian Schmidt   73    Q^2 -> Clear/imp
+48= The Stormbringer       Christian Schmidt   72*   Q^2 -> Stone/imp
+48= Recycled Bits          David Moore         72*   P-warrior
+50  Taking Names           Paul Kline          68    Scanner
+
+Recycled Bits and The Stormbringer enter the ENHoF at last :-) Neither
+Shadow or Puddleglum survived long enough - who will write the first
+stone/paper to make it into the Hall?
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  57.9/ 31.3/ 10.7                  Nuke it!     Silvio Sampietro 184.5   30
+ 2  44.1/ 26.6/ 29.3                        PC                  WFB 161.5    2
+ 3  47.3/ 36.6/ 16.1              Neverland II         John Metcalf 158.1    1
+ 4  37.4/ 18.5/ 44.1             Quickest Zeta    Leonardo Humberto 156.4   33
+ 5  40.9/ 29.5/ 29.6     Silken Half Life v4.0            Dale Neal 152.3   38
+ 6  41.5/ 30.8/ 27.8          Silken Half Life            Dale Neal 152.1   41
+ 7  45.2/ 38.7/ 16.1                 da mutant        Paul-V Khuong 151.7   11
+ 8  34.3/ 18.6/ 47.1              Quicker Zeta    Leonardo Humberto 150.0   55
+ 9  45.6/ 41.3/ 13.1          Nuke it! (V 0.2)     Silvio Sampietro 149.8   37
+10  33.4/ 18.4/ 48.2                Redemption         John Metcalf 148.3   97
+11  32.5/ 19.7/ 47.9                Quick Zeta    Leonardo Humberto 145.2   60
+12  40.7/ 37.6/ 21.7              FireMaster 2             P._V._K. 143.8    7
+13  38.7/ 35.1/ 26.1                 Arsonic C             P._V._K. 142.4    9
+14  31.9/ 21.9/ 46.2            HardCore v0.2b           Simon Duff 141.9   61
+15  40.6/ 40.0/ 19.4               Fire Master             P_.V_.K. 141.2   45
+16  39.9/ 39.0/ 21.2         1 shot bomber 0.1             P._V._K. 140.8   10
+17  41.2/ 42.1/ 16.8                 Wild-Fire P_.V_.K./John Metcal 140.3   12
+18  39.5/ 40.7/ 19.8             Mel the Great          Ken Hubbard 138.3   13
+19  37.6/ 38.2/ 24.2                  Red Sand          Ken Hubbard 136.9   44
+20  31.2/ 30.7/ 38.1               Radio Flyer          Ken Hubbard 131.7   16
+21  31.0/ 33.0/ 36.0            quatrefoil 133        Steve Gunnell 128.9   31
+22  39.8/ 50.6/  9.6                UltiBomber             P._V._K. 128.9    8
+23  36.8/ 46.9/ 16.2 Death kiss with a dash of      Anders Rosendal 126.8   81
+24  27.6/ 45.5/ 26.9                 RedRace 1          Dave Hillis 109.7   24
+25  30.7/ 55.9/ 13.4                      QaMa            Anonymous 105.6    6
+
+Frusteration II, No Time To Think, Spat the Dummy and H-Bomb 9 all achieved
+retirement, the hill having aged 30 since last issue.  Wainwright and Ford
+killed off their warriors making life for beginners a little easier...
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 35/ 23                  WingShot             Ben Ford     149      17
+ 2  36/ 26/ 38                      Vain          Ian Oversby     145     252
+ 3  36/ 27/ 38          The Stormbringer    Christian Schmidt     144     186
+ 4  42/ 41/ 17                  Zooom...         John Metcalf     143      51
+ 5  35/ 28/ 36                   Blacken          Ian Oversby     142     162
+ 6  42/ 42/ 17 Boys are Back in Town 1.1       Philip Kendall     142     177
+ 7  27/ 13/ 60         _romanian_killah_  Costin Bontas rulez     142     144
+ 8  34/ 28/ 38               Ant Factory    Christian Schmidt     141      10
+ 9  45/ 50/  5               Neon Spring         John Metcalf     141      34
+10  43/ 45/ 12                      Win!          David Moore     141     150
+11  36/ 32/ 32              The Outsider     Simon Wainwright     141      15
+12  33/ 26/ 42                      Icen             Ben Ford     140       9
+13  38/ 38/ 24               myVamp v3.7             Paulsson     139       4
+14  33/ 28/ 39                  Recovery          Ian Oversby     138     175
+15  34/ 30/ 36                   Icepick             Ben Ford     138       8
+16  26/ 14/ 60              The Fugitive          David Moore     138     254
+17  40/ 43/ 16                     Qshot    Christian Schmidt     138       2
+18  37/ 36/ 27                        PC                  WFB     137       1
+19  28/ 20/ 52                Redemption         John Metcalf     137      14
+20  29/ 22/ 49               Fourth Step Leonardo H. Liporati     136       3
+
+An age of 19 since last issue brings about the demise of four aged warriors,
+Liquid Fire (age 140), Brigadeer (169), Baseline Plus (232) and Fixed (235).
+Once again a balance of scanners and stone/imps possess the top few ranks.
+_______________________________________________________________________________
+Extra Extra -
+WingShot by Ben Ford
+
+Currently King of both the no-pspace and tiny hills, and recently atop
+Pizza's 94 hill, clearly WingShot is a warrior currently out-performing
+other warriors of it's type.  The combination of a Bi-Shot style clear
+and a .8c scan proves effective in several environments, though like
+most oneshots it suffers against CLP-type components such as the one
+used in Kline's Rubble.
+
+;redcode-94
+;name WingShot
+;author Ben Ford
+;strategy 0.80c BiShot-style oneshot
+;assert !(CORESIZE%10) && (MAXLENGTH>=20)
+
+start   equ     oscn
+oinc    equ     10
+omod    equ     10
+oset    equ     (omod*((MAXLENGTH+MINDISTANCE)/omod)-1)
+odif    equ     (omod*((CORESIZE/2)/omod))
+otic    equ     (CORESIZE/omod)
+
+optr    spl     {oset,  >odif+oset-3
+        dat     {10,    >odif
+ospl    spl     #10,    <-MINDISTANCE
+oclr    mov     ospl,   }optr
+        mov     ospl,   >optr
+obmb    djn.a   oclr,   <ospl
+
+        dat     0,      0       ; scanned hi
+        dat     0,      0
+        dat     0,      0
+        dat     0,      0       ; scanned lo
+
+ofnd    sub.f   #-oinc,  optr
+oscn    sne.i   *optr,  @optr
+        sub.x    ofnd,  @ofnd
+        sne.i   *optr,  @optr
+        djn      ofnd,  #otic
+        djn.f    ospl,  @oscn
+
+end     start
+_______________________________________________________________________________
+Extra Extra Extra -
+Baseline Plus by Ken Espiritu
+
+Until the recent rise of a more powerful Q^3 and Q^4 scanners, Baseline
+had enjoyed a strong position on the '94nop hill along with Espiritu's
+Fixed.  Both warriors were finally pushed off, aged 232 (Baseline) and
+235 (Fixed) two or three days ago, victims of the the eternal stuggle
+to produce stronger, faster and smaller code.
+
+However, despite not containing the latest in q-scanning technology,
+Baseline is certainly not out of date, as evidenced in the body of the
+warrior - the stone/imp.
+
+The imp launcher is re-worked to damage as much core as possible as it
+goes about it's duties.  A simple improvement perhaps, but one which
+I've seldom seen used.
+
+st     equ    (2667)
+spin:  spl.b  #0,      >prime
+       sub.f  #-st-1,  jump
+prime: mov.i  impy,    impy
+jump:  djn.f  impy-st-1,<-100
+impy:  mov.i  #st,     *0
+
+The four line stone is one of the most unique I have seen.  It's bombs
+via indirection, and sptr combines with pt to further increase core
+colouring.  Finally, as an added bonus a simple core-clear takes place.
+
+stepa  equ    (214)
+inc:   spl    #stepa,  >-stepa
+pt:    mov.i  {stepa,  {1-stepa
+       add.f  inc,     pt
+sptr:  djn.f  @sptr,   {pt
+
+Without further ado, here below lies the complete code...
+
+;redcode-94
+;name Baseline Plus
+;author Ken Espiritu
+;strategy qscan -> imp/stone
+;strategy re-worked imp launcher code
+;assert 1
+
+org start
+
+sdist  equ    (-2321)
+idist  equ    (1500)
+gap    equ    (6)
+rep    equ    (17)
+rep2   equ    (13)
+qd     equ    (100)
+qs     equ    (-200)
+qb     equ    (start-700)
+flag   equ    (qbomb-100)
+datz   equ    (start-200)
+
+qbomb: dat    }gap,    }-gap
+tab:   add.a  table,   table
+slow:  add.ab @tab,    fnd
+fast:  add.b  *tab,    @slow
+which: sne.f  }datz,   @fnd
+       add.ab #qd,     fnd
+       spl    bmber2,  }qs*13   ; start primary bomber
+
+bmber1:add.b  fnd,     fnd2     ; redundant bomber
+loop1: mov.i  qbomb,   @fnd2    ; .5c, forward only
+fnd2:  mov.i  qbomb,   >fnd-(gap*rep)/2+1
+       add    #2*gap,  fnd2
+       djn    loop1,   #rep
+       jmn.b  qbomb,   flag     ; check flag
+       jmp    sboot,    }-2000
+
+stepa  equ    (214)
+st     equ    (2667)
+
+spin:  spl.b  #0,      >prime
+       sub.f  #-st-1,  jump
+prime: mov.i  impy,    impy
+jump:  djn.f  impy-st-1,<-100
+impy:  mov.i  #st,     *0
+
+iboot: mov.i  <idest,  {idest
+       for 4
+       mov.i  <idest,  {idest
+       rof
+       spl    *idest,  >1000+qs*2
+idest: div.x  #idist,  #impy-idest+1
+
+       dat    }10*qs,  >2*qs    ; can get 21 values from this table
+table: dat    >4*qs,   }1*qs    ; and can also use the initial value
+       dat    }23*qs,  >3*qs    ; of fnd
+
+stone: spl    #0,      #0
+inc:   spl    #stepa,  >-stepa
+pt:    mov.i  {stepa,  {1-stepa
+       add.f  inc,     pt
+sptr:  djn.f  @sptr,   {pt
+
+start: seq.i  qb+qs*0, qb+qs*0+qd
+       jmp    which,   }qb+qd/2
+       seq.i  qb+qs*2, qb+qs*2+qd
+       jmp    fast,    {tab
+       seq.i  qb+qs*13,qb+qs*13+qd
+       jmp    fast,    {fast
+       seq.i  qb+qs*1, qb+qs*1+qd
+       jmp    fast,    }qb+qs*1+qd/2
+       seq.i  qb+qs*3, qb+qs*3+qd
+       jmp    fast,    }tab
+
+       seq.i  qb+qs*17,qb+qs*17+qd
+       jmp    slow,    {fast
+       seq.i  qb+qs*7, qb+qs*7+qd
+       jmp    slow,    }tab
+       seq.i  qb+qs*11,qb+qs*11+qd
+       jmp    slow,    <tab
+       seq.i  qb+qs*5, qb+qs*5+qd
+       jmp    slow,    }qb+qs*5+qd/2
+       seq.i  qb+qs*24,qb+qs*24+qd
+       jmp    slow,    >tab
+       seq.i  qb+qs*4, qb+qs*4+qd
+       jmp    >fast,   }qb+qs*4+qd/2
+       seq.i  qb+qs*10,qb+qs*10+qd
+       jmp    >fast,   <tab
+       seq.i  qb+qs*23,qb+qs*23+qd
+       jmp    >fast,   >tab
+       seq.i  qb+qs*6, qb+qs*6+qd
+       jmp    slow,    {tab
+       seq.i  qb+qs*12,qb+qs*12+qd
+       djn.f  slow,    tab
+
+       seq.i  qb+qs*28,qb+qs*28+qd
+       jmp    tab,     >tab
+       seq.i  qb+qs*9, qb+qs*9+qd
+       jmp    tab,     }qb+qs*9+qd/2
+       seq.i  qb+qs*20,qb+qs*20+qd
+       djn.f  <fast,   tab
+       seq.i  qb+qs*8, qb+qs*8+qd
+       jmp    <fast,   }qb+qs*8+qd/2
+       seq.i  qb+qs*21,qb+qs*21+qd
+       jmp    tab,     {fast
+       seq.i  qb+qs*15,qb+qs*15+qd
+       jmp    tab,     <tab
+       seq.i  qb+qs*27,qb+qs*27+qd
+       jmp    <fast,   >tab
+       seq.i  qb+qs*16,qb+qs*16+qd
+       jmp    tab,     {tab
+       seq.i  qb+qs*22,qb+qs*22+qd
+       djn.f  tab,     tab
+       seq.i  qb+qs*30,qb+qs*30+qd
+       jmp    tab,     }tab
+
+sboot: spl    iboot,   >1000+qs*9
+       for 5
+       mov.i  <bdest,  {bdest
+       rof
+       spl    *bdest,  >1000+qs*10
+bdest: div.x  #sdist,  #sptr-bdest+1
+qincr: dat    }-gap,   >2*gap
+
+bmber2:add.ba fnd,     fnd
+loop2: mov.i  qincr,   *fnd     ; primary bomber
+       mov.i  qincr,   @fnd     ; .66c, bi-directional
+fnd:   mov.i  2*-gap,  }qb
+       add    qincr,   fnd
+       djn    loop2,   #rep2
+       jmp    sboot,   >flag    ; set flag
+       end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy@digitald.uk.com>
+and Christian Schmidt <schmidt@chiral.apchem.nagoya-u.ac.jp>
+

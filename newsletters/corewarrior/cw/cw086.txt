@@ -1,0 +1,504 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 86                                                         01 April, 2003
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of Corewar.  Emphasis is
+placed on the most active hills - currently the '94 no-pspace and '94 draft
+hills.  Coverage will follow wherever the action is. If you haven't a clue
+what I'm talking about then check out these five-star Internet locals for
+more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza (down)
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+  http://de.geocities.com/fizmo_master       ;Fizmo
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+The 10 weeks which have passed since last issue have been an eventful time.
+In rec.games.corewar, Planar announced his retirement from Corewar.  Planar
+is the father of the warrior archive (still an invaluable tool), and an
+early contributor to Core Warrior.  We wish him all the best for the future.
+
+Rounds 6, 7 and 8 of the ongoing tournament have taken place, and the
+winners are:
+
+ 6) Multi Maniac      7) Smart Switching   8) Random Rage
+    Simon Duff           German Labarga       Christian Schmidt
+
+Michal Janeczek is still at the head of the pack in the tournament rankings,
+with 393.9 out of a possible 400 points.  Ben Ford is in 2nd place, closely
+followed by Roy van Rijn.
+
+A recent development is the speed Redcoding challenge held every Sunday in
+the #COREWARS IRC channel on irc.koth.org.  Competitors have just 30 minutes
+after the rules are announced to create their warriors.  The winners:
+
+ 1) Nano Core         2) Tiny, no -1,1     3) Standard, only -1,0,1
+    Christian Schmidt    Roy van Rijn         Phil Thorne
+
+ 4) Exact Location    5) Tiny, no < { } >
+    Thorne & Kozisek     Jakub Kozisek
+
+Check Fizmo's Ultimate Corewar page for details of the above, and further
+developments.
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  50/ 43/  7                   Recon 2          David Moore    156.6      5
+ 2  46/ 38/ 16              Toxic Spirit        Philip Thorne    153.4    236
+ 3  38/ 25/ 36                Reepicheep       Grabun/Metcalf    151.9    782
+ 4  47/ 45/  7                      Solo         Roy van Rijn    148.8      6
+ 5  45/ 41/ 14              Hazy Test 63        Steve Gunnell    148.7    326
+ 6  44/ 40/ 15          run to the hills     Simon Wainwright    148.4     16
+ 7  38/ 28/ 34             Thunderstrike        Lukasz Grabun    146.8    156
+ 8  43/ 39/ 18      Return of Vanquisher        Lukasz Grabun    146.5    313
+ 9  35/ 26/ 39               Son of Vain      Oversby/Pihlaja    144.8   1551
+10  42/ 42/ 15             Harmony Snoot        Lukasz Grabun    141.7    126
+11  41/ 40/ 19                 Driftwood         John Metcalf    141.5    235
+12  45/ 49/  5                      Claw                Fizmo    141.0    519
+13  32/ 24/ 43     Revenge of the Papers            Fizmo/Roy    140.3    589
+14  30/ 20/ 50                      Dawn         Roy van Rijn    140.0    167
+15  28/ 17/ 55                PolyPap II            Jakub/Roy    139.5     31
+16  32/ 26/ 42           Fast Action III    Christian Schmidt    139.1     25
+17  34/ 29/ 36                     Pixie        Lukasz Grabun    138.7    199
+18  36/ 34/ 30            My First Paper      Michal Janeczek    137.9    150
+19  30/ 24/ 46                 Firestorm         John Metcalf    135.6    587
+20  30/ 36/ 34             Bestia-X test            Neogryzor    122.6      1
+
+181 successful challenges have passed since last issue.  Driftwood becomes
+the 100th warrior to reach the age of 100.  Of those 100 centenarians, 28
+were written by Schmidt, 14 by Metcalf, 7 by Oversby and 6 each by Espiritu,
+Grabun and Moore.
+
+The warriors which are no longer with us include Positive Knife (age 449),
+Decoy Signal (378), Return of the Pendragon (318), Herbal Avenger (276),
+The Three-Handed Knight (221) and Digitalis 2002a (131).
+
+Koth report:  Most often seen in the top spot has been Toxic Spirit, king
+of the hill after 82 successful challenges.  Also performing well were
+Reepicheep (65 times king) and Claw (10 times).
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Son of Vain            Oversby/Pihlaja   1551 *  Q^4 -> Stone/imp
+ 2  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 3  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 4  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 5  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 6  Reepicheep             Grabun/Metcalf     782 *  Q^4 -> Paper/stone
+ 7  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 8  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+ 9  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+10  Eraser II              Ken Espiritu       781    Scanner
+11  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+12  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+13  Blade                  Fizmo              643    Qscan -> Scanner
+14  Revenge of the Papers  Fizmo+Roy          605    Q^4 -> Paper
+15  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+16  Firestorm              John Metcalf       589    MiniQ^3 -> Paper/imp
+17  Claw                   Fizmo              519 *  Qscan -> Scanner
+18  G3-b                   David Moore        503    Twoshot
+19  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+20  Revival Fire           P.Kline            468    Bomber
+21  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+22  The Stormkeeper        Christian Schmidt  460    Q^3 -> Stone/imp
+23  Positive Knife         Ken Espiritu       449    Q^4 -> Stone/imp
+24  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+
+Christian Schmidt's Claw is our only new HoF entry this issue.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  44/ 34/ 22            Mantrap Arcade          Dave Hillis    154.3     58
+ 2  46/ 39/ 15           Bustling Spirit    Christian Schmidt    153.9    101
+ 3  44/ 38/ 18  Return of Vanquisher PsP        Lukasz Grabun    150.1     71
+ 4  37/ 25/ 38                Reepicheep       Grabun/Metcalf    148.9    260
+ 5  36/ 23/ 41               Son of Vain      Oversby/Pihlaja    147.9    231
+ 6  42/ 40/ 18       my new tiny warrior         John Metcalf    144.5     15
+ 7  42/ 39/ 19              Microvenator      Michal Janeczek    144.2     64
+ 8  43/ 41/ 16            Herbal Avenger      Michal Janeczek    143.7    143
+ 9  42/ 40/ 19               CrazyShot 2    Christian Schmidt    143.2    243
+10  45/ 48/  7                   Recon 2          David Moore    142.9     12
+11  34/ 26/ 40                   PolyPap        Jakub Kozisek    142.2     19
+12  32/ 23/ 45                         V    Christian Schmidt    142.0     18
+13  42/ 43/ 15            Woozily Higgle    Christian Schmidt    141.3     46
+14  34/ 28/ 38              Bitter Sweet        Lukasz Grabun    141.0     53
+15  32/ 22/ 46                      Dawn         Roy van Rijn    140.8     38
+16  41/ 43/ 16                   Tilt!!!    Christian Schmidt    140.3      3
+17  42/ 44/ 15          run to the hills     Simon Wainwright    139.9     16
+18  31/ 23/ 45               Incredible!         John Metcalf    138.8    126
+19  28/ 18/ 54                   Blowrag      Metcalf/Schmidt    137.0    187
+20  35/ 39/ 26                  J/R test                  Roy    131.0      1
+
+Revenge of the Papers perishes, age 204.  Also leaving the hill this issue
+are Combatra (131), Cyanide Excuse (117) and Dark Lowlands (98).
+
+Koth report:  Since last issue the hill has aged by just 41.  Mantrap Arcade
+has been on top of the hill most often, after just 12 successful challenges.
+Reepicheep was also seen in the number 1 spot, 10 time altogether.
+_______________________________________________________________________________
+The '94 Draft Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Reepicheep             Grabun/Metcalf     260 *  Q^4 -> Paper/stone
+ 2  CrazyShot 2            Christian Schmidt  243 *  Q^4 -> Oneshot
+ 3  Son of Vain            Oversby/Pihlaja    231 *  Q^4 -> Stone/imp
+ 4  Revenge of the Papers  Fizmo/Roy          204    Q^4 -> Paper
+ 5  Uninvited              John Metcalf       194    MiniQ^3 -> Stone/imp
+ 6  Blowrag                Metcalf/Schmidt    187 *  Q^4 -> Paper/imp
+ 7  Wallpaper              Christian Schmidt  175    Q^4 -> Paper/stone
+ 8  Herbal Avenger         Michal Janeczek    143 *  Scanner
+ =  Joyful Maw             Dave Hillis        143    P-warrior
+10  Paperazor              Christian Schmidt  141    Paper
+11  Self-Modifying Code    Ben Ford           132    P-warrior
+12  Combatra               David Moore        131    Boot distance calculator
+13  Incredible!            John Metcalf       126 *  Paper/imp
+14  Mad                    Christian Schmidt  123    P-warrior
+15  Cyanide Excuse         Dave Hillis        117    P-warrior
+16  Shapeshifter           Michal Janeczek    107    P-warrior
+17  Bustling Spirit        Christian Schmidt  101 *  P-warrior
+18  Help...I'm Scared      Roy van Rijn        98    Oneshot
+ =  Dark Lowlands          Roy van Rijn        98    *Unknown*
+20  Dry Ice                Ben Ford            92    P-warrior
+21  Digitalis 2002         Christian Schmidt   89    Q^4 -> Clear/imp
+ =  WingShot++             Ben Ford            89    Oneshot
+23  Origami Harquebus      mjp                 88    P-warrior
+24  Firestorm              John Metcalf        80    MiniQ^3 -> Paper/imp
+25  Pattel's Virus         Ben Ford            73    P-warrior
+
+Just one new entry in the Draft HoF this issue - Bustling Spirit from
+Christian Schmidt.
+_______________________________________________________________________________
+Extra Extra - Tangle Trap 3 by David Moore - Effective '88 Vamp with Airbag
+
+Feelin' retro?  Tangle Trap 3 is an '88 vampire...
+with a taste for garlic.
+
+Other vampires typically deliver their "fangs" like this:
+
+        mov fang, @fang
+
+Somewhere out in core, the JMP bomb looks like this:
+
+        jmp trap - x, x
+
+The problem with that attack is that each bomb yields
+a big clue about where the vampire is. Why is this a problem?
+
+;redcode
+;name garlic
+;kill garlic
+;author Stefan Strack
+;strategy vampires are afraid of it
+;strategy Submitted: @date@
+
+scan    jmz scan,<ptr
+        sub @ptr,<ptr
+        add #10,@ptr
+ptr     mov 2,<-100
+        jmp ptr
+
+That's why!
+
+Tangle Trap 3 avoids broadcasting its address. It uses a different
+kind of delivery mechanism that also includes a self-test.
+As soon as things go wrong, a core clear is activated.
+
+;redcode
+;assert CORESIZE==8000
+;name Tangle Trap 3
+;author David Moore
+;strategy .4c pit trapper with error-checking.
+;strategy If damaged, then deploy "airbag"
+
+;-------------------------------------------------------------------
+; Here's the main code after boot:
+;
+;     A   add   B,       check
+;     B   sub  #-step,   2
+;     C   mov  <check,  @D
+;     D   mov  <check,  @C - step * time
+;     E   jmz   A,       check
+;         jmp   clear,   0         ; go to core clear
+;
+;         ...
+;
+;         jmp skip + step, skip
+; check   jmp trap, 0
+;
+; There are 7 processes in the loop. They execute in this order:
+;
+;      CADBECA DBECADB ECADBEC ADBECAD BECADBE ...
+;
+; Look at that again:
+;
+;      CADBE CADBE CADBE CADBE CADBE CADBE CADBE ...
+;
+; Note that there are constant additions (+2) and subtractions (-1)
+; to "check". The sum of these changes is zero as long as
+; things work properly. When the loop is damaged, the count
+; is thrown off, causing line E to read a non-zero value.
+; This allows the warrior to leave the crippled code and go
+; quickly to the second phase: a core clear.
+;-------------------------------------------------------------------
+; The pit trap after boot:
+;
+;     X   spl  0, <2   ; <-- JMP bombs are aimed here
+;     Y   spl -1,  0
+;     Z   jmn -1, #MAXPROCESSES
+;         dat  0,  0
+;
+; Every new process in the pit lands on X once and only once.
+; Line Z is a counter for how many processes remain outside
+; of the pit. As soon as the count reaches 0, you can be sure
+; that all processes are at Y and Z. Next, they will all go
+; to Z and the DAT, with no chance to return to the pit. Checkmate!
+;-------------------------------------------------------------------
+
+; vamp numbers
+
+step equ (-49)
+skip equ (-18)
+time equ 976
+
+; boot distances
+
+dist   equ 5098  ; distance to vamp_A from boot
+distCh equ 45    ; distance to check from vamp_A
+distT  equ 217   ; distance to trap from vamp_A
+distCl equ (-41) ; distance to clear from vamp_A
+
+boot2   mov clBomb, @pCl
+        mov fang2, @pF
+        mov fang1, <pF
+pW      mov wimp, boot+dist+(vamp_C-vamp_A)+skip+step
+pT      spl pC, boot+dist+distT+3
+pF      spl boot+dist+2, boot+dist+distCh
+pV      spl @0, boot+dist+6
+        mov <pV,  pF   ; hide boot pointers
+        dat <pT, <pW
+
+pC      spl boot+dist+3, boot+dist+distCl+3
+pV2     spl @0, boot+dist+1
+        mov <pV2,  pC    ; hide boot pointers
+        dat <pV2, <boot+dist+3858
+
+boot    spl boot2, <boot+dist+3466
+        spl 2,     <boot+dist+1555
+        spl 1,     <boot+dist+2290
+        mov <source, <pV
+        mov <source, <pV
+        mov <source, <pC
+        mov <source, <pT
+        djn @pV2, #3
+pCl     djn @pV,  #boot+dist+distCl-4
+
+wimp    jmp 0, <0
+clBomb  dat <-8, #-10
+
+fang1   jmp skip + step, skip
+fang2   jmp distT-(vamp_C-vamp_A)+(step*time)-skip-step, 2
+
+        spl  0, <2
+source  spl -1,  vamp_A + 6
+        jmn -1, #MAXPROCESSES
+
+        spl  0, <-7
+        mov -5, <-5
+        djn -1, <3984
+
+check  equ (vamp_A + distCh)
+clear  equ (vamp_A + distCl)
+
+vamp_A  add   vamp_B,  check
+vamp_B  sub  #-step,   2
+vamp_C  mov  <check,  @vamp_D
+vamp_D  mov  <check,  @vamp_C - step * time
+vamp_E  jmz   vamp_A,  check
+        jmp   clear,   0
+
+end boot
+_______________________________________________________________________________
+Extra Extra - Lethal Frog by Christian Schmidt - A Small Anti-Scanner Hopper
+
+One way to get ideas for new warriors is for me going through the
+results of Mt. Olymp.  One point of interest this time was how the
+warriors in the archive score against He Scans Alone.  Beside some
+stones and coreclears, one can find also programs like 'Return of the
+Living Dead TNG' and others which win about 70% and more.  But only
+Test 1 887 aroused my interest, because it is under the top 10 best
+scoring programs but has only rank 1009.
+
+As you can see below it is a 3-line hopper, which doesn't use the modern
+silk-style replication (split before copy).  The first 3 lines of code
+generates 3 parallel processes.  The mov-instruction of the hopper is
+executed first, which copies the code, while the jmp points to the mov
+of the copy.  The dat in front of it contains the pointer.
+
+
+;redcode-b
+;name Test 1 887
+;author Steve Bailey
+;assert 1
+
+OFFSET  equ     887
+
+start spl     exec
+spl     exec
+jmp     exec
+
+const   dat     #const, #const+OFFSET
+exec    mov.i   }const, >const
+jmp.f   exec+OFFSET
+
+end     start
+
+
+But what makes this code so deadly against some scanners?  Well, the
+reason is the dat line of the code.  If the program jumps through the
+core it always copies beginning with the dat instruction, which contains
+the pointer.  If the hopper jumps onto the opponents code, the chance is
+high that the opponents loop is broken and he will finally die by
+executing the dat line of the hopper.
+
+I optimized the jump distance by generating 50 random constants and
+benchmark them against the scanner from the table below.  In a second
+step I repeated the same procedure with the decrementing constant I've
+added to the jump-instruction.  Below is the final code I received after
+the optimization:
+
+
+;redcode-94
+;name Lethal Frog
+;author Christian Schmidt
+;assert 1
+;strategy
+
+pStep  EQU   4499
+pBomb  EQU   1536
+
+front  dat   #0,       #pStep
+       mov.i }-1,      >-1
+       jmp   pStep-1,  <pBomb
+
+for 5
+       dat   0,        0
+rof
+
+start  spl   2
+       spl   1
+       jmp   front+1
+
+end start
+
+
+Now let's see how the scanners are scoring against the hoppers:
+
+
+               Test 1 887  Lethal Frog
+______________________________________
+Willow         16 84  1      9 91  1
+Zooom...       29 60 11     11 88  2
+Claw           21 76  3     20 77  4
+Win!           33 67  1     20 80  1
+Herbal Avenger 54 45  2     31 67  3
+Jinx           52 47  2     42 55  4
+Stalker        63 35  2     49 51  1
+Hazy Lazy ...  73 24  4     47 52  2
+myBlur2        79 19  2     55 43  3
+
+G2             77  6 17     67 26  8
+Geist v0.1     88  5  8     82 15  4
+CrazyShot 2    93  3  5     79  9 13
+
+
+Well, that doesn't look too bad.  Lethal Frog scores extremely well
+against Willow, Zooom, Claw and Win, while it scores okay against most
+others.  Against oneshots it will lose heavily, because the hoppers
+seems to have problems defeating core-clears as found in oneshots and
+blur-style scanners.  Nevertheless it could be an interesting component
+for p-warriors.
+_______________________________________________________________________________
+Extra Extra - Origin of Storms by John Metcalf - A New Form of Scanner, Maybe?
+
+After reading someone claim yet again "there's nothing new to be discovered
+in Corewar" I didn't have far to look to find this counter-example!  Call it
+a variation on a theme if you wish - it is a scanner afterall, and someone
+discovered those way back in the Dark Ages (before play by e-mail Corewar!).
+
+To be more precise, OoS is a scan with variable length spl carpet, followed
+by a d-clear end-game.  Just a minute, haven't I seen a warrior which does
+exactly this somewhere before (several perhaps)?  Investigating...
+
+Tim Tack Scan by Kline is one example which fits our description perfectly.
+Unfortunately, TTS is faster at both scanning and carpeting than OoS.  Not a
+great deal faster you understand, only there isn't a slower example warrior
+available!  What's .1c between friends anyway?
+
+So, all things considered, what makes OoS of interest?  Hmmm...  Well...
+Swiftly moving on, here's the code:
+
+;redcode-94x
+;name Origin of Storms
+;author John Metcalf
+;strategy unusual scanner variation
+;strategy .4c scan with .25c variable length spl carpet -> d-clear
+;assert CORESIZE==8000 || CORESIZE==800
+
+        for CORESIZE==8000
+        step  equ 17
+        first equ 240
+        dist  equ 3022
+        time  equ 285
+        rof
+
+        for CORESIZE==800
+        step  equ 13
+        first equ 40
+        dist  equ 204
+        time  equ 43
+        rof
+
+ptr:    sne   first,    first+dist
+        add   db,       ptr
+p:      mov   bomb,     }ptr
+        mov   bomb,     >ptr
+        djn   @p,       #time
+
+bomb:   spl   #1,       1
+        mov   db,       >ptr
+        djn.f -1,       >ptr
+db:     dat   step-1,   step-1
+        end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
+care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
+<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
+<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>

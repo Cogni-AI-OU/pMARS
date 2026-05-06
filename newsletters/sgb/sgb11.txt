@@ -1,0 +1,99 @@
+####################################################
+SGB_11.net	CORE WARS
+
+Steve's Guide for Beginners Iss 11 (v3)
+
+Issue 8 looked at another variation of copying and
+at the SPL command.
+
+Issue 9 looked at imp-rings and bombers and
+replicators (by proxy).
+
+Issue 10 analysed RAVE.red
+
+======
+
+There you are, tweaking the constants in your
+warrior. How do you suss if it is a better setup?
+Obviously either using theory or by fighting it
+against a pile of warriors you've written or
+downloaded.
+
+I hate typing for that sort of purpose. I'd rather
+start a script going and return in 20 minutes
+after drinking a coffee.
+
+To that end, I originally offered two DOS batch
+files and a QBASIC program to perform the
+function. However I have since discovered MTS.EXE
+written by the pMARS people. It is available from
+as PTOOLS10.ZIP from either
+  ftp://ftp.csua.berkeley.edu/pub/corewar/... 
+or from 
+  http://www.stormking.com/~koth 
+in the pMARS homepage as "Download accessories".
+
+(I do still occasionally use my batch files - If
+anyone wants them e-mail me.)
+
+======
+
+I (still) include an updated version of
+PM.BAT mentioned in issue 2.
+
+PM.BAT:
+set cmd1=pmarsv
+if "%1"=="q"  set cmd1=pmars
+if "%1"=="Q"  set cmd1=pmars
+if "%cmd1%"=="pmars"  shift
+
+if exist %2.red  goto two
+goto one
+
+:two
+%cmd1% %3 %4 %5 %6 %7 %8 %9 %1.red %2.red
+goto end
+
+:one
+%cmd1% %2 %3 %4 %5 %6 %7 %8 %9 %1.red
+goto end
+
+:end
+set cmd1=
+
+======
+
+It suprises me how a simple improvement to a
+program can make the warrior far less effective!
+
+=== Steve Bailey 101374.624@compuserve.com
+sgb@zed-inst.demon.co.uk
+http://ourworld.compuserve.com/homepages/SGBailey
+Work: Electronics Play: Go 2kyu.
+
+(Appendix because this is a short issue:
+
+Answer to Issue 9 Problem for Beginner Go Players:
+Black to play and kill:
+
+ . . # O . O b O # . .
+ . . # O O O a O # .
+   . # # # # c O # .
+     . . . . # # #
+
+Black plays at "a" causing a shortage of
+liberties. IE if White replies at "c" he has put
+himself in atari and will be captured by a black
+play at "b". If White replies at "b", Black must
+answer at "c" to stop "a" being captured.
+
+[If White gets first move, "a" or "c" would let
+him live, but "c" is one point better.]
+)
+############################################
+
+Steve
+=== Steve Bailey  ZED Instruments Ltd  Hersham Surrey UK
+Work: Electronics           sgb@zed-inst.demon.co.uk
+Play: Go 2kyu WestSurrey    101374.624@compuserve.com
+"These words are not my own, they only come when I'm alone" WS

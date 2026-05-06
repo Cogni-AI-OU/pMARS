@@ -1,0 +1,401 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 46                                                   October 7, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+______________________________________________________________________________
+Greetings.
+
+There was a lot of activity on the 94 hill this week mainly due to testing -
+the claim is that 100 rounds isn't enough to measure the performance of a
+warrior - there will be greater fluctuations in test scores. Perhaps testing
+should go for 200 rounds.
+
+The Core War Standards committee has not been discussed much. Is it needed
+right now? Maybe we just need some players to volunteer to complete the
+'94 draft documentation and other details. To get more people to play the
+game someone could arrange an archive for DOS (a popular platform) which
+contains PMARS, documentation, tutorials, Internet information, etc. and then
+distribute the archive. If you do plan to do either of these things, let
+everyone else know beforehand. Just some thoughts :-)
+
+A reminder: Beppe has organised a tournament. Those who are participating
+should have received information from him.
+
+--Anton Marsden
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  47.0/ 36.7/ 16.3                    Blur 2        Anton Marsden 157.3  183
+ 2  31.3/  9.6/ 59.1      Return Of The Jedimp             John K W 152.9    6
+ 3  43.3/ 34.3/ 22.4       Damage Incorporated        Anton Marsden 152.4   47
+ 4  35.3/ 20.8/ 43.9                    Gigolo   Core Warrior staff 149.8   60
+ 5  34.4/ 20.5/ 45.1           unrequited love                kafka 148.3  104
+ 6  30.7/ 14.3/ 54.9               Impish v0.2          Ian Oversby 147.1   45
+ 7  45.8/ 44.7/  9.5                  Q^2 Miro         Anders Ivner 146.9  234
+ 8  40.4/ 36.5/ 23.1          Instant Wolf 3.4                Edgar 144.3   67
+ 9  41.0/ 38.0/ 21.0                     Probe        Anton Marsden 144.1  184
+10  40.8/ 39.5/ 19.7                 Goldfinch              P.Kline 142.1  125
+11  29.1/ 18.3/ 52.6                   Rosebud                Beppe 140.0  857
+12  38.3/ 38.8/ 22.9                  mrb-test           m r bremer 137.9   90
+13  32.5/ 27.4/ 40.1               Falcon v0.3          Ian Oversby 137.6   89
+14  34.2/ 30.8/ 35.0              CC Paper 3.3                Franz 137.5    2
+15  35.5/ 34.2/ 30.3                     Frogz                Franz 136.9   64
+16  36.0/ 35.2/ 28.8                T.N.T. pro    Maurizio Vittuari 136.9  902
+17  31.8/ 28.5/ 39.7              Simple v0.4b          Ian Oversby 135.1  135
+18  23.5/ 12.0/ 64.5                    ompega       Steven Morrell 135.0  299
+19  36.2/ 38.7/ 25.0               Inferno 2.4       Philip Kendall 133.8   62
+20  38.0/ 43.7/ 18.2              Taking Names              P.Kline 132.3   49
+21  29.3/ 29.3/ 41.5        Jack in the box II          Beppe Bezzi 129.2  541
+22  33.5/ 39.3/ 27.2                    mayhem             harleyQ2 127.7    3
+23  24.9/ 35.4/ 39.7             Barbarian 3.1                Franz 114.4    5
+24   7.3/ 20.0/ 72.6                       sin             harleyQ2  94.6    1
+25   4.0/  0.0/  0.0                      Test        Anton Marsden  12.0   94
+
+Weekly age: 46 ( 13 last issue, 15 the week before )
+New warriors: 6 (2 of which won't last long)  Turnover/age rate 13%
+Average age: 169 ( 140 last issue, 146 the week before )
+Average score: 133 ( 140 last issue, 142 the week before )
+The top 25 warriors are represented by 15 authors: Marsden with 4; Franz and
+Oversby with 3; Beppe, Kline and harleyQ2 with 2; everyone else with 1.
+
+King Report: Gigolo was on top for the majority of the challenges but Return
+of the Jedimp and Blur 2 managed to get reach 1st place for several
+challenges.
+
+Q^2 scans are still doing very well and will probably continue to do so.
+They turn draws into wins and this has a big advantage when combined with
+paper/imp types.
+
+There was a lot of testing this week, mainly by JKW and Franz.
+______________________________________________________________________________
+94 - What's New
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 5  28.3/ 15.9/ 55.9               Impish v0.2          Ian Oversby 140.6    1
+ 1  27.7/ 10.4/ 61.9      Return Of The Jedimp             John K W 145.0    1
+24  22.3/ 36.5/ 41.2             Barbarian 3.1                Franz 108.1    1
+19  34.0/ 40.1/ 25.9                    mayhem             harleyQ2 127.9    1
+14  31.8/ 33.0/ 35.2              CC Paper 3.3                Franz 130.5    1
+25   3.3/ 21.1/ 75.6                       sin             harleyQ2  85.6    1
+
+Return of the Jedimp enters the hill in 1st place and Impish v0.2 also does
+well to make 5th.
+______________________________________________________________________________
+94 - What's No More
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  31.4/ 40.6/ 28.0                 Yogi Bear              P.Kline 122.3  341
+26  35.8/ 47.7/ 16.4           Earthquake v0.2         Bjoern & Ian 123.9   95
+26  33.6/ 45.2/ 21.2                 myVamp5.5             Paulsson 122.1   59
+26   1.2/ 35.3/ 63.6               IMP Factory                Franz  67.1    2
+
+The most significant loss this week was Yogi Bear (a pspacer).
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+16  36.0/ 35.2/ 28.8                T.N.T. pro    Maurizio Vittuari 136.9  902
+11  29.1/ 18.3/ 52.6                   Rosebud                Beppe 140.0  857
+21  29.3/ 29.3/ 41.5        Jack in the box II          Beppe Bezzi 129.2  541
+
+No new entries here, but Yogi Bear is now gone. None of the older warriors are
+in the top ten, indicating that the newer warriors are of a higher quality.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+15  Agony II               Stefan Strack      912    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  902 *  Bomber
+17  Barrage                Anton Marsden      876    Qscan -> replicator
+18  Blue Funk              Steven Morrell     869    Stone/ imp
+19  Rosebud                Beppe Bezzi        857 *  Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+
+Both T.N.T. pro and Rosebud move into better positions.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+   coresize: 8000
+  max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    maximum age: At age 100, warriors are retired.
+   rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+The current Beginner hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  49.6/ 39.4/ 11.1                 Throw Rug             J E Long 159.8   78
+ 2  43.2/ 38.8/ 18.0          Velveeta Shift-I                 shar 147.6   54
+ 3  41.9/ 36.2/ 22.0                    mayhem             harleyQ2 147.5    4
+ 4  43.5/ 40.5/ 16.0          nSplit Lite v1.2                 shar 146.6   42
+ 5  43.9/ 41.4/ 14.6                  Hawk 1.0       Philip Kendall 146.4   75
+ 6  40.1/ 34.2/ 25.7           Versatility 1.6                 Ross 146.1   90
+ 7  33.7/ 21.3/ 45.0                 Gravel 11           Justin Kao 146.0   15
+ 8  42.9/ 39.9/ 17.2             Flamberge 9.0        Matt Lewinski 145.8   14
+ 9  42.5/ 40.0/ 17.5       Violent Micro v0.4d             basehead 145.1   92
+10  39.0/ 33.1/ 27.8               Inferno 2.3       Philip Kendall 145.0   79
+11  33.0/ 27.9/ 39.1              FastScan 1.0       Philip Kendall 138.2   34
+12  36.5/ 35.0/ 28.5                Black v0.1           Justin Kao 137.9   93
+13  31.2/ 24.7/ 44.0                  Sapphire       Philip Kendall 137.7   13
+14  35.7/ 37.1/ 27.2                  murder.p             harleyQ2 134.3   36
+15  29.9/ 27.4/ 42.8                Papyrus 13           Justin Kao 132.4   16
+16  37.2/ 42.5/ 20.2         Microsoft NT v2.5           Justin Kao 131.9    5
+17  37.3/ 42.7/ 20.1                  Eagle.b1       Philip Kendall 131.9   19
+18  35.1/ 38.4/ 26.5         Microsoft NT test           Justin Kao 131.8    1
+19  37.8/ 45.7/ 16.5   Neverending Brutality 7                Franz 129.9   69
+20  38.0/ 46.5/ 15.5               Conquest II           Zul Nadzri 129.6   35
+21  35.3/ 41.5/ 23.1             Vampirism 1.4       Philip Kendall 129.2   96
+22  30.3/ 32.6/ 37.1                      Frog                Franz 128.0   56
+23  32.3/ 37.5/ 30.2                       RSB             harleyQ2 127.2   63
+24  23.7/ 22.4/ 54.0           Sand Storm v0.1           Justin Kao 125.0   10
+25  20.5/ 37.5/ 42.0            Hammermill 4.0        Matt Lewinski 103.5    2
+
+The top score has fallen substantially from what it was last week and the
+warrior scores are more evenly spread indicating that the "beginners" are
+getting better - it might be time for some of you to start submitting warriors
+to the 94x hill - there are some old but good warriors on there.
+______________________________________________________________________________
+The Hint
+Mutation - improving your end game
+by Anton Marsden
+
+There has been little development in the basic warrior types recently,
+perhaps because further optimisation cannot be obtained or is difficult to
+obtain. In this hint I will discuss mutation of warriors - a potentially
+powerful method of optimisation.
+
+The most common use of mutation is to bomb your code with a SPL instruction to
+start a core clear. This technique is usually used in incendiary bombers (see
+CW #15 for more information on this). The whole idea behind mutation is to
+reduce the code size (or the number of sequential instructions).
+
+To illustrate the possibilities ...
+
+This is one of my old warriors (Mirage 1.5) with a "standard" DAT clear. It
+is 11 lines long.
+
+ORG s
+
+step EQU 3039
+gate EQU data
+btm EQU (clr+1)
+
+data: spl.a  #0,>step
+pos:  add.ab #step,#2*step
+kill: mov.i  bomb,>data
+s:    jmz.f  @0,@pos
+c:    slt.b  pos,#btm-data+2
+      mov.b  pos,data
+      jmn.b  @0,pos
+
+bomb: spl.a  #0,#0
+      mov.i  clr,>gate
+      djn.f  -1,{gate
+clr:  dat.f  0,btm-gate+1
+
+
+I wanted to add a spiral clear to this (see CW #17), but adding the clear
+made the warrior too big to get anywhere on the hill. Solution: mutation.
+Amazingly, I could mutate the scan engine into a forward DAT clear and spiral
+scan. Here is how it turned out (you really have to watch it to see what it
+does):
+
+ORG s
+
+step EQU 98 ; mod-2 - give the spiral clear enough time to go through the core
+btm EQU (bomb+1)
+
+data: spl.a  #0,step
+pos:  add.ab #step,#2*step
+kill: mov.i  bomb,>data
+s:    jmz.f  @0,@pos
+c:    slt.b  pos,#btm-data+2
+chg:  mov.f  @s,@kill
+      jmn.b  pos,*0
+      mov.f  next,<chg ; pos: add.ab #381,#btm-data
+                       ; chg: mov.f @s,@pos
+      djn.f  >-2,{chg  ; Stop jmn from falling through again
+                       ; chg: mov.f @kill,@pos -> mov.f next,@pos
+                       ; kill: mov.i next,>data-1
+
+next: dat.f  381,btm-data
+bomb: spl.a  #0,#0
+
+This warrior is also 11 lines long, a great improvement! However, it took me
+hours to get it working properly. Notice the use of indirection and decrements
+to mutate the code (the chg line is the key to the whole process). The entire
+warrior (with name, boot, decoy and a few other changes) is at the end of this
+issue. It still performs poorly against fast scanners/bombers but is much
+better against imp types. There is a tradeoff between robustness and
+functionality - the SPL in Mirage stopped it from terminating if the code
+below the SPL was bombed whereas the new warrior's instructions must be
+completely intact to avoid termination.
+
+Mutations like this are very hard to accomplish so I will now suggest a
+general approach to designing these warriors.
+
+Take the basic structure of the first stage of your warrior and try and
+base the second stage around it, ie. structure it so that the second stage
+can be obtained with little change to the instruction sequence.
+
+You need to trigger your mutation somehow. The best approach may be to fall
+through a DJN/JMN check. If you are dealing with a self-splitting bomber DJN
+is one to use. Also, self-splitting has the advantage that you don't have to
+jump back into the main loop after a mutation.
+
+The next step is to make the mutation happen properly. Use as many lines of
+code as is necessary. Also remember to modify the code so that the mutation
+is not retriggered later.
+
+The final step is the most creative. You should aim to reduce the number of
+lines required for the mutation. This can be done by:
+
+- Using indirection and decrements (DJN is very useful).
+- Swapping instructions.
+- Thinking very hard.
+
+You will need a lot of patience. Sometimes you may find that optimisation is
+just not possible. Then it's time to take another look at the structure or the
+trigger... or just give up :-)
+
+I hope this information will help someone out there...
+
+Have fun!
+______________________________________________________________________________
+Extra Extra
+Eggbeater
+by Anton Marsden
+
+The warrior boots and immediately starts overwriting it's own boot code,
+starting with the destination pointer.
+
+;redcode-94
+;name Eggbeater
+;author Anton Marsden
+;strategy Mirage 1.5 with spiral clear
+;assert CORESIZE==8000
+
+N FOR 7
+    spl.i #0,#0
+    spl.a #N+(1*8),#N+(1*8)
+    spl.f #0,#0
+    spl.x #N+(2*8),#N+(2*8)
+    spl.b #0,#0
+    spl.ab #N+(3*8),#N+(3*8)
+    spl.ba #0,#0
+    spl.b #N+(4*8),#N+(4*8)
+    spl.ab #0,#0
+    spl.f #N+(5*8),#N+(5*8)
+ROF
+
+FOR 3
+    spl.x #0,#0
+    spl.a #1,#1
+ROF
+
+;-----------------
+
+destdiv2 EQU 2000 ; not really this
+dest EQU (2*destdiv2+1) ; odd number :-)
+
+boot: mov.i  bomb,dest
+FOR 9
+      mov.i  {boot,<boot
+ROF
+      spl @boot,}2001
+      mov.i  {boot,<boot
+      dat.f  $0,$0
+
+;-----------------
+
+step EQU 98 ; mod-2
+btm EQU (bomb+1)
+
+data: spl.a  #0,>-dest+bomb
+pos:  add.ab #step,#0
+kill: mov.i  bomb,>data
+s:    jmz.f  @0,@pos
+c:    slt.b  pos,#btm-data+2
+chg:  mov.i  @s,@kill
+      jmn.b  pos,*0
+      mov.f  #381,<chg
+      djn.f  <-2,{chg
+
+next: dat.f  0,btm-data
+bomb: spl.a  #0,#0
+
+END boot
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@comp.vuw.ac.nz>

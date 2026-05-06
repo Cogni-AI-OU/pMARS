@@ -1,0 +1,119 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               July 2, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 35/ 23         Winter Werewolf 3         W. Mintardjo     149     155
+ 2  34/ 25/ 41              FlyPaper 3.0            J.Layland     142     261
+ 3  42/ 42/ 16           Grimm's Vampyre             c w blue     141      20
+ 4  37/ 33/ 30                  Herem VI         Anders Ivner     141       9
+ 5  30/ 20/ 49                   testing         Anders Ivner     141       2
+ 6  42/ 44/ 14                   Impurge     Fredrik Ohrstrom     141     161
+ 7  42/ 44/ 13              Dragon Spear             c w blue     140     939
+ 8  43/ 48/  9                 Agony 6.0        Stefan Strack     139      91
+ 9  30/ 25/ 45               Sphinx v2.8         W. Mintardjo     136    1835
+10  41/ 48/ 11               Charon v8.1   Cisek,Strack,Kline     135       1
+11  30/ 25/ 45       Deck of Many Things             c w blue     135      69
+12  29/ 24/ 47             Night Crawler       Wayne Sheppard     133     837
+13  29/ 24/ 47                Imprimis 7              P.Kline     133      77
+14  39/ 48/ 13           Fire Storm v1.1         W. Mintardjo     130     476
+15  28/ 26/ 46                       ttt        nandor sieben     130      61
+16  26/ 24/ 50        Incrimination v1.0     Brant D. Thomsen     129     241
+17  30/ 33/ 37                  Passport              P.Kline     128      47
+18  34/ 44/ 22                  Wimp 8.1     Brant D. Thomsen     125      72
+19  19/ 15/ 66       Imps! Imps! Imps!-d       Steven Morrell     122      71
+20  19/ 34/ 47                   Express              P.Kline     105       3
+
+21   2/  2/  0               Charon v8.1   Cisek,Strack,Kline       7      22
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Major accolades go out this week to W. Mintardjo, whose Sphinx v2.8
+has set a new duration record for KotH.  Will Sphinx break the 2000
+barrier?  How high can he go?
+
+At the other end of the scale, major frustration to W. Sheppard who
+knocked of his own Snake warrior due to low performance (too many
+anti-vamps out there Wayne? :-)  With his flagship Night Crawler
+suffering the blues, he tried this one:
+  20  32/ 47/ 21                !@#$%^&*()       Wayne Sheppard     117       1
+
+Ah! the sweet feeling of success:
+   5  28/ 14/ 58       Imps! Imps! Imps!-d       Steven Morrell     141      10
+S. Morrell seems to have discovered the secret of tying, but he's
+also tough on Irony which dropped a bunch.  (Irony would be one of yours,
+wouldn't it, Wayne? :-)
+
+It took him six or seven tries, but A. Ivner finally got his reincarnation
+of Herem to work as well under the name Herem VI as it did as 'test Herem'.
+Maybe there's something to this 'test' name theory of mine.
+
+This week's hot topic on rec.games.corewar is the new draft proposal for
+the Corewar language.  Seems everyone has a favorite expansion idea.
+Mark Durham worked overtime to draft the latest version, which is a
+major feat, and excellent work.  Now we'll see if we can get people
+past the bitching, booing, and hissing phase into a constructive
+process leading to an improved standard.  Internet news has been
+described as anarchy, so it should be interesting to see how this
+develops.
+
+And speaking of changes, this 'conservative veteran' would like
+to report that he has just ordered Think C v6.0 for his Mac and will
+soon be abandoning Basic for the new world of C.  Just so's you all
+know I'm not just a stick-in-the-mud who's afraid of change.  Give
+me a week or two with the manual, and I'm sure I can start helping
+with the 'portable Corewar' project :-)  Besides, this package comes
+with a free trip to Hawaii.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 3  33/ 18/ 48                   testing         Anders Ivner     148       1
+ 4  40/ 32/ 28                test Herem         Anders Ivner     148       1
+ 6  39/ 33/ 28                  Herem VI         Anders Ivner     144       1
+ 7  32/ 26/ 43                       ttt        nandor sieben     138       1
+ 7  34/ 30/ 37                  Passport              P.Kline     137       1
+ 9  40/ 42/ 18           Grimm's Vampyre             c w blue     138       1
+10  41/ 46/ 13                     Irony       Wayne Sheppard     136       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+You submitted 'Blastem', and it scored 129 points and got on the Hill.  Great!
+Then you tweaked your constants and it dropped to 120 :-(  So you
+resubmitted the original and it still only gets 120.  What is going on?
+
+A couple of factors are involved here.  Your first submission
+probably knocked off a warrior that you beat.  Your second submission
+has to play your first version, instead of the weaker warrior, and doesn't
+do so well against him.
+
+Another factor is that you only battle 100 games against each opponent
+per submission.  And 100 is still a small enough number (out of nearly
+8000 possible setups) that through sheer chance you will win or lose
+a few more against the same opponent on successive tries.  In fact
+you should probably not feel too confident in a gain of 10 wins or less
+against any one opponent.
+
+When submitting variations of the same warrior, look for gains against
+a whole class of opponents - paper, scanners, imps, stones, etc.  Then
+you'll know you are on to something.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+

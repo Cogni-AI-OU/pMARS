@@ -1,0 +1,798 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 72                                                         13 April, 1999
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star internet
+locals for more information:
+
+FAQs are available from:
+  ftp://rtfm.mit.edu/pub/usenet/news.answers/games/corewar-faq.Z
+  http://www.koth.org/corewar-faq.html
+
+The ftp site and mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars.html             ;Stormking
+  http://www.ncs.infi.net/~wtnewton/corewar  ;Terry's web page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;Stormking
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the Stormking page for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+
+A collection of Bezzi's hints in the first issues is available at:
+  ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+_______________________________________________________________________________
+Welcome...
+
+There has been very little activity either on the hills or in the newsgroup
+since last issue. However, Ian Oversby's tournament has reached a conclusion,
+with someone winning a copy of Ian's paper/stone, Recovery. Also, Macrae won
+the code for Mini-CLP by solving Kline's Challenge.
+
+This issue, Christian Schmidt shows us how he constructed and optimized three
+of his multi-strategy warriors, Digital Dragon, Shadow and Stormbringer :-)
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  44.0/ 31.6/ 24.5             Recycled Bits          David Moore 156.4   13
+ 2  37.8/ 25.8/ 36.4              Spooky Wench         John Metcalf 149.8    0
+ 3  36.3/ 24.9/ 38.9                Puddleglum         John Metcalf 147.7    1
+ 4  41.9/ 37.5/ 20.6            Pattel's Virus             Ben Ford 146.4   13
+ 5  35.6/ 25.6/ 38.8          The Stormbringer    Christian Schmidt 145.5   13
+ 6  28.1/ 10.9/ 61.0              The Fugitive          David Moore 145.2   13
+ 7  35.7/ 27.1/ 37.2                     Fixed         Ken Espiritu 144.2   13
+ 8  34.9/ 26.6/ 38.4                    Shadow    Christian Schmidt 143.3   10
+ 9  42.7/ 42.4/ 14.9                  Zooom...         John Metcalf 143.0    6
+10  39.4/ 36.3/ 24.4                    BiShot    Christian Schmidt 142.5    1
+11  39.3/ 40.9/ 19.8          Silver Talon 1.2                Edgar 137.7   14
+12  30.3/ 23.1/ 46.6       Even Less Innocuous               TeamQ3 137.5    2
+13  30.0/ 23.1/ 47.0        Freight Train v0.2          David Moore 136.9   13
+14  33.6/ 31.3/ 35.1                      Twin    Christian Schmidt 135.9   13
+15  29.9/ 24.6/ 45.5            Less Innocuous    Leonardo Humberto 135.2    3
+16  34.2/ 33.8/ 32.1            Digital Dragon    Christian Schmidt 134.6   13
+17  35.3/ 36.3/ 28.4            trefoil 23 226        Steve Gunnell 134.4   23
+18  37.3/ 40.6/ 22.1                   Galatea             Ben Ford 134.1   13
+19  38.9/ 43.9/ 17.2        redcode ragamuffin     Simon Wainwright 133.9    4
+20  27.0/ 22.2/ 50.7                 Innocuous         John Metcalf 131.8   11
+21  38.0/ 46.2/ 15.8              Have No Pity         John Metcalf 129.8    1
+22  22.4/ 15.6/ 62.0     ;strategy stone/paper         John Metcalf 129.2    5
+23  28.2/ 29.1/ 42.7              Quicker Zeta    Leonardo Humberto 127.3    8
+24  21.5/ 15.7/ 62.8   ( 2 x^2 + 3 x + 1 ) / 2         John Metcalf 127.3    4
+25  34.0/ 41.4/ 24.5            trefoil 28 558        Steve Gunnell 126.7   13
+
+Age since last issue: 10 ( 69 last issue, 33 the issue before )
+New warriors: 11  Turnover/age rate 110%
+Average age: 8 ( 3 last issue, 46 the issue before )
+Average score: 138 ( 143 last issue, 140 the issue before )
+The top 25 warriors are represented by just 10 independent authors: Metcalf
+with 7, Schmidt with 5, Moore with 3, Ford, Gunnell and Humberto with 2 each
+and everyone else with just one warrior.
+
+Fixed, Pattel's Virus and Spooky Wench each had a short time as King before
+Recycled Bits claimed top spot. Still we have 10 warriors of the same age,
+down from 20 last issue.
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 2  35.3/ 27.0/ 37.7              Spooky Wench         John Metcalf 143.5    0
+ 2  33.3/ 25.0/ 41.6                Puddleglum         John Metcalf 141.6    0
+ 7  35.7/ 27.8/ 36.6                    Shadow    Christian Schmidt 143.6    0
+ 7  36.1/ 36.6/ 27.3                    BiShot    Christian Schmidt 135.6    0
+ 9  26.7/ 17.7/ 55.7                Redemption         John Metcalf 135.7    0
+11  26.0/ 21.6/ 52.4       Even Less Innocuous               TeamQ3 130.4    1
+11  25.6/ 20.9/ 53.5            Less Innocuous    Leonardo Humberto 130.3    1
+17  38.6/ 45.7/ 15.7                  Zooom...         John Metcalf 131.6    1
+18  21.6/ 15.2/ 63.2     ;strategy stone/paper         John Metcalf 127.9    1
+20  26.9/ 25.9/ 47.2           RabidWeasel 0.5                  WFB 127.9    1
+20  35.2/ 46.1/ 18.7                myVamp5.6?             Paulsson 124.3    0
+20  18.2/ 13.8/ 68.0   ( 2 x^2 + 3 x + 1 ) / 2         John Metcalf 122.6    0
+20  34.8/ 47.7/ 17.6              Have No Pity         John Metcalf 121.8    0
+21  27.0/ 27.6/ 45.4              Quicker Zeta    Leonardo Humberto 126.4    1
+22  36.3/ 52.1/ 11.6          quatrefoil 2 185        Steve Gunnell 120.5    1
+25  34.3/ 48.4/ 17.3        redcode ragamuffin     Simon Wainwright 120.3    1
+
+Very few new warriors. Shadow and Spooky Wench are updated.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  34.4/ 50.9/ 14.7                   Silccon        M. J. Pihlaja 117.9   22
+26  21.6/ 24.7/ 53.6            delay 0.02b 50       bjoern guenzel 118.5   13
+26   1.4/  0.5/  2.1             The Conqueror    Christian Schmidt   6.3   12
+26   0.4/  0.1/  3.5              Spooky Wench         John Metcalf   4.7    9
+26   0.6/  0.8/  2.6                 Fragility         John Metcalf   4.4    9
+26  35.4/ 50.5/ 14.1               Lost Again!          David Moore 120.3    8
+26  27.2/ 35.7/ 37.2          Bond, James Bond             Ben Ford 118.7    8
+26   0.5/  1.4/  2.0        Strange Variations         John Metcalf   3.7    8
+26  33.3/ 48.5/ 18.2            Reconnaissance             Ben Ford 118.0    7
+26  20.2/ 22.6/ 57.2           RabidWeasel 0.5                  WFB 117.9    7
+26  32.0/ 46.6/ 21.4           Ice Pick Willie             Ben Ford 117.4    6
+26  36.8/ 55.0/  8.2                    Boing!         John Metcalf 118.7    4
+26   2.2/  0.6/  1.2                Redemption         John Metcalf   7.9    4
+26  33.1/ 47.0/ 19.8                myVamp5.6?             Paulsson 119.3    3
+26   1.4/  1.4/  1.3                    Shadow    Christian Schmidt   5.3    3
+26  34.5/ 53.5/ 12.0          quatrefoil 2 185        Steve Gunnell 115.5    2
+
+Lots of ;killing occurred this month...
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+
+Nothing old yet :-(
+_______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> Bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    Oneshot
+ 8  Evol Cap 6.6           John Wilkinson    1299    Stone/imp
+ 9  quiz                   Schitzo           1262    Scanner/bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/imp
+15  Iron Gate 1.5          Wayne Sheppard     926    Scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    Scanner
+18  Barrage                Anton Marsden      876    Qscan -> Paper
+19  Blue Funk              Steven Morrell     869    Stone/imp
+20  Flurry                 Anton Marsden      835    Qscan -> P-warrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> Bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/imp
+23  Night Train            Karl Lewin         755    Paper
+24  Mirage 1.5             Anton Marsden      736    Scanner/bomber
+25  Blizzard               Anton Marsden      713    Qscan -> Paper
+_______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+22  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+23  Electric Head          Anton Marsden      140    P-warrior
+24  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+25  Fixed                  Ken Espiritu       135    Q^2 -> Paper
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  55.7/ 28.6/ 15.8            Pattel's Virus             Ben Ford 182.7   20
+ 2  49.4/ 31.8/ 18.8           Spat the dummy. Steve Gunnell (oh ye 166.9   78
+ 3  47.2/ 38.5/ 14.3        redcode ragamuffin     Simon Wainwright 155.9    6
+ 4  32.3/ 16.3/ 51.3              Quicker Zeta    Leonardo Humberto 148.3   12
+ 5  39.8/ 32.7/ 27.5                 Arsonic C             P._V._K. 146.9   95
+ 6  43.8/ 41.1/ 15.2                   Fat Man          A.S. Mehlos 146.4   92
+ 7  41.5/ 38.8/ 19.7 Sticky taped together 1.2        Steve Gunnell 144.3   89
+ 8  34.9/ 27.2/ 37.9          A man with a Gun             Ben Ford 142.7   63
+ 9  29.6/ 17.1/ 53.3                Redemption         John Metcalf 142.1   54
+10  43.2/ 44.5/ 12.3       fatal lure of pMars     Simon Wainwright 142.0   22
+11  39.0/ 36.8/ 24.3          No Time To Think         A. S. Mehlos 141.2   79
+12  30.8/ 21.6/ 47.6            HardCore v0.2b           Simon Duff 140.0   18
+13  39.5/ 39.3/ 21.2               Fire Master             P_.V_.K. 139.7    2
+14  32.8/ 26.3/ 40.9           Frusteration II         A. S. Mehlos 139.3   82
+15  30.4/ 24.1/ 45.4       ModerationRevisited         A. S. Mehlos 136.7   98
+16  37.2/ 37.9/ 24.9                  Red Sand          Ken Hubbard 136.6    1
+17  32.1/ 30.1/ 37.9    of mirth and merriment     Simon Wainwright 134.1   24
+18  26.9/ 19.8/ 53.3                Quick Zeta    Leonardo Humberto 134.0   17
+19  32.9/ 34.9/ 32.2               Ground Zero          Ken Hubbard 130.9    5
+20  24.4/ 20.2/ 55.4                  H-Bomb 9          Josh Yeager 128.6   76
+21  24.1/ 20.5/ 55.4                 H-Bomb 9k          Josh Yeager 127.8   75
+22  36.2/ 44.8/ 19.1 Death kiss with a dash of      Anders Rosendal 127.6   38
+23  27.7/ 29.6/ 42.7    Rocking-Chair 94 v0.33    Leonardo Humberto 125.8   26
+24  26.6/ 29.0/ 44.3                 SandPaper    Leonardo Humberto 124.3    9
+25  27.7/ 54.5/ 17.8             v15var 3  257        Steve Gunnell 100.9    3
+
+15 successful challenges since last issue, and only Scanzonato perished of
+old age. The top five comprises a good cross-section of strategy: 2 p-space,
+a scanner, a paper and a bomber. Beginners might like to try submitting
+warriors to one or two of the alternative hills, which are easier to enter
+than you may think.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 37/ 21 Boys are Back in Town 1.1       Philip Kendall     149     140
+ 2  42/ 39/ 18                  Zooom...         John Metcalf     145      14
+ 3  26/ 10/ 64         _romanian_killah_  Costin Bontas rulez     142     107
+ 4  33/ 25/ 42                      Vain          Ian Oversby     141     215
+ 5  25/ 10/ 65              The Fugitive          David Moore     141     217
+ 6  35/ 30/ 35                     Fixed         Ken Espiritu     140     198
+ 7  34/ 28/ 38          The Stormbringer    Christian Schmidt     140     149
+ 8  33/ 25/ 42                  Recovery          Ian Oversby     140     138
+ 9  34/ 28/ 39                   Blacken          Ian Oversby     139     125
+10  37/ 35/ 29               BiShot v1.0    Christian Schmidt     139      47
+11  34/ 30/ 37              Spooky Wench         John Metcalf     137       2
+12  33/ 29/ 38             Baseline Plus         Ken Espiritu     137     196
+13  41/ 44/ 15                      Win!          David Moore     137     113
+14  29/ 23/ 47       Even Less Innocuous               TeamQ3     136       6
+15  30/ 25/ 46                 Brigadeer     M Joonas Pihlaja     135     134
+16  32/ 31/ 37                Puddleglum         John Metcalf     134       1
+17  34/ 34/ 31               Liquid Fire    Christian Schmidt     134     111
+18  34/ 34/ 32                     qTest              P.Kline     134      37
+19  33/ 34/ 32            Digital Dragon    Christian Schmidt     132      16
+20  27/ 22/ 52                     ELI-8         John Metcalf     131      17
+
+The no-pspace hill has aged by 40 successful challenges this month, with
+scanners now ruling the hill once again. Gemini Dream left the hill aged
+182 and Fugitive becomes the oldest warrior. Centenarians Head or Tail,
+Floody River and Red Carpet also departed. 16 of the 20 warriors on this
+hill use some form of Qscan.
+_______________________________________________________________________________
+Current Standings of the Oversby Autumn Corewar Tournament:
+
+           :   '94   Tiny   Grey  Build  Multi  Primo  rDist  c8001 :  Total
+ 1 Pihlaja : 98.66 100.00 100.00      x  84.82  87.48      x 100.00 : 570.80
+ 2 Schmidt : 99.46  70.55  75.41  77.34  50.26 100.00  92.84      x : 515.02
+ 3 Macrae  : 87.63  69.55  74.28 100.00  74.87  95.32  54.47  81.59 : 513.69
+ 4 WFB     : 91.10  22.42  49.35  56.28 100.00  56.47      x  95.31 : 473.57
+ 5 Khuong  : 75.82  60.37  65.86  63.96      x      x  42.71  15.56 : 323.47
+ 6 Gunnell : 72.82  46.50  19.46      x  47.12  87.95      x      x : 270.06
+ 7 Mehlos  : 71.22  29.45  76.11  76.23      x      x      x      x : 252.99
+ 8 Hale    : 99.12  66.52  18.68  60.92      x      x      x      x : 245.24
+ 9 Moore   :100.00  63.67  62.29      x      x      x      x      x : 225.97
+10 Yeager  :     x  24.93  44.22  60.03  34.55      x      x      x : 163.73
+11 Metcalf :     x      x      x      x      x  39.96 100.00      x : 139.96
+12 Kendall : 90.04  35.48   3.21      x      x      x      x      x : 128.27
+13 Ford    :     x      x      x      x      x      x      x  70.92 :  70.92
+14 Duff    : 23.05  30.67  10.51      x      x      x      x      x :  63.57
+
+Pihlaja wins the final round with Give it a Proper Name, and wins the
+tournament with 570 points out of a possible 600. Ford shows it is never
+too late to participate in these events...
+
+Code for all warriors is now available from the tournament's homepage at:
+
+  http://www.geocities.com/TimesSquare/Realm/2443/
+_______________________________________________________________________________
+The Hint -
+Optimizing Process Allocation in Parallel-Running Strategies
+by Christian Schmidt
+
+In this month's hint I would like to present a little known method to
+optimize warriors with two parallel-running strategies.  For example,
+stone/papers, stone/imps and clear/imps.  Everyone who has tried to
+build a stone/imp knows that one of the most important decisions is how
+long the spiral should be allowed to grow.  With weak imps the fast
+running stone will easily beat a scanner, but will lose badly against an
+agressive paper.  With strong imps the warrior will tie against paper,
+but due to the slowed down stone it loses against anti-imp scanners.
+
+A good stone/imp is somewhere between these extremes.  The most common
+ways to keep control over the time the imp spiral grows are:
+
+a) the use of a fixed number of processes for the imp, as would be
+   created by a jmp/add, vector or binary launcher,
+
+b) to kill a continuous-imp launcher with a dat-bomb from the stone at a
+   fixed time,
+
+c) to delay the start of a continuous-imp launcher until a self-
+   splitting stone has build up enough processes.
+
+In all three methods the goal is to slow down and weaken the imp, so the
+stone runs faster.  However, there is another possiblility.  Instead of
+slowing down the imp, speed up the stone.  Accelerate the stone by
+launching multiple processes into it.
+
+As far as I know the first example of this technique involved in a
+stone/imp was Alien and in a clear/imp Justin Kao's Dust 0.7 and later
+Digitalis.  In all cases the add/jmp-launcher starts both, the imp and
+the stone (Alien) or the d-clear (Dust, Digitalis).  To introduce the
+faster and smaller continuous-imp launcher into this warriors the stone
+(or clear) must now launch separatly.  Instead of a:
+
+    jmp    stone    ;----> 1 process for the stone
+
+it could be used for example:
+
+    spl    stone
+    jmp    stone    ;----> 2 processes for the stone
+
+or maybe:
+
+    spl    2
+    spl    stone
+    jmp    stone    ;----> 3 processes for the stone
+
+Every combination is possible.  One advatage is the relatively easy
+optimization of the ratio of processes in the stone and imp.  An
+additional acceleration of the stone is possible by using a spl #0
+instruction in front of it.  This helps gain a lot of extra points...
+All of the discussed improvements are used for The Stormbringer, where
+the stone is Carbonite.  The big advantage against other stone/imps is,
+that it is very small and extremly fast.  The only disadvantage is that
+there is no real core-clear at the end of the bombing phase.
+
+
+
+;redcode-94
+;name The Stormbringer
+;author Christian Schmidt
+;strategy q^2 -> stone/imp
+;assert 1
+
+        org     start
+
+QS      EQU (0-200)
+QD      EQU (0+100)
+QB      EQU (start-350)
+CR      EQU (fnd-which)
+datz    EQU (table-3)
+GAP     equ     8
+REP     equ     15
+cBptr   equ     3001-2
+impoff  equ     627
+impsize equ     2667
+
+qinc    dat     >(-1)*GAP*2, >GAP
+
+        dat     9*QS,  1*QS
+table:  dat     5*QS,  2*QS
+        dat    13*QS, 17*QS
+
+P:      add.f  table,table
+slow:   add.ab *P,fnd
+fast:   add.b  @P,@-1
+
+which:  sne.i  datz,@fnd
+        add.ab #QD,fnd
+
+        add.ba  fnd,         fnd
+qbo     mov.i   qinc,        @fnd
+        mov.i   qinc,        *fnd
+fnd     mov.i   (-1)*(GAP/2),@QB
+        sub.x   qinc,        fnd
+        djn.b   qbo,         #REP
+        jmp     cBoot,       }-300
+
+start:
+        seq.i  QB+QS*0,QB+QS*0+QD
+        jmp    which, 0
+
+        seq.i  QB+QS*2,QB+QS*2+QD
+        jmp    fast, 0
+        seq.i  QB+QS*1,QB+QS*1+QD
+        jmp    fast, <P
+        seq.i  QB+QS*17,QB+QS*17+QD
+        jmp    fast, >P
+
+        seq.i  QB+QS*7,QB+QS*7+QD
+        jmp    slow, 0
+        seq.i  QB+QS*6,QB+QS*6+QD
+        jmp    slow, <P
+        seq.i  QB+QS*22,QB+QS*22+QD
+        jmp    slow, >P
+        seq.i  QB+QS*11,QB+QS*11+QD
+        jmp    slow, {P
+        seq.i  QB+QS*15,QB+QS*15+QD
+        jmp    slow, }P
+        seq.i  QB+QS*10,QB+QS*10+QD
+        djn.f  slow, P
+
+        seq.i  QB+QS*5,QB+QS*5+QD
+        jmp    >fast, 0
+        seq.i  QB+QS*9,QB+QS*9+QD
+        jmp    >fast, {P
+        seq.i  QB+QS*13,QB+QS*13+QD
+        jmp    >fast, }P
+
+        seq.i  QB+QS*14,QB+QS*14+QD
+        jmp    P, 0
+        seq.i  QB+QS*8,QB+QS*8+QD
+        jmp    P, <P
+        seq.i  QB+QS*12,QB+QS*12+QD
+        jmp    P, {P
+        seq.i  QB+QS*32,QB+QS*32+QD
+        jmp    P, }P
+        seq.i  QB+QS*20,QB+QS*20+QD
+        djn.f  P, P
+
+        seq.i  QB+QS*4,QB+QS*4+QD
+        jmp    }slow, 0
+        seq.i  QB+QS*3,QB+QS*3+QD
+        jmp    }slow, {P
+        seq.i  QB+QS*19,QB+QS*19+QD
+        jmp    }slow, }P
+        seq.i  QB+QS*18,QB+QS*18+QD
+        djn.f  <fast, P
+
+        seq.i  QB+QS*36+CR,QB+QS*36+QD+CR
+        jmp    }fast, 0
+
+cBoot   spl     pump                     ;split to the imp launcher
+        mov     cBomb,      cSp+cBptr+198
+        mov     cSp-1,      cSp+cBptr-1
+        mov     cSp,        cSp+cBptr
+        mov     cSp+1,      cSp+cBptr+1
+        mov     cSp+2,      cSp+cBptr+2
+        mov     cSp+3,      cSp+cBptr+3
+        spl     cSp2+cBptr,  {0          ;
+        spl     cSp2+cBptr,  {0          ;
+        jmp     cSp2+cBptr,  {0          ;--->3 processes for the stone
+
+cSp2    spl     #0,         #0           ;---> extra boost for the stone
+cSp     spl     #0,         <-1151+3
+        mov     197,        cAd-(197*3500)
+cAd     add.ab  {0,         }0
+        djn.f   -2,         <-1151
+cBomb   dat     >-1,        >1
+
+   for  19-2
+        dat     0,          0
+   rof
+
+pump     spl     #1,         >prime
+prime    mov.i   imp,        impoff-4
+         add.f   #impsize+1, ptr
+ptr      jmp     pump+impoff-(impsize+1), >-200
+
+imp      mov.i   #impsize,   *0
+
+
+
+Using exactly the same method I created Digital Dragon (everybody will
+see the similarity to The Stormbringer ;-) with a d-clear.  But instead
+of the 3pt imps I used here 13pt imp.  I've used this because it gave
+the best results on the hill.  Though it isn't as lethal as Digitalis 4,
+it loses much less against q^2 -> papers due to it's smaller size and
+faster launching.
+
+
+
+;redcode-94
+;name Digital Dragon
+;author Christian Schmidt
+;strategy q^2 -> d-clear + 13pt imps
+;assert 1
+
+        org     start
+
+QS      EQU (0-200)
+QD      EQU 100
+QB      EQU (start-350)
+CR      EQU (fnd-which)
+datz    EQU (table-3)
+GAP     equ     8
+REP     equ     15
+impoff  equ     627+200
+impsize equ     5091
+bptr1   equ     1800
+
+qinc    dat     >(-1)*GAP*2, >GAP
+
+        dat     9*QS,  1*QS
+table:  dat     5*QS,  2*QS
+        dat    13*QS, 17*QS
+
+P:      add.f  table,table
+slow:   add.ab *P,fnd
+fast:   add.b  @P,@-1
+
+which:  sne.i  datz,@fnd
+        add.ab #QD,fnd
+
+        add.ba  fnd,         fnd
+qbo     mov.i   qinc,        @fnd
+        mov.i   qinc,        *fnd
+fnd     mov.i   (-1)*(GAP/2),@QB
+        sub.x   qinc,        fnd
+        djn.b   qbo,         #REP
+        jmp     boot,        }-300
+
+start:
+        seq.i  QB+QS*0,QB+QS*0+QD
+        jmp    which, 0                ; 0
+
+        seq.i  QB+QS*2,QB+QS*2+QD
+        jmp    fast, 0                 ; E
+        seq.i  QB+QS*1,QB+QS*1+QD
+        jmp    fast, <P                ; D
+        seq.i  QB+QS*17,QB+QS*17+QD
+        jmp    fast, >P                ; F
+
+        seq.i  QB+QS*7,QB+QS*7+QD
+        jmp    slow, 0                 ; BE
+        seq.i  QB+QS*6,QB+QS*6+QD
+        jmp    slow, <P                ; BD
+        seq.i  QB+QS*22,QB+QS*22+QD
+        jmp    slow, >P                ; BF
+        seq.i  QB+QS*11,QB+QS*11+QD
+        jmp    slow, {P                ; AE
+        seq.i  QB+QS*15,QB+QS*15+QD
+        jmp    slow, }P                ; CE
+        seq.i  QB+QS*10,QB+QS*10+QD
+        djn.f  slow, P                 ; AD
+
+        seq.i  QB+QS*5,QB+QS*5+QD
+        jmp    >fast, 0                 ; B
+        seq.i  QB+QS*9,QB+QS*9+QD
+        jmp    >fast, {P                ; A
+        seq.i  QB+QS*13,QB+QS*13+QD
+        jmp    >fast, }P                ; C
+
+        seq.i  QB+QS*14,QB+QS*14+QD
+        jmp    P, 0                     ; BBEE
+        seq.i  QB+QS*8,QB+QS*8+QD
+        jmp    P, <P                    ; BDE
+        seq.i  QB+QS*12,QB+QS*12+QD
+        jmp    P, {P                    ; ADE
+        seq.i  QB+QS*32,QB+QS*32+QD
+        jmp    P, }P                    ; CEF
+        seq.i  QB+QS*20,QB+QS*20+QD
+        djn.f  P, P                     ; AADD
+
+        seq.i  QB+QS*4,QB+QS*4+QD
+        jmp    }slow, 0                 ; EE
+        seq.i  QB+QS*3,QB+QS*3+QD
+        jmp    }slow, {P                ; DE
+        seq.i  QB+QS*19,QB+QS*19+QD
+        jmp    }slow, }P                ; FE
+        seq.i  QB+QS*18,QB+QS*18+QD
+        djn.f  <fast, P                ; AA
+
+        seq.i  QB+QS*36+CR,QB+QS*36+QD+CR
+        jmp    }fast, 0                ; BBBBG
+
+boot     spl    pump,        <-1000        ;split to the imp launcher
+         mov    ptr,         bptr1
+         mov    clrb,        bptr1
+boot2    mov    {bptr3,      <bptr3
+         mov    {bptr3,      <bptr3
+         mov    {bptr3,      <bptr3
+         spl    1                          ;\
+         spl    @bptr3,      <-1001        ;/
+         spl    @bptr3,      <-1000        ;\
+         jmp    @bptr3,      <-1000        ; --> 6 processes for the d-clear
+
+ptr      dat    0,           2150
+clrb     dat    >2667,       25
+clear    spl    #0,          >ptr-16
+loop     mov    clrb-16,     >ptr-16
+cc       djn.f  loop,        >ptr-16
+bptr3    dat    cc+1,        boot2+bptr1+19
+
+   for  19-2
+        dat     0,          0
+   rof
+
+pump     spl     #1,         >prime
+prime    mov.i   imp,        impoff-4
+         add.f   #impsize+1, iptr
+iptr     jmp     pump+impoff-(impsize+1), >-200
+
+imp      mov.i   #impsize,   *0
+
+
+
+Finally, with this method it is now also possible to combine a stone
+with a paper, in such a way, the stone dominates in the beginning until
+the paper becomes dominant.  The first task is to find a 'pocket' for
+the stone, where it survives the paper until close to the end of the
+battle.  To do this, run the paper alone and seach core to find the
+location of pockets of initial core.  Now you must check in which of the
+pocket the stone will gain the most points, and what ratio of processes
+the stone needs.  I found that the easiest way is to launch the stone is
+with the paper launcher.  For Shadow I've used Paul Kline's RetinA,
+which gave by far the best results.  Shape used for example my paper
+from Head or Tail.
+
+
+
+;redcode-94
+;name Shadow
+;author Christian Schmidt
+;strategy q^2 -> stone/paper
+;strategy v3 modified stone, now faster
+;strategy v3.1 better pocket for the stone
+;assert 1
+
+        org     start
+
+QS      equ     (0-200)
+QD      equ     100
+QB      equ     (start-350)
+CR      equ     (fnd-which)
+datz    equ     (table-3)
+GAP     equ     8
+REP     equ     15
+cBptr   equ     (1724-66);973
+spcsz   equ     2381;2382
+impsz   equ     (127*37) ;2794
+
+
+qinc    dat     >(-1)*GAP*2, >GAP
+
+        dat     9*QS,        1*QS
+table:  dat     5*QS,        2*QS
+        dat    13*QS,       17*QS
+
+P:      add.f  table,       table
+slow:   add.ab *P,          fnd
+fast:   add.b  @P,          @-1
+
+which:  sne.i  datz,        @fnd
+        add.ab #QD,         fnd
+
+        add.ba fnd,         fnd
+qbo     mov.i  qinc,        @fnd
+        mov.i  qinc,        *fnd
+fnd     mov.i  (-1)*(GAP/2),@QB
+        sub.x  qinc,        fnd
+        djn.b  qbo,         #REP
+        jmp    cBoot,       }-300
+
+start:
+        seq.i  QB+QS*0,QB+QS*0+QD
+        jmp    which, 0
+
+        seq.i  QB+QS*2,QB+QS*2+QD
+        jmp    fast, 0
+        seq.i  QB+QS*1,QB+QS*1+QD
+        jmp    fast, <P
+        seq.i  QB+QS*17,QB+QS*17+QD
+        jmp    fast, >P
+
+        seq.i  QB+QS*7,QB+QS*7+QD
+        jmp    slow, 0
+        seq.i  QB+QS*6,QB+QS*6+QD
+        jmp    slow, <P
+        seq.i  QB+QS*22,QB+QS*22+QD
+        jmp    slow, >P
+        seq.i  QB+QS*11,QB+QS*11+QD
+        jmp    slow, {P
+        seq.i  QB+QS*15,QB+QS*15+QD
+        jmp    slow, }P
+        seq.i  QB+QS*10,QB+QS*10+QD
+        djn.f  slow, P
+
+        seq.i  QB+QS*5,QB+QS*5+QD
+        jmp    >fast, 0
+        seq.i  QB+QS*9,QB+QS*9+QD
+        jmp    >fast, {P
+        seq.i  QB+QS*13,QB+QS*13+QD
+        jmp    >fast, }P
+
+        seq.i  QB+QS*14,QB+QS*14+QD
+        jmp    P, 0
+        seq.i  QB+QS*8,QB+QS*8+QD
+        jmp    P, <P
+        seq.i  QB+QS*12,QB+QS*12+QD
+        jmp    P, {P
+        seq.i  QB+QS*32,QB+QS*32+QD
+        jmp    P, }P
+        seq.i  QB+QS*20,QB+QS*20+QD
+        djn.f  P, P
+
+        seq.i  QB+QS*4,QB+QS*4+QD
+        jmp    }slow, 0
+        seq.i  QB+QS*3,QB+QS*3+QD
+        jmp    }slow, {P
+        seq.i  QB+QS*19,QB+QS*19+QD
+        jmp    }slow, }P
+        seq.i  QB+QS*18,QB+QS*18+QD
+        djn.f  <fast, P
+
+        seq.i  QB+QS*36+CR,QB+QS*36+QD+CR
+        jmp    }fast, 0
+
+cBoot   spl     rStart,     <-1000          ;strat the paper
+        mov     cBomb,      rCell1+cBptr+198
+        mov     cSp-1,      rCell1+cBptr-1
+        mov     cSp,        rCell1+cBptr
+        mov     cSp+1,      rCell1+cBptr+1
+        mov     cSp+2,      rCell1+cBptr+2
+        mov     cSp+3,      rCell1+cBptr+3
+        jmp     rCell1+cBptr-1,  <-400      ;----> 1 process for the stone
+
+cSp2    spl     #0,         #0
+cSp     spl     #0,         <-1151+3
+        mov     197,        cAd-(197*3500)
+cAd     add.ab  {0,         }0
+        djn.f   -2,         <-1151
+cBomb   dat     >-1,        >1
+
+rStart  spl     2,          <400
+        spl     1,          <400
+        spl     1,          <400
+cStart  spl     rCell1+cBptr-1,  <402       ;---> 6 processes for the stone
+
+rCell1  spl     @0,         spcsz
+        mov     }rCell1,    >rCell1
+rCell2  spl     @0,         impsz
+        mov     }rCell2,    >rCell2
+        spl     rCell2,     {rCell2
+        mov.i   #2*spcsz,   }-spcsz*1
+        mov.i   #2*spcsz,   }-spcsz*1
+        mov.i   #2*impsz,   }-impsz*1
+
+
+
+I hope I have been able to show some new aspects of these interesting
+strategies.
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Authors:  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Anton Marsden
+<amarsden@mcs.vuw.ac.nz>, Philip Kendall <pak21@cam.ac.uk> and John Metcalf
+<grumpy@digitald.uk.com>

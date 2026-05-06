@@ -1,0 +1,295 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 51                                                    25 November, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at: (Please note new Stormking's address)
+http://www.koth.org/                            ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is unreachable, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar ftp site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+Fechter ftp site--ftp://members.aol.com/ofechner/corewar
+
+A collection of Bezzi's hints in the first issues is available at:
+ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+
+Beppe Bezzi web page - http://www.aspide.it/freeweb/Bezzi
+______________________________________________________________________________
+Greetings.
+
+In case you haven't heard, the pizza hills are down till Wednesday or so.
+Thos has promised to bring everything back online as soon as possible.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+   coresize: 8000
+   max. processes: 8000
+   duration: after 80,000 cycles, a tie is declared.
+   max. entry length: 100
+   minimum distance: 100
+   rounds fought: 200
+   instruction set: ICWS '94 Draft
+
+The current ICWS '94 Draft hill:
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  30.8/ 12.6/ 56.6      Return Of The Jedimp             John K W 148.9  135
+ 2  35.5/ 24.3/ 40.2           unrequited love                kafka 146.7  233
+ 3  42.7/ 39.6/ 17.7               The Machine        Anton Marsden 145.9   41
+ 4  30.6/ 16.4/ 52.9                 Trident^2             John K W 144.9   65
+ 5  34.6/ 25.2/ 40.2                    Gigolo   Core Warrior staff 144.1  189
+ 6  40.6/ 40.5/ 18.9          Silver Talon 1.2                Edgar 140.8   22
+ 7  39.8/ 38.8/ 21.4       Damage Incorporated        Anton Marsden 140.8  176
+ 8  40.5/ 40.8/ 18.7                     Probe        Anton Marsden 140.2  313
+ 9  43.1/ 46.7/ 10.2                  Memories               Beppe  139.5   49
+10  40.3/ 42.3/ 17.4                   Control       Steven Morrell 138.4    1
+11  36.0/ 34.1/ 29.9              Tiberius 3.1                Franz 137.9   52
+12  40.7/ 44.3/ 15.1                    Blur 2        Anton Marsden 137.1  312
+13  42.0/ 48.0/ 10.0                  Q^2 Miro         Anders Ivner 135.9  363
+14  28.4/ 22.3/ 49.3               Impish v0.2          Ian Oversby 134.5  174
+15  37.8/ 41.3/ 20.9          Instant Wolf 3.4                Edgar 134.2  196
+16  37.8/ 42.9/ 19.3                 vamp 0.2b       bjoern guenzel 132.8   12
+17  33.1/ 34.4/ 32.5            Nine Seven Six           M R bremer 131.9   25
+18  28.7/ 25.9/ 45.4                   Rosebud                Beppe 131.5  986
+19  38.4/ 45.8/ 15.8                     AK-47                Franz 131.1   27
+20  38.8/ 46.6/ 14.6      Mostly Harmless v1.1           Justin Kao 131.0   10
+21  32.5/ 34.9/ 32.5               Falcon v0.3          Ian Oversby 130.1  218
+22  33.8/ 38.3/ 27.9                CC Paper 2                Franz 129.3   24
+23  37.7/ 46.5/ 15.8          Goothmonger v1.4           Ian Sutton 128.8    4
+24  29.9/ 31.0/ 39.1            delay 0.02b 50       bjoern guenzel 128.8   16
+25  33.7/ 38.7/ 27.6            Scanitator 2.4    Christian Schmidt 128.7    6
+
+Weekly age: 11 this week ( 5 last issue, 15 the week before )
+New warriors: 4  Turnover/age rate 36%
+Average age: 145 ( 146 last issue, 152 the week before )
+Average score: 137 ( 143 last issue, 138 the week before )
+The top 25 warriors are represented by 14 independent authors: Marsden with
+4; Franz with 3; JKW, Bezzi, Oversby, and Guenzel with 2.  Welcome to Ian
+Sutton with Goothmonger v1.4.
+______________________________________________________________________________
+94 - What's New ( or this week:  the uplook )
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+18  32.3/ 32.2/ 35.5                    spTest              P.Kline 132.4    1
+25  25.0/ 31.8/ 43.3         delay 0.03b 50/16       bjoern guenzel 118.2    1
+12  39.1/ 42.3/ 18.5                   Flicker          Ian Oversby 136.0    1
+22  39.1/ 46.5/ 14.4      Mostly Harmless v1.1           Justin Kao 131.6    1
+25  37.8/ 47.1/ 15.1          Goothmonger v1.2           Ian Sutton 128.6    1
+23  37.4/ 47.1/ 15.5          Goothmonger v1.3           Ian Sutton 127.6    1
+25  37.8/ 48.8/ 13.4            Golden Gate v4                Franz 126.8    1
+11  36.9/ 37.1/ 26.0            Scanitator 2.4    Christian Schmidt 136.6    1
+25  31.3/ 55.0/ 13.7                 ciTest-17              P.Kline 107.6    1
+25  32.7/ 54.9/ 12.4                 ciTest-17              P.Kline 110.5    1
+25  26.5/ 59.9/ 13.6                      Mist              P.Kline  93.1    1
+25  17.2/ 62.5/ 20.3                      Mist              P.Kline  72.0    1
+25   0.9/ 54.6/ 44.5                     nTest              P.Kline  47.2    1
+25  13.5/ 45.0/ 41.5             Leaping Flame       Ilmari Karonen  82.1    1
+25  27.6/ 60.9/ 11.6                     mTest              P.Kline  94.2    1
+24  33.4/ 45.1/ 21.4                     mTest              P.Kline 121.8    1
+25  33.1/ 54.6/ 12.3                  Hologram       Philip Kendall 111.7    1
+25  37.6/ 47.0/ 15.4          Goothmonger v1.4           Ian Sutton 128.1    1
+ 7  39.2/ 36.9/ 24.0                      Test        Anton Marsden 141.4    1
+25  19.6/ 15.4/ 65.0                  U-lat II           Zul Nadzri 123.8    1
+25  36.3/ 48.2/ 15.5                   Flicker          Ian Oversby 124.5    1
+25  36.2/ 50.2/ 13.6                   Flicker          Ian Oversby 122.2    1
+25  34.9/ 44.1/ 21.0                      Test           Ian Sutton 125.7    1
+25  36.6/ 52.5/ 10.9                    tnTest              P.Kline 120.7    1
+25  36.2/ 50.2/ 13.6                   Flicker          Ian Oversby 122.2    1
+22  32.8/ 36.7/ 30.4                   No Vice          Ian Oversby 128.9    1
+10  37.1/ 37.0/ 25.9                      Test        Anton Marsden 137.2    1
+10  40.3/ 42.3/ 17.4                   Control       Steven Morrell 138.4    1
+
+These four are the new warriors on the hill at this point in time.  Schmidt
+and Morrel entering close to single digit rankings.  Scanitator marries a
+Q^2 scan to pspace logic.  Interesting.
+ #   %W /  %L /  %T                       Name               Author Score  Age
+22  39.1/ 46.5/ 14.4      Mostly Harmless v1.1           Justin Kao 131.6    1
+11  36.9/ 37.1/ 26.0            Scanitator 2.4    Christian Schmidt 136.6    1
+25  37.6/ 47.0/ 15.4          Goothmonger v1.4           Ian Sutton 128.1    1
+10  40.3/ 42.3/ 17.4                   Control       Steven Morrell 138.4    1
+
+______________________________________________________________________________
+94 - What's No More ( or this week:  the outlook )
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  36.8/ 45.8/ 17.4                Dr. Gate Q                Franz 127.8    8
+26   1.0/  0.7/  2.3            delay 0.02b 50       bjoern guenzel   5.3    6
+26  36.2/ 45.8/ 18.0                 Goldfinch              P.Kline 126.6  244
+26  36.6/ 46.0/ 17.4                Dr. Gate Q                Franz 127.2    9
+26  38.0/ 48.3/ 13.6            Flamberge 13.4        Matt Lewinski 127.7    6
+26   2.0/  2.0/  0.0          Goothmonger v1.2           Ian Sutton   6.1    2
+26  36.9/ 47.5/ 15.6          Goothmonger v1.3           Ian Sutton 126.3    2
+26   2.0/  1.6/  0.4            Scanitator 2.1    Christian Schmidt   6.4    8
+26   1.5/  2.0/  0.5                   Flicker          Ian Oversby   5.0    7
+26   1.5/  2.0/  0.5                   Flicker          Ian Oversby   5.0    7
+26   1.8/  1.4/  0.8                   Flicker          Ian Oversby   6.3    7
+26   2.2/  0.0/  1.8                   Flicker          Ian Oversby   8.5    7
+26   2.4/  0.0/  1.6                   Flicker          Ian Oversby   8.9    7
+26   1.9/  0.5/  1.6                   Flicker          Ian Oversby   7.3    7
+26   1.9/  1.9/  0.2                   Flicker          Ian Oversby   5.9    7
+26   1.6/  2.1/  0.4                   Flicker          Ian Oversby   5.0    7
+26   2.8/  1.0/  0.2                   Flicker          Ian Oversby   8.6    7
+26  33.7/ 54.1/ 12.2                  Hologram       Philip Kendall 113.2    2
+26  36.1/ 47.8/ 16.1          Goothmonger v1.4           Ian Sutton 124.3    2
+26  36.4/ 50.2/ 13.4            Golden Gate v4                Franz 122.6    5
+26  17.5/ 17.0/ 65.5                  U-lat II           Zul Nadzri 118.1    2
+26  17.4/ 17.2/ 65.4                  U-lat II           Zul Nadzri 117.7    2
+26  16.7/ 15.6/ 67.6                  U-lat II           Zul Nadzri 117.8    2
+26  17.5/ 17.3/ 65.2                  U-lat II           Zul Nadzri 117.6    2
+26  17.4/ 17.2/ 65.4                  U-lat II           Zul Nadzri 117.7    2
+26  16.8/ 17.0/ 66.2                  U-lat II           Zul Nadzri 116.7    2
+26  32.4/ 37.4/ 30.2                   No Vice          Ian Oversby 127.4    2
+26  32.3/ 38.2/ 29.4                   No Vice          Ian Oversby 126.4    2
+
+The bottom four warriors from last week's issue all were pushed off the hill.
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  36.2/ 45.8/ 18.0                 Goldfinch              P.Kline 126.6  244
+26  36.6/ 46.0/ 17.4                Dr. Gate Q                Franz 127.2    9
+26  38.0/ 48.3/ 13.6            Flamberge 13.4        Matt Lewinski 127.7    6
+26   2.0/  1.6/  0.4            Scanitator 2.1    Christian Schmidt   6.4    8
+______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+14  32.3/ 24.0/ 43.7                   Rosebud                Beppe 140.7  986
+18  42.6/ 47.6/  9.8                  Q^2 Miro         Anders Ivner 137.7  352
+ 7  42.2/ 39.7/ 18.1                     Probe        Anton Marsden 144.7  313
+ 9  42.9/ 41.8/ 15.3                    Blur 2        Anton Marsden 144.1  312
+ 1  40.0/ 21.7/ 38.2           unrequited love                kafka 158.4  233
+19  35.3/ 33.3/ 31.3               Falcon v0.3          Ian Oversby 137.3  207
+
+The hill becomes even younger with the loss of Kline's Goldfinch.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/ imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 8  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 9  quiz                   Schitzo           1262    Scanner/ bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Stepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        986 *  Stone/ imp
+15  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    CMP scanner
+18  Barrage                Anton Marsden      876    Qscan -> replicator
+19  Blue Funk              Steven Morrell     869    Stone/ imp
+20  Flurry                 Anton Marsden      835    Qscan -> pwarrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/ imp
+23  Night Train            Karl Lewin         755    Replicator
+24  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+25  Blizzard               Anton Marsden      713    Qscan -> replicator
+
+No changes.  Rosebud continues its slow, deliberate climb.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+
+I was unable to collect data for the beginner's hill due to the shutdown at
+pizza.
+______________________________________________________________________________
+The Hint
+by M R Bremer
+
+I've been working very sporadically on some warriors in between time spent on
+my compiler project, interviews, and office visits.  Here are some little
+hints that may or may not help you.
+
+I'm using this bombing code in my warrior Nine Seven Six.  The bomber throws
+spl and dat instructions around in core until the spl lands on the djn
+instruction.  A d-clear follows.  Normally in a bomber, I could use the spl
+operands as my increment.  However, I wanted a perfect d-clear gate so the
+b-operand was unavailable to me.  Instead of creating a bogus dat instruction
+containing the necessary data, I simply used my djn line as my increment.  I
+got the idea from an old warrior by Paul Kline called Scimitar.  Kline used
+the bomb itself, dat <4, STEP*2, as the increment in his bomber.
+
+first   spl #STEP, >gate-loop
+        mov.i }-2200, *loop+STEP*2
+        mov.i first, @-1
+        add.f 1, -2
+loop    djn.f -3, <STEP*2
+        mov wipe, >gate
+last    djn.f -1, >gate
+
+Booting away warriors was also giving me a minor problem.  Booting is very
+easy to do if all the code is going to be placed sequentially in core.  You
+can do it in linear time with just one boot pointer.  However, once you start
+setting up pointers or gates for your warriors, or you need to jump to the
+middle of your code, additional pointers are needed.  Additional pointers
+take additional code and additional time to delete them.
+
+I wanted to set up a d-clear with the gate two core locations above the
+split.  Instead of using two pointers or extra instructions, I split to my
+code before the total boot is finished.  And then I decrement the boot
+pointer in my split.  Due to the nature of the splitting process, mov.i will
+execute before the instruction at ptr+2234. Therefore, all my code is placed
+before the warrior is started.
+
+        mov.i {gate, {ptr
+        djn.b -1, #4
+ptr     spl 2234, {ptr
+        mov.i gate, {ptr
+
+Similar to silk replicators, you can use this technique to place even more
+code.  In the extreme case, a warrior can split to an empty core location
+while the boot builds the warrior right under the new process.  Of course
+none of the executing instructions could depend on instructions that have not
+been booted into place yet.
+
+Even more time and space can be saved by having the pointers bombed very
+early in the bombing run instead of adding div or mov instructions to
+explicitly destroy them.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+or Anton Marsden <amarsden@etherspace.gen.nz>
+

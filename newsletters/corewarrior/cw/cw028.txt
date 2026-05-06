@@ -1,0 +1,376 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 28                                                          May 6, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is still out of service, you can download pMARS at:
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+Planar fpt site--ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/pmars
+______________________________________________________________________________
+Greetings.
+
+There has been much discussion in the newsgroup about the multi-warrior hill.
+However, maybe the core war community should make some decisions on previous
+issues first.  Should we eliminate self fights?  How can we prevent rampart
+testing from artificially inflating warrior ages?  These are two questions
+I'd like to see decided one way or the other.  Maybe an ambitious soul could
+set up a forms web page that would let players vote yes or no and add
+comments, then display the results as they arrive.  Then undecided players
+could review each author's vote and opinion, and add their own.  Of course
+the ultimate power of decision lies with Thos and Tuc, but I'm sure they will
+conform to whatever the community as a whole decides.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 41/ 11         Wind-up Toy v1.2c          Ian Oversby     155       4
+ 2  45/ 40/ 15                Scanny Boy        David van Dam     149     382
+ 3  42/ 35/ 23               Thermite II        Robert Macrae     149    1552
+ 4  43/ 37/ 21       The Core Clear V1.3        David van Dam     149      67
+ 5  42/ 36/ 22                   testb1>    Maurizio Vittuari     148       1
+ 6  41/ 36/ 24                T.N.T. pro    Maurizio Vittuari     145      17
+ 7  40/ 36/ 24                  testb1<<    Maurizio Vittuari     145       2
+ 8  29/ 14/ 57             Hazy Shade II             John K W     143     511
+ 9  41/ 38/ 21      Grilled Octopus v0.5         David Boeren     143     768
+10  32/ 20/ 48            Impfinity v4g1               Planar     143    1751
+11  43/ 43/ 14            Stepping Stone          Kurt Franke     143     365
+12  39/ 35/ 27              La Bomba 1.3          Beppe Bezzi     143     123
+13  34/ 24/ 42     Walk Like An Egyptian             John K W     143     110
+14  40/ 38/ 22                 Chameleon           M R Bremer     142    1023
+15  40/ 38/ 21             Blanket Party             J E Long     142     276
+16  27/ 11/ 62                EvolCap XI       John Wilkinson     142     261
+17  40/ 38/ 22          Gem of the Ocean              P.Kline     142     421
+18  40/ 38/ 22              Flimsy v0.4a          Ian Oversby     141      65
+19  32/ 25/ 42                      test              P.Kline     140       7
+20  42/ 45/ 13              Solomon v0.3          Ian Oversby     139     164
+21  39/ 40/ 21                      Test        Anton Marsden     139       8
+22  37/ 34/ 29               Tornado 3.0                Beppe     139    1353
+23  40/ 41/ 20                  Mirage 2        Anton Marsden     138     318
+24  35/ 33/ 32                    Flurry        Anton Marsden     138     513
+25  34/ 48/ 18                     gtest              P.Kline     121       6
+
+Weekly age: 78 ( 53 last week )
+New warriors 9  Turnover/age rate 12%
+Average age: 403 ( 464 last week, 424 the week before )
+Average score: 142 ( 142 last week, 141 the week before )
+The top 25 warriors are represented by 13 authors, JKW, Oversby, Vittuari,
+and Kline all with 3, van Dam, Bezzi, and Marsden with 2.
+
+Newcomers Boeren, than van Dam, and now Oversby decide to take the hill by
+force as Ian's Wind-up Toy vXXX has had its share of the top position.  But
+Ian gets a slap on the wrist for having three versions of Flimsy on the hill
+earlier this week pushing off Morrell's lone warrior Blue Funk 5.  Speaking
+of push offs, the 94 hill has lost venerable T.N.T. at the grand age of 1204.
+
+Scanny Boy is still strong, often sharing the king position.  It usually
+moves around in the top 3, only rarely dipping below that.  Thermite II is
+also stronger than ever, never falling below tenth place and more often in
+fifth or so.  Other 1000+ warriors have been having troubles--Chameleon
+bounces around a lot, but is proving to be rather resilient.  Tornado, on the
+other hand, has seen its share of rough times lately, dropping as low as 24th
+in the rankings.
+
+While Maurizio may be mourning the loss of T.N.T., he has been busy with
+T.N.T. pro ( kind of like the Pentium and the Pentium Pro ).  The cluster of
+MV tests surrounding T.N.T. pro suggests some slight variations on the base
+design.
+
+Mirage 2 has been in both 1st and 25th place this week.  When The Core Clear
+V1.3 was introduced, Mirage fell from 2nd to 11th place.  Jumping up or down
+9 spots seems common for Marsden's program lately.
+
+Although there were 78 successful challenges this week, 44 of them were test
+warriors.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 2  40/ 38/ 22       The Core Clear V1.3        David van Dam     143       1
+ 7  38/ 37/ 26              Flimsy v0.4a          Ian Oversby     139       1
+ 2  40/ 36/ 24                T.N.T. pro    Maurizio Vittuari     144       1
+21  38/ 43/ 19                      Test        Anton Marsden     134       1
+15  31/ 25/ 44                      test              P.Kline     138       1
+24  33/ 48/ 19                     gtest              P.Kline     119       1
+ 1  49/ 41/ 11         Wind-up Toy v1.2c          Ian Oversby     156       1
+ 5  39/ 37/ 24                  testb1<<    Maurizio Vittuari     141       1
+ 5  42/ 36/ 22                   testb1>    Maurizio Vittuari     148       1
+______________________________________________________________________________
+94 - What's No More
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26   2/  2/  1                  coal 3.1       bjoern guenzel       5       5
+26  28/ 36/ 35             silkworm v3.2         Brian Haskin     121       4
+26  34/ 40/ 25                    T.N.T.    Maurizio Vittuari     128    1204
+26  29/ 33/ 37               Blue Funk 5       Steven Morrell     125     624
+26   2/  2/  0       The Core Clear V1.2        David van Dam       6      27
+26   1/  2/  0          Wind-up Toy v0.7          Ian Oversby       4     174
+26   2/  1/  1                     prova    Maurizio Vittuari       7     475
+26  32/ 33/ 35                   Lithium     John K Wilkinson     130     523
+26  37/ 46/ 17              Naked dancer          Beppe Bezzi     129      72
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+13  31/ 21/ 48            Impfinity v4g1               Planar     140    1754
+ 2  42/ 35/ 23               Thermite II        Robert Macrae     149    1555
+22  36/ 35/ 29               Tornado 3.0                Beppe     137    1356
+ 7  41/ 38/ 21                 Chameleon           M R Bremer     144    1026
+ 8  41/ 38/ 21      Grilled Octopus v0.5         David Boeren     144     771
+23  35/ 34/ 32                    Flurry        Anton Marsden     135     516
+10  29/ 15/ 56             Hazy Shade II             John K W     142     514
+20  38/ 40/ 22          Gem of the Ocean              P.Kline     137     424
+ 3  45/ 41/ 15                Scanny Boy        David van Dam     149     385
+ 9  43/ 43/ 14            Stepping Stone          Kurt Franke     143     368
+16  40/ 40/ 20                  Mirage 2        Anton Marsden     140     321
+
+Two new entries in the over 300: Stepping Stone and Mirage 2
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Impfinity v4g1         Planar            1754 *  Stone/ imp
+ 2  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 3  Thermite II            Robert Macrae     1555 *  Qscan -> bomber
+ 4  Torch t18              P.Kline           1539    Bomber
+ 5  Frontwards v2          Steven Morrell    1420    One shot scanner
+ 6  Tornado 3.0            Beppe Bezzi       1356 *  Bomber
+ 7  Evol Cap 6.6           John Wilkinson    1299    Imp / stone
+ 8  quiz                   Schitzo           1262    Scanner/ bomber
+ 9  T.N.T.                 Maurizio Vittuari 1204    Bomber
+10  Chameleon              Myer R Bremer     1026 *  P-warrior
+11  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+12  Agony II               Stefan Strack      912    CMP scanner
+13  Barrage                Anton Marsden      876    Qscan -> replicator
+14  Blue Funk              Steven Morrell     869    Stone/ imp
+15  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+16  Grilled Octopus v0.5   David Boeren       771 *  P-warrior
+17  Blue Funk 3            Steven Morrell     766    Stone/ imp
+18  Night Train            Karl Lewin         755    Replicator
+19  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+20  Blizzard               Anton Marsden      713    Qscan -> replicator
+21  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+22  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+23  myVamp v3.7            Paulsson           643    Vampire
+24  Blue Funk 5            Steven Morrell     624    Stone/ imp
+25  Hazy Shade Of Winter   John Wilkinson     616    P-warrior
+
+No new entries into the hall, but two warrior, T.N.T and Blue Funk 5, were
+pushed off the hill this week thus locking in their place in the hall of
+fame.  Flurry would be the next warrior to enter currently at 516.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  57/ 30/ 13        Violent Micro v0.4             basehead     183      30
+ 2  52/ 31/ 17                coal 3.22b       bjoern guenzel     173      13
+ 3  52/ 34/ 14         Extreme Prejudice         Scott Manley     171       7
+ 4  44/ 26/ 30                Reluctance       Andy Nevermind     162      63
+ 5  49/ 39/ 12                frogskin 4       bjoern guenzel     159      41
+ 6  48/ 37/ 15                       why       bjoern guenzel     159      88
+ 7  42/ 25/ 33             Fork v0.1-10p    Christoph C. Birk     159      10
+ 8  47/ 37/ 16                  x-frog 2       bjoern guenzel     158      57
+ 9  47/ 39/ 14                Bloodhound        Andrew Fabbro     155      55
+10  45/ 38/ 17           magic ruby 0.1k       bjoern guenzel     151       1
+11  42/ 34/ 23                 Toxin III                Edgar     151      24
+12  41/ 31/ 28                 Toxin III                Edgar     150      25
+13  37/ 28/ 35         So Long Hyakutake         Scott Manley     147       9
+14  34/ 24/ 42                     Toxin                Edgar     144      54
+15  39/ 41/ 20                bScan test            Iain Hogg     138       8
+16  39/ 41/ 20       Bye Bye Badman v1.1            Iain Hogg     136      67
+17  30/ 24/ 47                     waves       bjoern guenzel     136      27
+18  33/ 30/ 37                  Toxin II                Edgar     136      53
+19  37/ 45/ 18                pScan test            Iain Hogg     130       6
+20  33/ 40/ 27                 test 0.01    Christoph C. Birk     125       3
+21  32/ 39/ 29    C Seagal II v 2.0 Test             jShelton     124      62
+22  35/ 51/ 14             Centurion XIV                Edgar     120      26
+23  37/ 58/  5                SideWinder               Julian     116      40
+24  31/ 47/ 22      Forked Lite Ning 4.1 Ansel Greenwood Serm     114      82
+25  30/ 49/ 21                    Killer          Ian Oversby     111      60
+
+Just 16 challenges!  And only 28 last week, which is understandable as many
+universities had semester exams the last few weeks.  Some of the new traffic
+include a couple of warriors by Scott Manley and bjoern guenzel.  Both
+authors, in addition to Christopher Birk, were seen on the 94 hill briefly.
+Hopefully, everyone who has finished with college for the year will have net
+access and plenty a free time in the summer to code.
+______________________________________________________________________________
+The Hint
+The Bomber Killer by M R Bremer
+
+There was a day long ago where paper actually beat stone, even beat stone-imp
+combos to some extent.  Check out these paper scores against classic stones.
+Both paper are designed to kill bomber-imps.  Match Stick is an '88 warrior
+by c w blue.  Silk Warrior is, you got it, where the term 'silk' comes from
+written by J. Pohjalainen.  ( He also created the TimeScape replicating
+engine. )
+
+                juliet storm            ImpsAreMyFriend
+Match Stick     35/ 4/61 (166)          54/17/29 (191)
+Silk Warrior    35/ 1/64 (169)          64/ 4/32 (224)
+
+Against modern bombers, neither stands a chance.
+
+                T.N.T.         CIA           Thermite 1.0      Torch t18
+Match Stick     23/68/ 9 ( 78) 15/85/ 0 ( 45)  2/79/19 ( 25)    9/79/12 ( 39)
+Silk Warrior    28/40/32 (116) 26/49/25 (103) 26/51/23 (101)   18/60/22 ( 76)
+
+How to deal with these petulent creatures?  The bomb dodger of course.  Scan
+for an opponent's bomb, copy yourself around that location and pray that the
+rest of the bombing pattern falls around you, and voila--the bomb dodger.
+
+Extracting the bomb dodger from Gem of the Ocean gives this:
+
+Clisson   sne    {watch1,{watch1      ; Clisson to beat fast bombers
+          jmz.f  -1,@(datone+40)
+          add.a  #3,watch1
+          mov    <watch1,{watch1
+          djn    -1,#5
+          add.a  #1,watch1
+watch1    jmp    -200,qb+5
+
+qb        dat    #1 ,-3               ; Clisson's killer
+q1        spl    #0 ,#0
+          mov    qb ,<q4
+q4        djn    -1 ,#qb
+      for 4
+          dat    0,0
+      rof
+datone    dat    1,1
+
+Basically, it just scans for the enemy's bomb and centers the 'killer' module
+on the colored location.  Then it clears core.  Here are the results taken
+from the tournament scheduler:
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Clisson                 ~P.Kline                 42  51   7   800
+  2     juliet storm            M R Bremer               95   1   4   289
+  3     ImpsAreMyFriend         J.Layland                74   8  18   240
+  4     Thermite 1.0            Robert Macrae            63  35   2   191
+  5     T.N.T.                  Maurizio Vittuari        31  67   2   95
+  6     Torch t18               P.Kline                  31  67   2   95
+  7     C I A                   Anders Ivner             12  75  13   49
+
+As you can see, the imps in the imp-stone combos overwrite Clisson yielding
+a loss for the dodger.  Thermite also does well due to its bombing pattern
+and Clisson's slow sequential wipe.
+
+How about using a full bomber + coreclear instead?  Let's try Blue Funk 3's
+stone ( which is Emerald's stone ) in this bomb dodger.
+
+step equ 3044
+        jmz.f 0, <t
+        add.ab #4, t
+        mov.i {t, <t
+        djn.b -1, #6
+        jmp @t
+emerald spl #-step,<step
+stone   mov >-step,step+1        ;hit
+        add emerald,stone
+cnt     djn.f  stone,<emerald-50
+        dat 0, 0
+cc      dat 0, -7                ;hit
+t       dat 0, -100
+
+As you can see in the scores, this dodger trades its losses to ties when
+battling the stone-imps.  It also scores well against Thermite becuase the
+pattern is so much better.  The only real trade-off lies with Torch t18.  The
+second dodger has five instructions that it needs, with the fifth instruction
+not adjacent to the main executing loop.  Torch t18 often bombs this line and
+prevents Dodger #2 from getting the win, but overall it is much superior.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Dodger #2               M R Bremer               40  33  27   888
+  2     juliet storm            M R Bremer               63  10  27   216
+  3     ImpsAreMyFriend         J.Layland                30   3  67   157
+  4     Torch t18               P.Kline                  37  33  30   141
+  5     T.N.T.                  Maurizio Vittuari        34  51  15   117
+  6     Thermite 1.0            Robert Macrae            25  65  10   85
+  7     C I A                   Anders Ivner              7  80  13   34
+
+Since dodgers are usually used in p-space warriors, it is very easy to use
+the bomber as both a dodger and scanner killer.  You could even keep the
+small, slow boot routine.
+
+Things to consider:
+------------------
+A linear scan is easy to do with
+
+jmz.f 0, <scan
+
+but this code will scan faster (although not pinpoint the bomb as precisely).
+
+sne.f <scan, <scan
+jmz.f -1, <scan
+
+or you cold use it to scan different streams by
+
+sne.f <scan1, <scan2
+jmz.f <scan1
+
+of course you would have to test both stream to see which found the bomb.
+
+Imps are a problem, so how about using an imp killing stone like Imprimis.
+This stone (while suicidal) runs a decrement stream at 0, 2667, and 2667*2
+forward through core.  Something like
+
+spl #2667, <3044
+add -1, 1
+mov <1000, 1
+djn.f -2, <stream
+
+Good luck trying to knock off Impfinity though!
+____________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@nemo.it> or Myer Bremer <bremermr@ecn.purdue.edu>
+

@@ -1,0 +1,352 @@
+#####################################################
+SGB_12.net	CORE WARS
+
+Steve's Guide for Beginners Iss 12 (v2)
+
+Issue 9 looked at imp-rings and bombers and
+replicators (by proxy).
+
+Issue 10 analysed RAVE.red
+
+Issue 11 looked at the MTS tournament utility
+briefly.
+
+======
+
+Issue 12 version 1 was a draft effort.
+I was expecting lots of "you'd be better doing it
+this way" comments, ad I didn't get them - hmm.
+
+I want to expand on the ideas mentioned in issue
+11 and "tweak" a warrior a little. (Yes I know it
+isn't a great warrior, but it IS mine.)
+
+======
+
+(The details of the benchmark system here is
+now effectively replaced by the "Wilkie",
+(see some of the corewar web pages), but I 
+have left the discussion batch file and results
+of my original system in rather than redoing
+it with Wilkies.)
+
+======
+
+Benchmark:
+
+First we need a bench mark. To this end we must
+select some reference warriors. Then we must work
+out how to evaluate their relative worth.
+
+Now if we run MTS in round robin mode for each
+newly written warrior variant, we get a meaningful
+result, but each run takes forever - 25 reference
+plus one test means 351 battles. You can't fight
+the reference ones in round robin mode and later
+fight your test warrior against them all
+individually because that produces a different
+number of fights. The only solution I can see is
+to start by fighting each reference warrior
+against itself and all the reference warriors (IE
+it fights itself twice!). This takes a while but
+gets you a score you can compare.
+
+(This was discussed in rec.games.corewar where no
+concensus was reached. It is obviously possible to
+just compare your various warriors with the
+benchmark set without having scores for the
+benchmark warriors. My personal view is that it is
+nice to see the range of scores involved and
+whether your various attempts are near the top or
+off the bottom!)
+
+How do we do this? There are two ways I know of.
+One is to type everything in by hand each time -
+not recommended. The other is to use a dos batch
+file to create a script for submission to MTS -
+The later is easier in the long run.
+
+Choose your reference warriors and enter their
+names in a refernce file. The list that I chose, I
+have put into the file ALL.CMD:
+aeka.red
+aleph0.red
+cancer.red
+cleaner.red
+dwarf.red
+flashpap.red
+mice.red
+rave.red
+
+Now create CHALENGE.BAT:
+echo First warrior fights rest >do.cmd
+echo Yes (warriors fight self) >>do.cmd
+echo pmars -b -r 50 >>do.cmd
+echo Yes (verbose output) >>do.cmd
+echo %1.mts >>do.cmd
+echo %1.cmd >>do.cmd
+echo %1.red >>do.cmd
+echo @all.cmd >>do.cmd
+type res_mts.net
+mts do.cmd
+find "  1   " <%1.mts >>res_mts.net
+
+(Note that the FIND command is not perfect as it
+picks up the warrior in first position and any
+warrior getting 1 as a win/lose/tie result - edit
+by hand later. Note also that if one warrior
+fighting all the others does so badly that it
+doesn't come first, then again this doesn't work!)
+
+Now run CHALENGE for each reference warrior. I ran
+them twice to see how much variation there was
+with 50 fights. I reckon these results are usable
+(well under 10% spread - I've added an extra
+column to the second mention of each warrior -
+being the difference between the two scores.)
+Sorted results:
+  1     Rave                    Stefan Strack            67  28   5   1028  
+  1     Rave                    Stefan Strack            67  29   4   1022  6
+  1     Aeka                    T.Hsu                    38   6  56   854   
+  1     Aeka                    T.Hsu                    35   5  59   827   27
+  1     Aleph 0                 Jay Han                  46  30  24   808   
+  1     Aleph 0                 Jay Han                  46  35  19   781   27
+  1     Flash Paper3.7          Matt Hastings            32  12  55   762   
+  1     Flash Paper3.7          Matt Hastings            29  15  56   718   44
+  1     Dwarf                   A.K.Dewdney              32  56  13   537   
+  1     cleaner.red             Anonymous                33  59   8   531   
+  1     Dwarf                   A.K.Dewdney              29  54  17   520   17
+  1     cleaner.red             Anonymous                32  61   7   517   14
+  1     MICE                    Chip Wendell             14  26  61   508   
+  1     cancer.red              Anonymous                30  58  12   506   
+  1     cancer.red              Anonymous                30  60  10   504   2
+  1     MICE                    Chip Wendell             11  28  61   474   34
+
+(Again discussion in rec.games.corewar suggested
+that 50 was too few for a meaninful score and that
+100 was the minimum viable. Personally I get
+frustrated with how long that takes to run. I'd
+rather run warriors with fewer rounds per battle
+to pre-select for a more comprehensive fight
+later. This may not be valid - time will tell.)
+
+(Further lists of mts results will be edited to
+omit bits such as the leading "1" and the author.)
+
+======
+
+Right, so now we can write "invincible.red" or
+whatever and compare its performance against
+others.
+
+The first warrior I wrote that made it to the
+beginners hill was TONTO1.RED . I had wanted to
+create a block of code that was agile. It wasn't
+paper 'cos it didn't multiply, it wasn't a bomber
+although the code leapt around and acted like a
+bomb. I sussed the following code fragment out
+before realising that it was similar to SILK.
+Basically you put three processes through it at
+"exec" and every six instructions it overwrites
+three locations in core.
+
+const   dat     #const, #const+OFFSET
+exec    mov.i   }const, >const
+	jmp.f   exec+OFFSET
+
+Now how to choose OFFSET. Presumably you don't want
+a divisor of the coresize (8000) else you'll
+constantly zap the same locations, you want to
+precess a little. You don't want to choose too
+small an OFFSET else you'll be inefficient hitting
+the enemy if he's "behind you".
+
+I expect that there are utilities to assist in
+this, but I haven't yet got any. What did I do? I
+thunk (past tense of think?) up a nice number of
+steps to "do all core in" - I thunk 9.
+
+8000/9=888.88
+
+If I chose an OFFSET of 888 or 889, then after one
+"lap round core" I'll have moved 7992 or 8001
+locations. A shift of -8 or +1. I deemed that too
+close. Lets try 887 (=>7983 = -17). Seems
+plausible (possibly still a little small, but
+it'll do to start.
+
+Lets run our first version as TEST1.RED:
+;redcode-b
+;name Test 1 887
+;author Steve Bailey
+;assert 1
+OFFSET  equ     887
+start	spl     exec
+	spl     exec
+	jmp     exec
+const   dat     #const, #const+OFFSET
+exec    mov.i   }const, >const
+	jmp.f   exec+OFFSET
+	end     start
+
+Start by running it by itself with
+PM TEST1
+and if it looks like it has problems find the
+details using
+PM TEST1 -e
+
+Then run
+CHALENGE TEST1
+Egad - that was awful (not surprising really)
+Test 1 887              11  66  23   276 
+this score puts it well below MICE and CANCER.
+
+======
+
+Let's try TEST1 with different values of OFFSET.
+I ran it with all values from 850 to 909:
+
+     __0 __1 __2 __3 __4 __5 __6 __7 __8 __9
+850: 191 168 360 367 351 330 345 283 427 414
+860: 284 385 330 358 274 350 365 246 398 323
+870: 367 431 496 321 357 147 375 393 313 329
+880: 174 387 356 395 356 384 414 308 384 150
+890: 338 288 340 425 313 365 213 465 303 359
+900: 184 331 348 335 413 317 453 376 459 285
+
+These range from the worst (Offset=875 which
+actually managed to come 4th) at 147 to the best
+Offset=872 at a score of 496. (My initial guess of
+887 scored 308 this time compared with 276 the
+time before, variance 32 or 11%)
+
+This suggests that OFFSET=872 is good. However I
+dislike this as 872 means that the code block only
+hits 3 in 8 locations ever. We'll use it anyway!
+
+(For the curious, in these sort of tests, I set up
+batch files to auto-generate the code and leave it
+running overnight.)
+
+======
+
+Now lets add a _little_ more offence to the
+warrior. We might as well if it can be done for
+free.
+TEST2.RED:
+;redcode-b
+;name Test 2 872
+;author Steve Bailey
+;assert 1
+OFFSET  equ     872
+ZAP	equ	-50
+start	spl     exec,   <1111
+	spl     exec,   <2222
+	jmp     exec,   <3333
+const   dat     #const, #const+OFFSET
+exec    mov.i   }const, >const
+	djn.f   exec+OFFSET, <ZAP
+	end     start
+
+The second arguments in the SPLs and JMP just
+corrupt some other address, they are unlikely to
+do anything but why not.
+
+The djn.f is part of the agile code and is a
+serious enhancement. It will normally find a
+location which contains other than ANumber=1 and
+BNumber=1, and so the decrement will be to
+non-zero, so the jump WILL occur. The location
+which gets its A & B Numbers decremented is
+pointed to by ZAP. Mostly the BNumber in ZAP
+will be 0 so it will be predecremented to -1, -2
+and then -3 and so the location for A & B
+decrementing is usually ZAP-1, ZAP-2 and
+ZAP-3. Note that ZAP is relative to the agile
+code block and so is a different absolute location
+for each block.
+
+This has upped the score to 519/525 (two fights)
+from 496, and it is now about level with Dwarf.
+
+======
+
+For comparison, lets run the standard SILK with a
+similar range of OFFSETS.
+SILK.RED:
+;redcode-b
+;name Silk
+;author Lifted from Core Warrior # 1
+;assert 1
+OFFSET  equ     100
+start	spl     1,      <1111
+	mov	-1,	0
+silk	spl.a	@0,	OFFSET
+	mov.i   }silk,  >silk
+	jmp.a	silk,	{silk
+	end     start
+
+With the published offset of 100, SILK scores 454.
+With Offsets 850..909 it scores in the range
+504..558, much more even than TEST2. This is
+presumably due to the nature of SILK reducing its
+spacing by 3 for every repeat use of each copy.
+
+(It would just take far to long to run this for
+many more values.)
+
+======
+
+Now I didn't reckon that TEST2 was likely to kill
+much. Its killing ability is really just the
+leading DAT at "const", plus its corrupting value.
+
+Lets slow the process down slightly and add a DJN
+stream, TEST3.RED:
+;redcode-b
+;name Test 3
+;author Steve Bailey
+;assert 1
+OFFSET  equ     872
+ZAP	equ     -50
+start	spl     exec,	<1111
+	spl     exec,	<2222
+	spl     exec,	<3333
+	djn.f	#0,	<ZAP
+const   dat     #const, #const+OFFSET
+exec    mov.i   }const, >const
+	djn.f   exec+OFFSET, <ZAP
+	end     start
+
+Since the codeblock skips over 5/8 of the
+locations, the DJNstream is safe.
+
+TEST3 scored 673, approaching FlashPaper.
+
+======
+
+It doesn't show how to evaluate what values are
+best - that is something I still have to learn.
+
+======
+
+Conclusions:
+
+Setting up a benchmark is tedious.
+Testing a warrior with pmarsv -e is necessary.
+Running a meaningful benchmark test needs at least
+50 rounds.
+
+I feel that this shows that careful adjustment of
+constants, code position and instruction spacing
+can make a big difference, but determining GOOD
+constants and offsets is HARD and trial and error
+- unless you know different...
+Let me know...
+
+=== Steve Bailey 101374.624@compuserve.com
+sgb@zed-inst.demon.co.uk
+http://ourworld.compuserve.com/homepages/SGBailey
+Work: Electronics Play: Go 2kyu.
+
+#####################################################
