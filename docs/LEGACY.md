@@ -124,4 +124,3 @@ Several warriors were adjusted to satisfy modern pMARS assembly:
 - **Chin.red (Voodoo):** Added `;assert 1` to avoid warnings.
 - **Macrae.red (55HSB):** Changed `;assert TRUE` to `;assert 1` as `TRUE` is not a recognized constant in pMARS.
 - **BlackBox.red:** The opponent warrior was included in the tournament archive to allow reproducible tests.
-
