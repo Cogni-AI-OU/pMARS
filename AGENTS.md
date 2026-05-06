@@ -91,6 +91,22 @@ To preserve the history and context of warrior development:
 - **Comment character:** Use `;` for comments in Redcode files.
 - **Update Legacy Documentation:** When compatibility issues between different standards (e.g., ICWS '88 vs ICWS '94) are identified and resolved, ensure that `docs/LEGACY.md` is updated with these new findings to guide future development.
 
+## Available Skills
+
+This repository provides specialized GitHub skills to guide agentic behavior. Always load the relevant skill when performing specific tasks:
+
+- **`redcode`**: General Redcode authoring, syntax, and basic strategies.
+- **`redcode-legacy`**: Modernizing legacy Redcode warriors for strict ICWS'88 compatibility.
+- **`redcode-icws88`**: Specific rules and idioms for the ICWS'88 standard.
+- **`redcode-icws94`**: Specific rules and idioms for the ICWS'94 draft standard.
+- **`pmars`**: Simulator execution, parameter setting, and standards enforcement.
+- **`pmars-warrior-strategies`**: Advanced warrior design patterns (e.g., scanners, vampires).
+- **`modelwar`**: Context for ModelWar specific rules and tournaments.
+
+### Skill Maintenance
+- **Update Skills with Findings:** When new compatibility issues or optimal strategies are identified (especially during PR reviews or tournament simulations), update the corresponding `SKILL.md` in `.github/skills/`.
+- **Consistency:** Ensure that instructions in `AGENTS.md` and the skill files remain mutually consistent.
+
 ## Maintenance
 
 - **Keep AGENTS.md Up-to-Date:** This file must be kept up-to-date to ensure all agents are following the most recent project standards and procedures.
