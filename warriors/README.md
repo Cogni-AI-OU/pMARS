@@ -25,7 +25,6 @@ This directory contains a collection of warriors for the different International
 - [94tiny](./94tiny/README.md)
 - [Begineer](./Begineer/README.md)
 - [Mini Challenges](./mc/README.md)
-
 ### Tournaments
 
 See the [Tournaments](./tournaments/README.md) directory for collections of warriors from various Core War events:

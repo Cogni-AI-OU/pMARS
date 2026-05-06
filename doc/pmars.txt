@@ -74,7 +74,7 @@ OPTIONS
        a  positive number) is a shorthand for writing this number of dashes on
        the command line.
 
-       -r #   This options sets the number of rounds to play. The  default  is
+       -r #   This option sets the number of rounds to play. The  default  is
               1.  -r  0 produces assembly output (unless -b is specified), but
               does not execute the warrior(s). A maximum of 32767  rounds  can
               be specified.
@@ -118,11 +118,11 @@ OPTIONS
               still  be  "random" from round to round, but will be the same if
               the same warriors are run again. As a consequence, the result of
               battles  run  with  the  -f  option  will  show  no  statistical
-              fluctuations. This options is useful  for  validating  ports  of
+              fluctuations. This option is useful  for  validating  ports  of
               pMARS  to  new  platforms  and for providing an absolute, albeit
               arbitrary performance measure for warriors.
 
-       -F #   This option server two purposes. It sets the seed value  of  the
+       -F #   This option serves two purposes. It sets the seed value  of  the
               pseudo  random  number  generator,  and also tells the loader to
               install warrior 2 at the given address # for  round  1.  If  the
               number  is  larger  than the core size minus the minimum warrior
@@ -145,7 +145,7 @@ OPTIONS
        -e     If this  option  is  specified,  the  cdb  debugger  is  entered
               immediately after loading warriors into core.
 
-       -b     This  options  runs  pMARS  in  brief output mode. -b suppresses
+       -b     This  option  runs  pMARS  in  brief output mode. -b suppresses
               warrior listings after assembly.
 
        -A     The -A option assembles the input warriors without  running  any
@@ -155,10 +155,10 @@ OPTIONS
               KotH program. This option enables pMARS  to  work  with  scripts
               written for the KotH server.
 
-       -8     This   options  enforces  strict  compliance  with  the  ICWS'88
+       -8     This   option  enforces  strict  compliance  with  the  ICWS'88
               standard and disables all ICWS'94 language extensions, which are
               flagged  as  syntax  errors by the assembler. Since ICWS'94 is a
-              superset of ICWS'88,  this  options  is  not  necessary  to  run
+              superset of ICWS'88,  this  option  is  not  necessary  to  run
               ICWS'88 warriors.
 
        -o     When  this  option  is given, pMARS reports scores in decreasing
@@ -698,7 +698,7 @@ CDB DEBUGGER
         PC    is 0.
         PC1.. are 0
 
-       Preceding a command with the character '@' (ampersand)   will  suppress
+       Preceding a command with the character '@' (at sign)     will  suppress
        its  screen  output,  but not output to a logfile.  Preceding a command
        with '&' will suppress both screen and logfile output, which is  useful
        if  you  are  only  interested  in  the  "side-effects"  of  a command.
@@ -838,7 +838,7 @@ ACKNOWLEDGMENTS
 APPENDIX
 PMARSV
        pMARSv is a DOS version of pMARS with a graphical core display. You can
-       chose  between  EGA/VGA  graphics or text mode with the -v command line
+       choose  between  EGA/VGA  graphics or text mode with the -v command line
        options or by pressing 'v' during the game. The -v option takes a three
        digit argument 'xyz'. Digit 'x' specifies the initial display speed and
        ranges from 0 (fastest) to 7 (slowest).  'y'  is  the  initial  display

@@ -1,0 +1,244 @@
+__ __| |            ) _ \  |  |    \ \        /              _)
+   |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+   |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+  _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+March 2, 1994                                                         Issue #3
+______________________________________________________________________________
+
+The interest in the '94 standard appears to be increasing dramatically.
+There has been a lot of discussion in the rec.games.corewar newsgroup
+recently about the proposed standard, and a large number of entries on
+the '94 hills.  Keep it up!
+
+If you are unfamiliar with the '94 draft standard, you can learn more about
+it by reading the FAQ for this newsgroup.  In addition, the program pMARS
+includes a highly recommended tutorial on the new standard.  Feel free
+to send me e-mail if you have any difficulty finding either of them, if you
+need to have a corewar item mailed to you, or if you have any other questions.
+
+The FAQ is available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill:
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 29/ 30           Killer instinct         Anders Ivner     154       6
+ 2  38/ 25/ 37                     NC II       Wayne Sheppard     151      61
+ 3  35/ 19/ 46                      ttti        nandor sieben     151      17
+ 4  37/ 25/ 38               Sphinx v5.1         W. Mintardjo     150      64
+ 5  35/ 20/ 45                    ttti94        nandor sieben     150      12
+ 6  43/ 42/ 15           Fire Storm v1.1         W. Mintardjo     145      67
+ 7  35/ 25/ 41                     Snake       Wayne Sheppard     145      16
+ 8  35/ 27/ 37        JustTakingALookSee            J.Layland     143      60
+ 9  40/ 42/ 18            Sylvester v1.0     Brant D. Thomsen     139      43
+10  40/ 41/ 19               Ntttgtstitd         Simon Hovell     139       7
+11  38/ 38/ 24               Christopher       Steven Morrell     137       5
+12  40/ 42/ 18                      SJ-4            J.Layland     137      10
+13  41/ 46/ 14                      Rave        Stefan Strack     136      44
+14  40/ 45/ 15                    Rave 3        Stefan Strack     136      33
+15  38/ 40/ 22            Fast Food v2.1     Brant D. Thomsen     135      19
+16  39/ 42/ 19       Beholder's Eye v1.7         W. Mintardjo     135      73
+17  37/ 41/ 23                      tiny            J.Layland     133      41
+18  39/ 46/ 15                Impurge 94     Fredrik Ohrstrom     131       3
+19  36/ 42/ 22                  Vanity/M        Stefan Strack     130       1
+20  30/ 32/ 37                     CG IV     Brant D. Thomsen     129       2
+
+Although there were several attempts at the hill, only one program managed
+to get on successfully:  "Vanity/M", a SPL/JMP bombing B-scanner.  It
+replaced "Medusa's v6".
+
+There are several scanners on the hill, but they all seem to be stuck in
+the bottom 10.  The vampires on the hill are also starting to take a real
+beating.  The programs that currently tend to be doing the best are mostly
+imp-spiral based, although "Killer Instinct" is a notable exception to this.
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental hill:
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  60/ 12/ 29                    BigImp        Alex MacAulay     208       8
+ 2  62/ 30/  8            Rave 3 (55440)        Stefan Strack     195      19
+ 3  55/ 19/ 26       Imperfection v1.0 X     Michael Constant     191       4
+ 4  53/ 26/ 21                   CG-X IV     Brant D. Thomsen     180      18
+ 5  58/ 38/  4           No Ties Allowed       Wayne Sheppard     178      24
+ 6  48/ 21/ 31                   BigImps        James Layland     174      27
+ 7  55/ 38/  7                        BS            J.Layland     172      26
+ 8  52/ 36/ 12             Dagger v6.0 X     Michael Constant     168       7
+ 9  40/ 35/ 25                 Iron Gate       Wayne Sheppard     145      23
+10  39/ 46/ 16                 Surprise7         James Ojaste     132       6
+11  38/ 45/ 17           testing testing     Fredrik Ohrstrom     132      14
+12  37/ 45/ 19                Surprise71         James Ojaste     128       3
+13  35/ 49/ 15                Surprise7a         James Ojaste     122       2
+14  39/ 57/  4                   Tracker                 Snow     121       1
+15  35/ 56/  9                 bunker t3              P.Kline     113      15
+16  18/ 31/ 51               Frantic 0.9                A Lee     104      28
+17  28/ 53/ 20           Road Hammer 0.3         Simon Hovell     103      25
+18  29/ 58/ 13                    VJX-2a         James Ojaste     100      11
+19  28/ 64/  8                     VJX-2         James Ojaste      93      12
+20  24/ 67/  9                     VJX-4         James Ojaste      82      10
+
+It looks like the experimental hill has finally filled up, and Alex MacAulay's
+"BigImp" program is dominating it.  If I'm not mistaken, "BigImp" is a
+standard imp-spiral/stone combination.  It looks like all your '94 programs
+will still need to deal with Imps!
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+This issue's hint is brought to you by Stefan Strack.  Stefan is the driving
+force behind the creation of a '94 ICWS Standard, as well as being heavily
+involved in the pMARS project.  It was his tournament last fall, in fact, that
+got me interested in the current '94 standard.
+
+
+                Rejuvenating a Classic
+
+In the last issue of _The_'94_Warrior_, Brant mentioned that the best
+way to get familiar with ICWS'94 is to optimize an ICWS'88 warrior.
+This is what I am going to do in the following. I am going to start
+with a classic SPL-carpet bombing CMP-scanner, Agony 3.1, and turn it
+step by step into its shorter, more efficient '94 counterpart Rave 3.
+
+To start with, here is the code for Agony 3.1:
+
+;redcode
+;name Agony 3.1
+;author Stefan Strack
+;strategy Small-interval CMP scanner that bombs with a SPL 0 carpet.
+
+CDIST   equ 12
+IVAL    equ 42
+FIRST   equ scan+OFFSET+IVAL
+OFFSET  equ (2*IVAL)
+DJNOFF  equ -431
+
+scan    sub incr,comp
+comp    cmp FIRST-CDIST,FIRST
+        slt #incr-comp+CDIST+(bptr-comp)+1,comp
+        djn scan,<FIRST+DJNOFF
+        mov #CDIST+(bptr-comp)+1,count
+        mov comp,bptr
+bptr    dat #0
+split   mov bomb,<bptr
+count   djn split,#0
+        jmn scan,scan
+bomb    spl 0
+        mov incr,<count
+incr    dat <0-IVAL,<0-IVAL
+
+        end comp
+
+The first four instructions scan for enemy code, comparing 12
+instructions apart. If a difference was found, a bomb carpet is laid,
+starting 4 addresses above the B-address and ending with the
+A-address. This class of CMP-scanner wastes a lot of time bombing
+decremented addresses or decoy code, and therefore loses a lot
+against stone-type bombers. You can decrease the CMP-distance of 12
+to cut down on the time spent laying the carpet, but the scan pattern
+becomes quickly sub-optimal, especially against larger warriors.
+Mintardjo was able to shorten the bomb carpet without shortening the
+CMP-distance by decrementing the 'cmp' instruction directly. His
+warrior "Medusa's" is however one line longer than Agony, because the
+pre-decrement misses bombing the B-address, which therefore has to be
+bombed with a separate instruction:
+
+;redcode
+;name Medusa's v2.1
+;author Mintardjo & Stefan
+
+CDIST   equ 12
+IVAL    equ 28
+FIRST   equ scan-OFFSET+IVAL
+OFFSET  equ 5324
+
+scan    sub data,comp
+comp    cmp FIRST-CDIST,FIRST
+        slt #data-comp+CDIST+1,comp
+        djn scan,<FIRST+163
+        mov #CDIST-1,count
+split   mov bomb,<comp
+count   djn split,#0
+        add #CDIST-1,comp
+        jmz scan,scan-1
+bomb    spl 0, <0-IVAL+1
+incr    mov data, <bomb-1
+        jmp incr, <0-IVAL-1
+data    DAT <0-IVAL, <0-IVAL
+
+        end comp
+
+Here is where ICWS'94's _post_-increment comes into play: we can now
+use the 'cmp' instruction as a pointer, and still bomb everything
+including A- and B-address with a 2-line loop. Since the B-address is
+now incremented, it must initially be lower than the A-address. So we
+don't bomb our one code we now need to test the A-address with the
+slt.A instruction. Adding the .F modifier to the DJN makes it both
+safer (we fall thru only if both A- and B-numbers are 1) and more
+effective. Finally, we dispose of the last DAT instruction by
+combining the scan increments with the SPL instruction. As explained
+in the first issue, SPL #n is executed like SPL 0. Here the full code:
+
+;redcode-94
+;name Rave 3
+;author Stefan Strack
+;strategy Carpet-bombing scanner based on Agony and Medusa's
+
+CDIST   equ 12
+IVAL    equ 42
+FIRST   equ scan+OFFSET+IVAL
+OFFSET  equ (2*IVAL)
+DJNOFF  equ -431
+BOMBLEN equ CDIST+2
+
+        org    comp
+
+scan    sub.f  incr,comp
+comp    cmp.i  FIRST,FIRST-CDIST        ;larger number is A
+        slt.a  #incr+1-comp+BOMBLEN,comp  ;compare to A-number
+        djn.f  scan,<FIRST+DJNOFF       ;decrement A- and B-number
+        mov.ab #BOMBLEN,count
+split   mov.i  incr,>comp               ;post-increment
+count   djn.b  split,#0
+        sub.ab #BOMBLEN,comp
+        jmz.a  scan,scan-1
+incr    spl.b  #-IVAL,<-IVAL
+        mov.i  1,<count
+
+-Stefan (stst@vuse.vanderbilt.edu)
+______________________________________________________________________________
+
+Looking to the Future:
+
+The lastest draft of the standard has been on soda.berkeley.edu for about
+a month now (as /pub/corewar/incoming/icws94.0202.Z).  Take a look at it
+and let the newsgroup know what you think.  There are some interesting
+additions to the former '94 draft standard, and there has been some intense
+discussion in the newsgroup lately about parsing code and adding new
+instructions.  Now is the time to voice your opinions!
+
+Also, please submit your programs to the '94 hills.  We'd love to have your
+best KOTH warrior on the standard '94 hill, even if it is still '88
+compliant.
+
+If you have any comments or questions about the '94 hills or the '94
+standard that you think might be of general interest, please let me know.
+Good luck, and happy computing!
+______________________________________________________________________________
+
+Brant D. Thomsen, Editor           Snail mail:  1197 E. 6290 S.
+(bdthomse@peruvian.cs.utah.edu)                 Salt Lake City, UT  84121
+University of Utah                              U.S.A.

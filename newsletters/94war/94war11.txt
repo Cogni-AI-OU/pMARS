@@ -1,0 +1,350 @@
+  __ __| |            ) _ \  |  |    \ \        /              _)
+     |   __ \   _ \  / (   | |  |     \ \  \   / _` |  __|  __| |  _ \   __|
+     |   | | |  __/   \__  |___ __|    \ \  \ / (   | |    |    | (   | |
+    _|  _| |_|\___|      _/    _|       \_/\_/ \__,_|_|   _|   _|\___/ _|
+
+July 23, 1994                                                        Issue #11
+______________________________________________________________________________
+
+In the past, _The_'94_Warrior_ was specifically dedicated to encouraging and
+supporting the '94 draft standard.  Starting with this issue, the newsletter
+is oriented towards corewars in general.  I have kept the title to avoid
+confusion, and because it is still my hope to keep abreast of, and possibly
+even accelerate, the latest advances in corewars.  I hope you enjoy it!
+
+The FAQ is available through anonymous FTP to rtfm.mit.edu, as
+/pub/usenet/news.answers/games/corewar-faq.Z.  There are also several
+tutorials on the '88 and '94 (draft) standard available on
+ftp.csua.berkeley.edu that will greatly ease the process of becoming a
+proficient "redcoder."
+______________________________________________________________________________
+
+CHANGES and CORRECTIONS:
+
+A slightly updated version of pMARS has been uploaded to ftp.csua.berkeley.edu.
+Version 0.6.2 has some minor bug fixes, and will also make it much easier to
+use code that you download from the newsgroup.  (A very nice touch!)
+Thanks again to the pMARS group for an excellent job!
+
+Starting with this issue of the Warrior, I will be covering what I consider to
+be the three most active corewar hills:  the '94 Draft Hill, the '94
+Experimental (Big) Hill, and the '88 Standard Hill (all on
+Pizza@ecst.csuchico.edu).  If there is enough interest, I can add other hills
+as well.  (I considered adding the beginner's hill; but, since I have no
+programs on it, I have no idea what is happening there.  Anyone want to cover
+that hill for me?  Would anyone object if I kept a simple program on the hill
+just so I could follow it for a while?)
+______________________________________________________________________________
+
+The ICWS '94 Draft Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current ICWS '94 Draft hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  41/ 26/ 33                  Torch t5              P.Kline     155      51
+ 2  46/ 38/ 16              Pyramid v5.5     Michael Constant     154     136
+ 3  43/ 33/ 24        Homemade Ice Cream              P.Kline     153      23
+ 4  38/ 25/ 37                    Sasami                T.Hsu     152      71
+ 5  34/ 21/ 44               Blue Funk 3       Steven Morrell     148      46
+ 6  34/ 20/ 46                    Ryooki                T.Hsu     147      12
+ 7  43/ 41/ 17                      SJ-4            J.Layland     145      47
+ 8  30/ 19/ 51                      Aeka                T.Hsu     141       1
+ 9  39/ 37/ 24               Stimpy v2.0     Brant D. Thomsen     141      87
+10  30/ 19/ 51                 Cannonade              P.Kline     141     216
+11  32/ 23/ 45                     NC 94       Wayne Sheppard     141     371
+12  35/ 30/ 35             FlyPaper 3.0f            J.Layland     140       2
+13  38/ 37/ 25              Request v3.0     Brant D. Thomsen     140      14
+14  37/ 37/ 26               IVScan 8000        James Layland     137       9
+15  41/ 47/ 12             Iron Gate 1.5       Wayne Sheppard     136     335
+16  39/ 43/ 18              Keystone t33              P.Kline     135     158
+17  38/ 42/ 20               Christopher       Steven Morrell     134     279
+18  27/ 22/ 51                 Blue Funk       Steven Morrell     133     358
+19  30/ 29/ 41                   Lucky 3        Stefan Strack     132     351
+20  41/ 52/  7                      test              P.Kline     131       4
+
+Another one of the old programs has disappeared from the hill:  Rave 4.1 by
+Stefan Strack was killed at the respectable age of 320.  Rave is a "CMP"
+scanner, and was one of the very first programs written specifically for the
+'94 standard.
+
+The leaders on the hill are no surprise, as we have the same five programs on
+the top of the hill that were there last issue.  However, the competition is
+increasing.  The difference between the scores of the top and bottom warriors
+on the hill is 24, compared with 32 just last issue.  That's about as close
+as I have ever seen them.
+______________________________________________________________________________
+
+The ICWS '94 Draft Experimental Hill:
+
+        Standard:       '94 Draft (with extensions)
+       Core size:       55,440 instructions
+   Max processes:       10,000 per program
+        Duration:       After 500,000 cycles, a tie is declared.
+Max entry length:       200 instructions
+
+The current ICWS '94 Experimental (Big) hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  49/ 34/ 17                  ivscan6b            J.Layland     165      22
+ 2  47/ 35/ 18              Pyramid v5.3     Michael Constant     159      49
+ 3  46/ 34/ 20             Request-55440     Brant D. Thomsen     158     158
+ 4  36/ 17/ 47                   Aleph 1              Jay Han     156      20
+ 5  36/ 24/ 40             Variation G-1              Jay Han     148     122
+ 6  43/ 39/ 18                     Fscan              Jay Han     146       6
+ 7  41/ 37/ 22                   Aleph 0              Jay Han     146      21
+ 8  40/ 36/ 24               Stimpy v2.0     Brant D. Thomsen     144      13
+ 9  31/ 23/ 46              NotSoBigImps        James Layland     140      18
+10  38/ 36/ 26                      Lump            J.Layland     139     103
+11  31/ 24/ 44 Der Zweite Blitzkrieg - 9      Mike Nonemacher     138     120
+12  39/ 39/ 22                Vanity IIx        Stefan Strack     138     113
+13  42/ 48/ 10                 Rave B4.1        Stefan Strack     137     119
+14  32/ 29/ 39                  Lucky 13        Stefan Strack     136     164
+15  30/ 24/ 46                 Blue Funk       Steven Morrell     136      12
+16  41/ 47/ 13                    Squint      Mike Nonemacher     135      96
+17  31/ 27/ 43                  Splash 1              Jay Han     135     123
+18  40/ 49/ 11                 Plasma v5       Wayne Sheppard     130      60
+19  27/ 23/ 50              Insight v1.0     Brant D. Thomsen     130       1
+20  31/ 32/ 37            Sasami / 55440                T.Hsu     130       8
+
+I suppose it's difficult to justify picking this as one of the three most
+active hills, as it hasn't changed since the last issue of _The_'94_Warrior_.
+Personally, I just like the fact that this hill has such a different "feel"
+than the smaller '94 hill.  It makes it a completely different challenge to
+do well on it.  (Besides, Jay Han might not forgive me if I dropped it!)
+______________________________________________________________________________
+
+The ICWS '88 Standard Hill:
+
+        Standard:       '88
+       Core size:       8000 instructions
+   Max processes:       8000 per program
+        Duration:       After 80,000 cycles, a tie is declared.
+Max entry length:       100 instructions
+
+The current Standard KotH hill on "Pizza":
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  41/ 26/ 33     Der Zweite Blitzkrieg      Mike Nonemacher     156      41
+ 2  46/ 38/ 16                     SJ-4a            J.Layland     155      40
+ 3  39/ 24/ 37             Night Crawler       Wayne Sheppard     154      69
+ 4  44/ 37/ 19               Christopher       Steven Morrell     150      33
+ 5  42/ 36/ 22          Yop La Boum v2.1         P.E.M & E.C.     149      37
+ 6  41/ 34/ 25                Blue Blood         Ned Flanders     148       1
+ 7  40/ 33/ 27              Keystone t21              P.Kline     147      79
+ 8  43/ 40/ 17              Request v2.0     Brant D. Thomsen     147      60
+ 9  44/ 42/ 13              Dragon Spear             c w blue     146      59
+10  34/ 22/ 45                      ttti        nandor sieben     146      63
+11  40/ 35/ 25                   Unknown         Ned Flanders     146       2
+12  43/ 43/ 14             Iron Gate 1.5       Wayne Sheppard     144      90
+13  44/ 44/ 12            Q2 version 2.0         Travis Nixon     143       4
+14  34/ 26/ 39   CAPS KEY IS STUCK AGAIN       Steven Morrell     142      47
+15  33/ 26/ 41              Blue Funk 88       Steven Morrell     141       6
+16  40/ 41/ 19                 Vanity II        Stefan Strack     140      81
+17  44/ 48/  9           Juggernaut v1.5         Anders Ivner     140      82
+18  37/ 36/ 26           Killer instinct         Anders Ivner     138      84
+19  40/ 43/ 17               Sauron v8.8     Michael Constant     137      36
+20  35/ 33/ 33              FlyPaper 3.0            J.Layland     137      39
+
+I've noticed that the '88 hill has turned into "beginners" hill of sorts.
+Most the hills that have contributed to the aging of this hill recently have
+been hanging around the bottom.  This explains the absence of programs between
+the ages of 33 and 6.  (Christoper was, I believe, the last program to move
+over from the original KotH hill.)
+
+However, a couple of new programs have finally broken this trend.  Q2 by
+Travis Nixon was right up at the top of the hill when it was first submitted,
+and Blue Blood by Ned Flanders is currently doing very well.
+______________________________________________________________________________
+
+HINTS and HELPS:
+
+This month's hint has been supplied by Ting-Yu Hsu.  T. Hsu has been a
+powerful influence on the hill; Sasami has been in the top 5 on the '94 Pizza
+Draft Hill since it's submission over a month ago.  I'm especially excited to
+be able to present this article, because replicators (also know as "paper"
+programs) are an area I am particularly weak in.  (I know, I know, one of
+these days ...)
+
+
+Creating a Competitive Paper
+
+One of the warrior forms I have always enjoyed was the replicator.
+Unfortunately, replicators have been around so long that any good warrior
+(i.e., koth) can take one out.  Thus, I took it upon myself to remedy this
+situation.  Below is a side by side comparison of your typical paper and
+Ryooki, the only pure paper on the hill.
+
+Line        Paper                       Ryooki
+----        ---------------------       ----------------------
+1           mov     #6   ,0             nop     >0    ,0
+2           mov     <-1  ,<1            mov     <-1   ,{1
+3           spl     @0   ,-3365         spl     @-3365,>800
+4           mov     2    ,<-1           mov     3     ,{-1
+5                                       mov     2     ,}25
+6           jmz     -4   ,-4            jmz.f   *-4   ,*-4
+7           dat     <2667,<2667*2       dat     <2667 ,<2667*2
+
+Let's take the obvious addition first.  Line 5 is an anti-vamp line.  Look
+how easy this is to accomplish with A-field indirection.  A more subtle
+application of line 5 is that it also serves to kill off older copies of
+itself.  To understand this point, you must realize that 100 copies of paper
+running through core is more effective than 1000 copies of paper.  Although
+paper is a replicator, every time it replicates the effectiveness of each
+individual copy decreases even though the effectiveness of the whole
+increases.  As more and more copies of paper appear in core, however, the
+decreasing effectiveness of each individual copy starts to outweigh the
+increasing effectiveness of the whole.  This is best known as the point
+of diminishing returns.  Ryooki attempt to combat this by killing off copies
+which are more than one generation old.
+
+Probably the most important change is in line 6 (which forces the change
+in line 1).  By performing a jmz.f, Ryooki vastly increases her chance of
+detecting a modification within her code.  Additionally, by using indirection
+to perform the check and jump, Ryooki is actually using two lines to determine
+whether a modification occurred, not just one line.  The change in line 1 is
+just a side effect of using jmz.f, since a "mov #7,0" would cause the jmz.f
+to consistently fail.
+
+The final change is in line 3 (which forces the changes in lines 2 and 4).
+With the availability of A-field indirection, Ryooki is able to store its
+destination pointer in the A-field of the spl statement.  Besides freeing
+up the B-field, which Ryooki uses to randomly trash core, it also gives the
+spl a chance to check whether the next copy of Ryooki is in good shape.
+That is, when Ryooki performs her spl, her spl pointer should be pointing to
+a "nop >0,0" instruction.  If this is not the case, I do not care where
+Ryooki splits to as long as it is NOT where the spl is pointing to.  This
+works under the assumption that jumping to a random location is better than
+jumping to a location which you know is corrupt.
+
+Here is how the two replicators perform against warriors on the hill which
+I have code for (using mts and pmars -b -r 100 -F 2345).  Some of the code
+is a bit out of date, but I didn't feel like browsing my mail for koth scores.
+(If someone out there could e-mail me more recent sources of warriors on the
+hill, I would appreciate it since I've been without a news feed for a few
+months now.)
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Paper                   Scott Nelson             18  38  43   1465
+  2     Request v2.0            Brant D. Thomsen         92   6   2   278
+  3     Iron Gate               Wayne Sheppard           89   7   4   271
+  4     SJ-4a                   J.Layland                88   5   7   271
+  5     Stimpy v2.0             Brant D. Thomsen         86   6   8   266
+  6     Rave                    Stefan Strack            78  10  12   246
+  7     Sasami                  T.Hsu                    41   7  52   175
+  8     Torch t5                P.Kline                  40  13  47   167
+  9     Pyramid v2.0            Michael Constant         46  35  19   157
+ 10     Blue Funk 3             Steven Morrell            7  13  80   101
+ 11     Blue Funk               Steven Morrell            6  16  78   96
+ 12     Cannonade               P.Kline                   1   9  90   93
+ 13     Aeka                    T.Hsu                     2  15  83   89
+ 14     Insight v1.0            Brant D. Thomsen          1  13  86   89
+ 15     NC 94                   Wayne Sheppard            0  35  65   65
+ 16     Keystone t33            P.Kline                   0  81  19   19
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Ryooki                  T.Hsu                    32  27  41   2051
+  2     Rave                    Stefan Strack            87  10   3   264
+  3     Stimpy v2.0             Brant D. Thomsen         82   9   9   255
+  4     Iron Gate               Wayne Sheppard           76  16   8   236
+  5     SJ-4a                   J.Layland                71  15  14   227
+  6     Torch t5                P.Kline                  44  26  30   162
+  7     Sasami                  T.Hsu                    31  23  46   139
+  8     Blue Funk 3             Steven Morrell            7  16  77   98
+  9     Blue Funk               Steven Morrell            1  13  86   89
+ 10     Insight v1.0            Brant D. Thomsen          1  14  85   88
+ 11     Aeka                    T.Hsu                     0  13  87   87
+ 12     Cannonade               P.Kline                   1  28  71   74
+ 13     NC 94                   Wayne Sheppard            0  31  69   69
+ 14     Request v2.0            Brant D. Thomsen          9  79  12   39
+ 15     Keystone t33            P.Kline                   0  90  10   10
+ 16     Pyramid v2.0            Michael Constant          1  98   1   4
+
+>From the rankings above, you should notice a few trends.  First off, Ryooki
+beats up on the vampires due to her anti-vamp code, Ryooki does about the same
+against stones even though she is one line larger than paper, and finally,
+Ryooki tends to get more wins off programs designed to kill paper, like
+scanners and spl bombers.
+
+Here are scores for Ryooki when I remove the anti-vamp line.  As you can see,
+the 6 line version of Ryooki scores pretty much the same as the 7 line version.
+It does better against the stones and worse against the vampires which
+is to be expected.  Notice the performances of Torch and Sasami, two spl
+bombing warriors.  If you compare these scores against the ones from paper,
+you should notice how much better Ryooki is at surviving non-dat bombs.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Ryooki w/o anti-vamp    T.Hsu                    27  30  43   1863
+  2     Rave                    Stefan Strack            92   5   3   279
+  3     Stimpy v2.0             Brant D. Thomsen         83   7  10   259
+  4     Iron Gate               Wayne Sheppard           79  14   7   244
+  5     SJ-4a                   J.Layland                78  13   9   243
+  6     Request v2.0            Brant D. Thomsen         47  50   3   144
+  7     Torch t5                P.Kline                  29  25  46   133
+  8     Sasami                  T.Hsu                    20  20  60   120
+  9     Cannonade               P.Kline                   1  14  85   88
+ 10     Insight v1.0            Brant D. Thomsen          1  14  85   88
+ 11     Blue Funk               Steven Morrell            4  21  75   87
+ 12     Blue Funk 3             Steven Morrell            6  25  69   87
+ 13     Aeka                    T.Hsu                     0  14  86   86
+ 14     NC 94                   Wayne Sheppard            0  34  66   66
+ 15     Pyramid v2.0            Michael Constant          9  66  25   52
+ 16     Keystone t33            P.Kline                   0  84  16   16
+
+Ryooki scored 28/22/50 when I first submitted it to koth, but since then
+her preferred targets, slow starting stones and vampires, have been knocked
+off the hill, so she is only hovering around 26/24/50 nowadays.
+
+Finally, below in all her glory is the version of Ryooki which is currently
+on the hill.  Just for informational purposes, Ryooki is a female rabbit
+(who meows like cat) from the Japanese anime "Tenchi Muyo".
+
+T.Hsu
+ting@teloquent.com
+
+------------------------------------------------------------------------------
+;redcode-94
+;name     Ryooki
+;kill     Ryooki
+;author   T.Hsu
+;strategy Just a simple paper
+;assert   CORESIZE == 8000 && MAXLENGTH >= 100 && VERSION >= 60
+;macro
+;-----------------------------------------------------------------------------
+;  1.0  Just an imp killing paper.
+;  1.1  Use nop and jmz.f in the paper.
+;  1.2  Use "mov 0,}0" instead of nop.  Use "spl @nxt" instead of "spl nxt".
+;  1.3  Larger due to anti-vampire code.  Use labels instead of numbers.
+;  1.4  Use "nop >0,0" instead of "mov 0,}0".
+
+            org     boot_paper
+
+nxt_paper   equ     -3365
+
+boot_paper  spl     1 ,0
+            spl     1 ,0
+            mov.i   -1,#0
+
+p_src       nop     >0        ,0            ; B-fld holds source
+p_cpy       mov.i   <p_src    ,{p_dst
+p_dst       spl     @nxt_paper,>800         ; A-fld holds destination
+            mov.i   p_bomb    ,{p_dst       ; anti-imp  instruction
+            mov.i   p_bomb    ,}25          ; anti-vamp instruction
+            jmz.f   *p_cpy    ,*p_cpy
+p_bomb      dat     <2667     ,<2667*2      ; bomb designed to kill imps
+
+cnt         for     90
+            dat     0,0
+            rof
+______________________________________________________________________________
+
+Looking to the Future:
+
+I hope you enjoy the new format of the Warrior, and that you find the next one
+to be worth the month-long wait.  As always, your comments, suggestions,
+criticisms, and submissions are encouraged and appreciated.

@@ -1,0 +1,158 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               June 16, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 35/ 21         Winter Werewolf 3         W. Mintardjo     153      51
+ 2  44/ 41/ 14            Iron Gate 1.01       Wayne Sheppard     148     561
+ 3  35/ 24/ 42             Night Crawler       Wayne Sheppard     146     733
+ 4  44/ 44/ 12           Fire Storm v1.1         W. Mintardjo     144     372
+ 5  37/ 30/ 34              FlyPaper 3.0            J.Layland     143     157
+ 6  44/ 44/ 12              Dragon Spear             c w blue     143     835
+ 7  44/ 46/  9                 Agony 5.2        Stefan Strack     142     360
+ 8  44/ 47/ 10               Backstabber         Anders Ivner     141     284
+ 9  32/ 25/ 43               Sphinx v2.8         W. Mintardjo     140    1731
+10  32/ 24/ 43        Incrimination v1.0     Brant D. Thomsen     140     137
+11  42/ 45/ 12                   Impurge     Fredrik Ohrstrom     139      57
+12  31/ 25/ 44                     Snake       Wayne Sheppard     137     493
+13  33/ 30/ 37       ImpsAreMyFriend 1.1            J.Layland     136     222
+14  42/ 47/ 11                    cproba        nandor sieben     136      75
+15  39/ 42/ 19             Distance v6.3     Brant D. Thomsen     135     227
+16  38/ 42/ 19            Emerald 5.1000              P.Kline     135      33
+17  30/ 25/ 45                Imprimis 6              P.Kline     135    1133
+18  33/ 38/ 30                  Passport              P.Kline     128       1
+19  36/ 48/ 16               Impurge 2.0     Fredrik Ohrstrom     124       3
+20  27/ 36/ 37               Sparrowhawk     Michael Constant     118       8
+
+21  25/ 37/ 38       Deck of Many Things             c w blue     112       2
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Take a bow, Dan Nabutovsky, winner of the summer tournament.  Dan successfully
+outguessed (or out-lucked :-) every opponent, cruising through the tourney
+without a lost match.  And thanks to Stefan for providing some fun and
+entertainment the last few weeks.  Credit Albert Ma with making the event
+possible (from Stefan's viewpoint) - his Mercury emulator is clocked
+at over a thousand battles an hour!
+
+W. Mintardjo continues to work on improving Sphinx, just in case Sphinx v2.8
+_ever_ gets knocked off:
+   3  36/ 24/ 40               Sphinx v5.0         W. Mintardjo     147       1
+  19  27/ 30/ 43               Sphinx v2.8         W. Mintardjo     124    1640
+This week may mark the passing of +0 Stormbringer's record age - 1778 as
+Sphinx v2.8 is already over 1700 as of this writing.  And WM's version 3
+of Winter Werewolf seems locked in first or second place.  Good work!
+Was that a 'boot' you added WM? :-)
+
+CW Blue's 'Dragon Spear' is creeping up on age 1000, might go over this week.
+On the other hand, Imprimis 6 has been sulking around the bottom of the hill,
+going under 130 points pretty regularly.  Better watch out if it gets
+knocked off :-(
+
+In this week's "Guess we'll never know"  department:
+  A challenger has arrived on the hill!  Vital statistics:
+  Program "test" (length 48) by "Michael Constant"
+  (contact address "constant@stat.Berkeley.EDU"):
+  ;strategy i'll tell you the strategy if it works
+
+F. Ohrstrom continues to prove my theory that the secret is in the
+name - his 'test -b' program was in first place, but 'Impurge' can't
+get up that high.  And W. Sheppard's 'TEST' scored 155 points, but
+none of his named warriors are that good.  Maybe The Hint should be
+to give your program a name other than 'test' (or 'sub-type' :-).
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 1  38/ 21/ 41                      TEST       Wayne Sheppard     155       1
+ 1  45/ 43/ 12                  test - b     Fredrik Ohrstrom     148       1
+ 1  46/ 35/ 19         Winter Werewolf 3         W. Mintardjo     157       1
+ 2  36/ 26/ 39              sub-type-b+r             c w blue     146       1
+ 2  42/ 38/ 19         Elizabeth Bathory             c w blue     147       1
+ 3  36/ 24/ 40               Sphinx v5.0         W. Mintardjo     147       1
+ 3  42/ 38/ 20              sub-type-cmp             c w blue     146       1
+ 3  43/ 38/ 19         Winter Werewolf 2         W. Mintardjo     147       1
+ 4  44/ 41/ 15           Twilight Pits 8         W. Mintardjo     146       1
+ 4  45/ 43/ 12                  test - a     Fredrik Ohrstrom     147       1
+ 6  33/ 24/ 44               sub-type-os             c w blue     142       1
+ 6  37/ 34/ 29             FlyPaper 3.01            J.Layland     139       1
+ 6  44/ 42/ 14                      Zipp             c w blue     147       1
+ 7  33/ 25/ 41              FlyPaper 4.1            J.Layland     141       1
+ 7  45/ 44/ 11                   Impurge     Fredrik Ohrstrom     145       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Vampires!  Bloodsucking Leeches.  Snakes!   Brrr.  Let's talk pit-trappers.
+
+Basically a pit-trapper works by making your processes jump
+into a rapid-splitting, core-clearing, self-destroying, nasty
+bit of code.  You are forced to split many many processes,
+thereby robbing your healthy processes of time.  You are forced
+to erase the core, destroying any surviving components.  And
+you finally erase the pit itself, killing your remaining
+processes.
+
+Vampire strategy goes back to one of the standard battle programs,
+'Vampire', and was used successfully by Eugene P. Lilitko's
+Cowboy program to win the 1988 tournament.  Here's a modern
+version of Vampire:
+
+inc   dat #3364,#-3364
+fang  jmp trap,4
+
+start spl 0
+      add inc,fang
+      mov fang,@fang
+      jmp -2
+
+trap  mov 10,<-10
+      spl -1
+      jmp -2
+
+All vampires eventually cause their own processes to
+jump into the trap to speed up the core clear (and to guarantee one).
+
+Vampire's strengths include small size, rapid bombing (with fangs),
+and complete core-clear.  Their most important feature, however
+is enslaving the opponent's processes to do their dirty work.
+
+Variations include substituting the 'trap' line for 'inc',
+booting the code to separate the bomber from the trap,
+putting the fang in different locations, multiple spl's to
+more rapidly overpower the opponent, and 'gates' to stop
+imps (see Sucker 5).
+
+Areas to explore:
+    What else can the pit do?
+    Using multiple fang-bombers to better deal with stones.
+    Evolving the fang-bomber into a repeating core-clear.
+    Multi-pass fang-bombing to overcome self-splitting paper (NotePaper)
+
+Currently the Hill is hostile to vampires like Sucker 5 and Twilight Pits,
+but Snake seems pretty successful.  Next week we'll discuss
+anti-vamp and new SUPER anti-vamp (if I can get it to work :-).
+Meanwhile, maybe someone out there has some thoughts on vampires?
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+

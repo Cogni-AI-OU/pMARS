@@ -1,0 +1,210 @@
+                                _PUSH OFF_
+                        A midweek review of Corewar
+                               July 20, 1993
+-------------------------------------------------------------------------------
+  I.  The Standings:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 44/ 12              Dragon Spear             c w blue     144     998
+ 2  39/ 36/ 25         Winter Werewolf 3         W. Mintardjo     143     214
+ 3  43/ 44/ 12            Iron Gate 1.01       Wayne Sheppard     142      39
+ 4  44/ 47/  9                 Agony 6.0        Stefan Strack     142     150
+ 5  41/ 42/ 17           Grimm's Vampyre             c w blue     140      79
+ 6  32/ 24/ 44               Sphinx v2.8         W. Mintardjo     140    1894
+ 7  43/ 46/ 12           Fire Storm v1.1         W. Mintardjo     139     535
+ 8  43/ 47/  9              Creampuff II             P. Kline     139       1
+ 9  32/ 24/ 44             Night Crawler       Wayne Sheppard     139     896
+10  37/ 36/ 27                  Herem VI         Anders Ivner     139      68
+11  32/ 26/ 42                       ttt        nandor sieben     138     120
+12  31/ 25/ 44                Imprimis 7              P.Kline     136     136
+13  30/ 24/ 45               Impact v1.0         Anders Ivner     136      33
+14  33/ 29/ 38              FlyPaper 3.0            J.Layland     136     320
+15  31/ 27/ 42                     Hydra      Stephen Linhart     135       3
+16  40/ 47/ 13                   Impurge     Fredrik Ohrstrom     134     220
+17  29/ 26/ 46        Incrimination v1.0     Brant D. Thomsen     132     300
+18  39/ 47/ 13               Charon v8.1   Cisek,Strack,Kline     131      57
+19  28/ 30/ 42       Deck of Many Things             c w blue     126      25
+20  21/ 16/ 63       Imps! Imps! Imps!-d       Steven Morrell     125     130
+
+21  29/ 54/ 17                   :( v1.1       Steven Morrell     104       2
+
+-------------------------------------------------------------------------------
+ II.  The Basics:
+
+       -Core War Archives are available via anonymous FTP at
+        soda.berkeley.edu in pub/corewar...
+
+       -FAQ for this newsgroup is available via anonymous FTP at
+        rtfm.mit.edu as pub/usenet/news.answers/games/corewar-faq.z
+
+-------------------------------------------------------------------------------
+III.  The Scoop:
+
+Well, things have been a little damp here in Des Moines, so no _Push Off_
+last week (on top of being too busy the previous week).  Drake University
+was more-or-less closed last week, and the phone system was down for most
+of the time, so I couldn't even dial in. :-(  Now we are in limited operation
+with classes and some offices running.
+
+Let's see, we were talking about Vampires and Antivamp.  Of course my
+hope was to completely wipe out vamps - it looks so easy!  But CW Blue
+blew that idea away, his Grimm's Vampyre is riding higher than ever.
+
+Some people may have noticed a high-flying imp program making it's
+appearance in first place, with a VERY high score, which was immediately
+knocked off by the author.  I received this message (names removed
+to protect the innocent :-) :
+
+  I have always felt that I was an anti-imp person (This started back when
+  Impire and others first hit the hill, and they started to slaughter my
+  warriors), I always wanted to come up with something to make imps extinct.
+  Now I think I have come up with a better imp/stone......but
+  what do I do????  I hate Imps!!!!!  Do I go over to the other side....do I
+  go "If ya can't beat them join them".  I don't know Paul, what do I do?
+
+Gee, this one's too big for me, what do you all think?  I used to think
+scanners were the enemy, til I figured out how to make Charon a little
+better.
+
+Then there was Hydra, S Linhart's marvelously successful 'multiple bomber'
+program.  Did I see a reference to 'self-regenerating' in there?  Anyway,
+congrats!  Seems to be a little succeptible to paper, though.
+
+-------------------------------------------------------------------------------
+ IV.  The Outlook:
+
+ 1  34/ 24/ 42                     Hydra      Stephen Linhart     143       2
+ 2  41/ 41/ 18           Grimm's Vampyre             c w blue     141      44
+ 2  45/ 43/ 12            Iron Gate 1.01       Wayne Sheppard     147       1
+ 3  37/ 38/ 25         Winter Werewolf 3         W. Mintardjo     137     179
+ 4  30/ 23/ 46                       ttt        nandor sieben     137      85
+ 5  42/ 46/ 12                   Impurge     Fredrik Ohrstrom     137     185
+ 6  32/ 28/ 40              FlyPaper 3.0            J.Layland     137     285
+ 7  28/ 19/ 53                   testing         Anders Ivner     138       1
+ 8  42/ 46/ 12               Charon v8.1   Cisek,Strack,Kline     138       1
+ 9  30/ 25/ 45               Sphinx v2.8         W. Mintardjo     136    1859
+ 9  31/ 25/ 43       Deck of Many Things             c w blue     137       1
+10  29/ 22/ 48             Night Crawler       Wayne Sheppard     136     861
+10  34/ 31/ 35              sub-type-imp             c w blue     136       1
+
+-------------------------------------------------------------------------------
+  V.  The Quick Look:
+
+19  24/ 24/ 51                  Snake v3       Wayne Sheppard     124       1
+19  36/ 45/ 19               sub-type-bs             c w blue     127       1
+19  38/ 50/ 12       Dracula's Revenge V     Fredrik Ohrstrom     125       1
+20  10/ 36/ 54         DumbHatter 0.1477            P.P.Sigra      84       1
+20  10/ 37/ 53                    Demons      Stephen Linhart      83       1
+20  20/ 63/ 17                    Pebble      Stephen Linhart      77       1
+20  23/ 68/  9          Skip Vampire 3.0     Devin Kilminster      78       1
+20  28/ 36/ 36          Letter Head 0.02                  Dak     120       1
+20  28/ 62/ 10                    Spiral      Stephen Linhart      95       1
+20  29/ 54/ 17                   :( v1.1       Steven Morrell     105       1
+20  36/ 48/ 16                Eclipse II              P.Kline     123       1
+20  37/ 47/ 16               Eclipse III              P.Kline     126       1
+21   0/ 48/ 52                   imptest              Unknown      53       0
+21   0/ 83/ 17             Dumb Dumb 0.0            P.P.Sigra      17       0
+21   0/ 84/ 16              Sitting Bull              Unknown      16       0
+21   0/ 85/ 14          Dumb, Plain Dumb            P.P.Sigra      15       0
+21   0/ 90/  9                DumbJump 3            P.P.Sigra      10       0
+21   0/ 91/  9                  DumbJump            P.P.Sigra       9       0
+21   1/ 32/ 67                      Tie!         James Ojaste      70       0
+21   1/ 58/ 41                        CC             C. Walsh      44       0
+21   1/ 63/ 37   Deaf Dumb & Blind Kid 3            P.P.Sigra      38       0
+21   1/ 86/ 13    Peek-a-Boo, I See You!      Nathan Sullivan      15       0
+21   2/ 15/ 84                    Boyo 1                Scriv      89       0
+21   2/ 37/ 60              DumbImp 0.30            P.P.Sigra      67       0
+21   2/ 72/ 27                 Front 242              Michael      31       0
+21   3/ 32/ 65             DumbImp 0.211            P.P.Sigra      74       0
+21   3/ 38/ 59    DumbFalseImproved 0.20            P.P.Sigra      67       0
+21   4/ 36/ 60               DumbImp 0.9            P.P.Sigra      71       0
+21   4/ 52/ 43                   Diamond     Michael Constant      57       0
+21   4/ 65/ 32               Tie Fighter          Darth Vader      43       0
+21   6/ 58/ 36 Deaf Dumb and Blind Kid 1            P.P.Sigra      55       0
+21   7/ 68/ 25              Spiral Hydra      Stephen Linhart      46       0
+21   8/ 64/ 28                        :(       Steven Morrell      51       0
+21   8/ 92/  0                   Hopper1         James Ojaste      25       0
+21   9/ 33/ 57    DumbHatter 0.211 Minus            P.P.Sigra      85       0
+21   9/ 67/ 24                    Zoink1         James Ojaste      51       0
+21  10/ 36/ 53               DumbShort 2            P.P.Sigra      85       0
+21  10/ 42/ 48                B Ratz 4.0       Rodney Schuler      77       0
+21  11/ 35/ 55           DumbShort 0.211            P.P.Sigra      87       0
+21  12/ 41/ 48          DumbHatter 0.844            P.P.Sigra      82       0
+21  12/ 82/  6                  Stealthy      Stephen Linhart      43       0
+21  12/ 87/  0                     Twins         James Ojaste      38       0
+21  13/ 50/ 38       DumbImpDwarf 0.9.63            P.P.Sigra      76       0
+21  13/ 74/ 13                 test 3100       Rodney Schuler      53       0
+21  13/ 86/  1                    Twins2         James Ojaste      39       0
+21  14/ 47/ 40        DumbImpDwarf 0.211            P.P.Sigra      81       0
+21  15/ 48/ 37                   Stinger       Rodney Schuler      82       0
+21  15/ 75/ 10                        ZE         D. McDaniels      54       0
+21  18/ 74/  8                  Tinyvamp            Phil Long      63       0
+21  19/ 63/ 19                 Berserk 2               Planar      75       0
+21  19/ 81/  1                      wimp         James Ojaste      56       0
+21  20/ 49/ 32          Flash Light v2.0     Michael Constant      90       0
+21  20/ 73/  8                   DemonIV         Cormac Walsh      66       0
+21  21/ 63/ 16                   vertigo       Steven Morrell      78       0
+21  21/ 70/  9                   cboing1         James Ojaste      72       0
+21  24/ 33/ 43                  Big Wall      Stephen Linhart     114       0
+21  24/ 74/  2                      hah!         James Ojaste      75       0
+21  25/ 59/ 16                 worthless       Steven Morrell      90       0
+21  27/ 72/  1                       007            j.layland      82       0
+21  36/ 61/  3         Are we out there?              Unknown     111       0
+21  14/ 73/ 14                DumbJump 5            P.P.Sigra      55       0
+21  13/ 71/ 15                DumbJump 6            P.P.Sigra      55       0
+21   5/ 80/ 15                DumbJump 7            P.P.Sigra      31       0
+19  31/ 31/ 38                Fire Walls      Stephen Linhart     131       1
+21   9/ 50/ 41         DumbHatter 0.1296            P.P.Sigra      69       0
+21   7/ 35/ 58                Demon Wall      Stephen Linhart      80       0
+21  10/ 63/ 27                      test     Devin Kilminster      58       0
+20  25/ 33/ 42                Fire Walls      Stephen Linhart     117       2
+20  25/ 33/ 41                Fire Walls      Stephen Linhart     117       2
+19  28/ 33/ 39                Fire Walls      Stephen Linhart     123       1
+21  21/ 74/  5                     Speck      Stephen Linhart      68       0
+20  10/ 35/ 56         DumbHatter 0.1266            P.P.Sigra      85       1
+20  10/ 40/ 50                Fast Paper      Stephen Linhart      80       1
+21   3/ 57/ 40                       DJN      Stephen Linhart      49       0
+21   2/ 98/  0                  Spurious              Michael       7       0
+21  28/ 64/  8                   :( v1.1       Steven Morrell      93       0
+21   1/ 73/ 26               Spurious V2              Michael      29       0
+21  28/ 62/ 10                   :( v1.1       Steven Morrell      95       0
+21  18/ 57/ 25                       Ugh                Scriv      80       0
+21  18/ 63/ 20                   :( v1.1       Steven Morrell      72       0
+21   9/ 35/ 56  DumbHatter 0.211 Plus(?)            P.P.Sigra      84       0
+21  30/ 58/ 12                   :( v1.1       Steven Morrell     103       0
+
+-------------------------------------------------------------------------------
+ VI.  The Hint:
+
+Avoid building on flood plains.  Other than that, I was playing with some
+new number theories, but don't have them worked out just yet.  Here are
+some discussion items however.
+
+First, if you and your opponent are the same size and bomb at the same
+rate, one of you may actually have an unbeatable advantage.  Here
+is how it works.  Let's say you are both length 100.  You bomb forward
+with a step size of 99, your opponent bombs backward with a step size of
+101.  You will get whacked first every time because his 101 crosses the
+gap faster than your 99.  If you both bomb the same direction you have
+a more even chance.  So one thing to do is test your step sizes both
+with addition and with subtraction.
+
+Second, the 'optimal' numbers work well because they chunk up large areas
+of core into smaller and smaller pieces very efficiently.  Another
+way of saying this is that after scanning location N, they will not
+scan N+/-I, where 'I' is any small number, until very late.  A side-effect
+of this is that they will also not scan N+/-J, where J is any large
+factor of the core size, until late also.  One way for an opponent to
+take advantage of this effect would be to place components J locations
+apart.  So if you place 4 small bombers at locations 0, 2000, 4000, and 6000,
+any 'optimally' scanning/bombing opponent will not take out all 4 bombers
+very rapidly.
+
+-------------------------------------------------------------------------------
+VII.  The End:
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+
+

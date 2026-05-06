@@ -1,0 +1,371 @@
+ _____ _                                 _
+(_   _(_)_ __  _   ___    ____ _ _ _ _ _(_) ___  _ _
+  | | | | '_ \| | | \ \/\/ / _' | '_| '_| |/ _ \| '_)
+  | | | | | | | |_| |\    / (_| | | | | | | (_) | |                   Issue 4
+  |_| |_|_| |_|\__, | \/\/ \__,_|_| |_| |_|\___/|_|          27 October, 2009
+===============(___/=========================================================
+Welcome to Tinywarrior, the newletter which reports the latest events
+and techniques for the tiny hills.  If you haven't yet discovered the
+tiny hills, the specs are:
+
+         coresize: 800
+   max. processes: 800
+         duration: after 8,000 cycles, a tie is declared.
+max. entry length: 20
+ minimum distance: 20
+  instruction set: extended ICWS '94 Draft
+
+In this issue, Zul Nadzri reveals the results of his experiments with
+White Noise and you'll discover how Flux's SPL/DIV clear works.
+=============================================================================
+Current Status of the SAL Tiny Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  37.5/ 23.1/ 39.4           Silent Snowfall           inversed 151.9     8
+ 2  45.1/ 39.6/ 15.3         Negative Thinking           inversed 150.6    37
+ 3  43.8/ 41.9/ 14.3                      Flux       John Metcalf 145.7     2
+ 4  30.3/ 17.2/ 52.5                 Supernova        Sascha Zapf 143.5    91
+ 5  34.3/ 27.0/ 38.7              Endless pain          G.Labarga 141.7   243
+ 6  43.8/ 47.4/  8.8                   Muskrat       John Metcalf 140.1   275
+ 7  32.9/ 26.1/ 41.0      Little Fluffy Clouds           inversed 139.8    77
+ 8  30.8/ 22.3/ 46.9             Digital Swarm       John Metcalf 139.4   357
+ 9  33.9/ 28.5/ 37.6                       476        Sascha Zapf 139.3   151
+10  29.9/ 21.9/ 48.1               Moomintroll       John Metcalf 137.9   206
+11  40.3/ 43.4/ 16.3                  Twilight        S.Fernandes 137.3    84
+12  41.1/ 45.1/ 13.7                uiofhrgjkr      Nenad Tomasev 137.1    74
+13  28.8/ 23.5/ 47.7    Yet Another Tiny Paper       Jens Gutzeit 134.1   153
+14  41.6/ 49.2/  9.1 d3115408-6d89594-e626bb31              bvowk 134.0    52
+15  34.8/ 36.4/ 28.7 f29d1f7-6ac802d7-58595def              bvowk 133.2     1
+16  38.4/ 43.8/ 17.8              Scan-O-Matic        Sascha Zapf 133.0    92
+17  38.7/ 44.6/ 16.7              Gun + Gun 04         Zul Nadzri 132.8    99
+18  39.2/ 45.7/ 15.0            Sneaky Spike 2       Roy van Rijn 132.8   187
+19  32.3/ 31.8/ 35.9              Hades nebula        Sascha Zapf 132.7   169
+20  33.0/ 33.6/ 33.4                Guy Hazard        Sascha Zapf 132.5    97
+21  38.4/ 44.6/ 17.0      Larger Than Infinity         Zul Nadzri 132.1   118
+22  39.1/ 46.5/ 14.4            Smallness (v3)   Philipp Schaefer 131.7   104
+23  39.2/ 47.4/ 13.4                     toast       John Metcalf 131.0    19
+24  38.1/ 45.5/ 16.4 White Spikes Sneaky Noise         Zul Nadzri 130.7    80
+25  37.9/ 47.1/ 15.0                 inference       John Metcalf 128.6     6
+
+Av  36.9/ 36.9/ 26.2                                              136.9   111
+
+There have been 123 successful challenges since last issue, with 8 warriors
+surviving.  tiny Blowrag became the oldest warrior to be pushed off, age
+287.  Other casualties include Four Winds (age 171), White Noise (163) and
+Hired Sword (110).
+
+There are 11 authors on the current hill - Metcalf with 6 warriors, Zapf
+with 5, Nadzri and inversed with 3 each and bvowk with 2.
+
+Koth report: Supernova held first place after 33 challenges, followed by
+Negative Thinking (after 22), White Noise (11), Sneaky Spike (11) and
+Digital Swarm (10).
+=============================================================================
+The Tiny Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Digital Swarm          John Metcalf       357 *  qscan -> paper
+ 2  tiny Blowrag           Metcalf/Schmidt    287    paper/imp
+ 3  Muskrat                John Metcalf       275 *  qbomb -> bomber
+ 4  Endless pain           G.Labarga          243 *  qscan -> paper
+ 5  Tiny BiShot 2.0        Christian Schmidt  221    oneshot
+ 6  Moomintroll            John Metcalf       206 *  paper
+ 7  Sneaky Spike 2         Roy van Rijn       187 *  oneshot
+ 8  Soft as Silk           Sascha Zapf        178    qbomb -> paper
+ 9  Four Winds             John Metcalf       171    oneshot
+10  Hades nebula           Sascha Zapf        169 *  stone/paper
+11  White Noise (RBv1.5r10)The MicroGP Corewa 163    evolved oneshot
+12  Easter Egg             John Metcalf       162    qscan -> paper
+13  Yet Another Tiny Paper Jens Gutzeit       153 *  paper
+14  476                    Sascha Zapf        151 *  qbomb -> paper
+15  Tinyshot               John Metcalf       148    oneshot
+16  Diptera                Nenad Tomasev      147    oneshot
+17  Seek and Destroy       Sascha Zapf        134    oneshot
+18  Ugly Uncle             Christian Schmidt  127    qscan -> paper
+19  Diamondette            David Houston      122    stone
+20  Provenance             John Metcalf       121    oneshot/dodger
+ =  Sneaky Spike           Roy van Rijn       121    decoy maker -> oneshot
+22  Larger Than Infinity   Zul Nadzri         118 *  oneshot
+ =  Where's Giles?         John Metcalf       118    qscan -> paper
+24  3p(c)                  Sascha Zapf        116    paper
+ =  Milkshake IV           LAchi              116    oneshot
+
+Seven new warriors have entered the Hall of Fame since last issue.  Of
+the new entries, Diptera perishes age 147 while the other continue to
+climb.  The HoF contains 11 oneshots, 10 papers, 2 bombers, a paper/imp
+and a stone/paper.
+=============================================================================
+Current Status of the corewar.co.uk Infitiny Hill:
+
+The infitiny hill is where all of the published tiny warriors battle
+round-robin.  Listed here are the top 25 of 235 warriors:
+
+ #    %w   %l   %t  Name                     Author                  Score
+ 1  48.5 31.2 20.3  White Noise (RBv1.5r10)  The MicroGP Corewars C 165.77
+ 2  48.8 32.0 19.2  Larger Than Infinity     Zul Nadzri             165.71
+ 3  48.7 32.5 18.9  White Spikes Sneaky Nois Zul Nadzri             164.93
+ 4  45.9 27.5 26.7  bestwar4.red             Dave Hillis            164.33
+ 5  49.3 34.5 16.1  holograph                Simon Wainwright       164.15
+ 6  49.0 35.1 15.8  Tinyshot                 John Metcalf           162.91
+ 7  46.0 29.7 24.3  Evolving Threat          Dave Hillis            162.40
+ 8  48.1 34.0 18.0  Screeching soundcard     G.Labarga              162.15
+ 9  49.0 36.0 15.0  WriteLn('Victory');      Nenad Tomasev          162.04
+10  41.2 20.6 38.1  476                      Sascha Zapf            161.83
+11  48.3 34.9 16.8  Flux                     John Metcalf           161.60
+12  48.5 35.3 16.2  Seek and Destroy         Sascha Zapf            161.60
+13  48.3 35.9 15.8  Betadine                 M Joonas Pihlaja       160.77
+14  41.6 22.4 36.1  Endless pain             G.Labarga              160.72
+15  47.4 34.2 18.5  Sneaky Spike 2           Roy van Rijn           160.56
+16  47.8 35.2 17.0  BlackMusic2              Nenad Tomasev          160.33
+17  47.7 35.6 16.7  Provenance               John Metcalf           159.85
+18  47.6 35.8 16.6  Twilight                 S.Fernandes            159.35
+19  46.3 33.3 20.4  SmallShot                Roy van Rijn           159.21
+20  47.4 35.8 16.7  interlocking             John Metcalf           159.04
+21  46.3 33.6 20.1  Table Scan               John Metcalf           158.87
+22  46.4 34.0 19.6  Sneaky Spike             Roy van Rijn           158.80
+23  42.5 26.7 30.8  All over the core        G.Labarga              158.24
+24  46.7 35.3 18.1  Cream and Chocolate      LAchi                  158.03
+25  46.6 35.3 18.1  Tiny BiShot 2.0          Christian Schmidt      157.83
+
+Oneshots have a strong hold on the infinite tiny hill, 20 out of the top
+25 warriors.
+=============================================================================
+Flux and the SPL/DIV Clear by John Metcalf
+
+Flux is a tiny oneshot which uses a SPL/DIV clear as it's endgame.  The
+clear was inspired by G2 and Toxic Spirit:
+
+gate    dat                500   ; b-field = wipe pointer
+;       ...
+bptr    dat    1,          9     ; a-field = bomb pointer
+dptr    spl    #200,       8     ; a-field = djn stream pointer
+clear   mov    *bptr,      >gate ; forward clear
+        djn.f  clear,      }dptr ; forward decrement stream
+
+Execution begins at dptr and the clear initially wipes with SPL.  After
+the bomb pointer has been decremented the clear switches to a DAT wipe.
+It's possible to change the wipe to a DIV or MOD by replacing the DAT at
+bptr:
+
+bptr    div.ab #1,         #9    ; a-field = bomb pointer
+dptr    spl    #200,       8     ; a-field = djn stream pointer
+clear   mov    *bptr,      >gate ; forward clear
+        djn.f  clear,      }dptr ; forward decrement stream
+
+The DIV is safe to execute until the bomb pointer is reduced to 0.  This
+means it's possible for the main loop of a warrior to drop through into
+the clear.  The core is wiped with a DIV.AB #0,#9.
+
+Alternatively MOD.X #10, #9 can be used, which becomes MOD.X #1, #9 the
+first time it's executed.
+
+Flux combines the SPL/DIV clear with a .5c scan loop and decoy maker to
+score 147.5 against tinybm04.  Here's the final code:
+
+;redcode-tiny
+;name Flux
+;author John Metcalf
+;strategy decoy maker -> .5c oneshot scan -> spl/div clear
+;assert CORESIZE==800
+
+        step equ 12
+        first equ dptr+step*16
+        dec equ 30
+
+        s equ -12
+        d equ loop+214
+
+loop    add.ba #first,     #step
+        jmz.f  loop,       *loop
+bptr    div.ba #9,         #1
+dptr    spl    #8,         dec
+clear   mov    @bptr,      }loop
+        djn.f  clear,      >dptr
+
+        for    6
+        dat    0,0
+        rof
+
+make  z for    6
+        mov    <d+s*z,     {d+s*z+s-1
+        rof
+        djn.f  loop+1,     <d+s*8
+
+        end    make
+=============================================================================
+Extra Extra - Larger Than Infinity by Zul Nadzri
+
+The development of Larger Than Infinity began with the publication of
+White Noise by the MicroGP team.  To study the warrior mechanics and make
+the evolved code easier to understand, I reformatted the source code to
+resemble a hand-written oneshot:
+
+;recode-tiny
+;name White Noise (RBv1.5r10)
+;author The MicroGP Corewars Collective
+;strategy evolved oneshot
+;assert CORESIZE==800
+
+        ORG     start
+
+step    equ     -67
+
+top     add     incr    , @ptr
+start   sne     }step   , step-6
+        djn.f   top     , {50
+incr    spl     #-26    , {-26
+ptr     mov     @loop   , >start
+        mov     @loop   , >start+1
+        mov     @loop   , >start+1
+loop    djn.x   -2      , {stun
+        dat     #-181   , }8
+stun    spl     #-25    , 12
+
+        spl.x #1        , 1
+        mov   @2        , >145
+        spl   #-330     , >394
+        spl   #238      , >396
+        spl.x 1         , 1
+        spl.x #1        , 1
+        mov   @2        , >145
+        spl.x #1        , 1
+        spl.x 1         , }1
+        spl.x 1         , 1
+
+        end
+
+White Noise has 20 instructions.  The top half is similar to a number of
+other oneshots, particularly s774++ by Michal Janeczek.  The unusual
+behaviour of the clear was noted soon after publication:
+
+  "... their evolver had discovered an interesting technique.  The clear
+   has two streams - a fast clear which starts at a location shortly after
+   the warrior's code, and a slow clear starting where something was found
+   by the scan."
+                                  - Tinywarrior Issue 2 (10 February, 2005)
+
+The last 10 instuctions appear to unused.  In order to understand why these
+have been included we need to look at the algorithm used by MicroGP's
+Genetic Programming (GP) evolver.
+
+MicroGP used a static set of benchmark warriors and ran GP operations over
+many generations.  The fitness of a warrior was based on scores against the
+benchmark warriors.
+
+I can only assume that during evolution the bottom 10 lines were included
+as a decoy against scanners that attack forward.  The 10 line block might
+have placed at the top if most of the benchmark warriors attacked backward.
+
+Since the MicroGP team wasn't familiar with corewar strategies, they didn't
+analyze the behavior of White Noise.  One of the strengths of the MicroGP
+system is how it can generate solutions that require detailed analysis to
+fully understand.
+
+I decided to remove the unused codes to see the impact against a benchmark.
+In my tests, I received a good result by removing the last 9 lines:
+
+;redcode-tiny quiet
+;name Larger Than Infinity
+;author Zul Nadzri
+;strategy August 2005
+;ver 1 based on white noise but minimise the length
+;assert 1
+
+        ORG     start
+
+step    equ     -67
+
+top     add     incr    , @ptr
+start   sne     }step   , step-6
+        djn.f   top     , {50
+incr    spl     #-26    , {-26
+ptr     mov     @loop   , >start
+        mov     @loop   , >start+1
+        mov     @loop   , >start+1
+loop    djn.x   -2      , {stun
+        dat     #-181   , }8
+stun    spl     #-25    , 12
+        spl.x   #1      , 1
+
+        for MAXLENGTH-CURLINE
+        dat 0,0
+        rof
+
+        end
+
+Still the effect of the last line is quite mysterious.  It appears the
+benefit of the SPL.X #1, 1 is due to the following:
+
+ 1) the number of scans is limited by the scan loop falling through on 1,1
+
+ 2) some scanners detect the SPL and launch an ineffective forward attack
+
+ 3) the 1,1 causes the opponent's DJN stream to fall through
+
+Finally, I proceeded to submit and publish a warrior without SPL.X #1, 1
+for comparison:
+
+;redcode-tiny
+;name White Spikes Sneaky Noise
+;author Zul Nadzri
+;strategy When White Noise meets Sneaky Spikes
+;strategy (aka White Noise without the bait)
+;assert 1
+
+step   equ -67
+incr   equ -26
+
+top    add    dclear    , @bar
+start  sne    }step     , step-6
+clear  djn.f  top       , {50
+
+dclear spl    #incr     , {incr
+bar    mov    @ptr      , >start
+loop   mov    @ptr      , >clear
+       mov    @ptr      , >clear
+ptr    djn.x  loop      , {stun
+
+bomb   dat    #-181     , }8
+stun   spl    #-25      , $12
+
+       end    start
+
+Compare White Spikes Sneaky Noise with Sneaky Spike 2 by Roy van Rijn:
+
+;redcode-tiny
+;name Sneaky Spike 2
+;author Roy van Rijn
+;strategy Last one... I promise
+;assert 1
+
+        add.f   sAdd    , @5
+start   sne.i   }-65    , >-72
+        djn.f   -2      , <173
+
+sAdd    spl     #357    , {357
+        mov.i   @2      , >-3
+        mov.i   @1      , >-4
+        djn.f   -2      , {bomb
+
+        dat     }-181   , }11
+bomb    spl     #-181   , }12
+
+end start
+
+Sneaky Spike only has two MOV.I in the body and clears at only one
+location.  This tilts the balance of the warrior in some ways.  At the
+moment, White Noise is at the top of Koenigstuhl recursive infinite tiny
+hill, followed by White Spikes Sneaky Noise in 2nd place and Sneaky Spike 2
+in 4th place.
+
+Having similar modes of operations, these warriors are currently
+capitalizing on the same pool of 'victims' to maintain a high score.
+However, on the flip side, other warriors could victimized these "White
+Noise family" and maintain a good position on the hill.
+=============================================================================
+Tiny resources available on the web:
+
+  http://sal.math.ualberta.ca/       ; SAL - the home of the Tiny hill
+  http://corewar.co.uk/tiny.htm      ; Tiny page - benchmarks, hints and more
+  http://www.ociw.edu/~birk/COREWAR/ ; home to the infinite Tiny hill
+=============================================================================

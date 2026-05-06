@@ -40,14 +40,14 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **[Spring/Summer 2002 Corewar Tournament](https://corewar.co.uk/ss2002/index.htm)** (Mar 2002 – Jan 2003): 1st place, Michał Janeczek.
 - **[KOTH Fall Corewars Tournament](http://www.koth.org/kofacoto)** (Oct – Nov 2000): 1st place, Robert Macrae.
 - **[Ilmari's Mini Tournament #2](https://corewar.co.uk/karonen/imt2/index.htm)** (Nov 1999): 1st place, [h1_36.red](https://corewar.co.uk/hillis/h1_36.red) by Dave Hillis.
-- **Intelligent Warrior Tournament v2.0** (Aug 1999): 1st place, [Mine v0.3](https://corewar.co.uk/iwt1999/minev03.red) by John K. Wilkinson.
+- **[Intelligent Warrior Tournament v2.0](./iwt1999/README.md)** (Aug 1999): 1st place, [Mine v0.3](./iwt1999/minev03.red) by John K. Wilkinson.
 - **[Oversby Autumn 1998 Corewar Tournament](https://corewar.co.uk/oversby/index.htm)** (Nov 1998 – Mar 1999): 1st place, Joonas Pihlaja.
 - **[Ilmari's Mini Tournament #1](https://corewar.co.uk/karonen/imt1/index.htm)** (Apr 1998): 1st place, [Type Three Quantum Singularity](https://corewar.co.uk/karonen/imt1/kendall3.red) by Philip Kendall.
 - **[Redcode Maniacs Tournament](http://www.shadowmagic.org.uk/corewar/maniacs)** (Jan – Apr 1998): 1st place, David Moore.
-- **[Anton's Core War Tournament](https://corewar.co.uk/acwt.htm)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
-- **[Beppe's Direct Elimination Core War Tournament](https://corewar.co.uk/bezzi/cwtourn.htm)** (Oct – Nov 1996): 1st place, Philip Kendall.
+- **[Anton's Core War Tournament](./acwt1997/README.md)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
+- **[Beppe's Direct Elimination Core War Tournament](./bdecwt1996/README.md)** (Oct – Nov 1996): 1st place, Philip Kendall.
 - **[Battle Royal](https://corewar.co.uk/battleroyal.htm)** (Apr 1996): 1st place, Iocane by John K. Wilkinson.
-- **[Intelligent Warrior Tournament v1.0](https://corewar.co.uk/iwt1996.htm)** (Mar 1996): 1st place, [System Trap](https://corewar.co.uk/iwt1996/systemtrap.red) by Kurt Franke.
+- **[Intelligent Warrior Tournament v1.0](./iwt1996/README.md)** (Mar 1996): 1st place, [System Trap](./iwt1996/8000/systemtrap.red) by Kurt Franke.
 - **[Nándor and Stefan's Fall Core War Tournament](https://corewar.co.uk/nsfcwt/index.htm)** (Oct – Dec 1995): 1st place, Steven Morrell.
 - **II Mistrzostwa Polski w Wojnach Rdzeniowych** (Apr 1994): 1st place, [Gisela2](https://corewar.co.uk/polski1994/gisela2.red) by Andrzej Maciejczak.
 - **Michael's New Corewar Tournament** (Oct 1993 – Mar 1994): 1st place, Stefan Strack and Anders Ivner.
@@ -69,11 +69,11 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **EBS Spring '94 Tournament** (Apr – May 1994): 1st place, Jan Han.
 - **EBS Fall '93 Tournament** (Sep – Oct 1993): 1st place, Brant D. Thomsen and Pierre Baillargeon.
 - **1993 EBS Summer Tournament** (May – Jun 1993): 1st place, Dan Nabutovsky.
-- **[EBS ICWS Qualification Tournament](https://corewar.co.uk/ebs1991.htm)** (Nov 1991): 1st place, [XTC](https://corewar.co.uk/ebs1991/xtc.red) by Stefan Röttger.
-- **Sociedad Española de Redcode Tournament** (Nov 1991): 1st place, Arania by Cristobal Jiménez López & Juan A. Molina Corpas.
+- **[EBS ICWS Qualification Tournament](ebs1991/README.md)** (Nov 1991): 1st place, [XTC](ebs1991/xtc.red) by Stefan Röttger.
+- **[Sociedad Española de Redcode Tournament](ser1991/README.md)** (Nov 1991): 1st place, Arania by Cristobal Jiménez López & Juan A. Molina Corpas.
 - **[First German Branch Section Core War Tournament](https://corewar.co.uk/gbs1989.htm)** (Dec 1989): 1st place, [Quarter](https://corewar.co.uk/gbs1989/quarter.red) by Stefan Hänßgen.
-- **[Secondo Torneo Italiano di Core Wars](https://corewar.co.uk/torneoitaliano1989.htm)** (Nov 1989): 1st place, [Hypray](https://corewar.co.uk/ti1989/hypray.red) by Francesco Botta.
-- **[Primo Torneo Italiano di Core Wars](https://corewar.co.uk/torneoitaliano1988.htm)** (Oct 1988): 1st place, [Lux 2](https://corewar.co.uk/ti1988/lux2.red) by Luca Crosara.
+- **[Secondo Torneo Italiano di Core Wars](./ti1989/README.md)** (Nov 1989): 1st place, [Hypray](./ti1989/hypray.red) by Francesco Botta. Also featuring [UMACCP](./ti1989/umaccp.red), [Kili](./ti1989/kili.red), and [Storm](./ti1989/storm.red).
+- **[Primo Torneo Italiano di Core Wars](./ti1988/README.md)** (Oct 1988): 1st place, [Lux 2](./ti1988/lux2.red) by Luca Crosara.
 
 ### ICWS Tournaments
 
@@ -81,8 +81,8 @@ The International Core Wars Society ran eight annual Core War tournaments from 1
 
 - **[1993 ICWS Tournament](https://corewar.co.uk/icwt1993.htm)** (Jan 1994): 1st place, [Cannonade](https://corewar.co.uk/icwt1993/cann8192.red) by Paul Kline.
 - **[1992 ICWS Tournament](https://corewar.co.uk/icwt1992.htm)** (Dec 1992): 1st place, [RotLD 2.2](https://corewar.co.uk/icwt1992/rotld22.red) by Nándor Sieben and [Leprechaun 1b](https://corewar.co.uk/icwt1992/lep1b.red) by Anders Ivner.
-- **[1991 ICWS Tournament](https://corewar.co.uk/icwt1991.htm)** (1992): 1st place, [XTC](https://corewar.co.uk/icwt1991/xtc.red) by Stefan Röttger.
-- **ICWS Grand Final of 1990** (Dec 1990): 1st place, [XTC](https://corewar.co.uk/icwt1991/xtc.red) by Stefan Röttger.
+- **[1991 ICWS Tournament](icwt1991/README.md)** (1992): 1st place, [XTC](icwt1991/xtc.red) by Stefan Röttger.
+- **ICWS Grand Final of 1990** (Dec 1990): 1st place, [XTC](icwt1991/xtc.red) by Stefan Röttger.
 - **[Fifth International Core Wars Society Tournament](https://corewar.co.uk/icwt1990.htm)** (Dec 1990): 1st place, [Paper: A.K.A molerat](https://corewar.co.uk/icwt1990/paper.red) by Scott Nelson.
 - **[Fourth International Core Wars Society Tournament](https://corewar.co.uk/icwt1989.htm)** (Feb 1990): 1st place, [Hypray](https://corewar.co.uk/icwt1989/hypray.red) by Francesco Botta.
 - **[Third International Core Wars Society Tournament](https://corewar.co.uk/icwt1988.htm)** (Dec 1988): 1st place, [Cowboy](https://corewar.co.uk/icwt1988/cowboy.red) by Eugene P. Lilitko.

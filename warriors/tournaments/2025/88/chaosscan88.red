@@ -1,26 +1,27 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name chaoscan
 ;author Christian Schmidt
 ;strategy bombing scanner with zooom-trick
 ;assert CORESIZE==8000
 
 
-bdist equ (adj+772)
-STEP	equ   70
-x	equ	-2
+bdist equ adj+772
+STEP_VAL equ 70
+x	equ	0-2
 
 adj   mov   #1    ,     top
 top	mov	sptr	,	@2
 	mov	bspl	,	<cptr
-	sub	step	,	sptr
-sptr	mov	STEP+x,	<STEP+1+5+x
+	sub	step,	sptr
+sptr	mov	STEP_VAL+x,	<STEP_VAL+1+5+x
 scan	jmz	@top	,	<sptr
       djn   adj   ,     #17
-bspl	spl	0	,	<-STEP+1
-	mov	step	,	<top-6
+bspl	spl	0	,	<0-STEP_VAL+1
+	mov	step,	<top-6
 tp	djn	-1	,	<top-7+2667
-step	dat	<-STEP,	#-STEP-1
-cptr	dat	<-STEP,	#-4500
+step	dat	<0-STEP_VAL,	#0-STEP_VAL-1
+cptr	dat	<0-STEP_VAL,	#-4500
 
 boot  mov   cptr  ,     bdist+11
       mov   <from ,     <boot

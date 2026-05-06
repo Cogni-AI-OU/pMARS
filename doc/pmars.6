@@ -133,7 +133,7 @@ can be piped into
 dashes on the command line.
 .TP
 .BI \-r\ #
-This options sets the number of rounds to play. The default is 1. \-r 0
+This option sets the number of rounds to play. The default is 1. \-r 0
 produces assembly output (unless -b is specified), but does not execute
 the warrior(s). A maximum of 32767 rounds can be specified.
 .TP
@@ -182,13 +182,13 @@ Thus, initial placements will still be "random" from round to round,
 but will be the same if the same warriors are run again. As a
 consequence, the result of battles
 run with the \-f option will show no statistical
-fluctuations. This options is useful for validating ports of
+fluctuations. This option is useful for validating ports of
 .I pMARS
 to new platforms and for providing an absolute, albeit arbitrary
 performance measure for warriors.
 .TP
 .BI \-F\ #
-This option server two purposes. It sets the seed value of the pseudo
+This option serves two purposes. It sets the seed value of the pseudo
 random number generator, and also tells the loader to install warrior
 2 at the given address # for round 1. If the number is larger than the
 core size minus the minimum warrior distance, it will be wrapped
@@ -218,7 +218,7 @@ debugger is entered immediately after
 loading warriors into core.
 .TP
 .BI \-b
-This options runs
+This option runs
 .I pMARS
 in brief output mode. \-b suppresses warrior listings after assembly.
 .TP
@@ -234,9 +234,9 @@ uses the same output format as the KotH program. This option enables
 to work with scripts written for the KotH server.
 .TP
 .BI \-8
-This options enforces strict compliance with the ICWS'88 standard and
+This option enforces strict compliance with the ICWS'88 standard and
 disables all ICWS'94 language extensions, which are flagged as syntax errors
-by the assembler. Since ICWS'94 is a superset of ICWS'88, this options is
+by the assembler. Since ICWS'94 is a superset of ICWS'88, this option is
 not necessary to run ICWS'88 warriors.
 .TP
 .BI \-o
@@ -959,7 +959,7 @@ most of these symbols have a different meaning:
  PC1.. are 0
 .fi
 .PP
-Preceding a command with the character '@' (ampersand)  will suppress
+Preceding a command with the character '@' (at sign)    will suppress
 its screen output, but not output to a logfile.
 Preceding a command with '&' will suppress both screen and logfile output,
 which is useful if you are only interested in the "side-effects" of a 
@@ -1136,7 +1136,7 @@ with the draft.
 .I pMARSv
 is a DOS version of
 .I pMARS
-with a graphical core display. You can chose between EGA/VGA graphics
+with a graphical core display. You can choose between EGA/VGA graphics
 or text mode with the
 .I -v
 command line options or by pressing 'v' during the game. The

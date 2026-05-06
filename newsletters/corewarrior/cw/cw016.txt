@@ -1,0 +1,336 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 16                                                    February 12, 1996
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+______________________________________________________________________________
+Greetings.
+
+Hi,
+being my partner Myer away for work I'm back again for second week in a row;
+Myer's fans will read again theyr favourite next week, don't worry.
+This week an historical event is happened, Paul Kline's Torch t18 broke the
+100 wall for first time in the 94 hill history, congratulations Paul.
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  43/ 31/ 26                    T.N.T.    Maurizio Vittuari     154       1
+ 2  38/ 28/ 34               Tornado 3.0                Beppe     149      63
+ 3  42/ 39/ 19                      quiz              Schitzo     144     661
+ 4  42/ 42/ 17                  test i7a          Beppe Bezzi     142      17
+ 5  29/ 16/ 55            Impfinity v4g1               Planar     141     461
+ 6  24/  7/ 69              Evol Cap 6.6       John Wilkinson     141     276
+ 7  29/ 16/ 55                   Clisson              P.Kline     141       3
+ 8  37/ 34/ 29               Thermite II        Robert Macrae     141     262
+ 9  26/ 12/ 62      Hazy.Shade.Of.Winter             John K W     141     208
+10  42/ 44/ 13               seventyfive         Anders Ivner     140     161
+11  35/ 29/ 36                 Torch t18              P.Kline     140    1040
+12  41/ 42/ 18                Mirage 1.5        Anton Marsden     140     175
+13  42/ 44/ 13             Frontwards v2       Steven Morrell     140     514
+14  40/ 42/ 18                Boombastic    Maurizio Vittuari     139     396
+15  39/ 41/ 20                   Harmony              P.Kline     138      44
+16  41/ 45/ 14                   orestes                Kafka     137      26
+17  39/ 41/ 21                  testnorm    Maurizio Vittuari     137      32
+18  33/ 29/ 39                 patroclus       Kafka and Kurt     136      57
+19  22/  9/ 69               Night Train           Karl Lewin     135     548
+20  40/ 46/ 14          smart crow again           Karl Lewin     135      58
+21  28/ 21/ 52                  Blizzard        Anton Marsden     135      11
+22  32/ 30/ 38           Jack in the box          Beppe Bezzi     134    1028
+23  37/ 40/ 23     Koolaid II: WoGG v2.2         David Boeren     133      66
+24  28/ 23/ 48                  Hector 3          Kurt Franke     133       7
+25  32/ 31/ 37                Breeder v2           J. E. Long     132     109
+
+Results have been obtained submitting a lose all warrior, so as not to be
+biased.
+
+Weekly age: 55
+New warriors 8  Turnover/age rate 15%
+Average age: 249 ( 284 last week, 265 the week before )
+Average score: 139 ( 132 last week, 131 the week before )
+The 25 warriors on the hill are represented by 15 authors.
+
+The 1000 age wall is no more !! Torch t18 and Jack in the Box have passed
+this magic quote for first time in the 94 hill, even if some 88 warrior
+passed 2000.
+
+Stats are more or less the same as last week, the increased average score is
+due to the loss against the scorekeeping warrior; we have a younger age,
+having the hill lost 3 aged veterans: La Bomba, juliet and paper, and Hector 2
+All warriors pushed off were in the bottom positions last week, apart
+obviously those replaced by their authors.
+
+Maurizio's new warrior, T.N.T. is the new King with a confortable lead over
+the second from the moment it entered.
+
+Fast bombers are still dominating, holding position 1 and 2, scanners are
+still proving good as are stone imps; replicators are confined in the last
+positions.
+
+Those with ;redcode verbose may have noticed some strange experiment made by
+two authors, Paul Kline and your beloved writer, attemping the hill with
+warriors unable to enter and scoring in a strange way; Paul has now showed
+down with Clisson, entering the top ten, what Beppe is Planning to do nobody
+knows :-)
+
+______________________________________________________________________________
+94 - What's New
+
+ 1  40/ 32/ 28                    T.N.T.    Maurizio Vittuari     147       1
+ 3  42/ 43/ 15                  test i7a          Beppe Bezzi     140       1
+ 5  41/ 40/ 19                  testnorm    Maurizio Vittuari     141       1
+ 9  25/ 17/ 58                   Clisson              P.Kline     134       1
+17  26/ 22/ 52                  Blizzard        Anton Marsden     130       1
+17  38/ 47/ 16                   orestes                Kafka     129       1
+18  27/ 24/ 48                  Hector 3          Kurt Franke     131       1
+18  37/ 43/ 20                   Harmony              P.Kline     130       1
+
+A new king, T.N.T., and three others new warriors in the top ten.
+______________________________________________________________________________
+94 - What's No More.
+
+26  29/ 32/ 39                  La Bomba          Beppe Bezzi     126     650
+26  23/ 25/ 51          juliet and paper M R Bremer, B. Bezzi     121     607
+26  24/ 22/ 54                  Hector 2          Kurt Franke     125     561
+26  34/ 46/ 20                      ajax       Kafka and Kurt     123     131
+26  19/ 15/ 66         The Lime Twig 2.1             John K W     123      85
+26  36/ 52/ 12                      Days             John K W     119      51
+26   2/  2/  0                  testnorm    Maurizio Vittuari       5      16
+26   1/  1/  1                   Harmony              P.Kline       5       2
+
+:-(((((((((((((((((
+
+I'm not in the mood to comment those results, just to say this is new record
+of lost age in a week: 2103 (previous record 1617 on 4 December 95)
+______________________________________________________________________________
+94 - What's Old
+
+13  31/ 30/ 39                 Torch t18              P.Kline     132    1040
+22  28/ 30/ 42           Jack in the box          Beppe Bezzi     126    1028
+ 3  38/ 40/ 22                      quiz              Schitzo     136     661
+19  18/  9/ 73               Night Train           Karl Lewin     127     548
+14  38/ 46/ 16             Frontwards v2       Steven Morrell     131     514
+ 6  25/ 16/ 59            Impfinity v4g1               Planar     134     461
+15  37/ 43/ 20                Boombastic    Maurizio Vittuari     131     396
+ 7  20/  7/ 72              Evol Cap 6.6       John Wilkinson     133     276
+11  34/ 35/ 32               Thermite II        Robert Macrae     133     262
+10  22/ 12/ 66      Hazy.Shade.Of.Winter             John K W     133     208
+
+A new entry, the mysterious, and poetic, Hazy Shade of Winter, and three
+losses, see above.
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Torch t18              P.Kline           1040 *  Bomber
+ 2  Jack in the box        Beppe Bezzi       1028 *  P-warrior
+ 3  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+ 4  Agony II               Stefan Strack      912    CMP scanner
+ 5  Blue Funk              Steven Morrell     869    Stone/ imp
+ 6  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+ 7  Blue Funk 3            Steven Morrell     766    Stone/ imp
+ 8  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+ 9  quiz                   Schitzo            661 *  Scanner/ bomber
+10  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+11  myVamp v3.7            Paulsson           643    Vampire
+12  Armory - A5            Wilkinson          609    P-warrior
+13  juliet and paper       Bremer & Bezzi     607    P-warrior
+14  Phq                    Maurizio Vittuari  589    Qscan -> replicator
+15  Hector 2               Kurt Franke        561    Qscan -> replicator
+16  B-Panama X             Steven Morrell     518    Stone/ replicator
+17  Night Train            Karl Lewin         548 *  Replicator
+18  Frontwards v2          Steven Morrell     514 *  One shot scanner
+19  Impfinity v4g1         Damien Doligez     461 *  Stone/ imp
+20  Boombastic             Maurizio Vittuari  396 *  Bomber
+22  NC 94                  Wayne Sheppard     387    Stone/ imp
+22  Cannonade              P.Kline            382    Stone/ imp
+23  Torch t17              P.Kline            378    Bomber
+24  Lucky 3                Stefan Strack      355    Stone/ imp
+25  Derision               M R Bremer         351    Scanner
+25  Request v2.0           Brant D. Thomsen   347    Qvamp -> vampire
+
+Torch and Jack passed 1000 age, now both have a 100 advantage over the
+previous leader, being 2000 next 'round number' I don't think to speak again
+of them until ...
+quiz and La Bomba enters the top ten even if La Bomba has finished his run,
+as did juliet and paper and Hector. Vittuari's Boombastic enters in 20th spot.
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  49/ 16/ 34               CoreWarrior           M R Bremer     183      35
+ 2  40/ 11/ 49                Breeder v2           J. E. Long     168      76
+ 3  38/ 10/ 52             silkworm v3.0         Brian Haskin     166      63
+ 4  34/  9/ 57                   Breeder           J. E. Long     159      86
+ 5  31/  5/ 64                     Test2         George Eadon     158      43
+ 6  31/  8/ 61           New Papery v0.1          Ian Oversby     154      84
+ 7  32/ 14/ 54             Paper8-IV 2.5         George Eadon     150      61
+ 8  43/ 42/ 15               Our Vamp v3 R Bartolome & JS Pul     144      94
+ 9  23/ 10/ 67             Wanderer v0.1          Ian Oversby     136      17
+10  30/ 25/ 46               Yakumo v0.3         David Boeren     135      10
+11  41/ 48/ 12               Veld's fist               Julian     134       9
+12  23/ 14/ 63                Banshee VI       Andy Nevermind     132       1
+13  39/ 46/ 14               Auntie v0.2          Ian Oversby     132      14
+14  21/ 11/ 69             Thunder V 1.2       Andy Nevermind     130      75
+15  31/ 33/ 35                    Szyzyg         Scott Manley     130      60
+16  31/ 33/ 36                     Uvavu         Scott Manley     129      71
+17  30/ 31/ 40   You Wouln't Let It Lie!         Scott Manley     128      70
+18  22/ 17/ 61          AB Scanner 2.9.1         Chris Hodson     128      46
+19  30/ 32/ 38                    D'arko         Scott Manley     127      50
+20  28/ 36/ 36         idiot/savant v0.1         Brian Haskin     119      78
+21  31/ 49/ 20               Slaver v1.1    Christoph C. Birk     114      27
+22  30/ 49/ 21                      MJv5           J. E. Long     111      12
+23  24/ 44/ 32                Maya v1.6c    Christoph C. Birk     105      44
+24  20/ 36/ 44                beemer 1.5         Chris Hodson     104      25
+25   7/ 36/ 57           Multi-Worm v1.0    Christoph C. Birk      78       2
+
+Hill top is kept by Myer Bremer, we are waiting his return in 94, followed
+by J. E. Long with a warrior that's in 94 too and Brian Haskin.
+
+______________________________________________________________________________
+The Hint
+The defence.
+
+What is the defence ? it's using part of your resources not to damage you
+enemy but to avoid it damage you; in soccer and basketball the defence is as
+much important as attack is, if not more, same in Corewar even if the
+scoring system gives some advantage to attack.
+
+A defence only warrior, even if a perfect one, has no chances to make the
+hill being an all ties score too low, but some form of defence is needed and
+the right balance can help you score better and live longer on the hill.
+
+Let's give a look at some forms of defence, how well they work and how much
+they cost in terms of resources expended.
+
+-------
+Self splitting
+
+If we add a spl 0 instruction on top of a stone we have some advantages:
+
+A hit in the first or the last line don't stop it working, we accumulate
+processes so as an imp spiral won't kill but only tie us, we can use a djn
+stream because a process falling off it won't kill us and we can couple an
+imp spiral to our bomber
+
+This is payed somewere because:
+We have larger footprint for a scanner to find and there is slight speed
+reduction.
+
+The sum of advantages is more than those of disadvanages so, in practice,
+every stone is self splitting and some use even more process eating
+structure to accumulate processes even faster, see Cannonade, Impfinity and
+juliet storm for examples.
+
+---
+Adding imps
+
+In 94 imps are used more for survival than for attack; adding imp spirals to
+stones and replicators my get them much harder to kill for a replicator,
+without reducing too much their offensive potential. The drawback is that a
+stun attack on the spiral can have a negative effect on the stone, so the
+number of wins is reduced.
+
+---
+Boot and decoy
+
+Booting away from a decoy is a common form of defence against scanner, very
+effective against one shoot like Frontwards and Porch Swing if you have a
+good way to attack a core clear of course. There are very little negative
+effects for bombers, apart the time spent booting away, but it's difficult
+to make a decoy invisible to your own scanner, Agony II is the only cmp
+scanner I know using this tecnique.
+
+Some warriors now use a decoymaker instead of booting, i.e. they add at the
+beginning some lines like
+mov     <xx,    <yy
+creating a pattern of dat 0,1 good to trigger one shot scanners; another
+advantage is that, in the meantime, you drop some bombs. The drawback is
+that this decoy is less effective against opponent cmp scanners, the colored
+cells are not many, and that a qscan can find the decoymaker and from it
+bomb the warrior too.
+
+---
+Active decoys
+
+It's a tecnique I use from long and I always kept secret, but having Robert
+published it in his warrior Mason I have to unveil my secret ;-)
+There is no nedd to use dats to make your decoy, if you use spl #xx,yy
+instructions instead you can sometimes manage to stun wounded silk modules
+that happen to land here; the cost is nothing and you can gain a few points.
+I f you like you can insert a few stp instruction, to try brainwashing a
+pspacer, or even some mov -10,<3000 instruction to make your enemy create a
+spl #0 carpet somewere in core; just be careful not to be here :-)
+
+Is a good thing if you insert some $$$ 1,1 line to stop djn streams and
+erase your boot pointer, a mov bomb, >xx hitting it can have devastating
+effects.
+
+---
+Pspace
+
+Should your warrior score very good against one opponent class but be
+useless against another, you can switch it with something else, able to
+score against your enemy; obviously using pspace has its weaknesses:
+brainwash and slow startup.
+
+---
+djn defence
+
+It's sometimes good to have a jmp clear+1 line leading your warrior; should
+it be decremented by a stream it will jump to the core clear that, if well
+made, will work even if decremented.
+
+______________________________________________________________________________
+Planar's Corner
+
+Due to heavy work and study needs of mr. Damien we are sorry not to have our
+favourite columnist article this week.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care:
+Beppe Bezzi <bezzi@iol.it>, Myer R Bremer <bremermr@ecn.purdue.edu>
+

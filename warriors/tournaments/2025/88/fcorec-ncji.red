@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Flarecore C ncji
 ;author Steve Gunnell
 ;strategy qscan -> incendiary bomber -> clear
@@ -54,42 +55,42 @@ qbtime  equ     28
 nil     equ     boot+100
 
 qscan   cmp     2*qs+qd         , 2*qs
-qt1     jmp     qa0             , < 3*qs
+qt1     jmp     qa0             , <3*qs
         cmp     qscan+ 5*qs+qd  , qscan+ 5*qs
-qt2     jmp     qa1             , < 4*qs
+qt2     jmp     qa1             , <4*qs
         cmp     qscan+ 4*qs+qd  , qscan+ 4*qs
-qs1     djn     qa1             , # qt1
+qs1     djn     qa1             , #qt1
         cmp     qscan+10*qs-2   , qscan+10*qs+qd-2
-qs2     djn     qa2             , # qt2
+qs2     djn     qa2             , #qt2
         cmp     qscan+ 9*qs+qd  , qscan+ 9*qs
-qt3     jmp     qa2             , < 6*qs
+qt3     jmp     qa2             , <6*qs
         cmp     qscan+ 6*qs+qd  , qscan+ 6*qs
-        jmp     qa2             , < qa1
+        jmp     qa2             , <qa1
         cmp     qscan+ 8*qs+qd  , qscan+ 8*qs
-        jmp     qa2             , < qs1
+        jmp     qa2             , <qs1
         cmp     qscan+11*qs     , qscan+11*qs+qd
-        jmp     qa3             , < qa2
+        jmp     qa3             , <qa2
         cmp     qscan+18*qs-8   , qscan+18*qs+qd-8
-qs3     djn     qa3             , # qt3
+qs3     djn     qa3             , #qt3
         cmp     qscan+16*qs-2   , qscan+16*qs+qd-2
-        jmp     qa3             , < qs2
+        jmp     qa3             , <qs2
         cmp     qscan+12*qs     , qscan+12*qs+qd
-        jmp     qa3             , < qa1
+        jmp     qa3             , <qa1
         cmp     qscan+14*qs     , qscan+14*qs+qd
-        jmp     qa3             , < qs1
+        jmp     qa3             , <qs1
         jmz     boot            , qscan+15*qs
 
-qa3     add     @ qs3           , qp
-qa2     add     @ qs2           , @ qa3
-qa1     add     @ qs1           , @ qa3
-qa0     cmp     @ qp            , nil
-        cmp     @ 0             , 0
-        add     # qd            , qp
-ql      mov       qbomb         , @ qp
-qp      mov       nil           , < qscan+2*qs
-        add     # qbinc         , @ ql
-        djn       ql            , # qbtime
+qa3     add     @qs3           , qp
+qa2     add     @qs2           , @qa3
+qa1     add     @qs1           , @qa3
+qa0     cmp     @qp            , nil
+        cmp     @0             , 0
+        add     #qd            , qp
+ql      mov       qbomb         , @qp
+qp      mov       nil           , <qscan+2*qs
+        add     #qbinc         , @ql
+        djn       ql            , #qbtime
         jmp       boot          , 0
-qbomb   dat     # 0             , # qbhop
+qbomb   dat     #0             , #qbhop
 
 end     qscan

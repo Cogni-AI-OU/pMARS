@@ -1,0 +1,277 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 22                                                       March 25, 1996
+______________________________________________________________________________
+Core Warrior is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+Newbies should check the stormking page for the FAQ, language specification,
+guides, and tutorials.  Post questions to rec.games.corewar.  All new players
+are infinitely welcome!
+
+If ftp.csua.berkeley.edu is still out of service, you can download Pmars at
+Terry's web page--http://www.infi.net/~wtnewton/corewar/
+______________________________________________________________________________
+Greetings.
+
+Welcome to the 22nd issue of Core Warrior.  We've had a flurry of activity
+this week.  Over half the warriors on the '94 hill are brand spanking new.
+The past three weeks have brought significant change to hill as long standing
+veterans have been falling to young upstart pspacers.  Enjoy the show.
+
+--M R Bremer
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 35/ 21      Grilled Octopus v0.5         David Boeren     154     230
+ 2  45/ 41/ 14              Naked dancer          Beppe Bezzi     149      48
+ 3  40/ 33/ 26                     prova    Maurizio Vittuari     147      13
+ 4  40/ 34/ 27                    T.N.T.    Maurizio Vittuari     146     739
+ 5  41/ 35/ 24                 Chameleon           M R Bremer     146     485
+ 6  31/ 18/ 51            Impfinity v4g1               Planar     145    1213
+ 7  42/ 40/ 18            Stepping Stone          Kurt Franke     145     355
+ 8  36/ 29/ 36               Blue Funk 5       Steven Morrell     143     158
+ 9  37/ 32/ 31               Tornado 3.0                Beppe     143     815
+10  41/ 40/ 18          Gem of the Ocean              P.Kline     142       7
+11  40/ 39/ 21                Sloth v0.4          Ian Oversby     142       3
+12  30/ 18/ 52             Hazy Shade II             John K W     141      36
+13  33/ 26/ 41                   Barrage        Anton Marsden     141     487
+14  26/ 11/ 63              Evol Cap 6.6       John Wilkinson     141    1028
+15  37/ 33/ 31        A Hard Day's Night    Maurizio Vittuari     141      16
+16  42/ 44/ 14             Frontwards v2       Steven Morrell     140    1266
+17  39/ 40/ 21              Cynical v0.1          Ian Oversby     139       2
+18  32/ 25/ 44                  Hector 3          Kurt Franke     138      18
+19  37/ 36/ 26               Thermite II        Robert Macrae     138    1014
+20  43/ 49/  8                  Memories          Beppe Bezzi     138     407
+21  41/ 45/ 14                     Pagan             John K W     136      24
+22  35/ 33/ 32             Clueless v0.4          Ian Oversby     136       1
+23  34/ 32/ 34                   Lithium     John K Wilkinson     135      21
+24  33/ 31/ 36                    Flurry        Anton Marsden     135       5
+25  11/  9/  4          Gem of the Ocean              P.Kline      36      64
+
+Weekly age: 128
+New warriors 13  Turnover/age rate 10%
+Average age: 350 ( 333 last week, 431 the week before )
+Average score: 142 ( 140 last week, 142 the week before )
+The top 25 warriors are represented by 12 authors.
+
+Boeren is on top once again this issue and has been for most of the week.
+Only in 6 challenges has another warrior claimed the top spot--Thermite II
+three times, Hipshot v2.1 once, and Naked Dancer twice.  Grilled Octopus
+reminds me of quiz's long dominance at the top.  Except for the fact the
+Grilled receives periodic updates.
+
+The past three weeks have purged some of the ancient warriors from the hill.
+This week Hazy Shade of Winter was _killed_ by JKW at an age of 616.  Marsden
+lost Blizzard at an age of 713.  Both will enjoy rankings in the corewar Hall
+of Fame however.  Four warriors are over 1000 now--Impfinity, Frontwards,
+Evol Cap, and Thermite II.
+
+We've seen 14 versions of Naked Dancer this week.  Perhaps Bezzi will be
+satisfied with the number two spot.  Gem of the Ocean has also been through
+several mutations.  Will these guys ever be content with anything less than
+the number one ranking? 8)
+
+Bombers are the dominating strategy at the moment.  At least seven of the top
+ten warriors are bombers or have bombing components.  Last week, 130 points
+would have gained the hill.  Not this week.  135 points just for 25th place.
+
+Ian Oversby has made a fairly quick jump to the '94 draft hill.  Sloth v0.4
+is his highest ranking warrior at eleventh place.
+
+Only eight warriors declare using pspace in their strategy lines.  And the
+qscanners don't look all that effective this week.
+______________________________________________________________________________
+94 - What's New
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 5  39/ 40/ 21          Gem of the Ocean              P.Kline     139       1
+18  37/ 43/ 20              Naked dancer          Beppe Bezzi     132       1
+11  27/ 20/ 54             Hazy Shade II             John K W     134       1
+22  39/ 46/ 14                     Pagan             John K W     132       1
+17  34/ 33/ 33                   Lithium     John K Wilkinson     135       1
+24  28/ 26/ 45                  Hector 3          Kurt Franke     130       1
+14  35/ 35/ 31        A Hard Day's Night    Maurizio Vittuari     134       1
+ 8  37/ 36/ 27                     prova    Maurizio Vittuari     137       1
+ 6  41/ 41/ 18          Gem of the Ocean              P.Kline     140       1
+23  30/ 33/ 38                    Flurry        Anton Marsden     127       1
+12  38/ 41/ 21                Sloth v0.4          Ian Oversby     135       1
+17  37/ 42/ 21              Cynical v0.1          Ian Oversby     132       1
+23  31/ 35/ 34             Clueless v0.4          Ian Oversby     128       1
+
+Newer versions of Naked Dancer and Lithium.
+______________________________________________________________________________
+94 - What's No More.
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+26  25/ 27/ 48            Paper Test v2a          Ian Oversby     123      14
+26   3/  1/  0              Naked dancer          Beppe Bezzi       8       3
+26   1/  0/  3                   Clisson              P.Kline       5      10
+26   2/  1/  0                  qtest 14          Beppe Bezzi       7      22
+26   5/  5/  2                      Test        Anton Marsden      16      22
+26   2/  1/  2                   Lithium     John K Wilkinson       7      84
+26  33/ 43/ 24                myConfuser             Paulsson     124     141
+26   1/  0/  2                    Q.S.P.             John K W       6     134
+26   3/  0/  1      Hazy Shade Of Winter             John K W       9     616
+26  25/ 23/ 52                  Blizzard        Anton Marsden     128     713
+26  37/ 46/ 17                     C I A         Anders Ivner     129     255
+26  39/ 49/ 12              Hipshot v2.1             J E Long     129     190
+26  32/ 35/ 33                 Torch t18              P.Kline     128     242
+______________________________________________________________________________
+94 - What's Old
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+16  42/ 44/ 14             Frontwards v2       Steven Morrell     140    1266
+ 6  31/ 18/ 51            Impfinity v4g1               Planar     145    1213
+14  26/ 11/ 63              Evol Cap 6.6       John Wilkinson     141    1028
+19  37/ 36/ 26               Thermite II        Robert Macrae     138    1014
+ 9  37/ 32/ 31               Tornado 3.0                Beppe     143     815
+ 4  40/ 34/ 27                    T.N.T.    Maurizio Vittuari     146     739
+13  33/ 26/ 41                   Barrage        Anton Marsden     141     487
+ 5  41/ 35/ 24                 Chameleon           M R Bremer     146     485
+20  43/ 49/  8                  Memories          Beppe Bezzi     138     407
+ 7  42/ 40/ 18            Stepping Stone          Kurt Franke     145     355
+ 1  44/ 35/ 21      Grilled Octopus v0.5         David Boeren     154     230
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 2  Torch t18              P.Kline           1539    Bomber
+ 3  Frontwards v2          Steven Morrell    1266 *  One shot scanner
+ 4  quiz                   Schitzo           1262    Scanner/ bomber
+ 5  Impfinity v4g1         Planar            1213 *  Stone/ imp
+ 6  Evol Cap 6.6           John Wilkinson    1028 *  Imp / stone
+ 7  Thermite II            Robert Macrae     1014 *  Qscan -> bomber
+ 8  Iron Gate 1.5          Wayne Sheppard     926    CMP scanner
+ 9  Agony II               Stefan Strack      912    CMP scanner
+ 10  Blue Funk              Steven Morrell     869    Stone/ imp
+ 11  Tornado 3.0            Beppe Bezzi        815 *  Bomber
+ 12  Thermite 1.0           Robert Macrae      802    Qscan -> bomber
+ 13  Blue Funk 3            Steven Morrell     766    Stone/ imp
+ 14  Night Train            Karl Lewin         755    Replicator
+ 15  T.N.T.                 Maurizio Vittuari  739 *  Bomber
+ 16  Mirage 1.5             Anton Marsden      736    Scanner/ bomber
+ 17  Blizzard               Anton Marsden      713    Qscan -> replicator
+ 18  HeremScimitar          A.Ivner,P.Kline    666    Bomber
+ 19  La Bomba               Beppe Bezzi        650    Qscan -> replicator
+ 20  myVamp v3.7            Paulsson           643    Vampire
+ 21  Hazy Shade Of Winter   John Wilkinson     616    P-warrior
+ 22  Armory - A5            John Wilkinson     609    P-warrior
+ 23  juliet and paper       Bremer & Bezzi     607    P-warrior
+ 24  Phq                    Maurizio Vittuari  589    Qscan -> replicator
+ 25  Hector 2               Kurt Franke        561    Qscan -> replicator
+
+Hazy Shade of Winter enters the hill knocking off Boombastic by Maurizio
+Vittuari.  Blizzard stops climbing settling at 17th place.  Remember when it
+only took an age of 350 to make the hall?
+
+Barrage and Chameleon should both make the hall next week if they survive.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  55/ 22/ 23           Jack in the box          Beppe Bezzi     188      54
+ 2  47/ 16/ 37        Vectorfantasy v0.2             basehead     178      12
+ 3  54/ 34/ 11        Violent Micro v0.2             basehead     174      11
+ 4  54/ 40/  6                   GPT 15l        David van Dam     168      49
+ 5  52/ 41/  7               Goliath 0.3        David van Dam     163       6
+ 6  48/ 33/ 19            ExPensive v0.1          Ian Oversby     163      61
+ 7  45/ 28/ 27          Hyakutake Zenith         Scott Manley     162      23
+ 8  45/ 29/ 26           Obvious Thief.2        John K. Lewis     161      37
+ 9  49/ 41/ 10          C-Seagal II Test             jShelton     157      50
+10  44/ 39/ 17          Three Core Monty        Andrew Fabbro     149       3
+11  45/ 46/  9 Uni Charm Password Test #             jShelton     145      22
+12  43/ 44/ 13         Extreme Prejudice         Scott Manley     143      44
+13  35/ 28/ 37                   Unknown        John K. Lewis     142      36
+14  33/ 24/ 44             Bag of Tricks       Andy Nevermind     142      19
+15  42/ 43/ 15                   GPT 09k        David van Dam     142      42
+16  42/ 44/ 14               Auntie v1.1          Ian Oversby     139      60
+17  43/ 47/ 10            Revision Three       Andy Nevermind     138      46
+18  40/ 43/ 17            Living Let Die               Julian     137       5
+19  40/ 44/ 16                   Tonto 3         Steve Bailey     136      21
+20  40/ 45/ 15      Hyakutake Approaches         Scott Manley     135      51
+21  39/ 45/ 15         Hyakutake Perigee         Scott Manley     134      25
+22  39/ 48/ 13     Simple Scanner-bomber         Scott Manley     129      64
+23  39/ 51/ 10                  C Seagal             jShelton     128      93
+24  32/ 51/ 17                     Vampy       Jens Heunemann     114       2
+25  32/ 57/ 12                   testing       Jens Heunemann     107       1
+
+How unfair to inflict Jack in the box on the beginners hill!  The '94 draft
+hill had to tolerate him for a _long_ time. 8)
+
+basehead was briefly seen on the '94 hill.  Although his warrior scored well,
+it was killed by the author.  Hmmmmmm.  Interesting strategy.
+
+Is anyone on the b-hill in favor of increasing the age limit?
+______________________________________________________________________________
+The Hint
+
+Before the '94 draft language, jmz scanners could only find non-zero 'b'
+operands.  Having zero value b-fields in your warrior was a definite
+advantage.  But with the new draft, many more options became available.
+Scanning instructions can now scan .a .b .ab .ba .x and .i.  Few authors
+bother with zero operand fields anymore, so scanning .b may be just as
+effective as scanning .i when searching for enemy code.  Consider this:
+TimeScape style replicators contain no zero b-fields (except in the launching
+code).  Wild Card scores 175 against it scanning .i, 173 scanning .b.  Of
+course TimeScape copies have tons of zero a fields.  Scanning .a scores a
+miserable 131.  Irongate has one zero a-field and one zero b-field.  Scanning
+.a and .b score around 132 points.  Scanning .i scores 145 points.  Definite
+problem.  However, this technique works best against classic stones.  A stone
+usually will dec/inc the a or b field thus distracting scanners.  By only
+scanning .a or .b, you have a chance of not finding any dec/inc locations.
+Juliet storm modifies a-fields.  With a mov #2667, *0 imp added to it, Wild
+Card scores 118.5 points when scanning .b versus 108.5 points scanning .i.
+
+Submitting my scanner against the hill with different options had significant
+effects on the individual scores of some programs.  Drastic enough I don't
+want to mention names.  But the overall score against the hill tends to
+balance out.  However, if you're having a real problem with a few particular
+programs, changing your scanning criteria just may be the key.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+authors: Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+
