@@ -69,9 +69,9 @@ While ICWS '88 used space or no character for direct addressing, modern Redcode 
 1. **Avoid `$` in ICWS '88:** If a warrior is intended for the `-8` mode, avoid using the `$` modifier. Use the naked value for direct addressing.
 2. **Use `#` for Constants:** Ensure that constants used in `DAT` or as immediate operands are explicitly prefixed with `#`.
 
-### Case: ICWT 1989 Warriors
+### Case: ICWT 1989 and TI 1989 Warriors
 
-The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+The ICWT 1989 and Secondo Torneo Italiano (TI 1989) tournament sets were modernized to follow these strict compatibility rules:
 
 - **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
@@ -124,9 +124,9 @@ Ensure P-space size is appropriate for the core size. By default, pMARS sets it 
 
 ## Case Studies
 
-### ICWT 1989 Warriors
+### ICWT 1989 and TI 1989 Warriors
 
-The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+The ICWT 1989 and TI 1989 tournament sets were modernized to follow these strict compatibility rules:
 - **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
 - **Operand Formatting:** Immediate values were explicitly marked with `#`.
