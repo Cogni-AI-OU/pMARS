@@ -95,4 +95,4 @@ verify_asm: pmars
 	@cd .. && bash scripts/verify_red_asm.sh
 
 test: pmars
-	./pmars ../test_bug.red < ../input.cdb
+	./pmars ../tests/gh-23/test_bug.red < ../tests/gh-23/input.cdb
