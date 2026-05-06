@@ -1,42 +1,41 @@
-; Power Bomb
+; power bomb
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;
-; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
+; author: bram cohen
 ;
-; Author: Bram Cohen
+glance add	#412, outptr
+start jmz	glance, @outptr
+noop jmp	noop+1, 0
 ;
-GLANCE   ADD  #412,              OUTPTR
-START    JMZ    GLANCE,         @OUTPTR
-NOOP     JMP    NOOP+1
+add	#9, outptr
+mov	#0, jmptrap
+sub	outptr, jmptrap
+jmp	1, 0
+sub	#11, jmptrap
+mov	jmptrap, @outptr
+mov	#17, count
+bomb mov	noop, <outptr
+djn	bomb, count
+add	#420, outptr
+jmp	start, 0
 ;
-         ADD  #9,                OUTPTR
-         MOV  #0,                JMPTRAP
-         SUB    OUTPTR,           JMPTRAP
-         JMP    1
-         SUB  #11,               JMPTRAP
-         MOV    JMPTRAP,        @OUTPTR
-         MOV  #17,               COUNT
-BOMB     MOV    NOOP,           <OUTPTR
-         DJN    BOMB,             COUNT
-         ADD  #420,              OUTPTR
-         JMP    START
+help mov	datbomb, <bombptr
+jmp	help, 0
 ;
-HELP     MOV    DATBOMB,        <BOMBPTR
-         JMP    HELP
+enter mov	jump, start
+jmp	1, 0
+spl	0, 0
+dec djn	split, foes
 ;
-ENTER    MOV    JUMP,             START
-         JMP    1
-         SPL    0
-DEC      DJN    SPLIT,            FOES
-;
-         MOV    DATBOMB,          SPLIT
-COUNT    DAT                    #0
-DATBOMB  DAT   -BOMBPTR+HELP
-SPLIT    SPL    DEC
-         MOV    DATBOMB,        <BOMBPTR
-         JMP    SPLIT
-FOES     DAT                    #64
-OUTPTR   DAT                    #802
-BOMBPTR  DAT                      GLANCE
-JUMP     JMP    HELP-START
-JMPTRAP  JMP  @JMPTRAP,        #JMPTRAP
-         END    START
+mov	datbomb, split
+count dat	#0, #0
+datbomb dat	#0, #-bombptr+help
+split spl	dec, 0
+mov	datbomb, <bombptr
+jmp	split, 0
+foes dat	#0, #64
+outptr dat	#0, #802
+bombptr dat	#0, #glance
+jump jmp	help-start, 0
+jmptrap jmp	@jmptrap, #jmptrap
+         end    start

@@ -1,0 +1,1184 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $. 
+
+Issue 92                                                           16 May, 2007
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of Corewar, a game of skill
+played between two or more computer programs on behalf of the players who
+create them.
+
+Emphasis is placed on the most active hills - currently the '94 no-pspace,
+'94 draft and the beginner hill.  Coverage will follow wherever the action is.
+If you haven't a clue what I'm talking about then check out the following
+websites for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://bio.freelogy.org/wiki/REC.GAMES.COREWAR.FAQ
+
+Web pages are at:
+  http://www.koth.org/                            - KOTH
+  http://sal.math.ualberta.ca/                    - SAL Hills
+  http://www.corewar.co.uk/                       - J.Metcalf
+  http://www.corewar.info/                        - Fizmo
+  http://www.ociw.edu/~birk/COREWAR/corewar.html  - C.Birk
+  http://para.inria.fr/~doligez/corewar           - Planar
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to news://rec.games.corewar or come to
+#corewars at irc://irc.koth.org. All new players are infinitely welcome!
+_______________________________________________________________________________
+Greetings!
+
+Two years have passed since the last issue and a lot of interesting things
+have happened. This issue will try to renew interest in vampires by finally
+publishing vamps are back 0.2, tell the story of Bvowkium Fizmoxid and
+revisit our old friend the q^4.5.
+
+I hope to release the next issue before christmas 2007. Please send in your
+texts and ideas in order to keep the Core Warrior alife!
+
+Now enjoy this issue!
+
+-- Jens 'Fluffy' Gutzeit
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill 
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  39/ 29/ 32                Hullab3loo         Roy van Rijn     149     338
+ 2  33/ 18/ 49                 Red Birds             inversed     149      26
+ 3  38/ 28/ 34       Monster_Human_Grunt             inversed     149     423
+ 4  37/ 27/ 36       PWS without a cause          Sascha Zapf     146       1
+ 5  33/ 20/ 47                     4by2k              P.Kline     146     120
+ 6  44/ 43/ 13                    Camper             inversed     146       8
+ 7  35/ 27/ 38       Monster_Alien_Grunt             inversed     144     424
+ 8  43/ 43/ 15                  One bite             inversed     143      11
+ 9  34/ 26/ 39                     Amber             inversed     143      29
+10  34/ 25/ 42                 Shrubbery       inversed/Mizcu     142      58
+11  44/ 46/ 10            overloaded SPL          S.Fernandes     142     101
+12  45/ 48/  7                      test           C. De Rosa     141       9
+13  41/ 42/ 17                   fragile         John Metcalf     141      24
+14  35/ 28/ 37                  Fidelity                  hwm     141      71
+15  41/ 42/ 16                        VT             inversed     141      16
+16  34/ 27/ 40                  Ragnarok        Nenad Tomasev     141      19
+17  44/ 49/  7                Genki Desu    Christian Schmidt     140     126
+18  28/ 17/ 54                D3vilstick         Roy van Rijn     139     337
+19  42/ 46/ 13               Silverblade             inversed     138     104
+20  40/ 44/ 16               scan-o-test               sascha     137       6
+
+893 successful challenges have passed since the last issue. No warriors have
+survived, which have been on the the hill in January 2005 (Roy, you shouldn't
+have killed Hullabaloo. Now it might be have been the oldest warrior!). 48
+warriors left the hill with a three digit age. Arrow has gained the highest
+age (650) since Son of Vain has left the hill. Together with Last Judgement
+(576) and Borgir (451) Fizmo has created the three oldest warriors since! Also
+pushed from the hill were Maelstrom (473), HullabaTwo (413), Black Knight
+(410), Gods of Destiny (369), HazyLazy C 11 (360), Rust [v0.2] (350),
+Eccentric (314), Shot to Nothing (314), Hullabaloo (284, killed), KryneLamiya
+(271), MoonOfChaos (268), paper(paper(paper(clear))) (261), Battery (243),
+Thingamabob (235), Gargantuan (230), Beat this (225), Harmless Fluffy Bunny    
+(222), New-T (217), Bluebell (211), Starfall (209), vamps are back 0.2 (202),
+Hallucination Scanner (201), Elven King (192), Song of the blue sea (188),
+The Humanizer (179), ChimeraQueen (172), Twilight (166), Mascafe (163),
+DanceOfFallenAngels (159), Mandragora (153), CrashAndBurn (146),
+()()() (139; Thanks, Nenad for using such a nice name!), Grendel (133),
+gihegruoerg (131), anything for a rich girl (127), Paperanha (121), Gabble
+(121), Sharky (119), false illusion (119), DifferentialOperatorWS (118),
+speed of light (112), Halcyon (111), S.D.N. (108), Thistledown (107) and
+N e i t h (104).
+
+Several of these fine warriors have been published, but still a lot of them
+haven't been send to Koenigstuhl. Maybe the authors might want to search
+through their archives and reconsider their decisions not to publish them.
+
+Hullab3loo, Monster_Human_Grunt and 4by2k currently dominate the hill. 
+Monster_Alien_Grunt, Monster_Human_Grunt, Hullab3loo and D3vilstick are the
+oldest warriors and so far they show no sign of weakness.
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame
+
+You have to get a warrior which is older than 350 to enter the TOP-50 of the
+'94 No Pspace Hall of Fame. A * indicates warriors which are still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Son of Vain            Oversby/Pihlaja   2573    Q^4 -> Stone/imp
+ 2  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 3  Reepicheep             Grabun/Metcalf    1347    Q^4 -> Paper/stone
+ 4  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 5  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 6  Hazy Test 63           Steve Gunnell     1119    Scanner
+ 7  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 8  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 9  Recon 2                David Moore        826    Scanner
+10  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+11  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+12  Eraser II              Ken Espiritu       781    Scanner
+13  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+14  Toxic Spirit           Philip Thorne      685    Oneshot
+15  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+16  Arrow                  Christian Schmidt  650    Scanner
+17  Blade                  Fizmo              643    Qscan -> Scanner
+18  Return of Vanquisher   Lukasz Grabun      640    Q^4 -> Bomber
+19  Revenge of the Papers  Fizmo/Roy          605    Q^4 -> Paper
+20  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+21  Firestorm              John Metcalf       589    MiniQ^3 -> Paper/imp
+22  Last Judgement         Christian Schmidt  576    Q^4 -> Stone/imp
+23  Claw                   Fizmo              525    Qscan -> Scanner
+24  G3-b                   David Moore        503    Twoshot
+25  Thunderstrike          Lukasz Grabun      484    Q^4 -> Stone/imp
+26  Maelstrom              Roy van Rijn       473    Qscan -> Paper/imp
+27  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+28  Revival Fire           P.Kline            468    Bomber
+29  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+30  The Stormkeeper        Christian Schmidt  460    Q^3 -> Stone/imp
+31  Borgir                 Christian Schmidt  451    Q^4 -> Paper/stone
+32  Positive Knife         Ken Espiritu       449    Q^4 -> Stone/imp
+33  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+35  slime test 1.00        David Houston      428    Q^4.5 -> Paper
+36  Monster_Alien_Grunt    inversed           424 *
+37  Monster_Human_Grunt    inversed           423 *
+38  G2-b                   David Moore        413    Twoshot
+ =  HullabaTwo             Roy                413    Q^4.5 -> Paper/stone
+40  Black Knight           Christian Schmidt  410    Q^4.5 -> Stone/imp
+41  Ironic Imps            Roy van Rijn       403    Q^4 -> Stone/imp
+42  Qtest                  Christian Schmidt  394    Q^3 -> Paper
+43  Stalker                P.Kline            393    Scanner
+44  Decoy Signal           Ben Ford           378    Q^4 -> Paper/imp
+45  Gods Of Destiny        Nenad Tomasev      369    Q^4 -> Paper/stone
+46  HazyLazy C 11          CS SG              360    Q^4 -> Scanner
+47  unheard-of             Christian Schmidt  355    Q^4 -> Paper/imp
+48  Hazy Lazy ... again    Steve Gunnell      350    Scanner
+ =  Dawn                   Roy van Rijn       350    Q^4 -> Paper/imp
+ =  Rust [v0.2]            inversed           350    Q^4 -> Paper/imp
+
+Monster_Alien_Grunt and Monster_Human_Grunt show no weakness and promise to
+become very old warriors. Hullab3loo and D3vilstick are just a few challenges
+away from entering the Hall of Fame.
+
+Thank you, John for maintaining such a wonderful archive about the history of
+corewar at http://corewar.co.uk :-)
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  37/ 25/ 38                  Red Wine            Hugh Jass     150      13
+ 2  42/ 38/ 19                       Sha    Christian Schmidt     146       5
+ 3  30/ 17/ 53          Froth and Fizzle              P.Kline     143      51
+ 4  36/ 29/ 35       Monster_Human_Grunt             inversed     142     105
+ 5  40/ 39/ 20                     utest        Nenad Tomasev     141       1
+ 6  40/ 38/ 22          Testing this out            Hugh Jass     141      10
+ 7  30/ 19/ 51                 Red Birds             inversed     141      20
+ 8  41/ 41/ 18                     SCDS2             inversed     140      24
+ 9  35/ 31/ 34            Jailcell Vodka            Hugh Jass     140       9
+10  39/ 38/ 23            Evening Breeze         Roy van Rijn     140     209
+11  31/ 24/ 45                 Shrubbery       inversed/Mizcu     139      23
+12  29/ 19/ 52             Burning Metal             inversed     138      71
+13  29/ 19/ 52               Raging Gale             inversed     138      73
+14  27/ 17/ 56                     TestP              P.Kline     138      29
+15  32/ 27/ 41                 N e i t h             inversed     137      82
+16  41/ 45/ 14                    Mutant          Sascha Zapf     137      95
+17  40/ 42/ 18                 Bulldozed    Christian Schmidt     137     223
+18  32/ 28/ 40              Hurray Beer!            Hugh Jass     136      16
+19  30/ 24/ 46                     Amber             inversed     135       7
+20  32/ 28/ 40       Monster_Alien_Grunt             inversed     135     106
+
+After 222 successful challenges Bulldozed is the only warrior that remains
+on the hill from the last issue. Maelstrom (248) left the hill in July 2006.
+Warriors that didn't manage to stay on the hill include Spiritual Black
+Dimension (222), Black Knight (189), unheard-of II (185), Arrow (168),
+Cyberpunk (160), Yggdrasil (144), Chainlock v02a (133), Dandelion 3 (126),
+Cooperative Black Dimension (126), Sunrise 06 (115), Aardvark (107),
+CrashAndBurn (97), Hullab3loo (88), ArtaBmoC (81), Hullabaloo (79), elf (76),
+Bvowkium Fizmoxid (72), Greater Forrest Gods (71), fallen leaves (60),
+sparkle (53), The Humanizer (51) and Paperanha (51).
+
+Bulldozed is now the oldest warrior with an age of 223, closely followed by
+Evening Breeze (209).
+_______________________________________________________________________________
+The '94 Draft Hall of Fame
+
+You have to get a warrior which is older than 143 to enter the TOP-25 of the
+'94 Draft Hall of Fame. A * indicates warriors which are still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Reepicheep             Grabun/Metcalf     543    Q^4 -> Paper/stone
+ 2  Son of Vain            Oversby/Pihlaja    441    Q^4 -> Stone/imp
+ 3  Return of Vanquisher   Lukasz Grabun      283    Q^4 -> Bomber
+ 4  Bitter Sweet           Lukasz Grabun      262    Q^4 -> Stone/imp
+ 5  CrazyShot 2            Christian Schmidt  249    Q^4 -> Oneshot
+ 6  Maelstrom              Roy van Rijn       248    Qscan -> Paper/imp
+ 7  Herbal Avenger         Michal Janeczek    237    Scanner
+ 8  Bulldozed              Christian Schmidt  223 *  P-warrior
+ 9  Spiritual Black Dimens Christian Schmidt  222    Qscan -> Paper/stone
+10  Bustling Spirit        Christian Schmidt  216    P-warrior
+11  Evening Breeze         Roy van Rijn       209 *  P-warrior
+12  Revenge of the Papers  Fizmo/Roy          204    Q^4 -> Paper
+13  Uninvited              John Metcalf       194    MiniQ^3 -> Stone/imp
+14  Blowrag                Metcalf/Schmidt    192    Q^4 -> Paper/imp
+15  Black Knight           Christian Schmidt  189    Q^4 -> Stone/imp
+16  unheard-of II          Christian Schmidt  185
+17  Incredible!            John Metcalf       180    Paper/imp
+18  Wallpaper              Christian Schmidt  175    Q^4 -> Paper/stone
+19  Mantrap Arcade         Dave Hillis        170    P-warrior
+20  Arrow                  Christian Schmidt  168    Scanner
+21  Numb                   Roy van Rijn       167    Q^4 -> Paper/stone
+22  PolyPap                Jakub Kozisek      160    Qscan -> Paper
+ =  Cyberpunk              Christian Schmidt  160    P-warrior
+24  Recon 2                David Moore        156    Scanner
+25  Joyful Maw             Dave Hillis        143    P-warrior
+
+Bulldozed and Evening Breeze continue to rise through the ranks.
+_______________________________________________________________________________
+SAL Beginner's Hill
+
+ #   %W/   %L/	  %T                      Name             Author Score  Age
+ 1  57.3/ 26.6/ 16.1                    Cancer        The Phoenix 188.0   12
+ 2  55.6/ 30.1/ 14.3            KoolAndTheGang      gareththegeek 181.2   37
+ 3  45.3/ 14.5/ 40.2                   Sponger               doug 176.2   34
+ 4  41.3/ 14.1/ 44.6                Papes_v1.0      gareththegeek 168.5   41
+ 5  41.5/ 22.0/ 36.5              MyFirstPaper     Johannes Klein 161.1    8
+ 6  47.3/ 39.4/ 13.3                 salsascan         C. De Rosa 155.1   23
+ 7  43.2/ 32.1/ 24.7                    Switch              BCook 154.3   44
+ 8  37.7/ 22.3/ 40.0            hosenscheisser           Johannes 153.1    5
+ 9  46.0/ 39.0/ 15.1                salsascan6         C. De Rosa 153.0   19
+10  38.9/ 25.2/ 35.8            Natriumchlorid           Thurasiz 152.6   11
+11  45.0/ 40.0/ 14.9                  easyscan         C. De Rosa 150.1   25
+12  16.0/  2.9/ 81.1                  ImpPaper              BCook 129.2   38
+13  37.0/ 46.5/ 16.5            Forced Suicide             fr33ke 127.5   36
+14  29.9/ 34.0/ 36.2             my_first_bomb             Leniad 125.8    1
+15  34.5/ 45.4/ 20.2                    Scaper          Jan Gampe 123.6    7
+16  32.7/ 47.0/ 20.4                    Vlad 2              BCook 118.4   50
+17  32.1/ 47.1/ 20.8                      easy         C. De Rosa 117.0   32
+18  34.4/ 53.1/ 12.6 Bastard Scanner from Hell          Jan Gampe 115.6    3
+19  26.4/ 48.2/ 25.5                    Ikarus           Thurasiz 104.6   16
+20  29.5/ 56.9/ 13.6               dung-bettle       Jon Philpott 102.2   10
+21  24.5/ 57.3/ 18.3                 fruit-fly       Jon Philpott  91.6    9
+22  10.2/ 63.0/ 26.8          Thunderpig_V0.15   Steffen Hoffmann  57.4    2
+
+There were 713 challenges since the last issue and the hill is now completely
+changed. A couple of months ago an age limit of 50 has been instantiated on
+the beginner's hill in oder to prevent the hill from becoming too difficult
+to enter.
+
+Congratulations to everybody who managed to enter the hill. We hope to see
+you soon on other hills, too!
+_____________________________________________________________________________
+Blacken - A glimpse of history
+
+In November 2000 Blacken by Ian Oversby became the first warrior which
+breached the age limit of 1000 on the '94 No Pspace Hill. On June 15, 2002
+it was pushed off the hill at an remarkable age of 1363 and only one warrior
+has managed to become older since. Unfortunately it wasn't published and later
+declared to be lost. In October 2005 its compiled code found a way into the
+hands of Roy van Rijn, who then recreated it. Now it happily lives on
+Koenigstuhl. (Update: John has managed to find the original strategy lines
+of Blacken.)
+
+;redcode-94nop
+;name Blacken
+;author Ian Oversby
+;strategy The stone from Defender
+;strategy Added a QScan
+;assert 1
+
+;; Reverse Engineered from the compiled code
+;; After everybody thought it was gone forever
+;; 17 Oct 2005, Roy van Rijn
+
+        sStep   EQU     1370
+        sStep2  EQU     3044
+        sBoot   EQU     1800
+        cBomb   EQU     (cGo-9)
+
+        iAway   EQU     950
+        iStep   EQU     2667
+
+;; Vector launch for the imps
+
+iPmp    spl     1,                      < -2200
+        spl     1,                      < -2208
+        spl     < 0,                    # iTab+1
+        djn.a   @ iTab,                 # 0
+iImp    mov.i   # iStep,                * 0
+
+        jmp     iImp+iAway+(iStep*7),   iImp+iAway+(iStep*6)
+        jmp     iImp+iAway+(iStep*5),   iImp+iAway+(iStep*4)
+        jmp     iImp+iAway+(iStep*3),   iImp+iAway+(iStep*2)
+iTab    jmp     iImp+iAway+iStep,       iImp+iAway
+
+FOR 21
+        dat     0,                      0
+ROF
+
+;; Taken the Q^2 from Newt
+;; Removed the lower 4 scans
+;; Changed the constants
+;; A perfect match (code is 100% the same)
+
+        QB      EQU     (start-550)
+        QS      EQU     (QD*2)
+        QD      EQU     -100
+
+        GAP     EQU     12
+        REP     EQU     8
+        REP2    EQU     2
+
+        datz    EQU     (table-3)
+
+        dat     10*QS,                  2*QS
+table   dat     4*QS,                   1*QS
+        dat     23*QS,                  3*QS
+
+;; can get 21 values from this table
+;; and can also use the initial value
+;; of fnd
+
+qinc    spl     # GAP,                  -GAP
+tab     add.a   table,                  table
+slow    add.a   @ tab,                  fnd
+fast    add.ba  * tab,                  @ slow
+which   sne.i   datz,                   * fnd
+        add.a   # QD,                   fnd
+        mov.i   datone,                 * fnd
+        add.ab  fnd,                    fnd
+
+fnd     mov.i   QB,                     GAP/2
+        add.f   qinc,                   fnd
+        mov.i   datone,                 * fnd
+        djn.b   fnd,                    # REP
+        jmp     boot,                   } QS*13
+
+start   seq.i   QB+QS*0,                QB+QS*0+QD
+        jmp     which,                  } QB+QS*0+QD/2
+
+        seq.i   QB+QS*1,                QB+QS*1+QD
+        jmp     fast,                   } QB+QS*1+QD/2
+
+        seq.i   QB+QS*13,               QB+QS*13+QD
+        jmp     fast,                   { fast
+
+        seq.i   QB+QS*2,                QB+QS*2+QD
+        jmp     fast,                   { tab
+
+        seq.i   QB+QS*3,                QB+QS*3+QD
+        jmp     fast,                   } tab
+
+        seq.i   QB+QS*4,                QB+QS*4+QD
+        jmp     > fast,                 } QB+QS*4+QD/2
+
+        seq.i   QB+QS*5,                QB+QS*5+QD
+        jmp     slow,                   } QB+QS*5+QD/2
+
+        seq.i   QB+QS*6,                QB+QS*6+QD
+        jmp     slow,                   { tab
+
+        seq.i   QB+QS*7,                QB+QS*7+QD
+        jmp     slow,                   } tab
+
+        seq.i   QB+QS*10,               QB+QS*10+QD
+        jmp     > fast,                 < tab
+
+        seq.i   QB+QS*11,               QB+QS*11+QD
+        jmp     slow,                   < tab
+
+        seq.i   QB+QS*12,               QB+QS*12+QD
+        djn.f   slow,                   tab
+
+        seq.i   QB+QS*23,               QB+QS*23+QD
+        jmp     > fast,                 > tab
+
+        seq.i   QB+QS*24,               QB+QS*24+QD
+        jmp     slow,                   > tab
+
+        seq.i   QB+QS*17,               QB+QS*17+QD
+        jmp     slow,                   { fast
+
+        seq.i   QB+QS*8,                QB+QS*8+QD
+        jmp     < fast,                 } QB+QS*8+QD/2
+
+;; Boot the stone away
+;; And the pointer
+
+boot    mov     cGate,                  < bPtr
+
+FOR 7
+        mov     < bEnd+1,               { bPtr
+ROF
+
+        spl     * bPtr,                 < -1000
+        spl     * bPtr,                 < -1108
+        mov     iImp,                   iImp+iAway
+        spl     iPmp,                   < -1217
+bPtr    div.f   # sBoot,                # sBoot-10
+
+;; Bomb for the qscan
+
+datone  dat     } 300,                  > 200
+
+cGate   dat     1,                      # 18
+
+sStart  spl     # sStep2,               < sStep
+sAtt    mov     { -sStep2+1,            * -sStep+3
+        mov.i   sStart,                 @ sAtt
+        sub.f   sStart,                 sAtt
+        djn.f   sAtt,                   < sStep-4
+
+cGo     mov.i   cBomb,                  > cGate-4
+bEnd    djn.f   cGo,                    { cGate-4
+
+        END     start
+
+Performance of Blacken against the fsh94nop-0.3-benchmark:
+
+clr: 141.238303 (W 40.364483, L 39.490664, T 20.144853)
+scn: 167.544759 (W 51.765265, L 35.985771, T 12.248964)
+cds: 142.636628 (W 42.116395, L 41.596163, T 16.287442)
+pap: 114.209717 (W 20.525680, L 26.841644, T 52.632675)
+pws: 117.891296 (W 22.990642, L 28.089988, T 48.919369)
+pwi: 107.116075 (W 13.284622, L 19.453168, T 67.262210)
+sai: 122.650942 (W 23.468786, L 24.286630, T 52.244584)
+sbi: 124.259069 (W 25.444174, L 26.629278, T 47.926548)
+stn: 146.480686 (W 42.286779, L 38.092873, T 19.620348)
+-------------------------------------------------------
+AVG: 131.558608 (W 31.360759, L 31.162909, T 37.476333)
+_______________________________________________________________________________
+Vamps are back!                                  by Johannes "el kauka" Kersten
+
+A strategy from the old days has returned! Well, ok, it's not the first time
+that vampires have been on the '94nop hill, but this time they are doing quite
+fine. 
+
+Here are some of the "recent" vamps I found with Jens' Time Machine:
+
+Year    Name            Author          Best place      Age
+2003    Dracula 2003    Roy van Rijn    5               64
+1999    myVamp 3.7      paulsson        6               66
+
+(I'm not yet sure if these are all vampires on '94nop after 1999.)
+
+In comparison (while I'm writing this article):
+
+Year    Name            Author          Best place      Age
+2005    vamps are back  el kauka        1               85+ (still on the hill)
+
+(Editor's note: vamps are back died at an age of 202 on January 1, 2006.)
+
+Therefore you might ask, what's the magic behind it? I will tell you, but
+first let us have a little journey through the different vampires of the past.
+
+The very essence of the vampire is the vamp loop, the fang bomb and the trap.
+Mainly it looks like this:
+
+...
+        ;; the main loop
+
+loop    add.f   inc,                          fang
+        mov.i   fang,                         @ fang
+        jmp     loop
+
+fang    jmp     trap,                         0
+inc     dat     step,                         -step
+
+trap    spl     0
+        jmp     -1
+...
+
+The fang bomb is a well calculated jump instruction. Each dropped bomb in
+the core points to the trap. An enemy process which executes this bomb is
+going to jump to the trap, creating more and more useless processes. The 
+beauty of all this is the corecolouring effect which gives us the chance to
+beat scanners plus the ability to stun papers. In theory vampires should rule
+the hill ... but they don't; simply because there are two problems:
+
+  - The main loop shown above isn't very efficient (only 0.33c)
+  - Silk-style papers appeared after the rule change in 94. These kind of
+    papers spend 50% of their time creating new proccesses. Therefore they
+    are much harder to stun.
+
+The easiest way to solve problem #1 is to change the end of the loop from 
+"jmp loop" to "jmz.f loop, *fang". This makes the vampire work like a jmz-
+scanner and increases its effeciency (0.33c bombing + 0.33c scanning = 
+0.66c activity). Several authors have used this idea before. The magic behind
+"how to solve the second problem" is what the vamp is doing with a scanned
+location after it has found something.
+
+Some examples:
+
+Stepping Stone by Kurt Franke
+(vamps using the same after-scan-attack: myvamp v.3.7 / v.5.4 by paulsson)
+
+After it has found something Stepping Stone drops the jump bomb to the
+scanned postion. This bomb is not pointing to the trap! It points somewhere
+else into the core, mostly dat, which would kill the process. This works
+very well, but is still no solution for our second problem.
+
+vamp 0.2b by bjoern guenzel
+(vamps using the same after-scan-attack: dracula 2003 by roy van rien)
+
+It drops the following bomb to the scanned loaction
+
+...
+        mov.i   1,                      } 1
+        spl     # 1,                    1
+...
+
+The more processes execute the mov instruction the longer the spl carpet
+behind it becomes. Quite a good solution for the second problem, but this
+increases the length of the vampire a lot (2 lines to drop the bombs, 2 lines
+for the bombs themselves). And that leads us to a third problem. Vampires used
+to get quite "big". Let's say around 10 instruction for the main loop with
+after-scan-attack (pointers/fang etc.), around 5 for a good trap and another
+5 for the endgame strategy. That are 20(!) instructions you have to boot if
+you want to use the vamp together with a quickscanner. 
+
+The way I solved the problems was to combine the main vamp loop with the
+main loop of blur-style scanners and some extra snippets. 
+
+...
+gate    dat     trap,                   0       ; gate/pointer for the clear
+fang    jmp     gate+trap,              0
+
+loop    mov.i   inc,                    } gate
+        add.f   inc,                    fang    ; \
+        mov.i   fang,                   @ fang	;  basic vamp loop
+        jmz.f   loop,                   * fang	; /
+
+ptr     mov.a   fang,                   gate    ; guide the clear to the found
+
+        djn.b   loop,                   # vTIME ; after a fixed number of stuns
+                                                ; switch to endgame
+
+inc     spl     # vSTEP,                # -vSTEP; endgame: d-clear
+clear   mov     bomb,                   > loop
+        djn.f   -1,                     > loop
+
+bomb    dat     < 2667,                 13
+...
+
+#1: The efficiency is even more increased:
+    0.25c clear + 0.25c bomb + 0.25c scan = 0.75c activity
+
+#2: The permanent spl-clear gives us the extra stun power we need. If the
+    scan part finds something, it guides the clear to the scanned postion.  
+
+#3: The whole vamp is 12 instructions long and can be booted as a whole. But 
+    where does the trap went? The blur-scan-like part of this warrior is
+    not using the zooom trick which is quite common in blurstyle scanners. 
+    Therefore we know where the first spl carpet is. Let's assume the scan
+    part is not going to find anything during the first 10 scans. This leads
+    to a spl carpet of length 10. Even a seperate trap couldn't stun the enemy
+    better.
+
+Thanks to: Jens Gutzeit, Christian Schmidt and John Metcalf for hanging around
+in the irc channel and helping me to find other vampires.
+
+Extra thanks go to Christian Schmidt who has added the q-scan and bootcode to
+"vamps are back 0.2" and also re-optimaxed it.
+
+;redcode-94nop
+;name vamps are back 0.2
+;author elkauka
+;strategy hybrid vampire/scanner
+;assert 1
+
+;; Qscan Constants
+
+        zero    EQU     qbomb
+        qtab3   EQU     qbomb
+        qz      EQU     2108
+        qy      EQU     243
+
+        qc2     EQU     ((1 + (qtab3-qptr)*qy) % CORESIZE)
+        qb1     EQU     ((1 + (qtab2-1-qptr)*qy) % CORESIZE)
+        qb2     EQU     ((1 + (qtab2-qptr)*qy) % CORESIZE)
+        qb3     EQU     ((1 + (qtab2+1-qptr)*qy) % CORESIZE)
+        qa1     EQU     ((1 + (qtab1-1-qptr)*qy) % CORESIZE)
+        qa2     EQU     ((1 + (qtab1-qptr)*qy) % CORESIZE)
+
+        qoff    EQU     -88
+        qstep   EQU     -7
+        qtime   EQU     20
+
+;; Constants for optimization
+
+        trap    EQU     6941
+        vSTEP   EQU     4691
+        vTIME   EQU     73
+        pBoot   EQU     5235
+
+        dat     0,                      0
+qbomb   dat     > qoff,                 > qc2
+
+;; 45 instructions
+
+pGo     spl     1,                      zero+pBoot+1
+
+FOR 6 
+        mov.i   { bomb+1,               < pGo 
+ROF 
+        djn     zero+pBoot-8,           # 1 
+        mov.i   1,                      -1 
+
+gate    dat     trap,                   0
+fang    jmp     gate+trap,              0
+loop    mov.i   inc,                    } gate
+        add.f   inc,                    fang
+        mov.i   fang,                   @ fang
+        jmz.f   loop,                   * fang
+ptr     mov.a   fang,                   gate
+        djn.b   loop,                   # vTIME
+inc     spl     # vSTEP,                # -vSTEP
+clear   mov     bomb,                   > loop
+        djn.f   -1,                     > loop
+bomb    dat     < 2667,                 13
+
+FOR 24
+        dat     0,                      0 
+ROF
+
+;;
+
+        dat     0,                      < qb1
+qtab2   dat     0,                      < qb2
+        dat     0,                      < qb3
+
+FOR 4
+        dat     0,                      0
+ROF
+
+        dat     zero-1,                 qa1
+qtab1   dat     zero-1,                 qa2
+
+FOR 5
+        dat     0,                      0
+ROF
+
+qgo     sne     qptr+qz*qc2,            qptr+qz*qc2+qb2
+        seq     <qtab3,                 qptr+qz*(qc2-1)+qb2
+        jmp     q0,                     } q0
+
+        sne     qptr+qz*qa2,            qptr + qz*qa2 + qb2
+        seq     < qtab1,                qptr+qz*(qa2-1)+qb2
+        jmp     q0,                     { q0
+
+        sne     qptr+qz*qa1,            qptr+qz*qa1+qb2
+        seq     < (qtab1-1),            qptr+qz*(qa1-1)+qb2
+        djn.a   q0,                     { q0
+
+        sne     qptr+qz*qb3,            qptr+qz*qb3+qb3
+        seq     < (qtab2+1),            qptr+qz*(qb3-1)+(qb3-1)
+        jmp     q0,                     } q1
+
+        sne     qptr+qz*qb1,            qptr+qz*qb1+qb1
+        seq     < (qtab2-1),            qptr+qz*(qb1-1)+(qb1-1)
+        jmp     q0,                     { q1
+
+        sne     qptr+qz*qb2,            qptr+qz*qb2+qb2
+        seq     < qtab2,                qptr+qz*(qb2-1)+(qb2-1)
+        jmp     q0,                     } 4443 ; extra attack
+
+        seq     > qptr,                 qptr+qz+(qb2-1)
+        jmp     q2,                     < qptr
+
+        seq     qptr+(qz+1)*(qc2-1),    qptr+(qz+1)*(qc2-1)+(qb2-1)
+        jmp     q0,                     } q0
+
+        seq     qptr+(qz+1)*(qa2-1),    qptr+(qz+1)*(qa2-1)+(qb2-1)
+        jmp     q0,                     { q0
+
+        seq     qptr+(qz+1)*(qa1-1),    qptr+(qz+1)*(qa1-1)+(qb2-1)
+        djn.a   q0,                     { q0
+
+        jmz.f   pGo,                    qptr+(qz+1)*(qb2-1)+(qb2-1)
+
+q0      mul.b   * 2,                    qptr
+q2      sne     { qtab1,                @ qptr
+q1      add.b   qtab2,                  qptr
+        mov     qtab3,                  @ qptr
+qptr    mov     qbomb,                  } qz
+        sub     # qstep,                qptr
+        djn     -3,                     # qtime
+
+        jmp     pGo,                    } 3256 ; extra attack
+
+FOR 4
+        dat     0,              0
+ROF
+
+        END     qgo
+
+Performance of vamps are back 0.2 against the fsh94nop-0.3-benchmark:
+
+clr: 171.889288 (W 54.455091, L 37.020895, T  8.524014)
+scn: 158.370188 (W 49.908131, L 41.446075, T  8.645793)
+cds: 146.457719 (W 45.103192, L 43.748665, T 11.148143)
+pap: 139.397727 (W 40.696171, L 41.994616, T 17.309212)
+pws: 111.031919 (W 32.832329, L 54.632739, T 12.534931)
+pwi: 114.346985 (W 25.482844, L 36.618703, T 37.898453)
+sai: 120.774260 (W 34.563517, L 48.352775, T 17.083707)
+sbi: 124.891681 (W 37.170235, L 49.448789, T 13.380977)
+stn: 150.216853 (W 45.869653, L 41.522454, T 12.607892)
+-------------------------------------------------------
+AVG: 137.486291 (W 40.675685, L 43.865079, T 15.459236)
+_______________________________________________________________________________
+Bvowkium Fizmoxid                        by bvowk and Christian 'Fizmo' Schmidt
+
+In a discussion on the corewar IRC channel bvowk showed us one of his evolved 
+uncommon looking clears. The most interesting aspect of it was the very 
+impressive score against b-imps.
+
+        spl     # 0,                    0
+        mov.i   # 1,                    < 1
+        djn.b   -1,                     # value
+
+One of the reasons why it works so well is the djn.b. It decrements the pointer 
+for the clear so that every second location will be cleared by the anti-imp 
+mov-bomb. This seems to be an advantage, because the clear runs now much
+faster through the core without loosing its offensive power against b-imps.
+
+The redcoders immediately adapted this snippet into their coreclear papers 
+like in the case of van Rijn's Maelstrom or Zapf's paper(paper(paper(clear))), 
+because it gave much better scores against stone/b-imps than with the so far 
+common used djn.f -2, < value. 
+
+pap     spl     @ 0,                    } tstep1
+        mov.i   } -1,                   > -1
+nothA   spl     cstep1,                 0
+        mov.i   > -1,                   } -1
+nothB   spl     @ 0,                    } nstep1
+        mov.i   } -1,                   > -1
+        mov.i   # 1138,                 < 1
+        djn.b   -2,                     # 1618
+
+However, the clear in such papers run quite slowly compared to the 
+self-replication. An idea to improve the speed of the clear is the addition
+of a spl #0, similar to what is found in several paper-dwarfs or paper-imps.
+Having just two silk-pairs and the 3-line coreclear the paper contains just
+7 instructions.
+
+pap     spl     @ 0,                    < pStep1
+        mov     } -1,                   > -1
+        spl     pStep2,                 0
+        mov     > -1,                   } -1
+        spl     # 0,                    0
+        mov.i   # 1,                    < 1
+pBack   djn.b   -1,                     # bStep1
+
+To increase the defensive power a second paper was added to the warrior
+containing a-imps. After implementing a Q^4.5 quickscan a subsequent 
+optimization of the paper constants and the boot locations were done leading
+to a surprisingly good scoring warrior, which appeared on both the 94nop hill
+and the 94draft hill for a quite lenghty term.
+
+;redcode-94nop
+;name Bvowkium Fizmoxid
+;author bvowk/fizmo
+;strategy - Q^4.5 scanner
+;strategy - paper with embedded evolved anti-imp clear
+;strategy - paper with imps
+;assert 1
+
+        pAway1  EQU     2024    ; optimizable
+        pAway2  EQU     2614    ; optimizable
+        pStep1  EQU     478     ; optimizable
+        pStep2  EQU     1851    ; optimizable
+        bStep1  EQU     276     ; optimizable
+        sStep1  EQU     2978    ; optimizable
+        sStep2  EQU     3257    ; optimizable
+
+        iStep   EQU     2667    ; imp-step
+
+        zero    EQU     qbomb
+        qtab3   EQU     qbomb
+
+qbomb   dat     > qoff,                 > qc2
+        dat     0,                      0
+
+pGo     spl     1,                      < qb1
+qtab2   spl     1,                      < qb2
+        mov.i   -1,                     # qb3
+
+        mov.i   < 1,                    { 1
+        spl     qbomb+pAway1,           pBack+1
+        mov.i   < imp+1,                { 1
+        djn.f   qbomb+pAway2,           < 3072
+
+        dat     0,                      0
+
+pap     spl     @ 0,                    < pStep1
+        mov     } -1,                   > -1
+        spl     pStep2,                 0
+        mov     > -1,                   } -1
+        spl     # 0,                    0
+        mov.i   # 1,                    < 1
+pBack   djn.b   -1,                     # bStep1
+
+FOR 4
+        dat     0,                      0
+ROF
+
+        dat     zero - 1,               qa1
+qtab1   dat     zero - 1,               qa2
+
+
+FOR 17
+        dat     0,                      0
+ROF
+
+pap1    spl     @ 0,                    > sStep1
+        mov     } -1,                   > -1
+        spl     sStep2,                 0
+        mov     > -1,                   } -1
+        spl     @ 0,                    < iStep+1
+        mov     } -1,                   > -1
+imp     mov.i   # iStep,                * 0
+
+FOR 18
+        dat     0,                      0
+ROF
+
+        qc2     EQU     ((1 + (qtab3-qptr)*qy) % CORESIZE)
+        qb1     EQU     ((1 + (qtab2-1-qptr)*qy) % CORESIZE)
+        qb2     EQU     ((1 + (qtab2-qptr)*qy) % CORESIZE)
+        qb3     EQU     ((1 + (qtab2+1-qptr)*qy) % CORESIZE)
+        qa1     EQU     ((1 + (qtab1-1-qptr)*qy) % CORESIZE)
+        qa2     EQU     ((1 + (qtab1-qptr)*qy) % CORESIZE)
+        qz      EQU     2108
+        qy      EQU     243
+
+qgo     sne     qptr + qz*qc2,          qptr + qz*qc2 + qb2
+        seq     < qtab3,                qptr + qz*(qc2-1) + qb2
+        jmp     q0,                     } q0
+
+        sne     qptr + qz*qa2,          qptr + qz*qa2 + qb2
+        seq     <qtab1,                 qptr + qz*(qa2-1) + qb2
+        jmp     q0,                     { q0
+
+        sne     qptr + qz*qa1,          qptr + qz*qa1 + qb2
+        seq     < (qtab1-1),            qptr + qz*(qa1-1) + qb2
+        djn.a   q0,                     { q0
+
+        sne     qptr + qz*qb3,          qptr + qz*qb3 + qb3
+        seq     < (qtab2+1),            qptr + qz*(qb3-1) + (qb3-1)
+        jmp     q0,                     } q1
+
+        sne     qptr + qz*qb1,          qptr + qz*qb1 + qb1
+        seq     < (qtab2-1),            qptr + qz*(qb1-1) + (qb1-1)
+        jmp     q0,                     { q1
+
+        sne     qptr + qz*qb2,          qptr + qz*qb2 + qb2
+        seq     < qtab2,                qptr + qz*(qb2-1) + (qb2-1)
+        jmp     q0
+
+        seq     > qptr,                 qptr + qz + (qb2-1)
+        jmp     q2,                     < qptr
+
+        seq     qptr+(qz+1)*(qc2-1),    qptr+(qz+1)*(qc2-1)+(qb2-1)
+        jmp     q0,                     } q0
+
+        seq     qptr+(qz+1)*(qa2-1),    qptr+(qz+1)*(qa2-1)+(qb2-1)
+        jmp     q0,                     { q0
+
+        seq     qptr+(qz+1)*(qa1-1),    qptr+(qz+1)*(qa1-1)+(qb2-1)
+        djn.a   q0,                     { q0
+
+        jmz.f   pGo,                    qptr + (qz+1)*(qb2-1) + (qb2-1)
+
+        qoff    EQU     -87
+        qstep   EQU      -7
+        qtime   EQU      14
+
+q0      mul.b   *2,                     qptr
+q2      sne     { qtab1,                @ qptr
+q1      add.b   qtab2,                  qptr
+        mov     qtab3,                  @ qptr
+qptr    mov     qbomb,                  } qz
+        sub     # qstep,                qptr
+        djn     -3,                     # qtime
+
+        jmp     pGo
+
+        END     qgo
+
+Performance of Bvowkium Fizmoxid against the fsh94nop-0.3-benchmark:
+
+clr: 154.943811 (W 39.097017, L 23.250224, T 37.652758)
+scn: 122.013203 (W 32.462718, L 42.912233, T 24.625048)
+cds: 153.889459 (W 40.225612, L 26.561766, T 33.212622)
+pap: 115.460091 (W 13.133466, L 10.806841, T 76.059693)
+pws: 125.306371 (W 18.334829, L 11.363287, T 70.301884)
+pwi: 114.120519 (W 11.576507, L  9.032496, T 79.390997)
+sai: 121.583130 (W 16.258172, L 10.933214, T 72.808614)
+sbi: 162.785540 (W 36.729265, L 10.672991, T 52.597744)
+stn: 154.730697 (W 40.869226, L 27.007755, T 32.123018)
+-------------------------------------------------------
+AVG: 136.092536 (W 27.631868, L 19.171201, T 53.196931)
+_______________________________________________________________________________
+How to use a q^4.5-scanner                             by Jens 'Fluffy' Gutzeit
+
+Quickscanners have been around for quite a while and you can find them in a
+good part of all warriors on Koenigstuhl. They became more sophisticated with
+every major step towards the current q^4.5-scanners, which now almost everybody
+uses. Normally you just copy a q^4.5 from some warrior, paste it into your new
+warrior, adjust it to your needs and enjoy the increased performance.
+Unfortunately there is a problem here! You can loose a lot of the power of a
+q^4.5 by "adjusting it to your needs". This article will try to cover some
+important properties of a q^4.5 to give you its full power.
+
+A naked q^4.5 looks like this:
+
+        ORG     qGo
+
+        ...     ...,                    qb1
+qTab2   ...     ...,                    qb2
+        ...     ...,                    qb3
+...
+
+qBomb   dat.f   > qOffset,              > qc2   ; qTab3
+...
+
+empty   dat.f   0,                      0
+        dat.f   empty + 1,              qa1
+qTab1   dat.f   empty + 1,              qa2
+....
+
+;; q^4.5-scanner
+
+        qTab3   EQU     qBomb
+
+        qm      EQU     160
+        qM      EQU     6239
+
+        qa1     EQU     ((qTab1 - 1 - found) * qM + 1)
+        qa2     EQU     ((qTab1     - found) * qM + 1)
+
+        qb1     EQU     ((qTab2 - 1 - found) * qM + 1)
+        qb2     EQU     ((qTab2     - found) * qM + 1)
+        qb3     EQU     ((qTab2 + 1 - found) * qM + 1)
+
+        qc2     EQU     ((qTab3     - found) * qM + 1)
+
+qGo     sne.i   found+qm*qc2,           found+qm*qc2+qb2
+        seq.i   < qTab3,                found+qm*(qc2-1)+qb2
+        jmp     q0,                     } q0
+
+        sne.i   found+qm*qa1,           found+qm*qa1+qb2
+        seq.i   < (qTab1-1),            found+qm*(qa1-1)+qb2
+        djn.a   q0,                     { q0
+
+        sne.i   found+qm*qa2,           found+qm*qa2+qb2
+        seq.i   < qTab1,                found+qm*(qa2-1)+qb2
+        jmp     q0,                     { q0
+
+        sne.i   found+qm*qb1,           found+qm*qb1+qb1
+        seq.i   < (qTab2-1),            found+qm*(qb1-1)+(qb1-1)
+        jmp     q0,                     { q1
+
+        sne.i   found+qm*qb3,           found+qm*qb3+qb3
+        seq.i   < (qTab2+1),            found+qm*(qb3-1)+(qb3-1)
+        jmp     q0,                     } q1
+
+        sne.i   found+qm*qb2,           found+qm*qb2+qb2
+        seq     < qTab2,                found+qm*(qb2-1)+(qb2-1)
+        jmp     q0,                     < found+qm*qb2-1  ; free B-field!
+
+        seq.i   > found,                found+qm+(qb2-1)
+        jmp     qSelect,                < found
+
+        seq.i   found+(qm+1)*(qc2-1),   found+(qm+1)*(qc2-1)+(qb2-1)
+        jmp     q0,                     } q0
+
+        seq.i   found+(qm+1)*(qa2-1),   found+(qm+1)*(qa2-1)+(qb2-1)
+        jmp     q0,                     { q0
+
+        seq.i   found+(qm+1)*(qa1-1),   found+(qm+1)*(qa1-1)+(qb2-1)
+        djn.a   q0,                     { q0
+
+        jmz.f   boot,                   found+(qm+1)*(qb2-1)+(qb2-1)
+
+;; decoder
+
+q0      mul.b   * q1,                   found
+qSelect sne     { qTab1,                @ found
+q1      add.b   qTab2,                  found
+
+;; throw some bombs
+
+        qOffset EQU     -88    ; offset of second bomb trail
+        qTimes  EQU     20     ; number of bombs to throw
+        qStep   EQU     -7     ; distance between bombs
+
+throw   mov.i   qTab3,                  @ found
+found   mov.i   qBomb,                  } qm
+        sub     # qStep,                found
+        djn     throw,                  # qTimes
+
+;; start warrior
+
+        jmp     boot
+
+Looks like a pie! You just add your actual warrior somewhere, fill in some
+DAT $ 0, $ 0 and you are done. Unfortunately it isn't that easy. The q^4.5
+has some pecularities you have to deal with. Let's look at the scanned
+locations (all values are relative to the start of the warrior):
+
+        found+qm*qc2,                   found+qm*qc2+qb2,
+        found+qm*(qc2-1),               found+qm*(qc2-1)*qb2,
+        found+qm*qa1,                   found+qm*qa1+qb2,
+        found+qm*(qa1-1),               found+qm*(qa1-1)+qb2,
+        found+qm*qa2,                   found+qm*qa2+qb2,
+        found+qm*(qa2-1),               found+qm*(qa2-1)+qb2,
+        found+qm*qb1,                   found+qm*qb1+qb1,
+        found+qm*(qb1-1),               found+qm*(qb1-1)+(qb1-1),
+        found+qm*qb3,                   found+qm*qb3+qb3,
+        found+qm*(qb3-1),               found+qm*(qb3-1)+(qb3-1),
+        found+qm*qb2,                   found+qm*qb2+qb2,
+        found+qm*(qb2-1),               found+qm*(qb2-1)+(qb2-1),
+        found+qm,                       found+qm+(qb2-1),
+        found+(qm+1)*(qc2-1),           found+(qm+1)*(qc2-1)+(qb2-1),
+        found+(qm+1)*(qa2-1),           found+(qm+1)*(qa2-1)+(qb2-1),
+        found+(qm+1)*(qa1-1),           found+(qm+1)*(qa1-1)+(qb2-1),
+        found+(qm+1)*(qb2-1)+(qb2-1)
+
+So we scan 33 different locations. Those locations have to be placed carefully
+in order to have a maximal chance of finding something. Let's consider the
+optimal opponent, which consists of 100 non-"DAT.F $ 0, $ 0"-instructions. If
+there are scanned locations, which are less than 100 locations apart, our
+q^4.5 will work suboptimally. Let's suppose we scan the locations 1000 and
+1010. If the scan at 1000 finds something then the scan at 1010 would have
+found something, too. On the other hand if we would scan the locations 1000
+and 1100 there is no way that a scan at 1000 would influence the success-
+probability for the next scan at 1100, because our opponents can only be 100
+instructions long.
+
+The first thing that you should keep in mind is to place the scanned locations
+wide enough apart. Ideally the minimal distance between two scanned locations
+would be greater than 99.
+
+But how can you influence that placement? Obviously the scanned locations
+depend of the values found, qm, qa1, qa2, qb1, qb2, qb3 and qb2, but a deeper
+look reveals that we have to deal with qm, qM and found, qTab1, qTab2 and
+qTab3. Now we could start to search through all possible values and wait
+until we have found a good placement. Fortunately there is a condition for
+qm and qM:
+
+              qM * (qm - 1) = 1 mod 8000
+
+If it isn't fullfilled our q^4.5 will not work! All you have to do now is to
+write a little program to look for good values. Even on a slow computer that
+wouldn't take very long. Unfortunately you won't find any placement where
+the scanned locations have a minimal distance of 100 or greater. In order to
+find out why let's look at the scanned locations found+qm*qb2 and
+found+qm+(qb2-1):
+
+found + qm * qb2        = found + qm * ((qTab2 - found) * qM + 1)
+                        = found + qm + qm * qM * qTab2 - qm * qM * found
+
+found + qm + (qb2-1)    = found + qm + ((qTab2 - found) * qM + 1) - 1
+                        = found + qm + qM * qTab2 - qM * found
+
+So the distance between these two scanned locations is
+
+                          found + qm + qm * qM * qTab2 - qm * qM * found
+                        -(found + qm +      qM * qTab2 -      qM * found)
+                        ------------------------------------------------
+                           (qm - 1) * qM * qTab2 - (qm - 1) * qM * found
+
+Now we remember that (qm - 1) * qM = 1 and we see that the distance is
+(qTab2 - found) or rather (found - qTab2). Unfortunately both labels are
+located inside the warrior. That is why their distance can never be greater
+than 100. It is even worse! To get a maximal distance you have to place qTab2
+at the start of the warrior and found at the end of it. The first possible
+instruction for qTab2 is the second one and found can maximally placed at
+instruction 96. So the best possible minimal distance between your scans is
+95. At least it is close enough to 100.
+
+There are a lot of different ways to get that distance. One you get with the
+following setup (counting starts with zero!):
+
+ - qTab1 at instruction 35
+ - qTab2 at instruction  1
+ - qTab3 at instruction 31
+ - found at instruction 96
+ - qm EQU 160
+ - qM EQU 6239
+
+With this setup the following locations are scanned:
+
+2656, 1952, 2496, 1792, 5376, 4672, 5216, 4512, 3616, 2912, 3456, 2752, 1216,
+2273, 1056, 2112, 5696, 3231, 5536, 3070, 7456, 6752, 7296, 6591, 256, 7551,
+4961, 4256, 6877, 6172, 2398, 1693, 5886
+
+Of course you have to consider other restrictions:
+
+ - You shouldn't scan your own warrior. (At least one person has written a
+   q^4.5-scanner that scans its own code - me!)
+ - To maximize your odds of finding something all scanned locations should
+   lie between location 200 and 7900.
+
+To prove my point, let's use the above setup together with a "jmp # 0", i.e.
+
+        ORG     qGo
+
+boot    jmp     # 0,                    qb1
+qTab2   dat.f   0,                      qb2
+        dat.f   0,                      qb3
+...
+
+It scores as follows against the fsh94nop 0.3:
+
+clr:  24.599410 (W  7.730846, L 90.862283, T  1.406871)
+scn:  25.145281 (W  8.300218, L 91.455155, T  0.244627)
+cds:  32.002307 (W 10.076700, L 88.151092, T  1.772209)
+pap:  35.426548 (W 11.155087, L 86.883626, T  1.961287)
+pws:  33.164979 (W  9.252660, L 85.340341, T  5.406999)
+pwi:  34.840085 (W  9.057599, L 83.275114, T  7.667286)
+sai:  42.087553 (W 12.089476, L 82.091399, T  5.819126)
+sbi:  33.963594 (W  9.978849, L 85.994103, T  4.027048)
+stn:  52.669530 (W 15.737299, L 78.805068, T  5.457634)
+-------------------------------------------------------
+AVG:  34.877698 (W 10.375415, L 85.873131, T  3.751454)
+
+The score isn't earth shaking but it is only meant for comparison. When I
+adjust the position of qTab1 from 35 to 34 and qTab3 from 31 to 27 the score
+changes to:
+
+clr:  24.084519 (W  7.573281, L 91.062043, T  1.364675)
+scn:  24.566295 (W  8.099923, L 91.633551, T  0.266526)
+cds:  30.513182 (W  9.608277, L 88.703371, T  1.688352)
+pap:  34.254690 (W 10.764111, L 87.273533, T  1.962355)
+pws:  32.291373 (W  9.007179, L 85.722984, T  5.269837)
+pwi:  34.049054 (W  8.825792, L 83.602530, T  7.571679)
+sai:  40.376234 (W 11.608768, L 82.841302, T  5.549929)
+sbi:  32.916293 (W  9.672478, L 86.428663, T  3.898859)
+stn:  50.407533 (W 15.002884, L 79.598235, T  5.398880)
+-------------------------------------------------------
+AVG:  33.717686 (W 10.018077, L 86.318468, T  3.663455)
+
+Now you might say that one point less isn't that bad, but on the '94 No Pspace
+hill, where every warrior is highly optimized, that one point can make the
+difference between bein pushed off or living a little bit longer. And using
+a good q^4.5 comes at no extra cost!
+
+So whenever you copy a q^4.5-scanner make sure that it uses an optimal setup.
+Of course there are other things that you can improve, but that is not the
+topic of this article ...
+_______________________________________________________________________________
+Core Warrior was established by our founding editors Beppe Bezzi and
+Myer R Bremer. Later issues have been produced under the editorship of
+Maurizio Vittuari, Anton Marsden, Christian Schmidt, Philip Kendall,
+John Metcalf, German Labarga and Jens Gutzeit.
+
+Questions? Concerns? Comments? Complaints? Post them to rec.games.corewar,
+tell them in #corewars at irc.koth.org or (if you really have to ;-) mail
+them to Jens 'Fluffy' Gutzeit <fluffy@65536.org>.

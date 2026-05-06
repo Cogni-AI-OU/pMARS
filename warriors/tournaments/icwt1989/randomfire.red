@@ -1,14 +1,13 @@
-;Random Fire
+;random fire
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode
 ;
-; Modified to resolve syntax issues and ensure compatibility with pmars assembly.
-;
-; Author: Bram Cohen
+; author: bram cohen
 ;
 ;
-NEXTADD    ADD  #412,         PTR
-START      JMZ    NEXTADD,   @PTR
-           MOV    DATZERO,   @PTR
-           JMP    NEXTADD
-PTR        DAT               #799
-DATZERO    DAT               #0
-           END    START
+nextadd add	#412, ptr
+start jmz	nextadd, @ptr
+mov	datzero, @ptr
+jmp	nextadd
+ptr dat	#0, #799
+datzero dat	#0, #0
+           end    start
