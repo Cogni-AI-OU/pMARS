@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "Checking all warriors in warriors/tournaments/..."
           # First pass: try to assemble all with high instruction limit (-l 8000)
-          if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -l 8000 -A {} + > /dev/null 2>&1; then
+          if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -p ${MAXPROCESSES:-64} -l 8000 -A {} + > /dev/null 2>&1; then
             echo "All warriors assembled successfully."
           else
             echo "Some warriors failed with default settings. Retrying with compatibility flags..."
