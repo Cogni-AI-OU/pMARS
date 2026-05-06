@@ -22,14 +22,18 @@ Specialized guidance for modernizing legacy Redcode warriors to ensure compatibi
   - **Explicit B-Operands**: Required for `SPL`, `JMP`, `DJN`, etc. (`SPL 10, 0`).
   - **DAT Instructions**: MUST have two operands and explicit prefix modes (`DAT #0, #0`).
   - **Naked Addresses**: Use raw numbers for direct addressing in `-8` mode; avoid `$` modifier.
+  - **Immediate Operand Restrictions**: Some instructions (e.g., `CMP`, `JMN`) do not support immediate values (`#`) in the B-field in strict mode.
+    - `CMP COUNT, #47` -> `CMP #47, COUNT`
+    - `JMN target, #val` -> `JMP target, 0` (if condition is constant).
+  - **Label Case Sensitivity**: Labels MUST match their definitions exactly in case.
 - **Modernization Invariants**:
   - **Do Not Delete**: Comment out legacy code instead of removing it.
   - **Case Sensitivity**: Ensure labels match their definitions exactly.
   - **Explicit Modifiers**: Use `mov.i` etc. where appropriate for clarity, but prioritize `-8` compatibility.
-
-## Usage Patterns
-
+  - **Headers**: Ensure `;redcode-94` or appropriate version is specified in the header.
+  - **Standard Labels**: Use clear, consistent labels for entry points (e.g., `tStart`, `start`).
 - **Standardization Example**:
+
   ```redcode
   ; org start        ; Removed in favor of 'end start'
   start mov 0 1      ; Incorrect
@@ -42,6 +46,7 @@ Specialized guidance for modernizing legacy Redcode warriors to ensure compatibi
   ```
 - **Automated Parameter Extraction**:
   - Ensure `;assert` lines use formats like `;assert (CORESIZE == 8000)` or `;assert CORESIZE=8000` to be correctly parsed by CI.
+  - Supported parameters for extraction: `CORESIZE`, `MAXLENGTH`, `MAXPROCESSES`, `MAXCYCLES`, `MINDISTANCE`.
 
 ## What to Avoid
 

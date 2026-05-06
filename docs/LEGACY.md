@@ -60,9 +60,19 @@ Ensure P-space size is appropriate for the core size. By default, pMARS sets it 
 
 ## Case Studies
 
-### ICWT 1990 Warriors
+### Case: ICWT 1990 Warriors
 
 The 1990 tournament simulation uses strict ICWS'88 mode. Warriors were updated to include commas and explicit B-operands. Explanatory comments were added to each modified file.
+
+### Case: ICWT 1988 Warriors
+
+The ICWT 1988 tournament set was modernized to ensure compatibility with `pMARS -8`:
+
+- **DAT Standardization:** Single-operand `DAT` instructions (common in ICWS'86) were updated to the two-operand format (e.g., `DAT #0, #1588`).
+- **Immediate Operand Restrictions:** In strict ICWS'88 mode, some instructions like `CMP` and `JMN` do not support immediate values (`#`) in the B-field.
+    - `CMP COUNT, #47` was updated to `CMP #47, COUNT`.
+    - `JMN target, #val` (where the condition is a constant) was updated to `JMP target, 0` to maintain logical flow while satisfying the parser.
+- **Explicit B-fields:** `SPL`, `JMP`, and `DJN` instructions were updated to include explicit B-operands (usually `0`) where they were missing.
 
 ### Case: Entry Point Modernization (KOFACOTO Tournament)
 
