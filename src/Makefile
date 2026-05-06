@@ -93,3 +93,6 @@ gen_asm:
 
 verify_asm: pmars
 	@cd .. && bash scripts/verify_red_asm.sh
+
+test: pmars
+	./pmars ../test_bug.red < ../input.cdb
