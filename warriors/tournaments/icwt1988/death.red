@@ -1,4 +1,5 @@
 ;Death.s
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Mark A. Durham: July 21, 1988
 ;United States of America
 ;

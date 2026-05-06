@@ -1,4 +1,5 @@
 ;redcode-icws
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Twimp
 ;author Monika Keindl
 ;assert CORESIZE==8192

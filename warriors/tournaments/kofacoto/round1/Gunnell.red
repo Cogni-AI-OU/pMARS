@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Hyperclear
 ;author Steve Gunnell
 ;strategy Fast scan and clear

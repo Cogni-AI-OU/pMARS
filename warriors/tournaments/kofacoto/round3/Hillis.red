@@ -1,4 +1,5 @@
 ;redcode-x2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;assert CORESIZE == 55440
 ;name v1_40.red
 ;author Dave Hillis

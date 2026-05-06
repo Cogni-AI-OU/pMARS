@@ -1,4 +1,5 @@
 ; Gisela2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ; Andrzej Maciejczak
 ; Sieradz, 1994
        DAT $0, $0

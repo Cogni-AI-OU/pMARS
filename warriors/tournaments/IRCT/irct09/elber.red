@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Elbereth
 ;author bvowk
 ;strategy doubt my sanity. Based on pinprick at Johns urging :)

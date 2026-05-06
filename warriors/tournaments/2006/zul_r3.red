@@ -1,4 +1,5 @@
 ;redcode-CSE2006 
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name R3JHB 
 ;author Zul Nadzri 
 ;strategy You know I will use pspace if given that option! 

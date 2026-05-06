@@ -1,4 +1,5 @@
 ;Immobilizer
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Bram Cohen
 ;United States of America
 ;

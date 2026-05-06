@@ -1,4 +1,5 @@
 ; QUARTER by Stefan Haenssgen
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;
 z1      DAT              2062    ; Pointer to copies
 z2      DAT              4110

@@ -1,4 +1,5 @@
 ;name HSA-Clone
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;author Andy Nevermind
 ;strategy P.Kline's HSA with different constants
 ;strategy (testing at the last minute)

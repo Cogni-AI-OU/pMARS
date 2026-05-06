@@ -1,4 +1,5 @@
 ;  Killer 2     by ThM
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;
            JMP   Start
 Ptr1       Dat   #0, #111

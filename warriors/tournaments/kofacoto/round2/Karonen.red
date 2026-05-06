@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name LP88vamp
 ;author Ilmari Karonen
 ;strategy 88'ified vamp from "LP and Feelin' Fine" by JKW.

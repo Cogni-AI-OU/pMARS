@@ -1,4 +1,5 @@
 ;author David Houston
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Devilish 6k
 ;assert CORESIZE == 6000
 ;strategy Q^5 -> stone/imp

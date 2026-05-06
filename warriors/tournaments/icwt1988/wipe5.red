@@ -1,4 +1,5 @@
 ;Wipe 5
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Anonymous
 ;
 ; Modified to resolve syntax issues and ensure compatibility with pMARS

@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;author Philip Thorne
 ;name TrItE Fighter 5
 ;strategy John Metcalf's Core War: Tournament Weekend 2025

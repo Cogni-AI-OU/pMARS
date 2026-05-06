@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;author inversed
 ;name Semiopacity
 ;date 2025.11.15

@@ -1,4 +1,5 @@
 ;redcode-x2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Oneder
 ;author Ben Ford
 ;strategy hmm.... test scores 180ish

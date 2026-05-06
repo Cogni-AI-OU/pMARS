@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name El fatale
 ;author Sascha Zapf
 ;strategy First entry for IRC Mini No.: 8

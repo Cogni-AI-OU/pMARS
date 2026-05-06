@@ -1,4 +1,5 @@
 ;redcode-94x
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name one five one
 ;author bvowk
 ;strategy No humans were used in the creation of this warrior

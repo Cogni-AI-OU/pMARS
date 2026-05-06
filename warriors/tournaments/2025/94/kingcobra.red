@@ -1,4 +1,5 @@
 ;redcode-94nop
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name King Cobra
 ;author inversed
 ;strategy Oneshot with bomb detection and imp failsafe

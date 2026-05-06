@@ -1,4 +1,5 @@
 ;Corwar-program 'TANK' , slitting/doubling 0-Werfer
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;(c) 4/89 Detlef BUNK, Norderneyweg 5, D-43 Essen
 ;    ergaenzte Version
        jmp start         ; only for start, ommited in further copies

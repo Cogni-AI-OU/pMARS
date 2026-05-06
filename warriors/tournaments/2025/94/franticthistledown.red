@@ -1,4 +1,5 @@
 ;Wilkies 129
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;redcode-94
 ;name Frantic Thistledown
 ;author Dave Hillis

@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name TopsyTurvy
 ;author Philip Thorne
 ;strategy Reversible bomber for Mini IRC tournament R8 [hosted by Roy]

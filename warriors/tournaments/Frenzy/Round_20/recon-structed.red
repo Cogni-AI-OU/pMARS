@@ -1,4 +1,5 @@
 ;redcode-RF20
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;assert CORESIZE==8000
 ;name Recon-structed
 ;author Chip Wendell

@@ -1,4 +1,5 @@
 ;redcode-lp
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Judgement Day
 ;author Philip Kendall
 ;strategy pspacing dodger & scanner

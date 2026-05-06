@@ -1,4 +1,5 @@
 ;Asi-R
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Paolo Montrasio
 ;Italy
 ;

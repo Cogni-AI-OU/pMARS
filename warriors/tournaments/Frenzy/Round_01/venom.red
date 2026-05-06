@@ -1,4 +1,5 @@
 ;redcode-94x
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Venom
 ;author Ben Ford
 ;assert CORESIZE==800 && MAXLENGTH==20 ; Added round-specific settings for Redcoders Frenzy Round 01

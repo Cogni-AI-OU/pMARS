@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Bear Dog
 ;author Dave Hillis
 ; Named after an ancient mamal that was pretty much what the name

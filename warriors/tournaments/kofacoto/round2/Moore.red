@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name EV1L EMP1RE
 ;author David Moore
 ;strategy I Search for my first prey and transform it into a vampire.

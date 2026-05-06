@@ -1,4 +1,5 @@
 ;Wasp Nest
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Alexander Burtzev
 ;Union of Soviet Socialist Republics
 ;

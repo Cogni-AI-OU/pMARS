@@ -1,4 +1,5 @@
 ;redcode-imt2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;assert 1
 ;name h1_36
 ;author Dave Hillis

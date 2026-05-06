@@ -1,4 +1,5 @@
 ; ANDRZEJ MACIEJCZAK
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ; (C) LISTOPAD 1992
 ; UL.ARMII KRAJOWEJ 3/18
 ; 98-200 SIERADZ,TEL.76-650

@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Confused Moth
 ;author Philip Thorne
 ;strategy John Metcalf's Spring/Summer 2002 Tournament 
@@ -42,7 +43,7 @@ BOOT_VAL    equ 0-2532                     ;Stone boot
 
 wA
 ddd for 10
-        mov.i   <BOOT_VAL,      {BOOT_VAL
+        mov.i   <boot_label,      {boot_label
     rof
 boot_label   spl     BOOT_VAL,       stone+10
         mul.x   {0,         }0
@@ -93,7 +94,7 @@ clr     dat    1,           #18
 ;==
 ;Scanner boot. 
 SBOOT_VAL    equ 0-1532
-sboot_label  spl  SBOOT_VAL+SBOOT_VAL-BOOT_VAL, scanner+10+SBOOT_VAL-BOOT_VAL
-wB      mov.i   head,       SBOOT_VAL-wB + SBOOT_VAL-10
+sboot_label  spl  SBOOT_VAL+sboot_label-boot_label, scanner+10+sboot_label-boot_label
+wB      mov.i   head,       sboot_label-wB + SBOOT_VAL-10
         mov.i   sboot_label,      boot_label
         jmp     boot_label-9

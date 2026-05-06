@@ -1,4 +1,5 @@
 ;redcode-x2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name The Truth Is Out There
 ;author David Moore
 ;strategy Kill the imp/stone thing and exploit the p-space bug

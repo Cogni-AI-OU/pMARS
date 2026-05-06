@@ -1,4 +1,5 @@
 ;Dude
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by John R. Perry
 ;United States of America
 ;

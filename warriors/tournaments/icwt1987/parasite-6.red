@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Parasite-6
 ;author Norio Suzuki
 ;strategy Japanese Preliminary '87 finalist

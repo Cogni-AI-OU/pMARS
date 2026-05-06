@@ -1,4 +1,5 @@
 ; QUARTER by Stefan Hänßgen
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ; 5th place in 1991 ICWS Tournament
 ;
 ; Added to ensure correct coresize for ICWT'91 simulation

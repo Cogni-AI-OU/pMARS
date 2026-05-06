@@ -1,4 +1,5 @@
 ;redcode-94nop
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Alternating Raisins B lsxd
 ;author Steve Gunnell
 ;strategy Do a qscan then one of two semi evolved components

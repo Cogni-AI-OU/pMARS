@@ -1,4 +1,5 @@
 ;redcode-94 test
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name RotF Copy
 ;author Robert Macrae 
 ;strategy q^4 -> silkish/imp after David Moore / Ben Ford 

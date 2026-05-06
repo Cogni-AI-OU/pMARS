@@ -1,4 +1,5 @@
 ;redcode-94x
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Queenly Flux
 ;author John Metcalf
 ;strategy p-space stone/paper

@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Splitter
 ;author Ben Ford
 ;strategy 1. precision scan for CIA

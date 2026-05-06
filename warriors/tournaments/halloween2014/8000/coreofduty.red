@@ -1,4 +1,5 @@
 ;redcode-94nop
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Core of Duty: Medium Process Warfare
 ;author inversed
 ;strategy Paper + imp launcher

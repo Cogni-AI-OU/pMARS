@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;assert CORESIZE == 8000
 
 ;author Kurt Franke
@@ -184,7 +185,7 @@ recall	jmp	ACTION-BACKUP			;; vamp for me
 
 slave	mov	$recall, $BACKUP		;; stop paper strategy
 
-boot	mov.i	$dbomb, $boot			;; boot coreclear
+boot	mov.i	$dbomb, $boot_offset			;; boot coreclear
 
 	for	3
 	  mov.i	{boot, <boot

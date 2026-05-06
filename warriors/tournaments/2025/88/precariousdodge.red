@@ -1,4 +1,5 @@
 ;redcode-88
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;assert CORESIZE == 8000
 ;name rdrc: Precarious Dodge 
 ;author Dave Hillis

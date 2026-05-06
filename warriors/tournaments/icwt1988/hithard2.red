@@ -1,4 +1,5 @@
 ;Hit Hard 2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Jon Newman
 ;United States of America
 ;

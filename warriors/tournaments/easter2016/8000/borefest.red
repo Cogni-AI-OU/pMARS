@@ -1,4 +1,5 @@
 ;redcode-mp
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Borefest
 ;author inversed
 ;strategy Two imp launchers

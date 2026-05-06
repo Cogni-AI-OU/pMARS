@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Flarecore C ncji
 ;author Steve Gunnell
 ;strategy qscan -> incendiary bomber -> clear

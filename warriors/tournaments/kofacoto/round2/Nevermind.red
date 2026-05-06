@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Lillith III
 ;author Andy Nevermind
 ;strategy I've never been able to get a vamp to work right
@@ -17,7 +18,7 @@ for 20
         dat #0, #0
 rof
 
-        sub VSTEP_VAL,fang
+        sub vstep,fang
 bite    mov fang,@fang
         jmp -2,<-200    
 fang    jmp  pit, 0-fang 
