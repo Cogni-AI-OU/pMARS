@@ -6,15 +6,21 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../../../" && pwd)"
-PMARS="$ROOT_DIR/src/pmars"
+PMARS="$ROOT_DIR/pmars"
 WARRIORS_DIR="$ROOT_DIR/warriors/tournaments/icwt1991"
 
 if [ ! -f "$PMARS" ]; then
-    if command -v pmars >/dev/null 2>&1; then
-        PMARS="pmars"
+    if [ -f "$ROOT_DIR/src/pmars" ]; then
+        PMARS="$ROOT_DIR/src/pmars"
+    elif [ -f "$ROOT_DIR/bin/pmars" ]; then
+        PMARS="$ROOT_DIR/bin/pmars"
     else
-        echo "Error: pmars not found at $PMARS or in PATH. Please compile it first."
-        exit 1
+        if command -v pmars >/dev/null 2>&1; then
+            PMARS="pmars"
+        else
+            echo "Error: pmars not found at $PMARS or in PATH. Please compile it first."
+            exit 1
+        fi
     fi
 fi
 

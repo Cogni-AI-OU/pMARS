@@ -42,6 +42,7 @@ jobs:
       - name: Run tournament tests
         run: |
           chmod +x bin/pmars
+          export PATH=$PATH:$(pwd)/bin
           
           echo "Running regression tests for all tournaments..."
           # Loop through each tournament directory and run its tests
