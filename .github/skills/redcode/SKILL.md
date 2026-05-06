@@ -1,17 +1,17 @@
 ---
 name: redcode
-description: Write, analyze, optimize, or modernize Redcode assembly programs for Core War, adhering to ICWS '88 strict syntax and ICWS '94 standards.
+description: Write, analyze, optimize, or modernize Redcode assembly programs for Core War, adhering strictly to ICWS '88 syntax and legacy standards.
 ---
 # Skill: redcode
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly for Core War, targeting pMARS simulator compliance.
+Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly for Core War, targeting pMARS simulator compliance in ICWS '88 strict mode.
 
 ## Core Process
 
-1. **Identify Standard**: Determine if the target is ICWS '88 (legacy/strict) or ICWS '94 (modern).
-2. **Apply Syntax Rules**: Enforce strict pMARS compatibility, particularly for legacy `-8` mode.
+1. **Identify Standard**: Verify the target is ICWS '88 (legacy/strict).
+2. **Apply Syntax Rules**: Enforce strict pMARS compatibility for legacy `-8` mode.
 3. **Calculate Constants**: Compute coprime optima step sizes and valid imp spiral spacings based on the specific core size (e.g., 8,000).
 4. **Preserve History**: When modernizing legacy warriors, comment out old logic (`org <label>`) rather than deleting, and append `end <label>`.
 
@@ -31,11 +31,6 @@ Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly
 
 - **Compile/Simulate ICWS '88 Strict**: `pmars -8 -s 8192 -p 64 -c 50000 -r 3 -f <warrior.red>`
 - **Metadata Assertions**: Use `;assert (CORESIZE == 8000)` to specify required simulator bounds.
-
-## Core War Strategy & Constraints
-
-- **Silk Replication**: Exploit ICWS '94 postincrement modes for single-instruction parallel copying: `SPL @paper, step` followed by `MOV.I }paper, >paper`.
-- **P-Space (State)**: Use `LDP`/`STP` to load/store state across rounds. Cell 0 holds the prior round's outcome (0=loss, 1=win, 2=tie).
 
 ## Diagnostics and Troubleshooting
 
