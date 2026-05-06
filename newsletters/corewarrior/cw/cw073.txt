@@ -214,13 +214,11 @@ Pos Name                   Author             Age    Strategy
 45  Tornado 4              Beppe Bezzi         78    Bomber
 46  He Scans Again         Paul Kline          76    Scanner
 47  Digitalis 4            Christian Schmidt   73    Q^2 -> Clear/imp
-48  The Stormbringer       Christian Schmidt   72*   Q^2 -> Stone/imp
-48  Recycled Bits          David Moore         72*   P-warrior
-50  Taking Names           Paul Kline          68    Scanner
+48  Taking Names           Paul Kline          68    Scanner
+49  Red Baron              Christian Schmidt   64    P-warrior
+50  Blain                  Nimon               63    *Unknown*
 
-Recycled Bits and The Stormbringer enter the ENHoF at last :-) Neither
-Shadow or Puddleglum survived long enough - who will write the first
-stone/paper to make it into the Hall?
+Now increased to 50 ranks, the New HoF should be much easier to enter.
 _______________________________________________________________________________
 Current Status of the Internet Pizza Server Beginner Hill:
 

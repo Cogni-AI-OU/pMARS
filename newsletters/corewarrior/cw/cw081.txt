@@ -282,7 +282,7 @@ qDec  mul.b  *2               , qPtr
 qSkip sne    *qTab1           , @qPtr
       add.b  qTab2            , qPtr
 qLoop mov    qBomb            , @qPtr
-qPtr    mov    qBomb            , }qX
+qPtr  mov    qBomb            , }qX
       sub    #qStep           , @qSkip
       djn    qLoop            , #qTime
       djn.f  bBoot            , #0

@@ -234,7 +234,911 @@ paper/imp (21).
 22 Darek L.                  .      .      .    35.2   35.2
 23 bvowk                     .      .      .    27.0   27.0
 _______________________________________________________________________________
-Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
-care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
-<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
-<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>
+The Hint - RotF's Qscan by M Joonas Pihlaja
+
+Shortly after Leonardo Humberto and John Metcalf published their Q^3 qscan
+decoder which uses multiplication, David Moore pushed the cutting edge of
+qscan decoders by publishing Return of the Fugitive.  Moore's decoder has
+only three cycles decoding overhead, the minimum possible, and a much
+smaller footprint than previous qscans.
+
+The basic idea in the Humberto/Metcalf qscan is to compute the scanned
+location by an expression ptr + FAC*[table entry #1]*[table entry #2] using
+this kind of decoder:
+
+        ; decoder
+slow    mul.b  tab,     ptr             ;\ multiply FACTOR in ptr by
+fast    mul.ab tab,     @slow           ;/  one or two table entries.
+decide  sne    dat0, @ptr               ;\ choose between A- or B-field
+        add    #SEP,    ptr             ;/  locations. dat0 = empty core.
+        ...
+ptr:    mov    bmb,     FAC             ; the bomb pointer and factor FAC
+        ...
+
+; decoding table
+        dat    15,      10
+tab:    dat    7,       4
+        dat    13,      11
+
+This decoder has four cycles of decoding overhead, compared to five in Q^2
+qscans like Probe.  The scans are SEQ scans, similar to Probe, that scan
+via their A- and B-fields two locations that are separated by (a constant)
+SEP cells
+
+        seq     ptr + FAC*K1*K2*SEP,    ptr + FAC*K1*K2*SEP + SEP
+
+where K1 and K2 are (possibly mutated) table entries.  When location LOC =
+ptr + FAC*K1*K2*SEP is decoded, then the sne/add #SEP,ptr needs to choose
+between LOC and LOC+SEP.  After a scan finds something, it mutates either
+the entries in the decoding table, or the A- and B-fields of the 'fast' and
+'slow' lines to multiply the factor FAC by the right constant(s).
+
+The main improvement of the Humberto/Metcalf qscan over Probe's Q^2 is that
+it achieves one cycle faster decoding using the same number (three) of
+cells dedicated to the decoding table.  Note that the same response time is
+possible using a Q^2 by using multiple tables, but it costs (to the best of
+my knowledge) at least one or two extra cells dedicated to decoding tables,
+depending on the number of scans required --- see Aggression is a Switch
+for the example.
+
+
+* Faster dada, Faster!
+----------------------
+
+The decoder in RotF's qscan achieves three cycle decoding overhead by using
+indirection to choose the multiplier from several multiplier tables.  It
+has this conceptual form:
+
+; Decoder (1)  (label dat0 points to empty core)
+decode  mul.b   *tabptrs, ptr           ; Multiply ptr by a table entry.
+decide  sne     dat0,     @ptr          ; Choose A- or B-scan.
+        add.?   ???,      ptr           ; ??? = separation between scans.
+        ...
+ptr     mov     bmb,      FAC           ; bomb pointer and factor
+        ...
+
+
+        dat     tab1,   ?               ; \  These are pointers to the decoding
+tabptrs dat     tab2,   ?               ;  } tables
+        dat     tab3,   ?               ; /
+
+
+        dat     ?,      A1              ; \ Multipliers A1, A2
+tab1    dat     ?,      A2              ; /
+
+
+        dat     ?,      B1              ; \
+tab2    dat     ?,      B2              ;  } Multipliers B1, B2, B3
+        dat     ?,      B3              ; /
+
+
+tab3    dat     ?,      C2              ; Multiplier C2
+
+
+where `?'  fields aren't referenced (this allows embedding the decoding
+tables into unused A- and B- fields of a warrior).  The separation between
+A- and B-scans is actually variable, picked from a table of possible
+separations, and is marked with `???'  in the decoder above.  Ignore it for
+now.  When a scan finds something it mutates the A-field of `decode' to
+choose a specific decoding table from `tab1', `tab2', or `tab3', and
+(possibly) the `tabptrs' table to choose a specific element from the table
+(say between A1 and A2 of `tab1').
+
+The first size optimisation in RotF is to overlap the decoder code and the
+`tabptrs' table as follows:
+
+; Decoder (2)
+decode  mul.b   *2,     ptr             ; \
+decide  sne     tab1,   @ptr            ; \} Decoder.
+        add.?   tab2,   ptr             ; /} A-fields are pointers to
+        ?       tab3,   ?               ; /   decoding tables.
+
+Stop! Now the A-field of the SNE line doesn't point to empty core anymore as
+required by decoder (1).  The trick in RotF is to use indirection in the SNE
+line:
+        ...
+        sne     *tab1, @ptr             ; A-field of `tab1' entries point to
+        add.?   tab2,   ptr             ;  empty core.
+        ...
+
+and force the tab1 entries to have the form
+
+        dat     dat0,   A1              ; dat0 points to empty core.
+tab1    dat     dat0,   A2
+
+Now when the sne instruction checks the decoded location it uses empty core
+at tab1+dat0 for the comparison.  As always, there's a downside.  The
+restriction that the A-fields of the `tab1' entries point to empty core all
+but precludes embedding the table into unused B-fields of other code.  So
+instead RotF uses a-predecrement:
+
+        ...
+        sne     {tab1,  @ptr            ; A-field of `tab1' entries point
+        add.?   tab2,   ptr             ;  to a cell that is preceded by empty
+        ...                             ;  core.
+
+        dat     foo,    A1              ; \ foo and bar must be preceded
+tab1    dat     bar,    A2              ; / by empty core.
+
+which is much easier to arrange.  There's no reason why the entries in
+`tab2' shouldn't be used themselves as the separation between A- and
+B-scans, so the ADD.?  instruction becomes ADD.B.  With these modifications
+the other tables `tab2' and `tab3' may usually be at least partially
+embedded into other code without too much trouble, as in RotF or Son of
+Vain.
+
+
+* The scans
+-----------
+
+From the decoder in (2) with ADD.B we see that the separations between A-
+and B-scans are determined by the entries in the `tab2' table, because the
+ADD.B instruction's A-field points to the table `tab2':
+
+; Decoder (2) (repeated)
+decode  mul.b   *2,     ptr             ; \
+decide  sne     {tab1,  ptr             ; \} Decoder.
+        add.b   tab2,   @ptr            ; /} A-fields are pointers to
+        ?       tab3,   ?               ; /   decoding tables.
+
+This means the scanning phase must scan location pairs of the form
+
+        ptr + K*FAC,    ptr + K*FAC + B_i
+
+where K is a multiplier and B_i is related to the entries B1, B2, B3 in
+tab2.  This also forces the `tab2' entries B1, B2, B3 to be fairly large so
+that the A- and B-scan separation isn't too small.  You may wonder why
+immediate mode couldn't be used in the ADD line like so:
+
+decode  mul.b   *2,     ptr
+decide  sne     {tab1,  ptr
+        add     #tab2,  ptr
+        ?       tab3,   ptr
+
+There's no show-stopping reason, but consider the maximum distance between
+the ADD line and `tab2' in a warrior --- it is bounded from above by the
+MAXLENGTH of a warrior, so the separation between scans would be bounded by
+MAXLENGTH too.  [Sidenote:  We'll see later that the largest minimum
+separation is bounded by MAXLENGTH in any case, but at least then the
+separation is that small only for one pair of scans, rather than for all of
+them when # mode is used.]
+
+When the scans are only SEQ scans, then it turns out that there are only a
+handful of possible locations that can be distinguished by the decoder.
+Namely, if we label the decoder (2) with labels `q0' for the pointer to the
+table of multiplier tables at label `q1' like so
+
+; Decoder (2) (with labels q0 and q1)
+decode
+q0      mul.b   *q1,    ptr             ; A-field chooses table.
+decide  sne     {tab1,  ptr             ; \
+q1      add.b   tab2,   @ptr            ;  } A-fields are pointers to
+        ?       tab3,   ?               ; /   decoding tables.
+
+then the possible locations that may be decoded using SEQ scans only are:
+
+qscan   seq     ptr + FAC,      ptr + FAC + B2
+        jmp     decide                          ; no decode.
+
+        ; q0 mutations
+        seq     ptr + FAC * C2, ptr + FAC * C2 + B2
+        jmp     decode  ,       }q0             ; make decoder use C2 of tab3
+
+        seq     ptr + FAC * A2, ptr + FAC * A2 + B2
+        jmp     decode  ,       {q0             ; make decoder use A2 of tab1
+
+        seq     ptr + FAC * A1, ptr + FAC * A1 + B2
+        djn.a   decode  ,       {q0             ; make decoder use A1 of tab1
+
+        ; q1 mutations
+        seq     ptr + FAC * B1, ptr + FAC * B1 + B1
+        jmp     decode  ,       {q1             ; make decoder use B1 of tab2
+
+        seq     ptr + FAC * (B1-1),ptr + FAC * (B1-1) + (B1-1)
+        djn     decode  ,       {q1             ; make decoder use B1-1 of tab2
+
+        seq     ptr + FAC * B3, ptr + FAC * B3 + B3
+        jmp     decode  ,       }q1             ; make decoder use B3 of tab2
+
+        ; no mutations
+        seq     ptr + FAC * B2, ptr + FAC * B2 + B2 ; decoder uses B2 of tab2.
+        jmp     decode
+
+That's a pathetically short qscan.  Moore's insight was to use SNE/SEQ
+scanning pairs where the SEQ instruction itself reprograms the decoder to
+decode the correct location in a novel way.  Namely, one operand of the SEQ
+instruction mutates one of the decoding tables by scanning indirectly via
+the table entry itself!  OK, that wasn't very understandable, so here's an
+example.  First we have, say, this scan:
+
+        seq     ptr + FAC*C2,   ptr + FAC*C2 + B2
+        jmp     decode,         }q0         ; '}' makes decoder use C2 in tab3
+
+When the scan finds something the decoder decodes the location ptr + FAC*C2
+and uses B2 as the scan separation.  Now, consider this pair of SNE/SEQ
+scans:
+
+        sne     ptr + FAC*C2,   ptr + FAC*C2 + B2
+        seq     <tab3,          ptr + FAC*(C2-1) + B2
+        jmp     decode,         }q0             ; make decoder use tab3
+
+Now if the SNE scan finds something the decoder works like before and
+decodes the location ptr + FAC*C2 just as it should, but if it doesn't it
+falls through to the SEQ scan.  The SEQ instruction in turn scans the
+locations (note the predecrement in <tab3)
+        ...
+        tab3 + C2-1   and
+        ptr + FAC*(C2-1) + B2
+
+and _mutates_the_decoding_tables_ by decrementing the C2 entry of `tab3'.
+So if anything was found at those locations, the decoder decodes the
+location
+
+        ptr + FAC * (C2-1)
+
+The decoded location is evident from the form of the decoder (2), which
+will look like this if something is found:
+
+                ; This A-field has been incremented to use `tab3'
+decode          ;/
+q0      mul.b   *3,     ptr             ; --  A-field refers to the B-field
+decide  sne     {tab1,  @ptr            ;   |   of `tab3' which is = C2.
+        add.b   tab2,   ptr             ;   |
+        ?       tab3,   ?               ; <-
+
+In any case, for decoding to work correctly, the relative locations of
+`ptr' and `tab3' must satisfy the relation
+
+        ptr + FAC * (C2-1) = tab3 + C2-1
+
+If we consider FAC and the relative distance tab3-ptr of `tab3' from `ptr'
+to be known, we can solve for C2 as follows:
+
+            ptr + FAC * (C2-1)  =  tab3 + C2-1
+         FAC * (C2-1) - (C2-1)  =  tab3 - ptr
+            (FAC - 1) * (C2-1)  =  tab3 - ptr
+                            C2  =  1 + (tab3 - ptr) * (FAC-1)^{-1}
+
+where the division by (FAC-1) is done by computing its inverse modulo
+CORESIZE.  The division forces (FAC-1) to be invertible modulo CORESIZE,
+that is, to be a mod-1 number.  The same trick can be applied to most of
+the other scans to obtain i) smaller scanning code consisting of SNE/SEQ
+pairs, and ii) similar equations for all the decoding table entries A1, A2,
+B1, B2, B3, C2 in terms of the factor FAC and the relative positions of the
+decoding tables from `ptr'.  Note especially that the scanned locations may
+change dramatically when the decoding tables or `ptr' are moved inside the
+warrior due to the multiplication of (tab-ptr) by (FAC-1)'s inverse modulo
+CORESIZE.
+
+
+* The attack
+------------
+
+In decoder (2) (repeated below) there needs to be an instruction with
+a-field pointer to `tab3' denoted by ?:
+
+decode  mul.b   *2,     ptr             ; \
+decide  sne     {tab1,   ptr             ; \} Decoder.
+        add.b   tab2,   @ptr            ; /} A-fields are pointers to
+        ?       tab3,   ?               ; /   decoding tables.
+
+How to best use this instruction with forced A-field in the attack is
+somewhat interesting.  RotF makes the `tab3' line a part of a two-line
+brainwashing payload used in its qscan attack, Son of Vain uses a .5c qscan
+attack with `tab3' as its qscan bomb, and the example code below uses
+`tab3' to initialise a .6c bombing Torch-like attack loop.
+
+
+* The example code
+------------------
+
+The code is structured similarly to the qscan in Son of Vain and RotF, but
+there's a significant difference:  The "decoding factor," that's named FAC
+in the explanation above, is made a derived constant from an independent
+parameter FACTOR = (FAC+1)^{-1} (mod CORESIZE).  Inverses (mod CORESIZE) of
+an invertable number X are computed via Euler's totient function by raising
+X to 3199 (mod CORESIZE) using this macro:
+
+; Set register `y' to the inverse mod 8000 of register `x'.
+M equ 8000
+invert equ (a=x*x%M)+(a=a*x%M)+(a=a*a%M)+(a=a*x%M)+(b=a*a%M)+(b=b*b%M)\
+ +(b=b*b%M)+(c=b*b%M)+(c=c*b%M)+(d=c*c%M)+(d=d*d%M)+(d=d*d%M)\
+ +(d=d*c%M)+(d=d*d%M)+(d=d*c%M)+(y=a*d%M)
+
+The macro `invert' may fail on (very) old versions of pMARS due to
+overflowing the macro expansion buffer.  A more serious concern for
+portability is that line continuation using `\' isn't supported by the
+version of pMARS used at KOTH.org, or possibly the KOTH.org scripts (I'm
+not sure which fails).  I've succesfully tested the qscan at KOTH.org by
+unwrapping the continued lines into one line.
+
+Incidentally, I discovered an easy way to test a qscan code while writing
+this:  First modify your code to either die or do nothing when booting.
+Second, use an opponent like 'jmp 0,0' and run all permutations like so
+
+$ pmars-server -b -P qscan.red jmp.red -c 200
+RotF qscan by M Joonas Pihlaja scores 168
+Unknown by Anonymous scores 46638
+Results: 56 15546 0
+
+If the qscan code wins exactly twice the number of locations it scans, then all
+locations are decoded and attacked properly.
+
+;redcode-94nop
+;name RotF qscan
+;author M Joonas Pihlaja
+;strategy Cut-and-paste version of Moore's qscan in Return of the Fugitive
+;strategy in Return of the Fugitive for CW.
+;assert CORESIZE==8000
+load0 z for 0
+        rof
+
+boot    jmp     0
+dat0    equ     (load0-123)
+
+;--------------------------------------------------------------------------
+; An expression that sets register y to the inverse mod 8000 of register x.
+; Uses scratch registers a, b, c, d.
+M equ 8000
+invert equ (a=x*x%M)+(a=a*x%M)+(a=a*a%M)+(a=a*x%M)+(b=a*a%M)+(b=b*b%M)\
+        +(b=b*b%M)+(c=b*b%M)+(c=c*b%M)+(d=c*c%M)+(d=d*d%M)+(d=d*d%M)\
+        +(d=d*c%M)+(d=d*d%M)+(d=d*c%M)+(y=a*d%M)
+
+;--------------------------------------------------------------------------
+; Constants
+;
+
+; A factor FACTOR that relates the distances between the bomb pointer
+; `qb' and the decoding tables `t1', `t2', and `t3' to the locations
+; that are scanned.  The entries in the decoding tables are derived
+; from FACTOR and the relative positions of the tables and the bomb
+; pointer.  FACTOR must be relatively prime to 8000.
+
+FACTOR  equ     1283
+
+; We need to evaluate FACTOR's inverse before using it.  We can do
+; this unintrusively by placing the expression in the dat's operand
+; below anywhere before the quickscan code (or even in the first cell
+; of the quickscan).
+        dat     0*((x=FACTOR) + invert)         ; y = FACTOR^{-1} (mod 8000)
+
+; Next come the derived constants: A1, A2, B1, B2, B3, and C2 are
+; entries in the decoding tables, and the constant D is the magic
+; decoding factor 1+FACTOR^{-1} (mod CORESIZE).  The equations giving
+; these constants are derived from the form of the decoder and
+; mutations in the scan phase.
+D       equ     (y+1)                           ; decoding factor
+A1      equ     (1 + FACTOR * (t1-1 - qb))      ; t1 entry
+A2      equ     (1 + FACTOR * (t1   - qb))
+B1      equ     (1 + FACTOR * (t2-1 - qb))      ; t2 entries
+B2      equ     (1 + FACTOR * (t2   - qb))
+B3      equ     (1 + FACTOR * (t2+1 - qb))
+C2      equ     (1 + FACTOR * (t3   - qb))      ; t3 entry
+
+
+;--------------------------------------------------------------------------
+; Decode tables
+;
+
+        dat     0       ,       B1
+t2      dat     0       ,       B2
+        dat     0       ,       B3
+
+; The only limitation on the placing of the tables is that `t2' must be
+; separated from the other tables by at least one cell to avoid bad bomb
+; spread.
+        dat     123,123                         ; any old cell.
+
+; In the `t1' table the decoder uses the a-fields to get hold of a dat 0,0
+; to compare the found location with.
+        dat     dat0+1  ,       A1
+t1      dat     dat0+1  ,       A2
+
+; The only reason the a-field contains the bomb pointer `qb' is that
+; the current decoder prepares the attack phase for .6c bombing.
+t3      dat     qb      ,       C2
+
+
+;--------------------------------------------------------------------------
+; Decoder and attack
+;
+; Basic idea: multiply decoding factor `D' by a table entry and
+; optionally offset by another table entry.  The scan phase mutates
+; the table pointers and entries to make it all work out.
+;
+; The line following `q1' isn't really a part of the decoder proper
+; but it's needed to hold a pointer to `t3' if the `t3' scan is used.
+; In this version it also does double duty by preparing the attack for
+; .6c bombing.
+
+        ; -- Decoding phase --
+decode
+q0      mul.b   *2      ,       qb
+decide  sne     {t1     ,       @qb     ; \  The A-fields are pointers to
+q1      add.b   t2      ,       qb      ;  } decoding tables.
+        add.ba  *t3     ,       qb      ; /
+
+        ; -- Attack phase --
+        mov     qdat    ,       *qb
+        mov     qdat    ,       @qb
+qb      mov     24      ,       *D
+        sub     qsub    ,       qb
+        djn     -4      ,       #6
+        jmp     boot
+
+qsub    dat     -15     ,       21
+qdat    dat     10      ,       0
+
+
+;--------------------------------------------------------------------------
+; Scan phase
+;
+; Notes:
+;
+; - The two scans marked with !!! interact so that the distance between
+; their scans is t2-qb+1, so you'll want `t2' and `qb' at opposite ends of your
+; warrior if you plan to use both scans.  If this is causing you grief then
+; remove the second line marked with !!!.
+;
+; - If you're looking to make the scan smaller, then good candidates
+; for removal are the scans involving `C2' from the `t3' table.
+;
+; - The equations in the right margin are the conditions that must be
+; met for decoding of the scans with < predecrements to work.  They
+; have the form
+;
+;       table + ofs + (TABLE_ENTRY-1)  =  qb + D*(TABLE_ENTRY-1)
+;
+; from which we can solve for TABLE_ENTRY to get the expressions for
+; A1, A2, ... given in the constants section.
+;
+; - The order of the scans matters due to the mutations of the
+; decoding tables by the scans with < predecrements.
+
+        ; no decoder mutations
+qscan   seq     qb + D  ,       qb + D + B2             ; !!!
+        jmp     decide
+
+        ; q0 mutations
+        sne     qb + D * C2,    qb + D * C2 + B2
+        seq     <t3     ,       qb + D * (C2-1) + B2
+        jmp     decode  ,       }q0             ; t3 + C2-1 = qb+D*(C2-1)
+
+        sne     qb + D * A1,    qb + D * A1 + B2
+        seq     <t1-1   ,       qb + D * (A1-1) + B2
+        djn.a   decode  ,       {q0             ; t1-1 + A1-1 = qb+D*(A1-1)
+
+        sne     qb + D * A2,    qb + D * A2 + B2
+        seq     <t1     ,       qb + D * (A2-1) + B2
+        jmp     decode  ,       {q0             ; t1 + A2-1 = qb+D*(A2-1)
+
+        ; q1 mutations
+        sne     qb + D * B1,    qb + D * B1 + B1
+        seq     <t2-1   ,       qb + D * (B1-1) + (B1-1)
+        jmp     decode  ,       {q1             ; t2-1 + B1-1 = qb+D*(B1-1)
+
+        seq     qb + D * (B1-2),qb + D * (B1-2) + (B1-2)
+        djn     decode  ,       {q1
+
+        sne     qb + D * B3,    qb + D * B3 + B3
+        seq     <t2+1   ,       qb + D * (B3-1) + (B3-1)
+        jmp     decode  ,       }q1             ; t2+1 + B3-1 = qb+D*(B3-1)
+
+        ; no mutations
+        sne     qb + D * B2,    qb + D * B2 + B2        ; !!!
+        seq     <t2     ,       qb + D * (B2-1) + (B2-1)
+        jmp     decode                          ; t2 + B2-1 = qb+D*(B2-1)
+
+        jmp     boot
+
+end     qscan
+_______________________________________________________________________________
+The Hint - Airbag: Exposed by Lukasz Grabun
+
+I was asked a question - what an airbag really is, and how to use it?
+
+* The concept
+-------------
+
+The airbag technique was mentioned by M Joonas Pihlaja in a thread in
+r.g.cw, while I was a newbie:
+
+http://groups.google.com/groups?dq=&hl=en&lr=&ie=UTF-8&threadm=Pine.OSF.4.30.01
+
+Here's what Joonas said:
+
+: So where before a self-splitting loop was good for life-expectancy, real
+: dat bombs are turning it into a liability.
+
+: The fix:  Use a bombing loop that won't die if it is dat bombed, but
+: also without self-splitting.  Aka an airbag.
+
+: The idea is to use a small fixed number of processes that are scheduled
+: to execute a loop exactly like a single process, and the clever bit is
+: that the loop is created so that the processes can detect if the loop is
+: dat bombed, in which case they fall through to the clear.  I doubt I
+: could explain the mechanics of it as lucidly as Paulsson in his posting
+: of his bomber Airbag, so I won't even try.  Also see Janeczek's Behemot
+: bomber for this technique.
+
+* The code
+----------
+
+Okay, so how far is it from the idea to the implementation itself?  I must
+confess that 12 months ago, when I posted my first warrior to r.g.cw and
+Joonas mentioned the airbag technique, I was a little confused.  Namely:
+I didn't know what the guy was talking about :-) So I can understand the
+problems faced by a newbie when dealing with airbag.
+
+Since it is often best to follow some code to understand an idea, let's
+take a look at how airbag is implemented in a warrior.  The most recent,
+to my knowledge, is Return of Vanquisher.  It was published a week or so
+ago; although I am still tweaking the q-scan, the main code is finalised
+and nothing will change.  So it fits our purposes:
+
+sStp    equ 1022
+
+sLoo    mov     sSb             , <sPtr       ; main loop starts here
+        mov     sJb             , *sPtr
+sPtr    mov     sStp+1          , *sStp*3+1
+        add     sInc            , sPtr
+        mov     }sMb            , @sPtr
+        jmz.a   sLoo            , {sMb        ; and ends here
+
+        jmz.f   clear           , >clear
+sInc    jmz.f   sStp*3          , @sStp*3+1
+
+; some empty core
+
+sJb     jmp     @sStp           , sStp-1
+sSb     spl     #1-sStp         , 8
+sMb     mov     @0              , <sSb
+
+I tried to snip out the irrelevant parts.  Hopefully, I didn't snip too
+much away.  :-)
+
+First, let's take a look at the main loop.  We have six instructions, and
+it more or less looks like a standard bomber using incendiary bombs.  A
+little big, maybe, but it delivers one spl/mov incendiary and two jmp
+bombs.  So we have 4 (?) bombs in a six instruction loop.  This means the
+bomber runs at 0.66c - reasonably fast.
+
+What makes it differ from the standard bombers are the lines:
+
+sCMb    mov     }sMb            , @sPtr
+sChk    jmz.a   sLoo            , {sMb        ; and ends here
+
+; ...
+
+sMb     mov     @0              , <sSb
+
+If we take a look at the sMb line, which contains the mov half of the
+incendiary, we notice it's a-field is zero.  Therefore, the instruction at
+sCMb copies the sMb bomb into core (via the pointer at sPtr), and then
+increments the a-field of sMb.
+
+Next, the jmz.a in the sChk line, decrements the a-field of sMb, and jumps
+back to the beginning of the loop (unless somehow, the a-field of sMb no
+longer contains zero - which leads us to the next point).
+
+* Parallel execution of processes
+---------------------------------
+
+As for now the idea is of no practical use.  It gives no protection or
+anything like it.  To be more precise: the bomber does a little bit of
+scanning, since it checks the a-field of a single cell.  While fighting a
+paper, this cell would most likely be overwritten by the paper's code or
+bombs sooner or later (sooner, we presume).  So the scanning line jmz.a
+could be used as a simple check.
+
+More importantly: we can develop this idea to protect the main loop
+itself.  How can this be possible?  Since we have just one process in the
+loop, once we have been hit our process terminates and the battle ends.
+But why not place extra processes in our code to make it more resistant to
+dat bombs?  If we can make them execute the loop just like a single process
+would...  This would be perfect!
+
+If we have more processes, a single dat bomb does not kill us so quickly.
+Now, we can check not only if sMb has been modified, but also if we have
+been hit by a dat bomb.  How can we do this?  A single dat bomb would not
+kill the warrior immediately, but would interfere with subtle timings.
+
+Some processes would be killed.  Other processes while executing the sChk
+line would "know" something is wrong because a previous process did not
+execute sCMb, and the a-field of sMb contains an unexpected value.  These
+processes would fall through to the line after sChk to perform the end
+phase (in RoV this is a simple d-clear).
+
+* The booting code
+------------------
+
+The main problem is to arrange processes to execute the code in the way
+a single process does. It is not as hard as one can expect:
+
+        org bBoo
+sStp    equ 1022
+sLen    equ 7
+bOff    equ (3408+sLoo)         ; bomber boot distance
+dOff    equ -254                ; offset between bomber & bombs
+
+bSrc    mov.i   {0              , #sLen
+sLoo    mov     sSb+dOff        , <sPtr
+        mov     sJb+dOff        , *sPtr
+sPtr    mov     sStp+1          , *sStp*3+1
+        add     sInc            , sPtr
+        mov     }sMb+dOff       , @sPtr
+sChk    jmz.a   sLoo            , {sMb+dOff
+
+sSpr    jmz.f   clear           , >clear
+sInc    jmz.f   sStp*3          , @sStp*3+1
+
+;-- boot bombs and extra lines
+bBoo    mov     sMb             , bOff+19+dOff
+        mov     sSb             , bOff+18+dOff
+        mov     sJb             , bOff+17+dOff
+        mov     sInc            , bOff+sLen+2
+        mov     sSpr            , bOff+sLen+1
+bDst    spl     1               , bOff+sLen+1
+        spl     1               , }0
+        spl     1               , 0
+
+;-- boot bomber
+        mov     <bSrc           , <bDst
+bJmp    jmp     >bDst           , 0
+
+I copied all of the boot code to give you the full picture.
+
+All starts at the bBoo line. First, we are moving bombs and extra lines
+that do not belong to the main loop. Then, thanks to John Metcalf's
+snippets from CW #69, we quickly generate seven (yes,seven) parallel
+processes. We copy all lines between bSrc and sChk.
+
+And then the magic begins. The b-field of the bDst line points to the
+mov.i {0,#xx instruction in the booted bomber.  The bJmp line directs the
+first process there.  The next process, due to post-increment addressing,
+jumps to the next line in the booted bomber.  And so on. After booting is
+complete, we have the following situation:
+
+       dat    0,  0
+1      mov.i {0, #0 ; 1st process <- this process executes first
+2 sLoo              ; 2nd process <- this process executes second
+3 .                 ; 3rd    "
+4 .                 ; 4th    "
+5 .                 ; 5th    "
+6 .                 ; 6th    "
+7 sChk              ; 7th    "
+
+The first line simply moves the dat 0,0 that lays behind our code to the
+over itself. After this one process has executed we have the following
+situation:
+
+1      dat    0,  0
+2 sLoo              ; 1st & 2nd process <- the 2nd process will execute next
+3 .                 ; 3rd    "          <- then the 3rd process
+4 .                 ; 4th    "          <- then the 4th process
+5 .                 ; 5th    "          <- etc
+6 .                 ; 6th    "
+7 sChk              ; 7th    "
+
+And finally, after the 7th process has executed, it will be the turn of
+the first process to execute once again, and so on... You can create a
+"diagram of process flow" in the code. This is left as an easy exercise
+for the reader. :-)  What you should note is processes execute the code as
+though it is being executed by a single process, which was our goal. Now,
+one hit in the lines 2 to 6 of our warrior and we jump to the clear phase,
+to hopefully deal with the nasty opponent.
+
+* Variants
+----------
+
+Booting can be achieved in other ways.  One method was mentioned by
+Pihlaja in the thread quoted at the beginning of this article.  This is
+used by Vanquisher.
+
+bBoot   mov     bIncen          , bOff+bAway-4-CURLINE
+        mov     bSpare          , bAway-CURLINE
+bSrc    spl     2               , bStart+5
+bDest   spl     2               , bAway-CURLINE
+cSrc    spl     1               , cStart+4
+        mov     <bSrc           , <bDest
+cBoot   mov     <cSrc           , <cDest
+        mov     <dSrc           , <dDest ; boot the bomber
+bDjn    djn     >bDest          , #5     ; jump into the code
+cDest   jmp     bAway-CURLINE-4 , cAway-CURLINE
+
+bStart  add     #bStep          , bPtr
+bMov    mov     bOff            , @bPtr
+bPtr    mov     >bEvac          , @2-bDist
+bChk    jmz.b   bStart          , <bEvac
+bEvac   jmz.b   bSpl            , bSpl
+bSpare  jmz.b   dOff-5          , dOff-5
+
+Since the loop now has four lines we need five processes to be place into
+it.  Note that no mov.i {0,#0 line is required with this method.  We use
+the cDest line and direct jump the remaining process into the correct
+position.
+
+How is it done?  After the booting phase completes in the cBoot+1 line we
+order *four* processes to jump into the bombers code.  This is done by the
+djn instruction at bDjn.  Note the post increment addressing mode - it's
+quite similar to the jmp >... from the previous example.  Now, since we
+don't have the mov.i {0,#0 line we need to position the remaining process
+using some alternative means.  This is easy enough to take care of by a
+simple jmp, and this is done at cDest.  Now the warrior and allocated
+processes look like:
+
+bStart      1st process, 5th process
+bMov        2nd process
+bPtr        3rd process
+bChk        4th process
+
+And the story begins once again.
+
+* Summary
+---------
+
+Whichever you decide to use, you'll discover the airbag technique to be
+extremely useful. Not only because it protects our warrior, but also
+because you can use processes to perform a sophisticated end-phase. In
+Return of Vanquisher and in Vanquisher itself. processes runs two
+independent core-clears. This increases the offensive power of the
+warrior.
+
+I hope you have enjoyed this article and find it useful.
+
+* Acknowledgements
+------------------
+
+Obviously for Joonas for his hints when I was a newbie.  Kudos go also
+to John Metcalf for pointing out a nasty bug in Return of Vanquisher code.
+_______________________________________________________________________________
+Extra Extra - Digitalis 2002 by Christian Schmidt
+
+Well, after a long period of time I decided to work again on a new
+d-clear/imp warrior.  As a starting point I used Digitalis 4, which was for
+a short period successful on the hills.  The first thing to change, was to
+use a multi-process boot, which is now common for todays warriors.  As it
+is much smaller in size, I decided to also boot the imp-launcher.
+
+An advantage is also, thanks to the multi-process booting, I need to boot
+only a few spl 1 instructions together with the imp-launcher.  Later, I also
+decreased the imp launcher by one line, adding the step in the imp to the
+pointer, instead of having the step in a separate line.  This gave me a
+fraction of a point increase against my testsuite.
+
+Another feature of the imp-launcher is it is pushing further processes into
+the d-clear.  The tests against my testsuite show, as I expected, a
+significant weakness to some scanners, while it didn't lose too much to
+most papers.  So, I computer generated different sets of boot distances for
+the imp and the clear components and tested them against Hazy Lazy, Willow,
+Claw, Uninvited, Son of Vain and Reepicheep (score check to see if the imps
+spreads well).
+
+The best scoring of these I sent to the hills and, wow, Digitalis scores
+quite well on the 94nop and the 94 draft hill.  After they were pushed off
+at an age of about 80, I was again trying some improvements.  I now felt it
+was losing a little too often against papers, so I must increase the
+processes to the imp.  I found that if I include another spl 1 instruction
+before I jump to the booted imp-launcher, it gives me significantly lower
+loses against papers.  So, with this code I now hope to survive also a hill
+dominated by papers.  The future will us show if my hope was right.
+
+;redcode-94nop
+;name Digitalis 2002
+;author Christian Schmidt
+;strategy Mini Q^4 -> d-clear + 7pt imps
+;strategy multi-process bootstrapping
+;strategy boot away the clear AND the imps
+;strategy v0.1 new, optimized constants
+;strategy v0.2 fixing a bug in the imp-launcher
+;strategy v0.3 fixing a bug with the qscan
+;strategy v0.3a rearranging the components
+;strategy v0.4 new process allocation
+;strategy v0.5 imp-launcher 1 instruction smaller
+;assert 1
+
+org qGo
+
+impoff  equ     100
+impsize equ     1143
+cBoot   equ     2390
+iBoot   equ     459
+
+        spl     1,              }qC
+qTab2   spl     1,              }qD
+        spl     2,              }qE
+        djn.f   imp,            <-250
+        add.a   imp,            -1
+        djn.f   cBoot-iBoot,    <-400
+        dat     0,              0
+imp     mov.i   #impsize,       *0
+        dat     0,              0
+        dat     0,              0
+iEnd    dat     0,              0
+
+ptr     dat     0,              1800
+clrb    dat     >2667,          25
+
+clear   spl     #0,             >ptr-15
+loop    mov     clrb-15,        >ptr-15
+cc      djn.f   loop,           >ptr-15
+        dat     0,              0
+        dat     0,              0
+cEnd    dat     0,              0
+
+pGo     mov.i   clrb,           cEnd+cBoot-18-3
+        mov.i   ptr,            cEnd+cBoot-19-3
+        spl     2,              }-345
+        spl     1,              }-567
+        mov     -1,             0
+        mov.i   {cEnd,          {cBoo
+        mov.i   {iEnd,          {iBoo
+        mov.i   {iEnd,          {iBoo
+cBoo    spl     cEnd+cBoot
+        spl     1
+iBoo    jmp     cEnd+iBoot
+
+
+        for     15
+        dat     0,              0
+        rof
+
+        dat     0,              }qA
+qTab1   dat     0,              }qB
+
+        for     27
+        dat     0,              0
+        rof
+
+qX      equ     3080
+qA      equ     3532
+qB      equ     2051
+qC      equ     6177
+qD      equ     4696
+qE      equ     3215
+qF      equ     583
+
+qStep   equ     7
+qTime   equ     16
+qOff    equ     87
+
+qBomb   dat     {qOff,          qF
+
+qGo     sne     qPtr+qX*qE,     qPtr+qX*qE+qE
+        seq     <qTab2+1,       qPtr+qX*(qE-1)+(qE-1)
+        jmp     qDec,           }qDec+2
+
+        sne     qPtr+qX*qF,     qPtr+qX*qF+qD
+        seq     <qBomb,         qPtr+qX*(qF-1)+qD
+        jmp     qDec,           }qDec
+
+        sne     qPtr+qX*qA,     qPtr+qX*qA+qD
+        seq     <qTab1-1,       qPtr+qX*(qA-1)+qD
+        djn.a   qDec,           {qDec
+
+        sne     qPtr+qX*qB,     qPtr+qX*qB+qD
+        seq     <qTab1,         qPtr+qX*(qB-1)+qD
+        djn.a   qDec,           *0
+
+        sne     qPtr+qX*qC,     qPtr+qX*qC+qC
+        seq     <qTab2-1,       qPtr+qX*(qC-1)+(qC-1)
+        jmp     qDec,           {qDec+2
+
+        sne     qPtr+qX*qD,     qPtr+qX*qD+qD
+        jmz.f   pGo,            <qTab2
+
+qDec    mul.b   *2,             qPtr
+qSkip   sne     <qTab1,         @qPtr
+        add.b   qTab2,          qPtr
+qLoop   mov     qBomb,          @qPtr
+qPtr    mov     qBomb,          }qX
+        sub     #qStep,         @qSkip
+        djn     qLoop,          #qTime
+        djn.f   pGo,            #0
+
+        end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <DrSchmidt007@aol.com>

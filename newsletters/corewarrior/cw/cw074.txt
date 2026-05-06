@@ -50,7 +50,7 @@ The '94 hill has been the scene of many a battle for control, whether
 you perceive the opponents to be veterans and new players, p-spacers
 and pure warriors, or even magic age warriors and recent submissions.
 
-The deadline for the IWT has been extended, so if you haven't done so
+The deadline for the IWT has been extended, so if you haven't do so
 already, find out how to enter at the tournament's home page:
 
   http://www.concentric.net/~liminal/IWT/index.html
@@ -419,7 +419,8 @@ Fixed.  Both warriors were finally pushed off, aged 232 (Baseline) and
 235 (Fixed) two or three days ago, victims of the the eternal stuggle
 to produce stronger, faster and smaller code.
 
-But then Baseline is certainly not out of date, as evidenced in the body of the
+However, despite not containing the latest in q-scanning technology,
+Baseline is certainly not out of date, as evidenced in the body of the
 warrior - the stone/imp.
 
 The imp launcher is re-worked to damage as much core as possible as it

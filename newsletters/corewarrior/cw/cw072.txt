@@ -286,19 +286,43 @@ max. entry length: 100
 11  34/ 30/ 37              Spooky Wench         John Metcalf     137       2
 12  33/ 29/ 38             Baseline Plus         Ken Espiritu     137     196
 13  41/ 44/ 15                      Win!          David Moore     137     113
-14  28/ 14/ 58         _romanian_killah_  Costin Bontas rulez     142      67
-15  38/ 35/ 27               BiShot v1.0    Christian Schmidt     141       7
-16  38/ 35/ 27               Liquid Fire    Christian Schmidt     140      71
-17  27/ 14/ 59              The Fugitive          David Moore     140     177
-18  42/ 45/ 13                Red Carpet          David Moore     140     116
-19  44/ 49/  8             He Scans Anew              P.Kline     139      26
-20  38/ 38/ 24              Floody River              P.Kline     137     124
+14  29/ 23/ 47       Even Less Innocuous               TeamQ3     136       6
+15  30/ 25/ 46                 Brigadeer     M Joonas Pihlaja     135     134
+16  32/ 31/ 37                Puddleglum         John Metcalf     134       1
+17  34/ 34/ 31               Liquid Fire    Christian Schmidt     134     111
+18  34/ 34/ 32                     qTest              P.Kline     134      37
+19  33/ 34/ 32            Digital Dragon    Christian Schmidt     132      16
+20  27/ 22/ 52                     ELI-8         John Metcalf     131      17
 
-The final round will be similar to the typical '94 draft rules, with an
-interesting twist. The coresize will be 8001 and the process limit 64.
-The deadline is Thursday 11th March, 23:59:59. Good luck!
+The no-pspace hill has aged by 40 successful challenges this month, with
+scanners now ruling the hill once again. Gemini Dream left the hill aged
+182 and Fugitive becomes the oldest warrior. Centenarians Head or Tail,
+Floody River and Red Carpet also departed. 16 of the 20 warriors on this
+hill use some form of Qscan.
+_______________________________________________________________________________
+Current Standings of the Oversby Autumn Corewar Tournament:
 
-Check the tournament's home page for more details:
+           :   '94   Tiny   Grey  Build  Multi  Primo  rDist  c8001 :  Total
+ 1 Pihlaja : 98.66 100.00 100.00      x  84.82  87.48      x 100.00 : 570.80
+ 2 Schmidt : 99.46  70.55  75.41  77.34  50.26 100.00  92.84      x : 515.02
+ 3 Macrae  : 87.63  69.55  74.28 100.00  74.87  95.32  54.47  81.59 : 513.69
+ 4 WFB     : 91.10  22.42  49.35  56.28 100.00  56.47      x  95.31 : 473.57
+ 5 Khuong  : 75.82  60.37  65.86  63.96      x      x  42.71  15.56 : 323.47
+ 6 Gunnell : 72.82  46.50  19.46      x  47.12  87.95      x      x : 270.06
+ 7 Mehlos  : 71.22  29.45  76.11  76.23      x      x      x      x : 252.99
+ 8 Hale    : 99.12  66.52  18.68  60.92      x      x      x      x : 245.24
+ 9 Moore   :100.00  63.67  62.29      x      x      x      x      x : 225.97
+10 Yeager  :     x  24.93  44.22  60.03  34.55      x      x      x : 163.73
+11 Metcalf :     x      x      x      x      x  39.96 100.00      x : 139.96
+12 Kendall : 90.04  35.48   3.21      x      x      x      x      x : 128.27
+13 Ford    :     x      x      x      x      x      x      x  70.92 :  70.92
+14 Duff    : 23.05  30.67  10.51      x      x      x      x      x :  63.57
+
+Pihlaja wins the final round with Give it a Proper Name, and wins the
+tournament with 570 points out of a possible 600. Ford shows it is never
+too late to participate in these events...
+
+Code for all warriors is now available from the tournament's homepage at:
 
   http://www.geocities.com/TimesSquare/Realm/2443/
 _______________________________________________________________________________
@@ -591,7 +615,7 @@ start:
         seq.i  QB+QS*36+CR,QB+QS*36+QD+CR
         jmp    }fast, 0                ; BBBBG
 
-boot     spl     pump,        <-1000        ;split to the imp launcher
+boot     spl    pump,        <-1000        ;split to the imp launcher
          mov    ptr,         bptr1
          mov    clrb,        bptr1
 boot2    mov    {bptr3,      <bptr3
@@ -770,5 +794,5 @@ strategies.
 _______________________________________________________________________________
 Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
 Authors:  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Anton Marsden
-<amarsden@mcs.vuw.ac.nz>, Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de>,
-Philip Kendall <pak21@cam.ac.uk> and John Metcalf <grumpy@digitald.uk.com>
+<amarsden@mcs.vuw.ac.nz>, Philip Kendall <pak21@cam.ac.uk> and John Metcalf
+<grumpy@digitald.uk.com>

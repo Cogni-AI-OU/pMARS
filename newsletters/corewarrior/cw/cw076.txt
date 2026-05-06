@@ -91,7 +91,7 @@ max. entry length: 100
 Age since last issue: 20 ( 25 last issue, 43 the issue before )
 Days since last issue: 101 ( 37 last issue, 61 the issue before )
 Average age: 28 ( 33 last issue, 24 the issue before )
-Average score: 137 ( 137 last issue, 141 the issue before )
+Average score: 137 ( 141 last issue, 141 the issue before )
 Average movement: -4.2 ( -0.4 last issue, -8.3 the issue before )
 Warriors surviving: 9 ( 13 last issue, 4 the issue before )
 
@@ -308,25 +308,25 @@ max. entry length: 100
 
  #  %W/ %L/ %T                      Name               Author   Score     Age
  1  36/ 20/ 44                 Uninvited         John Metcalf     151       6
- 2  45/ 42/ 13                   Stalker              P.Kline     149      39
- 3  36/ 26/ 38              Experimental         John Metcalf     146      10
- 4  35/ 24/ 41                   Omnibus         John Metcalf     146      63
- 5  32/ 19/ 48                      Jade             Ben Ford     146     123
- 6  44/ 43/ 14                 Eraser II         Ken Espiritu     145      11
- 7  43/ 42/ 15                  Zooom...         John Metcalf     145     190
- 8  33/ 21/ 47                 nPaper II        Paul-V Khuong     144      54
- 9  36/ 28/ 35                   Blacken          Ian Oversby     144     301
-10  32/ 20/ 48                    Jaguar    Christian Schmidt     143      41
-11  32/ 21/ 47                    EvoP 3         Ken Espiritu     143      50
-12  43/ 43/ 14 Boys are Back in Town 1.1       Philip Kendall     143     316
-13  43/ 44/ 14                      Jinx    Christian Schmidt     142      17
-14  43/ 45/ 12                      Win!          David Moore     142     289
-15  45/ 48/  8                   Kenshin        Steve Gunnell     142       9
-16  28/ 15/ 57                  Cinammon         John Metcalf     141      19
-17  32/ 27/ 41                      Icen             Ben Ford     137     148
-18  32/ 28/ 40               Ant Factory    Christian Schmidt     137     149
-19  41/ 45/ 14                     Qshot    Christian Schmidt     136      60
-20  42/ 49/  9                     htest              P.Kline     135       1
+ 2  45/ 42/ 13                   Stalker              P.Kline    149      39
+ 3  36/ 26/ 38              Experimental         John Metcalf    146      10
+ 4  35/ 24/ 41                   Omnibus         John Metcalf    146      63
+ 5  32/ 19/ 48                      Jade             Ben Ford    146     123
+ 6  44/ 43/ 14                 Eraser II         Ken Espiritu    145      11
+ 7  43/ 42/ 15                  Zooom...         John Metcalf    145     190
+ 8  33/ 21/ 47                 nPaper II        Paul-V Khuong    144      54
+ 9  36/ 28/ 35                   Blacken          Ian Oversby    144     301
+10  32/ 20/ 48                    Jaguar    Christian Schmidt    143      41
+11  32/ 21/ 47                    EvoP 3         Ken Espiritu    143      50
+12  43/ 43/ 14 Boys are Back in Town 1.1       Philip Kendall    143     316
+13  43/ 44/ 14                      Jinx    Christian Schmidt    142      17
+14  43/ 45/ 12                      Win!          David Moore    142     289
+15  45/ 48/  8                   Kenshin        Steve Gunnell    142       9
+16  28/ 15/ 57                  Cinammon         John Metcalf    141      19
+17  32/ 27/ 41                      Icen             Ben Ford    137     148
+18  32/ 28/ 40               Ant Factory    Christian Schmidt    137     149
+19  41/ 45/ 14                     Qshot    Christian Schmidt    136      60
+20  42/ 49/  9                     htest              P.Kline    135       1
 
 Four old warriors met their end during the 52 successful challenges since
 last issue, Recovery (280), PC (134), The Pendragon (120) and goonie (108).

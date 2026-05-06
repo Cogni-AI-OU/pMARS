@@ -213,6 +213,357 @@ Recycled Bits and The Stormbringer continue to make slow progress, climbing
 just a single place.  We welcome Ben Ford to the Hall of Fame with his Self
 Modifying Code.
 _______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  45.5/ 18.8/ 35.7                        PC                  WFB 172.3   85
+ 2  42.4/ 28.0/ 29.5       DiHydrogen Monoxide          Josh Yeager 156.8   47
+ 3  46.7/ 37.3/ 16.0             Grand Mal 1.0         Ransom Smith 156.2   48
+ 4  45.2/ 35.1/ 19.7                Golden Gun          Ken Hubbard 155.2   50
+ 5  32.0/ 13.3/ 54.7                Arkenstone         John Morahan 150.7    2
+ 6  40.1/ 32.6/ 27.3                  jollyblu                  aCM 147.6   49
+ 7  32.1/ 16.8/ 51.0                Caladan II         Ingo S Kacza 147.5   67
+ 8  42.7/ 39.2/ 18.1               Gomjabbar V         Ingo S Kacza 146.1   45
+ 9  27.2/  8.8/ 64.0              PimpKing 1.0           Simon Duff 145.5   32
+10  31.0/ 18.2/ 50.8                   2stoned                  aCM 143.7   55
+11  37.4/ 31.2/ 31.4                  Mob Boyz           Simon Duff 143.5   33
+12  42.6/ 42.0/ 15.4            Forgotten Lore           Simon Duff 143.2   64
+13  44.8/ 46.4/  8.8                 Kenshin d        Steve Gunnell 143.1   36
+14  44.5/ 47.8/  7.7                      Mini         John Metcalf 141.3    1
+15  40.9/ 41.5/ 17.6                 Wild-Fire P_.V_.K./John Metcal 140.4   95
+16  25.4/ 12.5/ 62.1                   Fangorn         John Morahan 138.3    6
+17  40.4/ 43.6/ 16.0              Neverland II         John Metcalf 137.2   84
+18  37.5/ 38.7/ 23.8                 da mutant        Paul-V Khuong 136.2   94
+19  36.7/ 38.1/ 25.2                 Arsonic C             P._V._K. 135.2   92
+20  36.9/ 39.0/ 24.1     the boy's a time bomb                  aCM 134.8   41
+21  37.0/ 40.0/ 23.0                Freeze 1.3        David Houston 134.0   13
+22  36.8/ 40.1/ 23.1              FireMaster 2             P._V._K. 133.5   90
+23  34.6/ 37.9/ 27.5                Freeze 2.0        David Houston 131.4   29
+24  30.4/ 48.0/ 21.5                  pop1.red          ----------- 112.9    7
+25  23.0/ 38.6/ 38.4                   Imp2000          Dave Hillis 107.3    8
+
+Silken Half Life, Quickest Zeta and Nuke it! all retired during the 33
+successful challenges since last issue.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  45/ 42/ 13                   Stalker              P.Kline    147.7    136
+ 2  34/ 20/ 47                 Uninvited         John Metcalf    147.3    103
+ 3  35/ 24/ 41                   Omnibus         John Metcalf    146.6    160
+ 4  33/ 20/ 48                      Jade             Ben Ford    145.7    220
+ 5  43/ 42/ 14                  Zooom...         John Metcalf    144.7    287
+ 6  36/ 28/ 35                   Blacken          Ian Oversby    144.6    398
+ 7  43/ 42/ 15                 Eraser II         Ken Espiritu    144.0    108
+ 8  34/ 25/ 40              Experimental         John Metcalf    143.8    107
+ 9  44/ 47/  9                   Kenshin        Steve Gunnell    142.4    106
+10  31/ 21/ 48                    Jaguar    Christian Schmidt    141.9    138
+11  43/ 44/ 13 Boys are Back in Town 1.1       Philip Kendall    141.6    413
+12  32/ 22/ 46                 nPaper II        Paul-V Khuong    141.4    151
+13  43/ 45/ 12         vamp/scan test b1         Ken Espiritu    140.8     66
+14  30/ 19/ 51               Tie Factory    Christian Schmidt    140.6      2
+15  42/ 44/ 14                      Jinx    Christian Schmidt    139.3    114
+16  31/ 22/ 47                    EvoP 3         Ken Espiritu    139.1    147
+17  27/ 16/ 58                  Cinammon         John Metcalf    137.9    116
+18  44/ 50/  7         Iron Curtain test         Ken Espiritu    137.3      1
+19  32/ 28/ 40               Ant Factory    Christian Schmidt    136.9    246
+20  31/ 27/ 42                      Icen             Ben Ford    134.2    245
+
+The hill ages 97 with seemingly perpetual testing, helping Boys are Back
+in Town become the first warrior to pass the age of 400.  Win! perishes,
+age 322.
+_______________________________________________________________________________
+Extra Extra - Midget by Chip Wendell
+
+Breaking from the great Core Warrior tradition of publishing warriors
+employing innovative new techniques, presented below is Midget, a warrior
+of interest to Core War historians...
+
+Midget somehow became lost in time.  We know of it's existence from
+Dewdney's report (Scientific American, Jan 1987) of the first annual Core
+War tournament.  Now, thanks to Ian D Bartholomew, the code for Midget has
+been recovered, as have all missing finalists from this tournament.
+
+As you will have no doubt suspected, Midget is based on Dwarf.  However,
+there are important improvements which have since become commonplace.  For
+example, the distance between zero bombs is 28.  The highest common factor
+of this and coresize is 4.  Every fourth location will therefore be bombed
+but the larger step size finds larger opponents much sooner than a step of
+4 would.  Midget is the first known warrior to exploit this fact.
+
+One problem many early warriors face is the changes which have occurred to
+redcode since Dewdney's first specifications.  Midget has suffered in this
+repsect.  Originally, Midget's zero bombs would have been fatal if they
+were place on an enemy program; this is no longer the case.
+
+Another interesting change to redcode is the CMP instruction.  This
+originally functioned as skip if not equal; currently it performs skip if
+equal. This affects warriors such as Gemini.
+
+Anyhow, here's the code for Midget.  Watch also for the other five missing
+finalists (including Commando :-) appear on Koenigstuhl sometime soon.
+
+;redcode
+;name Midget
+;author Chip Wendell
+;strategy 3rd place in ICWST'86
+;assert 1
+START   ADD     #-28   ,3
+        MOV     #0     ,@2
+        JMP     -2
+        DAT     #-980
+        END     START
+
+Examples of famous warriors still missing include Scanner by David Jones,
+mentioned in Dewdney's first Core War article (Scientific American, May
+1984) as the first self-repairing program.  Also lost are almost all of the
+warriors which competed in the ICWS Tournaments of 1991 and 1992.
+
+                            - > ) ] O [ ( < -
+
+A. K. Dewdney's Core War articles, as published in Scientific American, are
+available on the WWW at http://www.koth.org/info/sciam
+_______________________________________________________________________________
+Extra Extra Extra - Cinammon by John Metcalf
+
+Cinammon is a paper/imp which produces imps with two different techniques.
+Imp-ring forming paper steps are chosen to generate 3-point rings, while
+mirrored-imps are created by binary-launching the paper.
+
+To create a paper which forms 3 point imp-rings (which have an imp-step of
+2667) we need to find paper steps which ensure when an imp is executed, it
+is followed at least sometimes by processes executing at imp+2667 and
+imp+2667*2.
+
+If we take a simple silk copy copy, we can create a diagram showing where
+and when each process is executed, as described by David Moore's article in
+Core Warrior #68:
+
+        spl     2       ; 5 parallel processes
+        spl     2
+        spl     1
+pap1:   spl     @0,     X
+        mov     }pap1,  >pap1           ; copy
+pap2:   spl     @0,     Y
+        mov     }pap2,  >pap2           ; copy
+imp:    mov.i   #0,     2667
+
+
+        | 0   1    2     3      4       5        6
+    ----+------------------------------------------
+      0 | 0   1    2     3      4!
+      1 |              2+Y    3+Y     4+Y!
+      2 |                    2+2Y    3+2Y     4+2Y!
+      3 |                            2+3Y     3+3Y
+      4 |                                     2+4Y
+      5 |     X  1+X   2+X    3+X     4+X!
+      6 |                   2+X+Y   3+X+Y    4+X+Y!
+      7 |                          2+X+2Y   3+X+2Y
+      8 |                                   2+X+3Y
+      9 |         2X  1+2X   2+2X    3+2X     4+2X!
+     10 |                          2+2X+Y   3+2X+Y
+     11 |                                  2+2X+2Y
+     12 |               3X   1+3X    2+3X     3+3X
+     13 |                                   2+3X+Y
+     14 |                      4X    1+4X     2+4X
+     15 |                              5X     1+5X
+
+Each row in the table represents an individual copy of the paper.  Each
+entry shows where a process is executing at any given time.  Processes are
+executed in column order; each entry will be executed in turn, top to
+bottom, repeated once for each parallel process the paper has.  This is
+followed by the same procedure in each subsequent column.
+
+To make a paper which generates 3 point imp-rings, we select 3 positions
+which we will refer to as R, S and T, sharing the same column in the table,
+each lower (and consequently executed later) than the previous.  Position R
+should be where an imp is executed, as indicated by an exclamation mark in
+the table.
+
+Now, all we require are values for X and Y providing a solution, if one
+exists, to the following equations, where R, S and T are substituted with
+their corresponding entries in the table:
+
+    S = R + 2667                 (2667 is the imp-step for 3 point rings in
+    T = S + 2667                  a coresize of 8000, since 2667*3 = 8001)
+
+For example, after selecting the processes at rows 0, 1 and 2 of column 4,
+we can show Y must be equal to 2668 for imp-rings to form.  This is the
+sequence employed by Return of the Fugitive:
+
+    (3+Y)  =  (4)  + 2667
+    (2+2Y) = (3+Y) + 2667     ->  Y = 2668
+
+By selecting the processes at rows 2, 6 and 9 of column 6, we show Y must
+be equal to X - 2667 for imp-rings to form.  This sequence is used by both
+The Fugitive and Cinammon:
+
+    (4+X+Y) =  (4+2Y) + 2667
+    (4+2X)  = (4+X+Y) + 2667  ->  Y = X - 2667
+
+At least 4 other sequences which allow imp-rings to form exist.  However,
+these appear to be less effective than the two illustrated above, which
+were chosen for use by David Moore in his two Fugitives.
+
+Cinammon expands on this simple paper/imp, with the addition of a 3rd silk
+copier, a silk-imp and a binary-launched mirrored-imp.  A mini-Q^3 has also
+been added, as has a wimp.
+
+The decision to add a wimp was not taken without careful consideration.
+While the score improves against certain scanners and p-spacers, it suffers
+a slight decrease against many other warriors.  Notable examples include
+Friction and Eraser.
+
+The wimp is placed in an area of core which isn't overwritten by the paper.
+To ease the process of finding these core pockets I used a CDB macro which
+lists the location of all pockets of at least 5 memory units.  I'm certain
+you can improve on the macro below:
+
+    pockets=&l0~!!~if1>a+b~!!~m_p~!1~&l+1~if0<x=.~!
+    _p=!!~&l+1~if1>a+b~!~&l-1~if.-x>3~ca.-x+1,x
+
+OPTIMIZATION:
+
+To optimize Cinammon, I wished to improve on the simple slow Dumb Brute
+Force method I have used in the past.  The mini-hill technique is popular
+and has produced good results.  In the end though, I opted for the quicker
+to implement Improved Brute Force:
+
+  * proceeding as with Dumb Brute Force, we test the paper with random
+    steps against a selection of warriors,
+
+  * if the test paper scores below a carefully chosen value against one
+    particular opponent, we abandon the steps without further testing,
+
+  * if the paper scores well overall, we test similar steps during the
+    next round of tests. In this instance, similar steps were chosen by
+    changing just one step - by adding a large factor of coresize.
+
+One small problem has troubled me in the past.  PMars uses a random number
+generator to determine the distance between warriors in each round.  Over
+200 rounds there are usually some duplicate distances.  Presuming we wish
+to avoid these, we can either modify pMars or select a suitable -F number.
+
+Once again I opted for the easiest approach, and looked for a -F number
+without either duplicate or consecutive distances over 200 rounds.  There
+are just four, 1306, 2204, 4864 and 7293 - one of which I selected to use
+during optimization.  (What drawbacks are there to this solution?)
+
+After a couple of hours runtime on an i486, several potentially good sets
+of steps were revealed.  The top three of these were tested against Pizza's
+'94 hill before the steps used in the warrior below were finally selected:
+
+;redcode-94
+;name Cinammon
+;author John Metcalf
+;strategy Mini-Q^3 -> Paper/Imps and Wimp
+;assert CORESIZE==8000
+
+     pStep1 equ 6405                    ; computer optimized against scans
+     pStep2 equ 4240                    ; from HSA, Snoopy & Recycled Bits
+     pStep3 equ (pStep2-2667)
+     wBoot  equ (pap1+5373)             ; pocket to place wimp, distance
+                                        ; particularly effective against
+     org qGo                            ; Recycled Bits scan :-)
+
+ppGo:mov   {pap1,       {bb             ; binary launch
+     mov   {pap1,       {bb
+bb:  spl   pap1+4000+12,{qf+25*qs
+
+pap1:spl   @12,         >pStep1
+     mov   }pap1,       >pap1
+     mov   }pap1,       >pap1           ; copy
+pap2:spl   @0,          >pStep2
+     mov   }pap2,       >pap2           ; copy
+pap3:spl   @0,          >pStep3
+     mov   }pap3,       >pap3           ; copy
+
+     mov.i #-2669,      }4000-pStep3    ;   silk-imp
+     mov.i #-pStep2,    2667            ; standard-imp
+     mov.i #4001,       *0              ; mirrored-imp
+
+     for 40
+     dat 0,0
+     rof
+
+wimp:jmp   #0,          #0
+
+     qf equ qKil
+     qs equ 222
+     qd equ 322
+     qi equ 7
+     qr equ 11
+
+qGo: seq   qd+qf+qs,    qf+qs      ; 1
+     jmp   qSki,        {qd+qf+qs+qi
+     seq   qd+qf+6*qs,  qf+6*qs    ; B
+     jmp   qFas,        {qd+qf+6*qs+qi
+     seq   qd+qf+5*qs,  qf+5*qs    ; B-1
+     jmp   qFas,        <qBmb
+     seq   qd+qf+7*qs,  qf+7*qs    ; B+1
+     jmp   qFas,        >qBmb
+     seq   qd+qf+9*qs,  qf+9*qs    ; A-1
+     djn   qFas,        {qFas
+     seq   qd+qf+10*qs, qf+10*qs   ; A
+     jmp   qFas,        {qFas
+
+     seq   qd+qf+3*qs,  qf+3*qs    ; C
+     jmp   >qFas,       {qd+qf+3*qs+qi
+     seq   qd+qf+2*qs,  qf+2*qs    ; C-1
+     jmp   >qFas,       {qSlo
+     seq   qd+qf+4*qs,  qf+4*qs    ; C+1
+     jmp   >qFas,       }qSlo
+     seq   qd+qf+12*qs, qf+12*qs   ; B*C-B
+     jmp   qSlo,        {qSlo
+     seq   qd+qf+15*qs, qf+15*qs   ; B*C-C
+     jmp   qSlo,        <qBmb
+     seq   qd+qf+21*qs, qf+21*qs   ; B*C+C
+     jmp   qSlo,        >qBmb
+     seq   qd+qf+24*qs, qf+24*qs   ; B*C+B
+     jmp   qSlo,        }qSlo
+     seq   qd+qf+27*qs, qf+27*qs   ; A*C-C
+     djn   qSlo,        {qFas
+     seq   qd+qf+30*qs, qf+30*qs   ; A*C
+     jmp   qSlo,        {qFas
+     sne   qd+qf+18*qs, qf+18*qs   ; B*C
+     jmz.f pGo,         qd+qf+18*qs-10
+
+qSlo:mul   #3,          qKil       ; C=3
+qFas:mul.b qBmb,        @qSlo
+qSki:sne   >qf+23*qs,   >qKil
+     add   #qd,         qKil
+qLoo:mov   *qKil,       <qKil
+qKil:mov   qBmb,        }qs
+     sub   #qi-1,       @qLoo
+     djn   qLoo,        #qr
+
+pGo: spl   }0,          >qf+29*qs  ; 6 parallel processes and 1
+     spl   0,           }qf+28*qs  ; stray process for the wimp
+     djn   ppGo,        #1
+     mov   wimp,        {1
+     djn.f wBoot+1,     #10        ; A=10
+qBmb:dat   {qi*qr-10,   {6         ; B=6
+     end
+_______________________________________________________________________________
 Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
 Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
 Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>

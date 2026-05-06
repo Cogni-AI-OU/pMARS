@@ -28,7 +28,7 @@ Web pages are at:
   http://www.ociw.edu/~birk/corewar          ;C.Birk
 
 Newbies should check the above pages for the FAQs, language specification,
-guides, and tutorials Post questions to rec.games.corewar. All new players
+guides, and tutorials. Post questions to rec.games.corewar. All new players
 are infinitely welcome!
 _______________________________________________________________________________
 Welcome...
@@ -99,7 +99,7 @@ Pos Name                   Author             Age    Strategy
  8  Eraser II              Ken Espiritu       781    Scanner
  9  Son of Vain            Oversby/Pihlaja    737 *  Q^4 -> Stone/imp
 10  Jinx                   Christian Schmidt  662    Scanner
-11  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+11  Inky                   Ian Oversby        627 *  Q^4 -> Paper/stone
 12  Jade                   Ben Ford           600    Q^4 -> Stone/imp
 13  Revival Fire           P.Kline            468    Bomber
 14  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
@@ -223,5 +223,5 @@ _______________________________________________________________________________
 Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
 Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
 Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
-and Christian Schmidt <mail.uni-mainz.de>
+and Christian Schmidt <schmidt@mail.uni-mainz.de>
 

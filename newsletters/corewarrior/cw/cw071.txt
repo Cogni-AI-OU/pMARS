@@ -105,7 +105,7 @@ just one warrior each.
 What can I say? The hill as it was has been destroyed, every one of our
 ancient adversaries unjustly deprived of everything it has achieved. It
 seems too, some of the most innovative and respected competitors have
-lost interest in Corewar :-(
+lost interest in Corewar as a result :-(
 _______________________________________________________________________________
 94 - What's New (Sorted by rank and score)
 
@@ -149,23 +149,23 @@ _______________________________________________________________________________
  #   %W /  %L /  %T                       Name               Author Score  Age
 26  23.0/ 23.3/ 53.7                      Newt          Ian Oversby 122.8  216
 26  23.2/ 20.3/ 56.5                      Vain          Ian Oversby 126.1  147
-26  ??.?/ ?².?/ ??.?                     Vigor         Ken Espiritu ???.?  138
+26  ??.?/ ??.?/ ??.?                     Vigor         Ken Espiritu ???.?  138
 26  24.0/ 18.7/ 57.3                     Fixed         Ken Espiritu 129.3  135
-26  ??.?/ ?².?/ ??.?                  Fugitive          David Moore ???.?  102
+26  ??.?/ ??.?/ ??.?                  Fugitive          David Moore ???.?  102
 26  30.0/ 34.9/ 35.1              Fire and Ice          David Moore 125.0  100
 26  26.8/ 28.5/ 44.8         Tuesday Afternoon             John K W 125.1   58
 26  35.0/ 45.0/ 20.1                 Blurstone        M. J. Pihlaja 124.9   58
-26  ??.?/ ?².?/ ??.?             Recycled Bits          David Moore ???.?   58
-26  ??.?/ ?².?/ ??.?          The Stormbringer    Christian Schmidt ???.?   51
+26  ??.?/ ??.?/ ??.?             Recycled Bits          David Moore ???.?   58
+26  ??.?/ ??.?/ ??.?          The Stormbringer    Christian Schmidt ???.?   51
 26  27.3/ 27.5/ 45.3                    Shadow    Christian Schmidt 127.1   46
-26  ??.?/ ?².?/ ??.?                  Recovery          Ian Oversby ???.?   45
-26  ??.?/ ?².?/ ?².?        Benj's Revenge 1.0        Robert Macrae ???.?   45
+26  ??.?/ ??.?/ ??.?                  Recovery          Ian Oversby ???.?   45
+26  ??.?/ ??.?/ ??.?        Benj's Revenge 1.0        Robert Macrae ???.?   45
 26  21.0/ 18.1/ 60.9       Three Men in a Boat     M Joonas Pihlaja 123.9   42
 26  30.7/ 37.1/ 32.2                  Defender          Ian Oversby 124.2   39
 26  32.7/ 40.7/ 26.5               myVamp v3.7             Paulsson 124.7   37
 26  33.4/ 40.5/ 26.0                  Zooom...         John Metcalf 126.4   34
 26  26.0/ 26.0/ 48.0                 Brigadeer     M Joonas Pihlaja 126.0   34
-26  ??.?/ ?².?/ ??.?    Diamonds and more Rust    Christian Schmidt ???.?   23
+26  ??.?/ ??.?/ ??.?    Diamonds and more Rust    Christian Schmidt ???.?   23
 26  27.1/ 28.9/ 44.0   Three Queens and a King    Christian Schmidt 125.3   15
 26  31.6/ 38.2/ 30.2                   Trefoil        Steve Gunnell 125.0   12
 26  24.2/ 24.2/ 51.6                 Fragility         John Metcalf 124.2   12
@@ -224,9 +224,9 @@ Pos    Name                  Author          Age     Strategy
  8  Falcon v0.3            Ian Oversby        275    P-warrior
  9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
 10  Rosebud                Beppe              218    Stone/imp
-11  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
-12  Instant Wolf 3.4       Edgar              205    P-warrior
-13  Newt                   Ian Oversby        204 *  Q^2 -> Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
 14  Goldfinch              P.Kline            201    P-warrior
 15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
 16  Trident^2              John K W           195    Q^2 -> Stone/imp
@@ -234,97 +234,436 @@ Pos    Name                  Author          Age     Strategy
 18  Frogz                  Franz              172    Q^2 -> Paper
 19  The Machine            Anton Marsden      164    Scanner
 20  Memories               Beppe              152    Scanner
-21  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
-22  Electric Head          Anton Marsden      140    P-warrior
-23  Tiberius 3.1           Franz              130    Q^2 -> Paper
-24  Vain                   Ian Oversby        126 *  Q^2 -> Stone/imp
-25  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+21  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+22  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+23  Electric Head          Anton Marsden      140    P-warrior
+24  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+25  Fixed                  Ken Espiritu       135    Q^2 -> Paper
 
 Newt climbs a couple of places and halts at 11th. Vain climbs to 21st place
-before it too loses it's *. New entries Vigor and Fixed claim ranks 24 and
+before it too loses it's *. New entry Vigor and Fixed claim ranks 24 and
 25, shortly before they are forced off the hill... For the first time there
 are no active warriors in the new HoF.
 _______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  54.5/ 30.8/ 14.6            Pattel's Virus             Ben Ford 178.2    5
+ 2  48.3/ 38.5/ 13.2        redcode ragamuffin     Simon Wainwright 158.2    1
+ 3  46.8/ 36.2/ 17.0           Spat the dummy. Steve Gunnell (oh ye 157.3   63
+ 4  43.5/ 35.3/ 21.2           Ice Pick Willie             Ben Ford 151.6   46
+ 5  44.3/ 39.8/ 15.8       Reconnaissance v0.3             Ben Ford 148.9    6
+ 6  41.1/ 33.8/ 25.1                 Arsonic C             P._V._K. 148.4   80
+ 7  44.1/ 41.3/ 14.6                   Fat Man          A.S. Mehlos 146.9   77
+ 8  42.6/ 41.0/ 16.5 Sticky taped together 1.2        Steve Gunnell 144.1   74
+ 9  36.5/ 29.3/ 34.2          A man with a Gun             Ben Ford 143.6   48
+10  40.9/ 38.6/ 20.6          No Time To Think         A. S. Mehlos 143.2   64
+11  42.2/ 41.2/ 16.7                Scanzonato       Franco Solerio 143.2   98
+12  30.7/ 18.5/ 50.8                Redemption         John Metcalf 142.9   39
+13  34.2/ 28.2/ 37.6       ModerationRevisited         A. S. Mehlos 140.1   83
+14  36.0/ 31.9/ 32.1    of mirth and merriment     Simon Wainwright 140.1    9
+15  42.1/ 44.6/ 13.3                    Hunter             Ben Ford 139.7   51
+16  30.2/ 21.8/ 48.0            HardCore v0.2b           Simon Duff 138.6    3
+17  40.1/ 42.1/ 17.8            Security Purge             Ben Ford 138.1   17
+18  39.3/ 41.1/ 19.5            Reconnaissance             Ben Ford 137.5   14
+19  33.0/ 28.9/ 38.0           Frusteration II         A. S. Mehlos 137.1   67
+20  28.5/ 22.6/ 48.9                Quick Zeta    Leonardo Humberto 134.3    2
+21  40.3/ 48.4/ 11.4       fatal lure of pMars     Simon Wainwright 132.1    7
+22  26.7/ 23.4/ 49.9                  H-Bomb 9          Josh Yeager 130.0   61
+23  31.0/ 32.1/ 36.9    Rocking-Chair 94 v0.33    Leonardo Humberto 129.9   11
+24  26.5/ 23.5/ 50.0                 H-Bomb 9k          Josh Yeager 129.5   60
+25  37.0/ 47.3/ 15.7 Death kiss with a dash of      Anders Rosendal 126.7   23
+
+The beginners' hill has been pretty quiet since last issue, with only 13
+successful challenges. IWeasel was the only warrior to have died of old
+age. Ford's new P^3 warrior dominates the hill with a 20 point lead.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  38/ 27/ 35          The Stormbringer    Christian Schmidt     148     109
+ 2  37/ 28/ 35             Baseline Plus         Ken Espiritu     146     156
+ 3  37/ 29/ 34                     Fixed         Ken Espiritu     146     158
+ 4  37/ 28/ 35                   Blacken          Ian Oversby     145      85
+ 5  36/ 26/ 38                      Vain          Ian Oversby     145     175
+ 6  46/ 48/  6            He Scans Alone              P.Kline     145      21
+ 7  42/ 39/ 19 Boys are Back in Town 1.1       Philip Kendall     144     100
+ 8  36/ 28/ 36                  Recovery          Ian Oversby     144      98
+ 9  43/ 44/ 12                      Win!          David Moore     142      73
+10  28/ 14/ 58         _romanian_killah_  Costin Bontas rulez     142      67
+11  38/ 35/ 27               BiShot v1.0    Christian Schmidt     141       7
+12  38/ 35/ 27               Liquid Fire    Christian Schmidt     140      71
+13  27/ 14/ 59              The Fugitive          David Moore     140     177
+14  42/ 45/ 13                Red Carpet          David Moore     140     116
+15  44/ 49/  8             He Scans Anew              P.Kline     139      26
+16  38/ 38/ 24              Floody River              P.Kline     137     124
+17  32/ 27/ 41                 Brigadeer     M Joonas Pihlaja     137      94
+18  34/ 32/ 34              Head or Tail    Christian Schmidt     136     146
+19  29/ 23/ 48                 Innocuous         John Metcalf     134       1
+20  31/ 29/ 40              Gemini Dream     John K Wilkinson     133     181
+
+Old KoTH Zooom was ;killed and the hilltop is now held by The Stormbringer
+closely followed by four more Q^2 warriors. Quite a difference from last
+issue where 4 of the top 5 were scanners - all with but 3 new warriors on
+the hill.
+_______________________________________________________________________________
+Current Standings of the Oversby Autumn Corewar Tournament:
+
+         :    '94    Tiny    Grey   Build   Multi   Primo   rDist :  Total
+ Schmidt :  99.46   70.55   75.41   77.34   50.26  100.00   92.84 : 515.60
+ Macrae  :  87.63   69.55   74.28  100.00   74.87   95.32   54.47 : 501.65
+ Pihlaja :  98.66  100.00  100.00       x   84.82   87.48       x : 470.96
+.WFB     :  91.10   22.42   49.35   56.28  100.00   56.47       x : 375.62
+.Khuong  :  75.82   60.37   65.86   63.96       x       x   42.71 : 308.72
+.Gunnell :  72.82   46.50   19.46       x   47.12   87.95       x : 273.85
+.Mehlos  :  71.22   29.45   76.11   76.23       x       x       x : 253.01
+ Hale    :  99.12   66.52   18.68   60.92       x       x       x : 245.24
+ Moore   : 100.00   63.67   62.29       x       x       x       x : 225.96
+.Yeager  :      x   24.93   44.22   60.03   34.55       x       x : 163.73
+ Metcalf :      x       x       x       x       x   39.96  100.00 : 139.96
+ Kendall :  90.04   35.48    3.21       x       x       x       x : 128.73
+.Duff    :  23.05   30.67   10.51       x       x       x       x :  64.23
+
+First place in the primordial round was claimed by Schmidt with Pizza
+Vulcano, then Metcalf (better late than never) took first place in the
+penultimate round - restricted distance.
+
+The final round will be similar to the typical '94 draft rules, with an
+interesting twist. The coresize will be 8001 and the process limit 64.
+The deadline is Thursday 11th March, 23:59:59. Good luck!
+
+Check the tournament's home page for more details:
+
+  http://www.geocities.com/TimesSquare/Realm/2443/
+_______________________________________________________________________________
 Extra Extra -
-Zooom... by John Metcalf
+Fixed by Ken Espiritu
 
-Following in the great Core Warrior tradition of publishing warriors
-employing new techniques, here is Zooom...
+Among the warriors which have created much curiousity in the redcoding
+community are Ken Espiritu's mystery papers, Vigor and Fixed. While
+some of us pondered the strange scores these alleged papers attained
+and suspected the strategy to be somewhat different, Espiritu was in
+possession of the secret of paper longevity.
 
-Zooom is a scanner which uses the well known Mirage scan with a unique
-twist - the clear instruction is not included in the main loop until
-something is detected. This increases initial speed.
+Fixed is a warrior of two parts. First, a qscan which splits to two
+parallel attacks similar to Retro-Q^2, followed by a robust paper with
+silk-imps. In contrast to warriors using similar qscans, Fixed only
+launches one of the two papers it contains. However, this seems no
+less effective, and may introduce advantages against some scanners.
 
-The constants have been chosen with care. The scan step is non-optimal,
-since better find-x values would result in the scanner detecting itself
-after fewer scans and switching to the dclear sooner.
+The paper is made up of three silk modules followed by silk-imps of
+the form mov.i #xxxx,}yyyy. The behaviour of these can be very
+interesting! Consider for example what happens when you overwrite an
+area of core where you have proccesses stunned by an opponent's spl
+carpet. The initial results differ with the type of spl carpet. Is it
+spl 0,0 or spl #0,0 or spl #1,1?
 
-The boot distance is optimal, ensuring Zooom doesn't detect it's boot
-routine until after 923 scans. Perhaps reducing this to 920 scans, to
-place Zooom closer to the decoy might improve it's performance against
-oneshots slightly ;-)
+Now, lets see how effective a few scanners are against the paper from
+Fixed. I removed the qscan from Fixed and decoys from the scanners to
+ensure a fair fight ;-)
 
-Testing showed dclear to be the best end-game strategy rather than
-switching to a dat bomb as Neverland did, or using a multi-pass clear.
-Anyway, without further ado, here's the code:
+WARRIOR    : %W %L %T : Scan Fixed      WARRIOR   : %W %L %T : Scan Fixed
+HeScans T  : 61 27 12 :  195    93      HAL 9000  : 39 37 24 :  141   135
+Tom Tack   : 52 37 11 :  167   122      Blur 2    : 36 35 29 :  137   134
+Mini-HSA   : 52 38 10 :  166   124      HSA       : 39 45 16 :  133   151
+Mirage 1.5 : 49 32 19 :  166   115      Win!      : 35 40 25 :  130   145
+Tim Tack   : 48 38 14 :  158   128      Zooom...  : 35 45 20 :  125   155
+7-11       : 45 38 17 :  152   131      Harmony   : 26 30 44 :  122   134
+Syzygy 1.3 : 40 34 26 :  146   128      One Shot  : 26 39 35 :  113   152
+
+Warriors with HSA-like carpet attacks perform well. Booting your
+scanner leaving a large spl decoy is another effective technique.
 
 ;redcode-94
-;name Zooom...
-;author John Metcalf
+;name Fixed
+;author Ken Espiritu
+;strategy qscan -> paper
+;assert 1
 
-;strategy .5 scan -> .33 scan/.33 clear -> dclear
-;strategy  v0.1 self modifying scan loop
-;strategy   v0.2 irregular scan pattern
-;strategy    v0.3 boot and tailored decoy
+       org start
+
+gap    equ    (6)
+rep    equ    (17)
+rep2   equ    (13)
+qd     equ    (100)
+qs     equ    (-200)
+qb     equ    (start-700)
+flag   equ    (qbomb-100)
+datz   equ    (start-200)
+
+qbomb: dat    }gap,    }-gap
+tab:   add.a  table,   table
+slow:  add.ab @tab,    fnd
+fast:  add.b  *tab,    @slow
+which: sne.f  }datz,   @fnd
+       add.ab #qd,     fnd
+       spl    bmber2,  }qs*13   ; start primary bomber
+
+bmber1:add.b  fnd,     fnd2     ; redundant bomber
+loop1: mov.i  qbomb,   @fnd2    ; .5c, forward only
+fnd2:  mov.i  qbomb,   >fnd-(gap*rep)/2+1
+       add    #2*gap,  fnd2
+       djn    loop1,   #rep
+       jmn.b  qbomb,   flag     ; check flag
+
+fixed1:spl    1,       }qb+qs*31
+       spl    1,       }qb+qs*32
+       spl    1,       }qb+qs*33
+silk1a:spl    @0,      <131
+       mov.i  }silk1a, >silk1a
+silk1b:spl    @0,      }7502
+       mov.i  }silk1b, >silk1b
+silk1c:spl    @0,      }2430
+       mov.i  }silk1c, >silk1c
+       mov.i  #3555,   }-3190
+       mov.i  #1832,   }1398
+       mov.i  #-2840,  }570
+
+       dat    }10*qs,  >2*qs    ; can get 21 values from this table
+table: dat    >4*qs,   }1*qs    ; and can also use the initial value
+       dat    }23*qs,  >3*qs    ; of fnd
+
+start: seq.i  qb+qs*0, qb+qs*0+qd
+       jmp    which,   }qb+qd/2
+       seq.i  qb+qs*2, qb+qs*2+qd
+       jmp    fast,    {tab
+       seq.i  qb+qs*13,qb+qs*13+qd
+       jmp    fast,    {fast
+       seq.i  qb+qs*1, qb+qs*1+qd
+       jmp    fast,    }qb+qs*1+qd/2
+       seq.i  qb+qs*3, qb+qs*3+qd
+       jmp    fast,    }tab
+
+       seq.i  qb+qs*17,qb+qs*17+qd
+       jmp    slow,    {fast
+       seq.i  qb+qs*7, qb+qs*7+qd
+       jmp    slow,    }tab
+       seq.i  qb+qs*11,qb+qs*11+qd
+       jmp    slow,    <tab
+       seq.i  qb+qs*5, qb+qs*5+qd
+       jmp    slow,    }qb+qs*5+qd/2
+       seq.i  qb+qs*24,qb+qs*24+qd
+       jmp    slow,    >tab
+       seq.i  qb+qs*4, qb+qs*4+qd
+       jmp    >fast,   }qb+qs*4+qd/2
+       seq.i  qb+qs*10,qb+qs*10+qd
+       jmp    >fast,   <tab
+       seq.i  qb+qs*23,qb+qs*23+qd
+       jmp    >fast,   >tab
+       seq.i  qb+qs*6, qb+qs*6+qd
+       jmp    slow,    {tab
+       seq.i  qb+qs*12,qb+qs*12+qd
+       djn.f  slow,    tab
+
+       seq.i  qb+qs*28,qb+qs*28+qd
+       jmp    tab,     >tab
+       seq.i  qb+qs*9, qb+qs*9+qd
+       jmp    tab,     }qb+qs*9+qd/2
+       seq.i  qb+qs*20,qb+qs*20+qd
+       djn.f  <fast,   tab
+       seq.i  qb+qs*8, qb+qs*8+qd
+       jmp    <fast,   }qb+qs*8+qd/2
+       seq.i  qb+qs*21,qb+qs*21+qd
+       jmp    tab,     {fast
+       seq.i  qb+qs*15,qb+qs*15+qd
+       jmp    tab,     <tab
+       seq.i  qb+qs*27,qb+qs*27+qd
+       jmp    <fast,   >tab
+       seq.i  qb+qs*16,qb+qs*16+qd
+       jmp    tab,     {tab
+       seq.i  qb+qs*22,qb+qs*22+qd
+       djn.f  tab,     tab
+       seq.i  qb+qs*30,qb+qs*30+qd
+       jmp    tab,     }tab
+
+fixed2:spl    1,       }qb+qs*31
+       spl    1,       }qb+qs*32
+       spl    1,       }qb+qs*33
+silk2a:spl    @0,      <131
+       mov.i  }silk2a, >silk2a
+silk2b:spl    @0,      }7502
+       mov.i  }silk2b, >silk2b
+silk2c:spl    @0,      }2430
+       mov.i  }silk2c, >silk2c
+       mov.i  #3555,   }-3190
+       mov.i  #1832,   }1398
+       mov.i  #-2840,  }570
+
+       dat    }1,      >1
+       dat    }1,      >1
+qincr  dat    }-gap,   >2*gap
+
+bmber2:add.ba fnd,     fnd
+loop2: mov.i  qincr,   *fnd     ; primary bomber
+       mov.i  qincr,   @fnd     ; .66c, bi-directional
+fnd:   mov.i  2*-gap,  }qb
+       add    qincr,   fnd
+       djn    loop2,   #rep2
+       jmp    fixed2,  >flag    ; set flag
+       end
+______________________________________________________________________________
+Extra Extra Extra -
+Innocuous by John Metcalf
+
+After fiercely resisting the temptation to join the authors of Q^2
+warriors I finally yielded on the provision I didn't re-use someone
+else's code. At first I settled for a mini-Q^2 which scanned 13*2
+locations. Since it seemed my warriors were (in my opinion) taking
+premature retirement, it became inevitable I would eventually have
+to write a full Q^2.
+
+From writing the mini-Q^2 I learnt how it is possible for more scan
+locations to be decoded in a faster time and how to remove a now
+unwanted add.ab fnd,fnd. Over the 24*2 scans of the new and improved
+Q^2 this results in an average speed increase of 1.2 cycles :-)
+
+Since my testing has been somewhat curtailed by events which created
+some uncertainty over the level of the hill, I present the improved
+Q^2 here with only a simple, harmless paper - hence the name...
+
+Anyway, here's the code ready for you to use, abuse and improve
+as you wish:
+
+;redcode-94
+;name Innocuous
+;author John Metcalf
+;strategy Improved Q^2 -> Harmless Paper
 
 ;assert CORESIZE==8000
 
-     org   boot
+     org   qGo
+     pstep1 equ  220 ; 1700
+     pstep2 equ 6172 ; 4388
+     pstep3 equ 3060 ; 4924
+pGo: spl   1,       {qf+qs*3 ; harmless paper!
+     spl   1,       {qf+qs*9
+pap1:spl   @0,      {pstep1
+     mov   }pap1,   >pap1
+     mov   }pap1,   >pap1
+pap2:spl   @0,      {pstep2
+     mov   }pap2,   >pap2
+     mov   {pap2,   {pap3
+pap3:jmp   pstep3+1,>pstep3-3
+     dat   >1,      }1
 
-;    [ Decoy ]
-q    for   22
-     for   2+(q%5==0||q%5==2||q%6==2||q%16==3)
-     spl   #m*3039,  {m*3359
+     for 23
+     dat 0,0
      rof
-     spl   #0,       0       ; scanned
-     rof
 
-;    [ Boot ]
-boot:
-q    for   10
-     mov   sGat+q-1,  >sGat
-     rof
-     jmp   @0,        bDis+m-sGat
+     qf equ (pGo-200)        ; qscan constants
+     qd equ (-101)
+     qs equ (-201)
 
-bDis equ   (boot+3+923*step) ; optimal distance
-step equ   1671              ; non-optimal
-numb equ   2230              ; number of scans
-cGat equ   (sGat-2)
+     qi equ (11)             ; qbomber constants
+     qr equ (9)
 
-;    [ Scan ]
-sGat:mov   }m,       *bDis   ; multi-function
-     mov   sBmb,     >sGat
-sLoo:sub   #step,    #step*numb
-m:   jmz.f sLoo,     @sLoo   ; a-field mutates
-     mov.b sLoo,     sGat
-     jmn.a {m,       *sGat
+     nop   {q_B,     {q_E
+qP:  add   q_D,      q_B     ; decoder
+qSlo:add   @qP,      @qLoo-1
+qFas:add   *qP,      @qLoo-1
+qSki:sne   >qf+qs*20,@qKil
+     add   qDis,     qKil
 
-;    [ Clear ]
-sBmb:spl   0,        0
-cLoo:mov   cBmb,     >cGat
-     djn.f cLoo,     >cGat
-cBmb:dat   <2667,    2-cGat
+qLoo:mov   qInc,     *qKil   ; .5c dat bomber
+qKil:mov   qf,       @qf+5
+     add.x qInc,     @qLoo-1
+     djn   qLoo,     #qr
+     jmp   pGo,      {qf+qs*27
+
+qDis:dat   qd,       qd
+qInc:dat   {qi,      {-qi
+
+q_A: dat   10*qs,    10*qs   ; Can get 23 values from this
+q_B: dat   13*qs,    13*qs   ; table and can also use the
+q_C: dat   6*qs,     6*qs    ; initial value of qKil.
+q_D: dat   1*qs,     1*qs    ; (Traditional Q^2 comment!)
+q_E: dat   4*qs,     4*qs
+
+; [0/1 cycles]
+qGo: seq   qf,       qd+qf        ; 0
+     jmp   qSki,     {qd+qf-2
+     seq   qf+qs*10, qd+qf+qs*10  ; A
+     djn.a qFas,     {qFas
+     seq   qf+qs*13, qd+qf+qs*13  ; B
+     jmp   qFas,     {qFas
+     seq   qf+qs*6,  qd+qf+qs*6   ; C
+     jmp   qFas,     {qP
+     seq   qf+qs,    qd+qf+qs     ; D
+     jmp   qFas,     {qd+qf+qs-2
+     seq   qf+qs*4,  qd+qf+qs*4   ; E
+     jmp   qFas,     }qP
+
+; [2 cycles]
+     seq   qf+qs*14, qd+qf+qs*14  ; DB
+     jmp   qSlo,     {qd+qf+qs*4-2
+     seq   qf+qs*19, qd+qf+qs*19  ; CB
+     jmp   qSlo,     {qP
+     seq   qf+qs*17, qd+qf+qs*17  ; EB
+     jmp   qSlo,     }qP
+     seq   qf+qs*11, qd+qf+qs*11  ; DA
+     jmp   qSlo,     <qP
+     seq   qf+qs*7,  qd+qf+qs*7   ; DC
+     jmp   qSlo,     >qP
+     seq   qf+qs*26, qd+qf+qs*26  ; BB
+     jmp   qSlo,     {qFas
+     seq   qf+qs*5,  qd+qf+qs*5   ; DE
+     jmp   qSlo,     {qSlo
+     seq   qf+qs*16, qd+qf+qs*16  ; CA
+     djn.f qSlo,     qP
+     seq   qf+qs*23, qd+qf+qs*23  ; BA
+     djn.a qSlo,     {qFas
+     seq   qf+qs*2,  qd+qf+qs*2   ; DD
+     djn.b qSlo,     {qSlo
+
+; [3 cycles]
+     seq   qf+qs*15, qd+qf+qs*15  ; DDB
+     jmp   qP,       {qd+qf+qs*4-2
+     seq   qf+qs*12, qd+qf+qs*12  ; DDA
+     jmp   qP,       <qP
+     seq   qf+qs*8,  qd+qf+qs*8   ; DDC
+     jmp   qP,       >qP
+     seq   qf+qs*25, qd+qf+qs*25  ; CCB
+     jmp   qP,       {qP
+     seq   qf+qs*21, qd+qf+qs*21  ; EEB
+     jmp   qP,       }qP
+     seq   qf+qs*28, qd+qf+qs*28  ; DDBB
+     jmp   qP,       {qFas
+     seq   qf+qs*24, qd+qf+qs*24  ; DAB
+     djn.a qP,       {qFas
+     seq   qf+qs*22, qd+qf+qs*22  ; CCA
+     djn.f qP,       qP
+     jmp   pGo,      {qf+qs*27
      end
 _______________________________________________________________________________
+                                      .     .
+               ,---.                 /(/\_/\)\
+    __         |   |                (         )
+   <oo>    ,---'   `---.            | N.E.W.T |      ___
+   ['']    | Brigadeer |  /~~~~\    |         |    _< + >_
+  ,-""---. `---.   ,---' (Shadow)   |  May97  |   [ Vigor ]   ,-------.
+  | Tues |     |   |     |      |   |    -    |   [   &   ]   | Zooom |   ,
+  |  PM  |     |   | *   |      |   |  Feb99  |   [ Fixed ]   |       |  ;O:
+__|_.___.|_,(._|__.|_\)/_|__.___|_(.|___,._.__|._,[____.__]_),|___,.__|___")/__
 Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
 Authors:  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Anton Marsden
 <amarsden@mcs.vuw.ac.nz>, Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de>,
 Philip Kendall <pak21@cam.ac.uk> and John Metcalf <grumpy@digitald.uk.com>
-_______________________________________________________________________________
-Errata
-
-In Core Warrior 70, the summary of the P^3 result incorrectly switched
-"even" and "odd". The correct text for lines 705-6 should read:
-
-   j = (i+1+m)/2  if i is odd
-   j = i/2        if i is even

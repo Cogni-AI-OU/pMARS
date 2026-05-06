@@ -745,7 +745,7 @@ up rotating weaker opponents and give up way too many losses.
 So I went looking for some good code, especially something that would
 perform well against stone-imps and strong silks.  The modern stone-imps
 seem to be structured similarly, a small stone with core wipe and a small
-imp-pump that is spaced far away from the stone.  Both are hard to find by
+imp-pump that is positioned far away from the stone.  Both are hard to find by
 scanning, and a core-clear takes too long to kill them together.  My
 approach was to try a quick one-pass something that would stun at least
 one of the parts with spl's, followed by a dclear.  That way the dclear
