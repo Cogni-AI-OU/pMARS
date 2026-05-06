@@ -86,5 +86,5 @@ $(OBJ): Makefile config.h global.h
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) core
+	rm -f $(OBJ) $(MAINFILE) core
 

@@ -56,25 +56,26 @@ magicp2	jmp	*wptr, *magicp		;; also the key (see below)
 
 key	equ	(count-1)		
 
-count	nop	#key+3, }count		;; scan our own key last
-search	seq.i	$key, }count		;; 33% mod 3 scanning for other key
-	jmp	count, }count
-
-	sne.i	$count, }count		;; not equal for second warrior
-wait	jmp	wait, }count		;; wait if we are #1
-	mov	0, $key			;; erase key and quit if we are #2
-
-;; - - - - - - - - - - - flag enemy warrior - - - - - - - - - - - - - - -
-
-foe	stp.a	#1, @0
-magicp2	jmp	*wptr, *magicp		;; also the key (see below)
-
-;; - - - - - - - - - special first round routine - - - - - - - - - - - - -
-
+; Commented out due to duplication at the end of the file
+;count	nop	#key+3, }count		;; scan our own key last
+;search	seq.i	$key, }count		;; 33% mod 3 scanning for other key
+;	jmp	count, }count
+;
+;	sne.i	$count, }count		;; not equal for second warrior
+;wait	jmp	wait, }count		;; wait if we are #1
+;	mov	0, $key			;; erase key and quit if we are #2
+;
+;;; - - - - - - - - - - - flag enemy warrior - - - - - - - - - - - - - - -
+;
+;foe	stp.a	#1, @0
+;magicp2	jmp	*wptr, *magicp		;; also the key (see below)
+;
+;;; - - - - - - - - - special first round routine - - - - - - - - - - - - -
+;
 ;; Determine who moved first without pspace
 ;;  1st version waits till timeout and second kills itself
-
-key	equ	(count-1)		
+;
+;key	equ	(count-1)
 
 count	nop	#key+3, }count		;; scan our own key last
 search	seq.i	$key, }count		;; 33% mod 3 scanning for other key
