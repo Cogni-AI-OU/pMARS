@@ -38,4 +38,4 @@ jobs:
       - name: Run tournament tests
         run: |
           chmod +x bin/pmars
-          make -C tests/tournaments/icwt1989 test
+          make -C tests/tournaments test

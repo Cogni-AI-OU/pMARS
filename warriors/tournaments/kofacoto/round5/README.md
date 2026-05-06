@@ -6,8 +6,8 @@ Reference: [KOFACOTO home page](http://www.koth.org/kofacoto/) | [Results](http:
 
 | Battle | Winner | Loser | Warrior notes |
 | --- | --- | --- | --- |
-| 1 | Robert Macrae | P. Kline | `Round5.2000` vs `RotF Copy` |
-| 2 | David Moore | Magnus Paulsson | `myMooreKiller` vs `G2` |
+| 1 | Robert Macrae | P. Kline | `RotF Copy` vs `Round5.2000` |
+| 2 | David Moore | Magnus Paulsson | `G2` vs `myMooreKiller` |
 | 3 | Michal Janeczek | Ben Ford | `Quicksilver` vs `Self-Modifying Code` |
 | 4 | Christian Schmidt | Leonardo H. Liporati | `2 Crazy` vs `Stolen RedCode` |
 

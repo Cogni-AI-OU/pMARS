@@ -60,6 +60,13 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 
 ## Examples
 
+### Case: KOFACOTO Round 5 Warriors
+
+For Round 5 of the KOFACOTO tournament, several warriors were reconstructed or recovered from historical archives:
+
+- **Self-Modifying Code (Ben Ford):** Reconstructed using components from David Moore's 'Recycled Bits' and the P^3 brain logic from Leonardo Liporati's 'Stolen RedCode', following the historical description.
+- **Recovered Warriors:** 'Round5.2000' (P. Kline), '2 Crazy' (Christian Schmidt), 'Quicksilver' (Michal Janeczek), and 'G2' (David Moore) were recovered from the web archive of koth.org.
+
 ### Case: Yeager.red (KOFACOTO Tournament)
 
 In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
