@@ -58,11 +58,40 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 2. **Comment Character:** Use `;` for all Redcode comments.
 3. **Explain Changes:** Always include a brief comment explaining why a change was made (e.g., "Removed in favor of 'end tStart' for better compatibility").
 
-## Examples
+## ICWS '94x Large Core Compatibility
 
-### Case: KOFACOTO Tournament
+Some tournaments, like KOFACOTO Round 6, used a large core with extended modifiers (`-x` flag in pMARS).
+
+### Core Parameters
+For KOFACOTO Round 6, the parameters were:
+- **Core Size:** 55440
+- **Max Processes:** 55440
+- **Cycles:** 500000
+
+When simulating these environments, ensure the `-s`, `-p`, and `-c` flags are set correctly. The `-x` flag is often required for extended modifiers, although some pMARS builds enable it by default.
+
+### Warrior Length
+Large core warriors often exceed the default length limit of 100 instructions. Use the `-l` flag to increase the limit (e.g., `-l 500`).
+
+### P-Space
+Ensure P-space size is appropriate for the core size. By default, pMARS sets it to 1/16th of the core size.
+
+### Case: Entry Point Modernization (KOFACOTO Tournament)
 
 In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point. This includes warriors from Round 1, Round 2, Round 3, and Round 4.
+
+**Example (He Scans Alone B from Round 6):**
+```redcode
+;redcode-94
+;name He Scans Alone B
+...
+; org       tStart ; Removed in favor of 'end tStart' for better compatibility
+...
+tStart mov <tDecoy+0,{tDecoy+2
+...
+; Added 'end tStart' to ensure compatibility and explicit entry point definition
+          end    tStart
+```
 
 **Example (Retribution.red from Round 4):**
 ```redcode
@@ -77,3 +106,22 @@ In the KOFACOTO tournament, several warriors were updated to ensure a strict and
 ```
 
 This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
+
+### Case: KOFACOTO Round 3 (Black Warrior Round)
+
+Round 3 of the KOFACOTO tournament introduced a secret opponent named **Black Box**. This round used special core settings that differ from the standard ICWS'94 Draft defaults:
+
+- **Core Size:** 55440
+- **Max Processes:** 10000
+- **Max Cycles:** 500000
+- **Max Warrior Length:** 200 (Requires `-l 200` flag)
+- **Minimum Distance:** 200 (Requires `-d 200` flag)
+
+When simulating this round, ensuring these flags are provided is essential, as the Black Box warrior and some entries (like Oneder) exceed the default length of 100.
+
+#### Warrior Adjustments:
+Several warriors were adjusted to satisfy modern pMARS assembly:
+- **Chin.red (Voodoo):** Added `;assert 1` to avoid warnings.
+- **Macrae.red (55HSB):** Changed `;assert TRUE` to `;assert 1` as `TRUE` is not a recognized constant in pMARS.
+- **BlackBox.red:** The opponent warrior was included in the tournament archive to allow reproducible tests.
+
