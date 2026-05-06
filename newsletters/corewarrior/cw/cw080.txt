@@ -1,0 +1,158 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 80                                                       31 January, 2002
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star Internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+Far too much time has passed since the previous issue of Core Warrior, with
+the Pizza hills being unavailable for the duration.  However, there is good
+news too.  A flurry of work has taken place on Koenigstuhl, which now homes
+8 infinite hills. (ICWS, 88, 94, P-Space, Open, Big, Tiny, LP).
+
+As usual a number of top notch warriors have been posted.  Recommended
+reading includes the code for Moore's Fire and Ice II, and Janeczek's
+Behemot.
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  38.6/ 37.6/ 23.8          Digital Instinct    Christian Schmidt 139.7    3
+ 2  28.2/ 17.1/ 54.7               Son of Vain      Oversby/Pihlaja 139.3    1
+ 3  41.7/ 49.6/  8.6                     Razor      Michal Janeczek 133.9   15
+ 4  26.0/ 18.8/ 55.1                 nPaper II        Paul-V Khuong 133.2   85
+ 5  27.2/ 23.1/ 49.7                    Olivia             Ben Ford 131.2   17
+ 6  22.6/ 14.7/ 62.7 Mini Return Of The Jedimp             John K W 130.4   28
+ 7  34.6/ 39.3/ 26.1                      test             Paulsson 130.0   12
+ 8  30.6/ 33.0/ 36.4         Enough is enough!         John Metcalf 128.2    8
+ 9  34.1/ 40.6/ 25.2                  Combatra          David Moore 127.6   40
+10  34.6/ 41.8/ 23.5                   Behemot      Michal Janeczek 127.4   14
+11  25.9/ 25.2/ 48.9                 Uninvited         John Metcalf 126.7   51
+12  22.1/ 18.2/ 59.7                  Cinammon         John Metcalf 126.0   53
+13  33.1/ 40.5/ 26.4                 Wizard 13         John Metcalf 125.8   16
+14  19.5/ 13.5/ 67.0      The PhantIMP Menance             Ben Ford 125.4   18
+15  22.8/ 20.3/ 56.9                  KafuFFLe         John Metcalf 125.2   33
+16  22.3/ 19.5/ 58.2               Tie Factory    Christian Schmidt 125.1   54
+17  22.3/ 19.9/ 57.8              Revival Fire              P.Kline 124.7    1
+18  24.3/ 25.4/ 50.3               Quicksilver      Michal Janeczek 123.3   33
+19  26.6/ 30.0/ 43.3                     Vilex         Ken Espiritu 123.2   80
+20  19.6/ 16.3/ 64.1    Return of the Fugitive          David Moore 122.9  109
+21  29.0/ 35.1/ 35.9               Keyser Soze        Anton Marsden 122.9   13
+22  22.0/ 21.2/ 56.8                   LoN GeV     Simon Wainwright 122.8    9
+23  21.9/ 22.1/ 56.0               Fifth Third             Ben Ford 121.7   20
+24  21.6/ 21.5/ 56.9                      test                  JKW 121.7   26
+25  25.6/ 29.6/ 44.9               Velvet Fist     Ayan Chakrabarti 121.6    3
+
+26  23.3/ 26.2/ 50.5                 Brigadeer     M Joonas Pihlaja 120.3   24
+
+Top 25 Averages:
+    27.1/ 27.0/ 46.0                                                127.2   29
+
+Age since last issue: 9 ( 26 last issue, 18 the issue before )
+Days since last issue: 345 ( 104 last issue, 209 the issue before )
+Average age: 29 ( 26 last issue, 34 the issue before )
+Average score: ??? ( 136 last issue, 138 the issue before )
+Average movement: ??? ( -2.2 last issue, -6.0 the issue before )
+Warriors surviving: 18 ( 10 last issue, 14 the issue before )
+
+The top 25 warriors are represented by 14 independent authors, Metcalf with 5,
+Ford and Janeczek with 3 each, Moore, Schmidt and Wilkinson each have 2.  The
+remaining 8 redcoders have just the one warrior each. ( 13 authors last issue,
+9 the issue before )
+
+See below for a message from Pizza regarding the Corewar hills:
+_______________________________________________________________________________
+  Subject:   A special message from the Pizza Server
+  Date:      21.11.01, 21:45
+
+  Hi there! We're writing you because some time in the last couple months
+  you wrote us, and we weren't there! The server was broken because the
+  sysadmins moved it from an HPUX box to a Sun box and the elves for the
+  longest time were not able to log in and rebuild and fix things.
+
+  For you KOTH users, the pizza hill has been moved. Unfortunately for us
+  and for you, We don't know where it went. May we suggest checking the
+  newsgroup for more info. Naturally we'll be linking to the new page
+  once we hear where it's located.
+
+  Thank you for your patience and support!
+
+  Sincerely,
+  The Internet Pizza Elves
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  41.4/ 35.7/ 23.0          Digital Instinct    Christian Schmidt 147.1    0
+ 1  28.1/ 16.9/ 54.9               Son of Vain      Oversby/Pihlaja 139.4    0
+ 6  32.5/ 32.8/ 34.8         Enough is enough!         John Metcalf 132.2    1
+16  24.6/ 21.5/ 53.9                   LoN GeV     Simon Wainwright 127.7    1
+17  22.3/ 19.9/ 57.8              Revival Fire              P.Kline 124.7    1
+24  21.7/ 20.4/ 57.8 Return of the Stormbringe    Christian Schmidt 123.0    1
+24  26.8/ 30.8/ 42.4               Velvet Fist     Ayan Chakrabarti 122.7    1
+25  33.4/ 43.2/ 23.4              Light Sprain          Dave Hillis 123.6    1
+
+Players entering hill since last issue: 7 ( 12 last issue, 5 the issue before )
+Average rank of new entries: 14 ( 10 last issue, 11 the issue before )
+
+Two strong new entries here from Schmidt and Oversby/Pihlaja.  Welcome to
+Ayan, whoose Velvet Fist enters the lower reaches of the hill.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  29.7/ 41.0/ 29.3                    Ultima    Christian Schmidt 118.4   42
+26  36.7/ 51.5/ 11.9              Shapeshifter      Michal Janeczek 121.8   37
+26  19.4/ 20.0/ 60.6              The Dark One    Christian Schmidt 118.9   31
+26  23.3/ 26.2/ 50.5                 Brigadeer     M Joonas Pihlaja 120.3   24
+26  19.9/ 21.0/ 59.1 Return of the Stormbringe    Christian Schmidt 118.8    6
+26  28.9/ 38.4/ 32.8                     Carme           Zul Nadzri 119.3    3
+26  26.4/ 35.9/ 37.7                   Recount              P.Kline 116.8    3
+26  32.8/ 44.0/ 23.2              Light Sprain          Dave Hillis 121.7    2
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+20  19.6/ 16.3/ 64.1    Return of the Fugitive          David Moore 122.9  109
+ 4  26.0/ 18.8/ 55.1                 nPaper II        Paul-V Khuong 133.2   85
+19  26.6/ 30.0/ 43.3                     Vilex         Ken Espiritu 123.2   80
+16  22.3/ 19.5/ 58.2               Tie Factory    Christian Schmidt 125.1   54
+12  22.1/ 18.2/ 59.7                  Cinammon         John Metcalf 126.0   53
+11  25.9/ 25.2/ 48.9                 Uninvited         John Metcalf 126.7   51
+ 9  34.1/ 40.6/ 25.2                  Combatra          David Moore 127.6   40
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <DrSchmidt007@aol.com>

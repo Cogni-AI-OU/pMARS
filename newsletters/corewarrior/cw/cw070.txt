@@ -1,0 +1,340 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 70                                                       4 February, 1999
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star internet
+locals for more information:
+
+FAQs are available from:
+  ftp://rtfm.mit.edu/pub/usenet/news.answers/games/corewar-faq.Z
+  http://www.koth.org/corewar-faq.html
+
+The ftp site and mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars.html             ;Stormking
+  http://www.ncs.infi.net/~wtnewton/corewar  ;Terry's web page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;Stormking
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the Stormking page for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+
+A collection of Bezzi's hints in the first issues is available at:
+  ftp://ftp.volftp.vol.it/pub/pc/msdos/games/solutions/bbhints.zip
+_______________________________________________________________________________
+Welcome...
+
+Apologies for the many weeks which have passed since last issue. Fortunately
+though, they have not been entirely uneventful. Ian Oversby's Autumn/Winter
+tournament has begun, Macrae has successfully destroyed the deadlock on the
+multi-warrior hill, and a selection of quality redcode has been published.
+
+This issue - David Moore introduces the P^3 switcher and the code of Zooom,
+the current '94nop king is revealed.
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  45.5/ 34.2/ 20.2    Diamonds and more Rust    Christian Schmidt 156.8    3
+ 2  39.1/ 25.5/ 35.4                  Recovery          Ian Oversby 152.6   22
+ 3  43.5/ 36.8/ 19.6             Recycled Bits          David Moore 150.3   40
+ 4  45.7/ 42.4/ 11.9                      Win!          David Moore 148.9   16
+ 5  35.1/ 26.8/ 38.0          The Stormbringer    Christian Schmidt 143.4   32
+ 6  34.5/ 26.8/ 38.6                 Brigadeer     M Joonas Pihlaja 142.2   21
+ 7  35.9/ 30.6/ 33.6                      Vain          Ian Oversby 141.1  126
+ 8  34.6/ 28.4/ 37.0   Three Queens and a King    Christian Schmidt 140.7    1
+ 9  32.5/ 24.3/ 43.2                 Fragility         John Metcalf 140.7    5
+10  27.8/ 15.7/ 56.5                  Fugitive          David Moore 140.0   80
+11  34.7/ 30.0/ 35.3                     Vigor         Ken Espiritu 139.4  114
+12  37.6/ 36.3/ 26.1                  Defender          Ian Oversby 138.8   34
+13  40.6/ 42.4/ 17.0                  Zooom...         John Metcalf 138.8   18
+14  38.5/ 38.3/ 23.1               myVamp v3.7             Paulsson 138.7   27
+15  38.0/ 37.5/ 24.5                   Trefoil        Steve Gunnell 138.5    1
+16  32.6/ 27.2/ 40.2                      Newt          Ian Oversby 138.1  204
+17  34.3/ 30.8/ 35.0                     Fixed         Ken Espiritu 137.7  110
+18  33.0/ 28.2/ 38.8                    Shadow    Christian Schmidt 137.7   31
+19  28.9/ 20.1/ 51.0       Three Men in a Boat     M Joonas Pihlaja 137.7   33
+20  33.1/ 29.6/ 37.4         Benj's Revene 1.0        Robert Macrae 136.6   28
+21  39.7/ 43.1/ 17.2                 Blurstone        M. J. Pihlaja 136.2   50
+22  32.3/ 29.5/ 38.2         Tuesday Afternoon             John K W 135.1   54
+23  41.8/ 49.5/  8.7             He Scans Anew              P.Kline 134.1    4
+24  37.7/ 42.0/ 20.3                    Bee/7i         John Metcalf 133.3    2
+25  33.1/ 33.7/ 33.2              Fire and Ice          David Moore 132.6   99
+
+Age since last issue: 33 ( 13 last issue, 7 the issue before )
+New warriors: 14  Turnover/age rate 42%
+Average age: 46 ( 36 last issue, 34 the issue before )
+Average score: 140 ( 138 last issue, 134 the issue before )
+The top 25 warriors are represented by just 11 independent authors: Schmidt,
+Oversby and Moore with 4, Pihlaja and Metcalf with 3, Espiritu with two and
+the rest with one each.
+
+Christian Schmidt claims first place with his Diamonds and more Rust, which
+is achieving 60%+ wins against stone/imps Newt, Vain and Brigadeer.
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  44.4/ 38.0/ 17.6          Silver Talon 1.2                Edgar 150.7    0
+ 2  44.7/ 33.2/ 22.1    Diamonds and more Rust    Christian Schmidt 156.1    0
+ 2  34.7/ 24.5/ 40.8          The Stormbringer    Christian Schmidt 144.9    0
+ 2  33.2/ 22.8/ 44.0                 Brigadeer     M Joonas Pihlaja 143.5    0
+ 3  34.1/ 26.4/ 39.5                  Recovery          Ian Oversby 141.8    1
+ 3  38.4/ 36.6/ 25.0            Digital Dragon    Christian Schmidt 140.2    0
+ 5  40.0/ 40.5/ 19.6                  Zooom...         John Metcalf 139.5    1
+ 6  41.2/ 44.3/ 14.5                      Win!          David Moore 138.2    0
+ 6  40.5/ 43.4/ 16.1              Have No Pity         John Metcalf 137.6    1
+ 9  41.6/ 49.5/  8.8             He Scans Anew              P.Kline 133.8    1
+ 9  28.0/ 22.7/ 49.3                 Fragility         John Metcalf 133.3    1
+ 9  31.3/ 29.8/ 38.9   Three Queens and a King    Christian Schmidt 132.8    0
+10  36.4/ 39.8/ 23.8               myVamp v3.7             Paulsson 133.0    0
+11  31.2/ 28.4/ 40.4        Benj's Revenge 1.0        Robert Macrae 133.9    1
+11  35.3/ 38.5/ 26.1                   Trefoil        Steve Gunnell 132.1    1
+12  37.7/ 42.5/ 19.8                     Erase         Ken Espiritu 132.8    1
+15  24.4/ 18.0/ 57.6       Three Men in a Boat     M Joonas Pihlaja 130.8    1
+??  ??.?/ ??.?/ ??.?                   Khayman          Ian Oversby ???.?    1
+17  30.0/ 32.1/ 37.9               Liquid Fire    Christian Schmidt 127.8    1
+19  35.6/ 42.5/ 21.9                    Bee/7i         John Metcalf 128.7    1
+20  35.6/ 43.2/ 21.2           Recycled Bits--          David Moore 128.0    1
+21  34.8/ 41.7/ 23.5               BiShot v1.0    Christian Schmidt 127.9    1
+21  22.0/ 17.9/ 60.1                Redemption         John Metcalf 126.2    1
+22  34.7/ 42.5/ 22.9                    Z-Shot         John Metcalf 126.8    1
+22  30.4/ 34.4/ 35.1                    bomber                   dm 126.4    1
+22  20.8/ 16.7/ 62.5                      Glok             Ben Ford 124.9    0
+23  26.1/ 27.2/ 46.7              The Yokozuna    Christian Schmidt 125.1    1
+24  32.6/ 42.3/ 25.0                 Z-Shot II         John Metcalf 123.0    1
+25  32.8/ 42.6/ 24.6              Sand-Crawler         John Metcalf 122.9    1
+
+Several strong new entries ensured warriors surviving from last issue have
+had a struggle to retain their rank. A few beginners have joined the elite.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  27.4/ 30.1/ 42.5             Ultraviolet-B         Ken Espiritu 124.7  120
+26  31.6/ 39.4/ 29.0               Digitalis 4    Christian Schmidt 123.8   73
+26  22.1/ 20.5/ 57.4 Return Of Return Of The J             John K W 123.6   63
+26  30.7/ 38.5/ 30.8                     Shape    Christian Schmidt 123.0   39
+26  33.9/ 44.3/ 21.8           Electric Head 2        Anton Marsden 123.4   34
+26  32.7/ 40.9/ 26.4            The Body Guard          Ian Oversby 124.5   27
+26   ?.?/  ?.?/  ?.?                     Alien    Christian Schmidt   ?.?   26
+26  ??.?/ ??.?/ ??.?                    Eraser         Ken Espiritu ???.?   23
+26  34.6/ 44.6/ 20.8      Diamonds and Rust v2    Christian Schmidt 124.5   23
+26  29.6/ 40.3/ 30.1            Digital Dragon    Christian Schmidt 118.9   18
+26  35.7/ 47.5/ 16.7              Have No Pity         John Metcalf 123.9   16
+26  ??.?/ ??.?/ ??.?            Nine Seven Six           M R bremer ???.?   14
+26  23.5/ 21.3/ 55.3                Redemption         John Metcalf 125.7   14
+26  33.2/ 41.4/ 25.4               BiShot v1.0    Christian Schmidt 125.0   13
+26   ?.?/  ?.?/  ?.?              Silver Talon                Edgar   ?.?   12
+26  20.0/ 19.9/ 60.1                      Glok             Ben Ford 120.2   11
+26  34.3/ 47.4/ 18.3                     Erase         Ken Espiritu 121.1    9
+26  28.5/ 36.8/ 34.7                     C I A         Anders Ivner 120.3    8
+26  26.6/ 29.6/ 43.8                    Gigolo   Core Warrior staff 123.6    7
+26  29.9/ 36.1/ 34.0                   Khayman          Ian Oversby 123.6    5
+26  33.4/ 43.7/ 22.9           Recycled Bits--          David Moore 123.2    5
+26   1.6/  0.7/  1.7               Liquid Fire    Christian Schmidt   6.5    5
+26  30.7/ 45.8/ 23.5                    Z-Shot         John Metcalf 115.7    4
+26  29.7/ 43.5/ 26.8                 Z-Shot II         John Metcalf 115.8    4
+26  ??.?/ ??.?/ ??.?                 Tornado 4          Beppe Bezzi ???.?    3
+26  ??.?/ ?².?/ ??.?               Falcon v0.5          Ian Oversby ???.?    2
+26  25.4/ 28.0/ 46.6              The Yokozuna    Christian Schmidt 122.9    2
+26  29.5/ 35.8/ 34.7                    bomber                   dm 123.2    2
+26  30.6/ 44.8/ 24.5              Sand-Crawler         John Metcalf 116.4    2
+
+Ultraviolet is lost shortly after entering the New HoF. Old adversaries
+Digitalis and the Jedimp are also pushed off.
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+16  32.6/ 27.2/ 40.2                      Newt          Ian Oversby 138.1  204
+ 7  35.9/ 30.6/ 33.6                      Vain          Ian Oversby 141.1  126
+11  34.7/ 30.0/ 35.3                     Vigor         Ken Espiritu 139.4  114
+17  34.3/ 30.8/ 35.0                     Fixed         Ken Espiritu 137.7  110
+25  33.1/ 33.7/ 33.2              Fire and Ice          David Moore 132.6   99
+10  27.8/ 15.7/ 56.5                  Fugitive          David Moore 140.0   80
+
+Newt keeps on going, though is suffering heavy losses against a couple of
+new warriors. Ultraviolet is no more and Vain becomes the second oldest
+warrior. Fire and Ices holds a dangerously low rank and may not be around
+for the next Core Warrior.
+_______________________________________________________________________________
+OLD HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Thermite II            Robert Macrae     2262    Qscan -> Bomber
+ 2  Impfinity v4g1         Planar            1993    Stone/imp
+ 3  Jack in the box        Beppe Bezzi       1620    P-warrior
+ 4  Tornado 3.0            Beppe Bezzi       1567    Bomber
+ 5  Torch t18              P.Kline           1539    Bomber
+ 6  Chameleon              Myer R Bremer     1437    P-warrior
+ 7  Frontwards v2          Steven Morrell    1420    Oneshot
+ 8  Evol Cap 6.6           John Wilkinson    1299    Stone/imp
+ 9  quiz                   Schitzo           1262    Scanner/bomber
+10  T.N.T.                 Maurizio Vittuari 1204    Bomber
+11  Grilled Octopus v0.5   David Boeren      1154    P-warrior
+12  Hazy Shade II          John Wilkinson    1102    P-warrior
+13  Seepping Stone         Kurt Franke       1049    Qscan -> Vampire
+14  Rosebud                Beppe Bezzi        993    Stone/imp
+15  Iron Gate 1.5          Wayne Sheppard     926    Scanner
+16  T.N.T. pro             Maurizio Vittuari  925    Bomber
+17  Agony II               Stefan Strack      912    Scanner
+18  Barrage                Anton Marsden      876    Qscan -> Paper
+19  Blue Funk              Steven Morrell     869    Stone/imp
+20  Flurry                 Anton Marsden      835    Qscan -> P-warrior
+21  Thermite 1.0           Robert Macrae      802    Qscan -> Bomber
+22  Blue Funk 3            Steven Morrell     766    Stone/imp
+23  Night Train            Karl Lewin         755    Paper
+24  Mirage 1.5             Anton Marsden      736    Scanner/bomber
+25  Blizzard               Anton Marsden      713    Qscan -> Paper
+_______________________________________________________________________________
+NEW HALL OF FAME
+* means the warrior is still active.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+12  Instant Wolf 3.4       Edgar              205    P-warrior
+13  Newt                   Ian Oversby        204 *  Q^2 -> Stone/imp
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+22  Electric Head          Anton Marsden      140    P-warrior
+23  Tiberius 3.1           Franz              130    Q^2 -> Paper
+24  Vain                   Ian Oversby        126 *  Q^2 -> Stone/imp
+25  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+
+Ultraviolet enters the Hall and stops at 24th while Newt gains another five
+places to 13th. New entry Vain returns Oversby to 5 warriors in the New HoF.
+_______________________________________________________________________________
+Extra Extra -
+Zooom... by John Metcalf
+
+Following in the great Core Warrior tradition of publishing warriors
+employing new techniques, here is Zooom...
+
+Zooom is a scanner which uses the well known Mirage scan with a unique
+twist - the clear instruction is not included in the main loop until
+something is detected. This increases initial speed.
+
+The constants have been chosen with care. The scan step is non-optimal,
+since better find-x values would result in the scanner detecting itself
+after fewer scans and switching to the dclear sooner.
+
+The boot distance is optimal, ensuring Zooom doesn't detect it's boot
+routine until after 923 scans. Perhaps reducing this to 920 scans, to
+place Zooom closer to the decoy might improve it's performance against
+oneshots slightly ;-)
+
+Testing showed dclear to be the best end-game strategy rather than
+switching to a dat bomb as Neverland did, or using a multi-pass clear.
+Anyway, without further ado, here's the code:
+
+;redcode-94
+;name Zooom...
+;author John Metcalf
+
+;strategy .5 scan -> .33 scan/.33 clear -> dclear
+;strategy  v0.1 self modifying scan loop
+;strategy   v0.2 irregular scan pattern
+;strategy    v0.3 boot and tailored decoy
+
+;assert CORESIZE==8000
+
+     org   boot
+
+;    [ Decoy ]
+q    for   22
+     for   2+(q%5==0||q%5==2||q%6==2||q%16==3)
+     spl   #m*3039,  {m*3359
+     rof
+     spl   #0,       0       ; scanned
+     rof
+
+;    [ Boot ]
+boot:
+q    for   10
+     mov   sGat+q-1,  >sGat
+     rof
+     jmp   @0,        bDis+m-sGat
+
+bDis equ   (boot+3+923*step) ; optimal distance
+step equ   1671              ; non-optimal
+numb equ   2230              ; number of scans
+cGat equ   (sGat-2)
+
+;    [ Scan ]
+sGat:mov   }m,       *bDis   ; multi-function
+     mov   sBmb,     >sGat
+sLoo:sub   #step,    #step*numb
+m:   jmz.f sLoo,     @sLoo   ; a-field mutates
+     mov.b sLoo,     sGat
+     jmn.a {m,       *sGat
+
+;    [ Clear ]
+sBmb:spl   0,        0
+cLoo:mov   cBmb,     >cGat
+     djn.f cLoo,     >cGat
+cBmb:dat   <2667,    2-cGat
+     end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Authors:  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Anton Marsden
+<amarsden@mcs.vuw.ac.nz>, Christian Schmidt <schmc003@goofy.zdv.Uni-Mainz.de>,
+Philip Kendall <pak21@cam.ac.uk> and John Metcalf <grumpy@digitald.uk.com>
+_______________________________________________________________________________
+Errata
+
+In Core Warrior 70, the summary of the P^3 result incorrectly switched
+"even" and "odd". The correct text for lines 705-6 should read:
+
+   j = (i+1+m)/2  if i is odd
+   j = i/2        if i is even
