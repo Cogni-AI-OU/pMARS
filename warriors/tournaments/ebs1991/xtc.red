@@ -28,6 +28,9 @@
 ; All this makes XTC my warrior of choice. :-)
 ; Please start XTC at the label 'loop'.
   
+; Added to ensure correct coresize for ICWT'91 simulation
+;assert CORESIZE==8192
+;pmars-flags: -8
 loop  add #412, ptr
 ptr   jmz loop, trap
       mov ptr,  dest
@@ -35,17 +38,18 @@ cnt   mov #23,  cnt
 kill  mov @trap, <dest
       djn kill, cnt
       jmp loop
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-dest  dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-      dat 0
-trap  dat bomb
+; Updated to ICWS'88 operand modes for strict compilation
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+dest  dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+      dat #0, #0
+trap  dat #bomb, #0
 bomb  spl trap, trap
