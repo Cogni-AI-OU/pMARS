@@ -66,7 +66,7 @@ When simulating different Core War standards or historical environments, use the
 - `-f`: Enforce a fixed starting position series based on a checksum. This is essential for reproducible tournament simulations and ensures that results are consistent across runs.
 
 ## Tournament Simulations
-When creating or running tournament simulations (like the ICWT 1987 simulation in `tests/tournaments/icwt1987/`), always ensure that these parameters match the historical rules as closely as possible.
+When creating or running tournament simulations (like the ICWT 1987 simulation in `tests/tournaments/icwt1987/`), always ensure that these parameters match the historical rules as closely as possible. For detailed standards on creating and maintaining tournament tests, see [tests/tournaments/AGENTS.md](tests/tournaments/AGENTS.md).
 
 ### Standard Scoring
 For consistency with historical tournaments, use the following point system unless the tournament rules specify otherwise:
