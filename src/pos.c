@@ -19,10 +19,8 @@
 /*
  * pos.c: RNG and positioning functions
  * $Id: pos.c,v 1.1.1.1 2000/08/20 13:29:42 iltzu Exp $
- * $Id: pos.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
  */
-
-#include <autoconf.h>
+#include "autoconf.h"
 #include <stdint.h>
 #include "global.h"
 #include "sim.h"

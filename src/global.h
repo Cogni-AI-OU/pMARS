@@ -26,6 +26,7 @@
  */
 
 #include "config.h"
+#include "config.h"
 #include <stdio.h>
 #ifndef INT_MAX
 #include <limits.h>
@@ -208,7 +209,7 @@ extern  PMARS_FATAL, PMARS_BADCOMLIN, PMARS_PARSEERR;
 #else
 #define MAXWARRIOR        36
 #endif
-#define MAXINSTR         1000
+#define MAXINSTR         10000
 
 #define MAXSEPARATION MAXCORESIZE/MAXWARRIOR
 

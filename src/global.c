@@ -20,10 +20,9 @@
 /*
  * global.c: global data declarations
  * $Id: global.c,v 1.3 2000/12/25 00:49:08 iltzu Exp $
- * $Id: global.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
+#include "autoconf.h"
  */
 
-#include <autoconf.h>
 #ifndef _GLOBAL_INCLUDED
 #include "global.h"
 #endif

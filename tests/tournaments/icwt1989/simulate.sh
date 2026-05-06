@@ -26,21 +26,17 @@ if [ ! -f "$PMARS" ]; then
     fi
 fi
 
-# List of available warriors for 1989
+# List of available warriors for 1989 (19 total)
+# Note: sad2.red is used instead of sad.red due to syntax issues in the original SAD.
 ALL_WARRIORS=(
-    "hypray.red"
-    "wang1.red"
-    "powerbomb.red"
-    "quarter.red"
-    "randomfire.red"
-    "sad.red"
-    "kili.red"
-    "umaccp.red"
-    "vamp.red"
+    "bitstorm.red" "bruin.red" "hypray.red" "kili.red" "killer2.red"
+    "madferret.red" "hamlin.red" "powerbomb.red" "quarter.red" "quarter2.red"
+    "quicksand.red" "randomfire.red" "sad2.red" "scramble.red" "sting2.red"
+    "tank.red" "umaccp.red" "vamp.red" "wang1.red"
 )
 
 echo "Simulating ICWT 1989 Tournament..."
-echo "Settings: 8000 core, 80000 cycles, 8000 max processes, 10 rounds"
+echo "Settings: ICWS'88, 8000 core, 80000 cycles, 8000 max processes, 10 rounds"
 echo ""
 
 results_file=$(mktemp)
@@ -50,7 +46,8 @@ for ((i=0; i<${#ALL_WARRIORS[@]}; i++)); do
         w1=${ALL_WARRIORS[$i]}
         w2=${ALL_WARRIORS[$j]}
         # Run pmars with deterministic results (-f) and fixed instruction limit
-        output=$($PMARS -f -s 8000 -c 80000 -p 8000 -r 10 -l 1000 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
+        # Enforce ICWS'88 standard with -8
+        output=$($PMARS -8 -f -s 8000 -c 80000 -p 8000 -r 10 -l 1000 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
         
         results_line=$(echo "$output" | grep "Results:")
         echo "$w1 $w2 $results_line" >> "$results_file"

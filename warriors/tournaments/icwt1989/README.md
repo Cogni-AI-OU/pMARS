@@ -15,26 +15,26 @@ The Fourth International Core Wars Society Tournament was held in February 1990 
 ### Participants
 
 The hopefuls were:
-- Bitstorm
-- Bruin
+- **Bitstorm**
+- **Bruin**
 - **HYPRAY** (Francesco Botta)
 - **KILI** (Francesco Botta & Pieramato Gramenzi)
-- Killer 2
-- MAD Ferret
-- The pied piper of Hamlin
+- **Killer 2**
+- **MAD Ferret**
+- **The pied piper of Hamlin**
 - **Power Bomb** (Bram Cohen)
 - **Quarter** (Stefan Hänßgen)
-- Quarter II
-- Quick Sand II
+- **Quarter II**
+- **Quick Sand II**
 - **Random Fire** (Bram Cohen)
-- **SAD** (Christoph Doederlein)
-- Scrambler
-- Sting 2
-- Tank
+- **SAD** (Christoph Doederlein) - `sad2.red` is the corrected version
+- **Scrambler** (`scramble.red`)
+- **Sting 2**
+- **Tank**
 - **UMACCP** (De Masi Gabriele)
 - **VAMP** (Stefan Röttger)
 - **Wang1** (Alan Wang)
 
-(Warriors in **bold** are included in this directory)
+(All 19 warriors are included in this directory)
 
 Source: [Core War: Tournaments](https://corewar.co.uk/icwt1989.htm)

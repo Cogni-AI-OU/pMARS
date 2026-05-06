@@ -19,10 +19,9 @@
 /*
  * disasm.c: functions to turn core cell data into printable string
  * $Id: disasm.c,v 1.1.1.1 2000/08/20 13:29:32 iltzu Exp $
- * $Id: disasm.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
  */
+#include "autoconf.h"
 
-#include <autoconf.h>
 #include "global.h"
 #include "asm.h"
 #include "sim.h"

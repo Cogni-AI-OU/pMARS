@@ -20,10 +20,9 @@
 /*
  * str_eng.c: externalized messages for easy translation (ENGLISH version)
  * $Id: str_eng.c,v 1.5 2000/12/25 00:49:08 iltzu Exp $
- * Id: str_eng.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
+#include "autoconf.h"
  */
 
-#include <autoconf.h>
 #include "global.h"
 
 #if (PMARSLANG == ENGLISH)

@@ -20,12 +20,11 @@
 /*
  * cdb.c: debugger
  * $Id: cdb.c,v 1.3 2000/12/25 00:49:07 iltzu Exp $
- * $Id: cdb.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
+#include "autoconf.h"
  *
  * cdb - line-oriented core debugger by Stefan Strack
  */
 
-#include <autoconf.h>
 #include <ctype.h>
 #include <string.h>
 #include "global.h"

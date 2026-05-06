@@ -30,12 +30,95 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: pmars-Server
           path: bin/
-      - name: Run tournament tests
+
+      - name: Prepare environment
         run: |
           chmod +x bin/pmars
-          make -C tests/tournaments/icwt1989 test
+          mkdir -p src
+          cp bin/pmars src/pmars
+          cp bin/pmars ./pmars
+          export PATH=$PATH:$(pwd)/bin
+          echo "$(pwd)/bin" >> $GITHUB_PATH
+
+      - name: Run Tournament Assembly Tests
+        run: |
+          echo "Checking all warriors in warriors/tournaments/..."
+          # First pass: try to assemble all with high instruction limit (-l 8000)
+          if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -p ${MAXPROCESSES:-64} -l 8000 -A {} + > /dev/null 2>&1; then
+            echo "All warriors assembled successfully."
+          else
+            echo "Some warriors failed with default settings. Retrying with compatibility flags..."
+            failed=0
+            count=0
+            find warriors/tournaments/ -name "*.red" > warriors_list.txt
+            while read -r f; do
+              count=$((count + 1))
+              # Default settings for individual retry
+              CORESIZE=8000
+              MAXLENGTH=8000
+              MAXPROCESSES=""
+              MAXCYCLES=""
+              MINDISTANCE=""
+              
+              # Try to extract settings from ;assert lines if present
+              CS=$(grep -i ";assert" "$f" | grep -oiP "CORESIZE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              [ ! -z "$CS" ] && CORESIZE=$CS
+              ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              [ ! -z "$ML" ] && MAXLENGTH=$ML
+              MP=$(grep -i ";assert" "$f" | grep -oiP "MAXPROCESSES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              [ ! -z "$MP" ] && MAXPROCESSES=$MP
+              MC=$(grep -i ";assert" "$f" | grep -oiP "MAXCYCLES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              [ ! -z "$MC" ] && MAXCYCLES=$MC
+              MD=$(grep -i ";assert" "$f" | grep -oiP "MINDISTANCE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              [ ! -z "$MD" ] && MINDISTANCE=$MD
+
+              CMD_OPTS="-s $CORESIZE -l $MAXLENGTH"
+              [ ! -z "$MAXPROCESSES" ] && CMD_OPTS="$CMD_OPTS -p $MAXPROCESSES"
+              [ ! -z "$MAXCYCLES" ] && CMD_OPTS="$CMD_OPTS -c $MAXCYCLES"
+              [ ! -z "$MINDISTANCE" ] && CMD_OPTS="$CMD_OPTS -d $MINDISTANCE"
+
+              # Try default '94
+              if ! ./bin/pmars $CMD_OPTS -A "$f" > /dev/null 2>&1; then
+                # Try '88 compatibility for older warriors
+                if ! ./bin/pmars -8 $CMD_OPTS -A "$f" > /dev/null 2>&1; then
+                  echo "FAILED: $f"
+                  echo "Default '94 error:"
+                  ./bin/pmars $CMD_OPTS -A "$f" || true
+                  echo "ICWS'88 error:"
+                  ./bin/pmars -8 $CMD_OPTS -A "$f" || true
+                  failed=$((failed + 1))
+                fi
+              fi
+            done < warriors_list.txt
+            rm warriors_list.txt
+            echo "Processed $count warriors, $failed failures."
+            if [ $failed -ne 0 ]; then
+              exit 1
+            fi
+          fi
+
+      - name: Run Specialized Tournament Tests
+        run: |
+          echo "Running Makefile-based tests in tests/tournaments/..."
+          failed=0
+          for d in tests/tournaments/*/; do
+            if [ -d "$d" ] && [ -f "${d}Makefile" ]; then
+              echo "::group::Testing $d"
+              if ! make -C "$d" test; then
+                echo "FAILED: $d"
+                failed=1
+              fi
+              echo "::endgroup::"
+            fi
+          done
+          if [ $failed -ne 0 ]; then
+            exit 1
+          fi

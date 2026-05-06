@@ -20,7 +20,7 @@
 /*
  * asm.c: assembler
  * $Id: asm.c,v 1.3 2000/12/25 00:49:07 iltzu Exp $
- * $Id: asm.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
+#include "autoconf.h"
  *
  *    usage: int assemble(char *filename, FIELD_T warriornum);
  *     parameters:
@@ -33,7 +33,6 @@
  *      message and errorlevel is set
  */
 
-#include <autoconf.h>
 #if defined(MPW)
 #pragma segment Asm
 #endif

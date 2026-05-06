@@ -1,3 +1,4 @@
+; Fixed ICWS'88 syntax compatibility (commas, DAT modes, and B-operands) for pMARS strict mode.
 ;
 ;    Warrior: Dervish
 ;  File name: dervish.red
@@ -10,8 +11,8 @@
 ;               can beat most of the ICWST'87 and
 ;               ICWST'88 programs.
 ;
-        dat     12	12
-start	mov     -1      @-1
-        add     #548    -2
-        jmp     -2
+        dat    <12, <12
+start    mov    -1, @-1
+        add    #548, -2
+        jmp    -2, 0
 	end	start

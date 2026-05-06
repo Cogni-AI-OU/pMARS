@@ -19,10 +19,9 @@
 /*
  * pmars.c: main(), toplevel, initialization, cleanup
  * $Id: pmars.c,v 1.1.1.1 2000/08/20 13:29:40 iltzu Exp $
- * $Id: pmars.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
  */
+#include "autoconf.h"
 
-#include <autoconf.h>
 #include <stdio.h>
 #if defined(unix) || defined(VMS) || defined(SDLGRAPHX)
 #include <signal.h>

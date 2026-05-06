@@ -18,10 +18,9 @@
 
 /*
  * $Id: token.c,v 1.1.1.1 2000/08/20 13:29:46 iltzu Exp $
- *  $Id: token.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
  */
 
-#include <autoconf.h>
+#include "autoconf.h"
 #include <ctype.h>
 #include <string.h>
 

@@ -2,11 +2,16 @@
 ;by Douglas McDaniels
 ;United States of America
 ;
-     DAT 1588
-     DAT 1337
-     DAT 123
-     SPL 0
-START SPL 17
+; Modified to resolve syntax issues and ensure compatibility with pMARS
+; assembly in ICWS'88 mode.
+;
+;assert 1
+;
+     DAT #0, #1588
+     DAT #0, #1337
+     DAT #0, #123
+     SPL 0, 0
+START SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -18,12 +23,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 1674
-     DAT 1423
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #1674
+     DAT #0, #1423
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -35,12 +40,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 1760
-     DAT 1509
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #1760
+     DAT #0, #1509
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -52,12 +57,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 1846
-     DAT 1595
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #1846
+     DAT #0, #1595
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -69,12 +74,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 1932
-     DAT 1681
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #1932
+     DAT #0, #1681
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -86,12 +91,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2018
-     DAT 1767
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2018
+     DAT #0, #1767
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -103,12 +108,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2104
-     DAT 1853
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2104
+     DAT #0, #1853
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -120,12 +125,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2190
-     DAT 1939
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2190
+     DAT #0, #1939
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -137,12 +142,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2276
-     DAT 2025
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2276
+     DAT #0, #2025
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -154,12 +159,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2362
-     DAT 2111
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2362
+     DAT #0, #2111
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -171,12 +176,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2448
-     DAT 2197
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2448
+     DAT #0, #2197
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -188,12 +193,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2534
-     DAT 2283
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2534
+     DAT #0, #2283
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -205,12 +210,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2620
-     DAT 2369
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2620
+     DAT #0, #2369
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -222,12 +227,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2706
-     DAT 2455
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2706
+     DAT #0, #2455
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -239,12 +244,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2792
-     DAT 2541
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2792
+     DAT #0, #2541
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -256,12 +261,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2878
-     DAT 2627
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2878
+     DAT #0, #2627
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -273,12 +278,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 2964
-     DAT 2713
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #2964
+     DAT #0, #2713
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -290,12 +295,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3050
-     DAT 2799
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3050
+     DAT #0, #2799
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -307,12 +312,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3136
-     DAT 2885
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3136
+     DAT #0, #2885
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -324,12 +329,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3222
-     DAT 2971
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3222
+     DAT #0, #2971
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -341,12 +346,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3308
-     DAT 3057
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3308
+     DAT #0, #3057
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -358,12 +363,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3394
-     DAT 3143
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3394
+     DAT #0, #3143
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -375,12 +380,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3480
-     DAT 3229
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3480
+     DAT #0, #3229
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -392,12 +397,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3566
-     DAT 3315
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3566
+     DAT #0, #3315
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -409,12 +414,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3652
-     DAT 3401
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3652
+     DAT #0, #3401
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -426,12 +431,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3738
-     DAT 3487
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3738
+     DAT #0, #3487
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -443,12 +448,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3824
-     DAT 3573
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3824
+     DAT #0, #3573
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -460,12 +465,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3910
-     DAT 3659
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3910
+     DAT #0, #3659
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -477,12 +482,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 3996
-     DAT 3745
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #3996
+     DAT #0, #3745
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -494,12 +499,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 4082
-     DAT 3831
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4082
+     DAT #0, #3831
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -511,12 +516,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 4168
-     DAT 3917
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4168
+     DAT #0, #3917
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -528,12 +533,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 4254
-     DAT 4003
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4254
+     DAT #0, #4003
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -545,12 +550,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 4340
-     DAT 4089
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4340
+     DAT #0, #4089
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -562,12 +567,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 4426
-     DAT 4175
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4426
+     DAT #0, #4175
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7,    <-6
@@ -579,12 +584,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 4512
-     DAT 4261
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4512
+     DAT #0, #4261
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -596,12 +601,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 4598
-     DAT 4347
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4598
+     DAT #0, #4347
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -613,12 +618,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 4684
-     DAT 4433
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4684
+     DAT #0, #4433
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -630,12 +635,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 4770
-     DAT 4519
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4770
+     DAT #0, #4519
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -647,12 +652,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 4856
-     DAT 4605
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4856
+     DAT #0, #4605
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -664,12 +669,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 4942
-     DAT 4691
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #4942
+     DAT #0, #4691
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -681,12 +686,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 5028
-     DAT 4777
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5028
+     DAT #0, #4777
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7,    <-6
@@ -698,12 +703,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5114
-     DAT 4863
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5114
+     DAT #0, #4863
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -715,12 +720,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5200
-     DAT 4949
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5200
+     DAT #0, #4949
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -732,12 +737,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3  ,   -13
-     JMP -6
-     DAT 5286
-     DAT 5035
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5286
+     DAT #0, #5035
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5 ,   <-4
      MOV -3   ,  @-6
      CMP <-7   , <-6
@@ -749,12 +754,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 5372
-     DAT 5121
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5372
+     DAT #0, #5121
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7,    <-6
@@ -766,12 +771,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5458
-     DAT 5207
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5458
+     DAT #0, #5207
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -783,12 +788,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5544
-     DAT 5293
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5544
+     DAT #0, #5293
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -800,12 +805,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5630
-     DAT 5379
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5630
+     DAT #0, #5379
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -817,12 +822,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 5716
-     DAT 5465
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5716
+     DAT #0, #5465
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -834,12 +839,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 5802
-     DAT 5551
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5802
+     DAT #0, #5551
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3 ,    @-6
      CMP <-7 ,   <-6
@@ -851,12 +856,12 @@ START SPL 17
      MOV -13   , <-13
      MOV -14    ,<-14
      DJN -3,     -13
-     JMP -6
-     DAT 5888
-     DAT 5637
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5888
+     DAT #0, #5637
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -868,12 +873,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 5974
-     DAT 5723
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #5974
+     DAT #0, #5723
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7 ,   <-6
@@ -885,12 +890,12 @@ START SPL 17
      MOV -13   , <-13
      MOV -14    ,<-14
      DJN -3,     -13
-     JMP -6
-     DAT 6060
-     DAT 5809
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6060
+     DAT #0, #5809
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -902,12 +907,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 6146
-     DAT 5895
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6146
+     DAT #0, #5895
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7,    <-6
@@ -919,12 +924,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 6232
-     DAT 5981
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6232
+     DAT #0, #5981
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -936,12 +941,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14 ,   <-14
      DJN -3   ,  -13
-     JMP -6
-     DAT 6318
-     DAT 6067
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6318
+     DAT #0, #6067
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5   , <-4
      MOV -3     ,@-6
      CMP <-7,    <-6
@@ -953,12 +958,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 6404
-     DAT 6153
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6404
+     DAT #0, #6153
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5    ,<-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -970,12 +975,12 @@ START SPL 17
      MOV -13 ,   <-13
      MOV -14  ,  <-14
      DJN -3    , -13
-     JMP -6
-     DAT 6490
-     DAT 6239
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6490
+     DAT #0, #6239
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -987,12 +992,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 6576
-     DAT 6325
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6576
+     DAT #0, #6325
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -1004,12 +1009,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 6662
-     DAT 6411
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6662
+     DAT #0, #6411
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -1021,12 +1026,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 6748
-     DAT 6497
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6748
+     DAT #0, #6497
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -1038,12 +1043,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 6834
-     DAT 6583
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6834
+     DAT #0, #6583
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3,     @-6
      CMP <-7,    <-6
@@ -1055,12 +1060,12 @@ START SPL 17
      MOV -13,    <-13
      MOV -14,    <-14
      DJN -3,     -13
-     JMP -6
-     DAT 6920
-     DAT 6669
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #6920
+     DAT #0, #6669
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3 ,    @-6
      CMP <-7 ,   <-6
@@ -1072,12 +1077,12 @@ START SPL 17
      MOV -13  ,  <-13
      MOV -14    ,<-14
      DJN -3,     -13
-     JMP -6
-     DAT 7006
-     DAT 6755
-     DAT 123
-     SPL 0
-     SPL 17
+     JMP -6, 0
+     DAT #0, #7006
+     DAT #0, #6755
+     DAT #0, #123
+     SPL 0, 0
+     SPL 17, 0
      CMP <-5,    <-4
      MOV -3  ,   @-6
      CMP <-7  ,  <-6
@@ -1089,5 +1094,5 @@ START SPL 17
      MOV -13    ,<-13
      MOV -14    ,<-14
      DJN -3     ,-13
-     JMP -6
+     JMP -6, 0
      END  START

@@ -20,13 +20,12 @@
 /*
  * sim.c: simulator
  * $Id: sim.c,v 1.3 2000/12/25 00:49:08 iltzu Exp $
- * $Id: sim.c,v 1.2 2001/07/08 10:20:47 pak21 Exp $
+#include "autoconf.h"
  *
  * 10-23-98 Pentium optimized version 30% faster than the original
  *          Ken Espiritu
  */
 
-#include <autoconf.h>
 #include "global.h"
 #include "sim.h"
 #include <time.h>
