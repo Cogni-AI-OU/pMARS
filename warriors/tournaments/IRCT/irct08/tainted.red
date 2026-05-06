@@ -5,9 +5,9 @@
 ;assert CORESIZE==800
 
        ORG      START
-       SPL.B  $   268, <   -20
-       MOV.I  $    -1, $   267
-       MOV.I  #    -2, $   267
+       SPL.B  $268, <   -20
+       MOV.I  $    -1, $267
+       MOV.I  #    -2, $267
 START  SPL.B  *     1, <    -3
-       MOV.I  #    -4, $     1
+       MOV.I  #    -4, $1
        END

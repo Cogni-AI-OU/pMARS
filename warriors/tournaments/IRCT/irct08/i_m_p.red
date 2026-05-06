@@ -5,9 +5,9 @@
 ;assert 1
 
        ORG      START
-       MOV.I  #    70, $     1
+       MOV.I  #70, $1
        SPL.B  *    -1, <    -9
-       ADD.A  #    70, $    -2
+       ADD.A  #70, $    -2
 START  MOV.I  $    -3, *    -3
        DJN.F  $    -3, <   -10
        END

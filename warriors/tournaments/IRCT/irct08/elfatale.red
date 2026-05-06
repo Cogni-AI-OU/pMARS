@@ -5,9 +5,9 @@
 ;assert CORESIZE==800
 
        ORG      START
-       ADD.AB #   328, $     2
-       SPL.B  $    -3, $     0
-       MOV.I  <     4, $     3
-START  SPL.B  $    -3, $     0
-       ADD.AB #   328, $     2
+       ADD.AB #328, $2
+       SPL.B  $    -3, $0
+       MOV.I  <4, $3
+START  SPL.B  $    -3, $0
+       ADD.AB #328, $2
        END

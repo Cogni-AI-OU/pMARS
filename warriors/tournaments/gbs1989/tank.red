@@ -3,28 +3,28 @@
 ;    ergaenzte Version
        jmp start         ; only for start, ommited in further copies
 ptr    DAT  27           ;program length -1,care if change program!
-start  MOV #0    @bomb   ;shoot backwd 0-bomb
-       MOV #0    @bombv  ;shoot forwd  0-bomb
-       SUB #9    bombv   ;decrement forwd-bomb, defines forwd bombarea
-       ADD #9    bomb    ;increment backwd-bomb, defines backwd bombarea
-       DJN start  count  ;decrement bombcounter
+start  MOV #0,    @bomb   ;shoot backwd 0-bomb
+       MOV #0,    @bombv  ;shoot forwd  0-bomb
+       SUB #9,    bombv   ;decrement forwd-bomb, defines forwd bombarea
+       ADD #9,    bomb    ;increment backwd-bomb, defines backwd bombarea
+       DJN start,  count  ;decrement bombcounter
        JMP newc
-newc   JMZ asave  384    ;check adr. before new copyfield enemy prgr instruct?
-       ADD #256   new    ;if yes, i.e. non-zero, increment adr. for new copy
-asave  JMZ save  @new    ;test 1. adr. of copyfield if yes, increment copyadr
-       ADD #783   new    ;
-save   MOV #41   count   ;restore bmb-counter
-       MOV #-47  bombv   ;restore 1st bmb-adr
-       MOV #32   bomb    ;restore 1st bckwd-bmb-adr
-copy   MOV @ptr  @new    ;start copyloop
-       SUB #1     new    ;decrement copy-adress counter
-       DJN copy   ptr
+newc   JMZ asave,  384    ;check adr. before new copyfield enemy prgr instruct?
+       ADD #256,   new    ;if yes, i.e. non-zero, increment adr. for new copy
+asave  JMZ save,  @new    ;test 1. adr. of copyfield if yes, increment copyadr
+       ADD #783,   new    ;
+save   MOV #41,   count   ;restore bmb-counter
+       MOV #-47,  bombv   ;restore 1st bmb-adr
+       MOV #32,   bomb    ;restore 1st bckwd-bmb-adr
+copy   MOV @ptr,  @new    ;start copyloop
+       SUB #1,     new    ;decrement copy-adress counter
+       DJN copy,   ptr
        JMP ready
-ready  MOV #27    ptr    ;restore copypointer
-       MOV ptr   @new    ;copy copypointer to new program
-       ADD #2     new    ;increment for jmp to 'start'label of new copy
+ready  MOV #27,    ptr    ;restore copypointer
+       MOV ptr,   @new    ;copy copypointer to new program
+       ADD #2,     new    ;increment for jmp to 'start'label of new copy
        SPL @new          ;invoke new progr.
-       ADD #2800  new    ;adr. for next copy to get out of own bomb-area
+       ADD #2800,  new    ;adr. for next copy to get out of own bomb-area
        JMP start         ;once again
 new    DAT  544          ;adr for new copy out of own bomb-area
 count  DAT  41           ;num of bombs
