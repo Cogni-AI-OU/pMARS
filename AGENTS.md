@@ -33,4 +33,10 @@ pmars -8 -s 8192 -p 64 -c 50000 -r 3 -f warrior1.red warrior2.red
 ```
 
 ### Interpretation of Results
-Note that simulation results using modern `pMARS` may differ from historical outcomes (e.g., ICWT 1987) due to differences between the ICWS'86 standard and modern implementations, even when using the `-8` flag. Discrepancies often arise from scanner sensitivity to timing and process handling.
+Note that simulation results using modern `pMARS` may differ from historical outcomes (e.g., ICWT 1987) due to differences between the ICWS'86 standard and modern implementations, even when using the `-8` flag.
+
+Specific reasons for discrepancies include:
+- **Instruction Sensitivity:** In `-8` mode, `pMARS` uses `CMP.I`, which compares the entire instruction (opcode, modes, fields). Historical simulators were often less sensitive (e.g., only comparing B-fields), which significantly affects scanners like **Ferret**.
+- **Process Queue Handling:** Differences in how `SPL` traps and the process queue are managed can favor multi-process warriors or vampires over single-process scanners.
+- **Core Initialization:** Modern `pMARS` initializes the core with `DAT.F 0, 0`, while older simulators might have used `DAT #0`. This mismatch in addressing modes can cause false positives for scanners using instruction comparison.
+- **Scanner Speed:** Warriors like **Plague** use optimized step-scanning which can find and eliminate linear scanners like **Ferret** faster in a cycle-accurate modern simulator than in historical environments.

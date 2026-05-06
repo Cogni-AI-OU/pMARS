@@ -42,7 +42,7 @@ run_round_robin() {
             w1=${warriors[$i]}
             w2=${warriors[$j]}
         # Run pmars with specified rules (3 rounds) and -f for deterministic results
-        output=$($PMARS -8 -f -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
+        output=$($PMARS -8 -f -P -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/$w1" "$WARRIORS_DIR/$w2" 2>/dev/null)
 
             results_line=$(echo "$output" | grep "Results:")
             echo "$w1 $w2 $results_line" >> "$results_file"
@@ -87,7 +87,7 @@ if [ ${#top2[@]} -lt 2 ]; then
     echo "Error: Not enough finalists to run Stage 3."
     exit 1
 fi
-final_output=$($PMARS -8 -f -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/${top2[0]}" "$WARRIORS_DIR/${top2[1]}" 2>/dev/null)
+final_output=$($PMARS -8 -f -P -s 8192 -p 64 -c 50000 -r 3 -b "$WARRIORS_DIR/${top2[0]}" "$WARRIORS_DIR/${top2[1]}" 2>/dev/null)
 final_results_line=$(echo "$final_output" | grep "Results:")
 echo "Results: $final_results_line"
 
