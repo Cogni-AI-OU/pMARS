@@ -36,7 +36,7 @@ WARRIORS=(
 OPPONENT="BlackBox.red"
 
 echo "Simulating KOFACOTO Round 3..."
-echo "Settings: 55440 core, 10000 processes, 500000 cycles, 250 rounds"
+echo "Settings: 55440 core, 10000 processes, 500000 cycles, 500 rounds"
 echo "Opponent: Black Box"
 echo ""
 

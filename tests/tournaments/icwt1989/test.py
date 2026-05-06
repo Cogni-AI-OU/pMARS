@@ -33,6 +33,9 @@ for i in range(len(warriors)):
 
 print("Final Scores:")
 sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+for i, (name, score) in enumerate(sorted_scores, 1):
+    print(f"{i}. {name}: {score} points")
+
 winner = sorted_scores[0][0]
 print("\nOfficial Results Check:")
 if winner in ["hypray.red", "wang1.red"]:
