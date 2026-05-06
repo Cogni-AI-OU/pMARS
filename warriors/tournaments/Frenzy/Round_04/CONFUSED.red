@@ -38,13 +38,13 @@ switch  sne.a   >0,         0
         djn.b   wB,         @first  ; asymmetric if num>2
 
 ;=== boot
-boot    equ (-2532)                     ;Stone boot
+BOOT_VAL    equ 0-2532                     ;Stone boot
 
 wA
 ddd for 10
-        mov.i   <boot,      {boot
+        mov.i   <BOOT_VAL,      {BOOT_VAL
     rof
-boot:   spl     boot,       stone+10
+boot_label   spl     BOOT_VAL,       stone+10
         mul.x   {0,         }0
         dat     0,          0
 
@@ -56,17 +56,17 @@ boot:   spl     boot,       stone+10
 ;=== Stone from Recycled Bit's [David M. Moore]
 ;10lines, start at top
 
-stone:
+stone
         SPL.B  #0, {0     ;start here
-        SPL.B  #0, < -2721     
-        MOV.I  $7, {  -162     
-        MOV.I  $6, @    -1     
-        SUB.AB #81, $    -2     
-        DJN.F  $    -3, < -2725     
+        SPL.B  #0, < 0-2721     
+        MOV.I  $7, {  0-162     
+        MOV.I  $6, @    0-1     
+        SUB.AB #81, $    0-2     
+        DJN.F  $    0-3, < 0-2725     
         dat 0,0
         dat 0,0
         dat 0,0
-        DAT.F  < -2722, >1     
+        DAT.F  < 0-2722, >1     
 ;==
         dat     0,          0
         dat     0,          0
@@ -75,25 +75,25 @@ stone:
 ;10lines, start at top+1
 ;This is the starting warrior
 
-scanner:
-head:   spl    #-4,         3000
-loop:   mov    head,        >head      ;start here
+scanner
+head    spl    #-4,         3000
+loop    mov    head,        >head      ;start here
         add.f  step,        scan
-scan:   seq    }4,          0
+scan    seq    }4,          0
         mov.b  scan,        @loop
         djn    loop,        #950
-step:   spl    #-152,       >-152
+step    spl    #-152,       >-152
         mov    clr,         >head-5
         djn.f  -1,          >head-5
-clr:    dat    1,           #18
+clr     dat    1,           #18
 
 ;==
         dat     0,          0
         dat     0,          0
 ;==
 ;Scanner boot. 
-sBoot    equ (-1532)
-sBoot:  spl  sBoot+(sBoot-boot), scanner+10+(sBoot-boot)
-wB:     mov.i   head,       (sBoot-wB) + sBoot-10
-        mov.i   sBoot,      boot
-        jmp     boot-9
+SBOOT_VAL    equ 0-1532
+sboot_label  spl  SBOOT_VAL+SBOOT_VAL-BOOT_VAL, scanner+10+SBOOT_VAL-BOOT_VAL
+wB      mov.i   head,       SBOOT_VAL-wB + SBOOT_VAL-10
+        mov.i   sboot_label,      boot_label
+        jmp     boot_label-9

@@ -14,7 +14,7 @@
 
 	PIN	191
 
-magicp		equ	378
+magicp_val	equ	378
 WINP		equ	379
 LOSEP		equ	380
 WARRIOR		equ	DECOY		;; if handshake requires many cycles
@@ -27,7 +27,7 @@ magic	ldp.ab	>mptr, #0
 
 last	ldp	#0, #0
 	sne	#-1, $last		;; if it is the first round, set
-mptr	jmp	search, #magicp		;; special routine for first round
+mptr	jmp	search, #magicp_val	;; special routine for first round
 
 ;; - - - - - - - try handshake - - - - - - - - - - - - - - - - - - - - -
 
@@ -54,7 +54,7 @@ magicp2	jmp	*wptr, *magicp		;; also the key (see below)
 ;; Determine who moved first without pspace
 ;;  1st version waits till timeout and second kills itself
 
-key	equ	(count-1)		
+key	equ	count-1
 
 ; Commented out due to duplication at the end of the file
 ;count	nop	#key+3, }count		;; scan our own key last
@@ -65,15 +65,12 @@ key	equ	(count-1)
 ;wait	jmp	wait, }count		;; wait if we are #1
 ;	mov	0, $key			;; erase key and quit if we are #2
 ;
-;;; - - - - - - - - - - - flag enemy warrior - - - - - - - - - - - - - - -
+;;;; - - - - - - - - - - - flag enemy warrior - - - - - - - - - - - - - - -
 ;
 ;foe	stp.a	#1, @0
 ;magicp2	jmp	*wptr, *magicp		;; also the key (see below)
 ;
-;;; - - - - - - - - - special first round routine - - - - - - - - - - - - -
-;
-;; Determine who moved first without pspace
-;;  1st version waits till timeout and second kills itself
+;;;; - - - - - - - - - special first round routine - - - - - - - - - - - - -
 ;
 ;key	equ	(count-1)
 
@@ -88,7 +85,7 @@ wait	jmp	wait, }count		;; wait if we are #1
 ;; - - - - - - - - - - - scanner step - - - - - - - - - - - - - - - - - -
 
 WIDTH	equ	35
-STEP	equ	(2*WIDTH)
+STEP	equ	2*WIDTH
 
 incr	dat	{STEP, <STEP		;; increment for scanner
 
@@ -114,9 +111,9 @@ three	jmp	@three, >CSTEP
 
 ;; - - - - - - - - - - make decoy - - - - - - - - - - - - - - - - - -
 
-DECOY	equ	(sbomb-200)
+DECOY	equ	sbomb-200
 
-DECOY	;; make a decoy -- 100 places in front should deter qscanners
+;DECOY	;; make a decoy -- 100 places in front should deter qscanners
 	;; using code from the FAQ (Neat - I didn't realize I could do
 	;; this at 3c)
 
@@ -128,7 +125,7 @@ jmp	scan1
 
 ;; - - - - - - - - - - just a core clear as main strategy - - - - - - - -
 
-ptr	equ	(sbomb-4)
+ptr	equ	sbomb-4
 
 sbomb	spl	#0, #dbomb+5-ptr
 clear	mov	$sbomb, >ptr			;; should be 1.5c with redOS
@@ -141,11 +138,11 @@ dbomb	dat	#0, #dbomb+1-ptr
 
 ;; - - - - - - - - - - fast scan for redOS with verify - - - - - - - - -
 
-FIRST	equ	(magic+200)
-ACTION	equ	boot
+FIRST	equ	magic+200
+ACTION	equ	boot_offset
 BACKUP	equ	paper
-boot	equ	-2793
-EMPTY	equ	(magic+110)
+boot_offset	equ	0-2793
+EMPTY	equ	magic+110
 
 match1 mov.i $6, $-30				;; a couple lines to check OS
 match2 stp.b $-2, #1

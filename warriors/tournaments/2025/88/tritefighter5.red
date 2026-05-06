@@ -15,13 +15,13 @@
 ;assert (MINDISTANCE==100)
 STEP equ 2234 ;NTA orig - not designed for -c 800000
 BOFF equ 333
-COFF equ ((Clear-Stone)+BOFF-2+STEP+cp)
-boot equ (Stone-BOFF)
-COOT equ (Clear-COFF)
-CSTART equ (boot-(COOT+cp)+4000)
+COFF equ Clear-Stone+BOFF-2+STEP+cp
+boot_val equ Stone-BOFF
+COOT equ Clear-COFF
+CSTART equ boot_val-COOT-cp+4000
 cp equ 12
 D for 100-27-3
-spl D+CURLINE, #1
+spl D, #1
 rof
 ;No Ties Allowed stone
 mov <-6000, 0 ;Nov25
@@ -33,10 +33,10 @@ Clear: mov dbmb+2, <Stone+2-STEP-BOFF+COFF
 jmp -1, <-12
 dbmb: dat <2667, #-cp
 bust: mov <2663, <2663 ;DM anti-crashing-imp idea
-boot: mov Stone+2, boot+2
-mov Stone+1, <boot
-mov Stone, <boot
-mov Stone-1, <boot
+boot_label: mov Stone+2, boot_label+2
+mov Stone+1, <boot_label
+mov Stone, <boot_label
+mov Stone-1, <boot_label
 mov bust, Stone+2-BOFF-STEP+4
 cboot: mov Clear+1, COOT+1
 mov Clear, <cboot
@@ -55,4 +55,4 @@ jmp Stone-BOFF
 jmp Stone+2-BOFF, -1
 jmp Stone-BOFF, -0
 loc: jmp Stone-1-BOFF, -0
-end boot
+end boot_label

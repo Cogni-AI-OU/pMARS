@@ -8,15 +8,15 @@
 ;strategy Bombers suicide after complete the bombing phase to let the scanner work faster
 ;strategy When captured, the ball looks itself for the goal and scores.
 
-goal equ value
-ball equ value
+goal equ 0
+ball equ 0
 
 
-gate equ (loop-5)
-dest equ -(sstep/2)
-sstep equ (19*8*2)
-sloc1 equ (sptr-8+3000-2)
-sloc2 equ (sloc1+4000-(sstep/2))
+gate equ loop-5
+dest equ 0-sstep/2
+sstep equ 19*8*2
+sloc1 equ sptr-8+3000-2
+sloc2 equ sloc1+4000-sstep/2
 
 zero    equ     qbomb
 qtab3   equ     qbomb
@@ -31,14 +31,14 @@ qtab2   djn #0,	#qb2
 for 2
 	dat 0,0
 rof
-bmb:	jmp #(sstep/2),#ball
-loop:
-ref:	mov.i *0,*dest
+bmb	jmp #sstep/2,#ball
+loop
+ref	mov.i *0,*dest
 	mov.i bmb,@ref
 	add.ab #sstep,}ref
 	jmz.a {ref,ref		;selfcheck
 	mov 1,>-1		;anti-stun/vamp
-src1:	dat 0,0
+src1	dat 0,0
 
 for 3
 	dat 0,0
@@ -48,20 +48,20 @@ qtab1   dat     zero-1          , qa2
 for 4
 	dat 0,0
 rof
-boot:
-src2:	spl sptr,bmb+6
-des1:	spl 2,sloc1+6
-des2:	spl 1,sloc2+6
+boot
+src2	spl sptr,bmb+6
+des1	spl 2,sloc1+6
+des2	spl 1,sloc2+6
 	mov {src1,<des1
 	mov {src1,<des1
 	mov <src2,<des2
 	mov <src2,<des2
-gos1:	spl sloc1+3,{0
-gos2:	djn.a sloc2+3,#ball
+gos1	spl sloc1+3,{0
+gos2	djn.a sloc2+3,#ball
 for 4
 	dat 0,0
 rof
-sptr:	jmz #bmb,{0		;scan phase
+sptr	jmz #bmb,{0		;scan phase
 	seq.f bref,*sptr	;seq.ab #ball,*sptr	;is the ball?
 	jmp sptr,<gate
 	sub.a sptr,vball
@@ -69,12 +69,12 @@ sptr:	jmz #bmb,{0		;scan phase
 	mov.a #pit-sptr,vball	;reset pointer
 	jmp sptr,<gate		;looping for false balls
 	dat 0,0
-vball:	jmp pit-sptr,<-1
-bref:	jmp #0,#ball
+vball	jmp pit-sptr,<-1
+bref	jmp #0,#ball
 for 8
 	dat 0,0
 rof
-pit:	jmz #bmb,{0		;The ball's process looks for the goal
+pit	jmz #bmb,{0		;The ball's process looks for the goal
 	sne.ab #goal,*pit
 	mov 2,*pit		;and kills it
 	jmp -3,<gate
