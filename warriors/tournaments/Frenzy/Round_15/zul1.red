@@ -6,7 +6,7 @@
 ;strategy May be can't successfully defeat others.
 ;strategy Hopefully its SureWin & slave will balance the losses.
 ;strategy Jan 2004
-;assert CORESIZE==8192
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
 PIN 3
 

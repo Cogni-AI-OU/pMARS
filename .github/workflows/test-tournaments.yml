@@ -30,14 +30,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: pmars-Server
           path: bin/
+
       - name: Run Tournament Assembly Tests
         run: |
           chmod +x bin/pmars
+          export PATH=$PATH:$(pwd)/bin
           echo "Checking all warriors in warriors/tournaments/..."
           # First pass: try to assemble all with high instruction limit (-l 8000)
           if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -l 8000 -A {} + > /dev/null 2>&1; then
@@ -65,6 +70,7 @@ jobs:
               exit 1
             fi
           fi
+
       - name: Run Specialized Tournament Tests
         run: |
           echo "Running Makefile-based tests in tests/tournaments/..."

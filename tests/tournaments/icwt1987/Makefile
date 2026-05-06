@@ -1,0 +1,2 @@
+test:
+	@bash simulate.sh
