@@ -2,7 +2,7 @@ import os
 import subprocess
 import glob
 
-warrior_dir = 'warriors'
+warrior_dir = '../../../warriors/tournaments/battleroyal1996'
 warriors = [os.path.basename(f) for f in glob.glob(os.path.join(warrior_dir, '*.red'))]
 
 scores = {w: 0 for w in warriors}
