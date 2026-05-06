@@ -12,7 +12,7 @@ print(f"Running round-robin with {len(warriors)} warriors...")
 
 warrior_dir = '../../../warriors/tournaments/icwt1991'
 for i in range(len(warriors)):
-    for j in range(i, len(warriors)):
+    for j in range(i + 1, len(warriors)):
         w1_name = warriors[i]
         w2_name = warriors[j]
         w1 = os.path.join(warrior_dir, w1_name)
