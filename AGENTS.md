@@ -91,6 +91,7 @@ To preserve the history and context of warrior development:
 - **Comment character:** Use `;` for comments in Redcode files.
 - **Syntax Standards:** Adhere to strict ICWS'88 syntax for compatibility: use commas between operands, avoid colons in labels, remove parentheses from expressions, and replace negative constants (e.g., `-2793` -> `0-2793`).
 - **Update Legacy Documentation:** When compatibility issues between different standards (e.g., ICWS '88 vs ICWS '94) are identified and resolved, ensure that `docs/LEGACY.md` is updated with these new findings to guide future development.
+- **Assembled Listings:** For every `.red` file, a corresponding `.red.asm` file must be generated and maintained. This file contains the assembled assembly listing (generated via `pmars -A <file.red>`) and is used for automated verification in CI/CD (see `.github/workflows/test-redcode.yml`).
 
 ## Available Skills
 
