@@ -1,10 +1,10 @@
 # KOFACOTO Round 1: White Warrior
 
+Reference: [KOFACOTO home page](http://www.koth.org/kofacoto/) | [Results](http://www.koth.org/kofacoto/results1.html) | [Warriors](http://www.koth.org/kofacoto/warriors/round1) | [Comments](http://www.koth.org/kofacoto/comments1.html)
+
 ## Rules
 
 Entries were due Sunday, October 8th 2000, midnight CST.
-
-### Round 1: White Warrior
 
 At the bottom you will see the previously unpublished code of Return Of The Jedimp. I -believe- this is the version that at one time lasted quite a while on the Pizza '94 Hill, but I can't be exactly certain.
 
@@ -23,101 +23,103 @@ Remember overall scores in the opening rounds will determine your seed in the pl
 And now the white warrior... enjoy!
 
 ### Return Of The Jedimp
+-jkw
 
 ```redcode
 ;redcode-94
 ;name Return Of The Jedimp
+;kill Return Of The Jedimp
 ;author John K W
 ;strategy Return Of The Jedimp with Q^2 scan...
-;strategy v.q4 - altered engine. new qscan.
+;strategy v.q4 - altered engine.  new qscan.
 ;strategy v.q52 - fixed spacing and qscan better
 ;assert 1
 
 org start
 
-step equ 12 ; gap between qbombs
-strafelen equ 4 ; coverage area = step*strafelen*3
+step equ 12             ; gap between qbombs
+strafelen equ 4         ; coverage area = step*strafelen*3
 
-bomb dat <1, step
-qstep dat -step, 2*step
+bomb    dat <1, step
+qstep	dat -step, 2*step
 
 ;*************** QSCAN
 
-qs equ 10
+qs    equ   10
 
-QS1 equ (100)
-QS2 equ (3*QS1)
-QS3 equ (6*QS2)
-QBASE equ (tab+300)
+QS1   equ   (100)
+QS2   equ   (3*QS1)
+QS3   equ   (6*QS2)
+QBASE equ   (tab+300)
 
-SIG01 equ a01
-SIG02 equ {a01
-SIG03 equ }a01
-SIG04 equ >a01
-SIG05 equ <a01
-SIG06 equ a01
+SIG01 equ   a01
+SIG02 equ   {a01
+SIG03 equ   }a01
+SIG04 equ   >a01
+SIG05 equ   <a01
+SIG06 equ   a01
 
-start seq QBASE+QS2*0+QS1*0, QBASE +QS2*0 +QS1*0+QS3
- jmp aaa, SIG01
- seq QBASE+QS2*1+QS1*0, QBASE +QS2*1 +QS1*0+QS3
- jmp a01, SIG02
- seq QBASE+QS2*2+QS1*0, QBASE +QS2*2 +QS1*0+QS3
- jmp a01, SIG03
- seq QBASE+QS2*3+QS1*0, QBASE +QS2*3 +QS1*0+QS3
- jmp aaa, SIG04
- seq QBASE+QS2*4+QS1*0, QBASE +QS2*4 +QS1*0+QS3
- jmp aaa, SIG05
- seq QBASE+QS2*5+QS1*0, QBASE +QS2*5 +QS1*0+QS3
- djn.f a01, SIG06
+start   seq     QBASE+QS2*0+QS1*0, QBASE +QS2*0 +QS1*0+QS3
+        jmp     aaa,  SIG01
+        seq     QBASE+QS2*1+QS1*0, QBASE +QS2*1 +QS1*0+QS3
+        jmp     a01,  SIG02
+        seq     QBASE+QS2*2+QS1*0, QBASE +QS2*2 +QS1*0+QS3
+        jmp     a01,  SIG03
+        seq     QBASE+QS2*3+QS1*0, QBASE +QS2*3 +QS1*0+QS3
+        jmp     aaa,  SIG04
+        seq     QBASE+QS2*4+QS1*0, QBASE +QS2*4 +QS1*0+QS3
+        jmp     aaa,  SIG05
+        seq     QBASE+QS2*5+QS1*0, QBASE +QS2*5 +QS1*0+QS3
+        djn.f   a01,  SIG06
 
- seq QBASE+QS2*0+QS1*1, QBASE +QS2*0+QS1*1+QS3
- jmp a02, SIG01
- seq QBASE+QS2*1+QS1*1, QBASE +QS2*1+QS1*1+QS3
- jmp a02, SIG02
- seq QBASE+QS2*2+QS1*1, QBASE +QS2*2+QS1*1+QS3
- jmp a02, SIG03
- seq QBASE+QS2*3+QS1*1, QBASE +QS2*3+QS1*1+QS3
- jmp a02, SIG04
- seq QBASE+QS2*4+QS1*1, QBASE +QS2*4+QS1*1+QS3
- jmp a02, SIG05
- seq QBASE+QS2*5+QS1*1, QBASE +QS2*5+QS1*1+QS3
- djn.f a02, SIG06
+        seq     QBASE+QS2*0+QS1*1, QBASE +QS2*0+QS1*1+QS3
+        jmp     a02,  SIG01
+        seq     QBASE+QS2*1+QS1*1, QBASE +QS2*1+QS1*1+QS3
+        jmp     a02,  SIG02
+        seq     QBASE+QS2*2+QS1*1, QBASE +QS2*2+QS1*1+QS3
+        jmp     a02,  SIG03
+        seq     QBASE+QS2*3+QS1*1, QBASE +QS2*3+QS1*1+QS3
+        jmp     a02,  SIG04
+        seq     QBASE+QS2*4+QS1*1, QBASE +QS2*4+QS1*1+QS3
+        jmp     a02,  SIG05
+        seq     QBASE+QS2*5+QS1*1, QBASE +QS2*5+QS1*1+QS3
+        djn.f   a02,  SIG06
 
- seq QBASE+QS2*0+QS1*2, QBASE+QS2*0+QS1*2+QS3
- jmp a03, SIG01
- seq QBASE+QS2*1+QS1*2, QBASE+QS2*1+QS1*2+QS3
- jmp a03, SIG02
- seq QBASE+QS2*2+QS1*2, QBASE+QS2*2+QS1*2+QS3
- jmp a03, SIG03
- seq QBASE+QS2*3+QS1*2, QBASE+QS2*3+QS1*2+QS3
- jmp a03, SIG04
- seq QBASE+QS2*4+QS1*2, QBASE+QS2*4+QS1*2+QS3
- jmp a03, SIG05
- seq QBASE+QS2*5+QS1*2, QBASE+QS2*5+QS1*2+QS3
- djn.f a03, SIG06
+        seq     QBASE+QS2*0+QS1*2, QBASE+QS2*0+QS1*2+QS3
+        jmp     a03,  SIG01
+        seq     QBASE+QS2*1+QS1*2, QBASE+QS2*1+QS1*2+QS3
+        jmp     a03,  SIG02
+        seq     QBASE+QS2*2+QS1*2, QBASE+QS2*2+QS1*2+QS3
+        jmp     a03,  SIG03
+        seq     QBASE+QS2*3+QS1*2, QBASE+QS2*3+QS1*2+QS3
+        jmp     a03,  SIG04
+        seq     QBASE+QS2*4+QS1*2, QBASE+QS2*4+QS1*2+QS3
+        jmp     a03,  SIG05
+        seq     QBASE+QS2*5+QS1*2, QBASE+QS2*5+QS1*2+QS3
+        djn.f   a03,  SIG06
 
- jmp evopac ;nothing found
+        jmp     evopac          ;nothing found
 
- dat 1*QS2, 4*QS2+QBASE-ptr
-tab dat 0*QS2, 0*QS2+QBASE-ptr
- dat 2*QS2, 3*QS2+QBASE-ptr
+        dat     1*QS2,  4*QS2+QBASE-ptr
+tab     dat     0*QS2,  0*QS2+QBASE-ptr
+        dat     2*QS2,  3*QS2+QBASE-ptr
 
-a03 add #QS1, @a01
-a02 add #QS1, @a01
-a01 add.ab tab, tab
-aaa mov.ba @a01, ptr
+a03     add     #QS1,   @a01
+a02     add     #QS1,   @a01
+a01     add.ab  tab,    tab
+aaa     mov.ba  @a01,   ptr
 
- sne DEAD, *ptr ;which of the two?
- add.a #QS3, ptr
+        sne     DEAD,   *ptr  ;which of the two?
+        add.a	#QS3,   ptr
 
- add.ab ptr, ptr
+	add.ab	ptr,	ptr
 
-qbrun mov bomb, @ptr
- mov bomb, *ptr
-ptr mov -0, @step
- add.f qstep, -1
- djn qbrun, #strafelen
- jmp evopac
+qbrun   mov 	bomb, 	@ptr
+	mov 	bomb, 	*ptr
+ptr     mov 	-0, 	@step
+	add.f	qstep, 	-1
+        djn     qbrun,  #strafelen
+	jmp	evopac
 
 ;*************** EVOPAC
 
@@ -126,53 +128,54 @@ ded for 32
 dat 0, 0
 rof
 
-d2 equ 1143
+d2    equ 1143
 TSTEP equ 1751
 bstep equ 1819 ;2283 ;1997
-boot equ 1700-(80+15)*4-1
+boot  equ 1700-(80+15)*4-1
 
-evopac spl 1
- spl 1
- spl 1
- mov <1, {1
- jmp boot, imp2+1
-evol: spl @evol, }TSTEP
- mov.i }evol, >evol
-evoli: spl #d2, bstep-1
- mov b, >2
- add.f evoli, j
-j: jmp.f imp2-d2*8, {-6+bstep
-b dat <1, 1
-imp2 mov.i #d2, *0
+evopac  spl     1
+        spl     1
+        spl     1
+        mov     <1,     {1
+        jmp     boot,   imp2+1
+evol:   spl     @evol,  }TSTEP
+        mov.i   }evol,  >evol
+evoli:  spl     #d2,    bstep-1
+        mov     b,      >2
+        add.f   evoli,  j
+j:      jmp.f   imp2-d2*8, {-6+bstep
+b       dat     <1,     1
+imp2    mov.i   #d2,    *0
+```
 ```
 
 ## Results
 
 Janeczek barely edges out the competition in Round 1 with an outstanding warrior scoring over 95% wins! The top 4 entries were pretty much in a statistical dead heat... But I was amazed at the wide diversity of scores, and differing strategies.
 
-| Name | Wins | Losses | Ties | Score | Normalized Score |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| janeczek | 1904 | 85 | 11 | 5723 | 1000 |
-| Macrae | 1884 | 103 | 13 | 5665 | 989 |
-| paulsson | 1860 | 128 | 12 | 5592 | 977 |
-| moore | 1833 | 123 | 44 | 5543 | 968 |
-| kline | 1744 | 206 | 50 | 5282 | 922 |
-| pihlaja | 1678 | 233 | 89 | 5123 | 895 |
-| Gunnell | 1400 | 478 | 122 | 4322 | 755 |
-| Liporati | 1362 | 557 | 81 | 4167 | 728 |
-| Schmidt | 1352 | 557 | 91 | 4147 | 724 |
-| Guenzel | 1333 | 581 | 86 | 4085 | 713 |
-| Karonen | 1243 | 639 | 118 | 3847 | 672 |
-| stefan | 1149 | 565 | 286 | 3733 | 652 |
-| Ford | 1124 | 643 | 233 | 3605 | 629 |
-| Chakrabarti | 1048 | 809 | 143 | 3287 | 574 |
-| Yeager | 1016 | 814 | 170 | 3218 | 562 |
-| Khuong | 957 | 833 | 210 | 3081 | 538 |
-| Kacza | 12 | 46 | 1942 | 1978 | 345 |
-| Hillis | 2 | 46 | 1952 | 1958 | 342 |
-| chin | 0 | 1209 | 791 | 791 | 138 |
-| Adamowski | 6 | 1544 | 450 | 468 | 81 |
-| Ankerl | 28 | 1882 | 90 | 174 | 30 |
+| Rank | Name | Wins | Losses | Ties | Score | Normalized |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | janeczek | 1904 | 85 | 11 | 5723 | 1000 |
+| 2 | Macrae | 1884 | 103 | 13 | 5665 | 989 |
+| 3 | paulsson | 1860 | 128 | 12 | 5592 | 977 |
+| 4 | moore | 1833 | 123 | 44 | 5543 | 968 |
+| 5 | kline | 1744 | 206 | 50 | 5282 | 922 |
+| 6 | pihlaja | 1678 | 233 | 89 | 5123 | 895 |
+| 7 | Gunnell | 1400 | 478 | 122 | 4322 | 755 |
+| 8 | Liporati | 1362 | 557 | 81 | 4167 | 728 |
+| 9 | Schmidt | 1352 | 557 | 91 | 4147 | 724 |
+| 10 | Guenzel | 1333 | 581 | 86 | 4085 | 713 |
+| 11 | Karonen | 1243 | 639 | 118 | 3847 | 672 |
+| 12 | stefan | 1149 | 565 | 286 | 3733 | 652 |
+| 13 | Ford | 1124 | 643 | 233 | 3605 | 629 |
+| 14 | Chakrabarti | 1048 | 809 | 143 | 3287 | 574 |
+| 15 | Yeager | 1016 | 814 | 170 | 3218 | 562 |
+| 16 | Khuong | 957 | 833 | 210 | 3081 | 538 |
+| 17 | Kacza | 12 | 46 | 1942 | 1978 | 345 |
+| 18 | Hillis | 2 | 46 | 1952 | 1958 | 342 |
+| 19 | chin | 0 | 1209 | 791 | 791 | 138 |
+| 20 | Adamowski | 6 | 1544 | 450 | 468 | 81 |
+| 21 | Ankerl | 28 | 1882 | 90 | 174 | 30 |
 
 ## Comments
 
@@ -186,7 +189,7 @@ I first met it a couple of tournaments ago when Paul Kline used it to win a whit
 
 **Force feedback** (Macrae) uses a 0.5c scanner. I am a little surprised that it beat Darkside because the longer the scan takes, the more time the replicator has to overwrite the black warrior. OTOH it is shorter, which makes it less vulnerable to both the QS and the replicators, and it looks as if it comes out a little ahead on balance. If you have not seen a decoy generator before, watch it in cdb. The QS spacing makes -300 a very effective place to put a decoy because the QS will usually scan it 1 cycle before it would have found your real warrior.
 
-**Darkside** (janeczek) uses a 0.8c scan to find the QS faster, but it is longer and so more vulnerable. It is also a bit difficult to reset the pointers if I happen to scan a replicator before I get the QS and so the scan pattern is not always perfect. I discovered that short DAT carpets would kill the replicators very quickly, so I did not bother to boot the bomber but maybe this was a mistake.
+**Darkside** (janeczek) uses a 0.8c scan to find the QS faster, but it is longer and so more vulnerable. It is also a bit difficult to reset the pointers if I happen to scan a replicator before I get the QS and so the scan pattern is not always perfect. I discovered that short DAT carpets would kill the replicators very quickly, so I did not bother to bother to boot the bomber but maybe this was a mistake.
 
 **JedimPURGE** (paulsson) is a 0.8c scan coupled with a short 2c QS -- more for fun than effect, I suspect! It SPL carpets the replicators before starting a spiral clear. This requires greater length, but the spiral clear can win even if the scan has missed the QS and found a replicator.
 
@@ -206,3 +209,8 @@ For comparison to the precision scans, **Hyperclear** (Gunnell) achieves excelle
 - Cleanup is easy once all the components have been found.
 
 -- Robert Macrae
+
+## Notes
+
+- The tournament page notes that 21 entries were submitted.
+- The source page links a comments page for this round.
