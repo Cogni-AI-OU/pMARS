@@ -24,6 +24,32 @@ Do not use both `org` and `end` directives in the same file. Using both triggers
 - **Labeling:** Use clear, consistent labels for entry points (e.g., `tStart`, `start`).
 - **Modifiers:** While pMARS is permissive, using explicit modifiers (e.g., `mov.i`) is encouraged for "strict" syntax to avoid ambiguity across different simulator implementations.
 
+## ICWS '88 Compatibility
+
+When working with legacy Redcode designed for the ICWS '88 standard, certain adjustments are often required to ensure they assemble correctly in pMARS (especially when using the `-8` flag).
+
+### DAT Operand Requirements
+
+In strict ICWS '88 mode, the `DAT` opcode may require two explicit operands even if only one was historically used.
+
+- **Legacy:** `DAT 0`
+- **Strict:** `DAT #0, #0`
+
+### Explicit Modifiers and Direct Addressing
+
+While ICWS '88 used space or no character for direct addressing, modern Redcode (ICWS '94) introduced the `$` symbol for direct addressing. For maximum compatibility across different pMARS modes:
+
+1. **Avoid `$` in ICWS '88:** If a warrior is intended for the `-8` mode, avoid using the `$` modifier. Use the naked value for direct addressing.
+2. **Use `#` for Constants:** Ensure that constants used in `DAT` or as immediate operands are explicitly prefixed with `#`.
+
+### Case: ICWT 1989 Warriors
+
+The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+
+- **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
+- **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
+- **Operand Formatting:** Immediate values were explicitly marked with `#`.
+
 ## Preservation of Historical Code
 
 As per the project's core mandates in `AGENTS.md`, historical code must be preserved even when modernizing syntax for compatibility.
