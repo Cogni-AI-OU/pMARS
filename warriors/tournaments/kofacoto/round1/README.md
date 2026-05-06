@@ -22,6 +22,7 @@ Remember overall scores in the opening rounds will determine your seed in the pl
 
 And now the white warrior... enjoy!
 
+### Return Of The Jedimp
 -jkw
 
 ```redcode
