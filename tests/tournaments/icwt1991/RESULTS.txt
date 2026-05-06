@@ -1,0 +1,12 @@
+Simulating ICWT 1991 Tournament...
+Settings: 8192 core, 64 processes, 100000 cycles, 2 rounds, ICWS'88
+Format: Round-robin with self-fights
+
+--- Final Standings (Simulated) ---
+1. xtc.red - 16 points
+2. quarter.red - 15 points
+3. dac.red - 11 points
+4. vlad.red - 3 points
+
+Official Results Check:
+SUCCESS: XTC is the winner, matching official tournament results!
