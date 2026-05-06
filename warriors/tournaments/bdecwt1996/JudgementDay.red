@@ -1,4 +1,5 @@
 ;redcode-lp
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Judgement Day
 ;author Philip Kendall
 ;strategy pspacing dodger & scanner
@@ -10,10 +11,10 @@ BDECWT final replay: opponent Ian Oversby
 
 right, OK, after we both submitted Die Hards for the final, we've got chucked
 off here into low process... what this basically is a pspacing a bomb dodger
-(a slightly modified Clisson) and a one-pass scanner -> 1c core-clear - this
+(a slightly modified Clisson) and a one-pass scanner ->1c core-clear - this
 combination successfully beats most things, which the exception of scanners,
-but I don't think it's that likely I'll end up against one (at least, I hope
-I won't). What Ian will hopefully come up with: a stone or a dodger, or even
+but i don't think it's that likely i'll end up against one (at least, i hope
+i won't). What Ian will hopefully come up with: a stone or a dodger, or even
 a pspaced dodger/stone
 
 rof

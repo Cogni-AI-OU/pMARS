@@ -1,4 +1,5 @@
 ;redcode-x2
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Oneder
 ;author Ben Ford
 ;strategy hmm.... test scores 180ish
@@ -19,11 +20,11 @@ qi	equ	7
 qr	equ	11
 qo	equ	(qi*qr-10)
 
-	dat	#  15,	#  10	; A, D
-qtab	dat	#   7,	#   4	; B, E
-	dat	#  13,	#  11	; C, F
-qbmb	dat	<   1,	<  qo
-qinc	dat	#  qd,	#  qd
+	dat	#15,	#10	; A, D
+qtab	dat	#7,	#4	; B, E
+	dat	#13,	#11	; C, F
+qbmb	dat	<1,	<qo
+qinc	dat	#qd,	#qd
 
 qslo	mul.x	qtab,	qptr	; decode
 qfas	mul.f	qtab,	@qslo
@@ -32,9 +33,9 @@ qfnd	sne	*qptr,	@qptr
 	sne	>3456,	@qptr
 	mov.x	qptr,	qptr
 qloo	mov	qbmb,	@qptr	; .5c negative bomber
-qptr	mov	< qs2,	@ qs1
-	sub.x	#  qi,	qptr
-	djn	qloo,	#  qr
+qptr	mov	<qs2,	@qs1
+	sub.x	#qi,	qptr
+	djn	qloo,	#qr
 	jmp	boot,	>1234
 
 ; ----- space -----
@@ -146,14 +147,14 @@ p3	equ	3060	; 4924
 boot	spl	    1,	>7648	; 4 processes
 	spl	    1,	>7356
 
-pap1	spl	@   0,	{p1
+pap1	spl	@0,	{p1
 	mov	}pap1,	>pap1
 	mov	}pap1,	>pap1
-pap2	spl	@   0,	{p2
+pap2	spl	@0,	{p2
 	mov	}pap2,	>pap2
 	mov	{pap2,	{pap3
 pap3	jmp	p3+1,	>p3-3
-	dat	>   1,	}   1
+	dat	>1,	}1
 
 ; ----- end -----
 

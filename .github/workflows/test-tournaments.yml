@@ -51,14 +51,15 @@ jobs:
       - name: Run Tournament Assembly Tests
         run: |
           echo "Checking all warriors in warriors/tournaments/..."
-          # First pass: try to assemble all with high instruction limit (-l 8000)
-          if find warriors/tournaments/ -name "*.red" -exec ./bin/pmars -p ${MAXPROCESSES:-64} -l 8000 -A {} + > /dev/null 2>&1; then
+          # Exclude ACWT 1997 (specialized sorting tournament needing external defines)
+          # Exclude c2n863.red (non-Redcode .MOB format)
+          if find warriors/tournaments/ -name "*.red" -not -path "*/acwt1997/*" -not -name "c2n863.red" -exec ./bin/pmars -p ${MAXPROCESSES:-64} -l 8000 -A {} + > /dev/null 2>&1; then
             echo "All warriors assembled successfully."
           else
             echo "Some warriors failed with default settings. Retrying with compatibility flags..."
             failed=0
             count=0
-            find warriors/tournaments/ -name "*.red" > warriors_list.txt
+            find warriors/tournaments/ -name "*.red" -not -path "*/acwt1997/*" -not -name "c2n863.red" > warriors_list.txt
             while read -r f; do
               count=$((count + 1))
               # Default settings for individual retry
@@ -73,12 +74,25 @@ jobs:
               [ ! -z "$CS" ] && CORESIZE=$CS
               ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$ML" ] && MAXLENGTH=$ML
+              
+              # Ensure MAXLENGTH doesn't exceed CORESIZE to avoid pmars error
+              if [ "$MAXLENGTH" -gt "$CORESIZE" ]; then
+                MAXLENGTH=$CORESIZE
+              fi
               MP=$(grep -i ";assert" "$f" | grep -oiP "MAXPROCESSES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$MP" ] && MAXPROCESSES=$MP
               MC=$(grep -i ";assert" "$f" | grep -oiP "MAXCYCLES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$MC" ] && MAXCYCLES=$MC
               MD=$(grep -i ";assert" "$f" | grep -oiP "MINDISTANCE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$MD" ] && MINDISTANCE=$MD
+
+              # Ensure MAXLENGTH doesn't exceed CORESIZE or MINDISTANCE to avoid pmars error
+              if [ "$MAXLENGTH" -gt "$CORESIZE" ]; then
+                MAXLENGTH=$CORESIZE
+              fi
+              if [ ! -z "$MINDISTANCE" ] && [ "$MAXLENGTH" -gt "$MINDISTANCE" ]; then
+                MAXLENGTH=$MINDISTANCE
+              fi
 
               CMD_OPTS="-s $CORESIZE -l $MAXLENGTH"
               [ ! -z "$MAXPROCESSES" ] && CMD_OPTS="$CMD_OPTS -p $MAXPROCESSES"

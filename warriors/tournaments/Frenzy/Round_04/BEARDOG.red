@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Bear Dog
 ;author Dave Hillis
 ; Named after an ancient mamal that was pretty much what the name
@@ -20,25 +21,25 @@ think   ldp.a #0, in
     ldp.a #STORE, table
     mod.ba *in, table
     stp.b *table, #STORE
-table   jmp    }0,  # 1236 ;  0: action   0 :   1   4   6
-    spl #  w0,  # 1628 ;  1: action   0 :   3   4   8
-    spl #  w0,  #  858 ;  2: action   0 :   0   4   3
-    spl #  w1,  # 1627 ;  3: action   1 :   2   3   7
-    spl #  w0,  #  676 ;  4: action   0 :   0   4   1
-    spl #  w0,  #   70 ;  5: action   0 :   5   0  10
-    spl #  w0,  # 1628 ;  6: action   0 :   3   4   8
-    spl #  w1,  # 2257 ;  7: action   1 :   8   3   7
-    spl #  w0,  #  813 ;  8: action   0 :   7   1   3
-    spl #  w1,  # 2071 ;  9: action   1 :   4  13   1
-    spl #  w0,  #   97 ; 10: action   0 :   6  13   7
-    spl #  w0,  # 1425 ; 11: action   0 :   8  11   0
-    spl #  w0,  # 1719 ; 12: action   0 :   3  11   9
-    spl #  w0,  #  309 ; 13: action   0 :  10   1   9
-    spl #  w1,  # 1628 ; 14: action   1 :   3   4   8
+table   jmp    }0,  #1236 ;  0: action   0 :   1   4   6
+    spl #w0,  #1628 ;  1: action   0 :   3   4   8
+    spl #w0,  #858 ;  2: action   0 :   0   4   3
+    spl #w1,  #1627 ;  3: action   1 :   2   3   7
+    spl #w0,  #676 ;  4: action   0 :   0   4   1
+    spl #w0,  #70 ;  5: action   0 :   5   0  10
+    spl #w0,  #1628 ;  6: action   0 :   3   4   8
+    spl #w1,  #2257 ;  7: action   1 :   8   3   7
+    spl #w0,  #813 ;  8: action   0 :   7   1   3
+    spl #w1,  #2071 ;  9: action   1 :   4  13   1
+    spl #w0,  #97 ; 10: action   0 :   6  13   7
+    spl #w0,  #1425 ; 11: action   0 :   8  11   0
+    spl #w0,  #1719 ; 12: action   0 :   3  11   9
+    spl #w0,  #309 ; 13: action   0 :  10   1   9
+    spl #w1,  #1628 ; 14: action   1 :   3   4   8
 
-in  spl #  w0,      13 
-    spl #   0,      14 
-    spl #   0,      15 
+in  spl #w0,      13 
+    spl #0,      14 
+    spl #0,      15 
 
 ; ***** DWARF *****
 ; from Patel's Virus
@@ -54,7 +55,7 @@ dwarf mov   dend, @dptr
 dptr mov   datb, *5421
  mov {dwarf, <dptr
  mov {dwarf, <dptr
-djmp djn.f @ dptr,  dptr
+djmp djn.f @dptr,  dptr
 
  dat 0, 0
 

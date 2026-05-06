@@ -1,4 +1,5 @@
 ;author David Houston
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Devilish 6k
 ;assert CORESIZE == 6000
 ;strategy Q^5 -> stone/imp
@@ -28,10 +29,10 @@ bdptr	dat	zero + 5 + bdaway, diamond + 5
 ;-----------------------------------------------------
 ; the stone
 
-dstepA	equ	4 * 43
+dstepA	equ	4 *43
 dstepB	equ	-dstepA
-dstartA	equ	(diamond + 1 - 1499 * dstepA)
-dstartB	equ	(diamond + 3 - 1498 * dstepB)
+dstartA	equ	(diamond + 1 - 1499 *dstepA)
+dstartB	equ	(diamond + 3 - 1498 *dstepB)
 dstream	equ	-2500
 dptr	equ	(dbomb + dboff)
 dboff	equ	80

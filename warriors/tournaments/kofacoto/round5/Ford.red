@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Self-Modifying Code
 ;author Ben Ford
 ;assert (CORESIZE==8000)
@@ -17,16 +18,16 @@
 ; ----- p^3++ table -----
 ; Reconstructed using David Moore's P^3 switcher logic
 
-vect    spl     #  w0,  #1045   ; 0  silk
-        spl     #  w1,  # 508   ; 1  rock
-        spl     #  w2,  # 511   ; 2  scan
-        spl     #  w3,  # 624   ; 3  burn
-        spl     #  w4,  # 894   ; 4  wipe
+vect    spl     #w0,  #1045   ; 0  silk
+        spl     #w1,  #508   ; 1  rock
+        spl     #w2,  #511   ; 2  scan
+        spl     #w3,  #624   ; 3  burn
+        spl     #w4,  #894   ; 4  wipe
         ; ... other states could be added if transitions were known
         
-pmod    spl     #   0,  #  12   ; lose
-        spl     #   0,  #  11   ; win
-        spl     #   0,  #  13   ; tie
+pmod    spl     #0,  #12   ; lose
+        spl     #0,  #11   ; win
+        spl     #0,  #13   ; tie
 
 boot    equ     1430
 spacing equ     2
@@ -37,7 +38,7 @@ w3      equ     (burn-silk)
 w4      equ     (wipe-silk)
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- silk (from Recycled Bits) -----
@@ -55,7 +56,7 @@ silk    spl 2, >7398
         dat 1,1
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- rock (from Recycled Bits skew dwarf) -----
@@ -71,7 +72,7 @@ rptr    mov datb, {(dstep*dtime)+1
 datb    dat <dhop+1, >1
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- scan (from Recycled Bits) -----
@@ -88,7 +89,7 @@ sc      add #step+1, #step+1
 sb      spl #0, {0
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- burn (from Recycled Bits incendiary) -----
@@ -108,7 +109,7 @@ bdat    dat <2667, 2+bgate-burn
 bmov    mov -bhop,>-bhop
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- wipe (from Recycled Bits sdd clear) -----
@@ -125,14 +126,14 @@ wipe  spl   #-1,  wend-wtop
 wend  spl #wipe,  wend-wtop
 
 for     spacing
-        dat     $   0,  $   0
+        dat     $0,  $0
 rof
 
 ; ----- p^3++ brain -----
 PKEY    equ     321
 SIZE    equ     10
 
-main    ldp.a   #   0,   pmod
+main    ldp.a   #0,   pmod
         ldp.a   #PKEY,   vect
         mod.ba  *pmod,   vect
         stp.b   *vect,  #PKEY

@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name S A S
 ;author Robert Macrae
 ;assert CORESIZE == 8000
@@ -18,7 +19,7 @@ qst     equ     qstart -(4*bigst)
 
 ; SAS constants
 step     equ 190				      ; mod-10 for Mod-5 scan
-BombCopy equ (Scan-1)
+BombCopy equ (scan-1)
 gate     equ cPtr 
 cPtr     equ Hijack
 

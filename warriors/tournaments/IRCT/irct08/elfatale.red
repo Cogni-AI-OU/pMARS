@@ -1,13 +1,14 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name El fatale
 ;author Sascha Zapf
 ;strategy First entry for IRC Mini No.: 8
 ;assert CORESIZE==800
 
        ORG      START
-       ADD.AB #   328, $     2
-       SPL.B  $    -3, $     0
-       MOV.I  <     4, $     3
-START  SPL.B  $    -3, $     0
-       ADD.AB #   328, $     2
+       ADD.AB #328, $2
+       SPL.B  $    -3, $0
+       MOV.I  <4, $3
+START  SPL.B  $    -3, $0
+       ADD.AB #328, $2
        END

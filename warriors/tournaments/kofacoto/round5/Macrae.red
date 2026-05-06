@@ -1,4 +1,5 @@
 ;redcode-94 test
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name RotF Copy
 ;author Robert Macrae 
 ;strategy q^4 -> silkish/imp after David Moore / Ben Ford 
@@ -28,11 +29,11 @@ wimp  jmp   #0,         #0
       dat 0,0
     rof
 
-	dat	#  15,	#  10	; A, D
-qtab	dat	#   7,	#   4	; B, E
-	dat	#  13,	#  11	; C, F
-qbmb	dat	<   1,	<  qo
-qinc	dat	#  qd,	#  qd
+	dat	#15,	#10	; A, D
+qtab	dat	#7,	#4	; B, E
+	dat	#13,	#11	; C, F
+qbmb	dat	<1,	<qo
+qinc	dat	#qd,	#qd
 
 qfas	mul.f	 qtab,	 qptr	; decode
 qfnd	sne	*qptr,	@qptr
@@ -40,9 +41,9 @@ qfnd	sne	*qptr,	@qptr
 	sne	>3456,	@qptr
 	mov.x	 qptr,	 qptr
 qloo	mov	 qbmb,	@qptr	; .5c negative bomber
-qptr	mov	< qs2,	@ qs1
-	sub.x	#  qi,	 qptr
-	djn	 qloo,	#  qr
+qptr	mov	<qs2,	@qs1
+	sub.x	#qi,	 qptr
+	djn	 qloo,	#qr
 	jmp	 boot,	>1234
 
 qscan	sne	qf+ 1*qs2,	qf+ 1*qs1

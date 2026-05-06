@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Plan 9+
 ;author inversed
 ;strategy Plain paper
@@ -16,14 +17,14 @@ mov -1 , 0
 mov -1 , 0
 mov -1 , 0
 
-mov bomb + 1 , } silk1
+mov bomb + 1 , }silk1
 
-silk1 spl @-9 , > pStep1
-mov } silk1 , > silk1
-silk2 spl @ 0 , > pStep2
-mov } silk2 , > silk2
-mov bomb , > bStep2
-mov bomb , } bStep3
-mov { silk2 , < silk3
-silk3 jmp @ 0 , > pStep3
-bomb dat < 2667 , < 5334
+silk1 spl @-9 , >pStep1
+mov }silk1 , >silk1
+silk2 spl @0 , >pStep2
+mov }silk2 , >silk2
+mov bomb , >bStep2
+mov bomb , }bStep3
+mov {silk2 , <silk3
+silk3 jmp @0 , >pStep3
+bomb dat <2667 , <5334

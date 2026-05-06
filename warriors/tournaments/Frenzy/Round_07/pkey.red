@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name	P-Key
 ;author	G.Labarga
 ;assert 1
@@ -7,47 +8,47 @@
 ;strategy	It should defeat any single switcher
 ;strategy	Redcoders Frenzy, round 7, Feb. 22th 2003
 
-	STEP EQU 2667
+	STEP_P EQU 2667
 	D_STRAT EQU 249
 	D_PREV EQU 250
 	D_LOS EQU D_PREV+1
 	D_WIN EQU D_PREV+2
 	D_TIE EQU D_PREV+3
 
-RESULT:	LDP.B 1,#0		;<- Last round result
-STRAT:	LDP.AB #D_STRAT,#0	;<- Last strategy
-PREV:	LDP.AB #D_PREV,#0	;<- strategy two rounds before
+RESULT	LDP.B 1,#0		;<- Last round result
+STRAT	LDP.AB #D_STRAT,#0	;<- Last strategy
+PREV	LDP.AB #D_PREV,#0	;<- strategy two rounds before
 	JMZ.F INIT,>RESULT
 	SLT.AB #3,PREV
 	JMP CHLS,<RESULT
-INIT:	STP.AB #2,#D_TIE		;first round or brainwashed
+INIT	STP.AB #2,#D_TIE		;first round or brainwashed
 	STP.AB #0,#D_WIN
 	STP.AB #0,#D_LOS
 	MOV #1000,STRAT
 
-CHLS:	JMN CHWI,RESULT
+CHLS	JMN CHWI,RESULT
 	MOV.A #1,AWLT			;loss
-CHWI:	SNE #1,RESULT
+CHWI	SNE #1,RESULT
 	JMP ACT				;win
-CHTI:	SNE #2,RESULT
+CHTI	SNE #2,RESULT
 	MOV.A #2,AWLT			;tie
 
-ADJ:	ADD.BA PREV,1			;Adjust what to do if W/L/T
-WLT:	LDP.AB #D_PREV+1,#0
-AWLT:	ADD.AB #0,WLT
+ADJ	ADD.BA PREV,1			;Adjust what to do if W/L/T
+WLT	LDP.AB #D_PREV+1,#0
+AWLT	ADD.AB #0,WLT
 	MOD.AB #3,WLT
 	STP.BA WLT,WLT
-ACT:	ADD.BA RESULT,1
-ACTS:	LDP.AB #D_PREV+1,#0		;Switches strategy depending W/L/T
-	MUL.AB #STEP,ACTS
+ACT	ADD.BA RESULT,1
+ACTS	LDP.AB #D_PREV+1,#0		;Switches strategy depending W/L/T
+	MUL.AB #STEP_P,ACTS
 	ADD.B ACTS,STRAT
 
-SAVE:	STP.B RESULT,#D_PREV
+SAVE	STP.B RESULT,#D_PREV
 	STP.B STRAT,#D_STRAT
 
-SLCT:	SLT #STEP,STRAT			;Launch
+SLCT	SLT #STEP_P,STRAT			;Launch
 	JMP SRC				;Cloner II
-	SLT #2*STEP,STRAT
+	SLT #2*STEP_P,STRAT
 	JMP slDodger			;CLP
 	JMP boot			;Frontwards
 
@@ -77,7 +78,7 @@ slDodger  mov    <btDodger,{btDodger		;START *****
           djn    -4       ,#4
 btDodger  jmp    pescape+300,pescape
 
-plen      equ    (pescape-p1)
+plen      equ    pescape-p1
 
 p1        mov    pb       ,@pfence 
           mov    pb       ,*pfence
@@ -89,24 +90,24 @@ pfence    sne    pb-46    ,pb+26
           mov    pb       ,pescape
 pcopy     mov    >pescape ,}pescape
           jmn.b  -1       ,pescape
-preset    jmp    p1+5093  ,-p1-5093
-psnare    jmp    ptrap-200,+200
+preset    jmp    p1+5093  ,0-p1-5093
+psnare    jmp    ptrap-200,200
 ptrap     mod.x  #10      ,#1
           stp.ab #0       ,#0    ;<-- values of the a- and b-fields can be modified during the battle
           djn.b  -1       ,-1
 pincr     mov    1        ,-1
-pb        dat    5093+p1-pescape,-plen
+pb        dat    5093+p1-pescape,0-plen
 pescape   dat    0,0
 
 ;********************Frontwards************************ // 24 ins
 
 offset    equ    608
-step      equ    12
+STEP_F    equ    12
 stream    equ    cc-806
-first     equ    (cc-offset+203)
-gate      equ    -50
+first     equ    cc-offset+203
+gate      equ    0-50
 
-p         dat    #first,   {first+step
+p         dat    #first,   {first+STEP_F
           dat    #30,      {-1
           dat    #30,      {-1
 cc        spl    #30,      stream-660

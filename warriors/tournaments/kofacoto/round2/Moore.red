@@ -1,4 +1,5 @@
 ;redcode
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name EV1L EMP1RE
 ;author David Moore
 ;strategy I Search for my first prey and transform it into a vampire.
@@ -83,34 +84,34 @@ qa0    cmp @qFang, clear-2  ;compare to core
        cmp <qFang+0, <qFang+1 ;quit if nothing left to bomb
        djn -5, #qTime         ;or quit after enough bombs are dropped
        jmp boot, 0
-qjbr   dat #-qStep, # qStep+1
-qjbl   dat # qStep, #-qStep+1
-qFang  jmp trap-(QB+(QS* 0))-1, QB+(QS* 0)
+qjbr   dat #-qStep, #qStep+1
+qjbl   dat #qStep, #-qStep+1
+qFang  jmp trap-(QB+(QS*0))-1, QB+(QS*0)
 
 ;----------------------------------------------------------------------
 ; quickscan
 
-qScan  cmp QB+(QS* 0)+QI, QB+(QS* 0)
+qScan  cmp QB+(QS*0)+QI, QB+(QS*0)
 qs1    jmp qa0, qt1
-       cmp QB+(QS* 1)+QI, QB+(QS* 1)
+       cmp QB+(QS*1)+QI, QB+(QS*1)
 qs2    jmp qa1, qt2
-       cmp QB+(QS* 5)+QI, QB+(QS* 5)
+       cmp QB+(QS*5)+QI, QB+(QS*5)
        jmp qa1, <qs1
-       cmp QB+(QS* 8)+QI, QB+(QS* 8)
+       cmp QB+(QS*8)+QI, QB+(QS*8)
 qs3    jmp qa2, qt3
-       cmp QB+(QS* 3)+QI, QB+(QS* 3)
+       cmp QB+(QS*3)+QI, QB+(QS*3)
        jmp qa2, <qs2
-       cmp QB+(QS* 7)+QI, QB+(QS* 7)
+       cmp QB+(QS*7)+QI, QB+(QS*7)
        jmp qa2, <qa1
        cmp QB+(QS*12)+QI, QB+(QS*12)
        jmp qa2, <qs1
        cmp QB+(QS*11)+QI, QB+(QS*11)
        jmp qa3, 0
-       cmp QB+(QS* 4)+QI, QB+(QS* 4)
+       cmp QB+(QS*4)+QI, QB+(QS*4)
        jmp qa3, <qa2
-       cmp QB+(QS* 6)+QI, QB+(QS* 6)
+       cmp QB+(QS*6)+QI, QB+(QS*6)
        jmp qa3, <qs2
-       cmp QB+(QS* 9)+QI, QB+(QS* 9)
+       cmp QB+(QS*9)+QI, QB+(QS*9)
        jmp qa3, <qs3
        cmp QB+(QS*10)+QI, QB+(QS*10)
        jmp qa3, <qa1

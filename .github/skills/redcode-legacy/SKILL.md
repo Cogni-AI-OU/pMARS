@@ -10,16 +10,21 @@ Specialized guidance for modernizing legacy Redcode warriors to ensure compatibi
 
 ## Core Process
 
-1. **Syntax Cleanup**: Separate operands with commas and add explicit B-operands for single-logical-operand instructions.
+1. **Syntax Cleanup**: Separate operands with commas and add explicit B-operands for single-logical-operand instructions. Remove colons from labels and ensure all multi-line comments are prefixed with `;`.
 2. **Entry Point Standardization**: Replace SOF `org <label>` with EOF `end <label>`. Comment out the old `org` directive.
 3. **Preservation Check**: Ensure logic remains unchanged. Only syntax and formatting should be modified. Explain changes in comments.
-4. **Validation Check**: Verify that `;assert` lines follow supported formats for automated parameter extraction. Move incompatible binaries/hex to `incompatible/`.
+4. **Validation Check**: Verify that `;assert` lines follow supported formats for automated parameter extraction. Move incompatible binaries/hex to `incompatible/`. Replace undefined symbols with `0` or appropriate defaults.
 
 ## Core Principles
 
 - **Strict ICWS'88 (`-8` flag) Compliance**:
   - **Commas**: Mandatory between operands (`MOV 0, 1`).
   - **Explicit B-Operands**: Required for `SPL`, `JMP`, `DJN`, etc. (`SPL 10, 0`).
+  - **No Colons in Labels**: Labels should NOT end with a colon (`boot:` -> `boot`).
+  - **No Parentheses in Expressions**: Avoid parentheses in `EQU` and `FOR` expressions; `pMARS` often fails to parse them.
+  - **Negative Constants**: Replace negative constants with subtraction from zero (`-2793` -> `0-2793`) for maximum parser compatibility.
+  - **Symbol Conflicts**: Ensure `EQU` constants do not share names with labels to avoid redefinition errors.
+  - **Addressing Mode Spacing**: Remove spaces after addressing mode characters (`< Z2` -> `<Z2`).
   - **DAT Instructions**: MUST have two operands and explicit prefix modes (`DAT #0, #0`).
   - **Naked Addresses**: Use raw numbers for direct addressing in `-8` mode; avoid `$` modifier.
   - **Immediate Operand Restrictions**: Some instructions (e.g., `CMP`, `JMN`) do not support immediate values (`#`) in the B-field in strict mode.
@@ -56,6 +61,7 @@ Specialized guidance for modernizing legacy Redcode warriors to ensure compatibi
 - **KOFACOTO Round 5**: Reconstructed warriors (e.g., Ben Ford's self-modifying code) using historical components from 'Recycled Bits'. Recovered 'Round5.2000' and 'Quicksilver' from koth.org archives.
 - **KOFACOTO Round 6**: Large core (55440) with extended modifiers (`-x`). Max Processes: 55440. Explicit `end <label>` required.
 - **]enigma[ (Round 7)**: Non-standard `<<` addressing modes normalized to `<` for ICWS'88 compliance. Corrected `eStep 1751` for 14-1-985 tournament matching.
+- **Repository-Wide Cleanup (May 2026)**: Exhaustive syntax fixes for ~500 warriors across `gbs1989`, `polski`, `IRCT`, `ti1989`, `kofacoto`, and more. Resolved hundreds of `pMARS` assembly failures related to commas, label colons, parentheses, and symbol redefinitions.
 
 ## What to Avoid
 

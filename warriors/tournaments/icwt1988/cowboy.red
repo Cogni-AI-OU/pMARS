@@ -1,4 +1,5 @@
 ;Cowboy
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;by Eugene P. Lilitko
 ;Union of Soviet Socialist Republics
 ;
@@ -16,9 +17,9 @@ FIRE          DAT      #0,           #FIRE
 ;BEG           DAT                    BEG
 BEG           DAT      #0,           #BEG
 FENCE         MOV      SUCCESS,      SWITCH
-DEMON         SUB   #  1,            BISON
+DEMON         SUB   #1,            BISON
 HELP          SPL                    DEMON,         0
-BOMBING       MOV      FIRE,       < FIRE
+BOMBING       MOV      FIRE,       <FIRE
               JMN      HELP,         BISON
               MOV      BOMB,         HELP
 ;BOMB          DAT                    BOMB
@@ -30,8 +31,8 @@ COUNT         JMP      FENCE,         0
 ;
 ;Welcome to the snare!
 ;
-WELLC1        JMP   <  WELLC1,      0
-WELLC2        JMP   @  WELLC2,      0
+WELLC1        JMP   <WELLC1,      0
+WELLC2        JMP   @WELLC2,      0
 ;
 ;
 ;The main code.  Traps are set, inviting the opponent to jump
@@ -40,15 +41,15 @@ WELLC2        JMP   @  WELLC2,      0
 ;
 ;START         MOV      REST,         SWITCH
 START         MOV      REST,         SWITCH
-GBOMB         MOV   #  575,          FIRECNT
-              MOV   #  64,           BISON
+GBOMB         MOV   #575,          FIRECNT
+              MOV   #64,           BISON
               SPL                    RADAR,         0
-CONT          MOV   #  4098,         WELLC1
+CONT          MOV   #4098,         WELLC1
               MOV   # -4099,         WELLC2
-LOOP          MOV      WELLC1,     @ WELLC2
-              MOV      WELLC2,     @ WELLC1
-              ADD   #  7,            WELLC1
-              SUB   #  7,            WELLC2
+LOOP          MOV      WELLC1,     @WELLC2
+              MOV      WELLC2,     @WELLC1
+              ADD   #7,            WELLC1
+              SUB   #7,            WELLC2
 SWITCH        DJN      LOOP,         FIRECNT
 ;
 ;All right! There are bison in the snare.  The captured bison invite free
@@ -57,7 +58,7 @@ SWITCH        DJN      LOOP,         FIRECNT
 ;NEW           MOV      BOMB,         FIRE
 NEW           MOV      BOMB,         FIRE
               MOV      BOMB,         KILL
-SHOOT         MOV      FIRE,       < FIRE
+SHOOT         MOV      FIRE,       <FIRE
               JMZ      SHOOT,        KILL
 FORWARD       JMP      NEW,           0
 SUCCESS       MOV      GBOMB,        SUCCESS
@@ -69,27 +70,27 @@ REST          DJN      SHOOT,        COPY+3
 ;copy begins operating properly.
 ;
 ;RADAR         MOV   #  638,          FORWARD
-RADAR         MOV   #  638,          FORWARD
+RADAR         MOV   #638,          FORWARD
               MOV   # -638,          BACK
-              MOV   #  25,           COUNT
-MAKE          MOV      COUNT,      < FORWARD
-              MOV      COUNT,      < BACK
+              MOV   #25,           COUNT
+MAKE          MOV      COUNT,      <FORWARD
+              MOV      COUNT,      <BACK
               DJN      MAKE,         COUNT
-TEST          MOV   #  638,          FORWARD
+TEST          MOV   #638,          FORWARD
               MOV   # -638,          BACK
-              MOV   #  25,           COUNT
-COMPARE       CMP   <  FORWARD,    < BACK
+              MOV   #25,           COUNT
+COMPARE       CMP   <FORWARD,    <BACK
 BACK          JMP      ALARM,         0
 KILL          DJN      COMPARE,      COUNT
 FIRECNT       JMP      TEST,          0
 ALARM         MOV      BOMB,         SWITCH
-              MOV   #  50,           BEG
-              MOV   #  3310,         FORWARD
-COPY          MOV   @  BEG,        < FORWARD
+              MOV   #50,           BEG
+              MOV   #3310,         FORWARD
+COPY          MOV   @BEG,        <FORWARD
               DJN      COPY,         BEG
               MOV      NEW,          BOMBING
-              ADD   #  11,           FORWARD
+              ADD   #11,           FORWARD
 ;
-FINISH        JMP   @  FORWARD,      0
+FINISH        JMP   @FORWARD,      0
 
               END      START

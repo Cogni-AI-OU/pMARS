@@ -1,4 +1,5 @@
 ;redcode-94nop 
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Twin Storms 
 ;author inversed 
 ;strategy Double Origin of Storms 
@@ -28,14 +29,14 @@ qa2     equ     3424
 qb1     equ     7232 
 qb2     equ     7749 
  
-qa0a2   equ     (   (qa0    *  qa2    ) % CORESIZE ) 
-qb0b2   equ     (   (qb0    *  qb2    ) % CORESIZE ) 
-qa0a1   equ     (   (qa0    *  qa1    ) % CORESIZE ) 
-qb0b1   equ     (   (qb0    *  qb1    ) % CORESIZE ) 
-qa0a0   equ     (   (qa0    *  qa0    ) % CORESIZE ) 
-qb0b0   equ     (   (qb0    *  qb0    ) % CORESIZE ) 
-qa0da2  equ     ( ( (qa0-1) *  qa2    ) % CORESIZE ) 
-qb0db2  equ     ( ( (qb0-1) *  qb2    ) % CORESIZE ) 
+qa0a2   equ     (   (qa0    *qa2    ) % CORESIZE ) 
+qb0b2   equ     (   (qb0    *qb2    ) % CORESIZE ) 
+qa0a1   equ     (   (qa0    *qa1    ) % CORESIZE ) 
+qb0b1   equ     (   (qb0    *qb1    ) % CORESIZE ) 
+qa0a0   equ     (   (qa0    *qa0    ) % CORESIZE ) 
+qb0b0   equ     (   (qb0    *qb0    ) % CORESIZE ) 
+qa0da2  equ     ( ( (qa0-1) *qa2    ) % CORESIZE ) 
+qb0db2  equ     ( ( (qb0-1) *qb2    ) % CORESIZE ) 
 qa0a1d  equ     (   (qa0    * (qa1-1) ) % CORESIZE ) 
 qb0b1d  equ     (   (qb0    * (qb1-1) ) % CORESIZE ) 
 qa0a2d  equ     (   (qa0    * (qa2-1) ) % CORESIZE ) 
@@ -52,19 +53,19 @@ org     qscan
         ; Quickscan attack 
         dat       qa1   ,     qb1 
 qtab    dat       qa2   ,     qb2 
-qbomb   dat     > qbhop ,   { qtab 
-decode  mul     @ qbomb ,     q0 
+qbomb   dat     >qbhop ,   {qtab 
+decode  mul     @qbomb ,     q0 
  
         ;decide - 1 + 0.5 + 1 + 0.5 = 3 cycles (average) 
-decide  sne     * q0    ,   @ q0 
+decide  sne     *q0    ,   @q0 
 fast    mul.x     qtab  ,     q0 
-        seq       nil   ,   * q0 
+        seq       nil   ,   *q0 
         mov.x     q0    ,     q0 
  
-qbloop  mov       qbomb ,   @ q0 
-q0      mov       qa0   ,   } qb0 
-        add     # qbstep,     q0 
-        djn       qbloop,   # qbcnt 
+qbloop  mov       qbomb ,   @q0 
+q0      mov       qa0   ,   }qb0 
+        add     #qbstep,     q0 
+        djn       qbloop,   #qbcnt 
         jmp       boot  ,     0 
          
         ; Quickscan 
@@ -111,19 +112,19 @@ qscan   seq       q0+(qa0-1)*qb2        ,     q0+(qb0-1)*qa2
     rof 
  
         ; Boot 
-boot    mov     { 1         ,   { go1 
-        mov       db+1      ,   < go2 
-        djn       boot      ,   # 9 
-go1     spl       x0+bdist1 ,   > 1 
-go2     djn.f   < 0         ,   * x0+bdist2 
+boot    mov     {1         ,   {go1 
+        mov       db+1      ,   <go2 
+        djn       boot      ,   #9 
+go1     spl       x0+bdist1 ,   >1 
+go2     djn.f   <0         ,   *x0+bdist2 
  
         ; Scanner 
 ptr     sne     first   ,     first+hop 
         add     db      ,     ptr 
-p       mov     bomb    ,   > ptr 
-        mov     bomb    ,   } ptr 
-        djn   @ p       ,   # time 
-bomb    spl   # 1       ,     1 
-        mov     db      ,   > cptr 
-        djn.f  -1       ,   > cptr 
+p       mov     bomb    ,   >ptr 
+        mov     bomb    ,   }ptr 
+        djn   @p       ,   #time 
+bomb    spl   #1       ,     1 
+        mov     db      ,   >cptr 
+        djn.f  -1       ,   >cptr 
 db      dat     step-1  ,     step-1

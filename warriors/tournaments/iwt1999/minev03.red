@@ -1,4 +1,5 @@
 ;redcode-94
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Mine v0.3
 ;author John K Wilkinson
 ;jkw@austin.rr.com
@@ -37,10 +38,10 @@ scan    jmz.b   #0,        >ptr
         sne.i   <ptr,      cmp36+4000  ; reset to found loc with <
         jmp     found,     0
         seq.i   >ptr,      cmp045+4000 ; ptr is now +1, so 1+PLAYER+1 =
-2+PLAYER
+; 2+PLAYER
         jmp     scan,      0
 found   add     #PLAYER+1, ptr          ;2+PLAYER for cmp045 -- 1+PLAYER
-for cmp36
+; for cmp36
         mov.i   us+4000,   >ptr           ; set us to 7999
         mov.i   them+4000, >ptr           ; and them to zero
 bottom  jmp     scan
@@ -51,19 +52,19 @@ for 8*4
 dat 3,0
 rof
 
-us:     jmp #-1,0
-them:   jmp #0,1
+us      jmp #-1,0
+them    jmp #0,1
 
-for (8*4-2)
+for 8*4-2
 dat 3,0
 rof
 
-cmp045: dat 0,-45
-cmp36:  dat 3,6
+cmp045  dat 0,-45
+cmp36   dat 3,6
 
-boot:
-i for (bottom+1-bombd)
-mov bombd+i-1, (bombd+i-1)+4000
+boot
+i for bottom+1-bombd
+mov bombd+i-1, bombd+i-1+4000
 rof
 jmp start+4000
 

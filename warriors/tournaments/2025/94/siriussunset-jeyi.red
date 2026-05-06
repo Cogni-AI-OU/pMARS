@@ -1,4 +1,5 @@
 ;redcode-94nop
+; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Sirius Sunset jeyi 
 ;author Steve Gunnell
 ;strategy Kliney qscan -> supercharged sunset!
@@ -24,15 +25,15 @@ Y	equ	3425
 pGo	spl	}1	,}2
 	spl	0	,0
 	spl	0	,0
-for 2 > 2
+for 2 >2
 	mov.i	<1	,{1
 	spl	pstep0*2	,p0+8
 rof
-for 2 > 1
+for 2 >1
 	mov.i	<1	,{1
 	spl	pstep0	,p0+8
 rof
-for 2 > 0
+for 2 >0
 	mov.i	<1	,{1
 	spl	pstep1	,p0+8
 rof
@@ -57,22 +58,22 @@ qJump   jmp     qDec
         sne     qPtr+(qM+1)*(qN+0)+qStep*0 ,qPtr+(qM+1)*(qN+0)+qStep*1
         seq     qPtr+(qM+1)*(qN+0)+qStep*2 ,qPtr+(qM+1)*(qN+0)+qStep*3
 qAinc   jmp     qDec ,}qDec
-for 0 + 0 > 0
+for 0 + 0 >0
         sne     qPtr+(qM-1)*(qN+0)+qStep*0 ,qPtr+(qM-1)*(qN+0)+qStep*1
         seq     qPtr+(qM-1)*(qN+0)+qStep*2 ,qPtr+(qM-1)*(qN+0)+qStep*3
 qAdec   jmp     qDec ,{qDec
 rof
-for 1 + 1 + 0 + 0 > 0
+for 1 + 1 + 0 + 0 >0
         sne     qPtr+(qM+0)*(qN+1)+qStep*0 ,qPtr+(qM+0)*(qN+1)+qStep*1
         seq     qPtr+(qM+0)*(qN+1)+qStep*2 ,qPtr+(qM+0)*(qN+1)+qStep*3
 qBinc   jmp     qDec ,>qDec
 rof
-for 0 + 1 + 0 > 0
+for 0 + 1 + 0 >0
         sne     qPtr+(qM+0)*(qN-1)+qStep*0 ,qPtr+(qM+0)*(qN-1)+qStep*1
         seq     qPtr+(qM+0)*(qN-1)+qStep*2 ,qPtr+(qM+0)*(qN-1)+qStep*3
 qBdec   jmp     qDec ,<qDec
 rof
-for 0 + 1 + 1 + 0 > 0
+for 0 + 1 + 1 + 0 >0
         sne     qPtr+(qM-1)*(qN-1)+qStep*0 ,qPtr+(qM-1)*(qN-1)+qStep*1
         seq     qPtr+(qM-1)*(qN-1)+qStep*2 ,qPtr+(qM-1)*(qN-1)+qStep*3
 qFdec   djn.f   qDec ,qDec
@@ -137,7 +138,7 @@ null	dat	0	,0
 qSteps	dat	qStep*2-1	,qStep*2
 qBm	dat	qStep	,}-1
 qShfi	dat	qShf	,qShf
-qDec	mul.x	#qM	,#qN
+qDec	mul.X	#qM	,#qN
 
 	add.f	qDec	,qPtr
 	sne	*qPtr	,@qPtr
