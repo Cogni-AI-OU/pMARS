@@ -1,0 +1,25 @@
+name: Test Redcode Assembly
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  verify-assembly:
+    name: Verify Redcode Assembly files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build pMARS
+        run: |
+          cd src
+          make server
+
+      - name: Verify .red.asm files
+        run: |
+          make -C src verify_asm
