@@ -1,6 +1,16 @@
-2026-05-06	opencode
+2026-05-06	opencode-agent	<opencode-agent@users.noreply.github.com>
 
-	- Fixed a typo in the -F option documentation in pmars.6 and pmars.txt.
+	- Fixed documentation typos and grammar in doc/pmars.6, doc/pmars.txt,
+	  and doc/corewar-faq.html.
+	- Added Redcode assembly verification infrastructure: new GitHub
+	  Actions workflow, automation scripts, and mandatory assembly
+	  listings (.red.asm) for ICWS'88 and ICWS'94 warriors.
+	- Integrated and verified multiple historical tournaments: ICWT 1988,
+	  ICWT 1990, Torneo Italiano 1988, Battle Royal 1996, and Oversby 1998.
+	- Reorganized warriors into centralized warriors/tournaments directory.
+	- Expanded project skills for Redcode authoring, legacy modernization,
+	  and warrior strategies.
+	- Integrated missing Core Warrior newsletters (70-89).
 
 2026-01-14	John Metcalf	<digital.wilderness@googlemail.com>
 
