@@ -30,12 +30,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: pmars-Server
           path: bin/
+
       - name: Run tournament tests
         run: |
           chmod +x bin/pmars
-          make -C tests/tournaments/icwt1989 test
+          export PATH=$PATH:$(pwd)/bin
+          
+          echo "Running regression tests for all tournaments..."
+          # Loop through each tournament directory and run its tests
+          for dir in tests/tournaments/*/; do
+            if [ -f "${dir}Makefile" ]; then
+              echo "Testing tournament in $dir..."
+              make -C "$dir" test
+            fi
+          done

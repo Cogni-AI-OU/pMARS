@@ -12,6 +12,8 @@ WARRIORS_DIR="$ROOT_DIR/warriors/tournaments/icwt1992"
 if [ ! -f "$PMARS" ]; then
     if [ -f "$ROOT_DIR/src/pmars" ]; then
         PMARS="$ROOT_DIR/src/pmars"
+    elif [ -f "$ROOT_DIR/bin/pmars" ]; then
+        PMARS="$ROOT_DIR/bin/pmars"
     else
         if command -v pmars >/dev/null 2>&1; then
             PMARS="pmars"
