@@ -52,9 +52,3 @@ Expert-level guidance for managing the pMARS (Portable Memory Array Redcode Simu
 
 -   `pMARS` strict `-8` mode is the closest to ICWS'86 but may still have subtle timing differences due to modern process queue handling.
 -   Graphics modes (`sdl`, `xwin`) require a display environment and will fail in headless CI/CD runners.
-
-## Related Skills
-
--   `redcode`: For authoring the assembly files executed by pMARS.
--   `shell`: For batching matches and automating tournament leaderboards.
--   `tdd`: For creating regression tests using pMARS simulation outputs.
