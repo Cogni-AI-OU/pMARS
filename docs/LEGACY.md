@@ -1,6 +1,6 @@
 # Historical Compatibility and Case Studies
 
-This document preserves historical context for legacy Redcode and documents findings from updating older warriors to assemble correctly in pMARS. For agentic rules on how to modify and modernize warriors, refer to `docs/redcode-legacy.md`.
+This document preserves historical context for legacy Redcode and documents findings from updating older warriors to assemble correctly in pMARS. For agentic rules on how to modify and modernize warriors, refer to the `redcode-legacy` skill in `.github/skills/redcode-legacy/SKILL.md`.
 
 ## Historical Compatibility
 Many historical warriors (from the 1980s and early 90s) were written for parsers that were more lenient (e.g., allowing space-separated operands or omitting the B-field).
