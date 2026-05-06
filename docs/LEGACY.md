@@ -60,6 +60,36 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 
 ## Examples
 
+### Case: Yeager.red (KOFACOTO Tournament)
+
+In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+
+**Before:**
+```redcode
+;redcode-94
+;name He Scans Alone B
+...
+org tStart
+...
+tStart mov <tDecoy+0,{tDecoy+2
+...
+```
+
+**After (Consistent & Compatible):**
+```redcode
+;redcode-94
+;name He Scans Alone B
+...
+; org       tStart ; Removed in favor of 'end tStart' for better compatibility
+...
+tStart mov <tDecoy+0,{tDecoy+2
+...
+; Added 'end tStart' to ensure compatibility and explicit entry point definition
+          end    tStart
+```
+
+This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
+
 ### Case: ]enigma[ (KOFACOTO Tournament Round 7)
 
 The warrior `]enigma[` was found on an archive site with non-standard addressing modes (`<<`) and missing/misaligned constants. It was modernized for ICWS '88 compatibility in pMARS.
