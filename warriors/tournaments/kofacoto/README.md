@@ -12,13 +12,13 @@ This directory archives the KOTH Fall Core War Tournament (KOFACOTO), based on t
 
 ## Rounds
 
-- [Round 01: White Warrior](./Round_01/README.md)
-- [Round 02: Multiwarrior Melee](./Round_02/README.md)
-- [Round 03](./Round_03/README.md)
-- [Round 04](./Round_04/README.md)
-- [Round 05](./Round_05/README.md)
-- [Round 06](./Round_06/README.md)
-- [Round 07](./Round_07/README.md)
+- [Round 01: White Warrior](./round1/README.md)
+- [Round 02: Multiwarrior Melee](./round2/README.md)
+- [Round 03](./round3/README.md)
+- [Round 04](./round4/README.md)
+- [Round 05](./round5/README.md)
+- [Round 06](./round6/README.md)
+- [Round 07](./round7/README.md)
 
 ## Prizes
 
