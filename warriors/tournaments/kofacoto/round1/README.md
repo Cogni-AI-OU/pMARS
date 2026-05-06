@@ -147,7 +147,6 @@ j:      jmp.f   imp2-d2*8, {-6+bstep
 b       dat     <1,     1
 imp2    mov.i   #d2,    *0
 ```
-```
 
 ## Results
 
