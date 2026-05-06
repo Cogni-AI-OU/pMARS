@@ -31,21 +31,21 @@ for asm in $ASM_FILES; do
     FLAGS=""
     
     # Check for ;assert CORESIZE==...
-    CORESIZE=$(grep -i ";assert.*CORESIZE==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*CORESIZE==([0-9]+).*/\1/')
+    CORESIZE=$(grep -i ";assert.*CORESIZE[[:space:]]*==[[:space:]]*" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*CORESIZE[[:space:]]*==[[:space:]]*([0-9]+).*/\1/')
     if [[ "$CORESIZE" =~ ^[0-9]+$ ]]; then
         FLAGS="$FLAGS -s $CORESIZE"
     fi
 
     # Check for ;assert MAXPROCESSES==...
-    MAXPROCESSES=$(grep -i ";assert.*MAXPROCESSES==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXPROCESSES==([0-9]+).*/\1/')
+    MAXPROCESSES=$(grep -i ";assert.*MAXPROCESSES[[:space:]]*==[[:space:]]*" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXPROCESSES[[:space:]]*==[[:space:]]*([0-9]+).*/\1/')
     if [[ "$MAXPROCESSES" =~ ^[0-9]+$ ]]; then
         FLAGS="$FLAGS -p $MAXPROCESSES"
     fi
 
     # Check for ;assert MAXLENGTH==... or MAXINST==
-    MAXLENGTH=$(grep -i ";assert.*MAXLENGTH==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXLENGTH==([0-9]+).*/\1/')
+    MAXLENGTH=$(grep -i ";assert.*MAXLENGTH[[:space:]]*==[[:space:]]*" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXLENGTH[[:space:]]*==[[:space:]]*([0-9]+).*/\1/')
     if [[ ! "$MAXLENGTH" =~ ^[0-9]+$ ]]; then
-        MAXLENGTH=$(grep -i ";assert.*MAXINST==" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXINST==([0-9]+).*/\1/')
+        MAXLENGTH=$(grep -i ";assert.*MAXINST[[:space:]]*==[[:space:]]*" "$red" | sed -E 's/.*;[Aa][Ss][Ss][Ee][Rr][Tt].*MAXINST[[:space:]]*==[[:space:]]*([0-9]+).*/\1/')
     fi
     if [[ "$MAXLENGTH" =~ ^[0-9]+$ ]]; then
         FLAGS="$FLAGS -l $MAXLENGTH"

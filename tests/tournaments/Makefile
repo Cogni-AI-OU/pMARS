@@ -1,4 +1,4 @@
-TOURNAMENTS = acwt1997 icwt1987 icwt1988 icwt1989 icwt1990 icwt1991 icwt1992 kofacoto torneoitaliano1988
+TOURNAMENTS = acwt1997 battleroyal1996 icwt1987 icwt1988 icwt1989 icwt1990 icwt1991 icwt1992 kofacoto torneoitaliano1988
 
 .PHONY: all test $(TOURNAMENTS)
 
