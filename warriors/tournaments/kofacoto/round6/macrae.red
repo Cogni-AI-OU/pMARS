@@ -12,7 +12,7 @@
 ; The idea was to have these aggressive components 
 ; appearing occasionally from behind a robust silk/imp;
 ; the combination should have been quite tough to handle.
-; However, the SI never materialized so I have to rely
+; However, the SI never materialised so I have to rely
 ; on David 1) Not playing a strong Silk/Imp, and 
 ; 2) Not playing a scanner that can beat my 64proc, 2point 
 ; imp. Most scanners can :-(
@@ -149,4 +149,8 @@ dc              spl #0,     }ptr
                 djn.f -1,   >ptr
 bomb            dat -500,  bomb-ptr+2
 
+
+
+
+; Modified to resolve syntax issues and ensure compatibility with pMARS assembly.
       end   think

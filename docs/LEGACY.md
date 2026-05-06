@@ -58,7 +58,23 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 2. **Comment Character:** Use `;` for all Redcode comments.
 3. **Explain Changes:** Always include a brief comment explaining why a change was made (e.g., "Removed in favor of 'end tStart' for better compatibility").
 
-## Examples
+## ICWS '94x Large Core Compatibility
+
+Some tournaments, like KOFACOTO Round 6, used a large core with extended modifiers (`-x` flag in pMARS).
+
+### Core Parameters
+For KOFACOTO Round 6, the parameters were:
+- **Core Size:** 55440
+- **Max Processes:** 55440
+- **Cycles:** 500000
+
+When simulating these environments, ensure the `-s`, `-p`, and `-c` flags are set correctly. The `-x` flag is often required for extended modifiers, although some pMARS builds enable it by default.
+
+### Warrior Length
+Large core warriors often exceed the default length limit of 100 instructions. Use the `-l` flag to increase the limit (e.g., `-l 500`).
+
+### P-Space
+Ensure P-space size is appropriate for the core size. By default, pMARS sets it to 1/16th of the core size.
 
 ### Case: Yeager.red (KOFACOTO Tournament)
 
