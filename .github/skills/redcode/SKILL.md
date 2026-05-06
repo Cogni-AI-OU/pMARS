@@ -58,3 +58,9 @@ Expert-level guidance for authoring, analyzing, and modernizing Redcode assembly
 
 - `pMARS` strict parser `-8` deviates from ICWS '94 defaults, enforcing older behavior which might require specific flag configurations.
 - Re-calculating optima numbers is mandatory when core sizes scale (especially ModelWar's 25,200 vs standard 8,000).
+
+## Related Skills
+
+- `pmars`: For simulator configuration, compilation, and execution parameters.
+- `shell`: For orchestrating `pmars` batch simulations.
+- `c`: For understanding `pMARS` simulator internals if debugging core execution.
