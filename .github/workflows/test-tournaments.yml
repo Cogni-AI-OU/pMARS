@@ -66,9 +66,9 @@ jobs:
               MAXLENGTH=8000
               
               # Try to extract settings from ;assert lines if present
-              CS=$(grep -i ";assert" "$f" | grep -oiP "CORESIZE\s*==\s*\K\d+" | head -n 1 || echo "")
+              CS=$(grep -i ";assert" "$f" | grep -oiP "CORESIZE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$CS" ] && CORESIZE=$CS
-              ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\s*==\s*\K\d+" | head -n 1 || echo "")
+              ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
               [ ! -z "$ML" ] && MAXLENGTH=$ML
 
               # Try default '94
@@ -76,7 +76,10 @@ jobs:
                 # Try '88 compatibility for older warriors
                 if ! ./bin/pmars -8 -s $CORESIZE -l $MAXLENGTH -A "$f" > /dev/null 2>&1; then
                   echo "FAILED: $f"
-                  ./bin/pmars -s $CORESIZE -l $MAXLENGTH -A "$f" # Show errors in log
+                  echo "Default '94 error:"
+                  ./bin/pmars -s $CORESIZE -l $MAXLENGTH -A "$f"
+                  echo "ICWS'88 error:"
+                  ./bin/pmars -8 -s $CORESIZE -l $MAXLENGTH -A "$f"
                   failed=$((failed + 1))
                 fi
               fi
