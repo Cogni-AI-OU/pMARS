@@ -58,7 +58,7 @@ As per the project's core mandates in `AGENTS.md`, historical code must be prese
 2. **Comment Character:** Use `;` for all Redcode comments.
 3. **Explain Changes:** Always include a brief comment explaining why a change was made (e.g., "Removed in favor of 'end tStart' for better compatibility").
 
-## Examples
+## ICWS '94x Large Core Compatibility
 
 ### Case: KOFACOTO Round 5 Warriors
 
@@ -68,21 +68,27 @@ For Round 5 of the KOFACOTO tournament, several warriors were reconstructed or r
 - **Recovered Warriors:** 'Round5.2000' (P. Kline), '2 Crazy' (Christian Schmidt), 'Quicksilver' (Michal Janeczek), and 'G2' (David Moore) were recovered from the web archive of koth.org.
 
 ### Case: Yeager.red (KOFACOTO Tournament)
+Some tournaments, like KOFACOTO Round 6, used a large core with extended modifiers (`-x` flag in pMARS).
 
-In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+### Core Parameters
+For KOFACOTO Round 6, the parameters were:
+- **Core Size:** 55440
+- **Max Processes:** 55440
+- **Cycles:** 500000
 
-**Before:**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-org tStart
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-```
+When simulating these environments, ensure the `-s`, `-p`, and `-c` flags are set correctly. The `-x` flag is often required for extended modifiers, although some pMARS builds enable it by default.
 
-**After (Consistent & Compatible):**
+### Warrior Length
+Large core warriors often exceed the default length limit of 100 instructions. Use the `-l` flag to increase the limit (e.g., `-l 500`).
+
+### P-Space
+Ensure P-space size is appropriate for the core size. By default, pMARS sets it to 1/16th of the core size.
+
+### Case: Entry Point Modernization (KOFACOTO Tournament)
+
+In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point. This includes warriors from Round 1, Round 2, Round 3, and Round 4.
+
+**Example (He Scans Alone B from Round 6):**
 ```redcode
 ;redcode-94
 ;name He Scans Alone B
@@ -95,4 +101,42 @@ tStart mov <tDecoy+0,{tDecoy+2
           end    tStart
 ```
 
+**Example (Retribution.red from Round 4):**
+```redcode
+;redcode-94
+;name Retribution
+;author Michal Janeczek
+...
+; org    cPtr ; Removed in favor of 'end cPtr' for better compatibility
+...
+; Added 'end cPtr' to ensure compatibility and explicit entry point definition
+      end    cPtr
+```
+
 This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
+
+### Case: KOFACOTO Round 3 (Black Warrior Round)
+
+Round 3 of the KOFACOTO tournament introduced a secret opponent named **Black Box**. This round used special core settings that differ from the standard ICWS'94 Draft defaults:
+
+- **Core Size:** 55440
+- **Max Processes:** 10000
+- **Max Cycles:** 500000
+- **Max Warrior Length:** 200 (Requires `-l 200` flag)
+- **Minimum Distance:** 200 (Requires `-d 200` flag)
+
+When simulating this round, ensuring these flags are provided is essential, as the Black Box warrior and some entries (like Oneder) exceed the default length of 100.
+
+#### Warrior Adjustments:
+Several warriors were adjusted to satisfy modern pMARS assembly:
+- **Chin.red (Voodoo):** Added `;assert 1` to avoid warnings.
+- **Macrae.red (55HSB):** Changed `;assert TRUE` to `;assert 1` as `TRUE` is not a recognized constant in pMARS.
+- **BlackBox.red:** The opponent warrior was included in the tournament archive to allow reproducible tests.
+
+### Case: ]enigma[ (KOFACOTO Tournament Round 7)
+
+The warrior `]enigma[` was found on an archive site with non-standard addressing modes (`<<`) and missing/misaligned constants. It was modernized for ICWS '88 compatibility in pMARS.
+
+- **Addressing Modes:** Changed `<<` to `<` to comply with the ICWS '88 standard.
+- **Parameters:** Identified `eStep 1751` and `-p 256` as the correct environment parameters to match the historical 14-1-985 tournament results.
+- **Boot Structure:** Fixed the parallel copy boot by ensuring labels and lengths aligned with the 8-line replicated module.

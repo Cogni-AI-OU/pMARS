@@ -6,6 +6,14 @@ Reference: [KOFACOTO home page](http://www.koth.org/kofacoto/) | [Rules](http://
 
 The semifinals were played under standard `94x` rules.
 
+## Warriors
+
+The following warriors were used in the semifinals:
+- **jan.red**: `Katafutr` by Michal Janeczek (P-spacer)
+- **macrae.red**: `Damage Inflicted` by Robert Macrae (P-spacer)
+- **moore.red**: `Denial` by David Moore (Stone/imp)
+- **schmidt.red**: `Rock'n'Roll` by Christian Schmidt (P-spacer)
+
 ## Battles
 
 | Battle | Winner | Loser |
