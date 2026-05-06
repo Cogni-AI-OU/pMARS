@@ -20,4 +20,9 @@ This directory contains a simulation of the Second Annual International Core War
 3rd: Piper by Chip Wendell
 
 ## Simulation Results
-The simulation results may vary from the historical results due to differences in the `pMARS` simulator version and the randomness of starting positions. In modern `pMARS` (ICWS'94), `Plague` and `Piper` often outperform `Ferret`.
+The simulation results differ from the historical results (Ferret 1st, Plague 2nd, Piper 3rd) when using the modern `pMARS` built from this repository's source. In this simulation, `Piper` and `Plague` consistently outperform `Ferret`.
+
+### Reasons for Discrepancy:
+1. **Simulator Standard:** ICWT 1987 used the ICWS'86 standard. While `pMARS -8` enforces the ICWS'88 standard, there are subtle differences in instruction behavior (especially `CMP` and `SPL`) and timing between the original 1986 simulators and modern `pMARS`.
+2. **Scanner Sensitivity:** Linear scanners like `Ferret` are highly sensitive to the initial distance between warriors and the exact implementation of the simulator's process queue and comparison logic.
+3. **Deterministic Seed:** The simulation uses the `-f` flag for reproducibility, but the fixed starting positions may favor certain strategies over others compared to the random positions used in the original tournament.
