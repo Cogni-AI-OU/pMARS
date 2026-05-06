@@ -5,7 +5,7 @@
 ;strategy Includes Paperinik (tuned by Sascha Zapf) and Pi-stone
 ;strategy and some P-optimizations found here and there.
 ;kill Superpippo
-;assert CORESIZE == 8192
+;assert CORESIZE == 8192 && MAXLENGTH == 300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
 ;P-space things
 	PIN 768

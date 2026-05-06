@@ -2,7 +2,7 @@
 ;name Squirrels!
 ;author John Metcalf
 ;strategy clear/imp
-;assert CORESIZE==8192
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
      iStep equ 3277
      cDist equ (pGo+2555)

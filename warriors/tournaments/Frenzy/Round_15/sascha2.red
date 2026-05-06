@@ -1,7 +1,7 @@
 ;redcode-94t
 ;name 2b||!2b
 ;author Sascha Zapf
-;assert CORESIZE==8192
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 ;strategy Scissor or Paper/Stone
 ;kill 2b||!2b
 

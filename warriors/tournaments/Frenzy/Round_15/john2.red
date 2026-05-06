@@ -2,7 +2,7 @@
 ;name ln(8192)=9.01091
 ;author John Metcalf
 ;strategy stone/imp
-;assert CORESIZE==8192
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 
      sStep equ 3598
      iStep equ 3277

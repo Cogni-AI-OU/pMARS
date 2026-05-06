@@ -1,7 +1,7 @@
 ;redcode-94t
 ;name Tiger
 ;author Sascha Zapf
-;assert CORESIZE==8192
+;assert CORESIZE==8192 && MAXLENGTH==300 ; Added round-specific settings for Redcoders Frenzy Round 15
 ;strategy Q4.5 -> Paper/Stone
 
 sstep1 equ 817
