@@ -4,6 +4,7 @@
 ;
 ; Added to ensure correct coresize for ICWT'91 simulation
 ;assert CORESIZE==8192
+;pmars-flags: -8
 ; Updated to ICWS'88 operand modes for strict compilation
 z1      DAT #0, #2062
 z2      DAT #0, #4110

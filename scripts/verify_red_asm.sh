@@ -75,6 +75,9 @@ for asm in $ASM_FILES; do
         if [[ "$red" == *"fingerprint.red" ]]; then
              [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 300"
         fi
+    elif [[ "$red" == *"warriors/tournaments/ebs1991"* ]]; then
+        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
+        [[ "$FLAGS" == *"-8"* ]] || FLAGS="$FLAGS -8"
     fi
 
     # Ensure we use -A

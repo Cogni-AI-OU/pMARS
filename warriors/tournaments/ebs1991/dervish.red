@@ -1,3 +1,6 @@
+; Added to ensure correct coresize for ICWT'91 simulation
+;assert CORESIZE==8192
+;pmars-flags: -8
 ; Fixed ICWS'88 syntax compatibility (commas, DAT modes, and B-operands) for pMARS strict mode.
 ;
 ;    Warrior: Dervish

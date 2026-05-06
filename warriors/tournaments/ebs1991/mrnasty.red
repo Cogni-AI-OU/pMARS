@@ -1,4 +1,6 @@
 ;redcode
+;assert CORESIZE==8192
+;pmars-flags: -8
 ;name MrNasty
 ;author Kurt Werle & Stephen Beitzel <wet!sbeitzel@uunet.UU.NET>
 ;strategy Mr. Nasty is a stationary vampiric bomber.

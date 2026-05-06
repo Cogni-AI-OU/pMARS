@@ -30,6 +30,7 @@
   
 ; Added to ensure correct coresize for ICWT'91 simulation
 ;assert CORESIZE==8192
+;pmars-flags: -8
 loop  add #412, ptr
 ptr   jmz loop, trap
       mov ptr,  dest

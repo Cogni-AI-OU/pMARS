@@ -63,6 +63,9 @@ find "$TARGET_DIR" -type f -name "*.red" | while read -r red_file; do
         if [[ "$red_file" == *"fingerprint.red" ]]; then
              [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 300"
         fi
+    elif [[ "$red_file" == *"warriors/tournaments/ebs1991"* ]]; then
+        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
+        [[ "$FLAGS" == *"-8"* ]] || FLAGS="$FLAGS -8"
     fi
 
     # Append manual flags

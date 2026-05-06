@@ -21,6 +21,7 @@
 ;
 ; Added to ensure correct coresize for ICWT'91 simulation
 ;assert CORESIZE==8192
+;pmars-flags: -8
 twirl   djn stab,gotme
 seppuku mov ammo,breed
         mov ammo,stab
