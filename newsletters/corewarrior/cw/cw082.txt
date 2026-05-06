@@ -1,0 +1,227 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 82                                                          04 July, 2002
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 no-pspace hill. Coverage will
+follow wherever the action is. If you haven't a clue what I'm talking about
+then check out these five-star Internet locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Welcome...
+
+Several interesting warriors have been published since last issue, including
+Candy, Disincentive and Potenza which were posted to the newsgroup.  Also,
+many of the Core War guides and magazines have been kindly converted to PDF
+format by John Everitt.  These can be found at:
+
+  http://www.firetrench.com/corewar/
+
+Walter Hofmann has added a beginners' hill to his site, which also homes the
+distributed warrior evolution project.  For more info, check:
+
+  http://corewars.sourceforge.net/
+
+Also, don't forget about the two Polish hills, standard and multiwarrior at:
+
+  http://www.if.pw.edu.pl/~adamow/corewar/
+
+Apologies for this issue being a little slimmer than usual.
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  39/ 24/ 37                    pTest4                  G/M    153.5      9
+ 2  37/ 20/ 43                     Candy        Lukasz Grabun    153.3     48
+ 3  45/ 39/ 16       Hazy Lazy ... again        Steve Gunnell    151.4    183
+ 4  35/ 21/ 44               Son of Vain      Oversby/Pihlaja    148.7    737
+ 5  46/ 43/ 11              oneshot test     Simon Wainwright    148.3     72
+ 6  45/ 43/ 12                     Terra                Fizmo    147.1     16
+ 7  46/ 44/ 10                     Blade                Fizmo    146.7     54
+ 8  36/ 26/ 37                 Uninvited         John Metcalf    146.3    830
+ 9  34/ 24/ 42                paper test         John Metcalf    145.3     32
+10  44/ 42/ 14                   Behemot      Michal Janeczek    144.6    971
+11  42/ 42/ 16                Vanquisher        Lukasz Grabun    143.1    239
+12  44/ 46/ 10                      G3-b          David Moore    143.0    418
+13  34/ 25/ 42                 nPaper II        Paul-V Khuong    142.8   1148
+14  33/ 25/ 42                  Purifier        Lukasz Grabun    141.3    158
+15  33/ 27/ 40                      Inky          Ian Oversby    139.5    627
+16  43/ 46/ 11                 scan test        Lukasz Grabun    139.1     15
+17  33/ 27/ 41                    Olivia             Ben Ford    139.1    876
+18  42/ 46/ 12                pre75-z47a         John Metcalf    138.7     90
+19  40/ 43/ 16                      QSOS                Fizmo    137.4     86
+20  37/ 39/ 24                     Argon                Fizmo    135.4      1
+
+After 160 successful challenges only 9 warriors from last issue remain.
+One of those which departed was Blacken (age 1363), having been the oldest
+warrior around for quite some time (since it was age 426 in fact).  Also
+leaving the hill were Keyser Soze (823), Quicksilver (789), Revival Fire
+(468), Deep Freeze X (199), Hopper (182) and Test C (152).
+
+Grabun holds the top two ranks with two new warriors.  Welcome to Fizmo,
+who has made an impressive hill debut.
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 2  nPaper II              Paul-V Khuong     1148 *  MiniQ^3 -> Paper
+ 3  Behemot                Michal Janeczek    971 *  MiniQ^3 -> Bomber
+ 4  Olivia                 Ben Ford           876 *  Q^4 -> Stone/imp
+ 5  Uninvited              John Metcalf       830 *  MiniQ^3 -> Stone/imp
+ 6  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+ 7  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+ 8  Eraser II              Ken Espiritu       781    Scanner
+ 9  Son of Vain            Oversby/Pihlaja    737 *  Q^4 -> Stone/imp
+10  Jinx                   Christian Schmidt  662    Scanner
+11  Inky                   Ian Oversby        627 *  Q^4 -> Paper/stone
+12  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+13  Revival Fire           P.Kline            468    Bomber
+14  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+15  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+17  G3-b                   David Moore        418 *  Twoshot
+18  Qtest                  Christian Schmidt  394    *Unknown*
+19  Stalker                P.Kline            393    Scanner
+20  Vain                   Ian Oversby        330    Q^2 -> Stone/imp
+21  Omnibus                John Metcalf       327    Q^2 -> Stone/imp
+22  Win!                   David Moore        322    Scanner
+23  Hazy Lazy...           Steve Gunnell      309    Scanner
+24  Recovery               Ian Oversby        280    MiniQ^2 -> Paper/stone
+25  The Fugitive           David Moore        274    MiniQ^2 -> Paper/imp
+
+Blacken finally perishes, how long before a new warrior steals the top spot?
+G3-b enters the HoF, replacing the older version which survived to an age of
+413.  Vanquisher should be next to enter here...
+_______________________________________________________________________________
+Current Status of the Koenigstuhl Recursive ICWS '94 Draft Hill:
+
+Koenigstuhl is a collection of infinite hills of published warriors
+found at:
+
+  http://www.ociw.edu/COREWAR/koenigstuhl.html
+
+Below we show the top 25 of a total 749 warriors - a smaller total than
+previously, since the '88 warriors are no longer on the '94 hill:
+
+rank name                        author                 score
+--------------------------------------------------------------
+   1 Son of Vain                 Oversby/Pihlaja        172.95
+   2 Quicksilver                 Michal Janeczek        171.34
+   3 Hazy Lazy ...               Steve Gunnell          169.61
+   4 Uninvited                   John Metcalf           167.51
+   5 Behemot                     Michal Janeczek        167.01
+   6 Vanquisher II               Lukasz Grabun          164.20
+   7 Candy                       Lukasz Grabun          163.73
+   8 Silver Talon 1.2            Edgar                  163.05
+   9 The Machine                 Anton Marsden          162.26
+  10 Deep Freeze X               Lukasz Grabun          162.20
+  11 Purifier                    Lukasz Grabun          162.00
+  12 Boys are Back in Town 1.1   Philip Kendall         161.08
+  13 Zooom...                    John Metcalf           160.80
+  14 Jade                        Ben Ford               160.57
+  15 Recovery                    Ian Oversby            160.12
+  16 Vanquisher                  Lukasz Grabun          160.10
+  17 nPaper II                   Paul-V Khuong          159.21
+  18 Newt                        Ian Oversby            158.96
+  19 Agony II                    Stefan Strack          158.48
+  20 Fixed                       Ken Espiritu           158.33
+  21 G2                          David Moore            158.28
+  22 myVamp5.4                   Paulsson               158.23
+  23 The Stormbringer            Christian Schmidt      158.13
+  24 Phantasm 50                 Robert Macrae          158.12
+  25 Disincentive                Lukasz Grabun          157.87
+
+Son of Vain claims top spot for Oversby/Pihlaja.  Grabun has 6 entries in
+the top 25, more than any other redcoder.
+_______________________________________________________________________________
+Spring / Summer 2002 Corewar Tournament - Round 2 Results:
+
+Round 2 inspired a smaller turnout than the previous round, with 9 authors
+submitting 17 warriors in all.  The warriors played round robin in a large
+limited process core, with a total of 10000 rounds per battle.  63 hours,
+11 minutes and 20 seconds later there emerged a clear winner from the afray,
+boasting an impressive 61.4% wins.
+
+Janeczek's FragPaper has top spot - being a stone/paper similar in principle
+to Tempest.  A stone/paper also holds second place, this time being Gunnell's
+Hov Test, closely followed by the first of Hillis's evolved warriors.
+
+A little further down, we find Ford's scanner and Wainwright's paper in ranks
+6 and 7.  Thorne's vampire takes 10th place.  Macrae holds 12th rank with a
+bomber, however much more interesting is his other entry, a triad of mutually
+repairing scanners.  Finally we have Moore's clear at 14th and WFB's bomber
+at 16th.
+
+ # %Won Lost Tied Name                     Author                  Score     %
+ 1 61.4 15.5 23.1 FragPaper                Michal Janeczek        207.39 100.0
+ 2 46.3 16.1 37.6 Hov Test Tiny 4          Steve Gunnell          176.36  85.0
+ 3 46.8 18.9 34.3 rdrc_biglp1              Dave Hillis            174.75  84.3
+ 4 49.2 33.2 17.7 Bugtown Rap 9            Steve Gunnell          165.13  79.6
+ 5 48.9 38.2 12.9 rdrc_biglp2              Dave Hillis            159.59  77.0
+ 6 46.0 37.6 16.4 lockdown                 Ben Ford               154.39  74.4
+ 7 37.8 27.2 35.0 pure paper               Simon Wainwright       148.35  71.5
+ 8 44.7 41.3 14.0 heLP                     Simon Wainwright       148.21  71.5
+ 9 44.4 40.8 14.8 1hx                      Michal Janeczek        147.89  71.3
+10 41.8 42.5 15.7 Slimy Time Vamp          Philip Thorne          141.02  68.0
+11 41.7 44.9 13.4 LoClair                  Philip Thorne          138.44  66.8
+12 39.7 53.0  7.3 DB2                      Robert Macrae          126.41  61.0
+13 31.6 39.5 28.8 Mimp                     Ben Ford               123.74  59.7
+14 34.7 62.8  2.4 Pinprick                 David Moore            106.64  51.4
+15 24.7 44.9 30.4 In Search of Efficient   Robert Macrae          104.37  50.3
+16 31.2 64.4  4.4 Dwarfed                  Winston Featherly-Bean  98.01  47.3
+17 18.2 68.2 13.6 Dwarfed Again            Winston Featherly-Bean  68.32  32.9
+
+To summarize the stategies used, there are three dat bombers (at ranks 12,
+16 and 17) - two each of stone/paper (1, 2), evolved warrior (3, 5), vampire
+(4, 10), scanner (6, 9), clear (11, 14) - and just one paper (7), stun bomber
+(8), mirrored imp (13) and self-repair (15).
+
+ # Competitor              Tiny  BigLP  Total
+ 1 Michal Janeczek         93.3  100.0  193.3
+ 2 Dave Hillis             99.9   84.3  184.2
+ 3 Steve Gunnell           91.0   85.0  176.0
+ 4 Ben Ford               100.0   74.4  174.4
+ 5 Robert Macrae           89.7   61.0  150.7
+ 6 Simon Wainwright        79.1   71.5  150.6
+ 7 Philip Thorne           75.5   68.0  143.5
+ 8 Winston Featherly-Bean  72.9   47.3  120.2
+ 9 Martin Ankerl           88.2     .    88.2
+10 Leonardo H. Liporati    84.3     .    84.3
+11 Lukasz Grabun           81.3     .    81.3
+12 mushroommaker           71.3     .    71.3
+13 Arek Paterek            66.0     .    66.0
+14 Paul Drake              61.9     .    61.9
+15 Compudemon              53.9     .    53.9
+16 David Moore               .    51.4   51.4
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <schmidt@mail.uni-mainz.de>
+

@@ -1,0 +1,731 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 79                                                      19 February, 2001
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star Internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+The ftp site and it's mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars                  ;pMARS home page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the above pages for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+The three months since last issue have been an interesting time, showing
+Corewar is very much alive and well.  I hope you enjoy this issue, which
+contains code for Certain Abuse and Enough is Enough...
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  33.8/ 21.7/ 44.5                    Olivia             Ben Ford 146.0    8
+ 2  32.8/ 23.4/ 43.9                 Uninvited         John Metcalf 142.2   42
+ 3  32.6/ 23.5/ 43.8               Quicksilver      Michal Janeczek 141.7   24
+ 4  30.7/ 19.9/ 49.4                 nPaper II        Paul-V Khuong 141.6   76
+ 5  26.6/ 13.0/ 60.4 Mini Return Of The Jedimp             John K W 140.1   19
+ 6  43.7/ 47.6/  8.7                     Razor      Michal Janeczek 139.9    6
+ 7  38.1/ 37.4/ 24.5                 Wizard 13         John Metcalf 138.9    7
+ 8  24.7/ 10.7/ 64.6      The PhantIMP Menance             Ben Ford 138.8    9
+ 9  38.9/ 39.3/ 21.7                   Behemot      Michal Janeczek 138.5    5
+10  28.4/ 19.0/ 52.6                  KafuFFLe         John Metcalf 137.9   24
+11  28.1/ 19.4/ 52.5               Tie Factory    Christian Schmidt 136.8   45
+12  26.6/ 17.1/ 56.2                  Cinammon         John Metcalf 136.1   44
+13  28.6/ 21.6/ 49.8               Fifth Third             Ben Ford 135.7   11
+14  31.7/ 28.4/ 39.9                     Vilex         Ken Espiritu 135.0   71
+15  36.6/ 38.9/ 24.5                  Combatra          David Moore 134.3   31
+16  25.3/ 16.3/ 58.3    Return of the Fugitive          David Moore 134.3  100
+17  36.9/ 39.5/ 23.6                      test             Paulsson 134.3    3
+18  25.7/ 19.5/ 54.8              The Dark One    Christian Schmidt 131.9   28
+19  32.2/ 33.0/ 34.8               Keyser Soze        Anton Marsden 131.3    4
+20  28.3/ 25.5/ 46.2                 Brigadeer     M Joonas Pihlaja 131.1   15
+21  31.8/ 33.5/ 34.7                   Recount              P.Kline 130.1    1
+22  34.4/ 38.7/ 26.9                    Ultima    Christian Schmidt 130.1   38
+23  25.2/ 20.7/ 54.1                      test                  JKW 129.8   17
+24  39.3/ 48.9/ 11.8              Shapeshifter      Michal Janeczek 129.7   30
+25  31.8/ 36.6/ 31.7                     Carme           Zul Nadzri 127.0    2
+
+Age since last issue: 26 ( 18 last issue, 12 the issue before )
+Days since last issue: 104 ( 209 last issue, 121 the issue before )
+Average age: 26 ( 34 last issue, 34 the issue before )
+Average score: 136 ( 138 last issue, 137 the issue before )
+Average movement: -2.2 ( -6.0 last issue, -1.5 the issue before )
+Warriors surviving: 10 ( 14 last issue, 18 the issue before )
+
+The top 25 warriors are represented by 13 independent authors - a number
+unmatched since CW66:  4 each for Metcalf and Janeczek, 3 each for Ford and
+Schmidt, and 2 each for Wilkinson and Moore.  Each of the remaining 7 authors
+has just 1 warrior.  ( 9 authors last issue, 10 the issue before )
+
+Olivia has held the top of the hill since it appeared; the p-spacers have lost
+their grasp.
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  61.1/ 35.7/  3.2         Certain Abuse v02          Dave Hillis 186.5    0
+ 1  50.8/ 46.0/  3.2 Is this a game of chance?          Dave Hillis 155.6    1
+ 1  47.3/ 45.7/  7.0 Not the way I play it. No          Dave Hillis 148.9    1
+ 1  27.4/ 10.6/ 62.0 Mini Return Of The Jedimp             John K W 144.2    1
+ 1  31.2/ 19.2/ 49.6                    Olivia             Ben Ford 143.2    1
+ 1  28.7/ 19.0/ 52.3               Fifth Third             Ben Ford 138.5    1
+ 1  23.9/  9.7/ 66.4      The PhantIMP Menance             Ben Ford 138.1    0
+ 2  37.5/ 36.6/ 25.8                 Wizard 13         John Metcalf 138.4    1
+ 4  33.7/ 21.4/ 44.9               Quicksilver      Michal Janeczek 146.1    0
+ 4  36.9/ 40.2/ 22.9                   Behemot      Michal Janeczek 133.6    1
+ 4  41.6/ 51.3/  7.1                     Razor      Michal Janeczek 131.8    1
+ 5  34.7/ 32.6/ 32.7                   2 Crazy    Christian Schmidt 136.7    1
+ 6  25.8/ 18.3/ 55.9                    H-Bomb                  JKW 133.3    0
+11  24.3/ 16.6/ 59.1                      test                  JKW 132.1    1
+12  25.3/ 19.6/ 55.2                  KafuFFLe         John Metcalf 130.9    1
+12  36.6/ 42.8/ 20.6                  one shot     M Joonas Pihlaja 130.5    1
+13  34.8/ 40.1/ 25.1                      test             Paulsson 129.6    1
+14  30.2/ 32.4/ 37.4               Keyser Soze        Anton Marsden 128.0    1
+15  30.5/ 30.5/ 39.1           High Times v1.3                  JKW 130.5    0
+16  25.4/ 22.7/ 51.9                  All In 2        Robert Macrae 128.1    1
+18  25.4/ 25.3/ 49.3                 Brigadeer     M Joonas Pihlaja 125.6    1
+22  21.0/ 18.9/ 60.1                      test                  JKW 123.1    1
+22  30.1/ 37.3/ 32.6                     Carme           Zul Nadzri 122.9    1
+22  29.2/ 35.5/ 35.3                   Recount              P.Kline 122.9    1
+24  29.1/ 34.5/ 36.4              The Magician    Christian Schmidt 123.8    1
+24  31.4/ 41.2/ 27.4    The IMPerial Destroyer    Christian Schmidt 121.6    1
+25  17.1/  9.7/ 73.3                 Black Box                  JKW 124.5    1
+
+Players entering hill since last issue: 12 ( 5 last issue, 5 the issue before )
+Average rank of new entries: 10 ( 11 last issue, 17 the issue before )
+
+Hillis debuts on the '94 hill with the highest score we've seen in a long
+time.  Schmidt hasn't failed to have a warrior under What's New since CW60,
+quite an achievement.  Despite Pizza being down (twice), it's been pretty
+busy since last issue.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  29.0/ 39.8/ 31.2             Recycled Bits          David Moore 118.2  164
+26  29.4/ 39.7/ 30.9       Self-Modifying Code             Ben Ford 119.1  108
+26  23.4/ 23.9/ 52.7                      Jade             Ben Ford 122.9   75
+26  23.7/ 25.7/ 50.6                    EvoP 3         Ken Espiritu 121.6   71
+26  30.7/ 38.5/ 30.8      Trefoil the original        Steve Gunnell 123.0   56
+26  24.0/ 25.7/ 50.3                      Exor         Ken Espiritu 122.3   52
+26   0.5/  0.1/  3.4                  Cinammon         John Metcalf   4.9   45
+26  31.8/ 41.8/ 26.4         Origami Harquebus                  mjp 121.9   44
+26  23.8/ 21.4/ 54.8         Stylized Euphoria         Ken Espiritu 126.3   43
+26  24.1/ 30.3/ 45.6                Wintermute         John Metcalf 117.8   35
+26  29.9/ 41.8/ 28.3                        G2          David Moore 118.1   24
+26  26.6/ 33.0/ 40.3           High Times v1.3                  JKW 120.2   21
+26  38.2/ 54.4/  7.4                     Razor      Michal Janeczek 121.9   19
+26  26.1/ 35.3/ 38.6                   2 Crazy    Christian Schmidt 116.8   18
+26  34.6/ 44.7/ 20.7                   Pitbull    Christian Schmidt 124.5   16
+26  22.1/ 24.7/ 53.2            Mini Digitalis    Christian Schmidt 119.6   16
+26  34.1/ 44.5/ 21.5                 CrazyShot    Christian Schmidt 123.7   12
+26  37.7/ 55.2/  7.1 Not the way I play it. No          Dave Hillis 120.2    9
+26  21.5/ 24.2/ 54.4                  All In 2        Robert Macrae 118.7    9
+26  33.2/ 45.6/ 21.1                  one shot     M Joonas Pihlaja 120.9    8
+26  21.9/ 26.5/ 51.6                    H-Bomb                  JKW 117.3    8
+26  36.6/ 56.6/  6.8         Certain Abuse v02          Dave Hillis 116.6    7
+26  18.7/ 19.9/ 61.4                      test                  JKW 117.5    4
+26  36.6/ 51.6/ 11.7                      Win!          David Moore 121.7    3
+26  30.1/ 43.0/ 26.9    The IMPerial Destroyer    Christian Schmidt 117.2    3
+26  13.9/ 12.0/ 74.1                 Black Box                  JKW 115.9    3
+26  28.3/ 35.3/ 36.4              The Magician    Christian Schmidt 121.3    2
+
+Dave Hillis beats Schmidt's record - his Certain Abuse which entered the hill
+as KotH falls off the hill completely in just 7 challenges, easily topping
+Toki's 12.  Not satisfied with this he then breaks his own record, setting a
+new record of 5.
+
+Recycled Bits and Self-Modifying Code are finally knocked from the hill,
+leaving their mark in the Hall of Fame.
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+16  25.3/ 16.3/ 58.3    Return of the Fugitive          David Moore 134.3  100
+ 4  30.7/ 19.9/ 49.4                 nPaper II        Paul-V Khuong 141.6   76
+14  31.7/ 28.4/ 39.9                     Vilex         Ken Espiritu 135.0   71
+11  28.1/ 19.4/ 52.5               Tie Factory    Christian Schmidt 136.8   45
+
+Even with the loss of RotF, Moore is still the author of the oldest warrior, a
+title he has either held, or joinly held, since CW72.  nPaper II appears to be
+effective even without a-driven imps to take advantage of :-)
+_______________________________________________________________________________
+The Extended New Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+ =  Recycled Bits          David Moore        164    P-warrior
+21  Memories               Beppe              152    Scanner
+22  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+23  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+ =  The Stormbringer       Christian Schmidt  142    Q^2 -> Stone/imp
+25  Electric Head          Anton Marsden      140    P-warrior
+26  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+27  Fixed                  Ken Espiritu       135    Q^2 -> Paper
+28  Tiberius 3.1           Franz              130    Q^2 -> Paper
+29  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+30  obvious to those who k Robert Macrae      117    Q^2 -> Paper
+31  Solomon v0.8           Ian Oversby        116    Stone and scanner
+32  Self-Modifying Code    Ben Ford           108    P-warrior
+33  CC Paper 3.3           Franz              107    Q^2 -> Paper
+34  mrb-test               M R Bremer         106    *Unknown*
+35  T.N.T. pro             Maurizio Vittuari  105    Bomber
+ =  Pulp v0.5              Ian Oversby        105    Q^2 -> Paper
+37  Fugitive               David Moore        102    Q^2 -> Paper/imp
+38  Vengeance              Robert Hale        101    Q^2 -> Stone/imp
+39  Return of the Fugitive David Moore        100 *  Q^4 -> Paper/imp
+ =  Jack in the box II     Beppe Bezzi        100    P-warrior
+ =  Fire and Ice           David Moore        100    P-warrior
+42  Oblivion               Ian Sutton          99    P-warrior
+43  Silver Talon 1.2       Edgar               93    Scanner
+44  death by redcode       Simon Wainwright    91    Q^2 -> Bomber
+45  Bodge 1                Robert Macrae       85    Q^2 -> Scanner
+46  Inferno 2.4            Philip Kendall      84    Qscan -> Bomber
+47  Test                   Anton Marsden       83    *Unknown*
+ =  NCC-1701-A             Philip Kendall      83    P-warrior
+49  RetroQ                 Paul Kline          82    Q^2 -> Paper
+50  Tornado 4              Beppe Bezzi         78    Bomber
+ =  Stonewashed            Christian Schmidt   78    Q^3 -> Paper/stone
+
+Recycled Bits and Self-Modifying Code reach their final resting place, leaving
+Return of the Fugitive as the only active warrior in the ENHoF.
+_______________________________________________________________________________
+The ??? Hall of Fame:  * indicates the warrior is still active.
+
+ 1  Recycled Bits          David Moore        164    P-warrior
+ 2  The Stormbringer       Christian Schmidt  142    Q^2 -> Stone/imp
+ 3  Self-Modifying Code    Ben Ford           108    P-warrior
+ 4  Return of the Fugitive David Moore        100 *  Q^4 -> Paper/imp
+ 5  death by redcode       Simon Wainwright    91    Q^2 -> Bomber
+ 6  Stonewashed            Christian Schmidt   78    Q^3 -> Paper/stone
+ 7  nPaper II              Paul-V Khuong       76 *  MiniQ^3 -> Paper
+ 8  Jade                   Ben Ford            75    Q^4 -> Stone/imp
+ 9  Stranger               John Metcalf        73    Q^3 -> Bomber
+10  Vilex                  Ken Espiritu        71 *  P-Warrior
+ =  EvoP 3                 Ken Espiritu        71    Q^3 -> Paper/imp
+12  The Fugitive           David Moore         70    MiniQ^2 -> Paper/imp
+13  One Step Beyond        John Metcalf        67    MiniQ^3 -> Stone/imp
+14  Snowman                John Metcalf        64    P-warrior
+15  Draken Fire            Ben Ford            63    Q^3 -> Bomber
+16  Trefoil the original   Steve Gunnell       56    P-warrior
+17  Fixed                  Ken Espiritu        54    Qscan -> Paper
+18  Pattel's Virus         Ben Ford            52    P-warrior
+ =  Exor                   Ken Espiritu        52    Q^3 -> Paper
+20  The Outsider           Simon Wainwright    51    QScan -> Stone/imp
+ =  Galatea                Ben Ford            51    Q^2 -> P-warrior
+22  Icen                   Ben Ford            50    Q^3 -> Paper
+ =  Silver Talon 1.2       Edgar               50    Scanner
+24  No More Innocuous      Leonardo Liporati   49    Q^4 -> Paper
+ =  trefoil 23 226         Steve Gunnell       49    P-warrior
+ =  Puddleglum             John Metcalf        49    Q^3 -> Paper/stone
+27  Circle of Fire         John Metcalf        48    P-warrior
+28  Tie Factory            Christian Schmidt   45 *  Q^3 -> Paper
+ =  Shadow                 Christian Schmidt   45    Q^2 -> Paper/stone
+30  Cinammon               John Metcalf        44 *  MiniQ^3 -> Paper/imp/wimp
+ =  Twin                   Christian Schmidt   44    P-warrior
+ =  Origami Harquebus      mjp                 44    P-warrior
+33  Stylized Euphoria      Ken Espiritu        43    Q^4 -> Paper/imp
+34  Uninvited              John Metcalf        42 *  MiniQ^3 -> Stone/imp
+ =  Slippery Eels          Ben Ford            42    Q^3 -> Paper
+ =  Even Less Innocuous    TeamQ3              42    Q^3 -> Paper
+ =  Spooky Wench           John Metcalf        42    Q^3 -> Stone/imp
+38  myBlur2                Paulsson            41    Scanner
+ =  WingShot               Ben Ford            41    Oneshot
+40  Digitalis 5            Christian Schmidt   40    Q^3 -> Clear/imp
+ =  Alive and K(qu)icking  Leonardo Liporati   40    MiniQ^3 -> Paper
+ =  Freight Train v0.2     David Moore         40    '88 Q^2 -> Stone/imp
+43  Ultima                 Christian Schmidt   38 *  P-warrior
+44  Vain                   Ian Oversby         36    Q^2 -> Stone/imp
+ =  Jaguar                 Christian Schmidt   36    Q^3 -> Stone/imp
+46  Wintermute             John Metcalf        35    MiniQ^3 -> Stone/imp
+47  Qshot                  Christian Schmidt   34    Q^2 -> Oneshot
+48  SnooPy                 P.Kline             33    P-warrior
+ =  chained to the system  Simon Wainwright    33    *Unknown*
+50  Glass                  Ben Ford            32    Q^4 -> Paper
+
+Many of you have suggested the HoF be replaced.  2 years have passed since the
+'94 hill was completely wiped.  Perhaps now would be a suitable time to create
+a HoF based on the hill since that time (CW71).
+
+What should we call this new HoF?  Suggestions please.
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  50.5/ 21.4/ 28.0             MorphinMerlin             Jeremy K 179.7   35
+ 2  54.6/ 30.6/ 14.7             Grand Mal 1.1         Ransom Smith 178.6   37
+ 3  55.5/ 35.8/  8.7                 Kenshin d        Steve Gunnell 175.2   94
+ 4  48.6/ 30.4/ 21.0              Seek&Destroy     Ayan Chakrabarti 166.9   14
+ 5  46.5/ 34.0/ 19.5 Even More Advanced (read:           Josef Jahn 159.0   41
+ 6  44.9/ 31.5/ 23.6          Advanced Spooner           Josef Jahn 158.4   39
+ 7  42.9/ 28.8/ 28.4     the boy's a time bomb                  aCM 157.0   99
+ 8  45.0/ 36.1/ 18.9                Heatseeker         John Morahan 153.9   58
+ 9  33.6/ 15.4/ 51.0 Hyper Advanced (read: sux           Josef Jahn 151.8   26
+10  40.9/ 30.9/ 28.1                     Chaos         John Morahan 150.9   49
+11  29.7/  8.7/ 61.6              PimpKing 1.0           Simon Duff 150.7   90
+12  41.5/ 36.5/ 22.0               Remorseless     Ayan Chakrabarti 146.4   15
+13  28.0/ 10.5/ 61.5                   Watcher         John Metcalf 145.5    7
+14  27.9/ 17.4/ 54.7                 Simpleton     Ayan Chakrabarti 138.3   18
+15  34.4/ 30.7/ 34.9                  Mob Boyz           Simon Duff 138.0   91
+16  27.7/ 18.3/ 54.0                Arkenstone         John Morahan 137.2   60
+17  23.6/ 14.9/ 61.5                   Fangorn         John Morahan 132.4   64
+18  30.2/ 29.0/ 40.8                VelvetFist     Ayan Chakrabarti 131.3   16
+19  28.8/ 29.3/ 41.9                    Toofan     Ayan Chakrabarti 128.2   19
+20  34.3/ 57.0/  8.7                      Mini         John Metcalf 111.6   59
+21  29.4/ 48.4/ 22.2                  h1_1.red          Dave Hillis 110.5   38
+22  18.4/ 27.0/ 54.6           Jolly Jumper 10      Stefan Foerster 109.8    2
+23  18.7/ 33.2/ 48.1                     KGB 4      Stefan Foerster 104.2    1
+24  18.2/ 55.5/ 26.3                     Crazy    Lukasz Anforowicz  80.9    4
+25  14.0/ 56.4/ 29.6       Pinky And The Brain      Simon Glanville  71.6    8
+
+10 successful challenges since issue 78 brings about retirement for 5
+warriors:  Golden Gun, Gomjabbar V, DiHydrogen Monoxide and jollyblu.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  37/ 23/ 40                    Olivia             Ben Ford    152.4     84
+ 2  38/ 26/ 37               Quicksilver      Michal Janeczek    149.6    118
+ 3  37/ 24/ 39                 Uninvited         John Metcalf    149.4     38
+ 4  44/ 39/ 18                   Behemot      Michal Janeczek    148.8    179
+ 5  34/ 20/ 47              The Dark One    Christian Schmidt    147.7    149
+ 6  34/ 20/ 47                 nPaper II        Paul-V Khuong    147.5    356
+ 7  40/ 34/ 26                   Recount              P.Kline    146.8     41
+ 8  44/ 41/ 15                 Eraser II         Ken Espiritu    146.0    313
+ 9  37/ 30/ 33                   Blacken          Ian Oversby    145.0    603
+10  44/ 43/ 14                      G2-b          David Moore    144.6    142
+11  46/ 47/  7            He Scans Alone              P.Kline    144.0     40
+12  34/ 24/ 42                      Jade             Ben Ford    143.6    425
+13  43/ 43/ 14                   Stalker              P.Kline    143.2    341
+14  42/ 42/ 15                      Jinx    Christian Schmidt    142.2    319
+15  25/ 11/ 64        The Phantom Menace        Anton Marsden    139.3     56
+16  29/ 20/ 51                  KafuFFLe         John Metcalf    139.2     39
+17  35/ 34/ 30               Keyser Soze        Anton Marsden    136.0     57
+18  38/ 42/ 20                    myBlur             Paulsson    134.3     21
+19  22/ 24/ 54                jam test 3         John Metcalf    120.7     22
+20  36/ 52/ 12             Hyperclear 4+        Steve Gunnell    119.6      1
+
+146 successful challenges brings an end to the hill career of 12 warriors,
+including 10 with three figures ages:  Zooom (441), Omnibus (327), Jaguar
+(269), Uninvited (249), vamp/scan test b1 (214), Experimental (196), Kenshin
+(166), Pitbull (134), CrazyShot (127) and Tie Factory (127).
+
+The hilltop is held exclusively by stones - similarly to Pizza's '94 hill.
+_______________________________________________________________________________
+Current Status of the Koenigstuhl Recursive ICWS '94 Draft Hill:
+
+Koenigstuhl is a collection of infinite hills found on Christoph C. Birk's
+Core War page.  Several other hills are there also, including the recently
+constructed limited process, tiny and huge hills:
+
+  http://andromeda.ociw.edu/COREWAR/
+
+Below we show the top 20 of a total 1133 warriors:
+
+rank name                        author                 score (style)
+-----------------------------------------------------------------------
+   1 Quicksilver                 Michal Janeczek        174.01 (94)
+   2 Silver Talon 1.2            Edgar                  170.81 (94)
+   3 The Machine                 Anton Marsden          170.31 (94)
+   4 Zooom...                    John Metcalf           169.09 (94)
+   5 G2                          David Moore            168.73 (94)
+   6 Boys are Back in Town 1.1   Philip Kendall         168.35 (94)
+   7 Newt                        Ian Oversby            167.73 (94)
+   8 Phantasm 50                 Robert Macrae          166.51 (94)
+   9 Jade                        Ben Ford               166.39 (94)
+  10 Scan Man                    David van Dam          166.17 (94)
+  11 Fixed                       Ken Espiritu           165.85 (94)
+  12 Forty                       Anton Marsden          165.55 (94)
+  13 Recovery                    Ian Oversby            165.51 (94)
+  14 The Bloodhound              Ian Sutton             165.36 (94)
+  15 The Stormbringer            Christian Schmidt      165.31 (94)
+  16 nPaper II                   Paul-V Khuong          165.22 (94)
+  17 Digitalis 4                 Christian Schmidt      164.99 (94)
+  18 The Question                David Moore            164.97 (94)
+  19 Baseline Plus               Ken Espiritu           164.75 (94)
+  20 myVamp5.4                   Paulsson               164.19 (94)
+
+Quicksilver storms into 1st place - the first non-scanner to hold the
+position.
+_______________________________________________________________________________
+Final standings of Kofacoto:
+
+Kofacoto is over.  Congratulations to all who participated, and thanks to JKW
+and TTSG Internet Services, without whom this would never have happened.
+
+Round 5: ('94)
+
+  Battle 1: Macrae beats Kline        Battle 3: Janeczek beats Ford
+  Battle 2: Moore beats Paulsson      Battle 4: Schmidt beats Liporati
+
+Round 6: ('94x large)
+
+  Battle 1: Janeczek beats Schmidt    Battle 2: Macrae beats Moore
+
+Round 7: ('88)
+
+  Janeczek played ']enigma[', Macrae played 'LaterAtNight'.  Macrae's
+  Quick Scan + Nightfall Paper suceeds against Janeczek's Paper + Imps:
+  14 wins, 1 loss and 985 draws.
+
+        1st: $500 won by Robert Macrae
+        2nd: $250 won by Michal Janeczek
+        3rd: $100 won by David Moore
+
+For full details of each round, and some great comments by Robert Macrae,
+check out the tournament's home page at:
+
+  http://www.koth.org/kofacoto
+
+               KOFACOTO was sponsored by TTSG Internet Services
+_______________________________________________________________________________
+Extra Extra - Certain Abuse by Dave Hillis
+
+The idea for the abusive warriors came from my work using genetic algorithms
+to evolve core warriors, but not in the way you might guess.  When I modified
+the corewars evolver program, RedRace, to work in a warming simulation I was
+surprised at how odd bugs and flaws in the simulation program seemed to jump
+out at me.  My favorite was when the weak defending forces evolved to exploit
+a quirk in the rules that let them win, if they all died very quickly.
+
+The Easter Egg Hypothesis:  complex software system are likely to contain
+flaws or vulnerabilities which are hidden from plain sight.  They can avoid
+detection for a long time because they fall within psychological blind spots.
+They only seem obvious in hindsight.  Co-evolutionary simulation can help
+find these problems by leading one to focus on important aspects of the
+system that common sense says should be ignored.
+
+The gimmick behind the abusive warriors is the fact that the hills at KOTH
+and PIZZA use -F numbers and so the "random" warrior locations are easily
+predicted.  Certain Abuse, below, was designed to be strong as a challenger
+but helpless as a defender:  the "expiration date" effect.
+
+Later warriors in the series were equally strong challenging or defending,
+but didn't last much longer because they only worked well against certain
+kinds of warriors.
+
+Pizza's -F number was calculated by sending a number of probe warriors to the
+hill.  An exhaustive search was then used to find an -F number whose results
+against published warriors were identical to those returned by Pizza.  Later,
+I discovered Nathan Green describes a hand-shaking method for calculating the
+-F number in Core Warrior #30.
+
+After Certain Abuse's outing on the hills, a patch was created for pMars to
+prevent future exploitation of -F numbers.
+
+Here's the code you've been waiting for:
+
+;redcode-94
+;name Certain Abuse
+;author Dave Hillis
+;strategy - Takes advantage of the fact that the 94 hill and the
+;strategy - Beginners hill both used -F 4000. It uses a P-space
+;strategy - round counter and a look-up table to tell where the
+;strategy - second warrior will be loaded into core. This version
+;strategy - is only effective when challenging the hill. To fight
+;strategy - as a defender, you have to use the negatives of the
+;strategy - table values. The program is optimized to kill the
+;strategy - published warriors that were on the 94 hill.
+;assert CORESIZE==8000
+
+  org START
+counter equ #-109
+off     equ 100
+wrap    equ 87
+target1 equ target2-1
+target2 equ thecnt
+
+START
+thecnt  ldp    counter,  #0       ; increment a round counter
+        add    #1,       thecnt
+        stp.b  thecnt,   counter
+        add.ba thecnt,   bomber
+        slt.ab #wrap,    thecnt
+        jmp    bomber
+        add.a  #-wrap,   bomber
+        mov.x  *bomber,  *bomber
+
+bomber  mov.i  b-1,      target1
+        add.f  target1,  target2
+
+; target2 and target1 hold the start and end points of the other warrior.
+; Attack it by shuffling lines from both ends working towards the middle
+
+attack  mov.i  }target2, {target1
+        mov.i  {target1, }target2
+        djn.b  attack,   #121
+b
+spl.i #4000+off,<4994+off ; The abuse table. The A
+mov.i #3398+off,<4539+off ; fields hold the address
+mov.i #1376+off,<7816+off ; where the second warrior
+mov.i #5987+off,<2824+off ; will be loaded for the
+mov.i #5790+off,<2940+off ; first 87 rounds. The B
+mov.i #3395+off,<2733+off ; fields hold the next 87
+mov.i #5616+off,<1379+off ; rounds. Too bad there
+mov.i # 814+off,<7391+off ; isn't more space.
+mov.i #7121+off,<2951+off
+mov.i #5830+off,< 931+off ; If he's still alive, I'm
+mov.i #3869+off,<7713+off ; in big trouble. The table
+mov.i #3471+off,<1780+off ; also serves as a weak
+mov.i #7762+off,<7881+off ; secondary attack.
+mov.i #2070+off,<2024+off
+mov.i #6979+off,<2084+off ; After the 174 addresses
+mov.i #2079+off,<1846+off ; in the table have been
+mov.i #4453+off,<5856+off ; attacked, Certain Abuse
+mov.i # 550+off,<6438+off ; over-runs the table and
+mov.i #1679+off,<1828+off ; becomes suicidal for the
+mov.i #2659+off,< 824+off ; remaining 26 rounds.
+mov.i #4787+off,<3687+off
+mov.i #7122+off,< 975+off ; If I'm brainwashed, I'm
+mov.i # 883+off,<7598+off ; dead :-(
+mov.i #7790+off,<1584+off
+mov.i #3545+off,<6654+off ; 1. Can you find a small
+mov.i #3796+off,<5890+off ; tweak which makes CA no
+mov.i #2095+off,<4361+off ; longer suicidal?
+mov.i # 641+off,<6573+off
+mov.i #3683+off,<1985+off ; 2. Can you rewrite CA in
+mov.i #6044+off,<5245+off ; less instructions? This
+mov.i #5408+off,<2925+off ; would leave extra space
+mov.i #6589+off,<4831+off ; to store addresses.
+mov.i #4857+off,<6367+off
+mov.i #1223+off,< 197+off ; The best answers received
+mov.i #4383+off,<1682+off ; will appear in the next
+mov.i #6986+off,<4269+off ; issue of Core Warrior.
+mov.i #5201+off,<6114+off
+mov.i #2305+off,<3660+off
+mov.i #3504+off,<2859+off
+mov.i #7537+off,<2207+off
+mov.i #5916+off,<7442+off
+mov.i #5407+off,<6033+off
+mov.i #6594+off,< 763+off
+mov.i #1368+off,<3047+off
+mov.i #6857+off,<6168+off
+mov.i #4688+off,<6931+off
+mov.i #7356+off,<1920+off
+mov.i #3598+off,< 936+off
+mov.i #5554+off,<4051+off
+mov.i #3339+off,<4276+off
+mov.i #6573+off,<5107+off
+mov.i #4775+off,<2222+off
+mov.i #4278+off,<1909+off
+mov.i #6361+off,<5736+off
+mov.i #7292+off,<1549+off
+mov.i # 725+off,< 885+off
+mov.i #3918+off,<2196+off
+mov.i #4530+off,<3107+off
+mov.i #5390+off,<4534+off
+mov.i # 938+off,<5850+off
+mov.i #1410+off,<2977+off
+mov.i #1401+off,<5795+off
+mov.i #4866+off,<7546+off
+mov.i #4106+off,<5453+off
+mov.i # 738+off,<4532+off
+mov.i #1270+off,<1729+off
+mov.i #6140+off,<5937+off
+mov.i #6405+off,<2776+off
+mov.i #6037+off,<1089+off
+mov.i #4151+off,<5250+off
+mov.i # 852+off,<4742+off
+mov.i #5383+off,<5278+off
+spl.i #3697+off,<2274+off
+mov.i # 634+off,<6877+off
+mov.i #7482+off,<6348+off
+mov.i #7415+off,<4642+off
+mov.i #1340+off,< 915+off
+mov.i #1324+off,<3501+off
+mov.i #2170+off,<6361+off
+mov.i #4755+off,<6072+off
+mov.i #2057+off,<5768+off
+mov.i #4292+off,<5303+off
+mov.i #1737+off,<6608+off
+mov.i #7174+off,<1307+off
+mov.i #6066+off,<6804+off
+spl.i #1563+off,<1276+off
+mov.i #6238+off,<1774+off
+end
+_______________________________________________________________________________
+Extra Extra Extra - Enough is Enough! by John Metcalf
+
+P-spacers seem to be having a hard time at the moment, while the hill is
+packed with defensive warriors.  Enough is Enough is a p-spacer, which hopes
+to score well against either a defensive or agressive hill.
+
+A tried and tested, age old formula is uses by EiE:  switch between a paper
+and scanner.  Other successful warriors using this technique include Fire and
+Ice, and Origami Harquebus.
+
+The paper uses a similar principle to nPaper, but is aimed against stone/imps
+with b-driven imps such as Quicksilver, Uninvited etc.  This is not a general
+purpose paper, and was never designed to perform well against scanners.
+
+The scanner combines Zooom's speed up trick with a scanner somewhat alike to
+the one found in Recycled Bits.  A step of 903 is chosen to hopefully perform
+well against either 3 or 7 point imps in silk/imps.
+
+The switcher is a P^3 multi-boot.  The stp instruction is left as late as
+possible so the warrior is less prone to accidental brainwashing, by a
+q-scanner for example.  The scanner is played if the paper loses often.  If
+the paper ties regularly, the scanner is given a 1 round trial to decide
+whether it should be played or not.
+
+The paper component scores 35% wins, 60% ties against Quicksilver.  The
+scanner scores 21% wins and 8% ties.  Enough is Enough scores 34% wins and 49%
+ties.  In this case, the switcher is effective 9 times out of 10.
+
+The paper component scores 2% wins and 94% ties against Safety in Numbers.
+The scanner scores 41% wins and 31% ties.  Enough is enough scores 31% wins
+and 48% ties.  The switcher is effective 8 times out of 10.
+
+So here it is:
+
+;redcode-94
+;name Enough is enough!
+;author John Metcalf
+;strategy had enough of tweaking the scanner and switcher :-(
+;strategy p-switcher, switch between scan and paper
+;assert (CORESIZE==8000)
+
+        org    pThink
+
+; -=> Switcher <=-
+
+        paper  equ (silk-silk)
+        scan   equ (silk-sAtk)
+        wSize  equ 9
+
+pThink: ldp.a  {pBoot-323,     #1
+        ldp.a  <pBoot-322,     pVect    ; pKey equ -1
+        add.a  pThink,         pMod
+pMod:   mod.a  #5,             pVect
+        sub.x  *pVect,         @pBoot-wSize+2
+
+        for    wSize
+        mov    <pBoot,         {pBoot
+        rof
+
+pBoot:  spl    }wSize,         #silk+wSize
+        stp.a  pBoot,          #1
+                                        ; State Lose5  Win6  Tie7
+pVect:  dat    #paper,  <-104  -210*3   ;   (0)     4     2     6
+        dat    #paper,  #-50   -210*11  ;   (1)     0     2     1
+        dat    #paper,  #-176  -210*29  ;   (2)     1     2     1
+        dat    #scan,   #-185  -210*12  ;   (3)     0     5     3
+        dat    #scan,   #-53   -210*23  ;   (4)     3     5     4
+        dat    #scan,   #-89   -210*21  ;   (5)     4     5     5
+        dat    #scan,   #-167  -210*17  ;   (6)     2     5     6
+
+; -=> Scanner <=-
+
+        sStp   equ 903
+
+sAtk:   mul.x  {sJmp-1,        }sAlt
+sPtr:   slt.ba #9,             #0
+        mov.b  @3,             sAtk
+sAdj:   mov    sSpl,           >sAtk
+sAdd:   add    #sStp,          sPtr
+sJmp:   jmz.f  sAdd,           @sPtr
+sAlt:   jmn    sAtk,           sPtr
+        jmp    sAdj,           }sAdj
+sSpl:   spl    #0,             {0
+
+; -=> Paper <=-
+
+        pStep1 equ 2852
+        pStep2 equ 5213
+        x      equ 6580
+        y      equ 2951
+
+silk:   spl    *0,             >1803
+        spl    1,              >3109
+        spl    1,              {2506
+pap1:   spl    @0,             >pStep1
+        mov.i  }pap1,          >pap1
+        mov.i  #y,             <1
+        mov    -1,             {x
+        mov.i  {pap1,          <pap2
+pap2:   djn.f  @0,             >pStep2
+        end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <schmidt@mail.uni-mainz.de>
+

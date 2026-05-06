@@ -1,0 +1,295 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 81                                                         11 April, 2002
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow wherever the action is. If you
+haven't a clue what I'm talking about then check out these five-star Internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+This issue is a little slimmer than usual, due to the Pizza hills currently
+being inactive.  Contents include the results from round 1 of the tournament
+and Purifier, Lukasz Grabun's stone/paper.
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  40/ 24/ 36                      Inky          Ian Oversby    155.2    467
+ 2  37/ 21/ 42                  Purifier        Lukasz Grabun    154.1     24
+ 3  45/ 36/ 19       Hazy Lazy ... again        Steve Gunnell    153.3     23
+ 4  36/ 20/ 44                 nPaper II        Paul-V Khuong    152.0    988
+ 5  45/ 39/ 17                Vanquisher        Lukasz Grabun    150.3     79
+ 6  36/ 22/ 42               Son of Vain      Oversby/Pihlaja    149.5    577
+ 7  38/ 28/ 34               Quicksilver      Michal Janeczek    148.3    750
+ 8  37/ 27/ 36                 Uninvited         John Metcalf    146.2    670
+ 9  36/ 27/ 37                    Olivia             Ben Ford    145.4    716
+10  35/ 24/ 41                    Hopper               Phooey    145.2    114
+11  43/ 41/ 16                   Behemot      Michal Janeczek    144.1    811
+12  37/ 33/ 30                   Blacken          Ian Oversby    141.9   1235
+13  42/ 43/ 16             Deep Freeze X        Lukasz Grabun    141.1    177
+14  37/ 34/ 29               Keyser Soze        Anton Marsden    141.0    689
+15  35/ 29/ 36              Revival Fire              P.Kline    140.4    456
+16  43/ 45/ 13                    Test C               Phooey    140.4    115
+17  40/ 40/ 21               Blue test 3        Lukasz Grabun    139.5      9
+18  43/ 46/ 11                      G3-b          David Moore    139.5    258
+19  39/ 50/ 11           Aoshi Test B 15        Steve Gunnell    126.7      2
+20  38/ 54/  9            Hazy Test A 25        Steve Gunnell    121.8      1
+
+161 challenges bring some effective young warriors to the hill.  Those which
+departed include Qtest (394), Hazy Lazy (killed at age 309) He Scans Alone x
+(170) and paper/stone test (129).
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Blacken                Ian Oversby       1235 *  Q^2 -> Stone/imp
+ 2  nPaper II              Paul-V Khuong      988 *  MiniQ^3 -> Paper
+ 3  Behemot                Michal Janeczek    811 *  MiniQ^3 -> Bomber
+ 4  Eraser II              Ken Espiritu       781    Scanner
+ 5  Quicksilver            Michal Janeczek    750 *  Q^4 -> Stone/imp
+ 6  Olivia                 Ben Ford           716 *  Q^4 -> Stone/imp
+ 7  Keyser Soze            Anton Marsden      689 *
+ 8  Uninvited              John Metcalf       670 *  MiniQ^3 -> Stone/imp
+ 9  Jinx                   Christian Schmidt  662    Scanner
+10  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+11  Son of Vain            Oversby/Pihlaja    577 *  Qscan -> Stone/imp
+12  Inky                   Ian Oversby        467 *
+13  The Phantom Menace     Anton Marsden      465
+14  Revival Fire           P.Kline            456 *  Bomber
+15  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+17  G2-b                   David Moore        413    Twoshot
+18  Qtest                  Christian Schmidt  394
+19  Stalker                P.Kline            393    Scanner
+20  Vain                   Ian Oversby        330    Q^2 -> Stone/imp
+21  Omnibus                John Metcalf       327    Q^2 -> Stone/imp
+22  Win!                   David Moore        322    Scanner
+23  Hazy Lazy...           Steve Gunnell      309    Scanner
+24  Recovery               Ian Oversby        280    MiniQ^2 -> Paper/stone
+25  The Fugitive           David Moore        274    MiniQ^2 -> Paper/imp
+
+One new entry here, Hazy Lazy, which just crept into the HoF before Steve
+killed it off to make way for the next generation.  Qtest ends it's days
+at the respectable age of 394.
+_______________________________________________________________________________
+Spring / Summer 2002 Corewar Tournament - Round 1 Results:
+
+In all 15 authors submitted a total of 27 warriors for the initial round of
+the tournament.  Of these, 8 were evolved and the remaining 19 hand-coded.
+The hand-written warriors were represented by 4 oneshots, 4 scanners, 3
+papers, 3 clears, 3 stones, 1 p-spacer and 1 anti-oneshot.
+
+The warriors were played in a round robin tournament taking just under 8
+minutes to complete.
+
+Without further ado, the results. Congratulations to all taking part:
+
+ # %Won Lost Tied Name                     Author                  Score     %
+ 1 58.2 30.3 11.5 WingShot T               Ben Ford               186.18 100.0
+ 2 56.4 26.6 17.0 Evolving Threat          Dave Hillis            186.13  99.9
+ 3 54.8 35.9  9.3 t766--                   Michal Janeczek        173.71  93.3
+ 4 48.0 26.0 26.0 Venom                    Ben Ford               169.98  91.3
+ 5 52.3 35.0 12.8 s774++                   Michal Janeczek        169.57  91.1
+ 6 52.4 35.3 12.3 Dettol Test 487          Steve Gunnell          169.45  91.0
+ 7 51.3 35.6 13.2 Tiny Talon               Robert Macrae          166.94  89.7
+ 8 49.6 34.9 15.5 Evolver  1100 x 500      Martin Ankerl          164.26  88.2
+ 9 35.4 13.9 50.6 Rasp                     Leonardo H. Liporati   156.94  84.3
+10 46.3 41.2 12.5 Tiny Freeze              Lukasz Grabun          151.46  81.3
+11 44.4 38.4 17.3 Imp .X-ing               Dave Hillis            150.31  80.7
+12 37.5 26.7 35.8 Stolen1                  Robert Macrae          148.30  79.7
+13 45.6 43.9 10.4 clear skies              Simon Wainwright       147.29  79.1
+14 44.9 46.4  8.7 Djinn Test Tiny 326      Steve Gunnell          143.32  77.0
+15 40.8 40.9 18.4 Squirm13                 Philip Thorne          140.61  75.5
+16 38.6 41.5 19.8 Mighty Mouse             Winston Featherly-Bean 135.72  72.9
+17 41.0 49.4  9.6 10686804-18881-101719649 mushroommaker          132.71  71.3
+18 40.1 48.9 11.0 The Wasp                 Lukasz Grabun          131.27  70.5
+19 37.9 49.1 13.0 rickety old redcode      Simon Wainwright       126.80  68.1
+20 37.6 52.5  9.9 Szczur                   Arek Paterek           122.81  66.0
+21 36.5 51.4 12.1 50324-62579-1017504560   mushroommaker          121.53  65.3
+22 33.9 52.3 13.8 Euthin                   Philip Thorne          115.63  62.1
+23 34.0 52.8 13.3 31133-61360-1017455494   Paul Drake             115.24  61.9
+24 31.4 57.3 11.3 Primordial Clear         Winston Featherly-Bean 105.41  56.6
+25 16.6 32.9 50.5 Rubber Snake             Compudemon             100.38  53.9
+26 25.6 61.1 13.3 9101-61316-1017454713    Paul Drake              90.16  48.4
+27 19.1 50.2 30.7 Snow Castle              Compudemon              88.05  47.3
+
+WingShot T takes first place for Ben Ford, a fraction of a point ahead of
+Dave Hillis's Evolving Threat.  WingShot is a .8c BiShot style scanner.
+Evolving Threat is an evolved paper which has been evolved further against
+warriors from Koenigstuhl's tiny hill.  Next is t766-- by Michal Janeczek,
+a backwards scanning oneshot.
+
+A little further down, another 5 authors make the top 10.  First we have
+Steve Gunnell's oneshot, Dettol Test, followed by a scanner, Tiny Talon,
+from Robert Macrae.  A warrior evolved by Martin Ankerl is next.
+
+After this comes Leonardo Liporati's Rasp which is the original tiny qscan
+-> paper.  This is followed by Tiny Freeze, Lukasz Grabun's scanner.
+_______________________________________________________________________________
+Extra Extra - Purifier by Lukasz Grabun
+
+A carefully optimized paper/stone warrior is capable of scoring well
+against many classes of opponent.  Purifier is one such warrior.
+
+The stone used is a modified Spooky Wench.  A number of step and duration
+pairs were generated and the pair which performed best overall against a
+selection of scanners was chosen.
+
+The paper was optimized using a method similar to that which is described
+in CW75.  Firstly, the bombing line was replaced with a harmless nop.  This
+allowed some good replication steps to be found without the results being
+affected by how well a particular position of the strip bombing interacts
+with the paper steps.  A large number of different steps were benchmarked
+against a test set of published warriors.
+
+The most effective replication steps from the first stage were chosen.  The
+bombing line was then reactivated and many different bombing distances were
+tested against the same set of warriors.  The distance which appeared most
+effective was chosen.
+
+While putting the stone and paper together, careful experimentation was
+required to determine effective process allocation.  For an aggressive
+stone/paper it is generally necessary for the stone to receive more
+processes in the early cycles of a battle, and Purifier is no exception to
+this observation.
+
+Finally, the best offset between the paper's initial location in core and
+the stone's location needed to be chosen.  Once again a large number of
+offsets were generated by a simple C program and tested against the warrior
+suite.  From these results, 20 were selected for one final test, against
+KOTH's no-pspace hill.
+
+Below is the code for Purifier, utilizing a qscan derived from the qscan
+found in Quicksilver:
+
+;redcode-94nop
+;name Purifier
+;author Lukasz Grabun
+;strategy Mini Q^4 -> Stone/Paper
+;assert CORESIZE==8000
+
+org qGo
+
+pDst0 equ 3009
+pDst1 equ 2794
+pDst2 equ 2930
+
+pHit equ 7235
+
+sStep equ 598
+sTime equ 1698
+sOff equ 7770
+
+pGo     spl     1       , }qC
+qTab2   spl     1       , }qD
+        spl     1       , }qE
+
+pSilk0  spl     @0      , {pDst0
+        mov     }pSilk0 , >pSilk0
+pSilk1  spl     @0      , <pDst1
+        mov     }pSilk1 , >pSilk1
+pMov    mov     pBmb    , >pHit
+        mov     {pSilk1 , <pSilk2
+pSilk2  jmp     @0      , >pDst2
+pBmb    dat     >5334   , >2667
+
+        for     10
+        dat     0       , 0
+        rof
+
+sSpl    spl     #0      , #0
+sMov    mov     sBmb    , @sDjn
+sInc    add     #sStep  , sDjn
+sDjn    djn.f   sMov    , {sInc-(sTime*sStep)
+sBmb    dat     >4      , >1
+
+bBoot   mov     sSpl    , sOff-6-CURLINE
+        spl     2       , 0
+sDest   spl     2       , sOff-CURLINE
+sSrc    spl     1       , sBmb+1
+        mov     <sSrc   , <sDest
+        djn     @bBoot  , #5
+        jmp     pGo     , 0
+
+qX    equ    4684
+qA    equ    5020
+qB    equ    2367
+qC    equ    6689
+qD    equ    4036
+qE    equ    1383
+qF    equ    7673
+
+qStep equ    7
+qTime equ    16
+qOff  equ    87
+
+      for    39
+      dat    0                , 0
+      rof
+
+qBomb dat    {qOff            , qF
+      dat    {qOff            , qA
+qTab1 dat    {qOff            , qB
+
+qGo   sne    qPtr+qX*qE       , qPtr+qX*qE+qE
+      seq    <qTab2+1         , qPtr+qX*(qE-1)+(qE-1)
+      jmp    qDec             , }qDec+2
+      sne    qPtr+qX*qF       , qPtr+qX*qF+qD
+      seq    <qBomb           , qPtr+qX*(qF-1)+qD
+      jmp    qDec             , }qDec
+      sne    qPtr+qX*qA       , qPtr+qX*qA+qD
+      seq    <qTab1-1         , qPtr+qX*(qA-1)+qD
+      djn.a  qDec             , {qDec
+      sne    qPtr+qX*qB       , qPtr+qX*qB+qD
+      seq    <qTab1           , qPtr+qX*(qB-1)+qD
+      djn.a  qDec             , *0
+      sne    qPtr+qX*qC       , qPtr+qX*qC+qC
+      seq    <qTab2-1         , qPtr+qX*(qC-1)+(qC-1)
+      jmp    qDec             , {qDec+2
+      sne    qPtr+qX*qD       , qPtr+qX*qD+qD
+      jmz.f  bBoot            , <qTab2
+
+qDec  mul.b  *2               , qPtr
+qSkip sne    *qTab1           , @qPtr
+      add.b  qTab2            , qPtr
+qLoop mov    qBomb            , @qPtr
+qPtr  mov    qBomb            , }qX
+      sub    #qStep           , @qSkip
+      djn    qLoop            , #qTime
+      djn.f  bBoot            , #0
+
+      end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <schmidt@mail.uni-mainz.de>

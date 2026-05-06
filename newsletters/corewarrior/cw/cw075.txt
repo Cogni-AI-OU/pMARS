@@ -1,0 +1,891 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 75                                                      2 September, 1999
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+The ftp site and it's mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars                  ;pMARS home page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the above pages for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+This issue contains the results of the IWT and the code for Kline's
+SnooPy.  The hint this issue shows how Khuong's nPaper became a warrior
+which shot to KotH on the '94nop hill.  Enjoy...
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  43.3/ 34.4/ 22.2             Recycled Bits          David Moore 152.2   97
+ 2  35.2/ 18.6/ 46.3                      Jade             Ben Ford 151.8   20
+ 3  41.4/ 34.8/ 23.8       Self-Modifying Code             Ben Ford 148.1   43
+ 4  45.1/ 42.4/ 12.5                     Qshot    Christian Schmidt 147.8   27
+ 5  41.4/ 38.0/ 20.5                   Snowman         John Metcalf 144.8   41
+ 6  41.9/ 39.8/ 18.3                    SnooPy              P.Kline 144.0   23
+ 7  29.2/ 15.6/ 55.2    Return of the Fugitive          David Moore 142.9   24
+ 8  34.8/ 26.9/ 38.3               Stonewashed    Christian Schmidt 142.7   37
+ 9  34.3/ 27.2/ 38.6           One Step Beyond         John Metcalf 141.4   58
+10  41.6/ 42.0/ 16.5                    goonie          David Moore 141.2   18
+11  32.4/ 24.4/ 43.1                 nPaper II        Paul-V Khuong 140.4    0
+12  36.8/ 33.6/ 29.7          The Endless Knot         John Metcalf 139.9    4
+13  35.5/ 31.0/ 33.5          The Stormbringer    Christian Schmidt 139.9   97
+14  43.4/ 47.5/  9.1                      QHSA         Ken Espiritu 139.3    8
+15  39.3/ 39.5/ 21.2                  Stranger         John Metcalf 139.2   54
+16  38.2/ 37.5/ 24.3               Draken Fire             Ben Ford 138.9   55
+17  38.7/ 39.3/ 22.0          death by redcode     Simon Wainwright 138.0   76
+18  31.2/ 24.8/ 44.0             Slippery Eels             Ben Ford 137.6   39
+19  27.7/ 18.5/ 53.7         No More Innocuous Leonardo H. Liporati 136.9   29
+20  32.0/ 27.3/ 40.6                      Icen             Ben Ford 136.7   45
+21  32.7/ 29.5/ 37.8            Sword'n'shield    Christian Schmidt 135.9    8
+22  30.6/ 26.0/ 43.4                      EvoP         Ken Espiritu 135.2    3
+23  30.7/ 26.5/ 42.8                      Exor         Ken Espiritu 134.9   12
+24  38.6/ 43.2/ 18.2                   myBlur2             Paulsson 134.1    8
+25  37.7/ 45.4/ 16.8           TheFlyOnTheWall    Christian Schmidt 130.0    0
+
+Age since last issue: 25 ( 43 last issue, 16 the issue before )
+Days since last issue: 37 ( 61 last issue, 44 the issue before )
+Average age: 33 ( 24 last issue, 19 the issue before )
+Average score: 141 ( 141 last issue, 145 the issue before )
+
+The top 25 warriors are represented by just 10 independent authors: Ford
+and Schmidt with 5 each, Metcalf with 4, Moore and Espiritu with 3 and the
+remaining 5 authors with just one warrior each. ( 9 authors last issue, 11
+the issue before )
+
+The scanners are returning to the hill in new unexpected forms... MyBlur's
+scan loop contains several processes to implement an airBag technique.
+QHSA uses a 'quasi-1c scan' to great effect against Return of the Fugitive,
+against which Moore's own 3-shot scanner (Goonie) also scores well.
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  37.8/ 32.0/ 30.2               Am I alive?    Christian Schmidt 143.6    1
+ 1  35.0/ 28.1/ 36.8             The Pendragon    Christian Schmidt 141.9    1
+ 1  28.3/ 17.6/ 54.1                      Jade             Ben Ford 139.0    1
+ 2  41.9/ 41.5/ 16.6                    SnooPy              P.Kline 142.3    1
+ 2  26.0/ 13.0/ 61.0    Return of the Fugitive          David Moore 139.1    1
+ 3  40.6/ 40.6/ 18.7                    goonie          David Moore 140.6    0
+ 7  38.2/ 39.8/ 22.0          The Endless Knot         John Metcalf 136.5    0
+ 8  43.2/ 48.0/  8.8                      QHSA         Ken Espiritu 138.4    0
+ 8  30.3/ 24.4/ 45.2                 nPaper II        Paul-V Khuong 136.3    1
+12  29.4/ 26.3/ 44.3                      Exor         Ken Espiritu 132.5    1
+14  38.3/ 44.2/ 17.5                   myBlur2             Paulsson 132.4    0
+16  35.8/ 41.5/ 22.7              Men-An-Tol-4         John Metcalf 130.0    0
+17  33.5/ 35.4/ 31.2                  Electrum         John Metcalf 131.5    1
+18  28.8/ 28.4/ 42.8            Sword'n'shield    Christian Schmidt 129.2    1
+20  28.8/ 26.7/ 44.5                      EvoP         Ken Espiritu 130.9    1
+23  31.7/ 35.3/ 33.1       Baby One Moore Time               Phooey 128.0    1
+25  34.3/ 42.7/ 23.0                     F B I         Ken Espiritu 125.8    1
+25  34.7/ 47.6/ 17.7           TheFlyOnTheWall    Christian Schmidt 121.8    0
+
+Players entering hill since last issue: 9 ( 8 last issue, 6 the issue before )
+Average rank of new entries: 11 ( 9 last issue, 14 the issue before )
+
+Schmidt and Ford both claim 1st place with their new entries.  The
+Pendragon is a curious variation on the stone/imp.  Jade contains a
+Q^4 -> Stone/imp which seems to be the only imp warrior immune to
+Khuong's nPaper...  Moore's Fugitive returns stronger than ever.
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  30.6/ 37.8/ 31.6              The Outsider     Simon Wainwright 123.5   51
+26  34.1/ 43.0/ 22.9            Circle of Fire         John Metcalf 125.1   48
+26  35.9/ 41.6/ 22.5                  WingShot             Ben Ford 130.1   41
+26  34.2/ 41.6/ 24.2               Digitalis 5    Christian Schmidt 126.9   40
+26  25.4/ 25.6/ 49.0 Alive and K(qu)icking Zet Leonardo H. Liporati 125.2   40
+26  29.2/ 34.7/ 36.1                      Vain          Ian Oversby 123.7   36
+26  25.2/ 25.4/ 49.4                     Glass             Ben Ford 124.9   32
+26  31.3/ 37.7/ 30.9             Pitch Shifter    Christian Schmidt 124.9   30
+26  27.2/ 33.0/ 39.8                   Icepick             Ben Ford 121.3   21
+26  32.4/ 36.1/ 31.5               Am I alive?    Christian Schmidt 128.7   16
+26  33.4/ 42.1/ 24.6                    Rubble              P.Kline 124.7    9
+26  31.3/ 38.4/ 30.3      Serenade to a Cuckoo                  WFB 124.2    8
+26  31.1/ 39.3/ 29.6                        PC                  WFB 122.9    8
+26   2.0/  0.9/  1.2             The Pendragon    Christian Schmidt   7.1    6
+26  30.7/ 35.9/ 33.5       Baby One Moore Time               Phooey 125.5    5
+26  31.8/ 35.5/ 32.8                  Electrum         John Metcalf 128.1    3
+26  32.6/ 42.1/ 25.4              Men-An-Tol-4         John Metcalf 123.1    3
+26  34.3/ 43.3/ 22.4                     F B I         Ken Espiritu 125.4    2
+
+Am I Alive? drops off the hill from KotH in 15 challenges - though not
+quite quickly enough to beat Toki's 12 last issue.
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  43.3/ 34.4/ 22.2             Recycled Bits          David Moore 152.2   97
+13  35.5/ 31.0/ 33.5          The Stormbringer    Christian Schmidt 139.9   97
+17  38.7/ 39.3/ 22.0          death by redcode     Simon Wainwright 138.0   76
+ 9  34.3/ 27.2/ 38.6           One Step Beyond         John Metcalf 141.4   58
+16  38.2/ 37.5/ 24.3               Draken Fire             Ben Ford 138.9   55
+15  39.3/ 39.5/ 21.2                  Stranger         John Metcalf 139.2   54
+
+Recycled Bits continues to perform well.
+_______________________________________________________________________________
+The Extended New Hall of Fame:
+* indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+22  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+23  Electric Head          Anton Marsden      140    P-warrior
+24  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+25  Fixed                  Ken Espiritu       135    Q^2 -> Paper
+26  Tiberius 3.1           Franz              130    Q^2 -> Paper
+27  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+28  obvious to those who k Robert Macrae      117    Q^2 -> Paper
+29  Solomon v0.8           Ian Oversby        116    Stone and scanner
+30  CC Paper 3.3           Franz              107    Q^2 -> Paper
+31  mrb-test               M R Bremer         106    *Unknown*
+32  T.N.T. pro             Maurizio Vittuari  105    Bomber
+ =  Pulp v0.5              Ian Oversby        105    Q^2 -> Paper
+34  Fugitive               David Moore        102    Q^2 -> Paper/imp
+35  Vengeance              Robert Hale        101    Q^2 -> Stone/imp
+36  Jack in the box II     Beppe Bezzi        100    P-warrior
+ =  Fire and Ice           David Moore        100    P-warrior
+38  Oblivion               Ian Sutton          99    P-warrior
+39  Recycled Bits          David Moore         97*   P-warrior
+ =  The Stormbringer       Christian Schmidt   97*   Q^2 -> Stone/imp
+41  Silver Talon 1.2       Edgar               93    Scanner
+42  Bodge 1                Robert Macrae       85    Q^2 -> Scanner
+43  Inferno 2.4            Philip Kendall      84    Qscan -> Bomber
+44  Test                   Anton Marsden       83    *Unknown*
+ =  NCC-1701-A             Philip Kendall      83    P-warrior
+46  RetroQ                 Paul Kline          82    Q^2 -> Paper
+47  Tornado 4              Beppe Bezzi         78    Bomber
+48  death by redcode       Simon Wainwright    76*   Q^2 -> Bomber
+ =  He Scans Again         Paul Kline          76    Scanner
+50  Digitalis 4            Christian Schmidt   73    Q^2 -> Clear/imp
+
+Congratulations to Wainwright whose Death By Redcode gains him access to
+the Hall of Fame.  Recycled Bits and The Stormbringer climb 9 ranks.
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  54.3/ 34.4/ 11.3                  Nuke it!     Silvio Sampietro 174.3   46
+ 2  44.3/ 25.3/ 30.5                        PC                  WFB 163.3   18
+ 3  39.1/ 19.3/ 41.6             Quickest Zeta    Leonardo Humberto 158.9   49
+ 4  41.9/ 29.0/ 29.1     Silken Half Life v4.0            Dale Neal 154.7   54
+ 5  44.6/ 36.3/ 19.1                 da mutant        Paul-V Khuong 152.9   27
+ 6  36.3/ 20.1/ 43.6              Quicker Zeta    Leonardo Humberto 152.6   71
+ 7  41.0/ 30.3/ 28.6          Silken Half Life            Dale Neal 151.7   57
+ 8  45.8/ 40.4/ 13.8          Nuke it! (V 0.2)     Silvio Sampietro 151.2   53
+ 9  43.5/ 39.2/ 17.3                 B-52 #001          A.S. Mehlos 147.8    1
+10  32.4/ 22.8/ 44.8                Quick Zeta    Leonardo Humberto 142.0   76
+11  37.9/ 35.7/ 26.4                 Arsonic C             P._V._K. 140.1   25
+12  41.3/ 43.5/ 15.2              Neverland II         John Metcalf 139.2   17
+13  37.0/ 37.5/ 25.5              FireMaster 2             P._V._K. 136.6   23
+14  39.1/ 41.9/ 19.0                 Wild-Fire P_.V_.K./John Metcal 136.2   28
+15  37.8/ 40.6/ 21.7             Mel the Great          Ken Hubbard 135.0   29
+16  28.3/ 21.8/ 49.9            HardCore v0.2b           Simon Duff 134.7   77
+17  35.8/ 38.3/ 25.9                  Red Sand          Ken Hubbard 133.2   60
+18  36.7/ 40.2/ 23.2         1 shot bomber 0.1             P._V._K. 133.2   26
+19  36.9/ 40.8/ 22.3        Simpsons4Ever v0.4    Maurice Fernndez 133.1    3
+20  36.3/ 39.6/ 24.1               Fire Master             P_.V_.K. 133.0   61
+21  32.4/ 32.6/ 35.0               Radio Flyer          Ken Hubbard 132.2   32
+22  24.9/ 18.9/ 56.1                   Caladan         Ingo S Kacza 131.0    2
+23  40.2/ 50.1/  9.7                UltiBomber             P._V._K. 130.4   24
+24  31.4/ 32.9/ 35.8            quatrefoil 133        Steve Gunnell 129.9   47
+25  35.1/ 43.0/ 21.9        Simpsons4Ever v0.3    Maurice Fernndez 127.2    5
+
+Redemption retired, and Death Kiss almost made it, dropping off aged 96 :-(
+Welcome to the new players - the two currently on the hill and the three or
+four who haven't quite made it yet.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft, excluding ldp and stp
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  39/ 21/ 41                 nPaper II        Paul-V Khuong     157       2
+ 2  46/ 40/ 14                  Zooom...         John Metcalf     151     138
+ 3  46/ 42/ 12                   aTest 4              P.Kline     151       1
+ 4  35/ 21/ 44                      Jade             Ben Ford     149      71
+ 5  36/ 25/ 38                   Omnibus         John Metcalf     148      11
+ 6  45/ 42/ 13 Boys are Back in Town 1.1       Philip Kendall     147     264
+ 7  46/ 45/ 10                      Win!          David Moore     146     237
+ 8  36/ 26/ 38                      Icen             Ben Ford     146      96
+ 9  45/ 45/ 10                     Qshot    Christian Schmidt     145       8
+10  37/ 28/ 35               Ant Factory    Christian Schmidt     145      97
+11  38/ 32/ 30             The Pendragon    Christian Schmidt     144      75
+12  38/ 31/ 31                   Blacken          Ian Oversby     144     249
+13  34/ 26/ 40                      EvoP         Ken Espiritu     142       4
+14  43/ 44/ 14                    goonie          David Moore     142      64
+15  39/ 37/ 25                        PC                  WFB     140      88
+16  40/ 39/ 22                    Napalm         Ken Espiritu     140      51
+17  41/ 41/ 18              Men-An-Tol-7         John Metcalf     140      20
+18  35/ 31/ 33                  Recovery          Ian Oversby     139     262
+19  39/ 41/ 19                    K5000R    Christian Schmidt     138       6
+20  41/ 45/ 14                myBlur2(3)             Paulsson     137      18
+
+In the 87 successful challenges since last issue a total of 12 warriors
+have left this hill - including the warriors which held 1st, 2nd and 3rd
+ranks.  Vain (age 330), The Fugitive (274), The Stormbringer (262) and
+Romanian Killah (218) all perished... Khuong's nPaper dominates the hill,
+see this issue's hint for more details.
+_______________________________________________________________________________
+Current Status of the Koenigstuhl Recursive ICWS '94 Draft Hill:
+
+Koenigstuhl is an infinite hill similar to Planar's Mount Olympus and can
+be found on Christoph C. Birk's Core War page:
+
+  http://andromeda.ociw.edu/COREWAR/
+
+Below we show the top 20 of a total 1066 warriors:
+
+   1 Zooom...                    John Metcalf           174.69
+   2 The Machine                 Anton Marsden          174.29
+   3 Silver Talon 1.2            Edgar                  173.50
+   4 Phantasm 50                 Robert Macrae          172.91
+   5 Newt                        Ian Oversby            172.86
+   6 Scan Man                    David van Dam          172.67
+   7 Fixed                       Ken Espiritu           172.26
+   8 The Question                David Moore            172.19
+   9 Recovery                    Ian Oversby            171.92
+  10 The Bloodhound              Ian Sutton             171.67
+  11 The Stormbringer            Christian Schmidt      171.57
+  12 Baseline Plus               Ken Espiritu           171.44
+  13 Boys are Back in Town 1.1   Philip Kendall         171.23
+  14 Alien                       Christian Schmidt      170.25
+  15 Recycled Paper              Planar                 169.99
+  16 Forty                       Anton Marsden          169.87
+  17 Head or Tail                Christian Schmidt      168.92
+  18 Digitalis 4                 Christian Schmidt      168.89
+  19 Gigolo                      Core Warrior staff     168.76
+  20 myBlur2                     Paulsson               167.55
+
+Many recently published warriors hold positions in the top 20 ranks,
+though Newt is still the top rating stone/imp.  Other recent entries in
+the top 100 are Puddleglum (29th), WingShot (30th), Shadow (31st),
+Sharkrage (47th), Icepick (49th), Digital Dragon (52nd), Burning Water
+(62nd) and Z-Shot (80th).
+
+Also to be found on the same page are the Koenigstuhl '88 Hill of which
+Freight Train is the King with a lead of 13 points over 2nd place, and the
+Open Hill ('94 Draft + P-Space) where Pattel's Virus recently became KotH.
+_______________________________________________________________________________
+The Intelligent Warrior Tournament (1999) RESULTS!
+
+In what would later be called an amazing display of corewar programming
+power, eight programmers battled it out for control of the RedOS.  In the
+end only one would be crowned King.
+
+In a tournament filled with both luck and skill, the eight Warriors would
+fight over RedOS registers, attempting to enter a higher score in their
+own register than their opponent could.  The fighting would be fierce and
+started out with a round robin to determine who would move on to the Knock
+Out rounds.  Only four would survive this grueling test.
+
+The contestants were as follows:
+
+;redcode-94
+;name silly & slow
+;author Ryan Coleman
+;strategy Set my score to 7999!
+;strategy set his score to 0
+;strategy then spl bomb
+
+;redcode-iwt99
+;name Inconspicuous
+;author John Metcalf
+;strategy .8c scan -> spl carpet -> alter values
+
+;redcode-94
+;author Robert Macrae
+;name   Bride of :-=
+;       [or, Better Late Than Never...]
+;strategy 0.66 Vamp, Decoy and Pit
+
+;redcode
+;name Reverse Vampire
+;author Josh Yeager
+;strategy Find RedOS, then copy self over middle of it.
+;strategy Hopefully, opponent won't hit me because he thinks I'm the OS!
+;strategy Also, any proccesses the OS has will be running me!
+
+;redcode-94
+;name Quick Thinking
+;author Ben Ford
+;strategy qscan -> HSAish scanner
+;strategy
+;strategy instead of bombing, qscan sets starting values for scanner
+;strategy scanner based on HSA, added part to set my score properly
+;strategy also never switches to dat-bombing (stun everything but me!)
+;strategy
+;strategy beats test warrior (and simple improvements) 80%+
+;strategy better than nothing, I suppose someone could try to take
+;strategy advantage of 'flaws' in the hsa engine
+
+;redcode-94
+;name Mine v0.3
+;author John K Wilkinson
+;strategy my entry. this is mine. hence the name.
+
+;redcode-94
+;name StupidWarrior
+;author Planar
+
+;redcode-94
+;name Starving Hacker
+;author David Moore
+;strategy Score 1 point :-)  Optimized for single-elimination combat.
+
+The round robin featured single combat between each competitor.  Position
+was randomly assigned by a coin toss (terribly high tech.)  The chart below
+shows the results of the round robin portion.
+
+
+        Coleman  Metcalf  Macrae  Yeager  Ford  Wilkinson  Doligez  Moore
+
+Coleman  X X X      0*     -1       0*    -7980     1         1      -1
+Metcalf    0*     X X X    -1       0     -7980     0         0      -1
+Macrae     1        1     X X X     1       1      5623       1       3
+Yeager     0*       0      -1     X X X   -7980   -7998       0      -1
+Ford      7980     7980    -1      7980   X X X    7980      7980    -1
+Wilkinson -1        0     -5623    7998   -7980   X X X      7998    -1
+Doligez   -1        0      -1       0     -7980   -7998     X X X     0
+Moore      1        1      -3       1       1       1         0     X X X
+
+* denotes a fight where the RedOS died.
+
+
+Total Scores (Round Robin)
+
+ 39899    Ford           -7980    Coleman
+  5631    Macrae         -7982    Metcalf
+  2391    Wilkinson     -15980    Yeager
+     2    Moore         -15980    Doligez
+
+
+With the round robin finished we came to the four Warrior Knock Out!  As
+we can see, Ben Ford's entry "Quick Thinking" is clearly the odds on
+favorite having scored so highly in the round robin.  Macrae and Moore
+both entered "dumber" programs that cleared core with sequential clears,
+hoping to trade score for speed that might help in the Knock Out portion
+of the tourney.  Wilkinson's "Mine v0.3" was a jmp stunner/scanner with
+bootstrap.
+
+The first battle was between Ben Ford's "Quick Thinking" and David Moore's
+"Starving Hacker".  Ben had lost in the round robin to "Starving Hacker"
+and was looking to take the battle to Moore's quicker program.
+Unfortunately for Ben, Moore's attack was too fast and he fell.  Having
+easily dominated the round robin, "Quick Thinking" was ironically beaten
+by a quicker program.  (Note:  Ben had, in my opinion, on of the best
+programs written and might had taken it all had the rules been slightly
+different.)
+
+The second battle was going to be one of the most contentious.  Macrae's
+"Bride of :-=" would face third place "Mine v0.3".  The battle took four
+rounds to decide as the score was a tie the first three tries.  In the
+end, "Mine v0.3" was triumphant.
+
+The stage was set for the final round:
+
+Our MAIN EVENT...
+
+;name Starving Hacker                   ;name Mine v0.3
+;author David Moore                     ;author John K Wilkinson
+
+The first battle lit up the screen with green and yellow pixels as the two
+programs battle furiously for control of the registers.  Fighting with all
+their might, they fought the first round to a tie!  The tie breaker was
+decided early when Moore's "Starving Hacker" was struck squarely with a jmp
+bomb from "Mine v0.3".  The rest was clean up and John K. Wilkinson's
+program did this brilliantly.
+
+The winner of the 1999 Intelligent Warrior Tournament is:
+
+John K. Wilkinson!
+
+Congratulations to John and thanks to all the contestants for taking the
+time to code what was a hard fought battle.  I'm glad that this
+competitions winner was a program of some size and that it needed a bit of
+intelligence to win.  The warriors will be displayed on the website soon.
+
+Side Note:
+I welcome feedback on this tournament and what could be done to make it
+more interesting for the programmers.  It was my hope to reward complexity
+of strategy and it seems to have worked in most cases.  Feel free to send
+me an email at <jklewis@umich.edu> or start a thread on r.g.c.
+
+The tournament's homepage can be found at:
+
+  http://www.concentric.net/~liminal/IWT/index.html
+_______________________________________________________________________________
+The Hint - Improving a Beginner's Warrior by Paul-V Khuong and John Metcalf
+
+Once again this hint will follow the development process of a warrior.
+This time the warrior is Paul's nPaper and our aim is to improve it
+sufficiently to allow it to gain a place on Pizza's '94 draft hill.  Here
+is the original:
+
+;redcode-94nop
+;name nPaper
+;author Paul-V Khuong
+;strategy Paper
+;assert CORESIZE==8000
+
+     pStep1 equ 3944
+     pStep2 equ 2616
+     pStep3 equ -624
+
+     x equ -373
+     y equ 1915
+     z equ -287
+
+     spl   1
+     spl   1
+     spl   1
+pap1:spl   @0,     <pStep1
+     mov   }pap1,  >pap1
+pap2:spl   @0,     {pStep2
+     mov   }pap2,  >pap2
+     mov.i #1,     }1
+     mov   {x,     <y
+     mov   {pap2,  {pap3
+pap3:djn.f pStep3, <z
+
+As with most papers, nPaper is based on the typical silk replication
+concept.  However, the methods of attack are particularly interesting:
+
+1) The bomb which nPaper throws is a kind of silk-imp.  Mov.i #1,}1
+   combines with the mov {x,<y line to bomb two strips of memory with
+   itself.
+
+2) Instead of the commonplace jmp pStep3, nPaper uses a rarely seen djn.f
+   pStep3,<?.  Since there are 8 processes and only 6 lines to copy,
+   nPaper is still effective even if a couple of proccesses happen to fall
+   out of the warrior when the djn.f meets it's arch-enemy - dat 1,1.
+
+We agreed to carry out our testing on KOTH's '94nop hill, since it returns
+challenge results a little faster than Pizza.  The original version of
+nPaper scores 100.32 - losing to scanners and tying against everything
+else.
+
+What we need to do is take a close look at each section of the paper and
+see how it interacts with some typical opponents...
+
+The mov.i #1,}1 silk-imp bomb which Paul has created tends to act
+similarly to a standard imp while in empty core, carrying any enemy
+processes executing it forward to the next section of code.  The mov.i
+#1,{1 bomb of Fugitive doesn't have this disadvantage and against a-driven
+imps it should help convert a few ties into wins.
+
+As a consequence of changing to Fugitive's bomb, we need to change the
+line following the bomb to mov x,<y.  Let us test this theory against the
+hill...
+
+nPaper now scores 118.61 and as expected shows an improvement against the
+Stone/imps on the hill, with the exception of Jade which we suspect may
+use standard b-driven imps.  Also, a small increase in score was observed
+against the majority of scanners.
+
+ #W /  #L /  #T  Opponent           #W /  #L /  #T  Opponent
+ 86 /  15 / 149  The Stormbringer    0 /   9 / 241  Jade
+ 78 /  12 / 160  The Pendragon      65 /  37 / 148  Vain
+ 60 /  24 / 166  Blacken            53 /  41 / 156  PC
+
+Do the advantages of the djn.f attack outweigh the disadvantages?  Simply
+replacing the djn with a jmp scores worse, 117.47.  However, jmz has been
+used successfully in a number of papers (including the classics Mice and
+Molerat) to determine if a pointer which should be zero has been somehow
+corrupted.  Let us then try a couple of variants of this technique:
+
+     mov   {pap2,  {pap3 ; scores 123.62
+pap3:jmz.a pStep3, *0
+
+     mov   {pap2,  <pap3 ; scores 122.76
+pap3:jmz.a @0,     pStep3
+
+A substantial improvement.  Of the two variants we tested, the former
+appears to score higher by almost a point.  However, against most warriors
+the two versions scored about the same.  The exception is against myBlur -
+the former scores 148.4 and the latter 115.2 :-)
+
+Having improved the attack, we now need to concentrate on ways in which
+the replication mechanism might be improved...  Our first idea was to
+reduce the number of processes the paper requires from 8 to 6, by
+including an extra copy instruction in the first silk launcher as Macrae
+describes in his text accompanying Benj's Revenge (CW64).  However, since
+this scored a mere 116.25 points; it appears this technique isn't suited
+to nPaper.  (Can you think why?)
+
+Instead we opted for simply booting a second copy of the paper half way
+around core for a score of 127.12.  Now let us see how much we can improve
+on this score by optimizing the steps.
+
+First the dumb brute force method was tried.  A simple program generates
+copies of the paper with random constants.  These are then battled against
+a small selection of warriors to see which scores the highest.  After
+testing over 200 sets of constants, we had a warrior capable of scoring
+127.41 points on '94nop.
+
+An alternative approach is needed...  Perhaps we could improve the steps
+by making random small tweaks to the steps we currently have.  A program
+was written to change one or two constants at a time by a small multiple
+of 8...  After testing over 100 tweaks, we found one which could score
+128.08 on the hill.
+
+Our final attempt at optimization proved a little more successful.  We
+replaced the two bombing instructions with nops and optimized the three
+replication constants using the DBF (dumb brute force) method.  Next, the
+highest scoring set of pSteps were chosen and the nops were replaced with
+the bombing instructions.  The bombing steps x and y were then optimized
+using DBF which left us with a warrior scoring 132.88 :-)  NPaper now
+scores even more spectacularly against those annoying stone/imps:
+
+ #W /  #L /  #T  Opponent           #W /  #L /  #T  Opponent
+152 /   2 /  96  The Stormbringer    2 /   4 / 244  Jade
+131 /   7 / 112  The Pendragon     113 /  24 / 113  Vain
+ 83 /  10 / 170  Blacken            82 /  23 / 145  PC
+
+Since nPaper is now capable of entering the lower end of both the '94nop
+and '94 draft hills, we have fulfilled our original criterion.  However,
+we still haven't added a qscan which is traditionally included in a paper
+warriors.
+
+From previous experience, we know how effective mini-qscans can be.
+Therefore we chose to employ a Q^3 trimmed down to scan fewer locations.
+A short series of test submissions showed the score seemed to peak at 33
+scans, which we can implement in 3 table entries.  We also put the unused
+b-fields to use decrementing pockets of core.
+
+;redcode-94
+;name nPaper II
+;author Paul-V Khuong
+;strategy MiniQ^3 -> Paper
+;assert CORESIZE==8000
+
+     org qGo
+
+     pStep1 equ 560
+     pStep2 equ 2680
+     pStep3 equ -1120
+
+     x equ -3781
+     y equ -2013
+
+pGo: spl   1,      >424
+     spl   1,      {761
+     spl   1,      {933
+     mov   {pap1,  {pBoo
+pBoo:spl   pEnd+4000,{2093
+pap1:spl   @pEnd,  <pStep1
+     mov.i }pap1,  >pap1
+pap2:spl   @0,     {pStep2
+     mov.i }pap2,  >pap2
+     mov.i #1,     {1
+     mov   x,      <y
+     mov.i {pap2,  <pap3
+pap3:jmz.a @0,     pStep3
+pEnd:
+
+     a for 45
+     dat   0,0
+     rof
+
+     qf equ qKil
+     qs equ (qd*2)
+     qd equ 107
+     qi equ 7
+     qr equ 11
+
+;    -+)>] 0/1 cycles [(<+-
+
+qGo: seq   qd+qf+qs,    qf+qs      ; 1
+     jmp   qSki,        {qd+qf+qs+qi
+     seq   qd+qf+6*qs,  qf+6*qs    ; B
+     jmp   qFas,        {qd+qf+6*qs+qi
+     seq   qd+qf+5*qs,  qf+5*qs    ; B-1
+     jmp   qFas,        <qBmb
+     seq   qd+qf+7*qs,  qf+7*qs    ; B+1
+     jmp   qFas,        >qBmb
+     seq   qd+qf+9*qs,  qf+9*qs    ; A-1
+     djn   qFas,        {qFas
+     seq   qd+qf+10*qs, qf+10*qs   ; A
+     jmp   qFas,        {qFas
+
+;    -+>)] 2 cycles [(<+-
+
+     seq   qd+qf+3*qs,  qf+3*qs    ; C
+     jmp   >qFas,       {qd+qf+3*qs+qi
+     seq   qd+qf+2*qs,  qf+2*qs    ; C-1
+     jmp   >qFas,       {qSlo
+     seq   qd+qf+4*qs,  qf+4*qs    ; C+1
+     jmp   >qFas,       }qSlo
+     seq   qd+qf+12*qs, qf+12*qs   ; B*C-B
+     jmp   qSlo,        {qSlo
+     seq   qd+qf+15*qs, qf+15*qs   ; B*C-C
+     jmp   qSlo,        <qBmb
+     seq   qd+qf+21*qs, qf+21*qs   ; B*C+C
+     jmp   qSlo,        >qBmb
+     seq   qd+qf+24*qs, qf+24*qs   ; B*C+B
+     jmp   qSlo,        }qSlo
+     seq   qd+qf+27*qs, qf+27*qs   ; A*C-C
+     djn   qSlo,        {qFas
+     seq   qd+qf+30*qs, qf+30*qs   ; A*C
+     jmp   qSlo,        {qFas
+     sne   qd+qf+18*qs, qf+18*qs   ; B*C
+     jmz.f pGo,         qd+qf+18*qs-10
+
+qSlo:mul.ab #3,         qKil       ; C=3
+qFas:mul.b qBmb,        @qSlo
+qSki:sne   >3456,       @qKil
+     add   #qd,         qKil
+qLoo:mov   qBmb,        @qKil
+qKil:mov   qBmb,        *qs
+     sub   #qi,         qKil
+     djn   qLoo,        #qr
+     jmp   pGo,         >10        ; A=10
+qBmb:dat   {qi*qr-10,   {6         ; B=6
+     end
+
+So how does our final version score?  King of the '94nop and in the top
+ten on the '94 draft :-)  On entering the '94nop hill it scored 40%+ wins
+against 11 of the warriors - 50%+ against 7.  However, it would not
+surprise us to see a few more b-driven imps appearing on the hills...
+
+ 1  36/ 22/ 42               nPaper II        Paul-V Khuong     151       1
+_______________________________________________________________________________
+Extra Extra - SnooPy by Paul Kline
+
+You may remember Alladin's Cave, onetime leader on Pizza's 94 hill.  I
+thought it might still have some potential and started working on a
+replacement, using the same base components and changing over to a p^3
+switcher.  I really could not get it going however, the one-shot scanner
+just is no longer strong enough and AC would end up carouseling the
+various parts against stronger opponents.  This is one of the problems
+with p-programming, if you do not have a good 'stopper' in there, you end
+up rotating weaker opponents and give up way too many losses.
+
+So I went looking for some good code, especially something that would
+perform well against stone-imps and strong silks.  The modern stone-imps
+seem to be structured similarly, a small stone with core wipe and a small
+imp-pump that is positioned far away from the stone.  Both are hard to find by
+scanning, and a core-clear takes too long to kill them together.  My
+approach was to try a quick one-pass something that would stun at least
+one of the parts with spl's, followed by a dclear.  That way the dclear
+would have more time to do its job, and the imp-spiral would not grow too
+long.
+
+I went through a number of Torch and vamp variations, but finally settled
+on a Blur attack, one scanning pass and a dclear.  It works pretty well
+against stone-imps and not so well against stronger silks.  Additional
+stunning would be useful but to kill s-i's you have to start dclear-ing
+early, or you will not have time to kill all the spl's and the imp.
+
+Other p-spacers can be expected to try a simple stone which is deadly
+against scanners, so I added a paper component.  After much diddling I
+selected a variation on an old theme of mine, which is a non-silk
+replicator with a lot of imp-deadly dat-bombing.  This version kills s-i's
+like Rosebud and Blue Funk about 50% of the time, but is mainly guaranteed
+to at least get a tie.  It also effectively kills a class of non-looping
+silk replicators.  Because they do not loop, they act like simple hopper
+generators, once all the generators are dead, the hoppers are quite
+vulnerable.  CC Paper is a good example.
+
+To protect the replicator against HSA and f-scan attacks I added a Wimp,
+which is just a JMP #0,#0 program that is invisible to them.
+
+For a little more punch against certain opponents I included the one-shot
+dclear component from Alladin's Cave.
+
+SnooPy is a good all-round performer, so far no programs on the hill are
+killing it badly and it is not killing anything else badly either (except
+one new one :-).  Some challengers are giving up nearly 90% losses
+however, which is interesting.  I think what is happening is that while
+SnooPy does a 16-byte forward scan in 3 steps (actually a 10 and a 6), the
+opponent is doing a backward scan with a smaller step or at a slower rate.
+I described this situation in an old Push Off article and it is fatal to
+the slower program.  Other than that I can not explain such a high ratio.
+
+The p-code drives the trio on successive losses from scan to paper to
+one-shot and round again.  The only variation is that if the paper gets a
+tie it returns to the scanner, which works quite well when the opponent is
+a replicator or imp.
+
+
+;redcode-94
+;name SnooPy
+;author P.Kline
+;assert CORESIZE == 8000
+;strategy blurish scanner, paper, oneshot-clear
+;strategy did i mention a wimp?
+
+w0 EQU vBoot
+w1 EQU slPaper
+w2 EQU cBoot
+PSTATE EQU 278
+
+wimp      jmp    #0        ,#0     ; frustrate HSA-types, used with paper
+     for 15
+         dat 0,0
+     rof
+clGate    jmp    OsClear,OsClear-6 ; one-shot to a dat-clear
+clIncr    dat    13     ,13
+OsClear   add    clIncr ,clGate
+          sne.x  *clGate,@clGate
+          djn.f  OsClear,<-1500
+clSpl     spl    #0     ,<clGate
+          mov    clBomb ,>clGate
+          djn.f  -1     ,>clGate
+clBomb    dat    <5535  ,1-clGate
+          dat    0,0
+btClear   jmp    1000   ,clGate+10-btV
+       for 5
+          dat 0,0
+       rof
+think   ldp.a    #0      ,in
+        ldp.a    #PSTATE ,table
+        mod.ba   *in     ,table
+        stp.b    *table  ,#PSTATE
+
+                        ; S  L W T
+table   jmp }0   ,0441  ; 00 1 0 0
+        dat #w0  ,0154  ; 01 2 0 1 ; w0 = scanner
+        dat #w0  ,0163  ; 02 3 2 1 ; w1 = paper
+        dat #w0  ,0092  ; 03 4 1 2 ; w2 = one-shot/clear
+        dat #w1  ,0102  ; 04 6 4 3
+        dat #w2  ,0446  ; 05 6 5 5
+        dat #w2  ,0362  ; 06 2 5 2
+        dat #w2  ,0362  ; 07 2 5 2
+        dat #w2  ,0362  ; 08 2 5 2
+
+in      dat  0,8  ; must have non-zero b-field in the previous cell
+        dat  0,7
+        dat  0,9
+
+cBoot     mov    btClear  ,btV     ; boot one-shot or scanner
+vBoot
+     a for 10
+          mov    <btV     ,{btV
+       rof
+btV       jmp    vPtr+10+16*150     ,vPtr+10
+
+       for 10
+          dat 0,0
+       rof
+
+vStep     equ    16
+vGate     equ    (vPtr-3)
+Snoop
+
+vPtr      mov    vScan    ,6000    ; Blur-type scanner
+vNext     mov    vIncr    ,>vPtr
+vScan     seq    vStep-6  ,vStep
+          mov.ab vScan    ,vPtr
+          add    vIncr    ,vScan
+          djn    vNext    ,#7900/16
+vIncr     spl    #vStep   ,#vStep
+          mov    vClr     ,>vGate
+          djn.f  -1       ,>vGate
+vClr      dat    <2667    ,2-vGate
+     for 8
+         dat 0,0
+     rof
+slPaper  spl   wimp
+         spl   1 ,{1000
+         spl   1 ,{2000
+         spl   1 ,{3000
+p1s      mov   p1b,>8              ; imp- and stone-killing paper
+p1c      mov   <p1s,<p1n           ; pretty good at killing silks too
+p1n      spl   @p1n,>-1356
+         mov   p1b,<p1n
+         mov   p1b,<-1000
+         mov   p1b,>200
+         jmn.f @0,>p1s
+p1b      dat   <2667,<5334
+
+         end   think
+
+"History has pretty well established that no program is going to last
+forever, publishing accelerates the demise yet advances the game."
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy@digitald.uk.com>
+and Christian Schmidt <schmidt@chiral.apchem.nagoya-u.ac.jp>
