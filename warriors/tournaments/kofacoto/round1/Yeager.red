@@ -6,7 +6,7 @@
 ;strategy All I changed was the SPL/DAT ratio in the attack
 ;strategy Original by P.Kline
 
-org       tStart
+; org       tStart ; Removed in favor of 'end tStart' for better compatibility
 
 tPtr      dat    100 ,4100-4             ; widely-spaced pointers
           dat    0,0
@@ -42,4 +42,6 @@ tDecoy    equ    (tWipe+1-1196)
 tStart    mov    <tDecoy+0,{tDecoy+2     ; make a quick-decoy
           mov    <tDecoy+3,{tDecoy+5     ; to foil one-shots
           mov    <tDecoy+6,{tDecoy+8     ; and the occasional q-scan
-          djn.f  tScan+1  ,<tDecoy+10
+          djn.f  tScan+1  ,<tDecoy+10 
+; Added 'end tStart' to ensure compatibility and explicit entry point definition
+          end    tStart
