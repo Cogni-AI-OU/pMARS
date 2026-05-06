@@ -1,0 +1,85 @@
+Compiling pmars.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c pmars.c -o pmars.o
+Compiling asm.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c asm.c -o asm.o
+Compiling eval.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c eval.c -o eval.o
+Compiling disasm.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c disasm.c -o disasm.o
+Compiling cdb.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c cdb.c -o cdb.o
+cdb.c: In function ‘cdb’:
+cdb.c:879:7: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  879 |       system(argStr);
+      |       ^~~~~~~~~~~~~~
+cdb.c: In function ‘load_macros’:
+cdb.c:2399:47: warning: ‘%s’ directive writing up to 8000 bytes into a region of size 7989 [-Wformat-overflow=]
+ 2399 |         sprintf(buffer1 + j + 1, " echo Macro %s is too long (>= %d chars)~reset",
+      |                                               ^~
+ 2400 |                 buffer1, MAXSTR);
+      |                 ~~~~~~~                        
+In file included from /usr/include/stdio.h:980,
+                 from global.h:29,
+                 from cdb.c:29:
+In function ‘sprintf’,
+    inlined from ‘load_macros’ at cdb.c:2399:9:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:30:10: note: ‘__builtin___sprintf_chk’ output between 47 and 8047 bytes into a destination of size 8001
+   30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   32 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+cdb.c: In function ‘cdb’:
+cdb.c:658:30: warning: ‘%s’ directive writing up to 8000 bytes into a region of size 7993 [-Wformat-overflow=]
+  658 |       sprintf(outs, "#define %s_H %d\n", argStr, hash_str(argStr, VERBLEN));
+      |                              ^~          ~~~~~~
+In function ‘sprintf’,
+    inlined from ‘cdb’ at cdb.c:658:7:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:30:10: note: ‘__builtin___sprintf_chk’ output between 14 and 8024 bytes into a destination of size 8001
+   30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   32 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+cdb.c: In function ‘cdb’:
+cdb.c:619:26: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  619 |       sprintf(outs, "%s\n", argStr);
+      |                          ^
+In function ‘sprintf’,
+    inlined from ‘cdb’ at cdb.c:619:7:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:30:10: note: ‘__builtin___sprintf_chk’ output between 2 and 8002 bytes into a destination of size 8001
+   30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   32 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+Compiling sim.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c sim.c -o sim.o
+Compiling pos.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c pos.c -o pos.o
+Compiling clparse.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c clparse.c -o clparse.o
+clparse.c: In function ‘next_input’:
+clparse.c:235:5: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  235 |     fscanf(filep, "%s", inputs);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+clparse.c:242:9: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  242 |         fscanf(filep, "%[^\"]%*[\"]", inputs + i);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+clparse.c:245:7: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  245 |       fgets(inputs, 100, filep);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~
+clparse.c:247:7: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  247 |       fscanf(filep, "%s", inputs);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling global.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c global.c -o global.o
+Compiling token.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c token.c -o token.o
+Compiling str_eng.c
+gcc                  -O2 -DEXT94 -DPERMUTATE -DRWLIMIT -DCURSESGRAPHX -c str_eng.c -o str_eng.o
+Linking pmars
+Done

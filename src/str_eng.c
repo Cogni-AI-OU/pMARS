@@ -42,9 +42,9 @@ char   *warriorTerminatedEndOfRound = "%%PMARS-I-WARTEREND, warrior %d: %s termi
 char   *endOfRound = "%%PMARS-I-ENDOFROU, end of round %d\n";
 #else
 char   *outOfMemory = "Out of memory\n";
-char   *warriorTerminated = "Warrior %d: %s terminated\n";
+char   *warriorTerminated = "Warrior %ld: %s terminated\n";
 char   *fatalErrorInSimulator = "Fatal error in simulator. Please report this error.\n";
-char   *warriorTerminatedEndOfRound = "Warrior %d: %s terminated - End of round %d\n";
+char   *warriorTerminatedEndOfRound = "Warrior %ld: %s terminated - End of round %d\n";
 char   *endOfRound = "End of round %d\n";
 #endif
 
@@ -151,11 +151,11 @@ char   *helpText[] = {
 ""};
 
 char   *roundOfCycle = "Round %-3d of %-10d Cycle %ld\n";
-char   *currentlyExecutingWarrior = "Currently executing warrior %d: %-30s\n";
+char   *currentlyExecutingWarrior = "Currently executing warrior %ld: %-30s\n";
 char   *processesActive = "Processes active %-6d Process queue:\n";
 char   *otherWarrior = "Other warrior: %-30s\n";
 char   *warriorAtAddressHasActiveProcesses =
-"Warrior %d: %s at address [%d] has %d active process%s\n";
+"Warrior %ld: %s at address [%d] has %d active process%s\n";
 char   *pluralEndingOfProcess = "es";
 char   *ofWarriorsAreAlive = "%d of %d warriors are alive\n";
 char   *fillWith = "Fill with: ";

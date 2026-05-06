@@ -1282,7 +1282,7 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 
 #ifndef SERVER
 	if (debugState == BREAK) {
-	  sprintf(outs, warriorTerminated, W - warrior, W->name);
+	  sprintf(outs, warriorTerminated, (long) (W - warrior), W->name);
 	  debugState = cdb(outs);
 	}
 #endif                                /* SERVER */
@@ -1420,7 +1420,7 @@ nextround:
 #ifndef SERVER
     if (debugState == BREAK) {
       if (warriorsLeft == 1 && warriors != 1)
-	sprintf(outs, warriorTerminatedEndOfRound, W - warrior, W->name, round_num);
+	sprintf(outs, warriorTerminatedEndOfRound, (long) (W - warrior), W->name, round_num);
       else
 	sprintf(outs, endOfRound, round_num);
       debugState = cdb(outs);

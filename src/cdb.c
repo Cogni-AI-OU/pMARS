@@ -888,14 +888,14 @@ cdb(message)
       open_graphics();
 #else
 #if defined(LINUXGRAPHX)
-      printf(pressAnyKeyToContinue);
+      printf("%s", pressAnyKeyToContinue);
       fflush(stdout);
       svga_getch();
       svga_open_graphics();
 #else
 #if defined(DOSTXTGRAPHX)
 #if defined(CURSESGRAPHX)
-      printf(pressAnyKeyToContinue);
+      printf("%s", pressAnyKeyToContinue);
       getch();
       clear_page5();
 #endif /* CURSESGRAPHX */
@@ -1640,7 +1640,7 @@ subst_eval(inpStr, result)
     substitute(buf[bi1], "B", outs, buf[bi2]);
 
     for (i = warriors - 1; i >= 0; --i) {
-      sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
+      sprintf(outs, "%ld", (long) (targetID == QUEUE || targetID == PSP ?
                            0 : (targetID == WARRIOR ?
                  i : (W - warrior == i ? progCnt : *warrior[i].taskHead))));
       sprintf(outs2, "PC%d", i + 1);
@@ -1648,7 +1648,7 @@ subst_eval(inpStr, result)
       substitute(buf[bi1], outs2, outs, buf[bi2]);
     }
     if (warriors < MAXWARRIOR) {/* PCN where N==warriors is PC */
-      sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
+      sprintf(outs, "%ld", (long) (targetID == QUEUE || targetID == PSP ?
                            0 : (targetID == WARRIOR ?
                                 W - warrior : progCnt)));
       sprintf(outs2, "PC%d", warriors);
@@ -1656,12 +1656,12 @@ subst_eval(inpStr, result)
       substitute(buf[bi1], outs2, outs, buf[bi2]);
     }
     SWITCHBI;
-    sprintf(outs, "%d", (targetID == QUEUE || targetID == PSP ?
+    sprintf(outs, "%ld", (long) (targetID == QUEUE || targetID == PSP ?
                          0 : (targetID == WARRIOR ?
                               W - warrior : progCnt)));
     substitute(buf[bi1], "PC", outs, buf[bi2]);
     SWITCHBI;
-    sprintf(outs, "%d", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
+    sprintf(outs, "%ld", (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
             (warriorsLeft ? warriorsLeft : 1));
     substitute(buf[bi1], "CYCLE", outs, buf[bi2]);
     SWITCHBI;
@@ -2004,7 +2004,7 @@ print_registers()
           (cycle + (warriorsLeft ? warriorsLeft : 1) - 1) /
           (warriorsLeft ? warriorsLeft : 1));
   cdb_fputs(outs, COND);
-  sprintf(outs, currentlyExecutingWarrior, W - warrior, W->name);
+  sprintf(outs, currentlyExecutingWarrior, (long) (W - warrior), W->name);
   cdb_fputs(outs, COND);
   sprintf(outs, processesActive, W->tasks);
   cdb_fputs(outs, COND);
@@ -2112,7 +2112,7 @@ print_registers()
     warrior_struct *TW;
     for (TW = warrior; TW < warrior + warriors; ++TW)
       if (TW != W) {
-        sprintf(outs, warriorAtAddressHasActiveProcesses, TW - warrior,
+        sprintf(outs, warriorAtAddressHasActiveProcesses, (long) (TW - warrior),
                 TW->name, *TW->taskHead, TW->tasks,
                 (TW->tasks == 1 ? "" : pluralEndingOfProcess));
         cdb_fputs(outs, COND);
