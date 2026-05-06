@@ -79,14 +79,21 @@ The ICWT 1989 tournament set was modernized to follow these strict compatibility
 
 ## Simulator Parameter Limits
 
-### Instruction Limit (MAXINSTR)
+### Automated Assembly Validation
 
-Historically, pMARS had a default `MAXINSTR` of 1000, which limited the maximum length that could be specified with the `-l` flag.
+The project's continuous integration pipeline includes an automated step to verify that all warriors in `warriors/tournaments/` can be successfully assembled by `pmars`.
 
-**Optimization:**
-In recent updates, `MAXINSTR` has been increased to **10000** to accommodate complex tournament warriors and allow for more extensive assembly validation tests (e.g., using `-l 8000` to bypass length checks during initial assembly tests).
+To accommodate warriors with non-standard requirements, the validation script attempts to extract core parameters from `;assert` lines in the Redcode files using the following patterns:
+- `CORESIZE`: `-s <value>`
+- `MAXLENGTH`: `-l <value>`
+- `MAXPROCESSES`: `-p <value>`
+- `MAXCYCLES`: `-c <value>`
+- `MINDISTANCE`: `-d <value>`
 
-If a warrior fails to assemble with a "too many instructions" error even when `-l` is provided, ensure the value is within the new `MAXINSTR` limit.
+**Example compatible `;assert` line:**
+`;assert (CORESIZE == 55440) && (MAXPROCESSES == 10000)`
+
+If an assertion fails because the required environment parameters are not provided to the assembler, ensure the `;assert` line follows one of these supported formats (e.g., `CORESIZE == 8000` or `CORESIZE=8000`).
 
 ## Preservation of Historical Code
 
