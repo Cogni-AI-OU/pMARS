@@ -1,0 +1,737 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 87                                                          03 July, 2003
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of Corewar.  Emphasis is
+placed on the most active hills - currently the '94 no-pspace and '94 draft
+hills.  Coverage will follow wherever the action is. If you haven't a clue
+what I'm talking about then check out these five-star Internet locals for
+more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza (down)
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+  http://de.geocities.com/fizmo_master       ;Fizmo
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+There has been an abundance of interesting code published since last issue,
+not least Sunset and Mantrap Arcade.  These two p-warriors are holding the
+first two ranks on Koth's draft hill as well as the Koenigstuhl P-Space
+and Open hills.  Three new warriors enter the top 10 on the infinite '94nop
+hill, Numb, RotPendragon 2 and Candy II.
+
+Chip Wendell has released a feature-packed new Mars for Windows, boasting
+such facilities as read/write limits and random core size.  If you haven't
+done so already, drop into the homepage and download a copy:
+
+  http://www.geocities.com/corewin2
+
+Rounds 9 and 10 of the ongoing tournament have taken place, with the
+Limited Value round being won by Jakub Kozisek, and the Tri-Tiny round
+by Dave Hillis.  German Labarga takes first place, climbing 4, followed
+by Roy van Rijn who remains in second place.
+
+Koen Struyve has organised the Corewars Beginner's League, a regular
+tournament specifically for beginners.  For more info see:
+
+  http://www25.brinkster.com/ivaldir
+
+Thanks this issue to Christian Schmidt, who discusses Quick-Scanners and
+Paper in the hint, as well as sharing the code for unheard-of.
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  36/ 22/ 42                Reepicheep       Grabun/Metcalf    149.1    974
+ 2  44/ 40/ 16              Toxic Spirit        Philip Thorne    147.9    428
+ 3  47/ 47/  6                   Recon 2          David Moore    147.3    197
+ 4  36/ 25/ 39             Thunderstrike        Lukasz Grabun    146.1    348
+ 5  35/ 25/ 41                      Numb         Roy van Rijn    144.7    130
+ 6  42/ 41/ 16      Return of Vanquisher        Lukasz Grabun    143.4    505
+ 7  33/ 23/ 44               Son of Vain      Oversby/Pihlaja    143.0   1743
+ 8  28/ 14/ 58                unheard-of    Christian Schmidt    142.7     74
+ 9  33/ 25/ 43                  Candy II        Lukasz Grabun    141.1    123
+10  32/ 24/ 44       Soldier of Silkland    Christian Schmidt    140.3    100
+11  34/ 27/ 39  Now you're in trouble!!!         John Metcalf    140.3    111
+12  45/ 50/  5                    Claw 2                Fizmo    139.2    172
+13  34/ 30/ 36            Digitalis 2003    Christian Schmidt    139.1     25
+14  42/ 44/ 14              Hazy Test 63        Steve Gunnell    138.5    518
+15  33/ 27/ 41            Graduated Fool         Roy van Rijn    138.3      9
+16  40/ 41/ 20                      shot         John Metcalf    138.1     28
+17  28/ 21/ 51     Greetings from Turkey                Fizmo    136.3     15
+18  43/ 51/  6                    Solo 2         Roy van Rijn    135.2      3
+19  31/ 30/ 39                     Paper                   LG    133.1      2
+20   5/  0/  0            Fast Action IV    Christian Schmidt     14.3      1
+
+Since last issue, there have been 192 successful challenges and 10 warriors
+have passed on, aged 100+.  Revenge of the Papers left the hill age 605.
+Also leaving the hill this issue were Firestorm (age 589), Claw (525),
+Dawn (350), Pixie (282), Driftwood (250), RotPendragon 2 (183), My First
+Paper (168), Back To PolyLand (165) and Harmony Snoot (131).
+
+Koth report:  Most often seen at the top of the hill has been Recon 2,
+king after 162 successful challenges.  Reepicheep took first place after
+12 challenges, and Thunderstrike after 10.  Son of Vain briefly took the
+number one spot to once again break it's own record for the oldest KotH!
+The oldest warriors ever to be seen in first place have been:
+
+ #  Name          Author             Age
+ 1  Son of Vain   Oversby/Pihlaja   1667
+ 2  Reepicheep    Grabun/Metcalf     974
+ 3  nPaper II     Paul-V Khuong      925
+ 4  Quicksilver   Michal Janeczek    759
+ 5  Behemot       Michal Janeczek    689
+ 6  Jinx          Christian Schmidt  533
+ 7  Inky          Ian Oversby        492
+ 8  Eraser II     Ken Espiritu       463
+ 9  Blade         Fizmo              450
+10  Toxic Spirit  Philip Thorne      424
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Son of Vain            Oversby/Pihlaja   1743 *  Q^4 -> Stone/imp
+ 2  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 3  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 4  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 5  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 6  Reepicheep             Grabun/Metcalf     974 *  Q^4 -> Paper/stone
+ 7  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 8  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+ 9  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+10  Eraser II              Ken Espiritu       781    Scanner
+11  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+12  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+13  Blade                  Fizmo              643    Qscan -> Scanner
+14  Revenge of the Papers  Fizmo+Roy          605    Q^4 -> Paper
+15  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+16  Firestorm              John Metcalf       589    MiniQ^3 -> Paper/imp
+17  Claw                   Fizmo              525    Qscan -> Scanner
+18  Hazy Test 63           Steve Gunnell      518 *  Scanner
+19  Return of Vanquisher   Lukasz Grabun      505 *  Q^4 -> Bomber
+20  G3-b                   David Moore        503    Twoshot
+21  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+22  Revival Fire           P.Kline            468    Bomber
+23  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+24  The Stormkeeper        Christian Schmidt  460    Q^3 -> Stone/imp
+25  Positive Knife         Ken Espiritu       449    Q^4 -> Stone/imp
+
+Three warrior give up the eternal climb, while two others achieve new
+heights within the top 25.  As always Son of Vain leads the HoF.  Next
+in will be Toxic Spirit, being just 25 challenges away...
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  45/ 36/ 19                    Sunset          David Moore    154.5     50
+ 2  41/ 34/ 25            Mantrap Arcade          Dave Hillis    147.9    119
+ 3  33/ 21/ 46               Son of Vain      Oversby/Pihlaja    145.3    292
+ 4  46/ 47/  7                   Recon 2          David Moore    144.9     73
+ 5  33/ 24/ 44              Bitter Sweet        Lukasz Grabun    142.2    114
+ 6  33/ 24/ 43                      Numb         Roy van Rijn    141.3     49
+ 7  41/ 41/ 18           Bustling Spirit    Christian Schmidt    140.7    162
+ 8  40/ 40/ 20  Return of Vanquisher PsP        Lukasz Grabun    139.6    132
+ 9  39/ 38/ 23                  Ordinary         John Metcalf    139.5      5
+10  40/ 40/ 20              Bubbly Creek        Philip Thorne    139.5      2
+11  41/ 42/ 17            Creeping Death    Christian Schmidt    139.1     14
+12  26/ 14/ 60                unheard-of    Christian Schmidt    138.2      7
+13  32/ 27/ 41                Reepicheep       Grabun/Metcalf    138.0    321
+14  31/ 24/ 46                   PolyPap        Jakub Kozisek    137.6     80
+15  28/ 19/ 53            RotPendragon 2    Christian Schmidt    137.6     58
+16  40/ 44/ 16            Herbal Avenger      Michal Janeczek    136.8    204
+17  31/ 26/ 43               Paper party            G.Labarga    135.5     10
+18  28/ 20/ 52                      Dawn         Roy van Rijn    135.1     99
+19  31/ 28/ 41                      test         Roy van Rijn    134.3      1
+20  28/ 23/ 49                         V    Christian Schmidt    133.6     79
+
+61 successful challenges have passed since last issue.  Mantrap Arcade held
+the top of the hill for 7 challenges, before Sunset appeared.  David Moore's
+p-switcher claimed first place on arrival, and hasn't once dropped below,
+being at the top for all 50 challenges.  CrazyShot 2 perished (age 249), as
+did Blowrag (192), Incredible! (180) and Microvenator (122).
+
+Sunset has an impressive average score of 154.02, with individual scores
+ranging from 147 to 165.  It has held, at the very least, a 3 point lead
+over second place and switches between a scanner with anti-imp scan-step
+and a paper/stone.  With the code published however, how long will Sunset
+remain King?
+_______________________________________________________________________________
+The '94 Draft Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Reepicheep             Grabun/Metcalf     321 *  Q^4 -> Paper/stone
+ 2  Son of Vain            Oversby/Pihlaja    292 *  Q^4 -> Stone/imp
+ 3  CrazyShot 2            Christian Schmidt  249    Q^4 -> Oneshot
+ 4  Herbal Avenger         Michal Janeczek    204 *  Scanner
+ =  Revenge of the Papers  Fizmo/Roy          204    Q^4 -> Paper
+ 6  Uninvited              John Metcalf       194    MiniQ^3 -> Stone/imp
+ 7  Blowrag                Metcalf/Schmidt    192    Q^4 -> Paper/imp
+ 8  Incredible!            John Metcalf       180    Paper/imp
+ 9  Wallpaper              Christian Schmidt  175    Q^4 -> Paper/stone
+10  Bustling Spirit        Christian Schmidt  162 *  P-warrior
+11  Joyful Maw             Dave Hillis        143    P-warrior
+12  Paperazor              Christian Schmidt  141    Paper
+13  Return of Vanquisher   Lukasz Grabun      132 *  Q^4 -> Bomber
+ =  Self-Modifying Code    Ben Ford           132    P-warrior
+15  Combatra               David Moore        131    Boot distance calculator
+16  Mad                    Christian Schmidt  123    P-warrior
+17  Microvenator           Michal Janeczek    122    P-warrior
+18  Mantrap Arcade         Dave Hillis        119 *  P-warrior
+19  Cyanide Excuse         Dave Hillis        117    P-warrior
+20  Bitter Sweet           Lukasz Grabun      114 *  Q^4 -> Stone/imp
+21  Shapeshifter           Michal Janeczek    107    P-warrior
+22  Dawn                   Roy van Rijn        99 *  Q^4 -> Paper/imp
+23  Help...I'm Scared      Roy van Rijn        98    Oneshot
+ =  Dark Lowlands          Roy van Rijn        98    *Unknown*
+25  Dry Ice                Ben Ford            92    P-warrior
+
+CrazyShot 2 ends it's days age 249, and loses its number 2 spot to SoV.
+_______________________________________________________________________________
+Summary of IRC Speed Redcoding Challenge Results:
+
+ # ORGANISER          FIRST PLACE        CORE  DETAILS
+----------------------------------------------------------------------------
+ 1 John Metcalf       Christian Schmidt    80  nano core
+ 2 Philip Thorne      Roy van Rijn        800  values of -1 & 1 forbidden
+ 3 Roy van Rijn       Philip Thorne      8000  only values -1, 0 & 1 allowed
+ 4 Mizcu              Thorne/Kozisek       20  super-tiny core
+ 5 Christian Schmidt  Jakub Kozisek       800  modes { } < > forbidden
+ 6 Paul V-Khuong      Christian Schmidt   211  sub-sequence of opcodes
+ 7 Sascha Zapf        John Metcalf        800  SPL / JMP restrictions
+ 8 Roy van Rijn       John Metcalf        800  reversible warriors!
+ 9 John Metcalf       Christian Schmidt  2520  3-way, only modes { } < >
+10 Christian Schmidt  John Metcalf        800  .i & # forbidden
+11 Lukasz Grabun      John Metcalf       8192  restricted '88 rules
+12 Philip Thorne      Roy van Rijn       8000  grey warrior
+13 John Metcalf       Lukasz Adamowski   2520  multi-warrior limited process
+14 Christian Schmidt  John Metcalf        800  SNE / SEQ / CMP forbidden
+15 Lukasz Grabun      John Metcalf       8000  white warrior
+16 Roy van Rijn       John Metcalf        800  p-space supplied components
+17 John Metcalf       Mizcu/Thorne       2520  team-play
+18 Philip Thorne      Roy van Rijn       8000  3-way white+grey warrior
+
+Every Sunday at 7:00pm (GMT) Corewar folk from here, there and everywhere
+gather in #COREWARS on IRC.KOTH.ORG to chat about all things Corewar.  With
+so many Redcoders together at once, it was only a matter of time before
+they wished to compare their Redcoding skills - the 30 minute tournament
+was born.
+
+Typically participants have to create a competitive warrior for an unusual
+environment, or using a tricky subset of Redcode, with less time available
+than most players take to select a name or tweak the boot distance!  An
+average of 7 Redcoders play each week with the record to date being 12.
+For more info on the individual rounds, you can find the results at:
+
+  http://myweb.tiscali.co.uk/corewar/corewar
+_______________________________________________________________________________
+The Hint - Paper and Quick-Scanner by Christian Schmidt
+
+If you're working on a successful paper, usually you will test/benchmark
+your idea against scanners and oneshots to be sure the constants are well
+chosen.  If you have finalized your paper, don't sit back and relax,
+because that's not all that can be done!!!
+
+This article focuses on the use of an additional quick-scanner beside the
+paper.  "Well, I know" one could say, "nobody would write a paper without a
+quick-scanner".  But nothing is published so far about the influence in
+scoring if it is used.
+
+Some of the advantages are evident.  The paper will gain some more wins
+even if it battles against another paper (which usually ends close to 100%
+ties).  Also, keep in mind modern quick-scanning warriors win about 10-15%
+of the battle (if fighting against another quick-scanning warrior) only
+with their quick-scanning part.
+
+But how is the situation against a scanner?  Usually they don't use a
+quick-scanner.  One effect should be that the quickscanner part acts
+additionally as a decoy which should be good against scanner.  But how
+strong is the influence in reality?  To answer this question, I decided to
+have a closer look, focusing on a variety of different paper and scanners.
+
+The aspect we want to figure out first is:  How much influence a decoy has
+on the scoring of a paper against scanner.  Usually they should score
+slightly better, because the scanner will be entraped to wipe the "useless"
+decoy and give the paper a bit more time for a lucky hit or to gain enough
+processes to survive.
+
+The test warriors looks like:
+
+
+;code of the paper is here (copy'n'pasted from the original source. Also
+                            includes the original bootstrapping)
+
+
+Decoy equ length
+
+for (85-Decoy)
+dat 0, 0
+rof
+
+i for Decoy
+dat <i, >-i
+rof
+
+end
+
+
+The following scanner were used for the test:  Claw, Herbal Avenger,
+myBlur2, Stalker, Win!, Willow, Zoom, Origin of Storm.
+
+And here are the scoring for eight different papers, having various length
+decoys:
+
+BR: Benji's Revenge;  D: Disincentive;  F: Fixed;  nP: nPaper II;
+RP: Paper of Reepicheep;  RoP: Revenge of the Papers
+MJ: Mini Return of the Jedimp;  RF: Return of Fugitive
+
+Decoy
+length    BR      D       F       nP     RP      RoP     MJ      RF
+---------------------------------------------------------------------
+0       126,0   141,6   148,9   133,5   152,6   120,9   123,1   146,3
+10      125,4   142,9   146,9   134,8   152,0   123,6   125,6   147,9
+20      123,4   143,5   148,8   131,3   152,1   123,1   124,6   148,9
+30      126,2   145,3   149,7   132,2   153,4   123,9   125,7   149,3
+40      128,3   147,9   149,8   135,9   151,9   126,4   124,7   152,5
+50      126,3   146,1   150,7   138,0   152,8   125,8   124,7   152,4
+60      123,9   145,2   149,1   136,6   151,0   126,2   124,7   153,1
+70      128,8   143,1   148,5   137,6   153,7   126,4   126,5   154,1
+80      128,1   143,2   149,8   138,9   151,8   127,2   128,0   154,1
+
+highest
+increase  2,8     6,3     1,8     5,4     1,1     6,3     4,9     7,8
+
+
+The results weren't very surprising.  All paper gain a few points by having
+a decoy.  Interesting is the inconsistency of the points increase depending
+on the length of the decoy for the different papers.  If we look to the
+average scores for the length of the decoy we can see more clearly that the
+optimal decoy should have a length of at least 30 instructions.  The Q^3
+should fit this length while the mini Q^4 is a bit too small to act
+successfully as a decoy.
+
+
+length Average  incr.
+---------------------
+ 0      136,6   0,0
+10      137,4   0,8
+20      137,0   0,4    \-> mini Q^4
+30      138,2   1,6    /
+40      139,7   3,1    --> Q^3
+50      139,6   3,0
+60      138,7   2,1    --> Q^2
+70      139,8   3,2
+80      140,1   3,5
+
+
+Now let's have a look how well the quick-scanners alone scores against the
+scanners.  Both quick-scanners start at the end of the scanning phase a djn
+0, #200.  The quick-scanner will die after 200 additional cycles to be sure
+all kills due the bombing are recorded.  The results shows as expected,
+that the Q^3 scores much better than the mini Q^4.
+
+qscanner    length    pts.     +decoy
+-------------------------------------
+  Q^3         42      15,6      18,7
+ mQ^4         26      10,4      12,0
+
+
+If we now use both quick-scanners together with the paper we get the
+following results:
+
+
+length    BR      D       F       nP     RP      RoP     MJ      RF
+---------------------------------------------------------------------
+Q^3     136,3   153,5   158,8   142,0   161,1   140,7   136,3   162,2
+mQ^4    129,4   148,1   156,6   135,4   156,8   136,9   129,9   154,6
+
+The points increase compared to the pure paper are shown below:
+
+Q^3     10,3    11,9    9,9     8,5     8,5     19,8    13,1    15,9
+mQ^4    3,4     6,5     7,6     1,9     4,1     16,1    6,8     8,4
+
+Well, that's what we've expected after the tests with the quick-scanner.
+The reason why the points increase isn't as high as expected from the tests
+above can be explained with the delayed launching of the paper, because the
+quick-scanner will executed first.  Interesting is the behaviour of
+Revenge of the Paper, because it scores with both quick-scanners much
+better than expected.  The reason seem to be that it only launches the two
+copies of itself and don't use the code in front of the quick-scanner.
+
+Finally we can say that a Q^3 quickscanner is the better choice if the
+opponent is a scanner.  Against other strategies it can respond
+differently.  But this can be discussed as well as the influence of booting
+in a further article.
+_______________________________________________________________________________
+Extra Extra - unheard-of by Christian Schmidt
+
+The last few months I have been engaged in improving papers carrying a
+stone in their main body.  However, most of the ideas (including that one
+already shown in the corewar lexicon) weren't effective enough against
+modern scanner and oneshots.  The reason seemed to be mainly a
+disadvantageous process allocation between self-replication and bombing.
+The bombing run was way too slow to trouble scanners.  Therefore the first
+and most important step in developing a successful "silk-stone" would be
+finding a good process allocation.
+
+My first idea was the use of an evolved-style paper.  It starts the self-
+replication using a spl 0 instruction.  I thought this should push enough
+processes into the stone.  But all my attempts were unsuccessful.  So, I
+stopped this path and tried something much more simple.
+
+I remembered "Minireturn of the Jedimp" with its bombing imp-launcher which
+uses a spl #something right behind the spl/mov-silk.  Well, why not simply
+add a dwarf right behind the spl/mov-silk.  It should act like a pure stone
+with a steady deceleration of the self-replication.
+
+So, I decided to use a 4-line stone with good bombing/corecolouring and
+just
+one constant, for ease of optimization.  Then I added a silk-pair in front
+of it and voila, my first "silk-dwarf" was born:
+
+
+        spl     2
+        spl     1
+        spl     1
+
+silk1   spl     @0,             <pStep
+        mov.i   }-1,            >-1
+        spl     #sStep,         >-sStep
+        mov     {sStep,         {-sStep+1
+        add     -2,             -1
+        djn.f   @0,             {-2
+
+
+I have tested in the meantime several other types of stone, including
+Carbonite-style stones, and I found that the above mentioned one is by far
+the best.
+
+
+Finally I added after optimizing pStep and sStep a quickscanner and named
+it He Bombs Alone:
+
+
+;redcode-94nop
+;name He Bombs Alone
+;author Christian Schmidt
+;strategy ****************
+;strategy * - quickscan  *
+;strategy * - boot       *
+;strategy * - silk-dwarf *
+;strategy ****************
+;assert 1
+
+pStep  equ    558
+sStep  equ    2579
+
+org qGo
+
+pGo     spl     2,              }qC
+qTab2   spl     1,              }qD
+        spl     1,              }qE
+        mov.i   <pBo,           {pBo
+pBo     jmp     pGo+955,       pEnd+1
+
+        for     7
+        dat     0,              0
+        rof
+
+        spl     @0,             <pStep
+        mov.i   }-1,            >-1
+        spl     #sStep,         >-sStep
+        mov     {sStep,         {-sStep+1
+        add     -2,             -1
+pEnd    djn.f   @0,             {-2
+
+        for     27
+        dat     0,              0
+        rof
+
+        dat     0,              }qA
+qTab1   dat     0,              }qB
+
+        for     27
+        dat     0,              0
+        rof
+
+qX      equ     3080
+qA      equ     3532
+qB      equ     2051
+qC      equ     6177
+qD      equ     4696
+qE      equ     3215
+qF      equ     583
+
+qStep   equ     7
+qTime   equ     16
+qOff    equ     87
+
+qBomb   dat     {qOff,          qF
+
+qGo     sne     qPtr+qX*qE,     qPtr+qX*qE+qE
+        seq     <qTab2+1,       qPtr+qX*(qE-1)+(qE-1)
+        jmp     qDec,           }qDec+2
+
+        sne     qPtr+qX*qF,     qPtr+qX*qF+qD
+        seq     <qBomb,         qPtr+qX*(qF-1)+qD
+        jmp     qDec,           }qDec
+
+        sne     qPtr+qX*qA,     qPtr+qX*qA+qD
+        seq     <qTab1-1,       qPtr+qX*(qA-1)+qD
+        djn.a   qDec,           {qDec
+
+        sne     qPtr+qX*qB,     qPtr+qX*qB+qD
+        seq     <qTab1,         qPtr+qX*(qB-1)+qD
+        djn.a   qDec,           *0
+
+        sne     qPtr+qX*qC,     qPtr+qX*qC+qC
+        seq     <qTab2-1,       qPtr+qX*(qC-1)+(qC-1)
+        jmp     qDec,           {qDec+2
+
+        sne     qPtr+qX*qD,     qPtr+qX*qD+qD
+        jmz.f   pGo,            <qTab2
+
+qDec    mul.b   *2,             qPtr
+qSkip   sne     <qTab1,         @qPtr
+        add.b   qTab2,          qPtr
+qLoop   mov     qBomb,          @qPtr
+qPtr    mov     qBomb,          }qX
+        sub     #qStep,         @qSkip
+        djn     qLoop,          #qTime
+        djn.f   pGo,            #0
+
+        end
+
+
+Below are the results against some selected warriors:
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     He Bombs Alone          Christian Schmidt        31  28  41   8370
+  2     CrazyShot 2             Christian Schmidt        52  23  26   363
+  3     Hazy Lazy ...           Steve Gunnell            50  26  25   349
+  4     G2                      David Moore              48  25  28   340
+  5     Geist v0.1              Ben Ford                 48  26  26   338
+  6     Herbal Avenger          Michal Janeczek          44  25  31   326
+  7     Return of Vanquisher    Lukasz Grabun            42  33  26   300
+  8     Thunderstrike           Lukasz Grabun            21   4  76   275
+  9     Recon 2                 David Moore              39  45  17   265
+ 10     Firestorm               John Metcalf             20   9  72   260
+ 11     Numb                    Roy van Rijn             29  29  42   260
+ 12     Quicksilver             Michal Janeczek          21  11  69   260
+ 13     Son of Vain             Oversby/Pihlaja          18   6  76   260
+ 14     pre75-z47a              John Metcalf             38  46  17   259
+ 15     Dawn                    Roy van Rijn             17   6  78   255
+ 16     myBlur2                 Paulsson                 33  40  28   251
+ 17     nPaper II               Paul-V Khuong            23  20  58   250
+ 18     Benj's Revenge 1.0      Robert Macrae            20  20  60   240
+ 19     Behemot                 Michal Janeczek          33  47  21   236
+ 20     Willow                  John Metcalf             34  51  16   235
+ 21     Uninvited               John Metcalf             13   9  79   232
+ 22     Jinx                    Christian Schmidt        29  43  29   228
+ 23     Stalker                 P.Kline                  32  52  16   224
+ 24     Reepicheep              Grabun/Metcalf           24  37  40   223
+ 25     Candy                   Lukasz Grabun             9   6  86   222
+ 26     Win!                    David Moore              26  56  18   194
+ 27     Revenge of the Papers   Fizmo+Roy                11  24  66   194
+ 28     Wipe Uncle              Christian Schmidt        16  34  51   194
+ 29     Disincentive            Lukasz Grabun            21  45  35   193
+ 30     Zooom...                John Metcalf             26  57  17   190
+ 31     Claw                    Fizmo                    23  67  10   158
+ 32     Fixed                   Ken Espiritu              8  56  37   121
+
+Wow, this isn't too bad.  It scores nicely against all carpet laying
+scanners and loses only against Blur-style scanners and oneshots.
+Important to mention is it shows surprisingly many wins against 'non-imp'
+papers and stone/papers.  The bomb run seems fast enough to achieve more
+than 50% wins against some of them, such as Disincentive and Fixed.  Really
+impressive....
+
+To get over the weakness against oneshots I included a further paper.  A
+6-line imp paper which I had already optimized for "Fast Action".
+Important is this case, is the fact both paper uses the same number of
+parallel processes.  So, I then had to generate the processes just once.  I
+added a mini Q^4 scanner and booted both papers away from the quickscanner.
+After optimizing the boot-distances for an optimal interaction I had the
+final code of unheard-of.
+
+Below are the results against some selected warriors:
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     unheard-of              Christian Schmidt        27  14  60   8642
+  2     Hazy Lazy ...           Steve Gunnell            34  19  48   296
+  3     Recon 2                 David Moore              40  38  23   283
+  4     Willow                  John Metcalf             35  50  16   239
+  5     Return of Vanquisher    Lukasz Grabun            23  28  50   237
+  6     Win!                    David Moore              31  45  25   235
+  7     Thunderstrike           Lukasz Grabun            11   5  85   235
+  8     Behemot                 Michal Janeczek          26  35  39   234
+  9     Herbal Avenger          Michal Janeczek          21  32  48   221
+ 10     Dawn                    Roy van Rijn              8   7  86   219
+ 11     Son of Vain             Oversby/Pihlaja           8   6  87   219
+ 12     pre75-z47a              John Metcalf             22  36  43   215
+ 13     Quicksilver             Michal Janeczek           8   9  83   214
+ 14     nPaper II               Paul-V Khuong             8  11  82   209
+ 15     Firestorm               John Metcalf              7  10  84   207
+ 16     Benj's Revenge 1.0      Robert Macrae             8  16  77   201
+ 17     Uninvited               John Metcalf              6  12  82   200
+ 18     CrazyShot 2             Christian Schmidt        13  26  62   199
+ 19     Candy                   Lukasz Grabun             3   8  90   197
+ 20     Stalker                 P.Kline                  19  44  37   188
+ 21     Revenge of the Papers   Fizmo+Roy                 4  14  83   186
+ 22     Jinx                    Christian Schmidt        14  37  50   183
+ 23     Claw                    Fizmo                    24  57  20   181
+ 24     G2                      David Moore               7  26  68   177
+ 25     Geist v0.1              Ben Ford                 10  31  60   176
+ 26     Numb                    Roy van Rijn              6  26  69   173
+ 27     Zooom...                John Metcalf             14  44  43   166
+ 28     Wipe Uncle              Christian Schmidt         4  25  72   164
+ 29     Reepicheep              Grabun/Metcalf            5  28  68   162
+ 30     myBlur2                 Paulsson                  8  37  56   159
+ 31     Disincentive            Lukasz Grabun             3  29  69   155
+ 32     Fixed                   Ken Espiritu              3  43  55   127
+
+The result was really exciting for me.  It wasn't losing its offensive
+power that much but was converting 14% loses into ties!!!  It was looking
+nearly unbeatable :)
+
+So then, without further ado here is the final code:
+
+
+;redcode-94nop
+;name unheard-of
+;author Christian Schmidt
+;strategy ****************
+;strategy * - quickscan  *
+;strategy * - boot       *
+;strategy * - silk-dwarf *
+;strategy * - paper/imps *
+;strategy ****************
+;strategy test version only!!!
+;assert 1
+
+pStep  equ    558
+sStep  equ    2579
+iStep  equ    286
+bStep  equ    4419
+iSize  equ    2667
+
+org qGo
+
+pGo     spl     2,              }qC
+qTab2   spl     1,              }qD
+        spl     1,              }qE
+
+        mov.i   <pBo,           {pBo
+pBo     spl     pGo+955,       pEnd+1
+        mov.i   <iBo,           {iBo
+iBo     jmp     pGo+1566,       iEnd+1
+
+        for     5
+        dat     0,              0
+        rof
+
+        spl     @0,             <pStep
+        mov.i   }-1,            >-1
+        spl     #sStep,         >-sStep
+        mov     {sStep,         {-sStep+1
+        add     -2,             -1
+pEnd    djn.f   @0,             {-2
+
+        for     11
+        dat     0,              0
+        rof
+
+        spl     @0,             >iStep
+        mov     }-1,            >-1
+        spl     @0,             <iSize+1
+        mov     }-1,            >-1
+        mov.i   #bStep,         {0
+iEnd    mov.i   #iSize,         *0
+
+        for     10
+        dat     0,              0
+        rof
+
+        dat     0,              }qA
+qTab1   dat     0,              }qB
+
+        for     27
+        dat     0,              0
+        rof
+
+qX      equ     3080
+qA      equ     3532
+qB      equ     2051
+qC      equ     6177
+qD      equ     4696
+qE      equ     3215
+qF      equ     583
+
+qStep   equ     7
+qTime   equ     16
+qOff    equ     87
+
+qBomb   dat     {qOff,          qF
+
+qGo     sne     qPtr+qX*qE,     qPtr+qX*qE+qE
+        seq     <qTab2+1,       qPtr+qX*(qE-1)+(qE-1)
+        jmp     qDec,           }qDec+2
+
+        sne     qPtr+qX*qF,     qPtr+qX*qF+qD
+        seq     <qBomb,         qPtr+qX*(qF-1)+qD
+        jmp     qDec,           }qDec
+
+        sne     qPtr+qX*qA,     qPtr+qX*qA+qD
+        seq     <qTab1-1,       qPtr+qX*(qA-1)+qD
+        djn.a   qDec,           {qDec
+
+        sne     qPtr+qX*qB,     qPtr+qX*qB+qD
+        seq     <qTab1,         qPtr+qX*(qB-1)+qD
+        djn.a   qDec,           *0
+
+        sne     qPtr+qX*qC,     qPtr+qX*qC+qC
+        seq     <qTab2-1,       qPtr+qX*(qC-1)+(qC-1)
+        jmp     qDec,           {qDec+2
+
+        sne     qPtr+qX*qD,     qPtr+qX*qD+qD
+        jmz.f   pGo,            <qTab2
+
+qDec    mul.b   *2,             qPtr
+qSkip   sne     <qTab1,         @qPtr
+        add.b   qTab2,          qPtr
+qLoop   mov     qBomb,          @qPtr
+qPtr    mov     qBomb,          }qX
+        sub     #qStep,         @qSkip
+        djn     qLoop,          #qTime
+        djn.f   pGo,            #0
+
+        end
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
+care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
+<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
+<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>

@@ -1,0 +1,778 @@
+
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 89                                                         11 April, 2004
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of Corewar.  Emphasis is
+placed on the most active hills - currently the '94 no-pspace, '94 draft
+and beginner hills.  Coverage will follow wherever the action is.  If you
+haven't a clue what I'm talking about then check out these five-star
+Internet locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://sal.math.ualberta.ca/               ;Sal Hills
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+  http://www.corewar.info/                   ;Fizmo
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+Redcode Frenzy News:  Four rounds have taken place since last issue.
+Christian Schmidt takes first place in the Extended '88 Round, while
+Zul Nadzri wins the '94 Tourney Round.  In the Triple Challange Round,
+Joshua Hudson is victorious - and in the Big Sibling Round, Chip Wendell
+claims first.
+
+In the overall standings, Roy van Rijn retains his top spot, followed
+by Christian Schmidt, still holding second place.  David Houston climbs
+to third, displacing Zul Nadzri down one position.
+
+Web-News:  Lukasz Grabun's homepage has moved to:
+
+  http://www.dwarfscorner.com/
+
+Ilmari Karonen's Beginner's Guide to Redcode has moved to:
+
+  http://vyznev.net/corewar/
+
+El Kauka has created the Absolute Beginner Hill at:
+
+  http://home-t-online.de/home/familie.kersten/johannes/
+
+German Labarga announces the sixth of his popular mini challenges on:
+
+  http://www.estadium.ya.com/neogryzor/corewars.htm
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  33/ 15/ 52                Devilstick         Roy van Rijn    151.8    154
+ 2  47/ 44/  8                     Arrow    Christian Schmidt    150.5     40
+ 3  38/ 25/ 37               Son of Vain      Oversby/Pihlaja    150.2   2405
+ 4  46/ 42/ 12             HazyLazy C 11                CS SG    149.5     49
+ 5  38/ 27/ 35                 Armadillo        Lukasz Grabun    148.7    146
+ 6  37/ 26/ 37                   Gremlin      van Rijn/Grabun    148.2     71
+ 7  46/ 44/ 11            Bottomless Pit            Fizmo/Roy    148.0      2
+ 8  44/ 41/ 16                 Deathstar         Roy van Rijn    146.7      4
+ 9  36/ 27/ 36           slime test 1.00        David Houston    145.0    167
+10  38/ 30/ 32               Ironic Imps         Roy van Rijn    145.0    365
+11  37/ 29/ 34                   Arctica    Christian Schmidt    144.8    130
+12  38/ 31/ 31 Spiritual Black Dimension    Christian Schmidt    144.2    196
+13  44/ 45/ 12         spell of the moon         John Metcalf    143.0      9
+14  40/ 39/ 21                     Quirk    Christian Schmidt    142.0    186
+15  36/ 30/ 35             Fast Action V    Christian Schmidt    141.8      5
+16  35/ 29/ 36                Devilish 2        David Houston    141.7      7
+17  45/ 48/  7              Kenshin D 10        Steve Gunnell    141.1     37
+18  43/ 46/ 11             Dandelion III         Schmidt/Zapf    141.0     41
+19  43/ 45/ 12         something strange         John Metcalf    141.0      3
+20  43/ 47/ 10               Filling....         Roy van Rijn    138.6      1
+
+The hill has aged 320 since last issue, bringing it to a total age of 3159.
+All but two warriors have been pushed from the hill.  The survivors are
+both stone/d-clear/imp - Son of Vain (which recently held the top spot, age
+2401) and Ironic Imps.
+
+Those who didn't last the duration include Reepicheep (age 1347), Hazy Test
+63 (1119), Recon 2 (826), Static (344), devilish 2 (330), Squire of Silkland
+(187), Hammerhead (177), Dawn 2 (166), King of Metal (160), Kenshin B test 62
+(154), Soldier of Silkland (145), Damage Inc. Act II (139) and queen of the
+streets (139).
+
+Warriors which entered the hill since last issue and were pushed off age
+100+ total 5, O--* (age 263), Dandelion II (157), B94 (141), goonie
+(120) and Revenge Again (119).
+
+Koth report: 10 warriors resided at number one for at least 10 challenges.
+Most often seen there has been Devilstick (after 119 challanges), followed
+by King of Metal (44), Recon 2 (34), Spiritual Black Dimension (29),
+Napalm Dawn (18), O--* (16), HazyLazy C 11 (13), Arrow (12), Hazy Test 63
+(11) and Ironic Imps (10).
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Son of Vain            Oversby/Pihlaja   2405 *  Q^4 -> Stone/imp
+ 2  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 3  Reepicheep             Grabun/Metcalf    1347    Q^4 -> Paper/stone
+ 4  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 5  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 6  Hazy Test 63           Steve Gunnell     1119    Scanner
+ 7  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 8  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 9  Recon 2                David Moore        826    Scanner
+10  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+11  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+12  Eraser II              Ken Espiritu       781    Scanner
+13  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+14  Toxic Spirit           Philip Thorne      685    One-shot
+15  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+16  Blade                  Fizmo              643    Qscan -> Scanner
+17  Return of Vanquisher   Lukasz Grabun      640    Q^4 -> Bomber
+18  Revenge of the Papers  Fizmo/Roy          605    Q^4 -> Paper
+19  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+20  Firestorm              John Metcalf       589    MiniQ^3 -> Paper/imp
+21  Claw                   Fizmo              525    Qscan -> Scanner
+22  G3-b                   David Moore        503    Twoshot
+23  Thunderstrike          Lukasz Grabun      484    Q^4 -> Stone/imp
+24  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+25  Revival Fire           P.Kline            468    Bomber
+26  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+27  The Stormkeeper        Christian Schmidt  460    Q^3 -> Stone/imp
+28  Positive Knife         Ken Espiritu       449    Q^4 -> Stone/imp
+29  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+31  G2-b                   David Moore        413    Twoshot
+32  Qtest                  Christian Schmidt  394    Q^3 -> Paper
+33  Stalker                P.Kline            393    Scanner
+34  Decoy Signal           Ben Ford           378    Q^4 -> Paper/imp
+35  Ironic Imps            Roy van Rijn       365 *  Q^4 -> Stone/imp
+36  unheard-of             Christian Schmidt  355    Q^4 -> Paper/imp
+37  Hazy Lazy ... again    Steve Gunnell      350    Scanner
+ =  Dawn                   Roy van Rijn       350    Q^4 -> Paper/imp
+39  Static                 Miz                344    Q^4 -> Stone/imp
+40  devilish 2             David Houston      330    Q^4 -> Stone/imp
+ =  Vain                   Ian Oversby        330    Q^2 -> Stone/imp
+42  Omnibus                John Metcalf       327    Q^2 -> Stone/imp
+43  Win!                   David Moore        322    Scanner
+44  Return of the PendragonChristian Schmidt  318    Q^4 -> Stone/imp
+45  Numb                   Roy van Rijn       312    Q^4 -> Paper/stone
+46  Hazy Lazy...           Steve Gunnell      309    Scanner
+47  Now you're in trouble! John Metcalf       290    Q^4 -> Stone/imp
+48  Hazy Lazy ... reborn   Steve Gunnell      284    Scanner
+49  Candy II               Lukasz Grabun      282    Q^4 -> Stone/imp
+ =  Pixie                  Lukasz Grabun      282    Q^4 -> Stone/imp
+
+There are only 2 active warriors in this extended HoF, compared to last
+issue's 4.  The warriors are represented by 18 Stone/imps, 13 scanners,
+6 paper/imps, 4 bombers and 3 each of one-shots, papers and paper/stones.
+
+18 authors hold a place in the HoF.  Schmidt has most, with 8 warriors.
+Grabun and Metcalf both have 6 - Gunnell, Moore, Oversby and van Rijn
+4 each - Ford has 3 - Espiritu, Janeczek, Kline and Marsden have 2 each
+and the remaining 6 authors, just the one warrior.
+
+Of these redcoders, 3 have 4 different strategies in the HoF.  They are
+Metcalf, van Rijn and Schmidt.
+
+How did the warriors in the HoF meet their end?  Three were ;killed by
+their author (Return of Vanquisher, Thunderstrike and Hazy Lazy...).  The
+fate of another three is shrouded in mystery - who killed Boys are Back
+in Town 1.1, Zooom... and Win!?
+
+32 of the remaining 42 met their demise at the hands of a professional
+giant slayer, a redcoder with two or more HoF kills under their belt!
+van Rijn has slain most, with 8 kills.  Metcalf has 6 kills - Gunnell,
+Labarga and Schmidt have 4 each - Grabun and Pihlaja 3 each.
+
+Beware a warrior with 'test' in it's name, 17 HoF entries fell to one.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  39/ 27/ 34 Spiritual Black Dimension    Christian Schmidt    150.2     35
+ 2  31/ 14/ 55                Devilstick         Roy van Rijn    147.6     26
+ 3  39/ 33/ 28                   Sunrise           Zul Nadzri    146.2     45
+ 4  35/ 25/ 40                Reepicheep       Grabun/Metcalf    144.5    465
+ 5  36/ 27/ 37                   Arctica    Christian Schmidt    144.2     25
+ 6  45/ 46/  9                     Arrow    Christian Schmidt    143.9     16
+ 7  35/ 26/ 39                Devilish 2        David Houston    142.8      5
+ 8  42/ 42/ 15         something strange         John Metcalf    142.3      1
+ 9  43/ 44/ 12               Dandelion 3         Schmidt/Zapf    142.3     19
+10  34/ 26/ 41               Son of Vain      Oversby/Pihlaja    141.7    436
+11  41/ 41/ 18                 Cyberpunk    Christian Schmidt    141.5     43
+12  33/ 24/ 43                   Gremlin      van Rijn/Grabun    141.5     21
+13  36/ 31/ 33                    Numb 2         Roy van Rijn    141.0     27
+14  41/ 42/ 17  Return of Vanquisher PsP        Lukasz Grabun    140.0    276
+15  32/ 23/ 45           slime test 1.00        David Houston    139.9     13
+16  34/ 28/ 38              Bitter Sweet        Lukasz Grabun    139.7    258
+17  31/ 23/ 45                  Netpaper        David Houston    139.5     67
+18  42/ 44/ 15             HazyLazy C 11                CS SG    139.3     17
+19  42/ 46/ 12 22% Organic Stain Remover            Roy/bvowk    139.0      2
+20  30/ 23/ 47             Muscle Hammer           Zul Nadzri    137.9      4
+
+After an age of 56, just 5 warriors remain on the hill from last issue.
+Numb is one of those which left the hill, at an age 167.
+
+Hand-shake alert: the new version of Sunrise and Muscle Hammer.
+_______________________________________________________________________________
+The '94 Draft Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Reepicheep             Grabun/Metcalf     465 *  Q^4 -> Paper/stone
+ 2  Son of Vain            Oversby/Pihlaja    436 *  Q^4 -> Stone/imp
+ 3  Return of Vanquisher   Lukasz Grabun      276 *  Q^4 -> Bomber
+ 4  Bitter Sweet           Lukasz Grabun      258 *  Q^4 -> Stone/imp
+ 5  CrazyShot 2            Christian Schmidt  249    Q^4 -> One-shot
+ 6  Herbal Avenger         Michal Janeczek    237    Scanner
+ 7  Bustling Spirit        Christian Schmidt  216    P-warrior
+ 8  Revenge of the Papers  Fizmo/Roy          204    Q^4 -> Paper
+ 9  Uninvited              John Metcalf       194    MiniQ^3 -> Stone/imp
+10  Blowrag                Metcalf/Schmidt    192    Q^4 -> Paper/imp
+11  Incredible!            John Metcalf       180    Paper/imp
+12  Wallpaper              Christian Schmidt  175    Q^4 -> Paper/stone
+13  Mantrap Arcade         Dave Hillis        170    P-warrior
+14  Numb                   Roy van Rijn       167    Q^4 -> Paper/stone
+15  PolyPap                Jakub Kozisek      160    Qscan -> Paper
+16  Recon 2                David Moore        156    Scanner
+17  Joyful Maw             Dave Hillis        143    P-warrior
+18  Paperazor              Christian Schmidt  141    Q^4 -> Paper
+19  Sunset                 David Moore        138    P-warrior
+20  Dawn                   Roy van Rijn       137    Q^4 -> Paper/imp
+21  Self-Modifying Code    Ben Ford           132    P-warrior
+22  Combatra               David Moore        131    Boot distance calculator
+23  unheard-of             Christian Schmidt  128    Q^4 -> Paper/imp
+24  Mad                    Christian Schmidt  123    P-warrior
+25  Microvenator           Michal Janeczek    122    P-warrior
+
+Unheard-of is the only new entry since last issue, entering the bottom of
+the HoF just before it left the hill.
+_______________________________________________________________________________
+Current Status of the SAL Beginners Hill:
+
+ #    %W/   %L/   %T                      Name             Author Score   Age
+ 1  53.6/ 30.7/ 15.6       Studie strikes back        Sascha Zapf 176.5    25
+ 2  53.4/ 30.3/ 16.3      Shooting Star v0.262                brx 176.5     3
+ 3  52.0/ 33.8/ 14.2                   ssoBeht        Sascha Zapf 170.1    16
+ 4  52.1/ 36.0/ 11.9                  Frullato              LAchi 168.2    42
+ 5  39.6/ 18.4/ 42.1               Veenah V0.8        Sascha Zapf 160.8     1
+ 6  38.8/ 17.8/ 43.4        Paper of yesterday        Sascha Zapf 159.9    77
+ 7  39.6/ 19.5/ 40.9              Uneven Twins        Sascha Zapf 159.8    29
+ 8  48.5/ 41.9/  9.6                      Star        Sascha Zapf 155.2    30
+ 9  38.8/ 23.8/ 37.4                 Fatty boy          G.Labarga 153.7    83
+10  45.6/ 39.5/ 14.8               French Kiss              LAchi 151.7    23
+11  31.9/ 20.2/ 47.9                       Tom        David Moore 143.7    13
+12  43.3/ 45.6/ 11.1                  scizzory                Miz 141.0    72
+13  29.2/ 18.7/ 52.2                    Enigma                brx 139.6     9
+14  41.3/ 44.7/ 13.9              Neverland II       John Metcalf 138.0    71
+15  26.2/ 16.3/ 57.5                   Unknown          Anonymous 136.0    22
+16  25.2/ 16.9/ 57.9                    nGrave        Ken Hubbard 133.5    34
+17  28.2/ 23.1/ 48.7                 Smaug Imp        Ken Hubbard 133.3    39
+18  28.0/ 24.8/ 47.2                     test3                miz 131.2    86
+19  30.8/ 49.4/ 19.8                    Stoney                Miz 112.2    73
+20  29.8/ 52.1/ 18.1                 Brimstone       John Metcalf 107.4    19
+21  29.2/ 60.9/  9.8                   Canizza              LAchi  97.5    32
+22  26.5/ 58.6/ 14.9                 Repliscan  Christian Schmidt  94.5    53
+23  26.3/ 58.4/ 15.4                    doodle                brx  94.2     7
+24  26.1/ 59.0/ 15.0                Sugartooth                Miz  93.2    37
+25  14.3/ 57.4/ 28.4                DJN Stream        Ken Hubbard  71.2    27
+
+The first four ranks are held by one-shots, followed by paper in the next
+three positions.  Welcome to the two newcomers, brx and LAchi, who make an
+impressive debut.
+_______________________________________________________________________________
+Summary of IRC Speed Redcoding Challenge Results:
+
+ # ORGANISER          FIRST PLACE        CORE  DETAILS
+-----------------------------------------------------------------------------
+29 Christian Schmidt  Will 'Varfar'       800  Limited Process Tiny
+30 Christian Schmidt  Roy van Rijn       8000  LP Multi-Warrior
+31 Sascha Zapf        Roy van Rijn        800  Reversing Opcodes
+32 Christian Schmidt  Roy van Rijn        256  Multi-Warrior, maxlength 4
+33 Sascha Zapf        Christian Schmidt   800  start warrior at every instr
+34 Christian Schmidt  David Houston       800  no }, > or DJN allowed
+35 LAchi              Will 'Varfar'      400w  Multi-Warrior knockout
+_______________________________________________________________________________
+A Basic Introduction to the Anatomy of the Scanner
+---------------------------------------------------
+
+  "They will gather intelligence, lay false trails and strike at their
+   opponents suddenly and with determination."
+
+                        - A. K. DEWDNEY, Scientific American (January 1987)
+
+Philosophy of the Scanner
+-------------------------
+
+In Corewar, a battle program will execute either one, or multiple copies of
+itself.  A program which is running just one copy will often lose the round
+after a single successful attack against it.  A program which has multiple
+copies will not be beaten until each of these copies has been successfully
+dealt with.
+
+A battle program which is continually creating new copies of itself is
+described as a replicator.  No program can hope to attack copies of a
+replicating program sufficiently fast enough to keep up with the new copies
+which are constantly being spawned.
+
+The only practical solution is to use a two stage attack.  First, slow the
+rate at which the replicator is producing new copies.  Next, destroy all
+copies of the opponent program while they are incapacitated.
+
+The manner in which a replicator can be slowed is by making it split off
+useless processes.  We achive this by overwriting it with, or otherwise
+forcing it to execute, SPL instructions.
+
+Modern replicators spend approaching 50% of their time splitting off new
+processes, so we will need several consecutive SPL instructions to have any
+chance of being effective.  The number of cycles to place these is
+considerable - compared, for example, to the time taken to drop single bombs.
+
+Before spending a substantial number of cycles, it would make sense to check
+the area we are about to wipe contains an opponent, rather than empty core.
+This is precisely what a scanner is designed to do:
+
+ 1) look for an area of core which potentially contains an opponent,
+
+ 2) attack the selected area with a stun attack to slow the opponent,
+
+ 3) repeat from step 1, until an implementation determined point,
+
+ 4) the end-game - change the means of attack from stun to destroy.
+
+
+Let us take a closer look at each of these stages:
+
+
+1 - Typical Scan Loops
+----------------------
+
+First, our scanner will look through core for a location which differs from
+empty core.  If we are lucky, this will contain an active copy of the
+opponent.  Alternatively, it may have been bombed by the opponent.
+
+Scan loops come in a variety of speeds.  The ratio of scanner size to scan
+speed can make a big difference to the effectiveness of a warrior.  A
+small/fast scanner will find and attack a bigger/slower opponent more
+frequently than that opponent finds and attacks it.  It is therefore
+desirable to have the lowest possible value of size/speed.
+
+The example code in this section is labelled in a manner consistent with a
+great deal of published code.  Conventions used are:
+
+ * scan - the top of the scan loop, and the entry point for our examples.
+   Would ptr be a better entry point to the scan loops below?  Why?
+
+ * ptr - the instruction holding either one or two pointers to the
+   location(s) to be scanned.
+
+ * inc - an instruction holding the constant 'step' in both fields, so a
+   single ADD instruction can update two pointers.
+
+ * step - the distance between two scanned locations.  Some important
+   literature on 'good' scan steps is listed below in Suggested Reading.
+
+ * hop - certain scanners look at two locations which are close to each
+   other.  When something is found, they use an attack which covers both
+   locations.  Hop is the distance between such a pair of locations.
+
+ * start - the first location to be scanned.  Often chosen to maximise the
+   length of time before the scanner detects itself.
+
+
+Some examples of the most common forms of scan loop follow:
+
+.5c: the simplest, with a comparatively poor size/speed ratio.  Upgrade from
+a .5c loop to .66c for a guaranteed improvement.  Instructions with zero a &
+b fields such as SPL #0,0 are invisible to the f-scan used here.
+
+scanA   ADD     #step,          ptrA
+ptrA    JMZ.F   scanA,          start  ; scan 1 location every 2 cycles
+
+
+.66c: for scanners up to length 8, .66c provides the optimal ratio.  The
+data at incB will usually be combined with another instruction.  For example,
+in Blur 2 the data is held in the SPL above the clear.
+
+Having two scan pointers is one disadvantage of this loop.  When the scan
+triggers it is neccessary to either determine which pointer holds the
+location to be attacked, or else attack both.
+
+An effective variation is to change the JMP instruction to DJN, to colour
+core against other scanners.  Use something similar to DJN.F scanB,<-500 to
+create a sequential decoy, or alternatively decrement through your scan
+pointer with DJN.F scanB,@ptrB.
+
+scanB   ADD     incB,           ptrB
+ptrB    SNE     start+hop,      start  ; scan 2 locations every 3 cycles
+        JMP     scanB
+      ; ...
+incB    DAT     step,           step
+
+
+.75c: gives the optimal size/speed ratio for scanners between 9 and 15
+instructions.  The location at which something has been found is held in the
+b-field of ptrC.  As with the .5c scan, instructions with zero a & b fields
+are invisible.  If we re-enter the scan loop, the pointers need to be reset;
+MOV.BA ptrC,ptrC should do the trick.
+
+It appears at first glace, if the SNE detects something through it's a-field,
+the scan loop will not drop through into the attack phase.  Stepping through
+the code however, reveals how some simple arithmetic 'copies' the value from
+the a-field of ptrC to the b-field.  The scan loop can then drop through with
+the b-field of ptrC pointing to whatever has been found.
+
+scanC   ADD     incC,           ptrC
+ptrC    SNE.X   start,          start  ; scan 3 locations every 4 cycles
+        ADD.X   incC,           ptrC
+        JMZ.F   scanC,          @ptrC
+      ; ...
+incC    DAT     2*step,         step
+
+
+.8c: ideal for scanners of more than 16 instructions, this extension to the
+basic .66c loop has the same disadvantage of two scan pointers.  As with it's
+slower relative, changing the JMP to a DJN proves effective against other
+scanners.
+
+scanD   ADD     incD,           ptrD
+ptrD    SNE     start+hop,      start  ; scan 4 locations every 5 cycles
+        ADD     incD,           ptrD
+        SNE     *ptrD,          @ptrD
+        JMP     scanD
+      ; ...
+incD    DAT     step,           step
+
+
+2 - Common Forms of Offense
+---------------------------
+
+Once the scanner has found something, what comes next?  We hit it.  We hit it
+hard with a stun attack intended to bring the enemy's processes to a virtual
+stand-still.  There are four main types of offense to consider:
+
+ * Permanent - a.k.a.  one-shots.  Switch to a core-clear with one or more
+   SPL passes though core, beginning with the location found by the scan.
+   After this, the clear wipes with DAT.  Simple and effective.  See Scanny
+   Boy for an example.
+
+ * Fixed Length - switch to a fixed length attack.  Afterwards, switch back
+   to scanning.  The two most common types of fixed length attacks are SPL
+   carpets and special bombs (stun and incendiary for example).  Take a look
+   at Rave and Beholder's Eye, which use these techniques.
+
+ * Variable Length - switch to a linear SPL wipe beginning at the location
+   where the scan detected something, continuing until it reaches empty core.
+   After this, switch back to scanning.  This technique proves the most
+   effective against paper/imps.  Check Mini HSA for a good example.
+
+ * Ongoing - a linear SPL wipe runs parallel to the scan.  When something is
+   found by the scan, the pointer for the SPL wipe is adjusted to point to
+   the scanned location.  However, the most common implementation of this
+   technique introduces an extra instruction to the scan loop, reducing the
+   speed.  Blur 2 is a clear example of an ongoing attack.
+
+The scanner needs somehow to ensure it doesn't attack itself.  One way to
+achieve this is to check the scan pointer isn't within a range which points
+to our scanner before attacking.  Other alternatives are to use a scan
+pattern which avoids detecting the scanner, or using some means of hiding the
+scanner from itself (reflections).
+
+
+3 - The Switch
+--------------
+
+Perhaps the trickiest requirement is the need to implement a switch from the
+attack to the end-game.  The one-shot avoids this altogether by entering the
+end-game as soon as something is found.  In a traditional scanner however, we
+have a choice to make:
+
+ * When our scanner detects itself either once, or a number of times, enter
+   the end-game.  For example Mini HSA switches after 16 self-scans.
+
+ * After a number of iterations of the scan loop, drop through to the end
+   game.  In Blur 2, there is a counter which is decremented by the scan
+   loop.  When this reaches zero, control will pass into the end-game.
+
+ * Switch when a pre-determined location is altered by the attack.  See
+   myZizzor for an example, which has a small decoy the scanner detects and
+   attacks, thus altering the checked location.
+
+
+4 - The End-Game
+----------------
+
+After our scanner has completed it's main attack phase, what next?  It needs
+to dispose of the enemy processes we've worked so hard to stun.  The two most
+effective methods are:
+
+ * Clear - switch to a core-clear, which wipes core with DAT.  Optionally,
+   the clear may wipe with SPL prior to the DAT wipe.  The most often seen
+   type clear is the d-clear, with spiral clears also being a popular choice.
+   Scanners containing a spiral clear include Eggbeater, Memories, SETI and
+   Win!
+
+ * DAT Switch - the scan continues, bombing with DAT instead of it's previous
+   attack.  Many of the HSA-style warriors work in this way, including Mini
+   HSA.  Another example is the scanner from Enough is Enough!
+
+
+Suggested Reading
+-----------------
+
+A selection of material discussing step sizes can be found in Push Off 07
+September 1993, Core Warrior #11, and Mathematical Models for Step Sizes
+(Morrell 1996).  Stefan Strack provides a useful tool for finding good step
+sizes, mOpt v1.2, for which there is a tutorial in Core Warrior #32.
+
+Below are some references to a few instructive examples of scanners.  These
+illustrate the methods discussed above.  Generally, those which function in a
+similar manner are grouped together, with the most readable example in the
+group listed first:
+
+Blur 2 by Anton Marsden (CW36) - implements an ongoing attack from the scan
+loop, followed up by a d-clear end-game.  After reading Blur 2, continue with
+Hazy Lazy, Silver Talon, Stalker, Eggbeater (CW46) and the scanner from
+Enough is Enough! (CW79).
+
+HAL 9000 by Justin Kao (CW50) - an alternative means of implementing an
+ongoing attack, or scan directed clear.
+
+Mini HSA from Electric Head by Anton Marsden (CW59) - provides an excellent
+introduction to the workings of HSA.  Scanning continues into the end-game,
+with the SPL wipe becoming a DAT wipe.  Also, check He Scans Alone, Mischief
+(CW80) and Razor.
+
+Beholder's Eye v1.7 by W. Mintardjo - an easy to read spl/jmp bomber.
+Continue reading with Iron Gate (CW19), Harmony II and Memories (CW19).
+
+myZizzor by Magnus Paulsson - performs a variable length attack, followed by
+a SPL / DAT clear.
+
+Origin of Storms by John Metcalf (CW86) - a variable length attack realized
+in the scan loop, followed by the ever-present d-clear.
+
+Rave 4.1 by Stefan Strack - a good example of a .66c scan with a fixed length
+SPL carpet.  Also, you should take a look at SETI.  Next study Win!  and
+Recon 2, two warriors based on the same concept, employing an abundance of
+effective techniques.
+
+Scanny Boy by David van Dam (CW29) - drops straight through from the scan
+loop into the end-game's SPL / DAT clear and provides a good example of a
+one-shot.  See also Tiny BiShot 2.0, The Bloodhound, G2 and Phantasm 50.
+_______________________________________________________________________________
+Extra Extra - Dandelion II by Christian Schmidt and Sascha Zapf
+
+Blur-style scanners, such as The Machine, Hazy Lazy, etc. make an
+interesting all-round scanner.  They should be more effective against paper
+than a one-shot due to targetting more real copies in a smaller amount of
+time.  The typical end-game strategy is a d-clear which performs better
+against stone/imps, as it is harder to hit (3 instructions in the clearing
+stage only 1 of which is vulnerable to DAT bombs).  However, Blur-style
+scanner can't handle paper/imps well and often loose significantly against
+them.
+
+We decided to change this aspect and tried to create a Blur-style scanner
+which is able to beat paper/imps as well.  To do this we had to change the
+end-game strategy, because modifying the scan loop won't help the situation.
+
+We figured out that we obtain best results if we use a more complex anti-imp
+clear (found in Forgotten Scanner, one of Moore's one-shots) instead of a
+d-clear.  Due to the larger size compared with a d-clear the complete code
+would be much more vulnerable.  It would be more frequently found by
+scanners and more often hit by stones.
+
+Separating the clear from the scanning code led to an improved overall
+performance.  After optimizing the scan step and the gap between the scan
+section and the core-clear we finally added a decoy to fool one-shots.
+
+Compared to other Blur-style scanners, Dandelion II has a shorter scanning
+phase.  This is long enough to slow down papers significantly, but short
+enough to give the clear sufficient time to kill all remaining imps.
+
+Below is a comparison between Dandelion II and three other Blur-style
+scanners:
+
+Against paper/imps:
+
+Name             |Decoy Signal|  RotF Copy |   Blowrag  | Overall
+                 | W  L  T Pts| W  L  T Pts| W  L  T Pts|
+-----------------+------------+-------------+------------+---------
+Dandelion II     |49 20 31 179|45 25 30 166|32 40 28 124|   469
+zooom...         |11 47 42  74|11 38 51  85|13 25 62 101|   260
+Hazy Lazy        | 9 45 46  74| 8 43 49  72|24 38 38 111|   257
+Herbal Avenger   | 7 45 48  69| 9 36 55  83|14 28 58 100|   252
+
+Against stone/imps:
+
+Name             | Son of Vain| Hammerhead | Uninvited  | Overall
+                 | W  L  T Pts| W  L  T Pts| W  L  T Pts|
+-----------------+------------+-------------+------------+---------
+Hazy Lazy        |36 37 27 136|40 39 21 140|41 49 10 134|   410
+Herbal Avenger   |26 40 33 111|30 44 26 116|38 48 14 128|   355
+Dandelion II     |26 44 30 108|37 48 15 126|24 64 12  83|   317
+zooom...         |17 54 29  81|36 44 20 128|29 59 12  99|   308
+
+It is clearly seen that Dandelion II scores really nice against paper/imps
+while it looses some stone/imp resistance.  Okay, without further ado here
+is the code:
+
+
+;redcode-94nop
+;name Dandelion II
+;author Schmidt/Zapf
+;strategy blurish scanner TNG
+;strategy decoymaker added
+;assert CORESIZE == 8000
+
+
+sSep    equ    8
+sOff    equ    5753
+sStep   equ    7212
+cOff    equ    602
+
+inc     nop    #sStep,    sStep
+cptr    mov    clear,     }6727
+sgate   mov    clear,     >cptr
+scan    seq    sOff+sSep, sOff
+        mov.b  scan,      cptr
+        add    inc,       scan
+        jmn    sgate,     @sgate
+        jmp    clear
+
+        for             17
+        dat     0,      0
+        rof
+
+gap     equ     26
+
+gate    dat    4009+cOff, {gap+cOff
+jumper  jmp    4009,      gap
+        dat    0,         0
+        dat    0,         0
+        jmp    7684,      <2667
+clear   spl    #4007,     gap
+        mov    @switch,   >gate
+        mov    jumper,    }gate
+switch  djn    clear+1,   {clear
+
+        for    28
+        dat    0,         0
+        rof
+
+dplace  equ    (inc+2453)
+
+decoy   mov    <dplace+0, {dplace+2
+        mov    <dplace+3, {dplace+5
+        mov    <dplace+6, {dplace+8
+        mov    <dplace+9, {dplace+11
+        djn.f  scan,      <dplace+13
+
+end decoy
+_______________________________________________________________________________
+Extra Extra Extra - Something Strange by John Metcalf
+
+Something Strange is another addition to the ever-growing category of
+Blur-like scanners.  The code demonstrates two techniques:
+
+  * the use of a pre-scan,
+
+  * the inclusion of DJN decrements in a Blur loop.
+
+The advantage of the pre-scan used here is two-fold.  It is faster than the
+main scan loop, which loses some of it's time to wiping.  Also, the scan
+pattern used performs better in the early cycles of the game.
+
+In most Blur-like scanners the SPL wipe is active within the scan loop,
+wiping and wasting precious cycles even before something is discovered.
+Zooom (CW70) demonstrated a trick using self-modifying code in which the
+SPL wipe is inactive until the scan finds something.  Using a pre-scan
+achieves similar results.
+
+When Blur-like scan loops look at more than one location, these locations
+tend to be close to each other, typically 4-8 cells apart.  This avoids the
+need to determine which of the scanned locations contains something.  This
+forms a poor scan pattern against any opponent larger than the 4-8 cell gap.
+
+Something Strange's pre-scan uses the same scan step as the main scan loop.
+However, the pre-scan doesn't need to scan locations close to each other,
+and can be given a much better pattern:
+
+ pre-scan pattern  : step*1,     step*2,     step*3,     step*4,     step*5
+ main-scan pattern : step*1,     step*1+hop, step*2,     step*2+hop, step*3
+
+With the addition of an extra line of code, it was possible to add a DJN.F
+attack to the main scan loop.  This currently decrements through the scan
+pointer.
+
+Decrementing through the scan pointer appears to be more successful than
+beginning a decrement stream where something is discovered and working back
+through core, while the SPL wipe moves forward.
+
+Some questions about general Blur-like scanners to consider:
+
+Could a Blur-like scanner with a faster scan loop be effective?  Perhaps
+one could be built from the .75c or .8c loops.
+
+Would it be worth adding a couple of lines logic to the basic scanner to
+achieve a better scan pattern in the main scan loop?
+
+Are there any special considerations when choosing a step for a Blur-like
+scanner?
+
+Anyway, here's the code:
+
+;redcode-94nop
+;name something strange
+;author John Metcalf
+;strategy tonight something strange stalks the core
+;strategy .8c pre-scan -> .5c scan / .25c wipe -> d-clear
+;assert CORESIZE == 8000
+
+       ORG      ptrD
+
+       step     EQU 230 ; (or 3470, 5110)
+       hop      EQU 5   ; gap
+       sbmb     EQU incB
+
+cptr   MOV.B    ptrB,           #-3196    ; adjust the wipe pointer
+
+scanB  MOV      sbmb,           >cptr     ; SPL wipe from the scan loop
+       SUB      incB,           ptrB
+ptrB   SNE      ptrD+hop-step,  ptrD
+       DJN.F    scanB,          @ptrB
+
+       JMN      cptr,           ptrB      ; scan until we detect our SNE
+
+       gate     EQU ptrB
+
+incB   SPL      #-step,         <-step    ; a typical d-clear
+clear  MOV      dbmb,           >gate
+       DJN.F    clear,          >gate
+dbmb   DAT      <2667,          8
+
+
+       FOR      72
+       DAT      0,0
+       ROF
+
+
+       first    EQU (ptrB+step)
+
+incD   DAT      step*2,         step*2
+       DAT      0,              0
+
+scanD  ADD      incD,           ptrD      ; .8c pre-scan
+ptrD   SNE      first+step,     first
+       ADD      incD,           ptrD
+       SNE      *ptrD,          @ptrD
+       DJN.F    scanD,          @ptrD
+
+       ADD      ptrD,           ptrB      ; adjust pointer in main scan
+       JMP      ptrB,           <ptrB+2-step
+       END
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
+care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
+<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
+<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>
