@@ -1541,6 +1541,8 @@ xWin_display_close(wait)
   int     wait;
 {
   if (wait == WAIT) {
+    XEvent event;
+    while (XCheckMaskEvent(display, KeyPressMask | ButtonPressMask, &event));
     xWin_puts(pressAnyKey);
     xWin_getch();
   }

@@ -533,6 +533,7 @@ text_display_close()
     mvwaddstr(corewin, 0, 0, pressAnyKey);
     wrefresh(corewin);
     if (!inputRedirection) {
+      flushinp();
       getch();
     }
   }
