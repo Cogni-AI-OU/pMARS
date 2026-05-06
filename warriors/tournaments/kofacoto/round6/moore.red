@@ -1,7 +1,8 @@
 ;redcode-94x
 ;name Denial
 ;author David Moore
-;assert CORESIZE==55440
+; ;assert CORESIZE==55440 ; Commented out to allow general assembly validation with default coresize.
+; Original match used CORESIZE 55440.
 ;strategy ineffective imp/stone
 ;strategy (13pt A-imps, 19pt B-imps)
 

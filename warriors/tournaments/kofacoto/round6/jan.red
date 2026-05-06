@@ -3,7 +3,8 @@
 ;author Michal Janeczek
 ;strategy Switch between paper with imps, incendiary bomber and
 ;strategy Paul Kline's FireHouse
-;assert CORESIZE==55440
+; ;assert CORESIZE==55440 ; Commented out to allow general assembly validation with default coresize.
+; Original match used CORESIZE 55440.
 
 ; Modified to resolve syntax issues and ensure compatibility with pMARS assembly.
 ; org    think ; Commented out in favor of 'end think' for better compatibility

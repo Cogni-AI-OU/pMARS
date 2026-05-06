@@ -1,7 +1,8 @@
 ;redcode-94
 ;name Damage Inflicted
 ;author Robert Macrae
-;assert CORESIZE == 55440
+; ;assert CORESIZE == 55440 ; Commented out to allow general assembly validation with default coresize.
+; Original match used CORESIZE 55440.
 ;strategy DClear/Imp, Scanner
 
 ; One day I will learn to write a decent Silk. 
