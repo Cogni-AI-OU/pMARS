@@ -69,9 +69,9 @@ While ICWS '88 used space or no character for direct addressing, modern Redcode 
 1. **Avoid `$` in ICWS '88:** If a warrior is intended for the `-8` mode, avoid using the `$` modifier. Use the naked value for direct addressing.
 2. **Use `#` for Constants:** Ensure that constants used in `DAT` or as immediate operands are explicitly prefixed with `#`.
 
-### Case: ICWT 1989 Warriors
+### Case: ICWT 1989 and TI 1989 Warriors
 
-The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+The ICWT 1989 and Secondo Torneo Italiano (TI 1989) tournament sets were modernized to follow these strict compatibility rules:
 
 - **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
@@ -79,14 +79,21 @@ The ICWT 1989 tournament set was modernized to follow these strict compatibility
 
 ## Simulator Parameter Limits
 
-### Instruction Limit (MAXINSTR)
+### Automated Assembly Validation
 
-Historically, pMARS had a default `MAXINSTR` of 1000, which limited the maximum length that could be specified with the `-l` flag.
+The project's continuous integration pipeline includes an automated step to verify that all warriors in `warriors/tournaments/` can be successfully assembled by `pmars`.
 
-**Optimization:**
-In recent updates, `MAXINSTR` has been increased to **10000** to accommodate complex tournament warriors and allow for more extensive assembly validation tests (e.g., using `-l 8000` to bypass length checks during initial assembly tests).
+To accommodate warriors with non-standard requirements, the validation script attempts to extract core parameters from `;assert` lines in the Redcode files using the following patterns:
+- `CORESIZE`: `-s <value>`
+- `MAXLENGTH`: `-l <value>`
+- `MAXPROCESSES`: `-p <value>`
+- `MAXCYCLES`: `-c <value>`
+- `MINDISTANCE`: `-d <value>`
 
-If a warrior fails to assemble with a "too many instructions" error even when `-l` is provided, ensure the value is within the new `MAXINSTR` limit.
+**Example compatible `;assert` line:**
+`;assert (CORESIZE == 55440) && (MAXPROCESSES == 10000)`
+
+If an assertion fails because the required environment parameters are not provided to the assembler, ensure the `;assert` line follows one of these supported formats (e.g., `CORESIZE == 8000` or `CORESIZE=8000`).
 
 ## Preservation of Historical Code
 
@@ -124,9 +131,9 @@ Ensure P-space size is appropriate for the core size. By default, pMARS sets it 
 
 ## Case Studies
 
-### ICWT 1989 Warriors
+### ICWT 1989 and TI 1989 Warriors
 
-The ICWT 1989 tournament set was modernized to follow these strict compatibility rules:
+The ICWT 1989 and TI 1989 tournament sets were modernized to follow these strict compatibility rules:
 - **Modification Comment:** Each file includes `; Modified to resolve syntax issues and ensure compatibility with pMARS assembly in ICWS'88 mode`.
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
 - **Operand Formatting:** Immediate values were explicitly marked with `#`.

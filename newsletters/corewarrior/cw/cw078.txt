@@ -1,0 +1,245 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 78                                                       7 November, 2000
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar. Emphasis is placed
+on the most active hills - currently the '94 draft hill, the beginner hill and
+the '94 no-pspace hill. Coverage will follow where ever the action is. If you
+haven't a clue what I'm talking about then check out these five-star internet
+locals for more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+The ftp site and it's mirrors are at:
+  ftp://ftp.csua.berkeley.edu/pub/corewar
+  ftp://ftp.inria.fr/INRIA/Projects/para/doligez/cw/mirror
+  ftp://www.koth.org/corewar
+
+pMARS itself is also available from:
+  http://www.koth.org/pmars                  ;pMARS home page
+  ftp://members.aol.com/ofechner/corewar     ;Fechner ftp site
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza
+  http://para.inria.fr/~doligez/corewar      ;Planar
+
+Newbies should check the above pages for the FAQ, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+It has been absolutely ages since last issue and hill activity has been
+minimal.  Fortunately the past few months have not been uneventful - JKW
+has finally shared the code for Return of the Jedimp and organised the
+Koth Fall Corewar Tournament (Kofacoto).
+
+This issue, David Moore shows us how Combatra, his boot-distance calculator
+works and also we have the code for KafuFFLe, a defensive paper/stone.
+
+-- John Metcalf
+_______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  48.9/ 41.0/ 10.0              Shapeshifter      Michal Janeczek 156.8    4
+ 2  45.7/ 46.4/  7.9                     Razor      Michal Janeczek 145.0    5
+ 3  39.8/ 34.7/ 25.5       Self-Modifying Code             Ben Ford 144.8   93
+ 4  36.2/ 29.0/ 34.8                     Vilex         Ken Espiritu 143.4   45
+ 5  32.6/ 23.5/ 44.0                 Uninvited         John Metcalf 141.7   16
+ 6  38.9/ 36.9/ 24.2             Recycled Bits          David Moore 140.9  147
+ 7  31.5/ 23.5/ 45.0            Mini Digitalis    Christian Schmidt 139.6    0
+ 8  40.0/ 41.1/ 18.9                  Combatra          David Moore 138.8    5
+ 9  39.6/ 40.8/ 19.5                        G2          David Moore 138.5    0
+10  37.8/ 37.3/ 24.9         Origami Harquebus                  mjp 138.2   41
+11  28.5/ 19.2/ 52.3               Tie Factory    Christian Schmidt 137.8   19
+12  25.2/ 12.9/ 61.9                  Cinammon         John Metcalf 137.6   18
+13  29.4/ 21.4/ 49.3                 nPaper II        Paul-V Khuong 137.4   50
+14  39.5/ 42.2/ 18.3                   Pitbull    Christian Schmidt 136.7    9
+15  36.7/ 37.4/ 25.9      Trefoil the original        Steve Gunnell 135.9   38
+16  27.8/ 21.3/ 50.8                      Jade             Ben Ford 134.3   70
+17  37.5/ 41.0/ 21.5                 CrazyShot    Christian Schmidt 134.0    8
+18  37.9/ 41.9/ 20.2                    Ultima    Christian Schmidt 133.9   12
+19  26.3/ 19.4/ 54.3         Stylized Euphoria         Ken Espiritu 133.2   37
+20  24.9/ 16.7/ 58.4                  Cinammon         John Metcalf 133.0   43
+21  27.5/ 22.2/ 50.3                    EvoP 3         Ken Espiritu 132.9   50
+22  24.6/ 17.6/ 57.8    Return of the Fugitive          David Moore 131.6   74
+23  25.7/ 20.2/ 54.1              The Dark One    Christian Schmidt 131.2    2
+24  26.6/ 22.4/ 50.9                      Exor         Ken Espiritu 130.9   50
+25  27.6/ 26.5/ 45.9                Wintermute         John Metcalf 128.7   34
+
+Age since last issue: 18 ( 12 last issue, 20 the issue before )
+Days since last issue: 209 ( 121 last issue, 101 the issue before )
+Average age: 34 ( 34 last issue, 28 the issue before )
+Average score: 138 ( 137 last issue, 137 the issue before )
+Average movement: -6.0 ( -1.5 last issue, -4.2 the issue before )
+Warriors surviving: 14 ( 18 last issue, 9 the issue before )
+
+The top 25 warriors are represented by just 9 independent authors: Schmidt
+with 6, Espiritu, Moore and Metcalf with 4, Janeczek and Ford with 2. The
+remaining three authors have just 1 warrior each. ( 10 authors last issue,
+10 the issue before )
+
+Shapeshifter dominates the hill by nearly 12 points, utilising a P^3 ->
+dodger/stone/scanner to great effect.  Janeczek's other warrior, a HSA-like
+scanner by the name of Razor holds second place.  Only Trefoil gains rank -
+Wintermute drops furthest, from 4th to 25th.
+_______________________________________________________________________________
+94 - What's New (Sorted by rank and score)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 1  47.2/ 42.2/ 10.6              Shapeshifter      Michal Janeczek 152.2    1
+ 1  44.8/ 46.8/  8.4                     Razor      Michal Janeczek 142.8    0
+ 2  39.3/ 39.0/ 21.7                   Pitbull    Christian Schmidt 139.5    1
+ 4  23.4/ 12.6/ 64.0                  Cinammon         John Metcalf 134.2    1
+ 5  37.3/ 41.9/ 20.8                   Behemot      Michal Janeczek 132.7    0
+ 5  38.4/ 44.7/ 16.9                Brainstorm      Michal Janeczek 132.2    1
+ 6  26.0/ 21.2/ 52.8                 Uninvited         John Metcalf 130.9    1
+ 7  36.5/ 40.4/ 23.0                 CrazyShot    Christian Schmidt 132.6    1
+ 8  28.9/ 25.3/ 45.7            Mini Digitalis    Christian Schmidt 132.5    0
+ 8  35.8/ 41.3/ 22.9             Combatra 2667          David Moore 130.4    1
+ 9  37.0/ 41.7/ 21.3                      G2-b          David Moore 132.2    1
+10  35.8/ 41.9/ 22.4                    Ultima    Christian Schmidt 129.6    0
+12  22.5/ 17.3/ 60.2                  KafuFFLe         John Metcalf 127.7    1
+14  36.6/ 44.6/ 18.8               goonie lite          David Moore 128.6    0
+17  32.9/ 36.5/ 30.7                      test                   dm 129.3    1
+17  18.2/ 13.4/ 68.4                     Seven         John Metcalf 122.9    1
+18  37.5/ 48.1/ 14.5            Nothing New... Leonardo H. Liporati 126.9    1
+18  34.2/ 42.5/ 23.3                  Combatra          David Moore 125.9    0
+18  35.8/ 48.0/ 16.2    Burn Paper, Stomp Imps          David Moore 123.6    1
+19  25.1/ 21.8/ 53.1              The Dark One    Christian Schmidt 128.3    1
+25  28.4/ 33.3/ 38.3                    Ultima    Christian Schmidt 123.5    1
+25  19.8/ 18.7/ 61.4                      Maya         John Metcalf 120.9    1
+
+Players entering hill since last issue: 5 ( 5 last issue, 7 the issue before )
+Average rank of new entries: 11 ( 17 last issue, 13 the issue before )
+
+Michal Janeczek makes an impressive hill debut.  Activity has been scarce,
+where is everyone?
+_______________________________________________________________________________
+94 - What's No More (Sorted by age)
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+26  25.2/ 29.3/ 45.5          The Stormbringer    Christian Schmidt 121.1  142
+26  22.4/ 25.7/ 51.9               Stonewashed    Christian Schmidt 119.1   78
+26  33.1/ 44.3/ 22.6                   myBlur2             Paulsson 121.9   41
+26  21.2/ 22.7/ 56.1                    Jaguar    Christian Schmidt 119.6   36
+26  32.3/ 44.0/ 23.7                    SnooPy              P.Kline 120.6   27
+26  28.9/ 33.8/ 37.4                 Trefoil f        Steve Gunnell 123.9   25
+26  35.2/ 49.7/ 15.1                  Friction         Ken Espiritu 120.7   19
+26  24.6/ 27.9/ 47.5                 Trefoil c        Steve Gunnell 121.3   16
+26  36.6/ 53.5/  9.9            Iron Curtain 3         Ken Espiritu 119.8   14
+26   0.6/  0.6/  2.8                  KafuFFLe         John Metcalf   4.7    9
+26  22.5/ 24.3/ 53.1          Unlucky Redcoder         John Metcalf 120.8    8
+26  18.8/ 19.3/ 62.0                     Seven         John Metcalf 118.3    7
+26  36.1/ 50.2/ 13.7              Resurrection         Ken Espiritu 122.0    6
+26   1.9/  1.7/  0.4                    Ultima    Christian Schmidt   6.2    5
+26   1.5/  2.3/  0.2             Combatra 2667          David Moore   4.6    5
+26  35.8/ 51.0/ 13.2            Nothing New... Leonardo H. Liporati 120.7    4
+26  18.3/ 18.5/ 63.2                      Maya         John Metcalf 118.1    4
+26   2.0/  1.1/  0.8                      test                   dm   6.9    3
+26  34.8/ 47.3/ 17.9               goonie lite          David Moore 122.4    2
+26  35.0/ 49.4/ 15.6    Burn Paper, Stomp Imps          David Moore 120.6    2
+
+Paulsson, Kline and Liporati leave the hill completely.  Schmidt's oldest
+three warriors are pushed off.
+_______________________________________________________________________________
+94 - What's Old
+
+ #   %W /  %L /  %T                       Name               Author Score  Age
+ 6  38.9/ 36.9/ 24.2             Recycled Bits          David Moore 140.9  147
+ 3  39.8/ 34.7/ 25.5       Self-Modifying Code             Ben Ford 144.8   93
+22  24.6/ 17.6/ 57.8    Return of the Fugitive          David Moore 131.6   74
+16  27.8/ 21.3/ 50.8                      Jade             Ben Ford 134.3   70
+13  29.4/ 21.4/ 49.3                 nPaper II        Paul-V Khuong 137.4   50
+21  27.5/ 22.2/ 50.3                    EvoP 3         Ken Espiritu 132.9   50
+24  26.6/ 22.4/ 50.9                      Exor         Ken Espiritu 130.9   50
+
+P-warriors Recycled Bits and Self-Modifying Code look as healthy as always.
+Who will be next to enter the Hall of Fame? Will Return of the Fugitive
+survive the next 4 challenges?
+_______________________________________________________________________________
+The Extended New Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Probe                  Anton Marsden      403    Q^2 -> Bomber
+ 2  Blur 2                 Anton Marsden      396    Scanner
+ 3  Damage Incorporated    Anton Marsden      373    Q^2 -> Bomber
+ 4  Return Of The Jedimp   John K W           357    Q^2 -> Stone/imp
+ 5  unrequited love        kafka              346    Q^2 -> Paper
+ 6  Impish v0.2            Ian Oversby        345    Stone/imp
+ 7  Gigolo                 Core Warrior staff 332    Q^2 -> Stone/imp
+ 8  Falcon v0.3            Ian Oversby        275    P-warrior
+ 9  Nine Seven Six         M R Bremer         232    Q^2 -> Stone/imp
+10  Rosebud                Beppe              218    Stone/imp
+11  Newt                   Ian Oversby        216    Q^2 -> Stone/imp
+12  Q^2 Miro               Anders Ivner       214    Q^2 -> Scanner/bomber
+13  Instant Wolf 3.4       Edgar              205    P-warrior
+14  Goldfinch              P.Kline            201    P-warrior
+15  Simple v0.4b           Ian Oversby        197    QScan -> Stone/imp
+16  Trident^2              John K W           195    Q^2 -> Stone/imp
+17  ompega                 Steven Morrell     189    Stone/imp
+18  Frogz                  Franz              172    Q^2 -> Paper
+19  The Machine            Anton Marsden      164    Scanner
+20  Memories               Beppe              152    Scanner
+21  Recycled Bits          David Moore        147 *  P-warrior
+ =  Vain                   Ian Oversby        147    Q^2 -> Stone/imp
+23  Head or Tail           Christian Schmidt  142    Q^2 -> Paper
+ =  The Stormbringer       Christian Schmidt  142    Q^2 -> Stone/imp
+25  Electric Head          Anton Marsden      140    P-warrior
+26  Vigor                  Ken Espiritu       138    Q^2 -> Paper
+27  Fixed                  Ken Espiritu       135    Q^2 -> Paper
+28  Tiberius 3.1           Franz              130    Q^2 -> Paper
+29  Ultraviolet-B          Ken Espiritu       120    Q^2 -> Paper
+30  obvious to those who k Robert Macrae      117    Q^2 -> Paper
+31  Solomon v0.8           Ian Oversby        116    Stone and scanner
+32  CC Paper 3.3           Franz              107    Q^2 -> Paper
+33  mrb-test               M R Bremer         106    *Unknown*
+34  T.N.T. pro             Maurizio Vittuari  105    Bomber
+ =  Pulp v0.5              Ian Oversby        105    Q^2 -> Paper
+36  Fugitive               David Moore        102    Q^2 -> Paper/imp
+37  Vengeance              Robert Hale        101    Q^2 -> Stone/imp
+38  Jack in the box II     Beppe Bezzi        100    P-warrior
+ =  Fire and Ice           David Moore        100    P-warrior
+40  Oblivion               Ian Sutton          99    P-warrior
+41  Self-Modifying Code    Ben Ford            93 *  P-warrior
+ =  Silver Talon 1.2       Edgar               93    Scanner
+43  death by redcode       Simon Wainwright    91    Q^2 -> Bomber
+44  Bodge 1                Robert Macrae       85    Q^2 -> Scanner
+45  Inferno 2.4            Philip Kendall      84    Qscan -> Bomber
+46  Test                   Anton Marsden       83    *Unknown*
+ =  NCC-1701-A             Philip Kendall      83    P-warrior
+48  RetroQ                 Paul Kline          82    Q^2 -> Paper
+49  Tornado 4              Beppe Bezzi         78    Bomber
+ =  Stonewashed            Christian Schmidt   78    Q^3 -> Paper/stone
+
+Stormbringer perishes, sharing it's final resting place with Head or Tail.
+Stonewashed creeps onto the bottom of the hill displacing He Scans Again,
+before it too perishes.
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who care.
+Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall <pak21@cam.ac.uk>,
+Anton Marsden <anton@paradise.net.nz>, John Metcalf <grumpy3039@hotmail.com>
+and Christian Schmidt <schmidt@mail.uni-mainz.de>

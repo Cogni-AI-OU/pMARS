@@ -1,0 +1,240 @@
+    .xX$$x.
+  .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 84                                                      08 December, 2002
+_______________________________________________________________________________
+Core Warrior is a newsletter promoting the game of corewar.  Emphasis is
+placed on the most active hills - currently the '94 no-pspace and '94 draft
+hills.  Coverage will follow wherever the action is. If you haven't a clue
+what I'm talking about then check out these five-star Internet locals for
+more information:
+
+FAQs are available from:
+  http://www.koth.org/corewar-faq.html
+  http://homepages.paradise.net.nz/~anton/cw/corewar-faq.html
+
+Web pages are at:
+  http://www.koth.org/                       ;KOTH
+  http://www.ecst.csuchico.edu/~pizza/koth   ;Pizza (down)
+  http://para.inria.fr/~doligez/corewar      ;Planar
+  http://www.ociw.edu/~birk/corewar          ;C.Birk
+  http://de.geocities.com/fizmo_master       ;Fizmo
+
+Newbies should check the above pages for the FAQs, language specification,
+guides, and tutorials. Post questions to rec.games.corewar. All new players
+are infinitely welcome!
+_______________________________________________________________________________
+Greetings...
+
+The 10 weeks since last issue have been an interesting time for Core War.
+The '94 draft hill has return to Koth and the hills have been buzzing with
+activity.
+
+A good number of interesting warriors have been published, including Jinx,
+CrazyShot 2, Wallpaper, The Pendragon, pre75-z47a, Willow, Defensive,
+Silking, Revenge of the Papers, Help I'm Scared, Velvet Glove and Twinshot,
+all of which enter the top 100 of the 94nop Koenigstuhl hill.  In addition,
+Pihlaja shared an Optima Number finder, written in Redcode.
+
+This issue, prepare yourself for an inspiring Core War journey, thanks to
+our three contributors:
+
+* 'RotF Qscan'      by  M Joonas Pihlaja
+* 'Airbag: Exposed' by  Lukasz Grabun
+* 'Digitalis 2002'  by  Christian Schmidt
+
+-- John Metcalf
+______________________________________________________________________________
+Current Status of the KOTH.ORG '94 No Pspace Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  35/ 21/ 44               Son of Vain      Oversby/Pihlaja    149.0   1188
+ 2  35/ 24/ 41                Reepicheep       Grabun/Metcalf    146.8    419
+ 3  32/ 17/ 52   Return of the Pendragon    Christian Schmidt    146.2     25
+ 4  35/ 24/ 41             Dark Lowlands         Roy van Rijn    145.7     16
+ 5  33/ 21/ 46            Positive Knife         Ken Espiritu    145.1    262
+ 6  46/ 48/  7            Willow revised         John Metcalf    144.0     76
+ 7  31/ 20/ 49                 Firestorm         John Metcalf    142.3    224
+ 8  41/ 41/ 18            Herbal Avenger      Michal Janeczek    142.2     37
+ 9  37/ 33/ 30            Digitalis 2002    Christian Schmidt    141.4     55
+10  32/ 22/ 46     Revenge of the Papers            Fizmo/Roy    141.1    226
+11  25/ 10/ 65              Decoy Signal             Ben Ford    140.9    115
+12  34/ 27/ 40           The Stormkeeper    Christian Schmidt    140.6    296
+13  39/ 38/ 23 Return of Vanquisher Test        Lukasz Grabun    139.5      6
+14  28/ 17/ 56                   Blowrag      Metcalf/Schmidt    138.5    153
+15  41/ 46/ 13                     Blade                Fizmo    135.8    505
+16  43/ 51/  6                      Claw                Fizmo    135.5    156
+17  31/ 26/ 43             golden thread     Simon Wainwright    135.1     39
+18  40/ 46/ 14               Vamp test 2         John Metcalf    135.1      1
+19  39/ 43/ 18      Hazy Lazy ... reborn        Steve Gunnell    134.2    273
+20  39/ 44/ 18           Morbid Dread IV        Philip Thorne    133.2      2
+
+Since last issue there have been 306 successful challenges.  For the third
+consecutive issue the hill loses it's oldest warrior.  No-one can claim a
+pattern is forming however, as it is unlikely Son of Vain will be pushed off
+before next issue.  Son of Vain becomes the oldest warrior ever to be Koth.
+
+Koth report:  Since last issue Reepicheep has been the most frequent King
+(#1 after 110 successful challenges), followed by Son of Vain (after 40),
+Hazy Lazy ... reborn (33), Blade (25), Digitalis 2002 (17), Geist v0.1 (13)
+and Claw (11).
+
+The warriors which perished included Uninvited (age 1130), Vanquisher (469),
+Hazy Lazy ... again (350), Candy (276), Oneshot Test (266), Glenstorm (219),
+SilKing (214), CrazyShot 2 (211), Wallpaper (177), Defensive (142), Willow
+(135), Paperazor (107), GenerationX (104) and finally Golden Thread (102).
+_______________________________________________________________________________
+The '94 No Pspace Hall of Fame:  * indicates the warrior is still active.
+
+Pos Name                   Author             Age    Strategy
+ 1  Blacken                Ian Oversby       1363    Q^2 -> Stone/imp
+ 2  nPaper II              Paul-V Khuong     1270    MiniQ^3 -> Paper
+ 3  Son of Vain            Oversby/Pihlaja   1188 *  Q^4 -> Stone/imp
+ 4  Uninvited              John Metcalf      1130    MiniQ^3 -> Stone/imp
+ 5  Behemot                Michal Janeczek   1078    MiniQ^3 -> Bomber
+ 6  Olivia                 Ben Ford           886    Q^4 -> Stone/imp
+ 7  Keyser Soze            Anton Marsden      823    Qscan -> Bomber/paper/imp
+ 8  Quicksilver            Michal Janeczek    789    Q^4 -> Stone/imp
+ 9  Eraser II              Ken Espiritu       781    Scanner
+10  Inky                   Ian Oversby        736    Q^4 -> Paper/stone
+11  Jinx                   Christian Schmidt  662    Q^3 -> Scanner
+12  Jade                   Ben Ford           600    Q^4 -> Stone/imp
+13  Blade                  Fizmo              505 *  Qscan -> Scanner
+14  G3-b                   David Moore        503    Twoshot
+15  Vanquisher             Lukasz Grabun      469    Q^4 -> Bomber
+16  Revival Fire           P.Kline            468    Bomber
+17  The Phantom Menace     Anton Marsden      465    Qscan -> Paper/imp
+18  Boys are Back in Town  Philip Kendall     441    Scanner
+ =  Zooom...               John Metcalf       441    Scanner
+20  Reepicheep             Grabun/Metcalf     419 *  Q^4 -> Paper/stone
+21  Qtest                  Christian Schmidt  394    Q^3 -> Paper
+22  Stalker                P.Kline            393    Scanner
+23  Hazy Lazy ... again    Steve Gunnell      350    Scanner
+24  Vain                   Ian Oversby        330    Q^2 -> Stone/imp
+25  Omnibus                John Metcalf       327    Q^2 -> Stone/imp
+
+Two new entries, Blade and Reepicheep.  Uninvited, Vanquisher and Hazy Lazy
+meet their final resting place.
+_______________________________________________________________________________
+Current Status of the KOTH.ORG '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author    Score    Age
+ 1  30/ 13/ 57                   Blowrag      Metcalf/Schmidt    148.0     87
+ 2  44/ 40/ 15            Herbal Avenger      Michal Janeczek    147.7     43
+ 3  44/ 41/ 15           Bustling Spirit    Christian Schmidt    147.6      1
+ 4  37/ 27/ 36             Dark Lowlands         Roy van Rijn    147.6     36
+ 5  31/ 14/ 55               Incredible!         John Metcalf    147.6     26
+ 6  36/ 24/ 41                Reepicheep       Grabun/Metcalf    147.5    160
+ 7  34/ 22/ 44               Son of Vain      Oversby/Pihlaja    146.8    131
+ 8  39/ 33/ 28            Cyanide Excuse          Dave Hillis    144.8     33
+ 9  43/ 41/ 16                  Combatra          David Moore    144.4     32
+10  35/ 27/ 37                 Uninvited         John Metcalf    143.9    150
+11  37/ 31/ 31            Digitalis 2002    Christian Schmidt    143.5     71
+12  40/ 39/ 21         Help...I'm Scared         Roy van Rijn    141.2     79
+13  31/ 22/ 46     Revenge of the Papers            Fizmo/Roy    140.9    138
+14  41/ 42/ 17               CrazyShot 2    Christian Schmidt    140.5    143
+15  32/ 25/ 43                 Paperazor    Christian Schmidt    140.3    104
+16  40/ 40/ 20            Mantrap Arcade          Dave Hillis    139.9      9
+17  38/ 39/ 23                Joyful Maw          Dave Hillis    138.3     97
+18  31/ 27/ 42                 Wallpaper    Christian Schmidt    135.4    142
+19  36/ 37/ 27                       Mad    Christian Schmidt    135.2    119
+20  40/ 47/ 13              Cupric siren          Dave Hillis    133.9     19
+
+Time to blow the dust from those old p-space routines; the 94 draft hill has
+returned after a long absence.  Already, a small number of handshakers have
+been spotted - look for the bright green blips in the huge array.
+
+Koth report:  Since the hill opened for business, Reepicheep has been the
+most frequent King (#1 after 81 successful challenges), followed by Pattel's
+Virus (after 26), Son of Vain (22) and Herbal Avenger (19).
+
+Just two warriors of notable age have left the hill, Self-Modifying Code
+(age 132), and Shapeshifter (107)...
+_______________________________________________________________________________
+Spring / Summer 2002 Corewar Tournament - Round 4 Results:
+
+A total of 13 authors and 23 warriors take part in the restricted length
+round, competing using '94 draft redcode, maximum length 50.  Although each
+author can enter two warriors as usual, only one is permitted to make use
+of p-space.
+
+For the second time Ben Ford takes first place with a oneshot.  This time he
+uses Geist v0.1, which has recently been King of the '94nop hill.  Holding a
+close second place is Michal Janeczek with a p-switcher: paper, scissors and
+stone.
+
+Gunnell's procoptodon comes 4th, a scanner based on Hazy Lazy, while 5th is
+claimed by van Rijn with Neanderthaler (oneshot).  Marsupial Lion (scanner)
+takes 6th for Schmidt, followed by p-switchers from Philip Thorne (7th) and
+Dave Hillis (9th).
+
+ # %Won Lost Tied Name                      Author                 Score     %
+ 1 55.2 33.3 11.5 Geist v0.1                Ben Ford              177.02 100.0
+ 2 51.8 29.0 19.3 Microvenator              Michal Janeczek       174.55  98.6
+ 3 53.7 33.1 13.1 Herbal Avenger            Michal Janeczek       174.26  98.4
+ 4 52.3 34.3 13.5 procoptodon               Steve Gunnell         170.23  96.2
+ 5 49.5 34.6 15.9 Neanderthaler             Roy van Rijn          164.30  92.8
+ 6 50.8 41.1  8.1 The Marsupial Lion        Christian Schmidt     160.56  90.7
+ 7 47.1 36.8 16.1 Confused Moth             Philip Thorne         157.48  89.0
+ 8 48.1 40.2 11.7 Dire Wolf                 Philip Thorne         155.99  88.1
+ 9 36.4 17.5 46.2 Bear Dog                  Dave Hillis           155.24  87.7
+10 33.3 13.8 52.9 Blue Pike                 Roy van Rijn          152.83  86.3
+11 33.4 16.5 50.1 Cheep! Half-Off!          Ben Ford              150.33  84.9
+12 27.7 15.5 56.9 thylacine                 Simon Wainwright      139.86  79.0
+13 25.7 18.0 56.3 The Demon Duck of Doom    Christian Schmidt     133.44  75.4
+14 27.0 24.2 48.8 Muttaburrasaurus          Steve Gunnell         129.75  73.3
+15 19.7 14.2 66.1 Dodo                      Lukasz Grabun         125.16  70.7
+16 16.9 18.3 64.8 minotaur                  Simon Wainwright      115.49  65.2
+17 17.1 21.7 61.2 Hallucinogenia            Dave Hillis           112.50  63.6
+18 15.7 24.8 59.5 Little Girl               Sheep                 106.53  60.2
+19 17.6 28.9 53.5 Smart Protoceratops       German Labarga        106.26  60.0
+20 13.0 35.4 51.6 Brontosaurus              German Labarga         90.66  51.2
+21  2.6 42.9 54.4 Trinity                   Darek L.               62.35  35.2
+22  7.2 66.6 26.2 Sea Mink                  bvowk                  47.77  27.0
+23  7.2 68.1 24.7 Coelacanth                bvowk                  46.34  26.2
+
+The most popular strategy is the p-switcher, of which there are six.  Four
+of these contain two components (in ranks 7, 9, 14, 19) while the remainder
+have three (2, 15).  Also, there are three each of oneshots (1, 5, 8),
+scanners (3, 4, 6), paper/stone (10, 11, 13) and evolved (17, 22, 23) -
+two papers (16, 18) - and just one each of stone/imp (12), bomber (20) and
+paper/imp (21).
+
+ # Competitor              Tiny  BigLP  88Win  Len50  Total
+ 1 Michal Janeczek         93.3  100.0  100.0   98.6  391.9
+ 2 Dave Hillis             99.9   84.3   87.3   87.7  359.2
+ 3 Steve Gunnell           91.0   85.0   82.4   96.2  354.6
+ 4 Ben Ford               100.0   74.4   75.1  100.0  349.5
+ 5 Simon Wainwright        79.1   71.5   89.1   79.0  318.7
+ 6 Philip Thorne           75.5   68.0   72.7   89.0  305.2
+ 7 Lukasz Grabun           81.3     .    67.6   70.7  219.6
+ 8 Robert Macrae           89.7   61.0     .      .   150.7
+ 9 Winston Featherly-Bean  72.9   47.3     .      .   120.2
+10 David Moore               .    51.4   63.6     .   115.0
+11 Roy Van Rijn              .      .      .    92.8   92.8
+12 Christian Schmidt         .      .      .    90.7   90.7
+13 Martin Ankerl           88.2     .      .      .    88.2
+14 Ken Espiritu              .      .    86.3     .    86.3
+15 Leonardo H. Liporati    84.3     .      .      .    84.3
+16 mushroommaker           71.3     .      .      .    71.3
+17 Arek Paterek            66.0     .      .      .    66.0
+18 Paul Drake              61.9     .      .      .    61.9
+19 Sheep                     .      .      .    60.2   60.2
+20 German Labarga            .      .      .    60.0   60.0
+21 Compudemon              53.9     .      .      .    53.9
+22 Darek L.                  .      .      .    35.2   35.2
+23 bvowk                     .      .      .    27.0   27.0
+_______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to people who
+care.  Beppe Bezzi <giuseppe.bezzi@galactica.it>, Philip Kendall
+<pak21@cam.ac.uk>, Anton Marsden <anton@paradise.net.nz>, John Metcalf
+<grumpy3039@hotmail.com> and Christian Schmidt <fizmo_master@yahoo.com>
