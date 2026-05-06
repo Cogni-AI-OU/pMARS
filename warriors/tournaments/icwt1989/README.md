@@ -27,8 +27,8 @@ The hopefuls were:
 - **Quarter II**
 - **Quick Sand II**
 - **Random Fire** (Bram Cohen)
-- **SAD** (Christoph Doederlein)
-- **Scrambler**
+- **SAD** (Christoph Doederlein) - `sad2.red` is the corrected version
+- **Scrambler** (`scramble.red`)
 - **Sting 2**
 - **Tank**
 - **UMACCP** (De Masi Gabriele)

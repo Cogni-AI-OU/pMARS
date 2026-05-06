@@ -81,8 +81,8 @@ The International Core Wars Society ran eight annual Core War tournaments from 1
 
 - **[1993 ICWS Tournament](https://corewar.co.uk/icwt1993.htm)** (Jan 1994): 1st place, [Cannonade](https://corewar.co.uk/icwt1993/cann8192.red) by Paul Kline.
 - **[1992 ICWS Tournament](https://corewar.co.uk/icwt1992.htm)** (Dec 1992): 1st place, [RotLD 2.2](https://corewar.co.uk/icwt1992/rotld22.red) by Nándor Sieben and [Leprechaun 1b](https://corewar.co.uk/icwt1992/lep1b.red) by Anders Ivner.
-- **[1991 ICWS Tournament](icwt1991/README.md)** (1992): 1st place, [XTC](https://corewar.co.uk/icwt1991/xtc.red) by Stefan Röttger.
-- **ICWS Grand Final of 1990** (Dec 1990): 1st place, [XTC](https://corewar.co.uk/icwt1991/xtc.red) by Stefan Röttger.
+- **[1991 ICWS Tournament](icwt1991/README.md)** (1992): 1st place, [XTC](icwt1991/xtc.red) by Stefan Röttger.
+- **ICWS Grand Final of 1990** (Dec 1990): 1st place, [XTC](icwt1991/xtc.red) by Stefan Röttger.
 - **[Fifth International Core Wars Society Tournament](https://corewar.co.uk/icwt1990.htm)** (Dec 1990): 1st place, [Paper: A.K.A molerat](https://corewar.co.uk/icwt1990/paper.red) by Scott Nelson.
 - **[Fourth International Core Wars Society Tournament](https://corewar.co.uk/icwt1989.htm)** (Feb 1990): 1st place, [Hypray](https://corewar.co.uk/icwt1989/hypray.red) by Francesco Botta.
 - **[Third International Core Wars Society Tournament](https://corewar.co.uk/icwt1988.htm)** (Dec 1988): 1st place, [Cowboy](https://corewar.co.uk/icwt1988/cowboy.red) by Eugene P. Lilitko.

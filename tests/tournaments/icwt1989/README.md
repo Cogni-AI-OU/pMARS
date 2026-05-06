@@ -21,4 +21,4 @@ This directory contains a simulation of the Fourth Annual International Core War
 = : Random Fire by Bram Cohen
 
 ## Simulation Results
-The simulation results may vary from the historical results due to differences in the `pMARS` simulator version and the randomness of starting positions, as well as the absence of some of the original 19 warriors in this repository.
+The simulation uses the `-f` (fixed) flag in `pMARS` to ensure deterministic and reproducible results. While historical scores might vary slightly due to minor `pMARS` implementation differences, the standings should be consistent. All 19 original warriors are included in this simulation.
