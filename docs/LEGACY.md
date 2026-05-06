@@ -76,22 +76,11 @@ Large core warriors often exceed the default length limit of 100 instructions. U
 ### P-Space
 Ensure P-space size is appropriate for the core size. By default, pMARS sets it to 1/16th of the core size.
 
-### Case: Yeager.red (KOFACOTO Tournament)
+### Case: Entry Point Modernization (KOFACOTO Tournament)
 
-In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point.
+In the KOFACOTO tournament, several warriors were updated to ensure a strict and explicit entry point. This includes warriors from Round 1, Round 2, Round 3, and Round 4.
 
-**Before:**
-```redcode
-;redcode-94
-;name He Scans Alone B
-...
-org tStart
-...
-tStart mov <tDecoy+0,{tDecoy+2
-...
-```
-
-**After (Consistent & Compatible):**
+**Example (He Scans Alone B from Round 6):**
 ```redcode
 ;redcode-94
 ;name He Scans Alone B
@@ -102,6 +91,18 @@ tStart mov <tDecoy+0,{tDecoy+2
 ...
 ; Added 'end tStart' to ensure compatibility and explicit entry point definition
           end    tStart
+```
+
+**Example (Retribution.red from Round 4):**
+```redcode
+;redcode-94
+;name Retribution
+;author Michal Janeczek
+...
+; org    cPtr ; Removed in favor of 'end cPtr' for better compatibility
+...
+; Added 'end cPtr' to ensure compatibility and explicit entry point definition
+      end    cPtr
 ```
 
 This approach maintains the historical `org` directive as a comment while providing the preferred `end` directive for the simulator.
