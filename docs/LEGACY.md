@@ -50,6 +50,17 @@ The ICWT 1989 tournament set was modernized to follow these strict compatibility
 - **DAT Standardization:** All `DAT` instructions were updated to have two operands (e.g., `DAT #0, #700`).
 - **Operand Formatting:** Immediate values were explicitly marked with `#`.
 
+## Simulator Parameter Limits
+
+### Instruction Limit (MAXINSTR)
+
+Historically, pMARS had a default `MAXINSTR` of 1000, which limited the maximum length that could be specified with the `-l` flag.
+
+**Optimization:**
+In recent updates, `MAXINSTR` has been increased to **10000** to accommodate complex tournament warriors and allow for more extensive assembly validation tests (e.g., using `-l 8000` to bypass length checks during initial assembly tests).
+
+If a warrior fails to assemble with a "too many instructions" error even when `-l` is provided, ensure the value is within the new `MAXINSTR` limit.
+
 ## Preservation of Historical Code
 
 As per the project's core mandates in `AGENTS.md`, historical code must be preserved even when modernizing syntax for compatibility.
