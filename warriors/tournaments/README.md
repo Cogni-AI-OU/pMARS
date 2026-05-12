@@ -8,6 +8,7 @@ This directory contains collections of warriors from various Core War tournament
 - **[CWSET 2005](./2005/README.md)**: Corewar Single Elimination Tournament (CWSET) 2005.
 - **[Datagram 2006](./2006/README.md)**: Corewar Datagram Tournament 2006.
 - **[IRCT](./IRCT/README.md)**: Internet Relay Chat Tournament warriors.
+- **[Redcode Maniacs Tournament](./maniacs1998/round1/README.md)**: Redcode Maniacs Tournament (Jan – Apr 1998).
 - **[Redcoders Frenzy](./Frenzy/README.md)**: Redcoders Frenzy (CWT) tournament warriors.
 - **[Tournament Weekend 2025](./2025/README.md)**: Core War Tournament Weekend 2025 held in Cambridge, UK.
 
@@ -43,7 +44,7 @@ List of historical tournaments and events (summarized from [Core War: Tournament
 - **[Intelligent Warrior Tournament v2.0](./iwt1999/README.md)** (Aug 1999): 1st place, [Mine v0.3](./iwt1999/minev03.red) by John K. Wilkinson.
 - **[Oversby Autumn 1998 Corewar Tournament](https://corewar.co.uk/oversby/index.htm)** (Nov 1998 – Mar 1999): 1st place, Joonas Pihlaja.
 - **[Ilmari's Mini Tournament #1](https://corewar.co.uk/karonen/imt1/index.htm)** (Apr 1998): 1st place, [Type Three Quantum Singularity](https://corewar.co.uk/karonen/imt1/kendall3.red) by Philip Kendall.
-- **[Redcode Maniacs Tournament](http://www.shadowmagic.org.uk/corewar/maniacs)** (Jan – Apr 1998): 1st place, David Moore.
+- **[Redcode Maniacs Tournament](./maniacs1998/round1/README.md)** (Jan – Apr 1998): 1st place, David Moore.
 - **[Anton's Core War Tournament](./acwt1997/README.md)** (Jul – Aug 1997): 1st place, Brian Haskin and Ilmari Karonen.
 - **[Beppe's Direct Elimination Core War Tournament](./bdecwt1996/README.md)** (Oct – Nov 1996): 1st place, Philip Kendall.
 - **[Battle Royal](https://corewar.co.uk/battleroyal.htm)** (Apr 1996): 1st place, Iocane by John K. Wilkinson.
