@@ -1,8 +1,8 @@
-# Redcode Maniacs Tournament (Round 1) Test
+# Redcode Maniacs Tournament (1998) Tests
 
-This test suite exercises a deterministic subset of the Redcode Maniacs Tournament (Round 1) archive.
+This test suite exercises deterministic subsets of the Redcode Maniacs Tournament archive.
 
-## Parameters
+## Round 1 Parameters
 - Standard: `94 Draft`
 - Core size: `8000`
 - Max processes: `8000`
@@ -12,11 +12,28 @@ This test suite exercises a deterministic subset of the Redcode Maniacs Tourname
 - Rounds: `200`
 - Seed: `-f`
 
-## Warriors
-The regression fixture uses a subset of Round 1 warriors:
+## Round 2 Parameters (Low Process)
+- Standard: `94 Draft`
+- Core size: `8000`
+- Max processes: `8`
+- Cycles: `80000`
+- Max warrior length: `200`
+- Minimum distance: `200`
+- Rounds: `200`
+- Seed: `-f`
+
+## Warriors (Round 1)
 - `bezzi.red` (Tornado 4)
 - `edgar.red` (Silver Talon 1.3)
 - `karonen.red` (No Ideas)
 - `guenzel.red` (traumatic smurf)
 - `macrae.red` (Phantasm 50)
 - `moore.red` (Funky Monks)
+
+## Warriors (Round 2)
+- `wilkinson.red` (LP and Feelin' Fine.)
+- `moore.red` (Snake Pit)
+- `macrae.red` (Incisive)
+- `kline.red` (Beanbag)
+- `bezzi.red` (Recycled paper)
+- `planar.red` (life is short)
