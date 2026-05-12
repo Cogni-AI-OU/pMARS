@@ -6,6 +6,9 @@ The Redcode Maniacs Tournament was organized by Christian Schmidt and Philip Ken
 
 - **[Round 1](./round1/README.md)**: Standard 94 Draft, length 50.
 - **[Round 2](./round2/README.md)**: Low Process (LP) challenge, max processes 8, length 200.
+- **[Round 3](./round3/README.md)**: Bench round against 10 warriors, length 100.
+- **[Round 4](./round4/README.md)**: P-switcher design using components, length 100.
+- **[Round 5](./round5/README.md)**: Standard ICWS'88, length 100.
 
 ## Overall Results
 
