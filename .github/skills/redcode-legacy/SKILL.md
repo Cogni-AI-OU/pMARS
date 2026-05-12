@@ -31,6 +31,8 @@ Specialized guidance for modernizing legacy Redcode warriors to ensure compatibi
     - `CMP COUNT, #47` -> `CMP #47, COUNT`
     - `JMN target, #val` -> `JMP target, 0` (if condition is constant).
   - **Label Case Sensitivity**: Labels MUST match their definitions exactly in case.
+  - **Undefined Symbols**: Historical warriors sometimes relied on implicit defaults for undefined symbols. Always explicitly define symbols or replace them with defaults (e.g., `0`).
+  - **Multi-line Comments**: Every line in a multi-line comment block MUST start with a semicolon (`;`). Missing semicolons cause the parser to attempt to execute the comment as code.
 - **Modernization Invariants**:
   - **Do Not Delete**: Comment out legacy code instead of removing it using `;`.
   - **Explicit Modifiers**: Use `mov.i` etc. where appropriate for clarity, but prioritize `-8` compatibility.
