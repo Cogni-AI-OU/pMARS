@@ -9,6 +9,7 @@
 ;strategy Don't think I'll score well, I know too little of 88
 
 ;assert (CORESIZE==8000) && (MAXLENGTH==100)
+;pmars-flags: -8
 qint    equ     -150
 step    equ     70
 away    equ     -2200

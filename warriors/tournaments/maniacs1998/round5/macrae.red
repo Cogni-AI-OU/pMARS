@@ -3,6 +3,7 @@
 ;strategy  The warrior with everything -- paper, clear, bomber and Q^2!
 ;strategy     :-( actually its just Leapfrog with a new quickscan )-:
 ;assert (CORESIZE==8000) && (MAXLENGTH==100)
+;pmars-flags: -8
 
 ; Adjusts QS parameters
 

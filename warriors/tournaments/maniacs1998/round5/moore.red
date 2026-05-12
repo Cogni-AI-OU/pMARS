@@ -2,6 +2,7 @@
 ;name Freight Train v0.2
 ;author David Moore
 ;assert (CORESIZE==8000) && (MAXLENGTH==100)
+;pmars-flags: -8
 ;strategy make a 7 point imp and grow it with dual continuous launchers.
 ;strategy add a stone that is a bit similar to Cannonade's.
 ;strategy optional q^2 (set switch to make the non-scanning version).
