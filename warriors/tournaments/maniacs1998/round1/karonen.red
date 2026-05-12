@@ -7,7 +7,7 @@
 ;strategy I should be writing an essay, not redcode. Oh well..
 ;assert CORESIZE==8000
 ;assert PSPACESIZE > 1
-;assert MAXLENGTH >= 50
+;assert MAXLENGTH==50
 ;planar pspace, boot, clear, gate, scan, stun
 
 ; Ok, this is a variation of something I was writing for the tiny

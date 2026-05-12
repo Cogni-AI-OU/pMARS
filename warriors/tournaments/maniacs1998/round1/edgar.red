@@ -2,7 +2,7 @@
 ;author Edgar
 ;strategy spl carpeting scanner with d-clear.
 ;strategy Depressingly ineffective.
-;assert 1
+;assert (CORESIZE==8000) && (MAXLENGTH==50)
 
         org loop
 

@@ -3,7 +3,7 @@
 ;author bjoern guenzel
 ;strategy torch t18 with b-clear ( = brainwashing d-clear)
 ;strategy since I have nothing else at the moment...
-;assert 1
+;assert (CORESIZE==8000) && (MAXLENGTH==50)
 
 
 shift   equ -3780

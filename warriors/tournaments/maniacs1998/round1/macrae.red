@@ -1,7 +1,7 @@
 ;redcode-94 test
 ;author Robert Macrae
 ;name Phantasm 50
-;assert CORESIZE==8000
+;assert (CORESIZE==8000) && (MAXLENGTH==50)
 ;strategy One-shot with SSD Clear and Decoy
 ;strategy -- should be good all-rounder.
 

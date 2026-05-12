@@ -2,7 +2,7 @@
 ;name Tornado 4
 ;author Beppe Bezzi
 ;strategy 60%c bomber
-;assert CORESIZE == 8000
+;assert (CORESIZE==8000) && (MAXLENGTH==50)
 ;kill Tornado
 
 step    equ     -45               
