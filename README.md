@@ -54,7 +54,7 @@ This repository includes a curated collection of Redcode warriors and specialize
 
 Detailed documentation is available in the `doc` directory:
 - [pMARS Guide](doc/guide.html) - Comprehensive HTML guide.
-- [Legacy Redcode](.github/skills/redcode-legacy/SKILL.md) - Handling legacy formats and syntax compatibility.
+- [Hill Information](docs/HILLS.md) - Core War "Hills" available at KOTH.org.
 - [Redcode Reference](docs/redcode-ref.txt) - Quick reference for Redcode syntax.
 - [Core War FAQ](doc/corewar-faq.html) - Frequently Asked Questions.
 - [CDB Primer](doc/primer.cdb) - Introduction to the built-in debugger.
