@@ -261,6 +261,7 @@ simulator1()
   mem_struct *endPtr;                /* pointer used to copy program to core */
 register  int     temp;                        /* general purpose temporary variable */
   int     addrA, addrB;                /* A and B pointers */
+  ADDR_T  irA, irB;		       /* preserved original literals */
 #ifndef SERVER
   int     temp2;			/* needed in graphical versions to display postincrements at the correct address */
 #endif
@@ -411,6 +412,8 @@ register  int     temp;                        /* general purpose temporary vari
      // progCnt = *(W->taskHead++);
      // IR = memory[progCnt];        /* copy instruction into register */
 	IR = memory[(progCnt= *(W->taskHead++))];        
+	irA = IR.A_value;
+	irB = IR.B_value;
 #ifndef DOS16
       if (W->taskHead == endQueue)
 	W->taskHead = taskQueue;
@@ -642,8 +645,8 @@ if (IR.B_mode != (FIELD_T) IMMEDIATE)
 } else {
       addrB = progCnt;
       raddrB = progCnt;
-      IR.B_value = memory[addrB].B_value;
-      AB_Value = memory[addrB].A_value;
+      IR.B_value = irB;
+      AB_Value = irA;
 }
 
       /* After A/B operand evaluation:
