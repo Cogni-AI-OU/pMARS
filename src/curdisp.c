@@ -35,8 +35,7 @@ static int use_color;
 
 /* For window structure in BSD 4.4/Curses 8.x library */
 #ifdef BSD44
-#define _curx curx
-#define _cury cury
+/* Use getyx() and getmaxyx() instead of direct access to WINDOW fields */
 #endif
 
 typedef struct win_st {
@@ -328,14 +327,14 @@ update_statusline(round_num)
     if (use_color)
       wattroff(corewin2, COLOR_PAIR(2));
     xpos += 10;
-    mvwprintw(corewin2, 0, xpos, " [1]: %-5d Cycle: %-6d R: %d/%d (%d %d %d)",
-      warrior[1].tasks, cycle >> 1, round_num, rounds, warrior[0].score[0],
+    mvwprintw(corewin2, 0, xpos, " [1]: %-5d Cycle: %-6ld R: %d/%d (%d %d %d)",
+      warrior[1].tasks, (long) (cycle >> 1), round_num, rounds, warrior[0].score[0],
       warrior[0].score[2], warrior[0].score[1]);
   }
 
   if (warriors > 2)
-    mvwprintw(corewin2, 0, xpos, "%d of %d warriors alive  Cycle: %-6d R: %d/%d",
-      warriorsLeft, warriors, cycle / warriorsLeft, round_num, rounds);
+    mvwprintw(corewin2, 0, xpos, "%d of %d warriors alive  Cycle: %-6ld R: %d/%d",
+      warriorsLeft, warriors, (long) (cycle / warriorsLeft), round_num, rounds);
 
   wrefresh(corewin2);
 }
@@ -466,9 +465,11 @@ agets5(str, maxchar, attr)
             mvwaddch(curwin, oy, --ox, ' ');
             wmove(curwin, oy, ox);
           } else {
+            int my, mx;
+            getmaxyx(curwin, my, mx);
             oy--;
-            mvwaddch(curwin, oy, COLS - 1, ' ');
-            wmove(curwin, oy, COLS - 1);
+            mvwaddch(curwin, oy, mx - 1, ' ');
+            wmove(curwin, oy, mx - 1);
           }
           leaveok(curwin, FALSE);
           wrefresh(curwin);
@@ -479,8 +480,11 @@ agets5(str, maxchar, attr)
         for (getyx(curwin, oy, ox); str > ostr; str--, maxchar++) {
           if (ox--)
             mvwaddch(curwin, oy, ox, ' ');
-          else
-          mvwaddch(curwin, oy, ox = COLS, ' ');
+          else {
+            int my, mx;
+            getmaxyx(curwin, my, mx);
+            mvwaddch(curwin, oy, ox = mx, ' ');
+          }
         }
         leaveok(curwin, FALSE);
         wmove(curwin, oy, ox);
