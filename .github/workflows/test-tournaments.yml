@@ -70,20 +70,20 @@ jobs:
               MINDISTANCE=""
               
               # Try to extract settings from ;assert lines if present
-              CS=$(grep -i ";assert" "$f" | grep -oiP "CORESIZE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              CS=$(grep -i ";assert" "$f" | grep -oiP "CORESIZE\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$CS" ] && CORESIZE=$CS
-              ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$ML" ] && MAXLENGTH=$ML
               
               # Ensure MAXLENGTH doesn't exceed CORESIZE to avoid pmars error
               if [ "$MAXLENGTH" -gt "$CORESIZE" ]; then
                 MAXLENGTH=$CORESIZE
               fi
-              MP=$(grep -i ";assert" "$f" | grep -oiP "MAXPROCESSES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              MP=$(grep -i ";assert" "$f" | grep -oiP "MAXPROCESSES\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$MP" ] && MAXPROCESSES=$MP
-              MC=$(grep -i ";assert" "$f" | grep -oiP "MAXCYCLES\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              MC=$(grep -i ";assert" "$f" | grep -oiP "MAXCYCLES\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$MC" ] && MAXCYCLES=$MC
-              MD=$(grep -i ";assert" "$f" | grep -oiP "MINDISTANCE\s*(?:==|=)\s*\K\d+" | head -n 1 || echo "")
+              MD=$(grep -i ";assert" "$f" | grep -oiP "MINDISTANCE\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$MD" ] && MINDISTANCE=$MD
 
               # Ensure MAXLENGTH doesn't exceed CORESIZE or MINDISTANCE to avoid pmars error

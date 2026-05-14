@@ -160,5 +160,5 @@ found   mov     qBomb,          * qStep
        djn     qLoop,          # qTimes
 
        jmp     boot            ; start paper
-qBomb   dat.f   { qDist,        { 1}
+qBomb   dat.f   { qDist,        { 1
        end

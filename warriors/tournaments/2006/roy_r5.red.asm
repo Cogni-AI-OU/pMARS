@@ -1,0 +1,33 @@
+       ORG          0
+       SPL.B  $     1, <  3452     
+       SPL.B  $     1, <  -566     
+       SPL.B  $     1, <  2355     
+       MOV.I  {     9, {     1     
+       SPL.B  $   996, } -2253     
+       MOV.I  {    18, {     1     
+       DJN.F  $  2354, } -3416     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       SPL.B  @     8, <   692     
+       MOV.I  }    -1, >    -1     
+       SPL.B  #     0, $     0     
+       MOV.I  $     3, >     2     
+       ADD.X  $     3, $     1     
+       JMP.B  $  3434, >   115     
+       DAT.F  >     1, }     1     
+       MOV.I  #   120, $   571     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       DAT.F  $     0, $     0     
+       SPL.B  @     8, }  1639     
+       MOV.I  }    -1, >    -1     
+       SPL.B  $  2352, $     0     
+       MOV.I  >    -1, }    -1     
+       SPL.B  @     0, }  1206     
+       MOV.I  }    -1, >    -1     
+       MOV.I  #  1138, <     1     
+       DJN.B  $    -2, #  1618     
+       END
