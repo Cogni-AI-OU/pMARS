@@ -1,0 +1,33 @@
+       ORG          1
+       DAT.F  #     0, #    30     
+       MOV.I  <    -1, <    14     
+       MOV.I  <    -2, <    13     
+       MOV.I  <    -3, <    12     
+       MOV.I  <    -4, <    11     
+       MOV.I  <    -5, <    10     
+       MOV.I  <    -6, <     9     
+       MOV.I  <    -7, <     8     
+       MOV.I  <    -8, <     7     
+       MOV.I  <    -9, <     6     
+       MOV.I  <   -10, <     5     
+       MOV.I  <   -11, <     4     
+       MOV.I  <   -12, <     3     
+       MOV.I  <   -13, <     2     
+       MOV.I  <   -14, <     1     
+       SPL.B  @     0, $ -3100     
+       ADD.AB #    14, $     0     
+       ADD.AB #   120, $     9     
+       MOV.I  <    -2, <     8     
+       MOV.I  <    -3, <     7     
+       ADD.F  < -1290, $     2     
+       MOV.AB #     2, $     1     
+       ADD.AB #     0, @     0     
+       SUB.F  $    -1, $    -1     
+       MOV.I  $ -1296, < -1289     
+       JMN.B  $    -7, $    -9     
+       SPL.B  $   -10, $  2293     
+       JMZ.B  @    -1, $   -11     
+       MOV.I  $     2, <     0     
+       DJN.B  $    -1, $    -1     
+       DAT.F  #     0, #     0     
+       END

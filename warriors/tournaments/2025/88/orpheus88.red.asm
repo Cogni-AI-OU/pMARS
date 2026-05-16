@@ -1,0 +1,31 @@
+       ORG          0
+       SPL.B  $     7, $     0     
+       SPL.B  $     9, $     0     
+       SPL.B  $    11, $     0     
+       SPL.B  $    14, $     0     
+       SPL.B  $    17, $     0     
+       SPL.B  $    20, $     0     
+       JMP.B  $    -6, $     0     
+       MOV.AB #     0, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #     0, #     0     
+       MOV.AB #     0, @     3     
+       JMP.B  $    -2, $     0     
+       DAT.F  #     0, #     0     
+       ADD.AB #    13, $     3     
+       MOV.I  $     2, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #    42, #     0     
+       ADD.AB #   105, $     3     
+       MOV.I  $     2, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #    53, #     0     
+       ADD.AB #   512, $     3     
+       MOV.I  $     2, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #    87, #     0     
+       ADD.AB #     4, $     3     
+       MOV.I  $     2, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #     0, #     0     
+       END

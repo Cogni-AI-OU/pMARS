@@ -1,0 +1,35 @@
+       ORG          4
+       DAT.F  #     0, #     0     
+       MOV.I  <    25, $    23     
+       MOV.I  <    24, $    23     
+       MOV.I  $    23, $    -3     
+       SUB.F  $    20, $    -4     
+       JMZ.B  $    10, @    -5     
+       MOV.I  $    17, @    -6     
+       MOV.I  $    17, $    14     
+       ADD.AB #    12, $    -8     
+       MOV.AB #     5, $     8     
+       MOV.I  @     7, <   -10     
+       DJN.B  $    -1, $     6     
+       CMP.I  @   -12, $     6     
+       JMP.B  $    -7, $     0     
+       SPL.B  @   -14, $     0     
+       DJN.B  $   -11, $    10     
+       JMP.B  $   -15, $     0     
+       DAT.F  #     0, #     0     
+       MOV.I  $     4, <     2     
+       DJN.B  $    -1, $     2     
+       DAT.F  #     0, #    -2     
+       DAT.F  #     0, #     0     
+       DAT.F  #     0, #     0     
+       SPL.B  $     0, $     0     
+       DAT.F  #     0, #    64     
+       DAT.F  #     0, #   127     
+       DAT.F  #     0, #     7     
+       DAT.F  #     0, #   627     
+       DAT.F  #     0, #    13     
+       DAT.F  #     0, #   679     
+       DAT.F  #     0, #    12     
+       DAT.F  #     0, #   255     
+       DAT.F  #     0, #    32     
+       END
