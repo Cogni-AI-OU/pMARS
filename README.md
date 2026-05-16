@@ -55,6 +55,7 @@ This repository includes a curated collection of Redcode warriors and specialize
 Detailed documentation is available in the `doc` directory:
 - [pMARS Guide](doc/guide.html) - Comprehensive HTML guide.
 - [Legacy Redcode](docs/LEGACY.md) - Handling legacy formats and syntax compatibility.
+- [Hill Information](docs/HILLS.md) - Core War "Hills" available at KOTH.org.
 - [Redcode Reference](docs/redcode-ref.txt) - Quick reference for Redcode syntax.
 - [Core War FAQ](doc/corewar-faq.html) - Frequently Asked Questions.
 - [CDB Primer](doc/primer.cdb) - Introduction to the built-in debugger.
@@ -101,7 +102,7 @@ pMARS is released under the GNU General Public License v2.0. See the [COPYING](C
 - **Corewar Hall of Fame:** [Hall of Fame](http://jan.ucc.nau.edu/~ns46/corewar/cwhof.htm)
 - **SourceForge:** [pMARS Project](https://sourceforge.net/projects/corewars/)
   - [corewars 8086](http://sourceforge.net/projects/corewars8086)
- - **Tutorials & Guides:**
+- **Tutorials & Guides:**
   - [Information & Tutorials](http://www.koth.org/info.html)
   - [The Beginner's Guide to Redcode](http://corewar.co.uk/karonen/guide.htm) - Ilmari Karonen's classic introduction.
   - [pMARS Reference Guide](http://www.koth.org/info/pmars-redcode-94.txt) - Detailed reference for pMARS Redcode.

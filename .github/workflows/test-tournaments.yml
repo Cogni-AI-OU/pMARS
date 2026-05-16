@@ -75,10 +75,6 @@ jobs:
               ML=$(grep -i ";assert" "$f" | grep -oiP "MAXLENGTH\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$ML" ] && MAXLENGTH=$ML
               
-              # Ensure MAXLENGTH doesn't exceed CORESIZE to avoid pmars error
-              if [ "$MAXLENGTH" -gt "$CORESIZE" ]; then
-                MAXLENGTH=$CORESIZE
-              fi
               MP=$(grep -i ";assert" "$f" | grep -oiP "MAXPROCESSES\D+\K\d+" | head -n 1 || echo "")
               [ ! -z "$MP" ] && MAXPROCESSES=$MP
               MC=$(grep -i ";assert" "$f" | grep -oiP "MAXCYCLES\D+\K\d+" | head -n 1 || echo "")

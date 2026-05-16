@@ -54,9 +54,6 @@ find "$TARGET_DIR" -type f -name "*.red" | while read -r red_file; do
     if [[ "$MINDISTANCE" =~ ^[0-9]+$ ]]; then
         FLAGS="$FLAGS -d $MINDISTANCE"
     fi
-    if [[ "$MAXLENGTH" =~ ^[0-9]+$ ]]; then
-        FLAGS="$FLAGS -l $MAXLENGTH"
-    fi
     
     # Check for ;pmars-flags:
     FILE_FLAGS=$(grep -i ";pmars-flags:" "$red_file" | sed 's/.*;pmars-flags://I')
@@ -64,43 +61,6 @@ find "$TARGET_DIR" -type f -name "*.red" | while read -r red_file; do
         FLAGS="$FLAGS $FILE_FLAGS"
     fi
 
-    # Set some safe defaults if not already set by assertions
-    if [[ "$red_file" == *"warriors/94Nano"* ]]; then
-        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 80"
-        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 80"
-    elif [[ "$red_file" == *"warriors/94tiny"* ]]; then
-        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 800"
-        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 800"
-    elif [[ "$red_file" == *"warriors/94LP"* ]]; then
-        [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 500"
-    elif [[ "$red_file" == *"warriors/88Tourney"* ]]; then
-        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
-        if [[ "$red_file" == *"fingerprint.red" ]]; then
-             [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 300"
-        fi
-    elif [[ "$red_file" == *"warriors/tournaments/ebs1991"* ]]; then
-        [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
-        [[ "$FLAGS" == *"-8"* ]] || FLAGS="$FLAGS -8"
-    fi
-
-    # Ensure MAXLENGTH and MINDISTANCE don't exceed CORESIZE if set
-    CURRENT_CS=$(echo "$FLAGS" | grep -oiP "\-s\s+\K\d+" | head -n 1 || echo "")
-    if [[ -n "$CURRENT_CS" ]]; then
-        CURRENT_ML=$(echo "$FLAGS" | grep -oiP "\-l\s+\K\d+" | head -n 1 || echo "")
-        CURRENT_MD=$(echo "$FLAGS" | grep -oiP "\-d\s+\K\d+" | head -n 1 || echo "")
-
-        if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt "$CURRENT_CS" ]; then
-            FLAGS=$(echo "$FLAGS" | sed "s/-l $CURRENT_ML/-l $CURRENT_CS/")
-            CURRENT_ML=$CURRENT_CS
-        fi
-        if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt 10000 ]; then
-            FLAGS=$(echo "$FLAGS" | sed "s/-l $CURRENT_ML/-l 10000/")
-        fi
-        if [[ -n "$CURRENT_MD" ]] && [ "$CURRENT_MD" -gt "$CURRENT_CS" ]; then
-            FLAGS=$(echo "$FLAGS" | sed "s/-d $CURRENT_MD/-d $CURRENT_CS/")
-        fi
-    fi
-    
     # Set some safe defaults if not already set by assertions
     if [[ "$red_file" == *"warriors/94Nano"* ]]; then
         [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 80"
@@ -128,6 +88,24 @@ find "$TARGET_DIR" -type f -name "*.red" | while read -r red_file; do
         fi
     fi
 
+    # Ensure MAXLENGTH and MINDISTANCE don't exceed CORESIZE if set
+    CURRENT_CS=$(echo "$FLAGS" | grep -oiP "\-s\s+\K\d+" | head -n 1 || echo "")
+    if [[ -n "$CURRENT_CS" ]]; then
+        CURRENT_ML=$(echo "$FLAGS" | grep -oiP "\-l\s+\K\d+" | head -n 1 || echo "")
+        CURRENT_MD=$(echo "$FLAGS" | grep -oiP "\-d\s+\K\d+" | head -n 1 || echo "")
+
+        if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt "$CURRENT_CS" ]; then
+            FLAGS=$(echo "$FLAGS" | sed "s/-l $CURRENT_ML/-l $CURRENT_CS/")
+            CURRENT_ML=$CURRENT_CS
+        fi
+        if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt 10000 ]; then
+            FLAGS=$(echo "$FLAGS" | sed "s/-l $CURRENT_ML/-l 10000/")
+        fi
+        if [[ -n "$CURRENT_MD" ]] && [ "$CURRENT_MD" -gt "$CURRENT_CS" ]; then
+            FLAGS=$(echo "$FLAGS" | sed "s/-d $CURRENT_MD/-d $CURRENT_CS/")
+        fi
+    fi
+    
     # Append manual flags
     ALL_FLAGS="$FLAGS $MANUAL_FLAGS"
 

@@ -68,7 +68,7 @@ for asm in $ASM_FILES; do
     if [ -n "$FILE_FLAGS" ]; then
         FLAGS="$FLAGS $FILE_FLAGS"
     fi
-
+    
     # Directory based defaults if not already set
     if [[ "$red" == *"warriors/94Nano"* ]]; then
         [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 80"
@@ -78,8 +78,12 @@ for asm in $ASM_FILES; do
         [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 800"
     elif [[ "$red" == *"warriors/94LP"* ]]; then
         [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 500"
+    elif [[ "$red" == *"warriors/88Standard"* && ! "$FLAGS" == *"-s "* ]]; then
+        # Default for 88 is often 8000, but some need 8192.
+        : 
     elif [[ "$red" == *"warriors/88Tourney"* ]]; then
         [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
+        # Fingerprint needs more length
         if [[ "$red" == *"fingerprint.red" ]]; then
              [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 300"
         fi
@@ -101,7 +105,6 @@ for asm in $ASM_FILES; do
             FLAGS=$(echo "$FLAGS" | sed -E "s/\-d\s+[0-9]+/-d $CURRENT_CS/")
         fi
     fi
-
     # Ensure we use -A
     echo "Verifying $asm against $red (flags: $FLAGS) ..."
     
