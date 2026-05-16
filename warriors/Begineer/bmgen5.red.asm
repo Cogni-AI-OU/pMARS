@@ -1,0 +1,29 @@
+       ORG          0
+       MOV.I  <    26, <    12     
+       MOV.I  <    25, <    11     
+       MOV.I  <    24, <    10     
+       MOV.I  <    23, <     9     
+       MOV.I  <    22, <     8     
+       MOV.I  <    21, <     7     
+       MOV.I  <    20, <     6     
+       MOV.I  <    19, <     5     
+       MOV.I  <    18, <     4     
+       MOV.I  <    17, <     3     
+       MOV.I  <    16, <     2     
+       MOV.I  <    15, <     1     
+       SPL.B  $  1992, $  2000     
+       SUB.F  $    -1, $    -1     
+       DAT.F  #   228, #   228     
+       DAT.F  <     4, <     8     
+       DAT.F  <    30, <     0     
+       SPL.B  #    30, <    -1     
+       MOV.I  $    -3, *     2     
+       MOV.I  *    -1, @     1     
+       MOV.I  $    75, @   151     
+       ADD.F  $    -7, $    -1     
+       DJN.B  *    -3, < -3000     
+       MOV.I  @     0, <    -6     
+       DJN.B  $    -1, }    -7     
+       JMP.B  $    -2, <   -20     
+       DAT.F  $     0, $     0     
+       END

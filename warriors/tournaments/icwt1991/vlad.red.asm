@@ -1,0 +1,29 @@
+       ORG         11
+       DJN.B  $     4, $     3     
+       MOV.I  $    22, $     8     
+       MOV.I  $    21, $     2     
+       DAT.F  #    64, #    64     
+       MOV.I  $    21, <    22     
+       JMP.B  $    -1, $     0     
+       MOV.I  $    15, $     5     
+       DJN.B  $     2, $    -4     
+       JMP.B  $    -7, $     0     
+       SPL.B  $    -9, $     0     
+       JMP.B  $    -1, $     0     
+       MOV.I  $    11, @    13     
+       ADD.AB #    37, $    12     
+       SUB.AB #    37, $     9     
+       DJN.B  $    -3, $     9     
+       MOV.AB #   209, $     8     
+       ADD.AB #  -470, $     6     
+       SUB.AB #  -470, $     7     
+       JMP.B  $    -7, $     0     
+       MOV.I  $     6, <     7     
+       JMP.B  $    -1, $     0     
+       JMP.B  $     8, $     0     
+       JMP.B  @     0, $ -2518     
+       DAT.F  #   145, #     0     
+       DAT.F  #  2500, #     0     
+       DAT.F  #   -26, #   -26     
+       DAT.F  #   -26, #   -26     
+       END

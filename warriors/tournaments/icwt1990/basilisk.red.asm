@@ -1,0 +1,29 @@
+       ORG          6
+       DAT.F  <     0, <     0     
+       DAT.F  <     0, <     2     
+       DAT.F  <     0, <    63     
+       DAT.F  <     0, <    18     
+       SPL.B  $     0, $     0     
+       DAT.F  <     0, <     0     
+       SUB.AB #   127, $    -6     
+       SUB.AB #   129, $    -6     
+       ADD.AB #   129, $    17     
+       ADD.AB #   127, $    17     
+       MOV.I  $    -5, @   -10     
+       MOV.I  $    -6, @   -10     
+       MOV.I  $    -8, @    13     
+       MOV.I  $    -9, @    13     
+       DJN.B  $    -8, $   -12     
+       MOV.AB #    63, $   -13     
+       SUB.AB #   184, $   -16     
+       SUB.AB #    58, $   -16     
+       ADD.AB #    58, $     7     
+       ADD.AB #   184, $     7     
+       DJN.B  $   -14, $   -17     
+       MOV.I  $   -16, <   -16     
+       DJN.B  $    -1, <   -17     
+       ADD.AB #     3, $   -18     
+       JMP.B  $    -3, $     0     
+       DAT.F  <     0, <     3     
+       DAT.F  <     0, <     4     
+       END

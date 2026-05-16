@@ -103,6 +103,11 @@ find "$TARGET_DIR" -type f -name "*.red" | while read -r red_file; do
         fi
         if [[ -n "$CURRENT_MD" ]] && [ "$CURRENT_MD" -gt "$CURRENT_CS" ]; then
             FLAGS=$(echo "$FLAGS" | sed "s/-d $CURRENT_MD/-d $CURRENT_CS/")
+            CURRENT_MD=$CURRENT_CS
+        fi
+        # Ensure MINDISTANCE is at least MAXLENGTH
+        if [[ -n "$CURRENT_MD" ]] && [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_MD" -lt "$CURRENT_ML" ]; then
+            FLAGS=$(echo "$FLAGS" | sed "s/-d $CURRENT_MD/-d $CURRENT_ML/")
         fi
     fi
     

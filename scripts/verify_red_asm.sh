@@ -10,8 +10,11 @@ if [ ! -f "$PMARS_EXEC" ]; then
     exit 1
 fi
 
+# Get the directory from the first argument, default to '.'
+TARGET_DIR=${1:-.}
+
 # Find all .red.asm files
-ASM_FILES=$(find . -name "*.red.asm")
+ASM_FILES=$(find "$TARGET_DIR" -name "*.red.asm")
 
 if [ -z "$ASM_FILES" ]; then
     echo "No .red.asm files found to verify."
@@ -90,6 +93,14 @@ for asm in $ASM_FILES; do
     elif [[ "$red" == *"warriors/tournaments/ebs1991"* ]]; then
         [[ "$FLAGS" == *"-s "* ]] || FLAGS="$FLAGS -s 8192"
         [[ "$FLAGS" == *"-8"* ]] || FLAGS="$FLAGS -8"
+    elif [[ "$red" == *"warriors/tournaments/"* ]]; then
+        # For tournament warriors, use CORESIZE as default length if specified
+        TEMP_CS=$(echo "$FLAGS" | grep -oiP "\-s\s+\K\d+" | head -n 1 || echo "")
+        if [[ -n "$TEMP_CS" ]]; then
+            [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l $TEMP_CS"
+        else
+            [[ "$FLAGS" == *"-l "* ]] || FLAGS="$FLAGS -l 8000"
+        fi
     fi
 
     # Ensure MAXLENGTH and MINDISTANCE don't exceed CORESIZE if set
@@ -100,9 +111,18 @@ for asm in $ASM_FILES; do
 
         if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt "$CURRENT_CS" ]; then
             FLAGS=$(echo "$FLAGS" | sed -E "s/\-l\s+[0-9]+/-l $CURRENT_CS/")
+            CURRENT_ML=$CURRENT_CS
+        fi
+        if [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_ML" -gt 10000 ]; then
+            FLAGS=$(echo "$FLAGS" | sed -E "s/\-l\s+[0-9]+/-l 10000/")
         fi
         if [[ -n "$CURRENT_MD" ]] && [ "$CURRENT_MD" -gt "$CURRENT_CS" ]; then
             FLAGS=$(echo "$FLAGS" | sed -E "s/\-d\s+[0-9]+/-d $CURRENT_CS/")
+            CURRENT_MD=$CURRENT_CS
+        fi
+        # Ensure MINDISTANCE is at least MAXLENGTH
+        if [[ -n "$CURRENT_MD" ]] && [[ -n "$CURRENT_ML" ]] && [ "$CURRENT_MD" -lt "$CURRENT_ML" ]; then
+            FLAGS=$(echo "$FLAGS" | sed -E "s/\-d\s+[0-9]+/-d $CURRENT_ML/")
         fi
     fi
     # Ensure we use -A
@@ -118,10 +138,10 @@ for asm in $ASM_FILES; do
         cat pmars_err.tmp
         EXIT_CODE=1
     else
-        # Compare
-        if ! diff -u "$asm" assembled_tmp.asm > diff.tmp; then
+        # Compare using git diff --no-index as it is more likely to be allowed
+        if ! git diff --no-index --quiet "$asm" assembled_tmp.asm; then
             echo "::error file=$asm::Assembly mismatch for $red"
-            cat diff.tmp
+            git diff --no-index -u "$asm" assembled_tmp.asm
             EXIT_CODE=1
         else
             echo "✅ Match: $red"

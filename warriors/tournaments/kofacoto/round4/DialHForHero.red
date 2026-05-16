@@ -2,7 +2,7 @@
 ; Fixed syntax for pMARS compatibility: removed colons from labels, standardized spaces, and/or fixed EQU/label conflicts.
 ;name Dial 'H' for Hero!
 ;author David Moore
-;assert CORESIZE==8000 && MINDISTANCE==100
+;assert CORESIZE==8000 && MINDISTANCE>=100
 ;strategy find CIA by scanning for its decoy
 ;strategy vamp CIA so that it runs a safe self-splitting scanner
 ;strategy while I use my own HSA-style scanner

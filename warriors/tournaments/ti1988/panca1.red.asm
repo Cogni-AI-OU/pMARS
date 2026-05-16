@@ -1,0 +1,31 @@
+       ORG          1
+       DAT.F  #  2068, #     0     
+       SPL.B  $    15, $     0     
+       ADD.AB #    16, $    -2     
+       JMZ.B  $    -1, @    -3     
+       SUB.AB #    10, $    -4     
+       MOV.I  $    10, @    -5     
+       MOV.I  $     8, <    -6     
+       MOV.I  $     6, <    -7     
+       MOV.I  $     4, <    -8     
+       SPL.B  @    -9, $     0     
+       ADD.AB #   600, $   -10     
+       JMP.B  $    -9, $     0     
+       ADD.AB #     1, $     3     
+       MOV.I  $     2, @     2     
+       JMP.B  $    -2, $     0     
+       DAT.F  #     3, #     0     
+       SUB.AB #    15, $    12     
+       JMZ.B  $    -1, @    11     
+       ADD.AB #     5, $    10     
+       MOV.I  $     8, @     9     
+       MOV.I  $     6, <     8     
+       MOV.I  $     4, <     7     
+       SPL.B  @     6, $     0     
+       SUB.AB #   600, $     5     
+       JMP.B  $    -8, $     0     
+       MOV.I  $     2, <     3     
+       JMP.B  $    -1, $     0     
+       DAT.F  #    -3, #     0     
+       DAT.F  # -2072, #     0     
+       END
