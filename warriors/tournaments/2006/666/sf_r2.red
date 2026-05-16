@@ -2,6 +2,7 @@
 ;name no hope
 ;author S.Fernandes
 ;strategy imp spiral
+;round Round 2 entry (identical to nohope.red)
 ;assert (CORESIZE==666) && (MAXPROCESSES==6)
 ;assert (MAXCYCLES==6666) && (MAXLENGTH==16)
 ;assert (MINDISTANCE==16)

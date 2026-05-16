@@ -197,7 +197,7 @@ Note
 2. Substitution statements are labels that have been declared by EQU.
    If a label is declared this way: "IMP_instr equ imp mov imp, imp + 
    1", the label name IMP_instr can be thought of as a statement.  
-   Therefore, whenf IMP_instr is used after its declaration, it will 
+   Therefore, when IMP_instr is used after its declaration, it will 
    be replaced by "imp mov imp, imp + 1". It has effect of declaring 
    a label 'imp' and inserting the statement 'mov imp, imp + 1'.
 
