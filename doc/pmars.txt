@@ -709,7 +709,7 @@ COMMAND CHAINS AND MACRO PROGRAMMING
        Several  commands can be issued on one line when separated by the tilde
        character (~). These "command chains" are  useful  for  repeating  long
        command  sequences,  since  <Enter>  recalls  the entire chain (see the
-       examples below).  Commands requiring user  intervaention  (list,  edit,
+       examples below).  Commands requiring user  intervention  (list,  edit,
        fill) also read their input from the chain.
 
        The  "empty  command"  (two consecutive tildes or a tilde at the end of
