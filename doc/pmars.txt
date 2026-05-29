@@ -285,7 +285,7 @@ REDCODE
 
        * - indirect using A-field
 
-       { - predrecement indirect using A-field
+       { - predecrement indirect using A-field
 
        } - postincrement indirect using A-field
 
