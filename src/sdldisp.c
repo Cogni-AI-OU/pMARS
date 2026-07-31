@@ -3962,6 +3962,7 @@ sdlgr_display_close(int wait)
 {
     SDL_Event e;
     if (wait == WAIT) {
+        while (SDL_PollEvent(&e));
 	sdlgr_puts(pressAnyKey);
 	sdlgr_refresh(curPanel);
     }
